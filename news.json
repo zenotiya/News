@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-19",
+  "title": "Morning Cybersecurity Digest",
+  "subtitle": "Saturday, September 19 — Here's what's worth your attention today.",
+  "sections": [
+    {
+      "title": "Act on Today",
+      "items": [
+        {
+          "title": "Cisco ISE Zero-Day CVE-2026-76460",
+          "severity": "Critical",
+          "summary": "Cisco ISE zero-day CVE-2026-76460 has a CVSS score of 10.0 and is being actively exploited. No workaround is available.",
+          "details": "Fixed releases include 3.1 Patch 12, 3.2 Patch 11, 3.3 Patch 12, 3.4 Patch 7, and 3.5 Patch 4. The KEV remediation deadline for federal agencies is September 19, 2026.",
+          "action": "Patch immediately and restrict the management interface with iACLs where possible."
+        },
+        {
+          "title": "Cisco Secure Email Gateway CVE-2026-76461",
+          "severity": "Critical",
+          "summary": "CVE-2026-76461 was added to the KEV catalog and its remediation deadline was September 18, 2026.",
+          "details": "Patching alone may not remove an established compromise. Review systems for suspicious usernames and API activity in logs.",
+          "action": "Patch affected systems and perform compromise-hunting activities."
+        },
+        {
+          "title": "Pixel Modem Zero-Day CVE-2026-58704",
+          "severity": "Critical",
+          "summary": "CVE-2026-58704 is a Pixel modem zero-day with a KEV remediation deadline of September 19, 2026.",
+          "details": "The September Pixel security update includes the required fixes.",
+          "action": "Deploy the September Pixel bulletin with the 2026-09-05 patch level and verify compliance through MDM."
+        }
+      ]
+    },
+    {
+      "title": "Breaches & Ransomware",
+      "items": [
+        {
+          "title": "Qilin Lists Inland and Offshore Contractors",
+          "severity": "High",
+          "summary": "Qilin listed Inland and Offshore Contractors of Trinidad and Tobago on its leak site on September 18.",
+          "details": "The organization operates in the energy and utilities sector."
+        },
+        {
+          "title": "Play Lists Barrett Mahony Consulting Engineers",
+          "severity": "High",
+          "summary": "Play listed Barrett Mahony Consulting Engineers of Ireland on its leak site on September 18.",
+          "details": "The organization operates in the professional services sector."
+        },
+        {
+          "title": "Panzer Ransomware Activity",
+          "severity": "High",
+          "summary": "Panzer, a newly observed ransomware group, has reportedly claimed 16 victims across 11 countries.",
+          "details": "August recorded 997 known ransomware attacks, reported as a 23% increase from July."
+        },
+        {
+          "title": "Overdue KEV Vulnerabilities",
+          "severity": "High",
+          "summary": "LiteLLM, Starlette and VMware vCenter remain on the board of vulnerabilities associated with known ransomware activity.",
+          "action": "Review exposure and prioritize remediation."
+        }
+      ]
+    },
+    {
+      "title": "India",
+      "items": [
+        {
+          "title": "₹12.84-Crore Hero FinCorp Heist",
+          "severity": "High",
+          "summary": "Delhi Police IFSO arrested five people, including a bank relationship manager, over 317 unauthorized transactions.",
+          "details": "₹1.7 crore was reportedly put on hold. Investigators are examining a Dubai connection, Telegram groups linked to Chinese actors, and USDT conversion."
+        },
+        {
+          "title": "Noida Fintech Server Hack",
+          "severity": "High",
+          "summary": "₹2.42 crore was reportedly siphoned through 497 transactions within eight hours.",
+          "details": "The funds were distributed across 58 accounts in 28 banks before the activity was detected."
+        },
+        {
+          "title": "CISF and IIT Kanpur DFIR Training",
+          "severity": "Medium",
+          "summary": "CISF signed an MoU with IIT Kanpur's C3iHub for six-week residential training.",
+          "details": "The program focuses on digital forensics, incident response and critical-infrastructure security."
+        },
+        {
+          "title": "Fraudulent SIM Supply Chain Investigation",
+          "severity": "Medium",
+          "summary": "Eight people were arrested as part of an investigation into a fraudulent SIM supply chain."
+        }
+      ]
+    }
+  ]
+}
