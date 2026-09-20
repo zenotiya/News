@@ -1,90 +1,83 @@
 {
-  "date": "2026-09-19",
-  "title": "Morning Cybersecurity Digest",
-  "subtitle": "Saturday, September 19 — Here's what's worth your attention today.",
+  "date": "2026-09-20",
   "sections": [
     {
-      "title": "Act on Today",
       "items": [
         {
-          "title": "Cisco ISE Zero-Day CVE-2026-76460",
+          "action": "Patch ISE to 3.1P12 / 3.2P11 / 3.3P12 / 3.4P7 / 3.5P4 immediately. Check access.log for suspicious usernames (e.g. 'dummyuser') and re-image any compromised node from a known-good backup.",
+          "details": "77 new CVEs in Cisco's September batch, 41 in ISE (incl. a second CVSS 10.0, CVE-2026-76423) and 28 in Secure Firewall. No workarounds for the zero-day; iACLs on management traffic are interim mitigation.",
           "severity": "Critical",
-          "summary": "Cisco ISE zero-day CVE-2026-76460 has a CVSS score of 10.0 and is being actively exploited. No workaround is available.",
-          "details": "Fixed releases include 3.1 Patch 12, 3.2 Patch 11, 3.3 Patch 12, 3.4 Patch 7, and 3.5 Patch 4. The KEV remediation deadline for federal agencies is September 19, 2026.",
-          "action": "Patch immediately and restrict the management interface with iACLs where possible."
+          "summary": "An unauthenticated attacker can send a crafted API request to bypass Cisco Identity Services Engine's web management interface and gain root-level command execution. Cisco discovered it during a support case and confirms active exploitation; CISA added it to the KEV catalog with a September 19 deadline.",
+          "title": "Cisco ISE zero-day (CVE-2026-76460, CVSS 10.0) under active exploitation"
         },
         {
-          "title": "Cisco Secure Email Gateway CVE-2026-76461",
+          "action": "Review the vendor advisory, apply the recommended Jumbo Hotfix / LivePatch take for your release, and restrict management-plane exposure.",
+          "details": "Affected: R82.20, R82.10 (Take 44 or earlier), R82 (Take 126 or earlier), R81.20 (Take 166 or earlier), plus older releases. Remediation via dedicated LivePatch takes — verify against Check Point's current Security Knowledge article.",
           "severity": "Critical",
-          "summary": "CVE-2026-76461 was added to the KEV catalog and its remediation deadline was September 18, 2026.",
-          "details": "Patching alone may not remove an established compromise. Review systems for suspicious usernames and API activity in logs.",
-          "action": "Patch affected systems and perform compromise-hunting activities."
+          "summary": "A critical flaw in Check Point Security Management, Multi-Domain Management, and Log Server deployments lets a remote, unauthenticated attacker reach root through the login mechanism itself.",
+          "title": "Check Point management servers exposed to unauthenticated root RCE (CVE-2026-91843, CVSS 9.8)"
         },
         {
-          "title": "Pixel Modem Zero-Day CVE-2026-58704",
+          "action": "Apply IBM's latest security update for Guardium Data Protection 12.2 and audit management-interface access logs for anomalous logins.",
+          "details": "CWE-306 (missing authentication for critical function). No public exploit confirmed yet; EPSS rated low risk (0.43%) but severity warrants immediate patching.",
           "severity": "Critical",
-          "summary": "CVE-2026-58704 is a Pixel modem zero-day with a KEV remediation deadline of September 19, 2026.",
-          "details": "The September Pixel security update includes the required fixes.",
-          "action": "Deploy the September Pixel bulletin with the 2026-09-05 patch level and verify compliance through MDM."
+          "summary": "Disclosed September 18: an unauthenticated remote attacker can bypass IP-based access controls and reach the Guardium management interface.",
+          "title": "IBM Guardium Data Protection 12.2 auth bypass (CVE-2026-82967, CVSS 9.8)"
         }
-      ]
+      ],
+      "title": "Act on Today"
     },
     {
-      "title": "Breaches & Ransomware",
       "items": [
         {
-          "title": "Qilin Lists Inland and Offshore Contractors",
+          "action": "Monitor for the group's IOCs and verify backup integrity if you do business with affected supply chains.",
+          "details": "Double-extortion RaaS group using phishing plus Cobalt Strike, encrypting with the .ryshida extension and demanding Bitcoin. Listing reflects the group's claim; victim confirmation status unclear.",
           "severity": "High",
-          "summary": "Qilin listed Inland and Offshore Contractors of Trinidad and Tobago on its leak site on September 18.",
-          "details": "The organization operates in the energy and utilities sector."
+          "summary": "Rhysida added Kreishandwerkerschaft Borken to its dark-web leak site on September 19, 2026 — the group's 283rd listed victim since June 2023.",
+          "title": "Rhysida lists German professional-services firm Kreishandwerkerschaft Borken"
         },
         {
-          "title": "Play Lists Barrett Mahony Consulting Engineers",
+          "details": "AuditTeam has claimed 44 victims globally, using a double-extortion model. No verified details yet on stolen data or initial access; treat as an alleged claim rather than a confirmed breach.",
           "severity": "High",
-          "summary": "Play listed Barrett Mahony Consulting Engineers of Ireland on its leak site on September 18.",
-          "details": "The organization operates in the professional services sector."
+          "summary": "ThreatMon's team detected AuditTeam adding an Italian organization (identity partially obscured as 'tdup') to its leak site on September 19.",
+          "title": "AuditTeam claims another victim (td***up, Italy) on September 19"
         },
         {
-          "title": "Panzer Ransomware Activity",
+          "action": "If you hold a Revolut account, watch for phishing leveraging KYC data and enable all account alerts.",
+          "details": "The group shared redacted screenshots and a screen recording of purported KYC documents (licences, passports, selfies, transaction histories). Revolut says it received no direct contact or demand and is supporting affected customers with law enforcement involved.",
           "severity": "High",
-          "summary": "Panzer, a newly observed ransomware group, has reportedly claimed 16 victims across 11 countries.",
-          "details": "August recorded 997 known ransomware attacks, reported as a 23% increase from July."
-        },
-        {
-          "title": "Overdue KEV Vulnerabilities",
-          "severity": "High",
-          "summary": "LiteLLM, Starlette and VMware vCenter remain on the board of vulnerabilities associated with known ransomware activity.",
-          "action": "Review exposure and prioritize remediation."
+          "summary": "A group calling itself 'iamnotavillain' posted a 24-hour countdown demanding 6,000 XMR (~$3M / ₹28.8 crore) for customer identity and transaction records it claims to hold from a breach affecting at least 680 Revolut accounts.",
+          "title": "Hackers publicly demand $3M Monero ransom from Revolut over alleged breach"
         }
-      ]
+      ],
+      "title": "Breaches & Ransomware"
     },
     {
-      "title": "India",
       "items": [
         {
-          "title": "₹12.84-Crore Hero FinCorp Heist",
+          "action": "BFSI teams should join SOC telemetry with transaction logs, employee-access records, beneficiary graphs, and blockchain tracing in the first hours of any payment-fraud incident.",
+          "details": "Proceeds were layered through 34 bank accounts; police have put ₹1.7 crore on hold. Investigators are examining a suspected Dubai connection, Telegram groups linked to Chinese actors, and conversion of some funds into USDT.",
           "severity": "High",
-          "summary": "Delhi Police IFSO arrested five people, including a bank relationship manager, over 317 unauthorized transactions.",
-          "details": "₹1.7 crore was reportedly put on hold. Investigators are examining a Dubai connection, Telegram groups linked to Chinese actors, and USDT conversion."
+          "summary": "Delhi Police's IFSO unit arrested five people — including a private-bank relationship manager — over a cyberattack on an NBFC that siphoned ~₹12.84 crore through 317 unauthorized digital transactions.",
+          "title": "₹12.84-crore NBFC cyber heist: Delhi Police IFSO arrests 5, including bank employee"
         },
         {
-          "title": "Noida Fintech Server Hack",
-          "severity": "High",
-          "summary": "₹2.42 crore was reportedly siphoned through 497 transactions within eight hours.",
-          "details": "The funds were distributed across 58 accounts in 28 banks before the activity was detected."
-        },
-        {
-          "title": "CISF and IIT Kanpur DFIR Training",
+          "action": "Check bank statements regularly and disable UPI collect-request auto-approval; report unknown transactions to 1930 immediately.",
+          "details": "Police are examining her iPhone, PhonePe account, UPI channel, and the bank account to determine the compromise vector — unauthorized device access is suspected but not yet established.",
           "severity": "Medium",
-          "summary": "CISF signed an MoU with IIT Kanpur's C3iHub for six-week residential training.",
-          "details": "The program focuses on digital forensics, incident response and critical-infrastructure security."
+          "summary": "The MLA's Union Bank of India account was hit by multiple unauthorized PhonePe and UPI transactions between August 22 and September 13, discovered on a bank statement September 14; FIR registered at Dhoomanganj, Prayagraj with cyber-cell assistance.",
+          "title": "Chail MLA Pooja Pal flags ₹1.55 lakh in unauthorized PhonePe/UPI withdrawals"
         },
         {
-          "title": "Fraudulent SIM Supply Chain Investigation",
+          "details": "Police specifically warn against downloading APK files from unknown numbers; report cyber fraud via helpline 1930.",
           "severity": "Medium",
-          "summary": "Eight people were arrested as part of an investigation into a fraudulent SIM supply chain."
+          "summary": "Fraudsters are calling consumers claiming pending gas bills and threatening disconnection, then pushing APK downloads that give them access to the victim's device for unauthorized transactions.",
+          "title": "Agra Police warn of 'gas bill' scam pushing malicious APKs"
         }
-      ]
+      ],
+      "title": "India"
     }
-  ]
+  ],
+  "subtitle": "Sunday, September 20 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
 }
