@@ -1,0 +1,34 @@
+{
+  "date": "2026-09-22",
+  "items": [
+    {
+      "image": "https://gscatalyst.com/storage/partner/01K46QS3E1YANY369WBYZQR06C.png",
+      "name": "Aikido 'Altar'",
+      "summary": "Belgian cybersecurity firm Aikido released 'Altar', an open-weight AI model built for security use cases that teams can run locally instead of sending sensitive code to external providers. It is a compressed, customized version of Z.AI's open GLM-5.3 model and is already being deployed in Aikido's customer solutions.",
+      "url": "https://www.reuters.com/legal/litigation/belgiums-aikido-launches-cybersecurity-ai-model-demand-local-tools-grows-2026-09-21/"
+    },
+    {
+      "image": "https://cdn.prod.website-files.com/698256819ac588f7289dd45e/698bc195bb2a6975c1c873e1_CydelphiLogo_4FC978.png",
+      "name": "CYDELPHI CYVISIONARY",
+      "summary": "CYDELPHI unveiled CYVISIONARY, billed as the industry's first AI-native digital forensics and incident response (DFIR) platform, using AI and agentic workflows to automate breach preparation, response and recovery — aiming to restore critical operations in hours instead of weeks.",
+      "url": "https://www.globenewswire.com/news-release/2026/09/17/3363843/0/en/cydelphi-ushers-in-a-new-era-of-cyber-resilience-for-businesses-with-ai-native-digital-forensics-and-incident-response-dfir-platform-cyvisionary.html"
+    },
+    {
+      "image": "https://cybersecurity-excellence-awards.com/wp-content/uploads/416271.png",
+      "name": "Axoflow AxoDetect",
+      "summary": "Axoflow launched AxoDetect (early access), which runs Sigma detection rules directly in the telemetry pipeline on normalized data — alerts travel to the SIEM while full-fidelity logs land in its low-cost AxoLake data lake, cutting SIEM ingest costs by half or more in early deployments.",
+      "url": "https://cybernewswire.com/2026/09/16/axoflow-launches-axodetect-bringing-detection-into-the-pipeline-and-making-the-siem-optional/"
+    },
+    {
+      "name": "SARAAB (DESC)",
+      "summary": "The Dubai Electronic Security Center unveiled SARAAB, an open-source AI model built by an Emirati team to detect deepfake videos — the first of its kind from a government entity in the Arab region — and will publish it on developer platforms for researchers to test and extend.",
+      "url": "https://www.godubai.com/citylife/press_release_page.asp?pr=194035"
+    },
+    {
+      "image": "https://ismg.events/wp-content/uploads/2025/06/DigiCert.png",
+      "name": "DigiCert AI Trust Manager",
+      "summary": "DigiCert launched AI Trust Manager (general availability) on its DigiCert ONE platform to discover and govern enterprise AI agents — giving each agent a cryptographically signed 'AI Passport' identity, policy-based 'visas' defining what it may access, and a kill switch to revoke authority when trust changes.",
+      "url": "https://www.globenewswire.com/news-release/2026/09/15/3362163/0/en/every-ai-agent-needs-a-kill-switch-digicert-launches-ai-trust-manager.html"
+    }
+  ]
+}
