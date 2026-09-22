@@ -9,7 +9,8 @@
           "severity": "Critical",
           "summary": "Unauthenticated SQL injection in Cisco Secure Email Gateway's AsyncOS software lets a remote attacker execute arbitrary commands with root privileges via a crafted email. Cisco confirms active exploitation in September 2026, and the CVE is on CISA's Known Exploited Vulnerabilities catalog.",
           "title": "Cisco Secure Email Gateway CVE-2026-76461 exploited in the wild",
-          "url": "https://www.truesec.com/hub/blog/critical-cisco-secure-email-gateway-vulnerability-exploited-in-the-wild"
+          "url": "https://www.truesec.com/hub/blog/critical-cisco-secure-email-gateway-vulnerability-exploited-in-the-wild",
+          "image": "https://www.captaindns.com/_next/image?url=%2Fblog%2F2026%2F04%2Fcisco-secure-email-gateway%2Fhero_it.png&w=750&q=75&dpl=dpl_CZxV9fmeNAsbehS1cyrF9AiQvBMj"
         },
         {
           "action": "Update macOS to the patched versions; block inbound access to port 5900 at the firewall and disable Screen Sharing if it isn't needed. Note: updating does not clean up an existing compromise.",
@@ -26,7 +27,8 @@
           "severity": "High",
           "summary": "Researchers at Accomplish AI found two sandbox escapes in OpenAI's Codex coding agent ('Heapjack' and 'Overpatch') that allowed unsandboxed host command execution from a malicious repo, with no approval prompt or on-screen indication. Reported August 12; OpenAI patched within eight days.",
           "title": "OpenAI Codex sandbox escapes allowed host RCE from malicious repos",
-          "url": "https://techgig.com/news/ai/openai-codex-sandbox-escapes-allowed-remote-code-execution-on-developer-machines/134377453"
+          "url": "https://techgig.com/news/ai/openai-codex-sandbox-escapes-allowed-remote-code-execution-on-developer-machines/134377453",
+          "image": "https://cdn.prod.website-files.com/622134a7316eb7ab1c7dc85f/69cf08d9a36302ec634ef978_OpenAI%20Codex-p-1080.png"
         },
         {
           "action": "Update any web apps or plugins using the getID3 library to the patched release and scan for exploitation of upload/media-processing paths.",
