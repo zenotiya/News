@@ -2,32 +2,29 @@
   "date": "2026-09-22",
   "items": [
     {
-      "name": "Grok 4.7",
-      "summary": "xAI's latest flagship (2.1T parameters, 500K-token context) shipped Sept 21 after multiple delays; trained partly on SpaceX engineering data, it leads on electrical-engineering and legal benchmarks while trailing Claude Fable 5.1 on terminal-bench coding.",
-      "url": "https://aireleasetracker.com/model/xai/grok-4-7",
-      "image": "https://www.mrw.it/wp-content/uploads/2025/02/GROK.jpg"
+      "name": "TypeSafe AI — Jev (System One Models)",
+      "summary": "TypeSafe AI broke two years of stealth on Sep 15 with Jev, the first \"System One\" model — a decision engine that returns typed, calibrated outputs instead of chat text, aimed at 100x-faster structured automation decisions at $0.042/M input tokens. Founded by ex-OpenAI RLHF/InstructGPT co-author Diogo Almeida, the launch came with a $40M DCVC-led seed round.",
+      "url": "https://aicodenews.com/typesafe-jev-ai-launched/"
     },
     {
-      "name": "Jev 1.13",
-      "summary": "TypeSafe AI's 'System One' decision model (launched Sept 15) returns typed choices, scores and probabilities in 70–500ms at $0.042/MTok input with free output — built for routing, scoring and risk checks inside agent pipelines. Its waitlist was removed Sept 20 after record-fast adoption.",
-      "url": "https://typesafe.ai/"
+      "name": "OpenAI — Astra for Law",
+      "summary": "OpenAI introduced Astra for Law on Sep 17: GPT-6 Astra configured with a dedicated 230M+ URL legal search index and firm-level controls, offered to selected law firms via Trusted Access (26 legal plugins included). OpenAI reports 54% correctness on Vals AI's Legal Research Bench vs 38.7% for base GPT-6 Astra with web search.",
+      "url": "https://www.reuters.com/legal/litigation/openai-launches-legal-focused-ai-platform-escalating-race-law-firm-users-2026-09-17/"
     },
     {
-      "name": "Atria Dawn Preview",
-      "summary": "Shanghai AI Lab quietly released a 744B-parameter MoE agentic model under the MIT license on Sept 11 — no blog post, just weights on GitHub/Hugging Face, with a 143-author paper following days later. Vendor benchmarks claim tops on BrowseComp (92.5) and CyberGym (86.5).",
-      "url": "https://aiweekly.co/alerts/shanghai-ai-lab-ships-atria-dawn-preview-a-744b-agentic-moe",
-      "image": "https://yufeiding.com/img/ShanghaiAI.jpg"
+      "name": "Salesforce — Koa (CRM reasoning model)",
+      "summary": "Salesforce and NVIDIA announced Koa on Sep 15, Salesforce's first CRM reasoning model for Agentforce, built by post-training NVIDIA Nemotron 3 Super on synthetic data drawn from 27 years of Salesforce CRM deployments. Salesforce claims it matches or exceeds leading models on its CRM Bench with 3x fewer errors; pilots start in October.",
+      "url": "https://www.salesforce.com/news/press-releases/2026/09/15/koa-reasoning-model/"
     },
     {
-      "name": "Sakana AI Fugu Max & Fugu Ultra v2",
-      "summary": "Sakana AI's learned orchestration systems (Sept 11) route each task across a swappable pool of open-weight models instead of one monolith — Fugu Max at $2/$6 per MTok undercuts frontier output pricing by 40–60% while topping six benchmarks.",
-      "url": "https://datanorth.ai/news/sakana-ai-launches-fugu-max-and-fugu-ultra-v2",
-      "image": "https://sparkpedia.net/images/tools/sakana-ai/official/sakana-ai_00.png"
+      "name": "PrismML — Bonsai 2 27B",
+      "summary": "Caltech spinout PrismML released Bonsai 2 27B (Sep 17), compressing Alibaba's open Qwen3.8 27B into a 5.9 GB reasoning model — a 9–10x memory cut small enough to run on a PC and possibly a high-end smartphone. It bets that capable reasoning models don't need to be large, with a rumored Apple partnership declined comment by CEO Babak Hassibi.",
+      "url": "https://techcrunch.com/2026/09/17/prismml-hopes-its-tiny-llm-could-change-how-we-all-use-ai/"
     },
     {
-      "name": "DeepSeek V4.1 Flash",
-      "summary": "DeepSeek's 552B-parameter MoE (Sept 10) uses a novel causal encoder-decoder design with an 890-bytes/token KV cache; MIT-licensed weights, 1M-token context, and it displaced the company's own V4 Pro flagship on price and agentic performance.",
-      "url": "https://datanorth.ai/news/deepseek-releases-deepseek-v4-1-flash"
+      "name": "Aikido — Altar (open-weight cybersecurity model)",
+      "summary": "Belgian cybersecurity firm Aikido released Altar on Sep 21, an open-weight AI model for cybersecurity tasks — a compressed, customized version of Z.AI's GLM-5.3 designed to run locally so companies can use defensive AI tools without sending sensitive code to external providers. The company, valued at ~$1B in January, is deploying it for customers like Belfius bank.",
+      "url": "https://www.reuters.com/legal/litigation/belgiums-aikido-launches-cybersecurity-ai-model-demand-local-tools-grows-2026-09-21/"
     }
   ]
 }
