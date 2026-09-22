@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-22",
+  "news_count": 9,
+  "cve_count": 5,
+  "worst_cvss": 9.9,
+  "priorities": [
+    {
+      "id": "CVE-2026-93985",
+      "cvss": 9.9,
+      "summary": "OpenPanel js-runtime (through commit bad75bdd) has a sandbox escape in its JavaScript webhook template validator: computed member access reaches the Function constructor, letting an attacker with project write access execute arbitrary code in the shared worker process.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93985"
+    },
+    {
+      "id": "CVE-2026-84064",
+      "cvss": 9.9,
+      "summary": "IBM Guardium Data Protection 12.2 vulnerability batch (disclosed 19 Sep 2026) — CVE-2026-84064 is the highest-scoring of four 9.9 CVEs covering unauthenticated RCE, SQL injection and authentication bypass with no confirmed exploitation yet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84064"
+    },
+    {
+      "id": "CVE-2026-13684",
+      "cvss": 9.8,
+      "summary": "Synology-SA-26:13 (18 Sep 2026): improper encoding/escaping in SCGI in DiskStation Manager lets remote attackers read or write arbitrary files and trigger denial of service on unpatched NAS devices.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13684"
+    }
+  ],
+  "model": {
+    "name": "TypeSafe AI — Jev (System One Models)",
+    "summary": "TypeSafe AI broke two years of stealth on Sep 15 with Jev, the first \"System One\" model — a decision engine that returns typed, calibrated outputs instead of chat text, aimed at 100x-faster structured automation decisions at $0.042/M input tokens. Founded by ex-OpenAI RLHF/InstructGPT co-author Diogo Almeida, the launch came with a $40M DCVC-led seed round.",
+    "url": "https://aicodenews.com/typesafe-jev-ai-launched/"
+  }
+}
