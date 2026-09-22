@@ -2,39 +2,39 @@
   "date": "2026-09-22",
   "items": [
     {
-      "cvss": 10.0,
-      "id": "CVE-2026-76460",
+      "cvss": 9.9,
+      "id": "CVE-2026-93985",
       "severity": "Critical",
-      "summary": "Unauthenticated authentication-bypass flaw in Cisco Identity Services Engine (ISE) and ISE-PIC API endpoints. Actively exploited in the wild — attackers can bypass the web management login and gain root-level command execution; CISA added it to the KEV catalog.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76460"
+      "summary": "OpenPanel js-runtime (through commit bad75bdd) has a sandbox escape in its JavaScript webhook template validator: computed member access reaches the Function constructor, letting an attacker with project write access execute arbitrary code in the shared worker process.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93985"
     },
     {
-      "cvss": 10.0,
-      "id": "CVE-2026-85706",
+      "cvss": 9.9,
+      "id": "CVE-2026-84064",
       "severity": "Critical",
-      "summary": "Path traversal in the GitLab repository commits API lets an unauthenticated attacker read arbitrary server files (configs, secrets, SSH keys) when at least one public project exists. Under active in-the-wild exploitation and CISA KEV-listed.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85706"
-    },
-    {
-      "cvss": 9.8,
-      "id": "CVE-2026-76461",
-      "severity": "Critical",
-      "summary": "SQL injection in the email-parsing logic of Cisco AsyncOS for Secure Email Gateway. A single crafted email lets an unauthenticated remote attacker execute arbitrary commands as root; Cisco PSIRT confirmed active exploitation and CISA KEV-listed it.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76461"
-    },
-    {
-      "cvss": 9.3,
-      "id": "CVE-2026-58138",
-      "severity": "Critical",
-      "summary": "Unauthenticated remote code execution in Orkes Conductor (versions 3.21.21 to 3.30.2) via insecurely configured GraalVM expression evaluators — crafted workflow definitions execute OS commands before authentication is enforced. Fortinet reports active exploitation in the wild.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58138"
+      "summary": "IBM Guardium Data Protection 12.2 vulnerability batch (disclosed 19 Sep 2026) — CVE-2026-84064 is the highest-scoring of four 9.9 CVEs covering unauthenticated RCE, SQL injection and authentication bypass with no confirmed exploitation yet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84064"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-60004",
+      "id": "CVE-2026-13684",
       "severity": "Critical",
-      "summary": "RCE in Gitea's diffpatch endpoint lets an attacker with repository write access install malicious Git hooks and run commands as the Gitea user (open registration makes this trivially reachable). Now weaponized by the 'Red Heron' espionage campaign that compromised 13 organizations across six countries.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60004"
+      "summary": "Synology-SA-26:13 (18 Sep 2026): improper encoding/escaping in SCGI in DiskStation Manager lets remote attackers read or write arbitrary files and trigger denial of service on unpatched NAS devices.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13684"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-84434",
+      "severity": "Critical",
+      "summary": "Gravity Forms for WordPress (through 3.1.0.4) suffers an unauthenticated arbitrary file upload: a validation bypass lets hidden upload fields skip extension checks, enabling remote code execution via public forms.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84434"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-91843",
+      "severity": "Critical",
+      "summary": "Check Point Security Management / Log Server stack overflow in the pre-auth login process lets an unauthenticated remote attacker execute code as root; patched via LivePatch advisory sk1000155 (record active 17–18 Sep 2026).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91843"
     }
   ]
 }
