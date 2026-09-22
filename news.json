@@ -1,28 +1,39 @@
 {
-  "date": "2026-09-21",
+  "date": "2026-09-22",
   "sections": [
     {
       "items": [
         {
-          "action": "Patch Secure Email Gateway AsyncOS immediately (first fixed: 15.5.5-0141, 16.0.4-3021, 16.5.0-780; Cisco recommends 16.5.0-780). Hunt for signs of prior compromise — patching does not undo historic access.",
-          "details": "The vulnerability affects Cisco Secure Email Gateway (physical and virtual appliances, all configurations). Cisco says its PSIRT became aware of active exploitation in September 2026; Cisco Secure Email Cloud devices have been upgraded and affected customers contacted directly. Cisco Secure Email and Web Manager and Secure Web Appliance are not affected.",
+          "action": "Patch Cisco Secure Email Gateway to 15.5.5-014, 16.0.4-302, or 16.5.0-780; check mail_logs for suspicious SQL (e.g. COPY ... TO PROGRAM) for signs of exploitation.",
+          "details": "The flaw can be triggered by sending a specially crafted email through a vulnerable gateway; no authentication or admin-interface access is required.",
           "severity": "Critical",
-          "summary": "A critical SQL injection flaw in Cisco Secure Email Gateway gives attackers root access and is already being exploited in the wild.",
-          "title": "Cisco Secure Email Gateway zero-day exploited in the wild"
+          "summary": "Unauthenticated SQL injection in Cisco Secure Email Gateway's AsyncOS software lets a remote attacker execute arbitrary commands with root privileges via a crafted email. Cisco confirms active exploitation in September 2026, and the CVE is on CISA's Known Exploited Vulnerabilities catalog.",
+          "title": "Cisco Secure Email Gateway CVE-2026-76461 exploited in the wild",
+          "url": "https://www.truesec.com/hub/blog/critical-cisco-secure-email-gateway-vulnerability-exploited-in-the-wild"
         },
         {
-          "action": "Install the September Pixel update on any Pixel 10-series device and treat modem firmware updates as priority for at-risk users.",
-          "details": "The September 2026 Pixel Update Bulletin states there are indications of 'limited, targeted exploitation' of a permission-bypass logic error in the cellular modem, enabling remote (proximal/adjacent) privilege escalation with no user interaction.",
+          "action": "Update macOS to the patched versions; block inbound access to port 5900 at the firewall and disable Screen Sharing if it isn't needed. Note: updating does not clean up an existing compromise.",
+          "details": "The vulnerability requires no valid username or password, so account hardening alone does not protect exposed hosts.",
           "severity": "Critical",
-          "summary": "Google confirmed a silent zero-click baseband flaw (CVE-2026-58704) that let attackers in radio range compromise Pixel phones, with limited targeted exploitation observed.",
-          "title": "Pixel modem zero-click flaw under limited targeted exploitation"
+          "summary": "CVE-2026-65400 is a remote code execution flaw in the macOS Screen Sharing service (TCP port 5900) that needs no credentials and is reportedly being actively exploited against internet-facing Macs.",
+          "title": "Actively exploited macOS Screen Sharing RCE (CVE-2026-65400)",
+          "url": "http://www.macminivault.com/security-advisory-critical-macos-screen-sharing-vulnerability-cve-2026-65400/"
         },
         {
-          "action": "Block device-code authentication for users who don't need it, harden help-desk verification for passkey/MFA resets, and train staff to ignore unsolicited 'update your passkey' calls — even to personal phones.",
-          "details": "Microsoft observed unusual sign-ins followed by attacker-added auth methods, high-volume Microsoft Graph activity, SharePoint/OneDrive downloads, and email collection via REST APIs — consistent with automated collection from compromised identities. Attackers impersonate the IT help desk via calls, SMS, or Teams messages from already-compromised accounts.",
+          "action": "Update to Codex Desktop build 26.818.21641 and Codex CLI 0.149.0 or later; treat unfamiliar or third-party repositories as untrusted input.",
+          "details": "Both bugs shared a root cause: the enforcement mechanism lived inside the code it was meant to restrain. The more serious flaw, Heapjack, extracted a trusted-context token from shared memory and worked in the strictest read-only mode.",
           "severity": "High",
-          "summary": "Microsoft is tracking active cloud intrusions since May 2026 that use fake passkey/MFA/SSO update requests as a pretext for adversary-in-the-middle and device-code phishing to hijack Microsoft 365 identities.",
-          "title": "Microsoft warns passkey-themed social engineering is driving cloud account takeovers"
+          "summary": "Researchers at Accomplish AI found two sandbox escapes in OpenAI's Codex coding agent ('Heapjack' and 'Overpatch') that allowed unsandboxed host command execution from a malicious repo, with no approval prompt or on-screen indication. Reported August 12; OpenAI patched within eight days.",
+          "title": "OpenAI Codex sandbox escapes allowed host RCE from malicious repos",
+          "url": "https://techgig.com/news/ai/openai-codex-sandbox-escapes-allowed-remote-code-execution-on-developer-machines/134377453"
+        },
+        {
+          "action": "Update any web apps or plugins using the getID3 library to the patched release and scan for exploitation of upload/media-processing paths.",
+          "details": "getID3 is a widely used PHP library for extracting metadata from media files, so any application accepting media uploads is exposed.",
+          "severity": "High",
+          "summary": "CVE-2026-94106 is an OS command injection in the getID3 PHP media-processing library, reachable via malicious filenames. CVSS 8.8, disclosed September 21, 2026.",
+          "title": "getID3 library CVE-2026-94106 — CVSS 8.8 OS command injection",
+          "url": "https://threataft.com/articles/threataft-week-in-review-september-15-21-2026"
         }
       ],
       "title": "Act on Today"
@@ -30,18 +41,25 @@
     {
       "items": [
         {
-          "action": "Gyazo users: change your Gyazo password now, and any other site where it was reused; revoke X integration tokens if connected.",
-          "details": "Attackers exploited a vulnerability in Gyazo's image-upload server on September 11, ran arbitrary commands, and reached the backend database. Helpfeel blocked the access routes on September 12, remediated the flaw, reported to Japan's Personal Information Protection Commission, and temporarily disabled viewing of some affected images. Exposed image IDs can rebuild share links — even for images set to private — and the dump included OCR text, EXIF location data, and hashed passphrases.",
-          "severity": "High",
-          "summary": "Helpfeel confirmed attackers stole approximately 23.62 million Gyazo user records (names, emails, password hashes, session IDs, X/Google tokens) plus metadata for ~490 million images.",
-          "title": "Gyazo breach exposes 23.6M user records and 490M image records"
+          "details": "Both companies are publicly traded and large-scale: Flex is a global manufacturing and supply-chain company operating in ~30 countries; Bruker makes scientific and analytical instruments. No data-exfiltration or encryption details have been independently confirmed.",
+          "severity": "Medium",
+          "summary": "The MetaEncryptor ransomware operation listed Flex Ltd and Bruker Corporation on September 21, 2026, visible across multiple ransomware-monitoring datasets. Treat as a claim, not a confirmed breach.",
+          "title": "MetaEncryptor lists Flex Ltd and Bruker Corporation",
+          "url": "https://undercodenews.com/metaencryptor-ransomware-claims-flex-ltd-and-bruker-corporation-in-a-major-september-2026-wave-video/"
         },
         {
-          "action": "TELUS customers should review account changes and billing statements from the last 16 months and treat any unexpected 'switch provider' calls as social engineering.",
-          "details": "Notification letters began arriving in the second week of September 2026. This is a separate incident from the March 2026 ShinyHunters extortion claim against TELUS Digital's BPO operations — this one is a prolonged account-takeover campaign against live consumer telecom accounts.",
-          "severity": "High",
-          "summary": "TELUS is notifying customers that attackers used compromised credentials to access consumer telecom accounts for roughly 16 months (Feb 2025–Jun 2026), exposing personal and billing data and using stolen account details to call customers and push them to competing providers.",
-          "title": "TELUS discloses 16-month telecom account takeover"
+          "details": "TruAmerica describes itself as a vertically integrated residential investment manager with a nationally distributed multifamily portfolio. No confirmation from the company was located.",
+          "severity": "Medium",
+          "summary": "The Termite ransomware group claimed TruAmerica Multifamily, a Los Angeles-based real-estate investment and asset-management firm, citing unauthorized system access and operational disruption. The claim is unverified.",
+          "title": "Termite claims TruAmerica Multifamily",
+          "url": "https://undercodenews.com/termite-targets-truamerica-multifamily-in-a-new-ransomware-attack-on-the-us-real-estate-sector-video/"
+        },
+        {
+          "details": "Newman Tractor (sales, rentals, parts, and service in Kentucky, Ohio, and Florida) has not publicly confirmed the incident; monitoring sources describe it as an unverified ransomware claim.",
+          "severity": "Medium",
+          "summary": "The 3AM ransomware group listed newmantractor.com as a claimed victim on September 21, 2026, targeting the heavy-equipment dealer. No independent confirmation of compromise or data theft exists.",
+          "title": "3AM ransomware claims Newman Tractor",
+          "url": "https://undercodenews.com/newman-tractor-reportedly-targeted-by-3am-ransomware-attack-as-heavy-equipment-industry-faces-another-cybersecurity-warning-video/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -49,22 +67,25 @@
     {
       "items": [
         {
-          "action": "Check your phone's Android version (Settings > System > software update) and install the September security patch as soon as it is offered by your device maker.",
-          "details": "The advisory (CIVN-2026-0454, September 14) warns of arbitrary code execution, privilege escalation, denial of service, and sensitive-information disclosure. Google's September 2026 Android bulletin includes a critical no-interaction remote-code-execution flaw (CVE-2026-28604) in the System component.",
-          "severity": "Critical",
-          "summary": "CERT-In issued a 'critical' warning for multiple vulnerabilities in Android 14, 15, 16, 16-qpr2 and 17 that could allow remote hacking, privilege escalation and data theft.",
-          "title": "CERT-In critical warning for Android flaws (CIVN-2026-0454)"
+          "action": "Scan for the FLATROOF/ROOFDECK indicators and hunt for the fake job-interview repos (gtn-candidate-repo, Northwind-IAC, novacart-interview, terraform-candidate-repo) and rogue Terraform registry domains; block execution of terraform init from untrusted projects.",
+          "details": "FLATROOF uses Telegram for C2; ROOFDECK uses the decentralized Nostr protocol. The implants sat dormant on disk from March 18 until a Cursor workspace opened on March 29 triggered execution. The same backdoors were previously seen in the March-April 2026 KelpDAO LayerZero bridge attack.",
+          "severity": "High",
+          "summary": "SentinelOne attributed the compromise of an India-based IT services provider to the North Korea-linked Jade Sleet actor (TraderTraitor/UNC4899). The campaign used fake DevOps job-interview GitHub repos with weaponized Terraform lock files to drop the Rust-based macOS backdoors FLATROOF and ROOFDECK on an Apple Silicon MacBook belonging to a DevOps engineer.",
+          "title": "Jade Sleet breaches Indian IT provider with macOS backdoors",
+          "url": "http://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html"
         },
         {
-          "details": "The claim was reported via undercodenews on September 20, citing a leak-site listing; the alleged compromise is not independently verified and the company has not publicly confirmed an incident.",
-          "severity": "Medium",
-          "summary": "Ransomware group Orova listed Siddhi Green Excellence Pvt. Ltd., an Indian energy and utilities firm, on its leak site — a claim, not a confirmed incident.",
-          "title": "Orova ransomware claim targets Indian energy firm (unverified)"
+          "action": "Update Chrome immediately on all platforms (Linux, Windows, macOS); the update closes the listed flaws, including type-confusion and use-after-free issues in V8 and WebXR.",
+          "details": "CERT-In says the flaws could enable complete system compromise, data theft, and ransomware or spyware deployment, given Chrome's widespread use across Indian government, enterprise, and consumer devices.",
+          "severity": "High",
+          "summary": "CERT-In issued a high-risk advisory for Google Chrome users after multiple severe vulnerabilities — type confusion and use-after-free in V8, object-lifecycle issues in Media, incorrect security UI — were found in versions prior to 142.0.7444.59/60.",
+          "title": "CERT-In warns of high-risk vulnerabilities in Google Chrome",
+          "url": "https://www.newspointapp.com/english/lifestyle/india-issues-high-risk-cyber-alert-for-google-chrome-users-as-cert-in-warns-of-severe-security-vulnerabilities-cliq-latest-cliqindia_english/articleshow/14504820385e00cacf887c5da7cf2dc1fadc3a85"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Monday, September 21 — Here's what's worth your attention today.",
+  "subtitle": "Tuesday, September 22 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
