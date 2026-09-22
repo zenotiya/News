@@ -17,7 +17,8 @@
           "severity": "Critical",
           "summary": "CVE-2026-65400 is a remote code execution flaw in the macOS Screen Sharing service (TCP port 5900) that needs no credentials and is reportedly being actively exploited against internet-facing Macs.",
           "title": "Actively exploited macOS Screen Sharing RCE (CVE-2026-65400)",
-          "url": "http://www.macminivault.com/security-advisory-critical-macos-screen-sharing-vulnerability-cve-2026-65400/"
+          "url": "https://www.macminivault.com/security-advisory-critical-macos-screen-sharing-vulnerability-cve-2026-65400/",
+          "image": "https://nzilbb.github.io/labbcat-doc/howto/install/privacy-and-security.png"
         },
         {
           "action": "Update to Codex Desktop build 26.818.21641 and Codex CLI 0.149.0 or later; treat unfamiliar or third-party repositories as untrusted input.",
@@ -33,7 +34,8 @@
           "severity": "High",
           "summary": "CVE-2026-94106 is an OS command injection in the getID3 PHP media-processing library, reachable via malicious filenames. CVSS 8.8, disclosed September 21, 2026.",
           "title": "getID3 library CVE-2026-94106 — CVSS 8.8 OS command injection",
-          "url": "https://threataft.com/articles/threataft-week-in-review-september-15-21-2026"
+          "url": "https://threataft.com/articles/threataft-week-in-review-september-15-21-2026",
+          "image": "https://pwnit.io/wp-content/uploads/2023/05/SQL.png"
         }
       ],
       "title": "Act on Today"
@@ -45,21 +47,24 @@
           "severity": "Medium",
           "summary": "The MetaEncryptor ransomware operation listed Flex Ltd and Bruker Corporation on September 21, 2026, visible across multiple ransomware-monitoring datasets. Treat as a claim, not a confirmed breach.",
           "title": "MetaEncryptor lists Flex Ltd and Bruker Corporation",
-          "url": "https://undercodenews.com/metaencryptor-ransomware-claims-flex-ltd-and-bruker-corporation-in-a-major-september-2026-wave-video/"
+          "url": "https://undercodenews.com/metaencryptor-ransomware-claims-flex-ltd-and-bruker-corporation-in-a-major-september-2026-wave-video/",
+          "image": "https://vhost.vn/wp-content/uploads/2017/05/ma-doc-doi-tien-chuoc-vhost.png"
         },
         {
           "details": "TruAmerica describes itself as a vertically integrated residential investment manager with a nationally distributed multifamily portfolio. No confirmation from the company was located.",
           "severity": "Medium",
           "summary": "The Termite ransomware group claimed TruAmerica Multifamily, a Los Angeles-based real-estate investment and asset-management firm, citing unauthorized system access and operational disruption. The claim is unverified.",
           "title": "Termite claims TruAmerica Multifamily",
-          "url": "https://undercodenews.com/termite-targets-truamerica-multifamily-in-a-new-ransomware-attack-on-the-us-real-estate-sector-video/"
+          "url": "https://undercodenews.com/termite-targets-truamerica-multifamily-in-a-new-ransomware-attack-on-the-us-real-estate-sector-video/",
+          "image": "https://documents.trendmicro.com/images/Ransom_MSIL_JIGSAW_AC2.jpg"
         },
         {
           "details": "Newman Tractor (sales, rentals, parts, and service in Kentucky, Ohio, and Florida) has not publicly confirmed the incident; monitoring sources describe it as an unverified ransomware claim.",
           "severity": "Medium",
           "summary": "The 3AM ransomware group listed newmantractor.com as a claimed victim on September 21, 2026, targeting the heavy-equipment dealer. No independent confirmation of compromise or data theft exists.",
           "title": "3AM ransomware claims Newman Tractor",
-          "url": "https://undercodenews.com/newman-tractor-reportedly-targeted-by-3am-ransomware-attack-as-heavy-equipment-industry-faces-another-cybersecurity-warning-video/"
+          "url": "https://undercodenews.com/newman-tractor-reportedly-targeted-by-3am-ransomware-attack-as-heavy-equipment-industry-faces-another-cybersecurity-warning-video/",
+          "image": "https://www.xcitium.com/assets/images/the-dark-web.webp"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -72,7 +77,8 @@
           "severity": "High",
           "summary": "SentinelOne attributed the compromise of an India-based IT services provider to the North Korea-linked Jade Sleet actor (TraderTraitor/UNC4899). The campaign used fake DevOps job-interview GitHub repos with weaponized Terraform lock files to drop the Rust-based macOS backdoors FLATROOF and ROOFDECK on an Apple Silicon MacBook belonging to a DevOps engineer.",
           "title": "Jade Sleet breaches Indian IT provider with macOS backdoors",
-          "url": "http://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html"
+          "url": "https://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html",
+          "image": "https://hackread.com/wp-content/uploads/2025/08/hackers-leak-9gb-data-north-korean-hacker-computer.jpg"
         },
         {
           "action": "Update Chrome immediately on all platforms (Linux, Windows, macOS); the update closes the listed flaws, including type-confusion and use-after-free issues in V8 and WebXR.",
@@ -80,7 +86,8 @@
           "severity": "High",
           "summary": "CERT-In issued a high-risk advisory for Google Chrome users after multiple severe vulnerabilities — type confusion and use-after-free in V8, object-lifecycle issues in Media, incorrect security UI — were found in versions prior to 142.0.7444.59/60.",
           "title": "CERT-In warns of high-risk vulnerabilities in Google Chrome",
-          "url": "https://www.newspointapp.com/english/lifestyle/india-issues-high-risk-cyber-alert-for-google-chrome-users-as-cert-in-warns-of-severe-security-vulnerabilities-cliq-latest-cliqindia_english/articleshow/14504820385e00cacf887c5da7cf2dc1fadc3a85"
+          "url": "https://www.newspointapp.com/english/lifestyle/india-issues-high-risk-cyber-alert-for-google-chrome-users-as-cert-in-warns-of-severe-security-vulnerabilities-cliq-latest-cliqindia_english/articleshow/14504820385e00cacf887c5da7cf2dc1fadc3a85",
+          "image": "https://www.dice.com/binaries/large/content/gallery/dice/insights/2016/05/Google-Chrome.jpg"
         }
       ],
       "title": "India"
