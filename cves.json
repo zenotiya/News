@@ -1,40 +1,40 @@
 {
-  "date": "2026-09-22",
+  "date": "2026-09-23",
   "items": [
     {
+      "cvss": 9.8,
+      "id": "CVE-2026-93616",
+      "severity": "Critical",
+      "summary": "Pre-authentication path traversal with unsafe file upload in Check Point Security Management Server lets an unauthenticated remote attacker upload and execute arbitrary scripts. Exploited in targeted attacks since July 23 and added to CISA KEV on Sep 22 with a Sep 25 remediation deadline.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93616"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-90817",
+      "severity": "Critical",
+      "summary": "Unauthenticated remote code execution in Vanderbilt's REDCap research-data platform via public survey-link routing and crafted Data Import parameters. A public proof-of-concept is circulating, and affected medical/research instances risk PHI exposure and network footholds. Fixed in REDCap 16.0.49, 17.3.10, and 17.4.4.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90817"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-82967",
+      "severity": "Critical",
+      "summary": "Authentication bypass in IBM Guardium Data Protection 12.2 lets an unauthenticated remote attacker bypass IP-based access controls and access the database protection service. Disclosed Sep 18; patch proactively as no public exploit is confirmed yet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82967"
+    },
+    {
       "cvss": 9.9,
-      "id": "CVE-2026-93985",
+      "id": "CVE-2026-83941",
       "severity": "Critical",
-      "summary": "OpenPanel js-runtime (through commit bad75bdd) has a sandbox escape in its JavaScript webhook template validator: computed member access reaches the Function constructor, letting an attacker with project write access execute arbitrary code in the shared worker process.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93985"
+      "summary": "Elevation of privilege in Microsoft Entra ID disclosed in September Patch Tuesday. A flaw in the cloud identity plane reaching near-maximum CVSS deserves priority for tenants relying on Entra for SSO and conditional access.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83941"
     },
     {
-      "cvss": 9.9,
-      "id": "CVE-2026-84064",
+      "cvss": 10.0,
+      "id": "CVE-2026-70352",
       "severity": "Critical",
-      "summary": "IBM Guardium Data Protection 12.2 vulnerability batch (disclosed 19 Sep 2026) — CVE-2026-84064 is the highest-scoring of four 9.9 CVEs covering unauthenticated RCE, SQL injection and authentication bypass with no confirmed exploitation yet.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84064"
-    },
-    {
-      "cvss": 9.8,
-      "id": "CVE-2026-13684",
-      "severity": "Critical",
-      "summary": "Synology-SA-26:13 (18 Sep 2026): improper encoding/escaping in SCGI in DiskStation Manager lets remote attackers read or write arbitrary files and trigger denial of service on unpatched NAS devices.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13684"
-    },
-    {
-      "cvss": 9.8,
-      "id": "CVE-2026-84434",
-      "severity": "Critical",
-      "summary": "Gravity Forms for WordPress (through 3.1.0.4) suffers an unauthenticated arbitrary file upload: a validation bypass lets hidden upload fields skip extension checks, enabling remote code execution via public forms.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84434"
-    },
-    {
-      "cvss": 9.8,
-      "id": "CVE-2026-91843",
-      "severity": "Critical",
-      "summary": "Check Point Security Management / Log Server stack overflow in the pre-auth login process lets an unauthenticated remote attacker execute code as root; patched via LivePatch advisory sk1000155 (record active 17–18 Sep 2026).",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91843"
+      "summary": "Elevation of privilege in Azure AI Language service, rated the maximum CVSS 10.0 in September Patch Tuesday. Cloud-service tenants should apply Microsoft's remediation as AI service flaws can expose downstream tenant data.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70352"
     }
   ]
 }
