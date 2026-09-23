@@ -9,7 +9,8 @@
           "severity": "Critical",
           "summary": "Path-traversal flaw in Check Point Security Management Server (also Multi-Domain, Log Server, SmartEvent) lets an unauthenticated attacker upload and execute arbitrary scripts. Added to CISA's KEV catalog Sep 22 with a Sep 25 remediation deadline.",
           "title": "Check Point Management Server zero-day (CVE-2026-93616) actively exploited",
-          "url": "https://securityaffairs.com/199549/security/check-point-fixes-a-new-actively-exploited-critical-security-flaw.html"
+          "url": "https://securityaffairs.com/199549/security/check-point-fixes-a-new-actively-exploited-critical-security-flaw.html",
+          "image": "https://www.dealnews.gr/wp-content/uploads/2023/03/Logo_stacked_color_Large.jpg"
         },
         {
           "action": "Apply engineering hotfixes on affected trains now; if not immediate, get the emergency iRule from F5 Support as a stopgap and monitor logs for repeated OAuth auth failures.",
@@ -17,7 +18,8 @@
           "severity": "Critical",
           "summary": "Heap-based buffer overflow (CWE-122) in the Traffic Management Microkernel lets an unauthenticated attacker run arbitrary code with elevated daemon privileges on virtual servers combining an APM access policy with an OAuth profile. F5 says the flaw has been exploited.",
           "title": "F5 BIG-IP APM heap-overflow zero-day (CVE-2026-94127)",
-          "url": "https://cybersecuritynews.com/f5-big-ip-oauth-server-0-day-flaw/"
+          "url": "https://cybersecuritynews.com/f5-big-ip-oauth-server-0-day-flaw/",
+          "image": "https://cdn.freelogovectors.net/wp-content/uploads/2016/12/f5_networks-logo.png"
         },
         {
           "action": "Upgrade on-prem VeloCloud Orchestrator to 5.2.3.16+ or 6.4.2.8+; 6.1/7.0 operators should assess exposure (cert-auth Edge→VCO) and plan hardening and compromise triage per BOD 26-04.",
@@ -25,7 +27,8 @@
           "severity": "Critical",
           "summary": "Improper input validation (CWE-20) in on-prem VeloCloud Orchestrator lets a remote attacker with no credentials reach privileged internal functions and compromise the orchestrator host — and through it, managed SD-WAN Edges. Arista says it was discovered externally and is actively exploited. CVSS 10.0.",
           "title": "Arista VeloCloud Orchestrator CVSS 10.0 flaw (CVE-2026-93952) exploited",
-          "url": "http://thehackernews.com/2026/09/new-cvss-100-velocloud-orchestrator.html"
+          "url": "http://thehackernews.com/2026/09/new-cvss-100-velocloud-orchestrator.html",
+          "image": "https://atlcorp.co/wp-content/uploads/2024/04/arista_logo.png"
         },
         {
           "action": "Treat all four as patch-now priorities and perform forensic triage for pre-patch compromise per BOD 26-04.",
@@ -33,7 +36,8 @@
           "severity": "Critical",
           "summary": "CISA added four vulnerabilities to the Known Exploited Vulnerabilities catalog on Sep 22, 2026, on evidence of active exploitation. Federal agencies must remediate by Sep 25; BOD 26-04 now requires checking whether systems were compromised before patching.",
           "title": "CISA adds four actively exploited flaws to KEV catalog",
-          "url": "https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+          "url": "https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+          "image": "https://www.armis.com/wp-content/uploads/2023/06/cisa-logo-760.png"
         }
       ],
       "title": "Act on Today"
@@ -45,14 +49,16 @@
           "severity": "High",
           "summary": "ShinyHunters told Reuters and other outlets on Sep 22 that it exploited an unknown Oracle PeopleSoft vulnerability, pivoted into FBI infrastructure in AWS GovCloud, and stole 2–3 TB of data on \"almost all\" agents, employees, job applicants, and families. The FBI confirmed it is aware of unauthorized activity affecting FBIjobs.gov and is investigating; Oracle and AWS have not commented. The group's motive is reputational — a one-week ultimatum for the FBI to retract a May 2026 bulletin.",
           "title": "ShinyHunters claims FBI breach via Oracle PeopleSoft zero-day (claim, unconfirmed)",
-          "url": "https://www.nextgov.com/cybersecurity/2026/09/shinyhunters-claims-fbi-data-theft-demands-bureau-retract-cyber-warning/416144/"
+          "url": "https://www.nextgov.com/cybersecurity/2026/09/shinyhunters-claims-fbi-data-theft-demands-bureau-retract-cyber-warning/416144/",
+          "image": "https://www.grassley.senate.gov/imo/media/image/fbi_wl.jpg"
         },
         {
           "details": "SilentRansomGroup listed the US law firm Clark Hill (alert Sep 23, 01:52 UTC+3); Akira listed DI.C.S.EL. S.R.L. (Sep 22); Anubis listed Gaedke & Partner, an Austrian tax/business advisory firm (Sep 22); BoobaProject listed Tulare Western High School (Sep 22). None includes verified encryption, data-theft proof, ransom amounts, or victim confirmation.",
           "severity": "Medium",
           "summary": "Several new victim listings surfaced on ransomware leak sites via threat-intel alerts on Sep 22–23: SilentRansomGroup, Akira, Anubis, and BoobaProject added victims spanning a US law firm, an Austrian advisory, and a US high school. Treat as claims until victim or regulator confirmation appears.",
           "title": "Ransomware leak-site roundup: SilentRansomGroup names US law firm; Akira, Anubis add victims",
-          "url": "https://undercodenews.com/silentransomgroup-claims-clark-hill-in-new-ransomware-attack-as-law-firm-faces-potential-data-exposure-video/"
+          "url": "https://undercodenews.com/silentransomgroup-claims-clark-hill-in-new-ransomware-attack-as-law-firm-faces-potential-data-exposure-video/",
+          "image": "https://www.globalts.com/images/easyblog_shared/April_2023/04-07-23/ransomware_152258527_400.jpg"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -64,21 +70,24 @@
           "severity": "High",
           "summary": "On Sep 22, threat-intel trackers reported that the AuditTeam ransomware group published vit.ac.in — the domain of Vellore Institute of Technology — on its dark-web leak site, threatening a full data release if no contact is made. VIT has not issued a public statement, so the claim is unconfirmed.",
           "title": "Ransomware group AuditTeam lists VIT (vit.ac.in) as victim (claim, unconfirmed)",
-          "url": "https://www.dexpose.io/auditteam-strikes-vellore-institute-of-technology/"
+          "url": "https://www.dexpose.io/auditteam-strikes-vellore-institute-of-technology/",
+          "image": "https://vit.ac.in/conference/biomet-2026/assets/images/banners/hero-banner.jpg"
         },
         {
           "details": "At least 50 virtual machines were active at attack time, giving attackers broad access. Investigators suspect a professional cybercriminal group; officials call it one of the most significant attacks on the state's government infrastructure in recent times. The government has not yet issued an official statement.",
           "severity": "High",
           "summary": "The Statesman reported (~Sep 22) that the West Bengal State Data Centre — the central repository for state departments, run by Webel under the IT Department — suffered a malware attack active on its main server from Sep 9 to Sep 13, undetected for five days. Forensic experts fear a large volume of documents from four departments (including Finance) was stolen; the stolen data has not been recovered, and websites of Public Works, Housing, Municipal Affairs & Urban Development, and State Police crashed from Sep 13.",
           "title": "West Bengal State Data Centre hit by 5-day malware attack; stolen data not recovered",
-          "url": "https://www.thestatesman.com/cities/kolkata/massive-cyberattack-cripples-bengal-govt-data-repository-no-stolen-info-recovered-1503641813.html"
+          "url": "https://www.thestatesman.com/cities/kolkata/massive-cyberattack-cripples-bengal-govt-data-repository-no-stolen-info-recovered-1503641813.html",
+          "image": "https://tvbrics.com/upload/resize_cache/iblock/022/600_314_2/ara8wiir245ho98t7dmnttc9hb4glfed.jpg"
         },
         {
           "details": "The move follows weeks of government pressure and a BBC Eye investigation that found Instagram ads redirecting users to Telegram channels allegedly selling CSAM; government sources called child safety \"non-negotiable\" for platforms operating in India.",
           "severity": "Medium",
           "summary": "Google announced on Sep 21 (reported Sep 21–22) that it will operationalize direct sharing of CSAM-related information — including repeat-offender details — with the Indian Cyber Crime Coordination Centre (I4C) under the Ministry of Home Affairs, departing from the global practice of routing through the US-based NCMEC. It follows Meta's similar commitment the previous week.",
           "title": "Google to report CSAM directly to India's I4C, bypassing US nonprofit route",
-          "url": "https://www.deccanherald.com/india/after-meta-google-to-report-child-abuse-material-directly-to-india-4154389"
+          "url": "https://www.deccanherald.com/india/after-meta-google-to-report-child-abuse-material-directly-to-india-4154389",
+          "image": "https://www.pngmart.com/files/23/Google-Logo-PNG-Isolated-HD.png"
         }
       ],
       "title": "India"
