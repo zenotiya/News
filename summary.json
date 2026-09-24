@@ -2,30 +2,30 @@
   "date": "2026-09-24",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 10.0,
+  "worst_cvss": 9.9,
   "priorities": [
-    {
-      "id": "CVE-2026-70352",
-      "cvss": 10.0,
-      "summary": "Elevation of privilege in Azure AI Language service, rated the maximum CVSS 10.0 in September Patch Tuesday. Cloud-service tenants should apply Microsoft's remediation as AI service flaws can expose downstream tenant data.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70352"
-    },
     {
       "id": "CVE-2026-83941",
       "cvss": 9.9,
-      "summary": "Elevation of privilege in Microsoft Entra ID disclosed in September Patch Tuesday. A flaw in the cloud identity plane reaching near-maximum CVSS deserves priority for tenants relying on Entra for SSO and conditional access.",
+      "summary": "Missing-authorization elevation of privilege in Microsoft Entra ID lets a low-privileged authenticated attacker elevate privileges remotely without user interaction. Microsoft mitigated it server-side before publication; defenders should watch for anomalous authentication patterns and unexpected privilege changes.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83941"
     },
     {
       "id": "CVE-2026-93616",
       "cvss": 9.8,
-      "summary": "Pre-authentication path traversal with unsafe file upload in Check Point Security Management Server lets an unauthenticated remote attacker upload and execute arbitrary scripts. Exploited in targeted attacks since July 23 and added to CISA KEV on Sep 22 with a Sep 25 remediation deadline.",
+      "summary": "Pre-authentication path traversal in the Check Point Security Management web service lets an unauthenticated attacker upload and execute arbitrary scripts or load arbitrary Java classes. Exploited in targeted attacks since July 23, 2026 — a true zero-day; CISA added it to KEV with a September 25 remediation deadline.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93616"
+    },
+    {
+      "id": "CVE-2026-90817",
+      "cvss": 9.8,
+      "summary": "Unauthenticated remote code execution in Vanderbilt's REDCap research-data platform via survey passthrough routing and crafted Data Import parameters — only a valid public survey hash is needed. A public proof-of-concept is circulating; patch to 16.0.49 LTS, 17.3.10 LTS, or 17.4.4.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90817"
     }
   ],
   "model": {
-    "name": "GPT-6 Sol & Luna (OpenAI)",
-    "summary": "OpenAI expanded its GPT-6 lineup on Sep 22 with two cheaper models: Sol ($2/$10 per million tokens) for coding and professional work, and Luna ($0.10/$0.50) for high-volume tasks. Both halve their GPT-5.6 counterparts' prices while inheriting GPT-6 Astra's reasoning, coding, and computer-use improvements.",
-    "url": "https://www.reuters.com/technology/openai-expands-gpt-6-lineup-with-cheaper-sol-luna-models-2026-09-22/"
+    "name": "ZeroDrift Anchor 3.0",
+    "summary": "ZeroDrift's Anchor 3.0 is the first family of small language models built to enforce regulatory and company rules on AI-generated communications before they're sent. It caught 95.5% of FINRA violations in the company's new benchmark — beating the strongest frontier model tested, GPT-5.6 Sol — while running up to 34x faster and 12x cheaper.",
+    "url": "https://www.globenewswire.com/news-release/2026/09/23/3367512/0/en/zerodrift-launches-anchor-3-0-the-first-family-of-models-built-for-enforcement-runtime-of-ai-agent-communications.html"
   }
 }

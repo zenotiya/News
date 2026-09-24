@@ -1,35 +1,35 @@
 {
-  "date": "2026-09-23",
+  "date": "2026-09-24",
   "items": [
     {
-      "image": "https://images.macrumors.com/t/tm8s1k70sh1K-DeWP5Dt9zVOxTU=/400x0/article-new/2025/12/openai-logo-teal.jpg?lossy",
-      "name": "GPT-6 Sol & Luna (OpenAI)",
-      "summary": "OpenAI expanded its GPT-6 lineup on Sep 22 with two cheaper models: Sol ($2/$10 per million tokens) for coding and professional work, and Luna ($0.10/$0.50) for high-volume tasks. Both halve their GPT-5.6 counterparts' prices while inheriting GPT-6 Astra's reasoning, coding, and computer-use improvements.",
-      "url": "https://www.reuters.com/technology/openai-expands-gpt-6-lineup-with-cheaper-sol-luna-models-2026-09-22/"
+      "image": "https://cdn.prod.website-files.com/6981490c51c1e151d4cb9219/698272edf18ab399e2728f23_logo-black.svg",
+      "name": "ZeroDrift Anchor 3.0",
+      "summary": "ZeroDrift's Anchor 3.0 is the first family of small language models built to enforce regulatory and company rules on AI-generated communications before they're sent. It caught 95.5% of FINRA violations in the company's new benchmark — beating the strongest frontier model tested, GPT-5.6 Sol — while running up to 34x faster and 12x cheaper.",
+      "url": "https://www.globenewswire.com/news-release/2026/09/23/3367512/0/en/zerodrift-launches-anchor-3-0-the-first-family-of-models-built-for-enforcement-runtime-of-ai-agent-communications.html"
     },
     {
-      "image": "https://www.makronomo.de/images/integrations/anthropic.png",
-      "name": "Claude Opus 5.5 (Anthropic)",
-      "summary": "Anthropic released Opus 5.5 on Sep 22, calling it the strongest-performing model it has tested, topping the Artificial Analysis Intelligence Index at 58. It runs ~40% cheaper than Opus 5, with $4/$20 per million tokens and much cheaper cache reads, and ships with 'preserved thinking' anti-distillation defenses.",
+      "image": "https://thehealthcaretechnologyreport.com/wp-content/uploads/2026/06/Cohere-Buys-Reliant-AI--533x261.png",
+      "name": "Bell + Cohere cybersecurity AI",
+      "summary": "Bell Canada and Cohere launched a cybersecurity-focused LLM trained on Bell Cyber's operational knowledge to speed up threat investigations inside Bell's Autonomous Security Operations Centre. The domain-specific model summarizes complex security data and standardizes investigative workflows while keeping analysts in control of consequential decisions.",
+      "url": "https://mobilesyrup.com/2026/09/23/bell-cohere-canadian-cybersecurity-ai/"
+    },
+    {
+      "image": "https://arenait.ro/files/2026/01/claude-700x200.png",
+      "name": "Claude Opus 5.5",
+      "summary": "Anthropic's Opus 5.5 is its most powerful model to date, taking the top spot on the Artificial Analysis Intelligence Index (58) and rivaling the top-tier Fable 5.1 at 40% lower cost. It adds 'preserved thinking' — a defense against model distillation — and is 85% less likely than Opus 5 to attempt bypassing its safety boundaries.",
+      "url": "https://www.reuters.com/business/anthropic-unveils-claude-opus-55-2026-09-22/"
+    },
+    {
+      "image": "https://www.parentesis.media/wp-content/uploads/2025/10/openai-1000x1000.jpg",
+      "name": "GPT-6 Sol & Luna",
+      "summary": "OpenAI added two cheaper tiers to the GPT-6 family: Sol for complex workloads like coding, and Luna for high-volume tasks like extraction and summarization, with API prices cut 50% versus GPT-5.6. OpenAI claims GPT-6 Sol at xhigh effort outperforms Claude Opus 5 at max effort on AutomationBench at just 9% of the cost per task.",
       "url": "https://www.theregister.com/ai-and-ml/2026/09/23/frontier-ai-keeps-racing-despite-calls-to-slow-down/5298448"
     },
     {
-      "image": "https://gagadget.pl/media/post_big/xAI-logo-gg.png",
-      "name": "Grok 4.7 (xAI)",
-      "summary": "xAI launched Grok 4.7 on Sep 21, a larger base model trained with a longer RL run on multi-hour tasks and native understanding of the Grok Bot harness. It hits 46.3% on CursorBench 4.0 and tops xAI's own HackerBench safety test, priced unchanged from Grok 4.6 at $2/$6 per million tokens.",
-      "url": "https://x.ai/news/grok-4-7"
-    },
-    {
-      "image": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen-Image/image2.1/banner_en.png",
-      "name": "Qwen Image 2.1 (Alibaba)",
-      "summary": "Alibaba open-sourced Qwen Image 2.1 on Sep 21, a 7B text-to-image model unifying generation and editing with native transparency support. Its compact size delivers quality compared to GPT-Image-2, though it ships under a restrictive non-commercial research license rather than Apache 2.0.",
-      "url": "https://qwen.ai/blog?id=qwen-image-2.1"
-    },
-    {
-      "image": "https://www.testim.io/wp-content/uploads/2021/12/Rectangle-Copy-41@2x.png",
-      "name": "Koa (Salesforce)",
-      "summary": "Salesforce unveiled Koa at Dreamforce 2026 (Sep 15), its first-ever reasoning model, built on Nvidia's open-weight Nemotron family and post-trained for sales, marketing, and customer support. It anchors Salesforce's push to keep enterprise customers inside its ecosystem as AI agents reshape software.",
-      "url": "https://indianexpress.com/article/technology/artificial-intelligence/salesforce-ai-model-everything-announced-dreamforce-2026-10880785/"
+      "image": "https://ace-step.github.io/ace-step-v1.5.github.io/raw/fig/Logo_StepFun.png",
+      "name": "StepFun Step 5 Preview",
+      "summary": "StepFun's Step 5 Preview is a ~600B-parameter proprietary reasoning model positioned as China's cheapest frontier AI model yet. At $1.00/$2.70 per million input/output tokens it undercuts every comparable reasoning model while delivering frontier-level benchmark performance at ~100 tokens/sec.",
+      "url": "https://www.intelligentliving.co/step-5-preview-cheapest-frontier-ai/"
     }
   ]
 }

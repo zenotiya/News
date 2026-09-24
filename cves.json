@@ -1,40 +1,40 @@
 {
-  "date": "2026-09-23",
+  "date": "2026-09-24",
   "items": [
+    {
+      "cvss": 9.9,
+      "id": "CVE-2026-83941",
+      "severity": "Critical",
+      "summary": "Missing-authorization elevation of privilege in Microsoft Entra ID lets a low-privileged authenticated attacker elevate privileges remotely without user interaction. Microsoft mitigated it server-side before publication; defenders should watch for anomalous authentication patterns and unexpected privilege changes.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83941"
+    },
     {
       "cvss": 9.8,
       "id": "CVE-2026-93616",
       "severity": "Critical",
-      "summary": "Pre-authentication path traversal with unsafe file upload in Check Point Security Management Server lets an unauthenticated remote attacker upload and execute arbitrary scripts. Exploited in targeted attacks since July 23 and added to CISA KEV on Sep 22 with a Sep 25 remediation deadline.",
+      "summary": "Pre-authentication path traversal in the Check Point Security Management web service lets an unauthenticated attacker upload and execute arbitrary scripts or load arbitrary Java classes. Exploited in targeted attacks since July 23, 2026 — a true zero-day; CISA added it to KEV with a September 25 remediation deadline.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93616"
     },
     {
       "cvss": 9.8,
       "id": "CVE-2026-90817",
       "severity": "Critical",
-      "summary": "Unauthenticated remote code execution in Vanderbilt's REDCap research-data platform via public survey-link routing and crafted Data Import parameters. A public proof-of-concept is circulating, and affected medical/research instances risk PHI exposure and network footholds. Fixed in REDCap 16.0.49, 17.3.10, and 17.4.4.",
+      "summary": "Unauthenticated remote code execution in Vanderbilt's REDCap research-data platform via survey passthrough routing and crafted Data Import parameters — only a valid public survey hash is needed. A public proof-of-concept is circulating; patch to 16.0.49 LTS, 17.3.10 LTS, or 17.4.4.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90817"
     },
     {
       "cvss": 9.8,
       "id": "CVE-2026-82967",
       "severity": "Critical",
-      "summary": "Authentication bypass in IBM Guardium Data Protection 12.2 lets an unauthenticated remote attacker bypass IP-based access controls and access the database protection service. Disclosed Sep 18; patch proactively as no public exploit is confirmed yet.",
+      "summary": "Authentication bypass in IBM Guardium Data Protection 12.2 lets an unauthenticated remote attacker bypass IP-based access controls. Disclosed September 18, 2026; apply the latest vendor patches and monitor for exploitation attempts.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82967"
     },
     {
-      "cvss": 9.9,
-      "id": "CVE-2026-83941",
+      "cvss": 9.8,
+      "id": "CVE-2026-85102",
       "severity": "Critical",
-      "summary": "Elevation of privilege in Microsoft Entra ID disclosed in September Patch Tuesday. A flaw in the cloud identity plane reaching near-maximum CVSS deserves priority for tenants relying on Entra for SSO and conditional access.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83941"
-    },
-    {
-      "cvss": 10.0,
-      "id": "CVE-2026-70352",
-      "severity": "Critical",
-      "summary": "Elevation of privilege in Azure AI Language service, rated the maximum CVSS 10.0 in September Patch Tuesday. Cloud-service tenants should apply Microsoft's remediation as AI service flaws can expose downstream tenant data.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70352"
+      "summary": "Pre-authentication remote code execution in Check Point Security Gateway VPN certificate handling — an unauthenticated attacker can execute code during VPN negotiation. Active exploitation observed since September 12 against Spark customers; CISA KEV-listed with a September 25 deadline.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85102"
     }
   ]
 }
