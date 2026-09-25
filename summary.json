@@ -5,27 +5,27 @@
   "worst_cvss": 9.9,
   "priorities": [
     {
-      "id": "CVE-2026-83941",
+      "id": "CVE-2026-93425",
       "cvss": 9.9,
-      "summary": "Missing-authorization elevation of privilege in Microsoft Entra ID lets a low-privileged authenticated attacker elevate privileges remotely without user interaction. Microsoft mitigated it server-side before publication; defenders should watch for anomalous authentication patterns and unexpected privilege changes.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83941"
+      "summary": "OS command injection in Dokploy's patch.readRepoDirectories tRPC procedure lets an authenticated organization member inject shell metacharacters into the user-controlled repoPath value and execute arbitrary commands as root in the Dokploy container — and via the mounted Docker socket, compromise the host. Fixed in Dokploy 0.29.13.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93425"
     },
     {
       "id": "CVE-2026-93616",
       "cvss": 9.8,
-      "summary": "Pre-authentication path traversal in the Check Point Security Management web service lets an unauthenticated attacker upload and execute arbitrary scripts or load arbitrary Java classes. Exploited in targeted attacks since July 23, 2026 — a true zero-day; CISA added it to KEV with a September 25 remediation deadline.",
+      "summary": "Pre-authentication path traversal plus unsafe file upload in the Check Point Management web service allows an unauthenticated attacker with network access to upload files to arbitrary paths and execute arbitrary scripts or load an arbitrary Java class. Confirmed exploited as a zero-day in targeted attacks as early as July 23, 2026; patches released September 22 and added to CISA KEV.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93616"
     },
     {
-      "id": "CVE-2026-90817",
+      "id": "CVE-2026-63077",
       "cvss": 9.8,
-      "summary": "Unauthenticated remote code execution in Vanderbilt's REDCap research-data platform via survey passthrough routing and crafted Data Import parameters — only a valid public survey hash is needed. A public proof-of-concept is circulating; patch to 16.0.49 LTS, 17.3.10 LTS, or 17.4.4.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90817"
+      "summary": "Unauthenticated remote code execution in JetBrains TeamCity on-premises servers (patch released July 28). CISA warned on September 24, 2026 that ransomware groups are actively exploiting it, and it is listed in the CISA Known Exploited Vulnerabilities catalog.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63077"
     }
   ],
   "model": {
-    "name": "ZeroDrift Anchor 3.0",
-    "summary": "ZeroDrift's Anchor 3.0 is the first family of small language models built to enforce regulatory and company rules on AI-generated communications before they're sent. It caught 95.5% of FINRA violations in the company's new benchmark — beating the strongest frontier model tested, GPT-5.6 Sol — while running up to 34x faster and 12x cheaper.",
-    "url": "https://www.globenewswire.com/news-release/2026/09/23/3367512/0/en/zerodrift-launches-anchor-3-0-the-first-family-of-models-built-for-enforcement-runtime-of-ai-agent-communications.html"
+    "name": "PrismML Bonsai 1-bit LLM (Snapdragon smart glasses)",
+    "summary": "PrismML unveiled a 2B-parameter 1-bit version of its Bonsai LLM, showcased at Qualcomm's Snapdragon Summit on Sept 24, that runs fully on-device on the Snapdragon AR1 Gen 1 Platform for real-time vision-language queries in smart glasses. It advances PrismML's open-weight, on-device AI vision as an alternative to cloud-dependent proprietary models — though no shipping glasses using it have been announced yet.",
+    "url": "https://techcrunch.com/2026/09/24/prismml-brings-its-tiny-llms-to-qualcomm-powered-smart-glasses/"
   }
 }

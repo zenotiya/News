@@ -1,35 +1,35 @@
 {
-  "date": "2026-09-24",
+  "date": "2026-09-25",
   "items": [
     {
-      "image": "https://cdn.prod.website-files.com/6981490c51c1e151d4cb9219/698272edf18ab399e2728f23_logo-black.svg",
-      "name": "ZeroDrift Anchor 3.0",
-      "summary": "ZeroDrift's Anchor 3.0 is the first family of small language models built to enforce regulatory and company rules on AI-generated communications before they're sent. It caught 95.5% of FINRA violations in the company's new benchmark — beating the strongest frontier model tested, GPT-5.6 Sol — while running up to 34x faster and 12x cheaper.",
-      "url": "https://www.globenewswire.com/news-release/2026/09/23/3367512/0/en/zerodrift-launches-anchor-3-0-the-first-family-of-models-built-for-enforcement-runtime-of-ai-agent-communications.html"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/PrismML-Snapdragon-smartglasses.png?w=612",
+      "name": "PrismML Bonsai 1-bit LLM (Snapdragon smart glasses)",
+      "summary": "PrismML unveiled a 2B-parameter 1-bit version of its Bonsai LLM, showcased at Qualcomm's Snapdragon Summit on Sept 24, that runs fully on-device on the Snapdragon AR1 Gen 1 Platform for real-time vision-language queries in smart glasses. It advances PrismML's open-weight, on-device AI vision as an alternative to cloud-dependent proprietary models — though no shipping glasses using it have been announced yet.",
+      "url": "https://techcrunch.com/2026/09/24/prismml-brings-its-tiny-llms-to-qualcomm-powered-smart-glasses/"
     },
     {
-      "image": "https://thehealthcaretechnologyreport.com/wp-content/uploads/2026/06/Cohere-Buys-Reliant-AI--533x261.png",
-      "name": "Bell + Cohere cybersecurity AI",
-      "summary": "Bell Canada and Cohere launched a cybersecurity-focused LLM trained on Bell Cyber's operational knowledge to speed up threat investigations inside Bell's Autonomous Security Operations Centre. The domain-specific model summarizes complex security data and standardizes investigative workflows while keeping analysts in control of consequential decisions.",
-      "url": "https://mobilesyrup.com/2026/09/23/bell-cohere-canadian-cybersecurity-ai/"
-    },
-    {
-      "image": "https://arenait.ro/files/2026/01/claude-700x200.png",
+      "image": "https://images.macrumors.com/t/h-SgaNwlfg1xqeFyNxTtAvRMWhE=/400x0/article-new/2025/09/anthopic-claude.jpg?lossy",
       "name": "Claude Opus 5.5",
-      "summary": "Anthropic's Opus 5.5 is its most powerful model to date, taking the top spot on the Artificial Analysis Intelligence Index (58) and rivaling the top-tier Fable 5.1 at 40% lower cost. It adds 'preserved thinking' — a defense against model distillation — and is 85% less likely than Opus 5 to attempt bypassing its safety boundaries.",
-      "url": "https://www.reuters.com/business/anthropic-unveils-claude-opus-55-2026-09-22/"
+      "summary": "Anthropic launched Claude Opus 5.5 on Sept 22 as the first model in the new 5.5 family, matching Claude Fable 5.1's performance while costing ~40% less to run ($4/$20 per Mtok) and generating output 30%+ faster. Aimed at enterprise agentic coding, computer use, and long-running knowledge work, it ships with strengthened safety guardrails and raised usage limits on paid plans.",
+      "url": "https://www.macrumors.com/2026/09/22/anthropic-claude-opus-5-5/"
     },
     {
-      "image": "https://www.parentesis.media/wp-content/uploads/2025/10/openai-1000x1000.jpg",
-      "name": "GPT-6 Sol & Luna",
-      "summary": "OpenAI added two cheaper tiers to the GPT-6 family: Sol for complex workloads like coding, and Luna for high-volume tasks like extraction and summarization, with API prices cut 50% versus GPT-5.6. OpenAI claims GPT-6 Sol at xhigh effort outperforms Claude Opus 5 at max effort on AutomationBench at just 9% of the cost per task.",
-      "url": "https://www.theregister.com/ai-and-ml/2026/09/23/frontier-ai-keeps-racing-despite-calls-to-slow-down/5298448"
+      "image": "https://holatelcel.com/wp-content/uploads/2025/10/MIMO.jpg",
+      "name": "Xiaomi MiMo V2.6 (Pro / Flash / Pro UltraSpeed)",
+      "summary": "Xiaomi released the MiMo V2.6 family on Sept 21 under the MIT license, with the ~1T-parameter Pro topping Artificial Analysis's open-model rankings (score 46, tying Grok 4.7) while costing $0.435/$0.87 per Mtok — far cheaper than closed frontier models. Trained via ~750K RL trajectories in under six days for ~$2.62M, it marks the cheapest frontier-class open-weights release to date.",
+      "url": "https://www.intelligentliving.co/xiaomi-mimo-v2-6-pro-cheapest-frontier/"
     },
     {
-      "image": "https://ace-step.github.io/ace-step-v1.5.github.io/raw/fig/Logo_StepFun.png",
-      "name": "StepFun Step 5 Preview",
-      "summary": "StepFun's Step 5 Preview is a ~600B-parameter proprietary reasoning model positioned as China's cheapest frontier AI model yet. At $1.00/$2.70 per million input/output tokens it undercuts every comparable reasoning model while delivering frontier-level benchmark performance at ~100 tokens/sec.",
-      "url": "https://www.intelligentliving.co/step-5-preview-cheapest-frontier-ai/"
+      "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4c0571f0-9cbe-4666-9824-a1da86dee66c/grok-logo.jpg?t=1745235323",
+      "name": "xAI Grok 4.7",
+      "summary": "xAI released Grok 4.7 on Sept 21, a larger base model with longer RL training aimed at coding, agentic workflows, and knowledge work, with a 500K-token context window and four reasoning-effort levels. It scores 46 on Artificial Analysis's Intelligence Index (up from 44) with per-token pricing unchanged from Grok 4.6 ($2/$6 per Mtok).",
+      "url": "https://evolink.ai/blog/grok-4-7-release-date"
+    },
+    {
+      "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4c0571f0-9cbe-4666-9824-a1da86dee66c/grok-logo.jpg?t=1745235323",
+      "name": "xAI Grok Voice Transcribe 2.0",
+      "summary": "xAI launched Grok Voice Transcribe 2.0 on Sept 18, a speech-to-text model it claims is twice as accurate as v1.0, ranking first among 32 streaming models on Artificial Analysis's leaderboard. Batch pricing holds at $0.10/hour of audio with no code changes for existing integrations; v1.0 will be deprecated in the coming weeks.",
+      "url": "https://techy101.com/2026/09/20/xai-releases-grok-voice-transcribe-2-0-speech-to-text-model-unite-ai/"
     }
   ]
 }
