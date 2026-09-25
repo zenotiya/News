@@ -1,34 +1,34 @@
 {
-  "date": "2026-09-24",
+  "date": "2026-09-25",
   "sections": [
     {
       "items": [
         {
-          "action": "Apply F5's hotfixes immediately and limit exposure of data-plane virtual servers configured as OAuth authorization servers.",
-          "details": "Shadowserver is tracking more than 14,700 exposed instances on the internet. The flaw (CWE-122 heap-based buffer overflow in the OAuth token processing path) is reachable before any authentication check completes, so restricting management-interface access does not protect it.",
-          "image": "https://cdn.pressebox.de/a/1b2bf949d7e0f503/attachments/0522287.attachment/filename/BIG-IP_4200v_front.jpg",
+          "action": "Update every WordPress install to 7.1.2 (or the matching backport for your branch) immediately and confirm the running version — do not assume auto-updates applied.",
+          "details": "Affected: every release from 4.7.0 through 7.1.1; fixed in 7.1.2 with backports to 13 older branches down to 4.7. Remote code execution requires a theme with a top-level directory starting with \"page-\" and a readable local PHP file such as pearcmd.php, but probing is indiscriminate.",
+          "image": "https://www.bnzsolutions.it/wp-content/uploads/2026/04/Sito-WordPress-Hackerato-830x453.jpg?x72474",
           "severity": "Critical",
-          "summary": "F5 disclosed CVE-2026-94127 on Sept 22, a CVSS 9.8 heap-based buffer overflow that lets unauthenticated attackers run code on BIG-IP APM appliances configured as OAuth authorization servers. F5 confirmed active exploitation before publishing the advisory, and CISA added it to its Known Exploited Vulnerabilities catalog with a Sept 25 patch deadline for federal agencies.",
-          "title": "F5 BIG-IP APM OAuth RCE (CVE-2026-94127) exploited in the wild",
-          "url": "https://www.decryptiondigest.com/blog/f5-big-ip-apm-cve-2026-94127-oauth-rce"
+          "summary": "Attackers started exploiting CVE-2026-87902, an unauthenticated path-traversal flaw in WordPress Core's page-template resolution, within hours of the Sept 22 patch. Patchstack saw the first probe at 11:49 UTC that day; activity has since escalated 10x, with attackers including pearcmd.php and writing PHP web shells to disk.",
+          "title": "Attackers exploit critical WordPress flaw CVE-2026-87902 within hours of patch",
+          "url": "http://thehackernews.com/2026/09/attackers-exploit-wordpress-cve-2026.html"
         },
         {
-          "action": "Upgrade SMA 1000 firmware to the fixed releases SonicWall published.",
-          "details": "KEV inclusion confirms real-world exploitation rather than theoretical exposure — an appliance at the network edge landing in the catalog should be treated as a live foothold signal.",
-          "image": "https://cdnbigbuy.com/images/546366663.jpg",
+          "action": "Upgrade self-hosted Dokploy instances to 0.29.13 or later; audit org-member activity for unexpected shell command execution.",
+          "details": "The patch.readRepoDirectories tRPC procedure passes the user-controlled repoPath into child_process.exec as root in the Dokploy container. Standard deployments mount /var/run/docker.sock, so container-root execution can escalate to full Docker host compromise.",
+          "image": "https://www.heroxhost.com/assets/images/pages/dokploy-images/dokploy-section-img.webp",
           "severity": "Critical",
-          "summary": "A CVSS 10.0 pre-authentication SSRF in SonicWall SMA 1000 firmware (CVE-2026-83548) moved into CISA's active-exploitation tracker on Sept 23, with observed attacker activity including reverse shells and crypto miners.",
-          "title": "SonicWall SMA 1000 SSRF (CVE-2026-83548) hits CISA's exploited list",
-          "url": "https://netcrook.com/written_article?slug=sonicwall-sma-1000-flaw-cisa-kev-shells-miners&lang=en"
+          "summary": "CVE-2026-93425 (CVSS 9.9) is an OS command-injection flaw in Dokploy disclosed Sept 24: an authenticated org member with service:read permission can inject shell metacharacters into repoPath and execute arbitrary commands as root. A public proof-of-concept is already circulating.",
+          "title": "Dokploy CVE-2026-93425: critical command injection with public PoC",
+          "url": "https://www.thehackerwire.com/vulnerability/CVE-2026-93425/"
         },
         {
-          "action": "Prioritize these under BOD 26-04 risk-based vulnerability management and verify exposed assets are patched.",
-          "details": "These arrived alongside the F5 BIG-IP APM flaw (CVE-2026-94127) in the same CISA alert batch. KEV inclusion by itself confirms real-world exploitation has occurred.",
-          "image": "https://www.checkfirewalls.co.il/images/5000/5800-appliance.jpg",
+          "action": "Update to sudo 1.9.17-16.p2.2.hum1, and append a trailing 'Z' to all time-restricted sudoers rules as the recommended mitigation.",
+          "details": "The flaw only affects systems using optional notbefore/notafter time-based sudoers rules. No active exploitation or public PoC is confirmed; PAM authentication remains intact, so attackers cannot exceed what their original rule grants.",
+          "image": "https://m.unixlinux.online/article/uploadfiles/202204/2022042718105715.png",
           "severity": "High",
-          "summary": "On Sept 22 CISA added CVE-2026-85102 (Check Point improper certificate validation) and CVE-2026-93616 (Check Point path traversal), plus CVE-2026-93952 (Arista VeloCloud Orchestrator improper input validation), to the Known Exploited Vulnerabilities catalog based on evidence of active exploitation.",
-          "title": "CISA adds Check Point and Arista flaws to KEV catalog",
-          "url": "https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+          "summary": "CVE-2026-96512 (CVSS 7.8) lets local users bypass sudo's time-based authorization by manipulating the tz environment variable, defeating notbefore/notafter restrictions in sudoers rules.",
+          "title": "Sudo timezone flaw CVE-2026-96512 bypasses time-based sudoers restrictions",
+          "url": "https://securityonline.info/sudo-security-vulnerability-cve-2026-96512/"
         }
       ],
       "title": "Act on Today"
@@ -36,29 +36,28 @@
     {
       "items": [
         {
-          "details": "The complaints follow a Sept. 7 claim by the Interlock ransomware group that it compromised NFM Lending and obtained more than 2.5 terabytes of data. That claim has not been independently verified, and NFM Lending had not publicly confirmed the scope in the sources reviewed.",
-          "image": "https://www.lendtoday.ca/wp-content/uploads/2026/01/Important-Factors-Mortgage-Lenders-Use-to-Determine-Your-Mortgage-Amount-scaled.png",
-          "severity": "High",
-          "summary": "At least five lawsuits were filed against NFM Lending LLC in the U.S. District Court for the District of Maryland between Sept. 11 and Sept. 17 after the mortgage lender was allegedly hit in a ransomware incident that may have exposed sensitive borrower information.",
-          "title": "NFM Lending faces five federal lawsuits after alleged ransomware breach",
-          "url": "https://wrenews.com/nfm-lending-federal-lawsuits-alleged-ransomware-data-breach/"
+          "details": "The $351.6M figure comes from CEO Gracy Chen; Arkham's Emmett Gallic flagged initial hot-wallet movements (~$178M) earlier, with more moving afterward. The breach was contained to hot/warm wallet layers; cold wallets remain secure and a $464M+ user protection fund backs user balances.",
+          "image": "https://weff.io/v2/images/bitget_blue.png",
+          "severity": "Critical",
+          "summary": "Crypto exchange Bitget confirmed Sept 24 that unauthorized transfers drained about $351.6M from hot and warm wallets; withdrawals are suspended pending a security review. CEO Gracy Chen says preliminary IP/VPN clues point to North Korean actors, and some stolen funds have reportedly been recovered.",
+          "title": "Bitget loses ~$352M in hot-wallet breach; suspects North Korea",
+          "url": "https://www.coindesk.com/markets/2026/09/24/crypto-exchange-bitget-loses-usd352-million-in-hack-claims-user-funds-are-safe"
         },
         {
-          "details": "OnTrac is a major U.S. parcel-delivery company, so a confirmed compromise could affect customers, merchants, and logistics partners. Neither organization has publicly confirmed the incidents.",
-          "image": "https://www.credaglobal.org/globalassets/research-and-publications/report/how-fuel-costs-affect-logistics-strategies/researchreport_trucks-768x432.jpg",
+          "details": "FBIJobs.gov displayed a \"seized by ShinyHunters\" banner before returning 503 errors; the bureau has not confirmed whether the intrusion hit its own systems or a third-party provider supporting the portal.",
+          "image": "https://www.grassley.senate.gov/imo/media/image/fbi_wl.jpg",
+          "severity": "High",
+          "summary": "The FBI is actively investigating ShinyHunters' claim of stealing 2–3 terabytes of data from its online jobs system, including a sample spreadsheet with thousands of current/former employees' PII and details of sensitive intelligence assignments. The breach point is still undetermined.",
+          "title": "FBI probes ShinyHunters' claim of massive jobs-portal data theft",
+          "url": "https://www.japantimes.co.jp/news/2026/09/24/world/crime-legal/hacked-fbi-data-intelligence/"
+        },
+        {
+          "details": "As with all leak-site listings, these are unconfirmed allegations — disclosure on a leak site does not prove the scale or success of the underlying intrusion.",
+          "image": "https://www.globalts.com/images/easyblog_shared/April_2023/04-07-23/ransomware_152258527_400.jpg",
           "severity": "Medium",
-          "summary": "ThreatMon's feed reports two new ransomware victim claims: OnTrac added by the Emperador group on Sept. 24 and Trump Mobile by the group EndZone on Sept. 23. As with most leak-site listings, the claims should be treated as allegations until corroborated.",
-          "title": "OnTrac and Trump Mobile appear on dark-web ransomware claims",
-          "url": "https://undercodenews.com/two-new-ransomware-victims-reported-ontrac-and-trump-mobile-added-to-dark-web-claims-video/"
-        },
-        {
-          "action": "Treat unsolicited coding tests or video-conferencing \"fixes\" from recruiters as hostile; never run recruiter-sent code on a work device.",
-          "details": "The agencies said the group poses as recruiters for real AI, crypto, and NFT companies via job boards and freelance marketplaces, then tricks targets into downloading malicious npm packages, repos, or VS Code projects. A compromised developer can become an entry point into an employer's network.",
-          "image": "https://blockworks.com/_next/image?url=https%3A%2F%2Fblockworks-co.imgix.net%2Fwp-content%2Fuploads%2F2023%2F01%2Fnorth-korea-hacker.jpg&w=1920&q=75",
-          "severity": "High",
-          "summary": "A joint Sept. 18 advisory from Japanese, U.S., Australian, and German authorities says North Korea's WaterPlum group (a.k.a. Contagious Interview) infected at least 30,000 devices in over 100 countries between Dec 2025 and July 2026, draining funds or credentials from 7,000+ crypto wallets and moving ~$10.7M to North Korea.",
-          "title": "WaterPlum fake-job campaign infected 30,000 devices, stole $10.7M crypto",
-          "url": "https://www.bleepingcomputer.com/news/security/north-korean-waterplum-hackers-infected-30-000-devices-worldwide/"
+          "summary": "New Sept 24 dark-web leak-site disclosures include Qilin naming All Tech Machine & Engineering (US manufacturing), Akira naming Wallatec, Rhysida naming NEAD Pro, Spirals naming Armada Credit Bureau (Uganda financial services), and Krybit naming jonesthegrocer.com.",
+          "title": "Fresh ransomware leak-site claims: Qilin, Akira, Rhysida and others name new victims",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/all-tech-machine-engineering-qilin-2026"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -66,34 +65,17 @@
     {
       "items": [
         {
-          "action": "Apply Apple's security updates on iPhone, Mac, Apple Watch, Apple TV, Vision Pro, and Xcode installs now.",
-          "details": "The note covers iOS and iPadOS before 26.7, macOS Golden Gate before 27, macOS Tahoe before 26.7, macOS Sequoia before 15.8, tvOS, watchOS, and visionOS before 27, Safari before 27, and Xcode before 27.",
-          "image": "https://igorshtang.designpub.ru/api/media/f303aeb4-9f24-50de-ba92-b1b4e8222cbe?slot=content&w=1280&s=c37127f7a34b6fce1b0128782e5a22290ad1a9b16dd2604d2c8928722d4bd345",
+          "details": "FLATROOF and ROOFDECK were previously seen in the March–April 2026 attack on KelpDAO's LayerZero bridge. The campaign uses fake GitHub coding-project repos and job-interview lures aimed at DevOps, crypto, and fintech staff.",
+          "image": "https://www.genians.com/wp-content/uploads/2025/07/North-Korean-APTs-in-the-Evolving-Landscape-2048x1075.jpg",
           "severity": "High",
-          "summary": "India's CERT-In published vulnerability note CIVN-2026-0468 on Sept. 21, rating a batch of Apple software flaws high severity. The agency says the flaws could let a remote attacker run arbitrary code, escalate privileges, steal data, or crash devices.",
-          "title": "CERT-In flags high-severity Apple flaws (CIVN-2026-0468), urges updates",
-          "url": "https://www.cryptotimes.io/2026/09/23/crypto-holders-on-iphone-and-mac-among-users-urged-to-update-after-cert-in-warning/"
-        },
-        {
-          "details": "The report does not establish how the attackers gained access, which systems were compromised, whether files were encrypted or data exfiltrated, or whether the university has confirmed the incident.",
-          "image": "https://blogger.googleusercontent.com/img/a/AVvXsEiWCkFNbtD54LMKBCuUl8mOEJcVQWXr9M0oOhxEKtqr2pEIFVflS4-M4lX7shlPRqTCrXrbc4uhfe6dUsTYslB9bX_P6GynyLIsdxL5I4Ru2nrpId1KhMRNiNOXRQfETNLYUpCRRje_HK0rrDLn3KLVcl7wJr1EznR86bNK85nJx6LS48IbBxfbOQh5TMZB",
-          "severity": "Medium",
-          "summary": "A cybersecurity source reported on Sept. 22 that the AuditTeam ransomware group named VIT in a leak-site claim. Details remain unverified — the report establishes only the claim itself, not the scope of any intrusion.",
-          "title": "AuditTeam claims ransomware attack on VIT; details unverified",
-          "url": "https://undercodenews.com/auditteam-ransomware-targets-vit-in-india-what-we-know-about-the-september-2026-cyberattack-video/"
-        },
-        {
-          "details": "Attacks on energy and utilities providers can disrupt operational workflows beyond ordinary corporate IT, since technology systems are closely tied to service delivery.",
-          "image": "https://static.vecteezy.com/system/resources/thumbnails/069/503/344/small/high-voltage-transformers-at-electric-station-on-sunny-summer-day-power-plant-equipment-photo.jpeg",
-          "severity": "Medium",
-          "summary": "The Orova ransomware group is linked to an incident against Siddhi Green Excellence Pvt. Ltd. in India, an energy-and-utilities firm, with reports of systems and operations disrupted. Full details of the compromise remain limited in the source reporting.",
-          "title": "Orova ransomware hits Indian energy firm Siddhi Green Excellence",
-          "url": "https://undercodenews.com/two-september-ransomware-incidents-put-italian-and-indian-organizations-under-pressure-video/"
+          "summary": "SentinelOne attributed the compromise of an India-based IT services firm to North Korea's Jade Sleet (aka TraderTraitor/UNC4899), which deployed the Apple macOS backdoors FLATROOF and ROOFDECK. Reported Sept 21; the group typically targets crypto-adjacent firms through developer-focused social engineering.",
+          "title": "North Korea's Jade Sleet linked to breach of Indian IT provider",
+          "url": "http://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Thursday, September 24 — Here's what's worth your attention today.",
+  "subtitle": "Friday, September 25 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
