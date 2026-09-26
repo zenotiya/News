@@ -1,35 +1,35 @@
 {
-  "date": "2026-09-25",
+  "date": "2026-09-26",
   "items": [
     {
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/PrismML-Snapdragon-smartglasses.png?w=612",
-      "name": "PrismML Bonsai 1-bit LLM (Snapdragon smart glasses)",
-      "summary": "PrismML unveiled a 2B-parameter 1-bit version of its Bonsai LLM, showcased at Qualcomm's Snapdragon Summit on Sept 24, that runs fully on-device on the Snapdragon AR1 Gen 1 Platform for real-time vision-language queries in smart glasses. It advances PrismML's open-weight, on-device AI vision as an alternative to cloud-dependent proprietary models — though no shipping glasses using it have been announced yet.",
-      "url": "https://techcrunch.com/2026/09/24/prismml-brings-its-tiny-llms-to-qualcomm-powered-smart-glasses/"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/af/OpenAI_logo_2025_%28wordmark%29.svg",
+      "name": "GPT-6 Cyber — OpenAI",
+      "summary": "OpenAI is reportedly preparing to unveil GPT-6 Cyber at DevDay on Sep 29: a cybersecurity-focused model for enterprise AI deployment and automated vulnerability patching, currently in alpha with Daybreak Red program customers. If confirmed it would be the company's fourth cyber-specialized model of 2026.",
+      "url": "https://techgig.com/news/ai/openai-to-launch-gpt-6-cyber-for-enterprise-security-automation/134495144"
     },
     {
-      "image": "https://images.macrumors.com/t/h-SgaNwlfg1xqeFyNxTtAvRMWhE=/400x0/article-new/2025/09/anthopic-claude.jpg?lossy",
-      "name": "Claude Opus 5.5",
-      "summary": "Anthropic launched Claude Opus 5.5 on Sept 22 as the first model in the new 5.5 family, matching Claude Fable 5.1's performance while costing ~40% less to run ($4/$20 per Mtok) and generating output 30%+ faster. Aimed at enterprise agentic coding, computer use, and long-running knowledge work, it ships with strengthened safety guardrails and raised usage limits on paid plans.",
-      "url": "https://www.macrumors.com/2026/09/22/anthropic-claude-opus-5-5/"
+      "image": "https://avatars.githubusercontent.com/u/321774266?v=4",
+      "name": "Xing4.0-29B-A4B — China Telecom AI",
+      "summary": "China Telecom AI released Xing4.0-29B-A4B, a 29B-parameter mixture-of-experts agentic model (4B active) for multi-step tool-calling workflows: 256K context, 75.0 on SWE-bench Verified, and deployable on a single GPU with just 15GB memory. Published on GitHub (XingChen-AGI) and Hugging Face.",
+      "url": "https://www.hpcwire.com/aiwire/2026/09/25/china-telecom-ai-releases-agentic-model-for-single-gpu-deployment/"
     },
     {
-      "image": "https://holatelcel.com/wp-content/uploads/2025/10/MIMO.jpg",
-      "name": "Xiaomi MiMo V2.6 (Pro / Flash / Pro UltraSpeed)",
-      "summary": "Xiaomi released the MiMo V2.6 family on Sept 21 under the MIT license, with the ~1T-parameter Pro topping Artificial Analysis's open-model rankings (score 46, tying Grok 4.7) while costing $0.435/$0.87 per Mtok — far cheaper than closed frontier models. Trained via ~750K RL trajectories in under six days for ~$2.62M, it marks the cheapest frontier-class open-weights release to date.",
-      "url": "https://www.intelligentliving.co/xiaomi-mimo-v2-6-pro-cheapest-frontier/"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg",
+      "name": "CLM-8B — Stanford + NVIDIA",
+      "summary": "Stanford and NVIDIA researchers released Contrastive Language Models, a new non-generative \"decision model\" approach for AI agents: CLM-8B (frozen Qwen3-8B backbone) ranks candidate actions instead of generating tokens, running up to 9x faster than TypeSafe's Jev in zero-shot tests. Weights are open under Apache 2.0; a multimodal CLM-35B-A3B is planned for early October.",
+      "url": "https://venturebeat.com/technology/stanford-and-nvidias-open-clm-8b-caches-reusable-agent-actions-and-runs-up-to-9x-faster-than-jev-in-tests"
     },
     {
-      "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4c0571f0-9cbe-4666-9824-a1da86dee66c/grok-logo.jpg?t=1745235323",
-      "name": "xAI Grok 4.7",
-      "summary": "xAI released Grok 4.7 on Sept 21, a larger base model with longer RL training aimed at coding, agentic workflows, and knowledge work, with a 500K-token context window and four reasoning-effort levels. It scores 46 on Artificial Analysis's Intelligence Index (up from 44) with per-token pricing unchanged from Grok 4.6 ($2/$6 per Mtok).",
-      "url": "https://evolink.ai/blog/grok-4-7-release-date"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Liquid-ai-logo-2026.svg",
+      "name": "LFM2.5-VL-3B-DSpark — Liquid AI",
+      "summary": "Liquid AI released LFM2.5-VL-3B-DSpark, an experimental speculative-decoding draft model for its LFM2.5-VL-3B vision-language model: decoding up to 3.13x faster on Apple Silicon and 2.66x on NVIDIA H100 with identical output. Weights are live on Hugging Face (Safetensors + GGUF) with day-one SGLang, MLX-VLM, and llama.cpp support.",
+      "url": "https://www.marktechpost.com/2026/09/25/liquid-ai-releases-lfm2-5-vl-3b-dspark-speculative-decoding-for-vision-language-models-with-up-to-3-13x-faster-decoding/"
     },
     {
-      "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4c0571f0-9cbe-4666-9824-a1da86dee66c/grok-logo.jpg?t=1745235323",
-      "name": "xAI Grok Voice Transcribe 2.0",
-      "summary": "xAI launched Grok Voice Transcribe 2.0 on Sept 18, a speech-to-text model it claims is twice as accurate as v1.0, ranking first among 32 streaming models on Artificial Analysis's leaderboard. Batch pricing holds at $0.10/hour of audio with no code changes for existing integrations; v1.0 will be deprecated in the coming weeks.",
-      "url": "https://techy101.com/2026/09/20/xai-releases-grok-voice-transcribe-2-0-speech-to-text-model-unite-ai/"
+      "image": "https://localmodelwatch.tsuchitsuchi.com/wp-content/uploads/2026/09/202609240709_hf_model-togethercomputer-Tev1-4B-experimental-en-1.png",
+      "name": "Tev1-4B-experimental — Together AI",
+      "summary": "Together AI released Tev1-4B-experimental, a 4B \"decision model\" fine-tuned on Qwen3.5-4B that returns a single choice letter from structured state/question/options inputs — inspired by TypeSafe's Jev. Together also published a guide to training custom Jev-style classifiers for about $17.",
+      "url": "https://localmodelwatch.tsuchitsuchi.com/en/2026/09/24/tev1-4b-experimental-released/"
     }
   ]
 }

@@ -2,30 +2,30 @@
   "date": "2026-09-26",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 9.9,
+  "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-93425",
-      "cvss": 9.9,
-      "summary": "OS command injection in Dokploy's patch.readRepoDirectories tRPC procedure lets an authenticated organization member inject shell metacharacters into the user-controlled repoPath value and execute arbitrary commands as root in the Dokploy container — and via the mounted Docker socket, compromise the host. Fixed in Dokploy 0.29.13.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93425"
+      "id": "CVE-2026-93952",
+      "cvss": 10.0,
+      "summary": "Improper input validation in on-prem Arista VeloCloud Orchestrator lets an unauthenticated remote attacker reach privileged internal functionality and compromise the orchestrator host plus managed Edge devices in certificate-based deployments. Actively exploited; added to CISA KEV on Sep 22.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93952"
     },
     {
-      "id": "CVE-2026-93616",
+      "id": "CVE-2026-14281",
       "cvss": 9.8,
-      "summary": "Pre-authentication path traversal plus unsafe file upload in the Check Point Management web service allows an unauthenticated attacker with network access to upload files to arbitrary paths and execute arbitrary scripts or load an arbitrary Java class. Confirmed exploited as a zero-day in targeted attacks as early as July 23, 2026; patches released September 22 and added to CISA KEV.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93616"
+      "summary": "Unauthenticated privilege escalation in the WordPress plugin \"Automation Web Platform – Notifications and OTP for WooCommerce\" (≤4.8.6): its public REST signup route copies attacker-controlled fields into user meta with no allowlist, and the OTP step is bypassable — letting remote attackers register an admin account.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14281"
     },
     {
-      "id": "CVE-2026-63077",
-      "cvss": 9.8,
-      "summary": "Unauthenticated remote code execution in JetBrains TeamCity on-premises servers (patch released July 28). CISA warned on September 24, 2026 that ransomware groups are actively exploiting it, and it is listed in the CISA Known Exploited Vulnerabilities catalog.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63077"
+      "id": "CVE-2026-94545",
+      "cvss": 9.5,
+      "summary": "Remote code execution in Next.js 16.2.0–16.3.5 next/og ImageResponse on the Node.js runtime: unescaped values reach SVG output via the Satori library and crafted og-image requests can trigger server-side code execution. Fixed in Next.js 16.3.6.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94545"
     }
   ],
   "model": {
-    "name": "PrismML Bonsai 1-bit LLM (Snapdragon smart glasses)",
-    "summary": "PrismML unveiled a 2B-parameter 1-bit version of its Bonsai LLM, showcased at Qualcomm's Snapdragon Summit on Sept 24, that runs fully on-device on the Snapdragon AR1 Gen 1 Platform for real-time vision-language queries in smart glasses. It advances PrismML's open-weight, on-device AI vision as an alternative to cloud-dependent proprietary models — though no shipping glasses using it have been announced yet.",
-    "url": "https://techcrunch.com/2026/09/24/prismml-brings-its-tiny-llms-to-qualcomm-powered-smart-glasses/"
+    "name": "GPT-6 Cyber — OpenAI",
+    "summary": "OpenAI is reportedly preparing to unveil GPT-6 Cyber at DevDay on Sep 29: a cybersecurity-focused model for enterprise AI deployment and automated vulnerability patching, currently in alpha with Daybreak Red program customers. If confirmed it would be the company's fourth cyber-specialized model of 2026.",
+    "url": "https://techgig.com/news/ai/openai-to-launch-gpt-6-cyber-for-enterprise-security-automation/134495144"
   }
 }
