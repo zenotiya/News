@@ -1,34 +1,43 @@
 {
-  "date": "2026-09-25",
+  "date": "2026-09-26",
   "sections": [
     {
       "items": [
         {
-          "action": "Update every WordPress install to 7.1.2 (or the matching backport for your branch) immediately and confirm the running version — do not assume auto-updates applied.",
-          "details": "Affected: every release from 4.7.0 through 7.1.1; fixed in 7.1.2 with backports to 13 older branches down to 4.7. Remote code execution requires a theme with a top-level directory starting with \"page-\" and a readable local PHP file such as pearcmd.php, but probing is indiscriminate.",
-          "image": "https://www.bnzsolutions.it/wp-content/uploads/2026/04/Sito-WordPress-Hackerato-830x453.jpg?x72474",
+          "action": "If you run Kiteworks MFT, take systems offline for the requested window (Central Europe 4:00–10:00 today; New York 10:00 p.m. Friday–4:00 a.m. Saturday) and confirm you are on version 9.5.1.",
+          "details": "CISO Frank Balonis told BleepingComputer the warning is precautionary rather than a response to a confirmed breach. No CVE is assigned and no compromise has been disclosed; Kiteworks says all known vulnerabilities are fixed in version 9.5.1. Watchtowr's threat intel team says it is actively tracking an emerging threat to Kiteworks appliances.",
+          "image": "https://www.kiteworks.com/wp-content/uploads/2025/09/sftp.jpg",
           "severity": "Critical",
-          "summary": "Attackers started exploiting CVE-2026-87902, an unauthenticated path-traversal flaw in WordPress Core's page-template resolution, within hours of the Sept 22 patch. Patchstack saw the first probe at 11:49 UTC that day; activity has since escalated 10x, with attackers including pearcmd.php and writing PHP web shells to disk.",
-          "title": "Attackers exploit critical WordPress flaw CVE-2026-87902 within hours of patch",
-          "url": "http://thehackernews.com/2026/09/attackers-exploit-wordpress-cve-2026.html"
+          "summary": "Kiteworks told customers worldwide to shut down their managed file transfer servers for a six-hour window on Saturday, September 26, after receiving credible law-enforcement threat intelligence that an attack could be imminent. The alert applies even to systems not directly exposed to the internet.",
+          "title": "Kiteworks orders global 6-hour server shutdown over imminent attack threat",
+          "url": "https://www.bleepingcomputer.com/news/security/kiteworks-urges-6-hour-server-shutdown-over-potential-zero-day-attacks/"
         },
         {
-          "action": "Upgrade self-hosted Dokploy instances to 0.29.13 or later; audit org-member activity for unexpected shell command execution.",
-          "details": "The patch.readRepoDirectories tRPC procedure passes the user-controlled repoPath into child_process.exec as root in the Dokploy container. Standard deployments mount /var/run/docker.sock, so container-root execution can escalate to full Docker host compromise.",
-          "image": "https://www.heroxhost.com/assets/images/pages/dokploy-images/dokploy-section-img.webp",
+          "action": "Apply WSO2's public fixes or the required update level for each deployed component; bring Adobe Commerce and Magento branches to the required patched level and review admin/API access and customer-session changes for activity predating remediation.",
+          "details": "Both flaws were added to CISA's Known Exploited Vulnerabilities catalog on September 25. The Adobe Commerce flaw is an unauthenticated authorization failure that can let an attacker switch into another customer's session; the WSO2 flaw affects API Manager, API Control Plane, Traffic Manager and Universal Gateway deployments.",
+          "image": "https://saastrac.com/wp-content/uploads/2026/06/9559_WSO2Apimanagerlogo.webp",
           "severity": "Critical",
-          "summary": "CVE-2026-93425 (CVSS 9.9) is an OS command-injection flaw in Dokploy disclosed Sept 24: an authenticated org member with service:read permission can inject shell metacharacters into repoPath and execute arbitrary commands as root. A public proof-of-concept is already circulating.",
-          "title": "Dokploy CVE-2026-93425: critical command injection with public PoC",
-          "url": "https://www.thehackerwire.com/vulnerability/CVE-2026-93425/"
+          "summary": "CISA added two critical flaws to its Known Exploited Vulnerabilities catalog on September 25 with evidence of active exploitation: CVE-2026-5430 (CVSS 9.8) affecting WSO2 API management products and CVE-2026-71362 affecting Adobe Commerce and Magento.",
+          "title": "CISA: WSO2 and Adobe Commerce flaws actively exploited — patch now",
+          "url": "https://undercodenews.com/cisa-warns-of-active-exploitation-wso2-adobe-commerce-sharepoint-and-mikrotik-flaws-put-organizations-on-alert-video/"
         },
         {
-          "action": "Update to sudo 1.9.17-16.p2.2.hum1, and append a trailing 'Z' to all time-restricted sudoers rules as the recommended mitigation.",
-          "details": "The flaw only affects systems using optional notbefore/notafter time-based sudoers rules. No active exploitation or public PoC is confirmed; PAM authentication remains intact, so attackers cannot exceed what their original rule grants.",
-          "image": "https://m.unixlinux.online/article/uploadfiles/202204/2022042718105715.png",
+          "action": "Patch or mitigate internet-facing Check Point VPN gateways immediately; review VPN negotiation logs, Mobile Access sessions, Java class loads and administrator changes for suspicious activity.",
+          "details": "CVE-2026-85102 is an improper certificate validation flaw (CWE-295, CVSS 9.8) in Check Point Quantum Security Gateways and Spark Firewalls configured for Site-to-Site or Remote Access VPN; an unauthenticated remote attacker can exploit it during VPN negotiation. CISA added both flaws to the KEV catalog on September 25 under Binding Operational Directive 26-04.",
+          "image": "https://community.checkpoint.com/legacyfs/online/checkpoint/68025_phoca_thumb_l_15400-front-angle_WEB.jpg",
+          "severity": "Critical",
+          "summary": "CISA added two Check Point vulnerabilities — CVE-2026-85102 and CVE-2026-93616 — to its Known Exploited Vulnerabilities catalog, warning they are being actively exploited. The first can allow unauthenticated attackers to execute code on VPN gateways sitting at the edge of enterprise networks.",
+          "title": "Check Point VPN gateway flaws CVE-2026-85102 and CVE-2026-93616 added to CISA KEV",
+          "url": "https://gbhackers.com/cisa-adds-multiple-check-point-product-flaws/"
+        },
+        {
+          "action": "Make sure internet-facing Roundcube is on 1.6.16+ or 1.7.1+; audit mail server logs for unauthenticated access to the virtuser_query plugin.",
+          "details": "The flaw is a preg_replace() backslash-escape bypass in the virtuser_query plugin. Patches shipped in May 2026, and Shadowserver data shows only about 10 of 523,000+ exposed instances still flagged vulnerable. Earlier 2026 Roundcube flaws were added to CISA KEV after drawing nation-state interest in harvesting email.",
+          "image": "https://centrynex.com/wp-content/uploads/2026/02/roundcube-3JORRW-768x401.jpg",
           "severity": "High",
-          "summary": "CVE-2026-96512 (CVSS 7.8) lets local users bypass sudo's time-based authorization by manipulating the tz environment variable, defeating notbefore/notafter restrictions in sudoers rules.",
-          "title": "Sudo timezone flaw CVE-2026-96512 bypasses time-based sudoers restrictions",
-          "url": "https://securityonline.info/sudo-security-vulnerability-cve-2026-96512/"
+          "summary": "Canada's Centre for Cyber Security warned that a now-patched pre-authentication SQL injection in Roundcube Webmail, CVE-2026-48842 (CVSS 8.1), is being actively exploited in the wild. It affects Roundcube 1.6.x before 1.6.16 and 1.7.x before 1.7.1, letting unauthenticated attackers inject arbitrary SQL into the mail backend.",
+          "title": "Roundcube pre-auth SQLi CVE-2026-48842 exploited in the wild",
+          "url": "https://cyberrecaps.com/news/cybersecurity-news-september-25-2026"
         }
       ],
       "title": "Act on Today"
@@ -36,28 +45,20 @@
     {
       "items": [
         {
-          "details": "The $351.6M figure comes from CEO Gracy Chen; Arkham's Emmett Gallic flagged initial hot-wallet movements (~$178M) earlier, with more moving afterward. The breach was contained to hot/warm wallet layers; cold wallets remain secure and a $464M+ user protection fund backs user balances.",
+          "details": "The attack hit hot and warm wallet layers on September 24 at 18:31 UTC; cold wallets were unaffected and Bitget says its User Protection Fund fully covers the loss. Attackers compromised a backend wallet-infrastructure system and forged transaction data to trigger the signing process, without taking private keys. Mandiant and SlowMist are assisting the investigation.",
           "image": "https://weff.io/v2/images/bitget_blue.png",
           "severity": "Critical",
-          "summary": "Crypto exchange Bitget confirmed Sept 24 that unauthorized transfers drained about $351.6M from hot and warm wallets; withdrawals are suspended pending a security review. CEO Gracy Chen says preliminary IP/VPN clues point to North Korean actors, and some stolen funds have reportedly been recovered.",
-          "title": "Bitget loses ~$352M in hot-wallet breach; suspects North Korea",
-          "url": "https://www.coindesk.com/markets/2026/09/24/crypto-exchange-bitget-loses-usd352-million-in-hack-claims-user-funds-are-safe"
+          "summary": "Bitget CEO Gracy Chen revised the exchange's hot-wallet theft loss up to about $388 million from the initial $351.6 million, with IP/VPN evidence pointing to North Korean actors. Elliptic notes the suspected DPRK-linked heists of 2026 have now passed $1 billion in total.",
+          "title": "Bitget loss revised to ~$388M; suspected DPRK crypto heists top $1B in 2026",
+          "url": "https://www.elliptic.co/insights/bitget-attack-pushes-suspected-north-korea-crypto-heists-over-1-billion-in-2026/"
         },
         {
-          "details": "FBIJobs.gov displayed a \"seized by ShinyHunters\" banner before returning 503 errors; the bureau has not confirmed whether the intrusion hit its own systems or a third-party provider supporting the portal.",
-          "image": "https://www.grassley.senate.gov/imo/media/image/fbi_wl.jpg",
-          "severity": "High",
-          "summary": "The FBI is actively investigating ShinyHunters' claim of stealing 2–3 terabytes of data from its online jobs system, including a sample spreadsheet with thousands of current/former employees' PII and details of sensitive intelligence assignments. The breach point is still undetermined.",
-          "title": "FBI probes ShinyHunters' claim of massive jobs-portal data theft",
-          "url": "https://www.japantimes.co.jp/news/2026/09/24/world/crime-legal/hacked-fbi-data-intelligence/"
-        },
-        {
-          "details": "As with all leak-site listings, these are unconfirmed allegations — disclosure on a leak site does not prove the scale or success of the underlying intrusion.",
-          "image": "https://www.globalts.com/images/easyblog_shared/April_2023/04-07-23/ransomware_152258527_400.jpg",
+          "details": "As with all leak-site listings, these are unconfirmed claims by the groups — appearing on a leak site does not prove the scale or success of the underlying intrusion.",
+          "image": "https://media.beehiiv.com/cdn-cgi/image/format=auto,width=720,fit=scale-down,onerror=redirect/uploads/asset/file/c0163b8d-a931-47e8-b1e7-8730090511ce/Ransomware_in_SA.jpg",
           "severity": "Medium",
-          "summary": "New Sept 24 dark-web leak-site disclosures include Qilin naming All Tech Machine & Engineering (US manufacturing), Akira naming Wallatec, Rhysida naming NEAD Pro, Spirals naming Armada Credit Bureau (Uganda financial services), and Krybit naming jonesthegrocer.com.",
-          "title": "Fresh ransomware leak-site claims: Qilin, Akira, Rhysida and others name new victims",
-          "url": "https://cyberthreatintelligence.net/ransomware-victim/all-tech-machine-engineering-qilin-2026"
+          "summary": "New September 24–25 leak-site disclosures: Akira names US construction contractor Strack Companies (claims 60GB including financials, project drawings and NDAs), incransom names Morocco's pharma5.ma (claims 50GB), metaencryptor names US-based Platinum Healthcare Staffing, WallStreet names the Catholic University of El Salvador, and Pear names Indroj Medical Group.",
+          "title": "Fresh ransomware leak-site claims: Akira, incransom, metaencryptor and others name victims",
+          "url": "https://qpulse.quasarcybertech.com/news/5944/akira-ransomware-group-claims-attack-on-strack-companies"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -65,17 +66,35 @@
     {
       "items": [
         {
-          "details": "FLATROOF and ROOFDECK were previously seen in the March–April 2026 attack on KelpDAO's LayerZero bridge. The campaign uses fake GitHub coding-project repos and job-interview lures aimed at DevOps, crypto, and fintech staff.",
-          "image": "https://www.genians.com/wp-content/uploads/2025/07/North-Korean-APTs-in-the-Evolving-Landscape-2048x1075.jpg",
+          "action": "Verify banking apps through official app stores and bank websites only; never install banking APKs from links promising card offers, reward redemptions or limit upgrades.",
+          "details": "Earlier blocking orders showed phishing pages built on Firebase mimicking State Bank of India, ICICI Bank and Axis Bank, plus data-collection sites harvesting credit card details and OTPs. Officials describe the malware as 'Android God Mode' — near-total control over victim phones.",
+          "image": "https://uploads-us-west-2.insided.com/webroot-en/attachment/width/1920/de9b6353-c22d-4f73-ad25-e29066273456_thumb.png",
           "severity": "High",
-          "summary": "SentinelOne attributed the compromise of an India-based IT services firm to North Korea's Jade Sleet (aka TraderTraitor/UNC4899), which deployed the Apple macOS backdoors FLATROOF and ROOFDECK. Reported Sept 21; the group typically targets crypto-adjacent firms through developer-focused social engineering.",
-          "title": "North Korea's Jade Sleet linked to breach of Indian IT provider",
-          "url": "http://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html"
+          "summary": "India's Indian Cyber Crime Coordination Centre (I4C) ordered the blocking of 216 Google Firebase databases in a single day amid a surge in Android banking malware. Fraudsters lure victims with fake credit-card offers and limit upgrades, then point them at malicious apps that exfiltrate card details and OTPs.",
+          "title": "India orders blocking of 216 Firebase databases in one day over Android banking-malware surge",
+          "url": "https://ministryofcyberaffairs.com/news/india-orders-blocking-of-216-google-firebase-databases-in-single-day-after-android-malware-surge-9250673a-d49c-43b7-b463-65c441810e51"
+        },
+        {
+          "details": "CERT-In issued at least five substantive advisories between September 17 and 23: Apple (100+ vulnerabilities), Cisco Secure Email Gateway (actively exploited), SolarWinds ARM (unauthenticated RCE), Arista VeloCloud (CVSS 10.0, actively exploited) and ISC BIND (DNS cache poisoning). SideCopy is also expanding its India targeting into academia.",
+          "image": "https://www.staging.mallory.ai/_next/image?url=https%3A%2F%2Fmallory-core-public-images.s3.us-east-2.amazonaws.com%2Ftransparent-tribe-apt36-lnk-based-rat-campaigns-targeting-indian-government-entities.png&w=2048&q=75",
+          "severity": "High",
+          "summary": "Pakistan-nexus Transparent Tribe (APT36) is rewriting its toolchains in Rust and using private GitHub repositories as command-and-control, with Indian IT service providers as initial-access vectors, according to this week's India threat roundup. The same week saw a CERT-In advisory burst covering several actively exploited enterprise flaws.",
+          "title": "APT36's Rust successor targets India via GitHub-backed C2, amid CERT-In advisory burst",
+          "url": "https://medium.com/@z3r0secops/india-cyber-weekly-apt36s-rust-successor-cert-in-s-triple-threat-advisory-burst-cvss-10-0-dfe407a22444"
+        },
+        {
+          "action": "Update to iOS/iPadOS 26.7, macOS Golden Gate 27 / Tahoe 26.7 / Sequoia 15.8, Safari 27, tvOS, watchOS and visionOS 27, and Xcode 27.",
+          "details": "CERT-In published vulnerability note CIVN-2026-0468 on September 21 rating severity high; Apple had shipped the fix by that date. Anyone keeping crypto assets on Apple devices has the most to lose from an unpatched phone.",
+          "image": "https://techcrunch.com/wp-content/uploads/2025/12/apple-threat-notification-spyware_c1489b.jpg?resize=668,445",
+          "severity": "High",
+          "summary": "CERT-In issued a high-severity warning over a batch of Apple software flaws covering iOS, iPadOS, macOS, Safari, watchOS, visionOS and Xcode. The flaws could let a remote attacker run arbitrary code, escalate privileges or bypass security restrictions; no exploitation has been observed.",
+          "title": "CERT-In warns of high-severity Apple flaws across iOS, macOS and Safari",
+          "url": "https://www.cryptotimes.io/2026/09/23/crypto-holders-on-iphone-and-mac-among-users-urged-to-update-after-cert-in-warning/"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Friday, September 25 — Here's what's worth your attention today.",
+  "subtitle": "Saturday, September 26 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
