@@ -1,40 +1,40 @@
 {
-  "date": "2026-09-26",
+  "date": "2026-09-27",
   "items": [
     {
+      "cvss": 9.9,
+      "id": "CVE-2026-100706",
+      "severity": "Critical",
+      "summary": "Kyverno before 1.19.1 fails to validate URL-encoded path segments in the Policy apiCall urlPath, letting namespace tenants bypass the per-namespace clamp and create objects in other namespaces as the admission-controller ServiceAccount — including cluster-wide MutatingWebhookConfigurations, escalating to cluster admin. Fixed in 1.19.1.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100706"
+    },
+    {
       "cvss": 9.8,
-      "id": "CVE-2026-14281",
+      "id": "CVE-2026-94127",
       "severity": "Critical",
-      "summary": "Unauthenticated privilege escalation in the WordPress plugin \"Automation Web Platform – Notifications and OTP for WooCommerce\" (≤4.8.6): its public REST signup route copies attacker-controlled fields into user meta with no allowlist, and the OTP step is bypassable — letting remote attackers register an admin account.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14281"
+      "summary": "A heap-based buffer overflow in F5 BIG-IP APM's Traffic Management Microkernel, reachable through the OAuth authorization endpoint, allows unauthenticated remote code execution as root when a virtual server has both an APM access policy and an OAuth authorization server profile configured.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94127"
     },
     {
-      "cvss": 10.0,
-      "id": "CVE-2026-93952",
+      "cvss": 9.8,
+      "id": "CVE-2026-93616",
       "severity": "Critical",
-      "summary": "Improper input validation in on-prem Arista VeloCloud Orchestrator lets an unauthenticated remote attacker reach privileged internal functionality and compromise the orchestrator host plus managed Edge devices in certificate-based deployments. Actively exploited; added to CISA KEV on Sep 22.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93952"
+      "summary": "A directory traversal and file upload vulnerability in Check Point Management Server allows an unauthenticated remote attacker to upload and execute arbitrary scripts on the management server. Actively exploited in the wild; added to CISA KEV.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93616"
     },
     {
-      "cvss": 9.5,
-      "id": "CVE-2026-94545",
+      "cvss": 9.8,
+      "id": "CVE-2026-85102",
       "severity": "Critical",
-      "summary": "Remote code execution in Next.js 16.2.0–16.3.5 next/og ImageResponse on the Node.js runtime: unescaped values reach SVG output via the Satori library and crafted og-image requests can trigger server-side code execution. Fixed in Next.js 16.3.6.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94545"
+      "summary": "Improper certificate trust validation during VPN negotiation in Check Point Quantum Security Gateway allows an unauthenticated remote attacker to execute arbitrary code on the gateway. Actively exploited in the wild per Check Point's Sep 23 advisory; added to CISA KEV.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85102"
     },
     {
-      "cvss": 8.8,
-      "id": "CVE-2026-65660",
-      "severity": "High",
-      "summary": "Code-injection flaw in on-prem Microsoft SharePoint Server 2016/2019 and Subscription Edition: a low-privilege authenticated attacker can execute arbitrary code, and default anonymous WebPart configurations make it effectively pre-auth RCE. Added to CISA KEV on Sep 25 with active exploitation confirmed.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65660"
-    },
-    {
-      "cvss": 6.9,
-      "id": "CVE-2026-67279",
-      "severity": "High",
-      "summary": "MikroTik RouterOS SSH flaw (part of CERT.pl's \"MikroTrick\" chain): an unauthenticated attacker can open an SSH session channel and send exec requests, bypassing authentication entirely — enabling full admin takeover of internet-facing devices. Added to CISA KEV on Sep 25; fixed in RouterOS 6.49.21 / 7.23.4 / 7.24.2.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67279"
+      "cvss": 9.1,
+      "id": "CVE-2026-71362",
+      "severity": "Critical",
+      "summary": "An incorrect authorization vulnerability in Adobe Commerce and Magento lets an attacker elevate privileges and take over customer accounts without any user interaction. Added to CISA KEV on Sep 25 with active exploitation observed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71362"
     }
   ]
 }

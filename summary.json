@@ -2,30 +2,30 @@
   "date": "2026-09-27",
   "news_count": 8,
   "cve_count": 5,
-  "worst_cvss": 10.0,
+  "worst_cvss": 9.9,
   "priorities": [
     {
-      "id": "CVE-2026-93952",
-      "cvss": 10.0,
-      "summary": "Improper input validation in on-prem Arista VeloCloud Orchestrator lets an unauthenticated remote attacker reach privileged internal functionality and compromise the orchestrator host plus managed Edge devices in certificate-based deployments. Actively exploited; added to CISA KEV on Sep 22.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93952"
+      "id": "CVE-2026-100706",
+      "cvss": 9.9,
+      "summary": "Kyverno before 1.19.1 fails to validate URL-encoded path segments in the Policy apiCall urlPath, letting namespace tenants bypass the per-namespace clamp and create objects in other namespaces as the admission-controller ServiceAccount — including cluster-wide MutatingWebhookConfigurations, escalating to cluster admin. Fixed in 1.19.1.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100706"
     },
     {
-      "id": "CVE-2026-14281",
+      "id": "CVE-2026-94127",
       "cvss": 9.8,
-      "summary": "Unauthenticated privilege escalation in the WordPress plugin \"Automation Web Platform – Notifications and OTP for WooCommerce\" (≤4.8.6): its public REST signup route copies attacker-controlled fields into user meta with no allowlist, and the OTP step is bypassable — letting remote attackers register an admin account.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14281"
+      "summary": "A heap-based buffer overflow in F5 BIG-IP APM's Traffic Management Microkernel, reachable through the OAuth authorization endpoint, allows unauthenticated remote code execution as root when a virtual server has both an APM access policy and an OAuth authorization server profile configured.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94127"
     },
     {
-      "id": "CVE-2026-94545",
-      "cvss": 9.5,
-      "summary": "Remote code execution in Next.js 16.2.0–16.3.5 next/og ImageResponse on the Node.js runtime: unescaped values reach SVG output via the Satori library and crafted og-image requests can trigger server-side code execution. Fixed in Next.js 16.3.6.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94545"
+      "id": "CVE-2026-93616",
+      "cvss": 9.8,
+      "summary": "A directory traversal and file upload vulnerability in Check Point Management Server allows an unauthenticated remote attacker to upload and execute arbitrary scripts on the management server. Actively exploited in the wild; added to CISA KEV.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93616"
     }
   ],
   "model": {
-    "name": "GPT-6 Cyber — OpenAI",
-    "summary": "OpenAI is reportedly preparing to unveil GPT-6 Cyber at DevDay on Sep 29: a cybersecurity-focused model for enterprise AI deployment and automated vulnerability patching, currently in alpha with Daybreak Red program customers. If confirmed it would be the company's fourth cyber-specialized model of 2026.",
-    "url": "https://techgig.com/news/ai/openai-to-launch-gpt-6-cyber-for-enterprise-security-automation/134495144"
+    "name": "OpenAI GPT-6 Sol & Luna",
+    "summary": "OpenAI launched two cheaper GPT-6 models on Sept 22 — Sol ($2/$10 per million tokens) for coding and agentic work, and Luna ($0.10/$0.50) for high-volume routine tasks — cutting API prices about 50% versus GPT-5.6. They sit below flagship GPT-6 Astra and shipped the same day in the API, ChatGPT Work, and Codex.",
+    "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna"
   }
 }

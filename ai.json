@@ -1,35 +1,35 @@
 {
-  "date": "2026-09-26",
+  "date": "2026-09-27",
   "items": [
     {
-      "image": "https://upload.wikimedia.org/wikipedia/commons/a/af/OpenAI_logo_2025_%28wordmark%29.svg",
-      "name": "GPT-6 Cyber — OpenAI",
-      "summary": "OpenAI is reportedly preparing to unveil GPT-6 Cyber at DevDay on Sep 29: a cybersecurity-focused model for enterprise AI deployment and automated vulnerability patching, currently in alpha with Daybreak Red program customers. If confirmed it would be the company's fourth cyber-specialized model of 2026.",
-      "url": "https://techgig.com/news/ai/openai-to-launch-gpt-6-cyber-for-enterprise-security-automation/134495144"
+      "image": "https://atoms-cos.metadl.com/cms_medias/gpt_6_sol_luna_cover_56e3a28504.jpg",
+      "name": "OpenAI GPT-6 Sol & Luna",
+      "summary": "OpenAI launched two cheaper GPT-6 models on Sept 22 — Sol ($2/$10 per million tokens) for coding and agentic work, and Luna ($0.10/$0.50) for high-volume routine tasks — cutting API prices about 50% versus GPT-5.6. They sit below flagship GPT-6 Astra and shipped the same day in the API, ChatGPT Work, and Codex.",
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna"
     },
     {
-      "image": "https://avatars.githubusercontent.com/u/321774266?v=4",
-      "name": "Xing4.0-29B-A4B — China Telecom AI",
-      "summary": "China Telecom AI released Xing4.0-29B-A4B, a 29B-parameter mixture-of-experts agentic model (4B active) for multi-step tool-calling workflows: 256K context, 75.0 on SWE-bench Verified, and deployable on a single GPU with just 15GB memory. Published on GitHub (XingChen-AGI) and Hugging Face.",
-      "url": "https://www.hpcwire.com/aiwire/2026/09/25/china-telecom-ai-releases-agentic-model-for-single-gpu-deployment/"
+      "image": "https://i.tribune.com.pk/media/images/anthropic-r1790105225-0/anthropic-r1790105225-0-640x480.webp",
+      "name": "Anthropic Claude Opus 5.5",
+      "summary": "Anthropic's new flagship launched Sept 22 at $4/$20 per million tokens — 20% cheaper and 30%+ faster than Opus 5, with performance comparable to the pricier Fable 5.1 plus new containment safeguards that cut boundary-escape attempts ~85%. Sonnet 5.5 and Haiku 5.5 are promised in the coming weeks.",
+      "url": "https://www.channelnewsasia.com/business/anthropic-unveils-claude-opus-55-6402976"
     },
     {
-      "image": "https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg",
-      "name": "CLM-8B — Stanford + NVIDIA",
-      "summary": "Stanford and NVIDIA researchers released Contrastive Language Models, a new non-generative \"decision model\" approach for AI agents: CLM-8B (frozen Qwen3-8B backbone) ranks candidate actions instead of generating tokens, running up to 9x faster than TypeSafe's Jev in zero-shot tests. Weights are open under Apache 2.0; a multimodal CLM-35B-A3B is planned for early October.",
-      "url": "https://venturebeat.com/technology/stanford-and-nvidias-open-clm-8b-caches-reusable-agent-actions-and-runs-up-to-9x-faster-than-jev-in-tests"
+      "image": "https://tokenstead.ai/og/guides/xing4-0-29b-ascend-open-agent-model.png",
+      "name": "China Telecom AI Xing4.0-29B-A4B",
+      "summary": "China Telecom AI's open-weight (Apache 2.0) agentic MoE — 29B total params, 4B active per token — runs on a single consumer GPU and was trained end-to-end on Huawei Ascend 910C NPUs with zero Nvidia hardware in the loop. It plans multi-step tasks, calls tools, and is available now on Hugging Face and GitHub.",
+      "url": "https://www.globenewswire.com/news-release/2026/09/22/3365958/0/en/china-telecom-ai-officially-releases-xing4-0-29b-agentic-large-model-for-single-gpu-deployment.html"
     },
     {
-      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Liquid-ai-logo-2026.svg",
-      "name": "LFM2.5-VL-3B-DSpark — Liquid AI",
-      "summary": "Liquid AI released LFM2.5-VL-3B-DSpark, an experimental speculative-decoding draft model for its LFM2.5-VL-3B vision-language model: decoding up to 3.13x faster on Apple Silicon and 2.66x on NVIDIA H100 with identical output. Weights are live on Hugging Face (Safetensors + GGUF) with day-one SGLang, MLX-VLM, and llama.cpp support.",
-      "url": "https://www.marktechpost.com/2026/09/25/liquid-ai-releases-lfm2-5-vl-3b-dspark-speculative-decoding-for-vision-language-models-with-up-to-3-13x-faster-decoding/"
+      "image": "https://mixed-news.com/en/wp-content/uploads/2026/09/Xiaomi_MiMo.png",
+      "name": "Xiaomi MiMo-V2.6",
+      "summary": "Xiaomi open-sourced MiMo-V2.6 Pro (1.02T params, 42B active) and Flash under MIT license on Sept 21–22, with Pro topping the Artificial Analysis Intelligence Index for open-weights models at 46 — level with Grok 4.7. Xiaomi also published the full RL training stack, 7,000+ task environments, and the live-streamed training run's costs (~$2.62M for Pro).",
+      "url": "https://mixed-news.com/en/xiaomi-mimo-v2-6-pro-top-open-model-2-62m-rl-run/"
     },
     {
-      "image": "https://localmodelwatch.tsuchitsuchi.com/wp-content/uploads/2026/09/202609240709_hf_model-togethercomputer-Tev1-4B-experimental-en-1.png",
-      "name": "Tev1-4B-experimental — Together AI",
-      "summary": "Together AI released Tev1-4B-experimental, a 4B \"decision model\" fine-tuned on Qwen3.5-4B that returns a single choice letter from structured state/question/options inputs — inspired by TypeSafe's Jev. Together also published a guide to training custom Jev-style classifiers for about $17.",
-      "url": "https://localmodelwatch.tsuchitsuchi.com/en/2026/09/24/tev1-4b-experimental-released/"
+      "image": "https://www.marktechpost.com/wp-content/uploads/2026/09/blog111-14.png",
+      "name": "xAI Grok 4.7",
+      "summary": "xAI's Sept 21 update ships a larger base model (~2.1T params) with a longer RL run aimed at multi-hour agentic tasks, at the same $2/$6 price and speed as Grok 4.6 — live in the Grok app, Cursor, Grok Build, and the API. Vendor benchmarks show Terminal-Bench 4.0 nearly doubling to 38.0%, though independent testers flag higher token burn.",
+      "url": "https://www.marktechpost.com/2026/09/21/spacexai-releases-grok-4-7/"
     }
   ]
 }
