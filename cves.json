@@ -1,40 +1,40 @@
 {
-  "date": "2026-09-27",
+  "date": "2026-09-28",
   "items": [
     {
       "cvss": 9.9,
       "id": "CVE-2026-100706",
       "severity": "Critical",
-      "summary": "Kyverno before 1.19.1 fails to validate URL-encoded path segments in the Policy apiCall urlPath, letting namespace tenants bypass the per-namespace clamp and create objects in other namespaces as the admission-controller ServiceAccount — including cluster-wide MutatingWebhookConfigurations, escalating to cluster admin. Fixed in 1.19.1.",
+      "summary": "Kyverno before 1.19.1 fails to properly validate URL-encoded path segments in the Policy apiCall urlPath, allowing namespace tenants to bypass the per-namespace clamp and create arbitrary objects across the cluster. Patch to 1.19.1 or later.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100706"
     },
     {
-      "cvss": 9.8,
-      "id": "CVE-2026-94127",
+      "cvss": 9.9,
+      "id": "CVE-2026-89078",
       "severity": "Critical",
-      "summary": "A heap-based buffer overflow in F5 BIG-IP APM's Traffic Management Microkernel, reachable through the OAuth authorization endpoint, allows unauthenticated remote code execution as root when a virtual server has both an APM access policy and an OAuth authorization server profile configured.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94127"
+      "summary": "GitLab remediated a critical issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1, exploitable remotely without authentication. Upgrade to 19.2.7, 19.3.3, or 19.4.1.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89078"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-93616",
+      "id": "CVE-2026-100741",
       "severity": "Critical",
-      "summary": "A directory traversal and file upload vulnerability in Check Point Management Server allows an unauthenticated remote attacker to upload and execute arbitrary scripts on the management server. Actively exploited in the wild; added to CISA KEV.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93616"
+      "summary": "Eval injection in the JScript event-script dispatcher in Progressive Robot Ltd's hMailServer versions 6.0.0 through 6.3.3 on Windows lets a remote, unauthenticated attacker execute arbitrary code. Upgrade hMailServer immediately.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100741"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-85102",
+      "id": "CVE-2026-101065",
       "severity": "Critical",
-      "summary": "Improper certificate trust validation during VPN negotiation in Check Point Quantum Security Gateway allows an unauthenticated remote attacker to execute arbitrary code on the gateway. Actively exploited in the wild per Check Point's Sep 23 advisory; added to CISA KEV.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85102"
+      "summary": "Obot, an open-source AI agent/MCP platform, documents a Docker quickstart command that starts an insecure default configuration in all versions up to and including commit d7e6970, exposing users to remote exploitation. Redeploy with a hardened configuration.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101065"
     },
     {
-      "cvss": 9.1,
-      "id": "CVE-2026-71362",
+      "cvss": 9.8,
+      "id": "CVE-2026-101090",
       "severity": "Critical",
-      "summary": "An incorrect authorization vulnerability in Adobe Commerce and Magento lets an attacker elevate privileges and take over customer accounts without any user interaction. Added to CISA KEV on Sep 25 with active exploitation observed.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71362"
+      "summary": "Nezha 2.2.3 contains a Host header injection regression in the OAuth2 redirect endpoint: when the optional dashboard_host setting is empty, /api/v1/oauth2/{provider} reflects the attacker-controlled Host header, enabling account-takeover flows. Patch or set dashboard_host explicitly.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101090"
     }
   ]
 }
