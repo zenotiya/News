@@ -1,34 +1,43 @@
 {
-  "date": "2026-09-27",
+  "date": "2026-09-28",
   "sections": [
     {
       "items": [
         {
-          "action": "Apply the fixes in WSO2 advisory WSO2-2026-5328, verify tokens with unsupported algorithms are rejected, and rotate consumer keys, secrets, and backend credentials for registered applications.",
-          "details": "watchTowr saw forged-JWT exploitation attempts against honeypots since at least September 13. Note: CISA's short name calls this a \"path traversal\" issue, but the NVD entry and WSO2's own advisory describe the actual mechanism as a JWT signature-verification bypass (CWE-347) — validate your deployment against the vendor advisory.",
-          "image": "https://www.shifttech.net/assets/blue-server-room-DXdwOdYO.jpg",
+          "action": "Patch NetScaler ADC and Gateway appliances per Citrix guidance, or isolate/shut down internet-facing units until fixed; preserve logs and snapshots as evidence of possible prior compromise.",
+          "details": "CISA added both CVEs to its Known Exploited Vulnerabilities catalog on September 27 with a federal remediation deadline of September 30. Security firm watchTowr confirmed active exploitation on September 26; both flaws score CVSS v4.0 9.5.",
+          "image": "https://www.studiored.com/wp-content/uploads/2019/10/Citrix_1-610x424.webp?x47975",
           "severity": "Critical",
-          "summary": "CISA added CVE-2026-5430 to its Known Exploited Vulnerabilities catalog on September 24 with a federal remediation deadline of September 27 — today. It hits WSO2 API Control Plane, API Manager, Traffic Manager, and Universal Gateway, and active exploitation is underway.",
-          "title": "CISA: patch WSO2 API gateways today — CVE-2026-5430 is actively exploited",
-          "url": "http://thehackernews.com/2026/09/wso2-and-adobe-commerce-flaws-exploited.html"
+          "summary": "CISA added CVE-2026-88771 (unauthenticated arbitrary command execution) and CVE-2026-88772 (memory-buffer RCE/DoS) to its KEV catalog after watchTowr confirmed the flaws are being actively exploited against NetScaler ADC and Gateway appliances.",
+          "title": "Citrix NetScaler RCE flaws added to CISA KEV amid active exploitation",
+          "url": "https://cvefeed.io/vuln/detail/CVE-2026-88772"
         },
         {
-          "action": "Patch per Adobe's APSB26-92 advisory and review logs for unusual customer-account access or session switches.",
-          "details": "The flaw (CWE-863) lets an attacker switch a customer session to another customer account, exposing the victim's account and private customer data. Adobe has not yet updated its advisory to reflect the exploitation.",
-          "image": "http://webiators.com/wp-content/uploads/2026/05/Home-Img-800X623.png",
-          "severity": "High",
-          "summary": "CISA added CVE-2026-71362 (CVSS 9.1) to its Known Exploited Vulnerabilities catalog on September 24, with the same September 27 deadline. It is an incorrect-authorization flaw in Adobe Commerce and Magento Open Source that enables unauthenticated customer-account takeover.",
-          "title": "Adobe Commerce session-hijack flaw CVE-2026-71362 lands on CISA KEV",
-          "url": "http://thehackernews.com/2026/09/wso2-and-adobe-commerce-flaws-exploited.html"
+          "action": "Apply Oracle's patches for CVE-2026-35273 immediately; disable the EMHub service or remove the PSEMHUB app, and hunt WebLogic logs for requests to /PSEMHUB/ or percent-encoded variants like /%50SEMHUB/.",
+          "details": "Mandiant notified over 100 organizations in the first wave; web shells were found on dozens of systems across education, tech, IT services, healthcare, agriculture, transportation, and government.",
+          "image": "https://img-cdn.publive.online/fit-in/580x348/filters:format(webp)/vnd/media/post_banners/wp-content/uploads/2015/09/oracle.jpg",
+          "severity": "Critical",
+          "summary": "UNC6240 (ShinyHunters-linked) resumed mass exploitation of the critical CVE-2026-35273 (CVSS 9.8) pre-auth RCE flaw by requesting /%50SEMHUB/ instead of /PSEMHUB/, slipping past WAF rules that match the literal path before URL decoding.",
+          "title": "ShinyHunters resume Oracle PeopleSoft attacks with one-character WAF bypass",
+          "url": "http://thehackernews.com/2026/09/attackers-bypass-wafs-to-exploit-oracle.html"
         },
         {
-          "action": "Update to 2026.8.1; audit cron job-run history for unexpected or disabled-job executions, and review group-DM agent invocations for disallowed participants.",
-          "details": "CVE-2026-100567 (8.2): DNS-rebinding SSRF against remote CDP endpoints. CVE-2026-100568 (8.3): agent callers can read and execute ownerless operator cron jobs, exposing stored secrets. CVE-2026-100570 (7.8): workspace .env can set CLOUDSDK_PYTHON_ARGS and execute code as the host user during Gmail setup. CVE-2026-100575 (8.8): Slack allowlist bypass in multi-person DMs.",
-          "image": "https://www.cybersecurity-insiders.com/wp-content/uploads/AI-agents-3.png",
+          "action": "Apply Microsoft's August 2026 Patch Tuesday SharePoint updates immediately and hunt SharePoint servers for webshell artifacts and suspicious activity by low-privilege accounts.",
+          "details": "Early-warning platform Previdian observed exploitation attempts on September 24 and webshell backdoor creation attempts on September 25, with in-the-wild exploits based on Viettel Security's technical writeup. This is the eighth SharePoint flaw added to CISA KEV in 2026.",
+          "image": "https://sharepointmaven.com/wp-content/uploads/2024/05/createintranetportalsharepoint20.jpg",
           "severity": "High",
-          "summary": "OpenClaw (the npm agent gateway) shipped version 2026.8.1 on September 26 fixing a batch of high-severity flaws — including DNS-rebinding SSRF, cron-job secret theft, and a Slack allowlist bypass. Exposed agent deployments running operator jobs are most at risk.",
-          "title": "OpenClaw agent gateway fixes a batch of high-severity flaws (8.2–8.8)",
-          "url": "https://www.redpacketsecurity.com/cve-alert-cve-2026-100567-openclaw-openclaw/"
+          "summary": "CVE-2026-65660, a code-injection RCE flaw (CVSS 8.8) in Microsoft SharePoint Server, is being exploited in the wild just two days after Viettel Security published technical details; CISA added it to KEV on September 25 with a federal remediation deadline of today, September 28.",
+          "title": "SharePoint CVE-2026-65660 exploited in the wild; CISA patch deadline hits today",
+          "url": "https://www.securityweek.com/microsoft-sharepoint-flaw-cve-2026-65660-now-exploited-in-attacks/"
+        },
+        {
+          "action": "Update internet-exposed RouterOS 7.x builds immediately, remove or restrict admin exposure from the internet, and review logs for unauthorized session activity.",
+          "details": "CERT Polska and Bishop Fox confirmed the MikroTrick exploit bypasses authentication entirely by combining a session channel creation flaw with a login policy mask injection. CISA added both CVEs to KEV on September 25 with a September 28 remediation deadline.",
+          "image": "https://cdn.mikrotik.com/web-assets/rb_images/1219_tm.webp",
+          "severity": "High",
+          "summary": "The 'MikroTrick' exploit chain combines CVE-2026-67279 with CVE-2026-86060 to grant full unauthenticated administrative control of vulnerable MikroTik RouterOS 7.x devices; both flaws are now on CISA's KEV list.",
+          "title": "'MikroTrick' chain gives unauthenticated admin access on exposed MikroTik routers",
+          "url": "https://www.redsecuretech.co.uk/blog/post/cisa-adds-sharepoint-and-mikrotik-flaws-to-kev-catalog/1548"
         }
       ],
       "title": "Act on Today"
@@ -36,28 +45,44 @@
     {
       "items": [
         {
-          "details": "ThreatMon recorded the listing at about 17:02 UTC on September 26. Cipher.Systems describes itself as a provider of enterprise IT, cloud, and cybersecurity services — a compromise there could expose customer credentials, infrastructure details, and support data, though none of that is confirmed.",
-          "image": "https://itfix.org.uk/wp-content/uploads/2024/12/Ransomware_Resilience_How_Backup_Can_Protect_You_From_Attacks.webp",
+          "details": "Exposed datasets included private conversations from an Indian adult streaming site, thousands of US valet license plates, and contact details from an immigration service. Supabase says projects are secure by default but called security a shared responsibility, noting customers control how their databases are configured.",
+          "image": "https://vnrom.net/wp-content/uploads/2025/06/supabase-01.png",
           "severity": "High",
-          "summary": "Ransomware operation m3rx listed Cipher.Systems, a US-based IT and cybersecurity services company, on its leak site on September 26. The claim is unverified — no evidence of encryption or data theft has been publicly confirmed.",
-          "title": "m3rx claims cybersecurity provider Cipher.Systems — no breach confirmed yet",
-          "url": "https://undercodenews.com/m3rx-claims-cipher-systems-in-alleged-ransomware-attack-no-breach-confirmation-yet-video/"
+          "summary": "UpGuard identified 16,326 Supabase-hosted databases with publicly readable tables; over half showed indicators of personally identifiable information, and a smaller share exposed passwords and authentication tokens. The root cause is Postgres row-level security being off by default for tables created via SQL, including AI coding tools.",
+          "title": "16,300+ Supabase databases leaking personal data to the open web",
+          "url": "https://techcrunch.com/2026/09/25/some-supabase-customers-are-publicly-exposing-reams-of-peoples-data-to-the-web/"
         },
         {
-          "details": "FTAPI Software (US, technology) and Guardrisk (South Africa, financial services) appeared on the group's leak site on September 26. The group runs a double-extortion model: exfiltrate data, then encrypt.",
-          "image": "https://hraicp.org/wp-content/uploads/2024/09/4-4-1024x683.png",
+          "details": "First Secure Bank Group is a U.S. community bank headquartered in Joliet, Illinois, offering personal and business banking, lending, and mortgages through First Secure Bank and The State Bank Group.",
+          "image": "https://newsmoris.com/wp-content/uploads/2026/05/Bank-Fraud-AI-NM-590x354.png",
           "severity": "High",
-          "summary": "Ransomware group Thegentlemen disclosed two new claimed victims on September 26: FTAPI Software in the US and Guardrisk, a financial-services company in South Africa. Leak-site appearances reflect claims, not confirmed compromises.",
-          "title": "Thegentlemen lists FTAPI Software and Guardrisk as new claimed victims",
-          "url": "https://cyberthreatintelligence.net/ransomware-victim/ftapi-software-thegentlemen-2026"
+          "summary": "The Storm ransomware group publicly claimed responsibility for an attack on First Secure Bank Group on September 27, raising the risk that customer financial data was exfiltrated and could be published.",
+          "title": "Storm ransomware claims attack on First Secure Bank Group",
+          "url": "https://qpulse.quasarcybertech.com/news/6030/storm-ransomware-group-claims-attack-on-first-secure-bank-group"
         },
         {
-          "details": "The listing was observed on September 26 with the claimed attack date around September 24. Because litigation-support firms handle depositions, medical records, and trial evidence, the claim warrants attention even though it is unverified.",
-          "image": "https://ecommercenews.com.au/uploads/story/2025/08/27/preview_realistic-masked-hacker-computer-dark-room-digital-locks-encrypted-files-ai-ransomware.webp",
+          "details": "No technical entry point, data volume, or operational impact details were provided in the claim; disclosure reflects the victim's appearance on the group's leak site.",
+          "image": "https://cyberflux.pl/wp-content/uploads/2026/03/wpis-o-ransomware-480x320.webp",
           "severity": "Medium",
-          "summary": "Ransomware group Storm allegedly listed Magna Legal Services, a US nationwide litigation-support provider, on its leak site. No public evidence confirms an intrusion, encryption, or data theft.",
-          "title": "Storm claims US litigation-support firm Magna Legal Services",
-          "url": "https://undercodenews.com/storm-claims-magna-legal-services-in-alleged-ransomware-attack-us-litigation-support-firm-named-on-leak-site-video/"
+          "summary": "The Qilin ransomware group listed Revenga Smart Solutions as a new victim on its leak site on September 27; the scale of any breach remains unconfirmed.",
+          "title": "Qilin ransomware lists Revenga Smart Solutions as victim",
+          "url": "https://qpulse.quasarcybertech.com/news/6032/qilin-ransomware-group-claims-attack-on-revenga-smart-solutions"
+        },
+        {
+          "details": "Ressources Si is described as a small business in the movie theater industry with 10-19 employees; Panzer employs a double-extortion model of exfiltrating data before encrypting.",
+          "image": "https://thumbnails.yayimages.com/12/dbb/12dbb416.jpg",
+          "severity": "High",
+          "summary": "The Panzer ransomware group listed Ressources Si on its leak site on September 27, claiming the exfiltration of 100GB of data; customers and employees should watch for phishing or misuse of personal information.",
+          "title": "Panzer ransomware claims 100GB data theft from Ressources Si",
+          "url": "https://qpulse.quasarcybertech.com/news/6035/panzer-ransomware-group-claims-exfiltration-of-100gb-from-ressources-si"
+        },
+        {
+          "details": "Disclosure reflects the victim's appearance on Incransom's dark web leak site; the initial compromise date is unknown.",
+          "image": "https://cyber.spool.co.jp/wp-content/uploads/2026/01/clm-8358-2.png",
+          "severity": "High",
+          "summary": "The Incransom ransomware group claimed nsbsd.org, a U.S. organization in the government and defense sector, as a victim on September 28 via its leak site.",
+          "title": "Incransom ransomware claims breach of nsbsd.org",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/nsbsd-org-incransom-2026"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -65,25 +90,18 @@
     {
       "items": [
         {
-          "details": "The Railway Board directed all units to strengthen endpoint protection (including EDR) and user awareness. Staff are advised not to open files with extensions such as .vbs, .vbe, .exe, .bat, .cmd, .js, or .ps1 unless independently verified — consistent with a CERT-In warning about VBScript files distributed over WhatsApp through compromised accounts.",
-          "image": "https://images.news18.com/assam/uploads/2024/08/1724594053_Indian-Railways-11-2024-08-856a37bd5f41c65f4ea1eb454ad25957.jpg?impolicy=website&width=827&height=620",
+          "action": "Government agencies should audit web-facing assets for unauthorized changes and defacements, and confirm the incident has been reported to the Cyber Police.",
+          "details": "The Kerala State IT Mission operates key Keralam government websites and e-governance programmes. Officials said the website will be restored after security checks are completed, and a similar defacement of kerala.gov.in by a group claiming to be the Pakistan Cyber Army occurred in September 2015.",
+          "image": "https://opennewsx24.com/wp-content/uploads/2026/02/kerala-secretariat-780x450.jpg",
           "severity": "High",
-          "summary": "Indian Railways has issued a cybersecurity advisory to all zonal railways after a script-based malware incident in Central Railway: an \"E-statement.vbs\" file delivered via a WhatsApp group was downloaded through WhatsApp Web and executed by a user. The advisory warns messaging apps can be used to deliver malware onto railway networks.",
-          "title": "Indian Railways issues cybersecurity advisory after WhatsApp-delivered malware incident",
-          "url": "https://www.etvbharat.com/en/bharat/railways-issues-cyber-security-alert-to-its-staff-after-malware-attack-enn26092604541"
-        },
-        {
-          "details": "Investigators allege callers used VoIP to impersonate US FTC, Attorney's Office, and CISA officials, telling victims their identities were linked to serious online offences and persuading them to buy gold and hand it to couriers in the US. CBI searches in Ahmedabad recovered devices with potential digital evidence.",
-          "image": "https://tnsi.com/wp-content/uploads/2025/06/Call-Center-Fraud-blog-hero.jpg",
-          "severity": "Medium",
-          "summary": "The CBI has arrested an alleged operator of illegal call centres running from Ahmedabad since 2024, accusing them of defrauding US victims of more than $7.21 million through government-impersonation scams. The case remains under investigation.",
-          "title": "CBI arrests alleged operator of Ahmedabad call centres behind $7.21M US fraud",
-          "url": "https://the420.in/india-cyber-tech-brief-call-centre-fraud-mule-network-crypto-heist/"
+          "summary": "The official website of Keralam's General Administration Department was hacked on September 27; attackers posted a Pakistani flag and a message claiming to be 'Team Blackleets'. The hosting provider suspended the account and a cyber team is examining whether any data was compromised.",
+          "title": "Keralam GAD website defaced by suspected Pakistani group 'Team Blackleets'",
+          "url": "https://www.tribuneindia.com/news/india/we-are-pakistani-hackers-keralam-gad-website-hacked-suspected-pakistani-group-claims-responsibility/"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Sunday, September 27 — Here's what's worth your attention today.",
+  "subtitle": "Monday, September 28 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
