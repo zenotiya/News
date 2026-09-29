@@ -1,40 +1,39 @@
 {
-  "date": "2026-09-28",
+  "date": "2026-09-29",
   "items": [
     {
-      "cvss": 9.9,
-      "id": "CVE-2026-100706",
+      "cvss": 9.5,
+      "id": "CVE-2026-88771",
       "severity": "Critical",
-      "summary": "Kyverno before 1.19.1 fails to properly validate URL-encoded path segments in the Policy apiCall urlPath, allowing namespace tenants to bypass the per-namespace clamp and create arbitrary objects across the cluster. Patch to 1.19.1 or later.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100706"
+      "summary": "Improper input validation in Citrix NetScaler ADC/Gateway lets an unauthenticated attacker execute arbitrary commands on default deployments. Actively exploited in the wild as a zero-day before patches; Citrix released fixes on Sep 27, 2026 (14.1-73.37, 13.1-64.23).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88771"
     },
     {
-      "cvss": 9.9,
-      "id": "CVE-2026-89078",
+      "cvss": 9.5,
+      "id": "CVE-2026-88772",
       "severity": "Critical",
-      "summary": "GitLab remediated a critical issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1, exploitable remotely without authentication. Upgrade to 19.2.7, 19.3.3, or 19.4.1.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89078"
+      "summary": "Memory overflow in Citrix NetScaler ADC/Gateway exploitable when DTLS is enabled (default for VPN virtual servers), enabling remote code execution or denial of service. Actively exploited in the wild; patched Sep 27, 2026 in the same fixed builds.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88772"
     },
     {
-      "cvss": 9.8,
-      "id": "CVE-2026-100741",
+      "cvss": 9.3,
+      "id": "CVE-2026-88773",
       "severity": "Critical",
-      "summary": "Eval injection in the JScript event-script dispatcher in Progressive Robot Ltd's hMailServer versions 6.0.0 through 6.3.3 on Windows lets a remote, unauthenticated attacker execute arbitrary code. Upgrade hMailServer immediately.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100741"
+      "summary": "HTTP request smuggling in Citrix NetScaler ADC/Gateway that can bypass security controls on front-end servers. Disclosed in the same Sep 27, 2026 Citrix bulletin alongside the two exploited zero-days; same fixed builds.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88773"
     },
     {
-      "cvss": 9.8,
-      "id": "CVE-2026-101065",
+      "cvss": 9.1,
+      "id": "CVE-2026-101894",
       "severity": "Critical",
-      "summary": "Obot, an open-source AI agent/MCP platform, documents a Docker quickstart command that starts an insecure default configuration in all versions up to and including commit d7e6970, exposing users to remote exploitation. Redeploy with a hardened configuration.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101065"
+      "summary": "Path traversal in the widely used Node.js `decompress` npm package (before 10.2.2 / 11.1.4): crafted archives could write files outside the target directory, enabling arbitrary file overwrite and RCE.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101894"
     },
     {
-      "cvss": 9.8,
-      "id": "CVE-2026-101090",
+      "id": "CVE-2026-86950",
       "severity": "Critical",
-      "summary": "Nezha 2.2.3 contains a Host header injection regression in the OAuth2 redirect endpoint: when the optional dashboard_host setting is empty, /api/v1/oauth2/{provider} reflects the attacker-controlled Host header, enabling account-takeover flows. Patch or set dashboard_host explicitly.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101090"
+      "summary": "Out-of-bounds write in Apple CoreGraphics — a maliciously crafted file can lead to arbitrary code execution. Apple says it may have been exploited in an \"extremely sophisticated attack\" against targeted individuals; fixed in iOS 26.7.1, macOS Tahoe 26.7.1, and macOS Sequoia 15.8.1. Apple publishes no CVSS score for it.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86950"
     }
   ]
 }

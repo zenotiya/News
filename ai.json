@@ -1,35 +1,35 @@
 {
-  "date": "2026-09-28",
+  "date": "2026-09-29",
   "items": [
     {
-      "image": "https://www.silicon.co.uk/wp-content/uploads/2026/08/The-logo-of-Shanghai-based-AI-company-MiniMax-Group-600x450.jpg",
-      "name": "MiniMax M3.1-Flash-Preview",
-      "summary": "MiniMax has launched M3.1-Flash-Preview, a new-generation ultra-fast text model now live on MiniMax Code. Positioned for everyday development scenarios — quick bug fixes and complete feature implementation — with an emphasis on response speed and stability.",
-      "url": "https://panews.io/articles/01a0e5bd-8e7b-706b-a888-a0a6643bc50e"
+      "image": "https://www.unite.ai/wp-content/uploads/2026/09/h-company-releases-holo4-open-weight-models-for-computer-use-agents.jpg",
+      "name": "H Company Holo4",
+      "summary": "A new series of agentic computer-use models in 27B dense and 35B-A3B MoE sizes with open weights on Hugging Face. Holo4 27B scores 85.2% on OSWorld at $0.08/task — near frontier closed-model scores at a fraction of the cost — driving GUIs, code, MCP and APIs through one unified model.",
+      "url": "https://www.unite.ai/h-company-releases-holo4-open-weight-models-for-computer-use-agents/"
     },
     {
-      "image": "https://images.highwise.com/stories/47181.jpg",
-      "name": "Arm AI Portal",
-      "summary": "Arm launched a dedicated AI model portal for its 22 million developers, offering a library of pre-optimized models for language, voice, and video tasks with MCP-based agent access. Early benchmarks show Qwen3-TTS running over 4x faster on the Vivo X300 smartphone and YOLO26n gaining 40%+ on Raspberry Pi 5.",
-      "url": "https://wisevoter.com/world/2026/09/28/arm-launches-ai-model-portal"
+      "image": "https://runtimewire.com/og/naiveai-naive-n05-flash-ai-model-development.16x9.jpg?v=og2-1je1h2c",
+      "name": "NaiveAI Naive-N0.5-Flash",
+      "summary": "A 309B-parameter MoE open-weight model (15.5B active) with 1M-token context targeting coding and AI research, from a Beijing startup claiming AI systems did substantial parts of the research and engineering. Ships alongside its custom NaiveRT inference runtime; capability claims are company-reported.",
+      "url": "https://runtimewire.com/article/naiveai-naive-n05-flash-ai-model-development"
     },
     {
-      "image": "https://cdn.unwire.hk/wp-content/uploads/2026/04/prismml_logo-694x363.jpg",
-      "name": "PrismML Bonsai 2 27B",
-      "summary": "PrismML launched Bonsai 2 27B, a second-generation ultra-compact multimodal model that compresses a Qwen3.8 27B-class model from ~56GB to 5.9GB using ternary weight compression while retaining around 98.2% of its capabilities. Weights are available today under Apache 2.0, running locally on PCs and high-end mobile devices.",
-      "url": "https://siliconangle.com/2026/09/18/prismml-launches-bonsai-2-27b-a-high-intelligence-ai-model-so-small-it-fits-on-consumer-hardware/"
+      "image": "https://image.theregister.com/5298454.jpg?imageId=5298454&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+      "name": "Anthropic Claude Opus 5.5",
+      "summary": "Anthropic's newest flagship Claude model, described as its strongest-performing model to date. It tops the Artificial Analysis Intelligence Index at 58, costs ~40% less than Opus 5 on typical workloads ($4/$20 per M tokens), and adds \"preserved thinking\" anti-distillation safeguards.",
+      "url": "https://www.theregister.com/ai-and-ml/2026/09/23/frontier-ai-keeps-racing-despite-calls-to-slow-down/5298448"
     },
     {
-      "image": "https://avertra.com/wp-content/themes/avertra/assets/media/dxp/logos/openai.webp",
-      "name": "OpenAI GPT-6 Cyber (reported)",
-      "summary": "Fortune reports OpenAI is days away from previewing GPT-6 Cyber, a cybersecurity-focused model expected at DevDay on September 29 — which would be the company's fourth security-oriented model this year. OpenAI has not publicly confirmed the model; per the report, a limited group already has alpha access through the Daybreak Red program.",
-      "url": "https://tech-insider.org/openai-gpt-6-cyber-4th-security-model-2026/"
+      "image": "https://atoms-cos.metadl.com/cms_medias/gpt_6_sol_luna_cover_56e3a28504.jpg",
+      "name": "OpenAI GPT-6 Sol and Luna",
+      "summary": "Two cheaper siblings of GPT-6 Astra expanding the GPT-6 family — Sol ($2/$10 per M tokens) targets complex coding and agentic workflows, Luna ($0.10/$0.50) targets high-volume focused tasks. Both priced 50% below their GPT-5.6 counterparts' promotional rates, via caching and inference efficiency gains.",
+      "url": "https://atoms.dev/blog/gpt-6-sol-and-luna"
     },
     {
-      "image": "https://images.cloudclusters.io/15d2a73045354b97bfb79620f44e39ad/qwen-logo.png",
-      "name": "Qwen-Image-2.1",
-      "summary": "Alibaba's Qwen team open-sourced Qwen-Image-2.1, a 7B unified text-to-image generation and editing model with native transparent (RGBA) output and support for up to 10 reference images in a single edit. Unlike earlier Qwen-Image releases, it ships under a research-oriented license rather than Apache 2.0, limiting commercial use.",
-      "url": "https://tech-insider.org/self-host-qwen-image-2-1-locally-setup-2026/"
+      "image": "https://genztech.blog/og/xiaomi-mimo-v2-6-pro-top-open-weights-model.png",
+      "name": "Xiaomi MiMo-V2.6-Pro",
+      "summary": "The new top open-weights model worldwide, scoring 46 on the Artificial Analysis Intelligence Index. The 1T-parameter MoE (42B active) is released under the MIT license with weights on Hugging Face, priced roughly 1/10th of the closed frontier models.",
+      "url": "https://genztech.blog/p/xiaomi-mimo-v2-6-pro-top-open-weights-model/"
     }
   ]
 }

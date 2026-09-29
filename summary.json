@@ -2,30 +2,30 @@
   "date": "2026-09-29",
   "news_count": 10,
   "cve_count": 5,
-  "worst_cvss": 9.9,
+  "worst_cvss": 9.5,
   "priorities": [
     {
-      "id": "CVE-2026-100706",
-      "cvss": 9.9,
-      "summary": "Kyverno before 1.19.1 fails to properly validate URL-encoded path segments in the Policy apiCall urlPath, allowing namespace tenants to bypass the per-namespace clamp and create arbitrary objects across the cluster. Patch to 1.19.1 or later.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100706"
+      "id": "CVE-2026-88771",
+      "cvss": 9.5,
+      "summary": "Improper input validation in Citrix NetScaler ADC/Gateway lets an unauthenticated attacker execute arbitrary commands on default deployments. Actively exploited in the wild as a zero-day before patches; Citrix released fixes on Sep 27, 2026 (14.1-73.37, 13.1-64.23).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88771"
     },
     {
-      "id": "CVE-2026-89078",
-      "cvss": 9.9,
-      "summary": "GitLab remediated a critical issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1, exploitable remotely without authentication. Upgrade to 19.2.7, 19.3.3, or 19.4.1.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89078"
+      "id": "CVE-2026-88772",
+      "cvss": 9.5,
+      "summary": "Memory overflow in Citrix NetScaler ADC/Gateway exploitable when DTLS is enabled (default for VPN virtual servers), enabling remote code execution or denial of service. Actively exploited in the wild; patched Sep 27, 2026 in the same fixed builds.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88772"
     },
     {
-      "id": "CVE-2026-100741",
-      "cvss": 9.8,
-      "summary": "Eval injection in the JScript event-script dispatcher in Progressive Robot Ltd's hMailServer versions 6.0.0 through 6.3.3 on Windows lets a remote, unauthenticated attacker execute arbitrary code. Upgrade hMailServer immediately.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100741"
+      "id": "CVE-2026-88773",
+      "cvss": 9.3,
+      "summary": "HTTP request smuggling in Citrix NetScaler ADC/Gateway that can bypass security controls on front-end servers. Disclosed in the same Sep 27, 2026 Citrix bulletin alongside the two exploited zero-days; same fixed builds.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88773"
     }
   ],
   "model": {
-    "name": "MiniMax M3.1-Flash-Preview",
-    "summary": "MiniMax has launched M3.1-Flash-Preview, a new-generation ultra-fast text model now live on MiniMax Code. Positioned for everyday development scenarios — quick bug fixes and complete feature implementation — with an emphasis on response speed and stability.",
-    "url": "https://panews.io/articles/01a0e5bd-8e7b-706b-a888-a0a6643bc50e"
+    "name": "H Company Holo4",
+    "summary": "A new series of agentic computer-use models in 27B dense and 35B-A3B MoE sizes with open weights on Hugging Face. Holo4 27B scores 85.2% on OSWorld at $0.08/task — near frontier closed-model scores at a fraction of the cost — driving GUIs, code, MCP and APIs through one unified model.",
+    "url": "https://www.unite.ai/h-company-releases-holo4-open-weight-models-for-computer-use-agents/"
   }
 }
