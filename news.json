@@ -1,43 +1,34 @@
 {
-  "date": "2026-09-28",
+  "date": "2026-09-29",
   "sections": [
     {
       "items": [
         {
-          "action": "Patch NetScaler ADC and Gateway appliances per Citrix guidance, or isolate/shut down internet-facing units until fixed; preserve logs and snapshots as evidence of possible prior compromise.",
-          "details": "CISA added both CVEs to its Known Exploited Vulnerabilities catalog on September 27 with a federal remediation deadline of September 30. Security firm watchTowr confirmed active exploitation on September 26; both flaws score CVSS v4.0 9.5.",
-          "image": "https://www.studiored.com/wp-content/uploads/2019/10/Citrix_1-610x424.webp?x47975",
+          "action": "Update every iPhone still on iOS 26 and every Mac on Tahoe/Sequoia immediately (Settings > General > Software Update). Treat any pre-27 device handling crafted files as at risk.",
+          "details": "CVE-2026-86950, CVSS 8.8. Only one security fix ships in these point releases; iOS 27.0.1 was released the same day with no published CVEs since the attack targeted pre-27 builds.",
+          "image": "https://cyberguy.com/wp-content/uploads/2025/06/Urget-iOS-18.5-Update.jpg",
           "severity": "Critical",
-          "summary": "CISA added CVE-2026-88771 (unauthenticated arbitrary command execution) and CVE-2026-88772 (memory-buffer RCE/DoS) to its KEV catalog after watchTowr confirmed the flaws are being actively exploited against NetScaler ADC and Gateway appliances.",
-          "title": "Citrix NetScaler RCE flaws added to CISA KEV amid active exploitation",
-          "url": "https://cvefeed.io/vuln/detail/CVE-2026-88772"
+          "summary": "Apple released iOS 26.7.1, iPadOS 26.7.1, macOS Tahoe 26.7.1 and macOS Sequoia 15.8.1 fixing an out-of-bounds write in CoreGraphics that Apple says was used in 'extremely sophisticated' targeted attacks against devices on iOS versions before iOS 27. The flaw, reported by Meta Product Security, allows arbitrary code execution via a maliciously crafted file.",
+          "title": "Apple patches exploited CoreGraphics zero-day (CVE-2026-86950)",
+          "url": "http://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html"
         },
         {
-          "action": "Apply Oracle's patches for CVE-2026-35273 immediately; disable the EMHub service or remove the PSEMHUB app, and hunt WebLogic logs for requests to /PSEMHUB/ or percent-encoded variants like /%50SEMHUB/.",
-          "details": "Mandiant notified over 100 organizations in the first wave; web shells were found on dozens of systems across education, tech, IT services, healthcare, agriculture, transportation, and government.",
-          "image": "https://img-cdn.publive.online/fit-in/580x348/filters:format(webp)/vnd/media/post_banners/wp-content/uploads/2015/09/oracle.jpg",
+          "action": "If you or colleagues use Muse, keep the app updated and review which personal accounts and data you have connected to the agent.",
+          "details": "The Information reported the flaw on Sep 26 from an internal Meta incident report; Reuters/ET CISO covered it Sep 29. Meta did not immediately respond to Reuters' request for comment.",
+          "image": "https://omnesmedia.com/cache/0494862001756705659-440x300.jpg",
+          "severity": "High",
+          "summary": "An outside researcher, via Meta's bug bounty program, found a vulnerability in Meta's personal AI agent Muse that could have let an attacker access a user's dedicated cloud VM — including emails and files. Meta classified it internally as SEV-2 (third-highest severity) and is rolling out a clearer safety warning inside the app.",
+          "title": "Meta adds safety warning to Muse AI agent after researcher found VM-access flaw",
+          "url": "https://ciso.economictimes.indiatimes.com/news/vulnerabilities-exploits/meta-bolsters-muse-safety-warning-after-security-vulnerability-found/134530548"
+        },
+        {
+          "action": "If you run self-hosted TeamCity, patch or install JetBrains' security plugin now and hunt for signs of agent-polling exploitation; block internet exposure of the server UI.",
+          "details": "The flaw was privately reported to JetBrains on July 10, 2026 under coordinated disclosure; the ransomware-exploitation update is dated September 28. JetBrains' fully managed cloud service is already patched.",
+          "image": "https://cdn.prod.website-files.com/692099cd124dbba580672f94/698b983723f57cd890998f1f_TeamCity-Icon%404x.png",
           "severity": "Critical",
-          "summary": "UNC6240 (ShinyHunters-linked) resumed mass exploitation of the critical CVE-2026-35273 (CVSS 9.8) pre-auth RCE flaw by requesting /%50SEMHUB/ instead of /PSEMHUB/, slipping past WAF rules that match the literal path before URL decoding.",
-          "title": "ShinyHunters resume Oracle PeopleSoft attacks with one-character WAF bypass",
-          "url": "http://thehackernews.com/2026/09/attackers-bypass-wafs-to-exploit-oracle.html"
-        },
-        {
-          "action": "Apply Microsoft's August 2026 Patch Tuesday SharePoint updates immediately and hunt SharePoint servers for webshell artifacts and suspicious activity by low-privilege accounts.",
-          "details": "Early-warning platform Previdian observed exploitation attempts on September 24 and webshell backdoor creation attempts on September 25, with in-the-wild exploits based on Viettel Security's technical writeup. This is the eighth SharePoint flaw added to CISA KEV in 2026.",
-          "image": "https://sharepointmaven.com/wp-content/uploads/2024/05/createintranetportalsharepoint20.jpg",
-          "severity": "High",
-          "summary": "CVE-2026-65660, a code-injection RCE flaw (CVSS 8.8) in Microsoft SharePoint Server, is being exploited in the wild just two days after Viettel Security published technical details; CISA added it to KEV on September 25 with a federal remediation deadline of today, September 28.",
-          "title": "SharePoint CVE-2026-65660 exploited in the wild; CISA patch deadline hits today",
-          "url": "https://www.securityweek.com/microsoft-sharepoint-flaw-cve-2026-65660-now-exploited-in-attacks/"
-        },
-        {
-          "action": "Update internet-exposed RouterOS 7.x builds immediately, remove or restrict admin exposure from the internet, and review logs for unauthorized session activity.",
-          "details": "CERT Polska and Bishop Fox confirmed the MikroTrick exploit bypasses authentication entirely by combining a session channel creation flaw with a login policy mask injection. CISA added both CVEs to KEV on September 25 with a September 28 remediation deadline.",
-          "image": "https://cdn.mikrotik.com/web-assets/rb_images/1219_tm.webp",
-          "severity": "High",
-          "summary": "The 'MikroTrick' exploit chain combines CVE-2026-67279 with CVE-2026-86060 to grant full unauthenticated administrative control of vulnerable MikroTik RouterOS 7.x devices; both flaws are now on CISA's KEV list.",
-          "title": "'MikroTrick' chain gives unauthenticated admin access on exposed MikroTik routers",
-          "url": "https://www.redsecuretech.co.uk/blog/post/cisa-adds-sharepoint-and-mikrotik-flaws-to-kev-catalog/1548"
+          "summary": "A September 28 update to the Health-ISAC advisory confirms ransomware groups are now exploiting CVE-2026-63077, an unauthenticated remote code execution flaw in JetBrains TeamCity On-Premises' agent polling protocol that lets remote attackers bypass auth and run OS commands on the server. Shadowserver still tracks 160+ unpatched customer-managed servers.",
+          "title": "Ransomware crews now exploiting critical TeamCity RCE (CVE-2026-63077)",
+          "url": "https://www.aha.org/h-isac-white-reports/2026-09-28-threat-bulletins-tlp-white-update-critical-remote-code-execution-vulnerability-jetbrains"
         }
       ],
       "title": "Act on Today"
@@ -45,44 +36,28 @@
     {
       "items": [
         {
-          "details": "Exposed datasets included private conversations from an Indian adult streaming site, thousands of US valet license plates, and contact details from an immigration service. Supabase says projects are secure by default but called security a shared responsibility, noting customers control how their databases are configured.",
-          "image": "https://vnrom.net/wp-content/uploads/2025/06/supabase-01.png",
-          "severity": "High",
-          "summary": "UpGuard identified 16,326 Supabase-hosted databases with publicly readable tables; over half showed indicators of personally identifiable information, and a smaller share exposed passwords and authentication tokens. The root cause is Postgres row-level security being off by default for tables created via SQL, including AI coding tools.",
-          "title": "16,300+ Supabase databases leaking personal data to the open web",
-          "url": "https://techcrunch.com/2026/09/25/some-supabase-customers-are-publicly-exposing-reams-of-peoples-data-to-the-web/"
-        },
-        {
-          "details": "First Secure Bank Group is a U.S. community bank headquartered in Joliet, Illinois, offering personal and business banking, lending, and mortgages through First Secure Bank and The State Bank Group.",
-          "image": "https://newsmoris.com/wp-content/uploads/2026/05/Bank-Fraud-AI-NM-590x354.png",
-          "severity": "High",
-          "summary": "The Storm ransomware group publicly claimed responsibility for an attack on First Secure Bank Group on September 27, raising the risk that customer financial data was exfiltrated and could be published.",
-          "title": "Storm ransomware claims attack on First Secure Bank Group",
-          "url": "https://qpulse.quasarcybertech.com/news/6030/storm-ransomware-group-claims-attack-on-first-secure-bank-group"
-        },
-        {
-          "details": "No technical entry point, data volume, or operational impact details were provided in the claim; disclosure reflects the victim's appearance on the group's leak site.",
-          "image": "https://cyberflux.pl/wp-content/uploads/2026/03/wpis-o-ransomware-480x320.webp",
+          "details": "Cyberthreatintelligence.net aggregates these disclosures from public ransomware leak sites via the ransomware.live API; disclosure dates reflect leak-site publication, not the date of initial compromise.",
+          "image": "https://www.leakvigil.com/wp-content/uploads/the-rising-threat-of-ransomware-on-employee-devices-768x512.jpg",
           "severity": "Medium",
-          "summary": "The Qilin ransomware group listed Revenga Smart Solutions as a new victim on its leak site on September 27; the scale of any breach remains unconfirmed.",
-          "title": "Qilin ransomware lists Revenga Smart Solutions as victim",
-          "url": "https://qpulse.quasarcybertech.com/news/6032/qilin-ransomware-group-claims-attack-on-revenga-smart-solutions"
+          "summary": "Safepay, among the most active ransomware groups this year, listed the Netherlands agri-food firm eagroep.com and the Swiss healthcare company bio-strath.com on its dark-web leak site on September 28. Healthcare listings carry maximum payment pressure given patient-data sensitivity and regulatory exposure.",
+          "title": "Safepay ransomware claims two victims on Sep 28 (eagroep.com, bio-strath.com)",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/eagroep-com-safepay-2026"
         },
         {
-          "details": "Ressources Si is described as a small business in the movie theater industry with 10-19 employees; Panzer employs a double-extortion model of exfiltrating data before encrypting.",
-          "image": "https://thumbnails.yayimages.com/12/dbb/12dbb416.jpg",
-          "severity": "High",
-          "summary": "The Panzer ransomware group listed Ressources Si on its leak site on September 27, claiming the exfiltration of 100GB of data; customers and employees should watch for phishing or misuse of personal information.",
-          "title": "Panzer ransomware claims 100GB data theft from Ressources Si",
-          "url": "https://qpulse.quasarcybertech.com/news/6035/panzer-ransomware-group-claims-exfiltration-of-100gb-from-ressources-si"
+          "details": "Panzer typically uses a double-extortion model — treat the listing as data-theft exposure, not just encryption.",
+          "image": "https://miltonmarketing.com/wp-content/uploads/2023/04/healthcare-cybersecurity-hero-1024.webp",
+          "severity": "Medium",
+          "summary": "Healthcare target SMCare appeared on Panzer ransomware's leak site on September 28. Beyond the listing itself, no victim detail has been published, but double-extortion means stolen data may be published if demands are not met.",
+          "title": "Panzer ransomware claims healthcare target SMCare",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/smcare-panzer-2026"
         },
         {
-          "details": "Disclosure reflects the victim's appearance on Incransom's dark web leak site; the initial compromise date is unknown.",
-          "image": "https://cyber.spool.co.jp/wp-content/uploads/2026/01/clm-8358-2.png",
-          "severity": "High",
-          "summary": "The Incransom ransomware group claimed nsbsd.org, a U.S. organization in the government and defense sector, as a victim on September 28 via its leak site.",
-          "title": "Incransom ransomware claims breach of nsbsd.org",
-          "url": "https://cyberthreatintelligence.net/ransomware-victim/nsbsd-org-incransom-2026"
+          "details": "Both claims are leak-site disclosures aggregated from public sources; compromise dates and impact remain unconfirmed.",
+          "image": "https://securefirst.dk/wp-content/uploads/2026/06/Ransomware-og-hvorfor-virksomheder-betaler-millioner-768x432.webp",
+          "severity": "Medium",
+          "summary": "Emperador ransomware published two leak-site listings on September 28: Brazilian tech firm Amazon Informatica and SiteProRentals. Technology-sector targets are valuable for intellectual property and customer data, with possible downstream supply-chain exposure.",
+          "title": "Emperador ransomware lists Amazon Informatica and SiteProRentals",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/amazon-informatica-emperador-2026"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -90,18 +65,42 @@
     {
       "items": [
         {
-          "action": "Government agencies should audit web-facing assets for unauthorized changes and defacements, and confirm the incident has been reported to the Cyber Police.",
-          "details": "The Kerala State IT Mission operates key Keralam government websites and e-governance programmes. Officials said the website will be restored after security checks are completed, and a similar defacement of kerala.gov.in by a group claiming to be the Pakistan Cyber Army occurred in September 2015.",
-          "image": "https://opennewsx24.com/wp-content/uploads/2026/02/kerala-secretariat-780x450.jpg",
+          "action": "Update Microsoft 365 Apps and Office LTSC 2021/2024 to the latest security builds; treat unexpected attachments with suspicion.",
+          "details": "The vulnerability is linked to how Outlook handles certain inputs; a specially designed file or message can trigger arbitrary code execution. Affects Microsoft 365 Apps for Enterprise and Office LTSC 2021/2024, 32-bit and 64-bit.",
+          "image": "https://pmecdn.protonweb.com/image-transformation/?s=c&image=images/f_auto,q_auto/v1707733092/wp-pme/send-secure-email-outlook_22439259eb/send-secure-email-outlook_22439259eb.png?_i=AA&width=600&height=300",
           "severity": "High",
-          "summary": "The official website of Keralam's General Administration Department was hacked on September 27; attackers posted a Pakistani flag and a message claiming to be 'Team Blackleets'. The hosting provider suspended the account and a cyber team is examining whether any data was compromised.",
-          "title": "Keralam GAD website defaced by suspected Pakistani group 'Team Blackleets'",
-          "url": "https://www.tribuneindia.com/news/india/we-are-pakistani-hackers-keralam-gad-website-hacked-suspected-pakistani-group-claims-responsibility/"
+          "summary": "CERT-In's vulnerability note dated September 28 flags a high-severity remote code execution flaw (CVE-2026-70125) in Microsoft 365 apps, particularly Outlook. Successful exploitation could let a remote attacker run harmful code on the affected computer and take control of parts of the system.",
+          "title": "CERT-In issues high-severity warning for Microsoft Outlook flaw (CVE-2026-70125)",
+          "url": "https://www.timesnownews.com/technology-science/government-issues-high-risk-warning-for-microsoft-outlook-users-in-india-article-156241836"
+        },
+        {
+          "details": "The Asia-Pacific region recorded 143 victims (13% of the global total); India, Thailand, Taiwan and Japan accounted for 68 of them, nearly half.",
+          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpfScsJFHROjizH-mgmCYPd-2FUwuHO5FOzmBbVM4Gd05asux2zohJ52zy3FpgkIKRpCr4IzfT_r8QE95U4ItqJNt1p1DfcwJqNAaeHFUhVTM1-wqEPtudliocSnxLisn4aKCZ_WlliLwq0mGlTe0PRmETinECIVn83SlPIfsDYsHF5lmS-WIxhCpBdqf6/w400-h400/0_0rzewhBwU5R0D0gb.png",
+          "severity": "Medium",
+          "summary": "August was the most active ransomware month of 2026 so far, with 1,034 organisations named by 88 gangs worldwide — up 25% from July. India emerged as the most-targeted country in Asia-Pacific with 24 claimed victims, ranking seventh worldwide; manufacturing (151) and IT/ITES (126) were the hardest-hit sectors.",
+          "title": "India was APAC's most-targeted ransomware country in August — Cyble CRIL report",
+          "url": "https://www.tribuneindia.com/news/business/ransomware-attacks-hit-2026-high-in-august-india-most-targeted-in-asia-pacific-report/"
+        },
+        {
+          "details": "Doommageddon uses public leak sites to pressure victims; defenders should watch for unauthorized network access and verify backup and recovery procedures.",
+          "image": "https://blackboxevent.com/chemical.jpg",
+          "severity": "Medium",
+          "summary": "Chem Process Systems Pvt. Ltd. was listed on Doommageddon ransomware's leak site on September 28, with a deadline of October 5, 2026 set for potential publication of stolen data. The attack vector, data volume, and operational impact remain unconfirmed.",
+          "title": "Doommageddon ransomware lists India's Chem Process Systems Pvt. Ltd.",
+          "url": "https://qpulse.quasarcybertech.com/news/6082/doommageddon-ransomware-group-targets-chem-process-systems-pvt-ltd"
+        },
+        {
+          "details": "The arrests follow Supreme Court directions to investigate major 'digital arrest' scam cases; police have secured around Rs 44 lakh so far in a linked Lucknow case by placing liens on suspect accounts.",
+          "image": "https://thenewsmill.com/wp-content/uploads/2025/10/ANI-20251014091326-768x576.jpg",
+          "severity": "Medium",
+          "summary": "The CBI arrested Himanshu Prasad and Unis Biswas in coordinated raids across 22 locations in 10 states under Operation Chakra-VI. The network allegedly siphoned Rs 11.4 crore from a Gujarat victim held under 'digital arrest' for three months by criminals impersonating police and TRAI officials.",
+          "title": "CBI arrests 2 in Rs 11.4-crore 'digital arrest' scam under Operation Chakra-VI",
+          "url": "https://odishatoday.com/2026/09/28/cbi-arrests-2-for-11cr-digital-arrest-loot-india-news/"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Monday, September 28 — Here's what's worth your attention today.",
+  "subtitle": "Tuesday, September 29 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
