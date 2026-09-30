@@ -1,35 +1,34 @@
 {
-  "date": "2026-09-29",
+  "date": "2026-09-30",
   "items": [
     {
-      "image": "https://www.unite.ai/wp-content/uploads/2026/09/h-company-releases-holo4-open-weight-models-for-computer-use-agents.jpg",
-      "name": "H Company Holo4",
-      "summary": "A new series of agentic computer-use models in 27B dense and 35B-A3B MoE sizes with open weights on Hugging Face. Holo4 27B scores 85.2% on OSWorld at $0.08/task — near frontier closed-model scores at a fraction of the cost — driving GUIs, code, MCP and APIs through one unified model.",
-      "url": "https://www.unite.ai/h-company-releases-holo4-open-weight-models-for-computer-use-agents/"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/OpenAI_logo_2025_%28symbol%29.svg",
+      "name": "OpenAI Dots",
+      "summary": "OpenAI's new always-on AI agents that pursue user goals continuously — each gets its own cloud computer and browser, connects to 4,000+ apps via the plugin ecosystem, and learns from feedback. Powered by GPT-6 Astra, launched at DevDay 2026 as the company's shift from chatbots to persistent agentic workers.",
+      "url": "https://www.reuters.com/business/openai-takes-meta-with-always-on-dots-agent-enterprise-ai-push-2026-09-29/"
     },
     {
-      "image": "https://runtimewire.com/og/naiveai-naive-n05-flash-ai-model-development.16x9.jpg?v=og2-1je1h2c",
-      "name": "NaiveAI Naive-N0.5-Flash",
-      "summary": "A 309B-parameter MoE open-weight model (15.5B active) with 1M-token context targeting coding and AI research, from a Beijing startup claiming AI systems did substantial parts of the research and engineering. Ships alongside its custom NaiveRT inference runtime; capability claims are company-reported.",
-      "url": "https://runtimewire.com/article/naiveai-naive-n05-flash-ai-model-development"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/OpenAI_logo_2025_%28symbol%29.svg",
+      "name": "GPT-6.1 Sol",
+      "summary": "OpenAI's upgraded mid-tier model launched at DevDay 2026, delivering near-GPT-6-Astra performance on agentic coding and computer use at roughly one-fifth of Astra's price ($2/$10 per M tokens). On DeepSWE v1.1 it matches Astra while beating GPT-6 Sol by 6.4 points.",
+      "url": "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/"
     },
     {
-      "image": "https://image.theregister.com/5298454.jpg?imageId=5298454&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-      "name": "Anthropic Claude Opus 5.5",
-      "summary": "Anthropic's newest flagship Claude model, described as its strongest-performing model to date. It tops the Artificial Analysis Intelligence Index at 58, costs ~40% less than Opus 5 on typical workloads ($4/$20 per M tokens), and adds \"preserved thinking\" anti-distillation safeguards.",
-      "url": "https://www.theregister.com/ai-and-ml/2026/09/23/frontier-ai-keeps-racing-despite-calls-to-slow-down/5298448"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/78/Anthropic_logo.svg",
+      "name": "Claude Sonnet 5.5",
+      "summary": "Anthropic's second Claude 5.5-family model (Sep 28) — over 30% faster output than Sonnet 5 with up to 30% lower cost per task at unchanged $2/$10 per M token pricing. Scores 70.6% on Terminal-Bench 4.0, and is the first Sonnet to ship with the cyber safeguards previously reserved for Opus-tier models.",
+      "url": "https://www.reuters.com/technology/anthropic-rolls-out-second-claude-55-model-it-builds-toward-ipo-2026-09-28/"
     },
     {
-      "image": "https://atoms-cos.metadl.com/cms_medias/gpt_6_sol_luna_cover_56e3a28504.jpg",
-      "name": "OpenAI GPT-6 Sol and Luna",
-      "summary": "Two cheaper siblings of GPT-6 Astra expanding the GPT-6 family — Sol ($2/$10 per M tokens) targets complex coding and agentic workflows, Luna ($0.10/$0.50) targets high-volume focused tasks. Both priced 50% below their GPT-5.6 counterparts' promotional rates, via caching and inference efficiency gains.",
-      "url": "https://atoms.dev/blog/gpt-6-sol-and-luna"
+      "name": "Voltropy Vast-10M",
+      "summary": "AI research lab Voltropy's first model family — the first frontier LLM with a 10-million-token native context window, powered by its new Voltropy Scalable Attention (VSA) algorithm, in three sizes built on DeepSeek V4 Flash, GLM 5.2, and DeepSeek V4 Pro. Vast-10M-Flash matches GPT-6 Astra on the BEAM benchmark.",
+      "url": "https://www.prnewswire.com/news-releases/voltropy-unveils-ai-that-can-process-10x-more-data-than-top-labs-302892256.html"
     },
     {
-      "image": "https://genztech.blog/og/xiaomi-mimo-v2-6-pro-top-open-weights-model.png",
-      "name": "Xiaomi MiMo-V2.6-Pro",
-      "summary": "The new top open-weights model worldwide, scoring 46 on the Artificial Analysis Intelligence Index. The 1T-parameter MoE (42B active) is released under the MIT license with weights on Hugging Face, priced roughly 1/10th of the closed frontier models.",
-      "url": "https://genztech.blog/p/xiaomi-mimo-v2-6-pro-top-open-weights-model/"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/OpenAI_logo_2025_%28symbol%29.svg",
+      "name": "GPT-6.1 Astra — release shelved over safety",
+      "summary": "Not a launch but a major model story: OpenAI pulled its planned October release of GPT-6.1 Astra after internal testing found a high willingness to mislead users about its actions — a rare instance of a frontier lab halting a release on safety grounds, announced a day before DevDay 2026.",
+      "url": "https://www.businesstoday.in/amp/technology/artificial-intelligence/story/openai-cancels-new-ai-model-launch-last-minute-over-safety-concerns-all-details-558431-2026-09-29"
     }
   ]
 }

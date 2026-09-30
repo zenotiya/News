@@ -2,30 +2,30 @@
   "date": "2026-09-30",
   "news_count": 10,
   "cve_count": 5,
-  "worst_cvss": 9.5,
+  "worst_cvss": 9.9,
   "priorities": [
     {
-      "id": "CVE-2026-88771",
-      "cvss": 9.5,
-      "summary": "Improper input validation in Citrix NetScaler ADC/Gateway lets an unauthenticated attacker execute arbitrary commands on default deployments. Actively exploited in the wild as a zero-day before patches; Citrix released fixes on Sep 27, 2026 (14.1-73.37, 13.1-64.23).",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88771"
+      "id": "CVE-2026-84154",
+      "cvss": 9.9,
+      "summary": "Code injection (CWE-94) in Dassault Systèmes' GEOVIA Geospatial Data Manager (3DEXPERIENCE releases R2024x through R2026x) lets an attacker execute arbitrary code on the server, risking unauthorized access and data loss.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84154"
     },
     {
-      "id": "CVE-2026-88772",
-      "cvss": 9.5,
-      "summary": "Memory overflow in Citrix NetScaler ADC/Gateway exploitable when DTLS is enabled (default for VPN virtual servers), enabling remote code execution or denial of service. Actively exploited in the wild; patched Sep 27, 2026 in the same fixed builds.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88772"
+      "id": "CVE-2026-82384",
+      "cvss": 9.8,
+      "summary": "Deserialization of untrusted data in Apache Roller 6.1.5's XML-RPC endpoint (fixed in 6.1.6) allows an unauthenticated remote attacker to achieve arbitrary code execution; the endpoint parses requests even when XML-RPC is disabled in configuration.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82384"
     },
     {
-      "id": "CVE-2026-88773",
-      "cvss": 9.3,
-      "summary": "HTTP request smuggling in Citrix NetScaler ADC/Gateway that can bypass security controls on front-end servers. Disclosed in the same Sep 27, 2026 Citrix bulletin alongside the two exploited zero-days; same fixed builds.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88773"
+      "id": "CVE-2026-76721",
+      "cvss": 9.8,
+      "summary": "Buffer overflow in an interface of HPE Networking Instant ON lets an unauthenticated remote attacker run arbitrary code as a privileged user on the underlying host; disclosed under HPE advisory hpesbnw05150en_us.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76721"
     }
   ],
   "model": {
-    "name": "H Company Holo4",
-    "summary": "A new series of agentic computer-use models in 27B dense and 35B-A3B MoE sizes with open weights on Hugging Face. Holo4 27B scores 85.2% on OSWorld at $0.08/task — near frontier closed-model scores at a fraction of the cost — driving GUIs, code, MCP and APIs through one unified model.",
-    "url": "https://www.unite.ai/h-company-releases-holo4-open-weight-models-for-computer-use-agents/"
+    "name": "OpenAI Dots",
+    "summary": "OpenAI's new always-on AI agents that pursue user goals continuously — each gets its own cloud computer and browser, connects to 4,000+ apps via the plugin ecosystem, and learns from feedback. Powered by GPT-6 Astra, launched at DevDay 2026 as the company's shift from chatbots to persistent agentic workers.",
+    "url": "https://www.reuters.com/business/openai-takes-meta-with-always-on-dots-agent-enterprise-ai-push-2026-09-29/"
   }
 }

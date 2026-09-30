@@ -1,39 +1,40 @@
 {
-  "date": "2026-09-29",
+  "date": "2026-09-30",
   "items": [
     {
-      "cvss": 9.5,
-      "id": "CVE-2026-88771",
+      "cvss": 9.9,
+      "id": "CVE-2026-84154",
       "severity": "Critical",
-      "summary": "Improper input validation in Citrix NetScaler ADC/Gateway lets an unauthenticated attacker execute arbitrary commands on default deployments. Actively exploited in the wild as a zero-day before patches; Citrix released fixes on Sep 27, 2026 (14.1-73.37, 13.1-64.23).",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88771"
+      "summary": "Code injection (CWE-94) in Dassault Systèmes' GEOVIA Geospatial Data Manager (3DEXPERIENCE releases R2024x through R2026x) lets an attacker execute arbitrary code on the server, risking unauthorized access and data loss.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84154"
     },
     {
-      "cvss": 9.5,
-      "id": "CVE-2026-88772",
+      "cvss": 9.8,
+      "id": "CVE-2026-82384",
       "severity": "Critical",
-      "summary": "Memory overflow in Citrix NetScaler ADC/Gateway exploitable when DTLS is enabled (default for VPN virtual servers), enabling remote code execution or denial of service. Actively exploited in the wild; patched Sep 27, 2026 in the same fixed builds.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88772"
+      "summary": "Deserialization of untrusted data in Apache Roller 6.1.5's XML-RPC endpoint (fixed in 6.1.6) allows an unauthenticated remote attacker to achieve arbitrary code execution; the endpoint parses requests even when XML-RPC is disabled in configuration.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82384"
     },
     {
-      "cvss": 9.3,
-      "id": "CVE-2026-88773",
+      "cvss": 9.8,
+      "id": "CVE-2026-76721",
       "severity": "Critical",
-      "summary": "HTTP request smuggling in Citrix NetScaler ADC/Gateway that can bypass security controls on front-end servers. Disclosed in the same Sep 27, 2026 Citrix bulletin alongside the two exploited zero-days; same fixed builds.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88773"
+      "summary": "Buffer overflow in an interface of HPE Networking Instant ON lets an unauthenticated remote attacker run arbitrary code as a privileged user on the underlying host; disclosed under HPE advisory hpesbnw05150en_us.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76721"
     },
     {
-      "cvss": 9.1,
-      "id": "CVE-2026-101894",
+      "cvss": 9.6,
+      "id": "CVE-2026-100818",
       "severity": "Critical",
-      "summary": "Path traversal in the widely used Node.js `decompress` npm package (before 10.2.2 / 11.1.4): crafted archives could write files outside the target directory, enabling arbitrary file overwrite and RCE.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101894"
+      "summary": "Use-after-free (CWE-416) in Firefox's Widget: Gtk component enabling a sandbox escape; fixed in Firefox 157, Firefox ESR 153.4, and Firefox ESR 140.17.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100818"
     },
     {
-      "id": "CVE-2026-86950",
+      "cvss": 9.0,
+      "id": "CVE-2026-82378",
       "severity": "Critical",
-      "summary": "Out-of-bounds write in Apple CoreGraphics — a maliciously crafted file can lead to arbitrary code execution. Apple says it may have been exploited in an \"extremely sophisticated attack\" against targeted individuals; fixed in iOS 26.7.1, macOS Tahoe 26.7.1, and macOS Sequoia 15.8.1. Apple publishes no CVSS score for it.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86950"
+      "summary": "Incorrect authorization in Apache Roller 6.1.5's OAuth 1.0a endpoint lets an unauthenticated attacker holding an outstanding request token for a site-wide consumer obtain an access token for any user without the normal approval step.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82378"
     }
   ]
 }
