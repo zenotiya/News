@@ -1,34 +1,43 @@
 {
-  "date": "2026-09-29",
+  "date": "2026-09-30",
   "sections": [
     {
       "items": [
         {
-          "action": "Update every iPhone still on iOS 26 and every Mac on Tahoe/Sequoia immediately (Settings > General > Software Update). Treat any pre-27 device handling crafted files as at risk.",
-          "details": "CVE-2026-86950, CVSS 8.8. Only one security fix ships in these point releases; iOS 27.0.1 was released the same day with no published CVEs since the attack targeted pre-27 builds.",
-          "image": "https://cyberguy.com/wp-content/uploads/2025/06/Urget-iOS-18.5-Update.jpg",
+          "action": "Patch NetScaler ADC/Gateway to 14.1-73.37 / 13.1-64.23 (or FIPS/NDcPP equivalents) immediately. If you cannot patch today, isolate the admin interface and hunt for post-exploitation artifacts.",
+          "details": "CISA has added both flaws to its Known Exploited Vulnerabilities catalogue with a fix deadline of September 30, and UK NCSC plus Dutch agencies issued alerts of their own.",
+          "image": "https://ccforrs.com/wp-content/uploads/2025/07/Citrix_NetScaler-Cropped-1024x576.jpg",
           "severity": "Critical",
-          "summary": "Apple released iOS 26.7.1, iPadOS 26.7.1, macOS Tahoe 26.7.1 and macOS Sequoia 15.8.1 fixing an out-of-bounds write in CoreGraphics that Apple says was used in 'extremely sophisticated' targeted attacks against devices on iOS versions before iOS 27. The flaw, reported by Meta Product Security, allows arbitrary code execution via a maliciously crafted file.",
-          "title": "Apple patches exploited CoreGraphics zero-day (CVE-2026-86950)",
-          "url": "http://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html"
+          "summary": "Two remote zero-days in NetScaler ADC and Gateway are under rapid global exploitation: CVE-2026-88771 (unauthenticated command execution via improper input validation) and CVE-2026-88772 (memory overflow enabling DoS or RCE).",
+          "title": "Citrix NetScaler zero-days under active exploitation",
+          "url": "https://www.computerweekly.com/news/366651460/Cyber-authorities-issue-alert-over-exploitation-of-Citrix-vulns"
         },
         {
-          "action": "If you or colleagues use Muse, keep the app updated and review which personal accounts and data you have connected to the agent.",
-          "details": "The Information reported the flaw on Sep 26 from an internal Meta incident report; Reuters/ET CISO covered it Sep 29. Meta did not immediately respond to Reuters' request for comment.",
-          "image": "https://omnesmedia.com/cache/0494862001756705659-440x300.jpg",
-          "severity": "High",
-          "summary": "An outside researcher, via Meta's bug bounty program, found a vulnerability in Meta's personal AI agent Muse that could have let an attacker access a user's dedicated cloud VM — including emails and files. Meta classified it internally as SEV-2 (third-highest severity) and is rolling out a clearer safety warning inside the app.",
-          "title": "Meta adds safety warning to Muse AI agent after researcher found VM-access flaw",
-          "url": "https://ciso.economictimes.indiatimes.com/news/vulnerabilities-exploits/meta-bolsters-muse-safety-warning-after-security-vulnerability-found/134530548"
+          "action": "Upgrade GitLab, audit the endpoint's access logs for encoded path tricks, and restrict instance exposure.",
+          "details": "The route %63ommits bypasses GitLab Workhorse route handling while Rails still processes the request. Leaked secrets like gitlab-secrets.json and database.yml can snowball into full instance compromise.",
+          "image": "https://vermilliontech.com/assets/images/technology/dev-gitlab@2x.png",
+          "severity": "Critical",
+          "summary": "CVE-2026-85706 (CVSS 10.0) lets an unauthenticated attacker read arbitrary files from a GitLab server: the body-upload helper processes file.path on POST /api/v4/projects/:id/repository/commits before authentication.",
+          "title": "GitLab unauthenticated file-read flaw scores CVSS 10.0",
+          "url": "https://malware.news/t/cve-2026-85706-critical-gitlab-unauthenticated-arbitrary-file-read-vulnerability-cvss-10-0/125984"
         },
         {
-          "action": "If you run self-hosted TeamCity, patch or install JetBrains' security plugin now and hunt for signs of agent-polling exploitation; block internet exposure of the server UI.",
-          "details": "The flaw was privately reported to JetBrains on July 10, 2026 under coordinated disclosure; the ransomware-exploitation update is dated September 28. JetBrains' fully managed cloud service is already patched.",
-          "image": "https://cdn.prod.website-files.com/692099cd124dbba580672f94/698b983723f57cd890998f1f_TeamCity-Icon%404x.png",
+          "action": "Update on-premises servers to 2025.11.7 or 2026.1.3, or install the security patch plugin (works back to 2017.1). TeamCity Cloud is already mitigated.",
+          "details": "Compromising the CI/CD server endangers build artifacts and the whole software supply chain downstream.",
+          "image": "https://lad8s.com/images/cv/TeamCity.png",
           "severity": "Critical",
-          "summary": "A September 28 update to the Health-ISAC advisory confirms ransomware groups are now exploiting CVE-2026-63077, an unauthenticated remote code execution flaw in JetBrains TeamCity On-Premises' agent polling protocol that lets remote attackers bypass auth and run OS commands on the server. Shadowserver still tracks 160+ unpatched customer-managed servers.",
-          "title": "Ransomware crews now exploiting critical TeamCity RCE (CVE-2026-63077)",
+          "summary": "CVE-2026-63077 is an authentication-bypass in TeamCity On-Premises agent-polling protocol handling that yields remote code execution with the server process's OS privileges.",
+          "title": "JetBrains TeamCity On-Premises: RCE without credentials",
           "url": "https://www.aha.org/h-isac-white-reports/2026-09-28-threat-bulletins-tlp-white-update-critical-remote-code-execution-vulnerability-jetbrains"
+        },
+        {
+          "action": "Install Oracle's June 10 patch on every PeopleSoft instance; firewall-rule workarounds alone no longer stop the attack.",
+          "details": "Organizations that patched are protected; those relying on the firewall rule should hunt for web shells planted via the PSEMHUB endpoint.",
+          "image": "https://www.miniorange.com/images/logo/oracle-peoplesoft-logo.webp",
+          "severity": "Critical",
+          "summary": "Mandiant reports (Sep 25) that ShinyHunters bypassed the recommended firewall-rule mitigation for the Oracle PeopleSoft zero-day with a single-character request substitution. Dozens of systems worldwide now have web shells.",
+          "title": "PeopleSoft zero-day: firewall workarounds defeated",
+          "url": "https://www.vectra.ai/blog/shinyhunters-breached-the-fbi-by-bypassing-the-fix"
         }
       ],
       "title": "Act on Today"
@@ -36,28 +45,28 @@
     {
       "items": [
         {
-          "details": "Cyberthreatintelligence.net aggregates these disclosures from public ransomware leak sites via the ransomware.live API; disclosure dates reflect leak-site publication, not the date of initial compromise.",
-          "image": "https://www.leakvigil.com/wp-content/uploads/the-rising-threat-of-ransomware-on-employee-devices-768x512.jpg",
-          "severity": "Medium",
-          "summary": "Safepay, among the most active ransomware groups this year, listed the Netherlands agri-food firm eagroep.com and the Swiss healthcare company bio-strath.com on its dark-web leak site on September 28. Healthcare listings carry maximum payment pressure given patient-data sensitivity and regulatory exposure.",
-          "title": "Safepay ransomware claims two victims on Sep 28 (eagroep.com, bio-strath.com)",
-          "url": "https://cyberthreatintelligence.net/ransomware-victim/eagroep-com-safepay-2026"
+          "details": "Reuters reporting matched sample data to real people; the group says it is not seeking ransom but wants correction of a May FBI advisory about its extortion methods. The jobs portals remain offline.",
+          "image": "https://krapuul.nl/wp-content/uploads/640px-Fbi_headquarters-548x300.jpg",
+          "severity": "High",
+          "summary": "The FBI told staff it has declared a 'cyber security incident' after ShinyHunters exploited an Oracle PeopleSoft vulnerability in the FBIJobs.gov portal, exposing agents' names, home addresses, SSNs, job titles and some medical records. The group claims 2-3 TB of personnel data.",
+          "title": "FBI confirms 'cyber security incident' after ShinyHunters breach",
+          "url": "https://techcrunch.com/2026/09/28/fbi-reportedly-declares-cyber-security-incident-after-hackers-steal-agents-personal-data/"
         },
         {
-          "details": "Panzer typically uses a double-extortion model — treat the listing as data-theft exposure, not just encryption.",
-          "image": "https://miltonmarketing.com/wp-content/uploads/2023/04/healthcare-cybersecurity-hero-1024.webp",
-          "severity": "Medium",
-          "summary": "Healthcare target SMCare appeared on Panzer ransomware's leak site on September 28. Beyond the listing itself, no victim detail has been published, but double-extortion means stolen data may be published if demands are not met.",
-          "title": "Panzer ransomware claims healthcare target SMCare",
-          "url": "https://cyberthreatintelligence.net/ransomware-victim/smcare-panzer-2026"
+          "details": "Taiwan-based Advantech is a major industrial PC/IoT manufacturer. Chaos claims the company is ignoring the situation; Advantech has not publicly responded.",
+          "image": "https://xage.com/wp-content/uploads/2022/10/partner-advantech.png",
+          "severity": "High",
+          "summary": "Ransomware group Chaos claims to have compromised advantech.com and is publishing 5% of the stolen data because management 'has not contacted them' — giving the company 48 hours before a full dump.",
+          "title": "Advantech hit by Chaos ransomware; 48-hour ultimatum",
+          "url": "https://www.hendryadrian.com/ransom-advantech-com-sep-2026/"
         },
         {
-          "details": "Both claims are leak-site disclosures aggregated from public sources; compromise dates and impact remain unconfirmed.",
-          "image": "https://securefirst.dk/wp-content/uploads/2026/06/Ransomware-og-hvorfor-virksomheder-betaler-millioner-768x432.webp",
+          "details": "Leak-site listings mark disclosure dates, which may differ from the actual compromise dates.",
+          "image": "https://itfix.org.uk/wp-content/uploads/2024/12/Ransomware_Resilience_How_Backup_Can_Protect_You_From_Attacks.webp",
           "severity": "Medium",
-          "summary": "Emperador ransomware published two leak-site listings on September 28: Brazilian tech firm Amazon Informatica and SiteProRentals. Technology-sector targets are valuable for intellectual property and customer data, with possible downstream supply-chain exposure.",
-          "title": "Emperador ransomware lists Amazon Informatica and SiteProRentals",
-          "url": "https://cyberthreatintelligence.net/ransomware-victim/amazon-informatica-emperador-2026"
+          "summary": "Braincipher, one of the most active ransomware operations of 2026, added two US victims to its dark-web leak site on September 29: healthcare provider northeastrehab.com and logistics firm trailerbridge.com.",
+          "title": "Braincipher claims two new US victims",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/northeastrehab-com-braincipher-2026"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -65,42 +74,31 @@
     {
       "items": [
         {
-          "action": "Update Microsoft 365 Apps and Office LTSC 2021/2024 to the latest security builds; treat unexpected attachments with suspicion.",
-          "details": "The vulnerability is linked to how Outlook handles certain inputs; a specially designed file or message can trigger arbitrary code execution. Affects Microsoft 365 Apps for Enterprise and Office LTSC 2021/2024, 32-bit and 64-bit.",
-          "image": "https://pmecdn.protonweb.com/image-transformation/?s=c&image=images/f_auto,q_auto/v1707733092/wp-pme/send-secure-email-outlook_22439259eb/send-secure-email-outlook_22439259eb.png?_i=AA&width=600&height=300",
+          "details": "Apple is investigating alongside Tata; the leak cuts at the trust underpinning Apple's India manufacturing bet, which is on track to make 26% of the world's iPhones in 2026.",
+          "image": "https://www.bleepstatic.com/content/hl-images/2026/06/23/thumb/292x447_tataelectronics.jpg",
           "severity": "High",
-          "summary": "CERT-In's vulnerability note dated September 28 flags a high-severity remote code execution flaw (CVE-2026-70125) in Microsoft 365 apps, particularly Outlook. Successful exploitation could let a remote attacker run harmful code on the affected computer and take control of parts of the system.",
-          "title": "CERT-In issues high-severity warning for Microsoft Outlook flaw (CVE-2026-70125)",
-          "url": "https://www.timesnownews.com/technology-science/government-issues-high-risk-warning-for-microsoft-outlook-users-in-india-article-156241836"
+          "summary": "Leaked files from Tata Electronics expose Apple's iPhone 18 Pro supply chain — component lists, supplier mappings, and drop-test photos carrying Apple's 'confidential' watermarks. Tata has restricted internal access to sensitive systems and hired a global consultant for a forensic audit.",
+          "title": "Tata Electronics breach leaks iPhone 18 Pro supply-chain data",
+          "url": "https://inview.org.uk/news/192514-leaked_files_expose_apple_iphone_18_pro_suppliers_after_cyberattack_on_tata_electronics/print"
         },
         {
-          "details": "The Asia-Pacific region recorded 143 victims (13% of the global total); India, Thailand, Taiwan and Japan accounted for 68 of them, nearly half.",
-          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpfScsJFHROjizH-mgmCYPd-2FUwuHO5FOzmBbVM4Gd05asux2zohJ52zy3FpgkIKRpCr4IzfT_r8QE95U4ItqJNt1p1DfcwJqNAaeHFUhVTM1-wqEPtudliocSnxLisn4aKCZ_WlliLwq0mGlTe0PRmETinECIVn83SlPIfsDYsHF5lmS-WIxhCpBdqf6/w400-h400/0_0rzewhBwU5R0D0gb.png",
+          "details": "Globally, 1,034 organizations were publicly named as ransomware victims in August — the highest monthly total of 2026. Manufacturing, professional services, and IT/ITES were the hardest-hit sectors.",
           "severity": "Medium",
-          "summary": "August was the most active ransomware month of 2026 so far, with 1,034 organisations named by 88 gangs worldwide — up 25% from July. India emerged as the most-targeted country in Asia-Pacific with 24 claimed victims, ranking seventh worldwide; manufacturing (151) and IT/ITES (126) were the hardest-hit sectors.",
-          "title": "India was APAC's most-targeted ransomware country in August — Cyble CRIL report",
-          "url": "https://www.tribuneindia.com/news/business/ransomware-attacks-hit-2026-high-in-august-india-most-targeted-in-asia-pacific-report/"
+          "summary": "Ransomware activity climbed to its highest monthly level of 2026 in August, and India was the most targeted country in Asia-Pacific with 24 claimed victims, ranking seventh worldwide, per Cyble Research and Intelligence Labs (CRIL).",
+          "title": "Ransomware hits 2026 high; India most targeted in APAC",
+          "url": "https://english.mathrubhumi.com/amp/technology/ransomware-attacks-hit-2026-high-india-most-targeted-in-asia-pacific-iu1ntb83"
         },
         {
-          "details": "Doommageddon uses public leak sites to pressure victims; defenders should watch for unauthorized network access and verify backup and recovery procedures.",
-          "image": "https://blackboxevent.com/chemical.jpg",
+          "details": "DailyDarkWeb reported the listing on September 29. No samples have been independently authenticated, and there is no public confirmation from the company — treat this as an allegation to monitor, not an established breach.",
           "severity": "Medium",
-          "summary": "Chem Process Systems Pvt. Ltd. was listed on Doommageddon ransomware's leak site on September 28, with a deadline of October 5, 2026 set for potential publication of stolen data. The attack vector, data volume, and operational impact remain unconfirmed.",
-          "title": "Doommageddon ransomware lists India's Chem Process Systems Pvt. Ltd.",
-          "url": "https://qpulse.quasarcybertech.com/news/6082/doommageddon-ransomware-group-targets-chem-process-systems-pvt-ltd"
-        },
-        {
-          "details": "The arrests follow Supreme Court directions to investigate major 'digital arrest' scam cases; police have secured around Rs 44 lakh so far in a linked Lucknow case by placing liens on suspect accounts.",
-          "image": "https://thenewsmill.com/wp-content/uploads/2025/10/ANI-20251014091326-768x576.jpg",
-          "severity": "Medium",
-          "summary": "The CBI arrested Himanshu Prasad and Unis Biswas in coordinated raids across 22 locations in 10 states under Operation Chakra-VI. The network allegedly siphoned Rs 11.4 crore from a Gujarat victim held under 'digital arrest' for three months by criminals impersonating police and TRAI officials.",
-          "title": "CBI arrests 2 in Rs 11.4-crore 'digital arrest' scam under Operation Chakra-VI",
-          "url": "https://odishatoday.com/2026/09/28/cbi-arrests-2-for-11cr-digital-arrest-loot-india-news/"
+          "summary": "An underground listing alleges approximately 116 GB of documents belonging to United Group India (united-group.in) are for sale. The claim is unverified and no compromise has been confirmed.",
+          "title": "Alleged 116 GB leak targets United Group India (unverified)",
+          "url": "https://undercodenews.com/united-group-india-hit-by-alleged-116-gb-data-leak-but-is-the-massive-dump-real-video/"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Tuesday, September 29 — Here's what's worth your attention today.",
+  "subtitle": "Wednesday, September 30 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
