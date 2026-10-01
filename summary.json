@@ -2,30 +2,30 @@
   "date": "2026-10-01",
   "news_count": 10,
   "cve_count": 5,
-  "worst_cvss": 9.9,
+  "worst_cvss": 9.8,
   "priorities": [
     {
-      "id": "CVE-2026-84154",
-      "cvss": 9.9,
-      "summary": "Code injection (CWE-94) in Dassault Systèmes' GEOVIA Geospatial Data Manager (3DEXPERIENCE releases R2024x through R2026x) lets an attacker execute arbitrary code on the server, risking unauthorized access and data loss.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84154"
+      "id": "CVE-2026-76504",
+      "cvss": 9.8,
+      "summary": "Cisco disclosed on Sep 30 that attackers are actively exploiting a URI-encoding flaw in Catalyst SD-WAN Manager that lets an unauthenticated remote attacker use the management API as the admin user. Every on-prem release is affected, there is no workaround, and CISA added it to KEV with an Oct 3 remediation deadline.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76504"
     },
     {
-      "id": "CVE-2026-82384",
+      "id": "CVE-2026-84411",
       "cvss": 9.8,
-      "summary": "Deserialization of untrusted data in Apache Roller 6.1.5's XML-RPC endpoint (fixed in 6.1.6) allows an unauthenticated remote attacker to achieve arbitrary code execution; the endpoint parses requests even when XML-RPC is disabled in configuration.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82384"
+      "summary": "MikroTik RouterOS before 7.24 carries an integer-underflow flaw in the web management service that executes before the login check — a single crafted HTTP request can yield root code execution or denial of service. CISA published advisory ICSA-26-272-06 on Sep 29.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84411"
     },
     {
-      "id": "CVE-2026-76721",
+      "id": "CVE-2026-102455",
       "cvss": 9.8,
-      "summary": "Buffer overflow in an interface of HPE Networking Instant ON lets an unauthenticated remote attacker run arbitrary code as a privileged user on the underlying host; disclosed under HPE advisory hpesbnw05150en_us.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76721"
+      "summary": "Digiwin EasyFlow .NET has an insecure-deserialization vulnerability (CWE-502) that lets unauthenticated remote attackers execute arbitrary code on the server via crafted serialized content. Published Sep 30; no public exploit confirmed yet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102455"
     }
   ],
   "model": {
-    "name": "OpenAI Dots",
-    "summary": "OpenAI's new always-on AI agents that pursue user goals continuously — each gets its own cloud computer and browser, connects to 4,000+ apps via the plugin ecosystem, and learns from feedback. Powered by GPT-6 Astra, launched at DevDay 2026 as the company's shift from chatbots to persistent agentic workers.",
-    "url": "https://www.reuters.com/business/openai-takes-meta-with-always-on-dots-agent-enterprise-ai-push-2026-09-29/"
+    "name": "Gemini 4 Argon",
+    "summary": "Google's new flagship AI model tops coding and automation benchmarks (77.9% on DeepSWE, first on AutomationBench) with an industry-leading 1M-token output limit, but Google is withholding it from public release — restricting access to a vetted group of cybersecurity experts while the US government gets early access.",
+    "url": "https://www.thehindu.com/sci-tech/technology/google-restricts-access-to-new-ai-model-over-safety-concerns/article71530282.ece"
   }
 }

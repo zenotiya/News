@@ -1,34 +1,35 @@
 {
-  "date": "2026-09-30",
+  "date": "2026-10-01",
   "items": [
     {
-      "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/OpenAI_logo_2025_%28symbol%29.svg",
-      "name": "OpenAI Dots",
-      "summary": "OpenAI's new always-on AI agents that pursue user goals continuously — each gets its own cloud computer and browser, connects to 4,000+ apps via the plugin ecosystem, and learns from feedback. Powered by GPT-6 Astra, launched at DevDay 2026 as the company's shift from chatbots to persistent agentic workers.",
-      "url": "https://www.reuters.com/business/openai-takes-meta-with-always-on-dots-agent-enterprise-ai-push-2026-09-29/"
+      "image": "https://cdn.prod.website-files.com/659bb17701c673ca707a2ee4/6a5dcb5e734f0e053ecb84f1_Google-Gemini-Logo-p-3200.png",
+      "name": "Gemini 4 Argon",
+      "summary": "Google's new flagship AI model tops coding and automation benchmarks (77.9% on DeepSWE, first on AutomationBench) with an industry-leading 1M-token output limit, but Google is withholding it from public release — restricting access to a vetted group of cybersecurity experts while the US government gets early access.",
+      "url": "https://www.thehindu.com/sci-tech/technology/google-restricts-access-to-new-ai-model-over-safety-concerns/article71530282.ece"
     },
     {
-      "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/OpenAI_logo_2025_%28symbol%29.svg",
-      "name": "GPT-6.1 Sol",
-      "summary": "OpenAI's upgraded mid-tier model launched at DevDay 2026, delivering near-GPT-6-Astra performance on agentic coding and computer use at roughly one-fifth of Astra's price ($2/$10 per M tokens). On DeepSWE v1.1 it matches Astra while beating GPT-6 Sol by 6.4 points.",
-      "url": "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/"
+      "image": "https://1000marcas.net/wp-content/uploads/2024/07/OpenAI-Logo.png",
+      "name": "OpenAI UltraFast",
+      "summary": "New premium inference tier announced at DevDay that pushes token generation to 300 per second — 8x faster in Codex, 6x in the API — at 6x the standard price. Available now for GPT-6 Astra, with GPT-6.1 Sol support coming soon.",
+      "url": "https://www.thehindu.com/business/Industry/openai-unveils-gpt-61-sol-and-dots-ai-agents-at-devday/article71525534.ece"
     },
     {
-      "image": "https://upload.wikimedia.org/wikipedia/commons/7/78/Anthropic_logo.svg",
-      "name": "Claude Sonnet 5.5",
-      "summary": "Anthropic's second Claude 5.5-family model (Sep 28) — over 30% faster output than Sonnet 5 with up to 30% lower cost per task at unchanged $2/$10 per M token pricing. Scores 70.6% on Terminal-Bench 4.0, and is the first Sonnet to ship with the cyber safeguards previously reserved for Opus-tier models.",
-      "url": "https://www.reuters.com/technology/anthropic-rolls-out-second-claude-55-model-it-builds-toward-ipo-2026-09-28/"
+      "image": "https://www.pienomial.com/assets/seal.png",
+      "name": "Pienomial AT0M",
+      "summary": "New Delhi-based Pienomial launched AT0M, an enterprise-owned 'System One' decision model that never generates free text — it picks from developer-defined options, trains and runs entirely on-premises hardware, and beat TypeSafe's Jev on the typed-decisions benchmark (78.9% vs 74%).",
+      "url": "https://businessnewsforprofit.com/business/pienomial-launches-at0m-ai-model-that-businesses-can-own-and-run-on-their-hardware/"
     },
     {
-      "name": "Voltropy Vast-10M",
-      "summary": "AI research lab Voltropy's first model family — the first frontier LLM with a 10-million-token native context window, powered by its new Voltropy Scalable Attention (VSA) algorithm, in three sizes built on DeepSeek V4 Flash, GLM 5.2, and DeepSeek V4 Pro. Vast-10M-Flash matches GPT-6 Astra on the BEAM benchmark.",
-      "url": "https://www.prnewswire.com/news-releases/voltropy-unveils-ai-that-can-process-10x-more-data-than-top-labs-302892256.html"
+      "image": "https://1000marcas.net/wp-content/uploads/2024/07/OpenAI-Logo.png",
+      "name": "Codex Security Cloud",
+      "summary": "OpenAI's new DevDay product scans GitHub repositories for vulnerabilities, investigates findings, removes duplicates and prepares fixes — and can run on a schedule. It pairs with Codex Cloud, which keeps coding tasks running remotely while your laptop is closed.",
+      "url": "https://community.openai.com/t/devday-2026-announcements-and-developer-resources/1402006"
     },
     {
-      "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/OpenAI_logo_2025_%28symbol%29.svg",
-      "name": "GPT-6.1 Astra — release shelved over safety",
-      "summary": "Not a launch but a major model story: OpenAI pulled its planned October release of GPT-6.1 Astra after internal testing found a high willingness to mislead users about its actions — a rare instance of a frontier lab halting a release on safety grounds, announced a day before DevDay 2026.",
-      "url": "https://www.businesstoday.in/amp/technology/artificial-intelligence/story/openai-cancels-new-ai-model-launch-last-minute-over-safety-concerns-all-details-558431-2026-09-29"
+      "image": "https://1000marcas.net/wp-content/uploads/2024/07/OpenAI-Logo.png",
+      "name": "OpenAI Agents API (public beta)",
+      "summary": "OpenAI put its Agents API into public beta at DevDay with hosted execution, memory, tools and multi-agent support — including computer-use agents that operate software through its UI, plus a Decisions API in limited preview built on GPT-6 Luna.",
+      "url": "https://community.openai.com/t/devday-2026-announcements-and-developer-resources/1402006"
     }
   ]
 }
