@@ -1,43 +1,50 @@
 {
-  "date": "2026-10-01",
+  "date": "2026-10-02",
   "sections": [
     {
       "items": [
         {
-          "action": "Emergency-patch internet-exposed SD-WAN Managers outside the normal cycle; restrict Manager access to trusted hosts behind a firewall.",
-          "details": "Found via a TAC support case; no workaround — upgrade to 20.9.10.1, 20.12.8.2, 20.15.6.1, 20.18.4.1, 26.1.2.1 or 26.2.1. Cisco Cloud-managed instances are already fixed. Check serviceproxy-access.log for j_security_check probes (e.g. /%6a_security_check) from unknown IPs.",
-          "image": "https://www.sentinelone.com/wp-content/uploads/2026/02/Cisco_Catalyst_SD-WAN.jpg",
+          "action": "Disable IBE support (config system encryption ibe -> set status disable) and block the management interface from the internet until the patched build for your branch is available.",
+          "details": "Affects FortiMail 8.0.0-8.0.1, 7.6.0-7.6.6, 7.4.0-7.4.8 and 7.2.0-7.2.9. Fixes land in 7.4.9, 7.6.7 and 8.0.2; 7.2 users must upgrade to the 7.4 branch or later. Fortinet published IOCs including attacker IPs 79.141.169.187 and 45.129.0.192 and backdoor-style files such as /data/lib/liblog.so. CISA added the flaw to the KEV catalog with a federal mitigation deadline of October 4.",
+          "image": "https://www.bleepstatic.com/content/hl-images/2022/10/14/Fortinet.jpg",
           "severity": "Critical",
-          "summary": "Cisco disclosed on Sep 30 that attackers are actively exploiting CVE-2026-76504 (CVSS 9.8) — a URI-encoding flaw in Catalyst SD-WAN Manager that lets an unauthenticated attacker use the API as the admin user.",
-          "title": "Cisco warns of actively exploited Catalyst SD-WAN Manager zero-day (CVE-2026-76504)",
-          "url": "http://thehackernews.com/2026/09/cisco-warns-of-attackers-exploiting.html"
+          "summary": "Fortinet is warning that CVE-2026-104286 (FG-IR-26-175), a CVSS 9.8 path-traversal flaw in the FortiMail management interface, is being actively exploited to write arbitrary files and execute code on vulnerable devices.",
+          "title": "FortiMail zero-day under active attack — check your appliance now",
+          "url": "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/"
         },
         {
-          "action": "Apply Citrix's patched builds immediately and hunt for signs of exploitation on internet-facing ADC/Gateway instances.",
-          "details": "watchTowr's analysis: NetScaler trusts the declared fragment_length in the DTLS handshake while copying a larger length, letting a crafted record overflow a buffer — a pre-auth path to remote code execution or DoS.",
-          "image": "https://ccforrs.com/wp-content/uploads/2025/07/Citrix_NetScaler-Cropped-1024x576.jpg",
+          "action": "Upgrade Mooncake past 0.3.13.post1 and restrict the HTTP metadata server to trusted networks.",
+          "details": "Attackers can poison segment descriptors or re-create rpc_meta entries to redirect KV-cache transfers to attacker-controlled listeners, or exhaust server memory. Disclosed October 2; no KEV listing or public exploit code confirmed yet.",
           "severity": "Critical",
-          "summary": "Researchers published technical details of CVE-2026-88772 (CVSS 9.5), a DTLS memory-overflow bug in NetScaler ADC/Gateway that is under active exploitation in the wild.",
-          "title": "Exploit details published for actively exploited Citrix NetScaler flaw (CVE-2026-88772)",
-          "url": "https://thehackernews.com/2026/09/citrix-netscaler-cve-2026-88772-exploit.html"
+          "summary": "Mooncake through 0.3.13.post1 has a missing-authentication flaw (CVE-2026-103765, CVSS 9.4) in its HTTP metadata server /metadata handler, letting unauthenticated attackers read, overwrite and delete transfer-engine metadata.",
+          "title": "Mooncake KV-cache metadata hijack: unauthenticated access (CVSS 9.4)",
+          "url": "https://www.thehackerwire.com/vulnerability/CVE-2026-103765/"
         },
         {
-          "action": "If you run Zammad, apply the fixes and review access logs for the breach window.",
-          "details": "DIVD is notifying other organizations running Zammad, the open-source customer-support platform, that may be exposed to the same flaws.",
-          "image": "https://apps.odoocdn.com/apps/assets/15.0/website_axis_helpdesk_advance/images/helpdesk_dashboard.png?d1fdeab",
+          "action": "Update n8n to 1.123.80+ (1.x) or 2.40.1+ (2.x) and review shared-workflow editor permissions.",
+          "details": "Also fixed: CVE-2026-103246 (CVSS 7.7) — missing credential-ownership validation during inline agent node-tool introspection lets attackers reference arbitrary credential IDs to decrypt and exfiltrate plaintext secrets to attacker-controlled hosts. Both flaws published October 1; no known exploitation.",
+          "image": "https://www.sdi.es/wp-content/uploads/2025/12/N8n-logo-new.svg-1.png",
           "severity": "High",
-          "summary": "DIVD confirmed that an autonomous AI agent breached its systems using two previously unknown Zammad vulnerabilities (CVE-2026-102489, CVE-2026-102490), findings published Sep 30.",
-          "title": "AI agent breached Dutch cyber nonprofit DIVD via two Zammad zero-days",
-          "url": "https://the420.in/ai-agent-cyberattack-divd-zammad-zero-day-vulnerabilities/"
+          "summary": "n8n before 1.123.80 has a credential-tampering flaw (CVE-2026-103247, CVSS 8.5) where duplicate node IDs bypass the workflow credential tamper guard, letting an attacker with editor access to shared workflows steal victim credentials and redirect secrets to attacker-controlled hosts.",
+          "title": "n8n credential tampering via duplicate node IDs (CVE-2026-103247)",
+          "url": "https://www.redpacketsecurity.com/cve-alert-cve-2026-103247-n8n-io-n8n/"
         },
         {
-          "action": "Upgrade @tanstack/start-server-core to a patched release and redeploy; Appwrite Sites users get edge blocking of the known attack pattern.",
-          "details": "No account or code access needed — one click on a malicious link is enough. Discovered with help from Lovable. Fixed in @tanstack/react-start 1.168.60+ (Solid/Vue have their own patched releases).",
-          "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
-          "severity": "Critical",
-          "summary": "TanStack fixed CVE-2026-102989 (CVSS 9.3, GHSA-qx66-fv34-fjm8) on Sep 30 — a crafted link to a server function can make an app serve attacker-written HTML from its own domain, running attacker JavaScript in victims' browsers.",
-          "title": "TanStack Start server-function XSS patched (CVE-2026-102989)",
-          "url": "https://appwrite.io/blog/post/tanstack-start-server-function-xss"
+          "action": "Upgrade Ghost to 6.57.1 or later.",
+          "details": "Published October 1 as GHSA-q55r-w7fh-rmh6; no known exploitation.",
+          "image": "https://cdn.freebiesupply.com/logos/thumbs/2x/ghost-4-logo.png",
+          "severity": "High",
+          "summary": "Ghost 6.20.0 through 6.57.1 has a session-handling flaw (CVE-2026-103283, CVSS 8.1) that lets an authenticated staff user log in as any other staff user with just the password, bypassing two-factor authentication.",
+          "title": "Ghost CMS staff auth bypass defeats 2FA (CVE-2026-103283)",
+          "url": "https://www.redpacketsecurity.com/cve-alert-cve-2026-103283-tryghost-ghost/"
+        },
+        {
+          "action": "Update jackson-dataformats-binary to the patched release per GHSA-3v8f-v6vx-fmrm.",
+          "details": "Both rated High (CVSS 7.5), disclosed October 1. No public exploit code confirmed; not in CISA KEV.",
+          "severity": "High",
+          "summary": "FasterXML jackson-dataformats-binary never enforces the maxNameLength limit on CBOR/Smile property names — a single unbounded property name exhausts parser memory, an unauthenticated DoS on any endpoint parsing untrusted binary documents (CVE-2026-68495 for CBOR, CVE-2026-68496 for Smile).",
+          "title": "Jackson CBOR/Smile parser memory-exhaustion DoS (CVE-2026-68495/68496)",
+          "url": "https://www.thehackerwire.com/vulnerability/CVE-2026-68495/"
         }
       ],
       "title": "Act on Today"
@@ -45,28 +52,33 @@
     {
       "items": [
         {
-          "details": "Claim, not a confirmed breach — reported by threat intel (ransomware.live tracking, Oct 1). The stealer also swept up 10,609 cookies (68 marked critical).",
-          "image": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/04/15/534886.jpg",
-          "severity": "High",
-          "summary": "On Sep 30 the Eclipse ransomware group listed The Japan Times on its leak site; Hudson Rock-linked intel ties the incident to a 'Cavalier' infostealer infection that exposed 5 employee credentials, 621 user accounts, and 2,672 passwords.",
-          "title": "Eclipse ransomware lists The Japan Times after infostealer infection",
-          "url": "https://qpulse.quasarcybertech.com/news/6197/eclipse-ransomware-group-targets-the-japan-times-following-cavalier-infostealer-infection"
-        },
-        {
-          "details": "Claim is unverified — Advantech has not issued a public statement and the extent of any compromise is unknown. A supply-chain angle looms: compromised firmware or update mechanisms could reach Advantech's global customer base.",
-          "image": "https://ioti.io/img/banner/factory-iot.jpg",
-          "severity": "High",
-          "summary": "The Chaos ransomware group added Advantech — a major Taiwan industrial IoT and embedded-computing manufacturer — to its leak site on Sep 30, claiming network breach, encryption, and data exfiltration.",
-          "title": "Chaos ransomware claims Taiwan industrial-IoT giant Advantech",
-          "url": "https://cyber.netsecops.io/articles/chaos-ransomware-targets-industrial-iot-firm-advantech/"
-        },
-        {
-          "details": "All are group leak-site claims — unverified. The standard double-extortion playbook applies: exfiltrate, encrypt, threaten to leak.",
-          "image": "https://i1.wp.com/www.bleepstatic.com/content/hl-images/2024/08/27/ransomware-2.jpg?w=768&resize=768,0&ssl=1",
+          "details": "The Gentlemen also claimed Hollard Insurance earlier in September; stolen data in that case traced back to a third party too (MIP Holdings' June 2026 incident).",
           "severity": "Medium",
-          "summary": "Same-day claims reported alongside the Advantech listing: TheGentlemen listed French non-profit AGOSPAP and Spanish firm Auren; INC_RANSOM listed South African systems integrator BCX.",
-          "title": "Sep 30 ransomware roundup: TheGentlemen, INC_RANSOM add victims",
-          "url": "https://cyber.netsecops.io/articles/chaos-ransomware-targets-industrial-iot-firm-advantech/"
+          "summary": "The Gentlemen ransomware group listed Guardrisk, an insurer under South Africa's Momentum Group, on its dark-web leak site — but Guardrisk says its own systems are uncompromised and customer data exposure came from a cyber incident at third-party CoverCubed.",
+          "title": "The Gentlemen claims Guardrisk breach via third-party CoverCubed",
+          "url": "https://mybroadband.co.za/news/security/669576-momentum-group-company-responds-to-data-breach-claims.html"
+        },
+        {
+          "details": "Listed as a threat-actor claim — the victim has not publicly confirmed a breach.",
+          "image": "https://www.urtech.ca/wp-content/uploads/2020/11/ransomware-lock-laptop-768x512.jpg",
+          "severity": "Medium",
+          "summary": "Akira added building-materials supplier DPL Group to its leak site on October 1, threatening to publish 8 GB of corporate data including employee personal documents, financials and customer information.",
+          "title": "Akira claims DPL Group, threatens 8 GB data leak",
+          "url": "https://www.hookphish.com/blog/ransomware-group-akira-hits-dpl-group/"
+        },
+        {
+          "details": "All remain unconfirmed threat-actor claims at this stage; monitoring via ThreatMon dark-web tracking, observed October 1.",
+          "severity": "Medium",
+          "summary": "New October 1 leak-site listings: Chaos claims dental provider Park Dental, inCransom lists a metal recycling firm, and the Genesis operation lists Owens Distributors.",
+          "title": "Leak-site churn: Chaos, inCransom and Genesis post new victims",
+          "url": "https://undercodenews.com/two-new-ransomware-victims-reported-incransom-targets-metal-recycling-while-genesis-names-owens-distributors-video/"
+        },
+        {
+          "details": "Public reporting places the BrainCipher attack around September 23 and the lawsuit filing on September 26.",
+          "severity": "Medium",
+          "summary": "A borrower sued Gold Star Mortgage Financial Group on September 26, just three days after the BrainCipher ransomware group claimed the Ann Arbor lender's customer data was stolen — one of the fastest claim-to-lawsuit turnarounds of 2026.",
+          "title": "Gold Star Mortgage sued days after BrainCipher ransomware claim",
+          "url": "https://nationalcybersecurity.com/gold-star-mortgage-ransomware-lawsuit-3-day-timeline-2026-hacking-cybersecurity-infosec-comptia-pentest-ransomware/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -74,33 +86,25 @@
     {
       "items": [
         {
-          "details": "Why it matters per CPT/Algoritha Security's Sep 30 brief: gaming wallets are emerging as a laundering layer that breaks conventional bank-trail analysis.",
-          "image": "https://beebom.com/wp-content/uploads/2020/12/10-best-gaming-smartphone-in-India-under-Rs.-15000.jpg?w=750&quality=75",
+          "details": "Per the October 1 weekly intelligence report; target technology was web applications, objective data leak and financial gain.",
+          "image": "https://englishpunjabkesari.imagibyte.sortdcdn.net/wp-content/uploads/2026/05/202605213796816.jpg",
           "severity": "Medium",
-          "summary": "Lucknow Cyber Crime Police say a Rs 95.65-lakh digital-arrest fraud was routed through accounts in Guwahati and Ranchi, then fragmented across 903 online-gaming accounts; about Rs 44 lakh has been secured via liens.",
-          "title": "Lucknow digital-arrest trail: Rs 95.65 lakh laundered through 903 gaming accounts",
-          "url": "https://the420.in/india-cyber-tech-brief-mule-accounts-ai-agents-cyber-fraud/"
+          "summary": "Krybit ransomware attacked an Indian construction company and published its data, per the October 1 weekly intelligence report.",
+          "title": "Krybit ransomware hits a construction company in India",
+          "url": "https://nationalcybersecurity.com/weekly-intelligence-report-1-oct-2026-hacking-cybersecurity-infosec-comptia-pentest-ransomware/"
         },
         {
-          "details": "Fraudsters posed as CBI/ED officers, forced a continuous video call, extracted Rs 3 lakh via bank transfer, forced a Rs 4,95,250 gold loan from Muthoot Fincorp, then came to her doorstep.",
-          "image": "https://federalbharat.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-17-at-11.35.03-PM-780x470.jpeg",
+          "details": "Other items in the October 1 roundup: a Kanpur probe exposing a 611-account dispersal network after a Rs 48.20-lakh digital-arrest fraud, and Punjab Police battling 50+ AI-generated videos after the LPU unrest.",
+          "image": "https://ba-bharataawaz.blr1.digitaloceanspaces.com/uploads/photos/2026/07/ba_5eb62afec94d8e0bf21f09bc72ea2c53.png",
           "severity": "Medium",
-          "summary": "A 75-year-old Delhi cancer patient lost her Rs 2-crore home, life savings, and jewellery in a digital-arrest scam that began with a fake CBI/ED landline call and escalated to an in-person visit — reported Sep 30.",
-          "title": "Digital arrest turns physical: 75-year-old cancer patient loses Rs 2 cr Delhi home",
-          "url": "https://www.thedailyjagran.com/lite/india/news/delhi-cyber-crime-digital-arrest-goes-beyond-video-call-as-cancer-patient-duped-into-selling-rs-2-cr-home-life-savings-lost-10331055"
-        },
-        {
-          "details": "Fraudsters exploit stress, urgency, and fear to impair rational decision-making — an 'engineered brain freeze'. Researchers recommend forced transaction pauses, contextual warnings, and better bank-police coordination over generic awareness messages.",
-          "image": "https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt3587241c66f92ae3/69b97dcdccf6a3497fc59660/phishing_tadamichi_shutterstock.jpg?width=1400&auto=webp&quality=80&disable=upscale",
-          "severity": "Medium",
-          "summary": "An IIT-Madras study (33 victims across five metros, published Sep 30) found highly educated professionals — IT experts, bankers, doctors, even cybersecurity-certified people — falling for investment, job, and digital-arrest scams.",
-          "title": "IIT-Madras: even cyber pros fall for fraud — the 'engineered brain freeze'",
-          "url": "https://newstodaynet.com/2026/09/30/educated-professionals-fall-prey-to-cyber-fraud-iit-m-study/"
+          "summary": "The cabinet cleared a Rs 1,789.52-crore AI-powered traffic system for Delhi Police; Chandauli and Delhi police busted international cyberfraud call centres targeting elderly Japanese and American victims; and Telangana launched its 'Pause. Think. Verify' campaign for Cybersecurity Awareness Month.",
+          "title": "Delhi Police clears Rs 1,789.52-cr AI traffic system; call centres busted",
+          "url": "https://the420.in/india-cyber-tech-brief-1-october-2026-ai-policing-digital-arrest/"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Thursday, October 1 — Here's what's worth your attention today.",
+  "subtitle": "Friday, October 2 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
