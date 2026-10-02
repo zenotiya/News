@@ -5,27 +5,27 @@
   "worst_cvss": 9.8,
   "priorities": [
     {
+      "id": "CVE-2026-104286",
+      "cvss": 9.8,
+      "summary": "Path traversal and NULL-byte flaws in Fortinet FortiMail let an unauthenticated remote attacker write arbitrary files to the appliance via crafted HTTP/HTTPS requests. Fortinet confirmed active zero-day exploitation; added to the CISA KEV catalog on October 1 — patch immediately.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104286"
+    },
+    {
       "id": "CVE-2026-76504",
       "cvss": 9.8,
-      "summary": "Cisco disclosed on Sep 30 that attackers are actively exploiting a URI-encoding flaw in Catalyst SD-WAN Manager that lets an unauthenticated remote attacker use the management API as the admin user. Every on-prem release is affected, there is no workaround, and CISA added it to KEV with an Oct 3 remediation deadline.",
+      "summary": "Authentication bypass in Cisco Catalyst SD-WAN Manager (vManage) via improper URI-encoding handling lets an unauthenticated attacker reach the management API with administrator privileges — no workaround exists. Cisco confirmed active exploitation in September; CISA added it to KEV on September 30 with an October 3 federal remediation deadline.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76504"
     },
     {
-      "id": "CVE-2026-84411",
+      "id": "CVE-2026-94127",
       "cvss": 9.8,
-      "summary": "MikroTik RouterOS before 7.24 carries an integer-underflow flaw in the web management service that executes before the login check — a single crafted HTTP request can yield root code execution or denial of service. CISA published advisory ICSA-26-272-06 on Sep 29.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84411"
-    },
-    {
-      "id": "CVE-2026-102455",
-      "cvss": 9.8,
-      "summary": "Digiwin EasyFlow .NET has an insecure-deserialization vulnerability (CWE-502) that lets unauthenticated remote attackers execute arbitrary code on the server via crafted serialized content. Published Sep 30; no public exploit confirmed yet.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102455"
+      "summary": "Heap-based buffer overflow in F5 BIG-IP Access Policy Manager gives unauthenticated remote code execution when APM is configured as an OAuth Authorization Server (17.1.0–17.1.3, 17.5.0–17.5.1, 21.1.0). Actively exploited zero-day; on the CISA KEV catalog since September 22 — restricting the management interface does not mitigate it.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94127"
     }
   ],
   "model": {
-    "name": "Gemini 4 Argon",
-    "summary": "Google's new flagship AI model tops coding and automation benchmarks (77.9% on DeepSWE, first on AutomationBench) with an industry-leading 1M-token output limit, but Google is withholding it from public release — restricting access to a vetted group of cybersecurity experts while the US government gets early access.",
-    "url": "https://www.thehindu.com/sci-tech/technology/google-restricts-access-to-new-ai-model-over-safety-concerns/article71530282.ece"
+    "name": "Google Gemini 4 Argon",
+    "summary": "Google's new top-tier frontier model anchoring the Gemini 4 generation, larger than its previous Pro line and posting leading marks on DeepSWE, Vals Index, AutomationBench and LVBench. Biggest technical jump is 1M-token output (up from 64k); initial access is limited to vetted cyber defenders via the Fairwind program and the US government before wider release.",
+    "url": "https://m.economictimes.com/news/new-updates/gemini-4-argon-launched-googles-new-ai-model-can-now-write-up-to-1-million-words-in-a-single-response-here-is-who-can-access-it-and-benchmark-scores/amp_articleshow/134613466.cms"
   }
 }

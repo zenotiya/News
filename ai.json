@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-01",
+  "date": "2026-10-02",
   "items": [
     {
-      "image": "https://cdn.prod.website-files.com/659bb17701c673ca707a2ee4/6a5dcb5e734f0e053ecb84f1_Google-Gemini-Logo-p-3200.png",
-      "name": "Gemini 4 Argon",
-      "summary": "Google's new flagship AI model tops coding and automation benchmarks (77.9% on DeepSWE, first on AutomationBench) with an industry-leading 1M-token output limit, but Google is withholding it from public release — restricting access to a vetted group of cybersecurity experts while the US government gets early access.",
-      "url": "https://www.thehindu.com/sci-tech/technology/google-restricts-access-to-new-ai-model-over-safety-concerns/article71530282.ece"
+      "image": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+      "name": "Google Gemini 4 Argon",
+      "summary": "Google's new top-tier frontier model anchoring the Gemini 4 generation, larger than its previous Pro line and posting leading marks on DeepSWE, Vals Index, AutomationBench and LVBench. Biggest technical jump is 1M-token output (up from 64k); initial access is limited to vetted cyber defenders via the Fairwind program and the US government before wider release.",
+      "url": "https://m.economictimes.com/news/new-updates/gemini-4-argon-launched-googles-new-ai-model-can-now-write-up-to-1-million-words-in-a-single-response-here-is-who-can-access-it-and-benchmark-scores/amp_articleshow/134613466.cms"
     },
     {
-      "image": "https://1000marcas.net/wp-content/uploads/2024/07/OpenAI-Logo.png",
-      "name": "OpenAI UltraFast",
-      "summary": "New premium inference tier announced at DevDay that pushes token generation to 300 per second — 8x faster in Codex, 6x in the API — at 6x the standard price. Available now for GPT-6 Astra, with GPT-6.1 Sol support coming soon.",
-      "url": "https://www.thehindu.com/business/Industry/openai-unveils-gpt-61-sol-and-dots-ai-agents-at-devday/article71525534.ece"
+      "image": "https://i0.wp.com/fourweekmba.com/wp-content/uploads/2026/09/openai-decisions-api-finite-output-space.png?fit=2400%2C1260&ssl=1",
+      "name": "OpenAI Decisions API",
+      "summary": "Announced at DevDay on September 29: a special version of GPT-6 Luna that, instead of generating text, scores a developer's fixed list of answers and returns one choice with a confidence score in ~150 ms (vs ~1.6 s for a standard call). In limited preview; OpenAI's direct answer to TypeSafe AI's Jev for classification, routing and agent-control tasks.",
+      "url": "https://ai-tldr.dev/releases/openai-decisions-api/"
     },
     {
-      "image": "https://www.pienomial.com/assets/seal.png",
-      "name": "Pienomial AT0M",
-      "summary": "New Delhi-based Pienomial launched AT0M, an enterprise-owned 'System One' decision model that never generates free text — it picks from developer-defined options, trains and runs entirely on-premises hardware, and beat TypeSafe's Jev on the typed-decisions benchmark (78.9% vs 74%).",
-      "url": "https://businessnewsforprofit.com/business/pienomial-launches-at0m-ai-model-that-businesses-can-own-and-run-on-their-hardware/"
+      "image": "https://blog.cloudflare.com/_image?href=https%3A%2F%2Fblog.cloudflare.com%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3W09VBACVT4420YA2SDXZE8.01M3W09YK4NRJQNV2S8HMMCQF0.png&w=1920&h=790&f=webp",
+      "name": "Cloudflare Clef",
+      "summary": "Released October 1: two open-weight decision models (27B Clef and 9B Clef-flash) that return probabilities for typed yes/no/choice/score questions instead of generating text — no token-by-token generation, so Clef-flash answers in ~39 ms. Apache 2.0 weights on Hugging Face, Jev-API compatible, with vision input and a new RL fine-tuning platform.",
+      "url": "https://blog.cloudflare.com/clef-decision-models/"
     },
     {
-      "image": "https://1000marcas.net/wp-content/uploads/2024/07/OpenAI-Logo.png",
-      "name": "Codex Security Cloud",
-      "summary": "OpenAI's new DevDay product scans GitHub repositories for vulnerabilities, investigates findings, removes duplicates and prepares fixes — and can run on a schedule. It pairs with Codex Cloud, which keeps coding tasks running remotely while your laptop is closed.",
-      "url": "https://community.openai.com/t/devday-2026-announcements-and-developer-resources/1402006"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+      "name": "AWS Strands Decider 2B",
+      "summary": "Released October 1 from AWS Strands Labs: a fully open-source ~2B-parameter decision model built on Qwen3.5-2B, replacing the text head with a ~1M-parameter 'pointer head' that scores predefined options with calibrated confidence in under 100 ms locally. Weights, training data and scripts published under Apache 2.0 — a free, self-hostable alternative to TypeSafe's API-only Jev.",
+      "url": "https://venturebeat.com/technology/amazon-unveils-a-free-fast-open-source-jev-killer-strands-decider-2b-makes-decisions-in-fractions-of-a-second"
     },
     {
-      "image": "https://1000marcas.net/wp-content/uploads/2024/07/OpenAI-Logo.png",
-      "name": "OpenAI Agents API (public beta)",
-      "summary": "OpenAI put its Agents API into public beta at DevDay with hosted execution, memory, tools and multi-agent support — including computer-use agents that operate software through its UI, plus a Decisions API in limited preview built on GPT-6 Luna.",
-      "url": "https://community.openai.com/t/devday-2026-announcements-and-developer-resources/1402006"
+      "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/07/claude.webp?w=1600",
+      "name": "Anthropic Claude Sonnet 5.5",
+      "summary": "Launched September 28: the second model in the Claude 5.5 family runs over 30% faster than Sonnet 5 and costs up to 30% less per task at the same $2/$10 per-million-token pricing. Strongest at everyday coding, docs, slides and design work, and the first Sonnet to ship with cyber safeguards comparable to Anthropic's flagship models.",
+      "url": "https://9to5mac.com/2026/09/28/anthropic-upgrades-claude-with-new-sonnet-5-5-model-details-here/"
     }
   ]
 }

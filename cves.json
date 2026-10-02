@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-01",
+  "date": "2026-10-02",
   "items": [
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-104286",
+      "severity": "Critical",
+      "summary": "Path traversal and NULL-byte flaws in Fortinet FortiMail let an unauthenticated remote attacker write arbitrary files to the appliance via crafted HTTP/HTTPS requests. Fortinet confirmed active zero-day exploitation; added to the CISA KEV catalog on October 1 — patch immediately.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104286"
+    },
     {
       "cvss": 9.8,
       "id": "CVE-2026-76504",
       "severity": "Critical",
-      "summary": "Cisco disclosed on Sep 30 that attackers are actively exploiting a URI-encoding flaw in Catalyst SD-WAN Manager that lets an unauthenticated remote attacker use the management API as the admin user. Every on-prem release is affected, there is no workaround, and CISA added it to KEV with an Oct 3 remediation deadline.",
+      "summary": "Authentication bypass in Cisco Catalyst SD-WAN Manager (vManage) via improper URI-encoding handling lets an unauthenticated attacker reach the management API with administrator privileges — no workaround exists. Cisco confirmed active exploitation in September; CISA added it to KEV on September 30 with an October 3 federal remediation deadline.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76504"
     },
     {
-      "cvss": 9.8,
-      "id": "CVE-2026-84411",
+      "cvss": 9.4,
+      "id": "CVE-2026-103765",
       "severity": "Critical",
-      "summary": "MikroTik RouterOS before 7.24 carries an integer-underflow flaw in the web management service that executes before the login check — a single crafted HTTP request can yield root code execution or denial of service. CISA published advisory ICSA-26-272-06 on Sep 29.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84411"
+      "summary": "Missing authentication in the Mooncake HTTP metadata server's /metadata handler (through 0.3.13.post1) allows unauthenticated attackers to read, overwrite and delete data-transfer state on the distributed cache layer. Disclosed October 2.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103765"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-102455",
+      "id": "CVE-2026-94127",
       "severity": "Critical",
-      "summary": "Digiwin EasyFlow .NET has an insecure-deserialization vulnerability (CWE-502) that lets unauthenticated remote attackers execute arbitrary code on the server via crafted serialized content. Published Sep 30; no public exploit confirmed yet.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102455"
+      "summary": "Heap-based buffer overflow in F5 BIG-IP Access Policy Manager gives unauthenticated remote code execution when APM is configured as an OAuth Authorization Server (17.1.0–17.1.3, 17.5.0–17.5.1, 21.1.0). Actively exploited zero-day; on the CISA KEV catalog since September 22 — restricting the management interface does not mitigate it.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94127"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-103040",
+      "id": "CVE-2026-93616",
       "severity": "Critical",
-      "summary": "LightLLM through 1.2.0 exposes an unauthenticated RPyC server with pickle deserialization enabled when the router's --enable_profiling flag is on, giving any network-reachable attacker remote code execution on AI inference hosts — a direct threat to GPU-backed model infrastructure.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103040"
-    },
-    {
-      "cvss": 9.5,
-      "id": "CVE-2026-88771",
-      "severity": "Critical",
-      "summary": "One of two actively exploited Citrix NetScaler ADC/Gateway zero-days: an improper-input-validation flaw lets an unauthenticated attacker execute arbitrary commands on the appliance. Mandiant and Google GTIG observed exploitation since early September deploying WHIPSHOT/SLAPSHOT web shells for root access. Fixed in 14.1-73.37 and 13.1-64.23.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88771"
+      "summary": "Pre-authentication directory traversal and file upload in the Check Point Security Management web service allows arbitrary-path script execution and arbitrary Java class load on Management, Log and SmartEvent servers. Check Point confirmed active exploitation in the wild; added to the CISA KEV catalog on September 22.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93616"
     }
   ]
 }
