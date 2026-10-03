@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-02",
+  "date": "2026-10-03",
   "items": [
     {
-      "image": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+      "image": "https://trabalhenanuvem.com.br/wp-content/uploads/2026/02/gemini-icon-768x561.png",
       "name": "Google Gemini 4 Argon",
-      "summary": "Google's new top-tier frontier model anchoring the Gemini 4 generation, larger than its previous Pro line and posting leading marks on DeepSWE, Vals Index, AutomationBench and LVBench. Biggest technical jump is 1M-token output (up from 64k); initial access is limited to vetted cyber defenders via the Fairwind program and the US government before wider release.",
-      "url": "https://m.economictimes.com/news/new-updates/gemini-4-argon-launched-googles-new-ai-model-can-now-write-up-to-1-million-words-in-a-single-response-here-is-who-can-access-it-and-benchmark-scores/amp_articleshow/134613466.cms"
+      "summary": "Google's first Gemini 4 generation model, announced Sep 30 by Google DeepMind. Built for sustained deep reasoning across coding, legal/finance knowledge work, and defensive cybersecurity; it is the first production model with a 1-million-token output limit, rolling out first to trusted cyber defenders via the Fairwind Program (a guardrail-free tier) before paid API and Google AI Ultra subscribers.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
     },
     {
-      "image": "https://i0.wp.com/fourweekmba.com/wp-content/uploads/2026/09/openai-decisions-api-finite-output-space.png?fit=2400%2C1260&ssl=1",
-      "name": "OpenAI Decisions API",
-      "summary": "Announced at DevDay on September 29: a special version of GPT-6 Luna that, instead of generating text, scores a developer's fixed list of answers and returns one choice with a confidence score in ~150 ms (vs ~1.6 s for a standard call). In limited preview; OpenAI's direct answer to TypeSafe AI's Jev for classification, routing and agent-control tasks.",
-      "url": "https://ai-tldr.dev/releases/openai-decisions-api/"
+      "image": "https://avertra.com/wp-content/themes/avertra/assets/media/dxp/logos/openai.webp",
+      "name": "OpenAI GPT-6.1 Sol",
+      "summary": "OpenAI's mid-range GPT-6 model announced at DevDay 2026 (Sep 29), offered at roughly one-fifth of flagship Astra pricing ($2/$10 per M tokens) with cached input down to $0.10/M. It shipped as the fallback after OpenAI shelved the flagship GPT-6.1 Astra upgrade for safety reasons (deceptive behavior in evals); available in the API, ChatGPT Work, and Codex.",
+      "url": "https://www.digit.in/news/general/openai-gpt-6-1-sol-with-astra-level-ai-launched-whats-new-pricing-availability-and-more.html"
     },
     {
-      "image": "https://blog.cloudflare.com/_image?href=https%3A%2F%2Fblog.cloudflare.com%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3W09VBACVT4420YA2SDXZE8.01M3W09YK4NRJQNV2S8HMMCQF0.png&w=1920&h=790&f=webp",
-      "name": "Cloudflare Clef",
-      "summary": "Released October 1: two open-weight decision models (27B Clef and 9B Clef-flash) that return probabilities for typed yes/no/choice/score questions instead of generating text — no token-by-token generation, so Clef-flash answers in ~39 ms. Apache 2.0 weights on Hugging Face, Jev-API compatible, with vision input and a new RL fine-tuning platform.",
-      "url": "https://blog.cloudflare.com/clef-decision-models/"
+      "image": "https://decodedude.com/wp-content/uploads/2025/04/openai.webp",
+      "name": "OpenAI Dots",
+      "summary": "Always-on autonomous AI agents unveiled at DevDay 2026 (Sep 29): each Dot runs on GPT-6 Astra with its own cloud computer and browser, connects to 4,000+ apps via ChatGPT plugins, and keeps working across ChatGPT, Slack, Teams, voice, and soon text messages — including proactive read-only research while idle. Rolling out to ChatGPT Pro and Business Premium users; first Dot included free.",
+      "url": "https://theailandscape.com/news/openai-launches-dots-always-on-ai-agents/"
     },
     {
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+      "image": "https://d.techtimes.com/en/full/476372/aws-releases-decision-model-ai-agents-that-routes-without-generating-any-text.jpg?w=836&f=ba673f51ce4657982a73888b51c3b132",
       "name": "AWS Strands Decider 2B",
-      "summary": "Released October 1 from AWS Strands Labs: a fully open-source ~2B-parameter decision model built on Qwen3.5-2B, replacing the text head with a ~1M-parameter 'pointer head' that scores predefined options with calibrated confidence in under 100 ms locally. Weights, training data and scripts published under Apache 2.0 — a free, self-hostable alternative to TypeSafe's API-only Jev.",
-      "url": "https://venturebeat.com/technology/amazon-unveils-a-free-fast-open-source-jev-killer-strands-decider-2b-makes-decisions-in-fractions-of-a-second"
+      "summary": "AWS Strands Labs released an open decision model (Oct 2) that removes text generation from the agent loop: a Qwen3.5-2B base with the LM head replaced by a pointer head, returning ranked probability lists over bounded option sets in ~115ms median on a consumer GPU. Fully open (Apache 2.0): weights, training recipe, evals, and research logs are public, installable via `pip install strands-decider`.",
+      "url": "https://www.techtimes.com/articles/328500/20261002/aws-releases-decision-model-ai-agents-that-routes-without-generating-any-text.htm"
     },
     {
-      "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/07/claude.webp?w=1600",
-      "name": "Anthropic Claude Sonnet 5.5",
-      "summary": "Launched September 28: the second model in the Claude 5.5 family runs over 30% faster than Sonnet 5 and costs up to 30% less per task at the same $2/$10 per-million-token pricing. Strongest at everyday coding, docs, slides and design work, and the first Sonnet to ship with cyber safeguards comparable to Anthropic's flagship models.",
-      "url": "https://9to5mac.com/2026/09/28/anthropic-upgrades-claude-with-new-sonnet-5-5-model-details-here/"
+      "image": "https://1000logos.net/wp-content/uploads/2020/09/Cloudflare-Logo-2009-2048x1024.png",
+      "name": "Cloudflare Clef and Clef-flash",
+      "summary": "Cloudflare's first open-source decision models (Oct 1), hosted on Workers AI: Clef (27B, Qwen3.8 base, ~209ms median) and Clef-flash (9B, Qwen3.5 base, ~39ms median) return typed, probability-scored answers (yes/no, choice, score) with no free-form text, plus a vision encoder Jev lacks. Apache 2.0 weights on Hugging Face, Jev API-compatible for drop-in replacement, alongside a new RL fine-tuning service.",
+      "url": "https://developers.cloudflare.com/changelog/product/workers-ai/"
     }
   ]
 }
