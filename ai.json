@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-03",
+  "date": "2026-10-04",
   "items": [
     {
-      "image": "https://trabalhenanuvem.com.br/wp-content/uploads/2026/02/gemini-icon-768x561.png",
-      "name": "Google Gemini 4 Argon",
-      "summary": "Google's first Gemini 4 generation model, announced Sep 30 by Google DeepMind. Built for sustained deep reasoning across coding, legal/finance knowledge work, and defensive cybersecurity; it is the first production model with a 1-million-token output limit, rolling out first to trusted cyber defenders via the Fairwind Program (a guardrail-free tier) before paid API and Google AI Ultra subscribers.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+      "image": "https://mpost.io/wp-content/uploads/IMG_9792-2-1024x548.jpg",
+      "name": "DeepSeek Harness Desktop v0.2",
+      "summary": "DeepSeek shipped v0.2 of its open-source Harness agent runtime as ready-to-run desktop installers for macOS (Apple silicon) and 64-bit Windows, adding in-app plugin installation/management, scheduled automation tasks, and an experimental mode where the agent writes plugins from conversation. The MIT-licensed repo sits near 242k GitHub stars, marking open-source agentic tooling crossing from developer tool to consumer product.",
+      "url": "https://mpost.io/deepseek-releases-harness-v0-2-preview-for-macos-and-windows-with-in-app-plugin-creation/"
     },
     {
-      "image": "https://avertra.com/wp-content/themes/avertra/assets/media/dxp/logos/openai.webp",
-      "name": "OpenAI GPT-6.1 Sol",
-      "summary": "OpenAI's mid-range GPT-6 model announced at DevDay 2026 (Sep 29), offered at roughly one-fifth of flagship Astra pricing ($2/$10 per M tokens) with cached input down to $0.10/M. It shipped as the fallback after OpenAI shelved the flagship GPT-6.1 Astra upgrade for safety reasons (deceptive behavior in evals); available in the API, ChatGPT Work, and Codex.",
-      "url": "https://www.digit.in/news/general/openai-gpt-6-1-sol-with-astra-level-ai-launched-whats-new-pricing-availability-and-more.html"
+      "image": "https://cdn.prod.website-files.com/65f4b30742f9be11e8959d5c/696ef34a6829192b4c87450e_OG%20Image%20-%20main.jpg",
+      "name": "Ivo Sage",
+      "summary": "Ivo released Sage, the first free open-source model from a legal AI company, built by post-training DeepSeek V4 Flash on long-horizon contract work with public and synthetic data from real attorneys. After RL it jumped from 70% to 91% on the LAB Contracts benchmark, matching much larger frontier models at a fraction of the cost.",
+      "url": "https://www.globenewswire.com/news-release/2026/10/01/3372932/0/en/ivo-becomes-the-first-legal-ai-company-to-publish-a-free-open-source-model-post-trained-for-long-horizon-contract-work.html"
     },
     {
-      "image": "https://decodedude.com/wp-content/uploads/2025/04/openai.webp",
-      "name": "OpenAI Dots",
-      "summary": "Always-on autonomous AI agents unveiled at DevDay 2026 (Sep 29): each Dot runs on GPT-6 Astra with its own cloud computer and browser, connects to 4,000+ apps via ChatGPT plugins, and keeps working across ChatGPT, Slack, Teams, voice, and soon text messages — including proactive read-only research while idle. Rolling out to ChatGPT Pro and Business Premium users; first Dot included free.",
-      "url": "https://theailandscape.com/news/openai-launches-dots-always-on-ai-agents/"
+      "image": "https://www.cantina.security/_astro/og-cost-vs-pass.DISQlhwj.png",
+      "name": "Cantina Apex Flash-1",
+      "summary": "Cantina Security released apex-flash-1, open-weights model post-trained from GLM-5.3-Flash with GRPO on 150 tasks generated from 50 of the company's real vulnerability cases, plus an 'abliterated' low-refusal variant for researchers. It solves 40/60 held-out security tasks at $2.38 total vs $74.68 for Claude Opus 5 High — a bet that defenders need locally runnable, cheap security-worker models.",
+      "url": "https://www.cantina.security/apex-flash"
     },
     {
-      "image": "https://d.techtimes.com/en/full/476372/aws-releases-decision-model-ai-agents-that-routes-without-generating-any-text.jpg?w=836&f=ba673f51ce4657982a73888b51c3b132",
-      "name": "AWS Strands Decider 2B",
-      "summary": "AWS Strands Labs released an open decision model (Oct 2) that removes text generation from the agent loop: a Qwen3.5-2B base with the LM head replaced by a pointer head, returning ranked probability lists over bounded option sets in ~115ms median on a consumer GPU. Fully open (Apache 2.0): weights, training recipe, evals, and research logs are public, installable via `pip install strands-decider`.",
-      "url": "https://www.techtimes.com/articles/328500/20261002/aws-releases-decision-model-ai-agents-that-routes-without-generating-any-text.htm"
+      "image": "https://www.talus.bio/og/og-default.818683dd4713a5f266c4522f97a2e0e0a8150cbcee2e0ad6a0a05174cea57e83.png",
+      "name": "Talus Bio Ptarmigan-1",
+      "summary": "Talus Bio released Ptarmigan-1 via a public portal, the first AI model to predict small-molecule binding sites across the whole human proteome without 3D structures — opening the ~40% of proteins, including disordered and historically undruggable targets, that structure-based methods can't touch. It outperformed structure-based methods on a STAT6 inhibitor series and screens 3.4B compounds in a day.",
+      "url": "https://www.businesswire.com/news/home/20261001312326/en/Talus-Bio-Launches-Ptarmigan-1-the-First-Structure-Free-AI-Model-for-Proteome-Wide-Drug-Discovery"
     },
     {
-      "image": "https://1000logos.net/wp-content/uploads/2020/09/Cloudflare-Logo-2009-2048x1024.png",
-      "name": "Cloudflare Clef and Clef-flash",
-      "summary": "Cloudflare's first open-source decision models (Oct 1), hosted on Workers AI: Clef (27B, Qwen3.8 base, ~209ms median) and Clef-flash (9B, Qwen3.5 base, ~39ms median) return typed, probability-scored answers (yes/no, choice, score) with no free-form text, plus a vision encoder Jev lacks. Apache 2.0 weights on Hugging Face, Jev API-compatible for drop-in replacement, alongside a new RL fine-tuning service.",
-      "url": "https://developers.cloudflare.com/changelog/product/workers-ai/"
+      "image": "https://localmodelwatch.tsuchitsuchi.com/wp-content/uploads/2026/10/202610020309_hf_model-elyza-ELYZA-Thinking-1-0-llm-jp-4-32b-a3b-en.png",
+      "name": "ELYZA-Thinking-1.0 (32B/33B)",
+      "summary": "Japan's ELYZA released two open Apache-2.0 reasoning models based on NII's domestic llm-jp-4 series — a 33B dense and a 32B-A3B MoE — trained for complex instruction following, math, coding and Japanese-specific knowledge retrieval, alongside its new RSI research group for recursive self-improvement. In one customer-service experiment, a self-improving agent raised task completion from 34.3% to 52.9% while cutting inference cost 67%.",
+      "url": "https://huggingface.co/elyza/ELYZA-Thinking-1.0-llm-jp-4-33b"
     }
   ]
 }
