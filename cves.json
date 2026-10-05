@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-04",
+  "date": "2026-10-05",
   "items": [
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-104286",
+      "severity": "Critical",
+      "summary": "Fortinet FortiMail zero-day (advisory FG-IR-26-175) combining path traversal with NULL-byte neutralization, letting unauthenticated attackers write arbitrary files to the FortiMail OS via crafted requests to the management interface. Actively exploited in the wild; CISA added it to KEV on Oct 1, and at publication no patch existed — only interim workarounds.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104286"
+    },
+    {
+      "cvss": 9.9,
+      "id": "CVE-2026-82041",
+      "severity": "Critical",
+      "summary": "UTMStack's incident-command WebSocket handler (/command/{hostname} STOMP destination) applies no role check or command allowlist, so any authenticated user can send arbitrary OS commands via gRPC to every connected agent — which typically run as root/SYSTEM. Disclosed Oct 2 alongside six other UTMStack flaws; fixed in 11.2.16.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82041"
+    },
+    {
+      "cvss": 9.9,
+      "id": "CVE-2026-90970",
+      "severity": "Critical",
+      "summary": "Sandbox escape in GitLab's self-hosted AI Gateway: a logged-in user with Duo Agent Platform access can craft a flow configuration that escapes the Jinja2 prompt-template sandbox and executes arbitrary commands on the gateway host (server-side, before any LLM invocation). Affects 18.1.6–19.4.0; operators must update the Gateway image itself to 19.2.4, 19.3.2 or 19.4.1.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90970"
+    },
+    {
+      "cvss": 9.5,
+      "id": "CVE-2026-88771",
+      "severity": "Critical",
+      "summary": "Citrix NetScaler ADC/Gateway zero-day enabling unauthenticated remote code execution in default configuration, part of a cluster of eight actively attacked vulnerabilities. Google Threat Intelligence Group and Mandiant report custom WHIPSHOT web shells and SLAPSHOT tunnelers being used for persistent access against targets in Europe and North America.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88771"
+    },
     {
       "cvss": 9.9,
       "id": "CVE-2026-105080",
       "severity": "Critical",
-      "summary": "In ConvertX before 0.19.0, converters/calibre.ts does not block .recipe/.downloaded_recipe files and passes them to Calibre's ebook-convert, enabling execution of arbitrary code embedded in recipe files. Disclosed Oct 3; no public exploit or KEV listing yet.",
+      "summary": "ConvertX before 0.19.0 passes Calibre recipe files straight to the ebook-convert binary without blocking them, so executable code in a .recipe or .downloaded_recipe file runs on the host (CWE-829). Disclosed Oct 3; upgrade to 0.19.0 or later.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105080"
-    },
-    {
-      "cvss": 9.8,
-      "id": "CVE-2026-20272",
-      "severity": "Critical",
-      "summary": "Cisco IOS XE command/OS/argument-injection flaw surfaced by Cisco's own AI-assisted internal security review, leading a seven-CVE hardening release across the 16.6.2–26.1.3 train (fixed in 17.9.10, 17.12.8, 17.15.6, 17.18.4/a, 26.1.2). There is no workaround — upgrading is the only fix.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20272"
-    },
-    {
-      "cvss": 9.8,
-      "id": "CVE-2026-61500",
-      "severity": "Critical",
-      "summary": "Rejetto HTTP File Server 3.0.0–3.2.0 derives its session-cookie signing key from the non-cryptographic Math.random() generator and leaks generator outputs, enabling unauthenticated remote code execution (fixed in 3.2.1). VulnCheck observed exploitation in the wild starting Oct 1, within 24h of the Horizon3 disclosure.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61500"
-    },
-    {
-      "cvss": 9.6,
-      "id": "CVE-2026-103626",
-      "severity": "Critical",
-      "summary": "Incorrect authorization in FileSystem in Google Chrome on Windows before 154.0.8037.97 lets a remote attacker leveraging social engineering potentially execute arbitrary code. Update Chrome immediately.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103626"
-    },
-    {
-      "cvss": 9.0,
-      "id": "CVE-2026-104019",
-      "severity": "Critical",
-      "summary": "OS command injection in the Studio Space startup validation script in Amazon SageMaker Distribution 2.x before 2.14.12, 3.x before 3.9.12, 4.0.x before 4.0.11 and 4.1.x before 4.1.x fix lines. Disclosed Oct 2; patch the distribution before launching shared Studio spaces.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104019"
     }
   ]
 }

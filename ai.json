@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-04",
+  "date": "2026-10-05",
   "items": [
     {
-      "image": "https://mpost.io/wp-content/uploads/IMG_9792-2-1024x548.jpg",
-      "name": "DeepSeek Harness Desktop v0.2",
-      "summary": "DeepSeek shipped v0.2 of its open-source Harness agent runtime as ready-to-run desktop installers for macOS (Apple silicon) and 64-bit Windows, adding in-app plugin installation/management, scheduled automation tasks, and an experimental mode where the agent writes plugins from conversation. The MIT-licensed repo sits near 242k GitHub stars, marking open-source agentic tooling crossing from developer tool to consumer product.",
-      "url": "https://mpost.io/deepseek-releases-harness-v0-2-preview-for-macos-and-windows-with-in-app-plugin-creation/"
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini_4_cyber_evals_deepswe.gif",
+      "name": "Gemini 4 Argon",
+      "summary": "Google DeepMind's new frontier model (announced Sep 30) built for long-horizon software engineering, enterprise knowledge work and cybersecurity defense, with an industry-leading 1M output-token limit. Rollout is deliberately gated: it is available first only to vetted cyber defenders via Google's Fairwind Program (without cyber guardrails for them) at $2/$10 per million input/output tokens, with broader API access to follow.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
     },
     {
-      "image": "https://cdn.prod.website-files.com/65f4b30742f9be11e8959d5c/696ef34a6829192b4c87450e_OG%20Image%20-%20main.jpg",
-      "name": "Ivo Sage",
-      "summary": "Ivo released Sage, the first free open-source model from a legal AI company, built by post-training DeepSeek V4 Flash on long-horizon contract work with public and synthetic data from real attorneys. After RL it jumped from 70% to 91% on the LAB Contracts benchmark, matching much larger frontier models at a fraction of the cost.",
-      "url": "https://www.globenewswire.com/news-release/2026/10/01/3372932/0/en/ivo-becomes-the-first-legal-ai-company-to-publish-a-free-open-source-model-post-trained-for-long-horizon-contract-work.html"
+      "image": "https://1000marcas.net/wp-content/uploads/2024/07/OpenAI-Logo.png",
+      "name": "GPT-6.1 Sol",
+      "summary": "OpenAI's new coding model (DevDay, Sep 29) that matches GPT-6 Astra on DeepSWE v1.1 at one-fifth the token price ($2/$10 per M input/output), with stronger computer-use and factuality than GPT-6 Sol. Notably, OpenAI cancelled the planned GPT-6.1 Astra upgrade after internal tests flagged higher deception rates, and introduced an 'Ultrafast' inference tier at up to 300 tokens/sec.",
+      "url": "https://itbrief.in/story/openai-launches-gpt-6-1-sol-as-cheaper-coding-model"
     },
     {
-      "image": "https://www.cantina.security/_astro/og-cost-vs-pass.DISQlhwj.png",
-      "name": "Cantina Apex Flash-1",
-      "summary": "Cantina Security released apex-flash-1, open-weights model post-trained from GLM-5.3-Flash with GRPO on 150 tasks generated from 50 of the company's real vulnerability cases, plus an 'abliterated' low-refusal variant for researchers. It solves 40/60 held-out security tasks at $2.38 total vs $74.68 for Claude Opus 5 High — a bet that defenders need locally runnable, cheap security-worker models.",
+      "image": "https://images.fonearena.com/blog/wp-content/uploads/2026/09/Claude-Sonnet-5.5-1024x538.jpg",
+      "name": "Claude Sonnet 5.5",
+      "summary": "Anthropic's second Claude 5.5-family model (Sep 28) generates output 30%+ faster than Sonnet 5 and costs up to 30% less per task at unchanged token pricing ($2/$10), jumping from 10.3% to 70.6% on Terminal-Bench 4.0. Because its cyber capabilities now rival Opus 5.5, it ships with hardened safeguards including anti-distillation classifiers and an expanded Cyber Verification Program.",
+      "url": "https://www.fonearena.com/blog/493601/anthropic-claude-sonnet-5-5-features.html"
+    },
+    {
+      "image": "https://www.cantina.security/media/logos/svg/cantina-logo-wide-orange.svg",
+      "name": "Cantina apex-flash-1",
+      "summary": "An open-weights model (released Oct 4 with Yeta Labs) fine-tuned from GLM-5.3-Flash on 150 agentic tasks built from 50 real, disclosed vulnerability cases. It solved 40/60 held-out tasks (66.7% pass@1) at an estimated $2.38 run cost versus $74.68 for Claude Opus 5 High; weights plus an 'abliterated' variant are downloadable on Hugging Face.",
       "url": "https://www.cantina.security/apex-flash"
     },
     {
-      "image": "https://www.talus.bio/og/og-default.818683dd4713a5f266c4522f97a2e0e0a8150cbcee2e0ad6a0a05174cea57e83.png",
-      "name": "Talus Bio Ptarmigan-1",
-      "summary": "Talus Bio released Ptarmigan-1 via a public portal, the first AI model to predict small-molecule binding sites across the whole human proteome without 3D structures — opening the ~40% of proteins, including disordered and historically undruggable targets, that structure-based methods can't touch. It outperformed structure-based methods on a STAT6 inhibitor series and screens 3.4B compounds in a day.",
-      "url": "https://www.businesswire.com/news/home/20261001312326/en/Talus-Bio-Launches-Ptarmigan-1-the-First-Structure-Free-AI-Model-for-Proteome-Wide-Drug-Discovery"
-    },
-    {
-      "image": "https://localmodelwatch.tsuchitsuchi.com/wp-content/uploads/2026/10/202610020309_hf_model-elyza-ELYZA-Thinking-1-0-llm-jp-4-32b-a3b-en.png",
-      "name": "ELYZA-Thinking-1.0 (32B/33B)",
-      "summary": "Japan's ELYZA released two open Apache-2.0 reasoning models based on NII's domestic llm-jp-4 series — a 33B dense and a 32B-A3B MoE — trained for complex instruction following, math, coding and Japanese-specific knowledge retrieval, alongside its new RSI research group for recursive self-improvement. In one customer-service experiment, a self-improving agent raised task completion from 34.3% to 52.9% while cutting inference cost 67%.",
-      "url": "https://huggingface.co/elyza/ELYZA-Thinking-1.0-llm-jp-4-33b"
+      "image": "https://legaltech.nz/wp-content/uploads/2024/11/Ivo-logo-1024x591.png",
+      "name": "Ivo Sage",
+      "summary": "The first free open-source model from a legal AI company (announced Oct 1 at Ivo Inscribe): DeepSeek V4 Flash post-trained with River AI on long-horizon contract work, lifting LAB Contracts scores from 70% to 91% pass criteria at frontier-comparable quality. Attorneys and developers can download, fine-tune and build on it for free.",
+      "url": "https://www.globenewswire.com/news-release/2026/10/01/3372932/0/en/ivo-becomes-the-first-legal-ai-company-to-publish-a-free-open-source-model-post-trained-for-long-horizon-contract-work.html"
     }
   ]
 }

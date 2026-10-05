@@ -5,27 +5,27 @@
   "worst_cvss": 9.9,
   "priorities": [
     {
+      "id": "CVE-2026-82041",
+      "cvss": 9.9,
+      "summary": "UTMStack's incident-command WebSocket handler (/command/{hostname} STOMP destination) applies no role check or command allowlist, so any authenticated user can send arbitrary OS commands via gRPC to every connected agent — which typically run as root/SYSTEM. Disclosed Oct 2 alongside six other UTMStack flaws; fixed in 11.2.16.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82041"
+    },
+    {
+      "id": "CVE-2026-90970",
+      "cvss": 9.9,
+      "summary": "Sandbox escape in GitLab's self-hosted AI Gateway: a logged-in user with Duo Agent Platform access can craft a flow configuration that escapes the Jinja2 prompt-template sandbox and executes arbitrary commands on the gateway host (server-side, before any LLM invocation). Affects 18.1.6–19.4.0; operators must update the Gateway image itself to 19.2.4, 19.3.2 or 19.4.1.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90970"
+    },
+    {
       "id": "CVE-2026-105080",
       "cvss": 9.9,
-      "summary": "In ConvertX before 0.19.0, converters/calibre.ts does not block .recipe/.downloaded_recipe files and passes them to Calibre's ebook-convert, enabling execution of arbitrary code embedded in recipe files. Disclosed Oct 3; no public exploit or KEV listing yet.",
+      "summary": "ConvertX before 0.19.0 passes Calibre recipe files straight to the ebook-convert binary without blocking them, so executable code in a .recipe or .downloaded_recipe file runs on the host (CWE-829). Disclosed Oct 3; upgrade to 0.19.0 or later.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105080"
-    },
-    {
-      "id": "CVE-2026-20272",
-      "cvss": 9.8,
-      "summary": "Cisco IOS XE command/OS/argument-injection flaw surfaced by Cisco's own AI-assisted internal security review, leading a seven-CVE hardening release across the 16.6.2–26.1.3 train (fixed in 17.9.10, 17.12.8, 17.15.6, 17.18.4/a, 26.1.2). There is no workaround — upgrading is the only fix.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20272"
-    },
-    {
-      "id": "CVE-2026-61500",
-      "cvss": 9.8,
-      "summary": "Rejetto HTTP File Server 3.0.0–3.2.0 derives its session-cookie signing key from the non-cryptographic Math.random() generator and leaks generator outputs, enabling unauthenticated remote code execution (fixed in 3.2.1). VulnCheck observed exploitation in the wild starting Oct 1, within 24h of the Horizon3 disclosure.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61500"
     }
   ],
   "model": {
-    "name": "DeepSeek Harness Desktop v0.2",
-    "summary": "DeepSeek shipped v0.2 of its open-source Harness agent runtime as ready-to-run desktop installers for macOS (Apple silicon) and 64-bit Windows, adding in-app plugin installation/management, scheduled automation tasks, and an experimental mode where the agent writes plugins from conversation. The MIT-licensed repo sits near 242k GitHub stars, marking open-source agentic tooling crossing from developer tool to consumer product.",
-    "url": "https://mpost.io/deepseek-releases-harness-v0-2-preview-for-macos-and-windows-with-in-app-plugin-creation/"
+    "name": "Gemini 4 Argon",
+    "summary": "Google DeepMind's new frontier model (announced Sep 30) built for long-horizon software engineering, enterprise knowledge work and cybersecurity defense, with an industry-leading 1M output-token limit. Rollout is deliberately gated: it is available first only to vetted cyber defenders via Google's Fairwind Program (without cyber guardrails for them) at $2/$10 per million input/output tokens, with broader API access to follow.",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
   }
 }
