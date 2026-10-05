@@ -1,34 +1,34 @@
 {
-  "date": "2026-10-04",
+  "date": "2026-10-05",
   "sections": [
     {
       "items": [
         {
-          "action": "Disable IBE if unused; block internet access to the FortiMail management interface or restrict it to trusted networks. Hunt for the published indicators: new files /data/lib/liblog.so, /data/bin/webconsole, /data/bin/mailservice; modified /data/etc/ld.so.preload, /bin/smit, /data/etc/httpd.conf; and IPs 79.141.169.187 and 45.129.0.192.",
-          "details": "CVSS 9.8 (CWE-22 path traversal + CWE-158 null-byte). Affects FortiMail 7.2.0–7.2.9, 7.4.0–7.4.8, 7.6.0–7.6.6 and 8.0.0–8.0.1. Fortinet published advisory FG-IR-26-175 on October 1, 2026; fixes (8.0.2, 7.6.7, 7.4.9) are still pending, and 7.2 users are told to move to 7.4+. CISA added it to KEV the same day, with federal remediation due October 4 (today).",
+          "action": "Update NetScaler ADC and Gateway to 14.1-73.37 or 13.1-64.23 (or the fixed build for your train) immediately; before patching, review for webshells and reverse shells on internet-facing appliances.",
+          "details": "Citrix closed eight critical vulnerabilities in NetScaler ADC and Gateway. CVE-2026-88771 affects default configurations and CVE-2026-88772 hits DTLS-enabled VPN servers; both are being exploited as zero-days in the wild, including password-protected webshells for persistence. CISA has amplified the emergency, urging IoC review before patching.",
+          "image": "https://ccforrs.com/wp-content/uploads/2025/07/Citrix_NetScaler-Cropped-1024x576.jpg",
+          "severity": "Critical",
+          "summary": "Two critical NetScaler zero-days (CVE-2026-88771/88772, CVSS 9.5) allow remote code execution, sometimes without authentication, and are being actively exploited.",
+          "title": "Citrix NetScaler zero-days (CVE-2026-88771/88772) under active attack",
+          "url": "https://b2b-cyber-security.de/en/Critical-Citrix-gaps-are-being-actively-targeted./"
+        },
+        {
+          "action": "Patch Armatura One to 4.7.2 (4.6.1_USA for US builds) and review the Monta guidance on authenticated OCPP connections and rate limiting; restrict management interfaces to trusted networks.",
+          "details": "CISA's ICSA-26-274-01 flags Armatura One versions before 4.7.2 with an Apache ActiveMQ deserialization flaw (CVE-2023-46604, CVSS 9.8), a hard-coded crypto key, hard-coded database-superuser credentials, and credentials exposed in logs. ICSA-26-274-02 covers the Monta EV-charging platform: an unauthenticated WebSocket endpoint (CVE-2026-95102, CVSS 9.4) enabling station impersonation, unlimited login attempts, and predictable session identifiers.",
+          "image": "https://alittlebitofstone.com/wp-content/uploads/2024/06/EV-Charging-Car-Park.png",
+          "severity": "Critical",
+          "summary": "CISA's October 4 ICS advisory batch flags critical flaws in Armatura One physical-access control (CVSS 9.8) and the Monta EV-charging platform (CVSS 9.4).",
+          "title": "CISA warns on critical Armatura One and Monta EV-charging flaws",
+          "url": "https://securityboulevard.com/2026/10/daily-ot-security-news-october-04-2026/"
+        },
+        {
+          "action": "If you run FortiMail 7.4, 7.6 or 8.0, treat the appliance as exposed: apply Fortinet's interim workarounds, restrict the admin interface, and hunt for the published IoCs (suspicious files and IPs 79.141.169.187 and 45.129.0.192).",
+          "details": "Fortinet advisory FG-IR-26-175 covers the unauthenticated path-traversal flaw in FortiMail's IBE component (CVSS 9.8), added to CISA KEV on October 1. Fixed builds now exist only for the 7.2 branch (7.2 users are told to move to 7.4+); 7.4, 7.6 and 8.0 still await undated releases, past the October 4 federal remediation deadline.",
           "image": "https://www.enbitcon.com/media/88/27/94/1597931534/FortiMail400F_FrontTop.png?ts=1611321295",
           "severity": "Critical",
-          "summary": "Fortinet says CVE-2026-104286 is being exploited in the wild and no fixed build exists yet. The unauthenticated flaw lets attackers write arbitrary files to the appliance via crafted HTTP/HTTPS requests, potentially leading to code execution.",
-          "title": "FortiMail zero-day (CVE-2026-104286) actively exploited, no patch yet",
-          "url": "https://www.helpnetsecurity.com/2026/10/02/fortinet-fortimail-vulnerability-cve-2026-104286/"
-        },
-        {
-          "action": "Upgrade to the fixed release for your train (20.9.10.1, 20.12.8.2, 20.15.6.1, 20.18.4.1, 26.1.2.1, 26.2.1); earlier than 20.9 must migrate. Isolate the Manager from the internet. Audit serviceproxy-access.log and vmanage-server.log for URL-encoded j_security_check requests and activity from viptela-reserved- accounts — assume full SD-WAN compromise if found.",
-          "details": "Advisory cisco-sa-sdwan-webauth-xr8beuuU (Sept 30, 2026). CWE-177 improper URI-encoding handling lets an unauthenticated remote attacker reach the API as the admin user, gaining the netadmin role over the entire SD-WAN fabric. There are no workarounds; Cisco's managed cloud is already patched (20.15.605). CISA KEV-listed Sept 30 with forensic triage required.",
-          "image": "https://www.aiit.mu/wp-content/uploads/2026/03/Cisco_logo_blue_2016.svg_-600x317.png",
-          "severity": "Critical",
-          "summary": "Cisco patched an authentication bypass in Catalyst SD-WAN Manager that is already being exploited. An unauthenticated attacker can gain full admin control of the management plane — and through it, the whole SD-WAN fabric.",
-          "title": "Cisco Catalyst SD-WAN Manager zero-day (CVE-2026-76504) exploited in the wild",
-          "url": "https://www.securityweek.com/cisco-patches-exploited-catalyst-sd-wan-zero-day-vulnerability/"
-        },
-        {
-          "action": "Review Moxa advisory MPSA-269540 and apply the published firmware/software updates to affected protocol gateways; restrict management-interface access to trusted networks.",
-          "details": "CVE-2026-86325: stack-based buffer overflow in the account management interface via a crafted account_name, exploitable by an authenticated read-only web user to read credentials from memory, corrupt memory, or disrupt availability. CVE-2026-86326: devices fail to verify firmware image signatures before installation, letting a privileged attacker install modified firmware and persist across updates.",
-          "image": "https://image.automation-next.com/2154923.webp?imageId=2154923&width=960&height=1602&format=jpg",
-          "severity": "High",
-          "summary": "Moxa's October 2 advisory MPSA-269540 discloses a buffer overflow and a missing firmware-signature check in its protocol gateways. Apply the fixes now, especially on internet-exposed gateways.",
-          "title": "Moxa discloses two high-severity flaws in protocol gateways (CVE-2026-86325/86326)",
-          "url": "https://www.moxa.com/en/support/product-support/security-advisory/mpsa-269540-cve-2026-86325,-cve-2026-86326-two-vulnerabilities-in-protocol-gateways"
+          "summary": "Three of four FortiMail branches remain unpatched against the actively exploited CVE-2026-104286 as CISA's remediation deadline passes.",
+          "title": "FortiMail zero-day: patches still missing for three of four branches",
+          "url": "https://deafnews.it/en/news/cybersecurity/fortinet-critical-fortimail-zero-day-patches-missing-for-three-of-four-branches"
         }
       ],
       "title": "Act on Today"
@@ -36,29 +36,40 @@
     {
       "items": [
         {
-          "action": "If KillSec listed your organization, confirm scope from the seized data (now in police hands), preserve evidence, and bring in legal and IR — the leak site's victim list is now law-enforcement evidence.",
-          "details": "Led by Hamburg police with Europol/Eurojust, Operation KillSwitch seized five central servers and secured at least 110 terabytes of data. Suspects: a 16-year-old Romanian national detained in Alicante, Spain (suspected main operator), plus two men in their 20s arrested in the U.K. and Romania. KillSec's entry points were software vulnerabilities, poorly secured cloud storage, and credentials bought on the dark web.",
-          "image": "https://hacked.com/_next/image?url=%2Farticles%2Fbusiness-attacked-with-ransomware%2Ffeatured.jpg&w=828&q=75&dpl=dpl_FWoubQkG9on77gQDbhufjdDRvveR",
-          "severity": "Medium",
-          "summary": "Europol and Eurojust announced Operation KillSwitch on October 1: the KillSec leak site is in police hands, five servers seized, and three suspects arrested — including a 16-year-old believed to be the group's main operator. About 1,000 suspected attacks worldwide, roughly 500 confirmed successful.",
-          "title": "Police dismantle KillSec ransomware operation; 16-year-old suspected operator arrested",
-          "url": "https://www.scworld.com/brief/teenager-arrested-in-spain-suspected-of-leading-killsec-ransomware-group"
+          "action": "Healthcare teams should treat any leak-site listing as a potential exposure event: check dark-web monitoring for patient data, prepare breach-notification steps, and do not trust the claimed data volumes.",
+          "details": "The Booba Project group reportedly listed MorseLife Health System on its victim list on October 4, with related reporting associating roughly 344 GB of allegedly stolen data. ThreatMon's verification status is 'unconfirmed threat actor claim' — a leak-site listing alone does not prove intrusion or exfiltration.",
+          "image": "https://truame.com/wp-content/uploads/2026/04/TriZetto-Data-Breach-Blog-Graphic-2-small-1024x683.png",
+          "severity": "High",
+          "summary": "Booba Project claimed MorseLife Health System on October 4, alleging ~344 GB of stolen data; the claim is unverified.",
+          "title": "Booba Project claims attack on MorseLife Health System",
+          "url": "https://undercodenews.com/booba-project-claims-ransomware-attack-on-morselife-health-system-raising-concerns-over-healthcare-data-security-video/"
         },
         {
-          "details": "Claim published on the Wallstreet dark-web leak site and reported October 3; the claim alone does not independently confirm encryption or data exfiltration. St. Francis Healthcare System of Hawai'i is a Catholic nonprofit serving Hawai'i families since 1927.",
-          "image": "https://privacyneedle.com/wp-content/uploads/2025/10/Hospital-Ransomware-Attack.webp",
+          "action": "Australian industrial firms should check backups and confirm the listing with the vendor; treat the claim as unverified until the company responds.",
+          "details": "The Qilin group published Chadwick Switchboards on its leak site on October 4. The claim is sourced from the group's dark-web blog via ransomware.live monitoring and is not independently confirmed.",
+          "image": "https://storage.ghost.io/c/c6/2f/c62fd27f-eb77-4add-bc6b-4ec865075df3/content/images/size/w720/2024/05/DALL-E-2024-05-23-16.52.56---A-digital-illustration-representing-ransomware.-The-image-shows-a-computer-screen-with-a-red-lock-icon-prominently-displayed--signifying-a-system-lock-1.webp",
           "severity": "High",
-          "summary": "The Wallstreet ransomware group listed St. Francis Healthcare Systems of Hawaii on its leak site on October 3, 2026. Healthcare providers remain a top ransomware target this year.",
-          "title": "Wallstreet ransomware claims St. Francis Healthcare Systems of Hawaii",
-          "url": "https://www.hookphish.com/blog/ransomware-group-wallstreet-hits-st-francis-healthcare-systems-of-hawaii/"
+          "summary": "Qilin listed Chadwick Switchboards, an Australian manufacturer, on its leak site on October 4.",
+          "title": "Qilin claims Chadwick Switchboards in Australia",
+          "url": "https://www.hendryadrian.com/ransom-chadwick-switchboards-oct-2026/"
         },
         {
-          "details": "Source record: ransomware.live, via cyberthreatintelligence.net (updated Oct 4, 2026). Listed materials reportedly include ~40 scans of Lebanese national ID cards, a director's passport, Byblos Bank employee account files, Cedrus Bank corporate-card program data, and payroll records. Leak-site listing dates reflect disclosure, not the original intrusion.",
-          "image": "https://www.ncs.de/wp-content/uploads/Hacker-Doc.jpg.webp",
+          "action": "Municipal contractors should audit access logs and confirm whether any sensitive project data appears in dark-web monitoring.",
+          "details": "The thegentlemen group claimed Center State Engineering, a New Jersey civil engineering consultancy, on October 4, with reporting associating roughly 340 GB of data. The breach record dates the incident to October 3.",
+          "image": "https://darkdotweb.com/wp-content/uploads/2026/02/randsome-tech-DDW.webp",
           "severity": "High",
-          "summary": "Rhysida listed Lebanon's Skaff Group — a decorative-fabrics leader — on its leak site October 3. The group claims ~268 GB of files including full HR dossiers and banking data.",
-          "title": "Rhysida lists Lebanon's Skaff Group with ~268 GB of data",
-          "url": "https://cyberthreatintelligence.net/ransomware-victim/skaff-group-rhysida-2026"
+          "summary": "The thegentlemen ransomware group claimed US-based Center State Engineering on October 4, alleging ~340 GB of data.",
+          "title": "thegentlemen claims Center State Engineering (US)",
+          "url": "https://www.hookphish.com/blog/ransomware-group-thegentlemen-hits-center-state-engineering/"
+        },
+        {
+          "action": "Brazilian technology firms should review exposure on dark-web monitoring feeds and harden backup and recovery plans.",
+          "details": "The direwolf group listed Softruck, a Brazilian software company, on October 4. The claim is unverified and based on the group's leak-site publication.",
+          "image": "https://www.ormrd.com/wp-content/uploads/2026/01/Screenshot_1-9-768x468.jpg",
+          "severity": "High",
+          "summary": "direwolf claimed Brazil's Softruck on its leak site on October 4.",
+          "title": "direwolf claims Softruck (Brazil)",
+          "url": "https://www.hookphish.com/blog/ransomware-group-direwolf-hits-softruck/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -66,26 +77,36 @@
     {
       "items": [
         {
-          "action": "Update iPhone, iPad and Mac to the latest iOS, iPadOS and macOS releases immediately; CERT-In urges all users on affected versions to patch.",
-          "details": "CERT-In's October 1 high-severity warning covers iOS, iPadOS and macOS. Apple acknowledges the flaw 'may have been exploited in an extremely sophisticated attack against specific targeted individuals' on versions before iOS 27.",
-          "image": "https://static0.pocketnowimages.com/wordpress/wp-content/uploads/2023/05/apple-ios-security-response-update-featured-image.jpg",
-          "severity": "High",
-          "summary": "CERT-In issued a critical alert for Apple users in India over CVE-2026-86950, warning the vulnerability is already being exploited in targeted, highly sophisticated attacks. Older software versions are at the highest risk.",
-          "title": "CERT-In warns Apple users of actively exploited vulnerability (CVE-2026-86950)",
-          "url": "https://www.timesnownews.com/technology-science/govt-warns-apple-users-in-india-of-sophisticated-attacks-update-your-iphone-ipad-and-mac-immediately-article-156261889"
+          "action": "Banks and financial institutions should reassess cyber-risk scenarios for payment and clearing infrastructure; no specific incident is named.",
+          "details": "The warning was reported in the October 4 India cyber-tech brief from the Centre for Police Technology in association with Algoritha Security.",
+          "image": "https://moneytimes.in/wp-content/uploads/2026/08/RBI.webp",
+          "severity": "Medium",
+          "summary": "The RBI Governor warned that the next financial crisis could begin with a cyberattack, putting systemic risk at the center of the October 4 cyber-crime roundup.",
+          "title": "RBI Governor: the next financial crisis could begin with a cyberattack",
+          "url": "https://the420.in/india-cyber-tech-brief-4-october-2026-cyber-risk-mule-accounts/"
         },
         {
-          "details": "Other October 3 developments from the same roundup: a Surat mule account linked to 37 cybercrime complaints and about ₹7 crore in alleged fraud, a ₹4.72-crore crypto-investment scam in Gurugram, ₹36.23 crore in cyberfraud losses recorded in Coimbatore over nine months, and UP reporting ₹874.58 crore in cybercrime money frozen or put on hold.",
-          "image": "https://suraksha.bharataawaz.com/wp-content/uploads/2025/01/Bapatla-Police-Crack-%E2%82%B974-Lakh-Cyber-Fraud-Case.jpeg",
+          "action": "Defenders who tracked ShinyHunters-linked extortions should watch for indictments and new disclosures as cooperation proceeds.",
+          "details": "Reported in the October 4 India cyber-tech brief from the Centre for Police Technology and Algoritha Security; cooperation details have not been independently verified.",
+          "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2024/05/Hacker-Arrest-web-760x570.jpg",
           "severity": "Medium",
-          "summary": "The Enforcement Directorate uncovered a ₹734-crore fake-GST-credit network built around 135 shell companies, among 10 major cybercrime developments reported on October 3 — from crypto-investment scams to mule-account networks.",
-          "title": "ED uncovers ₹734-crore fake GST credit network across 135 shell companies",
-          "url": "https://the420.in/india-cyber-tech-brief-3-october-2026-gst-fraud-fortimail-killsec/"
+          "summary": "A suspected ShinyHunters-linked hacker was reportedly detained in Jordan and is cooperating with the FBI.",
+          "title": "Suspected ShinyHunters hacker detained in Jordan, reportedly cooperating with FBI",
+          "url": "https://the420.in/india-cyber-tech-brief-4-october-2026-cyber-risk-mule-accounts/"
+        },
+        {
+          "action": "Indian businesses should tighten account-opening verification and monitor mule-account indicators ahead of the festive season.",
+          "details": "Also in the October 4 roundup: a doctor allegedly kept under 'digital arrest' for a month lost Rs 1.78 crore, Himachal Police began systematic verification of suspicious mule accounts, and a Mumbai case exposed an emerging 'three-way call merge' fraud technique.",
+          "image": "https://www.rasra.in/wp-content/uploads/2026/08/mumbai-police-busts-fake_large_20260818055641447_80f1228_24-576x288.webp",
+          "severity": "Medium",
+          "summary": "Bhubaneswar Police busted a sophisticated mule-account network allegedly linked to foreign operators.",
+          "title": "Bhubaneswar Police bust mule-account network linked to foreign operators",
+          "url": "https://the420.in/india-cyber-tech-brief-4-october-2026-cyber-risk-mule-accounts/"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Sunday, October 4 — Here's what's worth your attention today.",
+  "subtitle": "Monday, October 5 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
