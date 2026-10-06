@@ -1,34 +1,34 @@
 {
-  "date": "2026-10-05",
+  "date": "2026-10-06",
   "sections": [
     {
       "items": [
         {
-          "action": "Update NetScaler ADC and Gateway to 14.1-73.37 or 13.1-64.23 (or the fixed build for your train) immediately; before patching, review for webshells and reverse shells on internet-facing appliances.",
-          "details": "Citrix closed eight critical vulnerabilities in NetScaler ADC and Gateway. CVE-2026-88771 affects default configurations and CVE-2026-88772 hits DTLS-enabled VPN servers; both are being exploited as zero-days in the wild, including password-protected webshells for persistence. CISA has amplified the emergency, urging IoC review before patching.",
+          "action": "Prioritize NetScaler Gateway and AAA virtual servers with SAML authentication enabled; apply the fixed build (14.1-73.41, 13.1-64.28, 14.1-FIPS 14.1-73.41, or 13.1-FIPS/NDcPP 13.1-37.282) or Citrix's interim mitigation immediately. Run Citrix's IoC check script on exposed appliances — a clean result is not definitive proof of non-compromise.",
+          "details": "Disclosed by Citrix on October 3 after exploitation reports, with Bishop Fox and watchTowr credited for discovery — watchTowr reproduced it within hours on a NetScaler honeypot. watchTowr's head of threat intelligence told The Register that a single crafted request can knock an appliance offline, and suspects the bug is being used to purposefully crash machines to speed up exploitation of the earlier CVE-2026-88771 RCE chain.",
           "image": "https://ccforrs.com/wp-content/uploads/2025/07/Citrix_NetScaler-Cropped-1024x576.jpg",
           "severity": "Critical",
-          "summary": "Two critical NetScaler zero-days (CVE-2026-88771/88772, CVSS 9.5) allow remote code execution, sometimes without authentication, and are being actively exploited.",
-          "title": "Citrix NetScaler zero-days (CVE-2026-88771/88772) under active attack",
-          "url": "https://b2b-cyber-security.de/en/Critical-Citrix-gaps-are-being-actively-targeted./"
+          "summary": "A memory-overflow bug (CVE-2026-88779) in NetScaler ADC/Gateway deployments using SAML as service provider or identity provider allows denial of service with a single crafted request. Exploited in the wild before the patch existed; CISA added it to KEV on October 4 and ordered federal agencies to patch by October 7.",
+          "title": "Citrix NetScaler SAML zero-day (CVE-2026-88779) crashing appliances, CISA sets Oct 7 patch deadline",
+          "url": "https://www.theregister.com/security/2026/10/05/citrix-netscaler-security-snafus-get-even-worse-amid-more-0-day-reports/5301232"
         },
         {
-          "action": "Patch Armatura One to 4.7.2 (4.6.1_USA for US builds) and review the Monta guidance on authenticated OCPP connections and rate limiting; restrict management interfaces to trusted networks.",
-          "details": "CISA's ICSA-26-274-01 flags Armatura One versions before 4.7.2 with an Apache ActiveMQ deserialization flaw (CVE-2023-46604, CVSS 9.8), a hard-coded crypto key, hard-coded database-superuser credentials, and credentials exposed in logs. ICSA-26-274-02 covers the Monta EV-charging platform: an unauthenticated WebSocket endpoint (CVE-2026-95102, CVSS 9.4) enabling station impersonation, unlimited login attempts, and predictable session identifiers.",
-          "image": "https://alittlebitofstone.com/wp-content/uploads/2024/06/EV-Charging-Car-Park.png",
+          "action": "Disable the btest service if it is not in use, update RouterOS to the latest firmware immediately, and monitor internet-facing routers for signs of scanning or compromise.",
+          "details": "The flaw sits in the btest (bandwidth-test) service, which fails to enforce authentication checks. Researchers and CISA report automated scanning of internet-exposed MikroTik devices attempting to exploit it. Full exploit methods have not been publicly disclosed, and it is unclear exactly which builds are affected.",
+          "image": "https://cdr.pl/download/cdr/RB5009UPRPLSPLIN_desc_2.jpg",
           "severity": "Critical",
-          "summary": "CISA's October 4 ICS advisory batch flags critical flaws in Armatura One physical-access control (CVSS 9.8) and the Monta EV-charging platform (CVSS 9.4).",
-          "title": "CISA warns on critical Armatura One and Monta EV-charging flaws",
-          "url": "https://securityboulevard.com/2026/10/daily-ot-security-news-october-04-2026/"
+          "summary": "A missing-authentication flaw (CVE-2026-67277) in MikroTik RouterOS's btest service lets unauthenticated attackers read kernel memory and crash routers. CISA confirmed active exploitation and placed it in the KEV catalog; kernel memory disclosure could expose sensitive data or enable deeper compromise.",
+          "title": "MikroTik RouterOS pre-auth flaw (CVE-2026-67277) under active exploitation",
+          "url": "https://hacknjill.com/cybersecurity/cybersecurity-threats-and-defense/cve-2026-67277-mikrotik-routeros-missing-authentication-for-critical-function-vu/"
         },
         {
-          "action": "If you run FortiMail 7.4, 7.6 or 8.0, treat the appliance as exposed: apply Fortinet's interim workarounds, restrict the admin interface, and hunt for the published IoCs (suspicious files and IPs 79.141.169.187 and 45.129.0.192).",
-          "details": "Fortinet advisory FG-IR-26-175 covers the unauthenticated path-traversal flaw in FortiMail's IBE component (CVSS 9.8), added to CISA KEV on October 1. Fixed builds now exist only for the 7.2 branch (7.2 users are told to move to 7.4+); 7.4, 7.6 and 8.0 still await undated releases, past the October 4 federal remediation deadline.",
-          "image": "https://www.enbitcon.com/media/88/27/94/1597931534/FortiMail400F_FrontTop.png?ts=1611321295",
-          "severity": "Critical",
-          "summary": "Three of four FortiMail branches remain unpatched against the actively exploited CVE-2026-104286 as CISA's remediation deadline passes.",
-          "title": "FortiMail zero-day: patches still missing for three of four branches",
-          "url": "https://deafnews.it/en/news/cybersecurity/fortinet-critical-fortimail-zero-day-patches-missing-for-three-of-four-branches"
+          "action": "Upgrade Camunda 7 to 7.24.15 or later and restrict network reachability of the Admin web application; audit environments that provision administrators via group mappings rather than the default admin group.",
+          "details": "The vulnerability is triggered only in a specific configuration state: the direct administrator group appears empty even though administrators are configured elsewhere (e.g., alternative group mappings). Published October 5; KEV/EPSS status not yet established and no confirmed in-the-wild exploitation, but advisory analysis treats reachable instances as high-priority exposure.",
+          "image": "https://opitz-consulting.com/sites/default/files/partner_camunda.jpg",
+          "severity": "High",
+          "summary": "Camunda 7 versions 7.24.0 through 7.24.14 carry an incorrect-authorization flaw (CVE-2026-77226, CVSS 8.1) in the setup endpoint that can let a remote attacker establish administrator access without credentials, then alter workflow definitions or disrupt the engine.",
+          "title": "Camunda 7 setup endpoint allows unauthenticated admin access (CVE-2026-77226)",
+          "url": "https://www.redpacketsecurity.com/cve-alert-cve-2026-77226-camunda-camunda-7/"
         }
       ],
       "title": "Act on Today"
@@ -36,40 +36,31 @@
     {
       "items": [
         {
-          "action": "Healthcare teams should treat any leak-site listing as a potential exposure event: check dark-web monitoring for patient data, prepare breach-notification steps, and do not trust the claimed data volumes.",
-          "details": "The Booba Project group reportedly listed MorseLife Health System on its victim list on October 4, with related reporting associating roughly 344 GB of allegedly stolen data. ThreatMon's verification status is 'unconfirmed threat actor claim' — a leak-site listing alone does not prove intrusion or exfiltration.",
-          "image": "https://truame.com/wp-content/uploads/2026/04/TriZetto-Data-Breach-Blog-Graphic-2-small-1024x683.png",
+          "action": "If you share suppliers, customers, or data with Onsemi, review third-party exposure, check dark-web monitoring for your domain, and treat the leak-site listing as an unconfirmed claim until the company responds.",
+          "details": "The listing was discovered on October 5 via ransomware.live tracking of Qilin's dark-web blog; no data volume, exfiltration details, or encryption confirmation accompanied the report. Qilin is one of the most active RaaS groups in 2026.",
+          "image": "https://img.trendforce.com/blog/wp-content/uploads/2025/11/26144018/Onsemi-20251126-624x328.jpg",
           "severity": "High",
-          "summary": "Booba Project claimed MorseLife Health System on October 4, alleging ~344 GB of stolen data; the claim is unverified.",
-          "title": "Booba Project claims attack on MorseLife Health System",
-          "url": "https://undercodenews.com/booba-project-claims-ransomware-attack-on-morselife-health-system-raising-concerns-over-healthcare-data-security-video/"
+          "summary": "The Qilin ransomware group added Onsemi, the semiconductor manufacturer, to its leak site on October 5. The listing is a threat-actor claim only — no official statement or independent confirmation of intrusion or exfiltration exists yet.",
+          "title": "Qilin claims attack on semiconductor maker Onsemi",
+          "url": "https://www.hookphish.com/blog/ransomware-group-qilin-hits-onsemi/"
         },
         {
-          "action": "Australian industrial firms should check backups and confirm the listing with the vendor; treat the claim as unverified until the company responds.",
-          "details": "The Qilin group published Chadwick Switchboards on its leak site on October 4. The claim is sourced from the group's dark-web blog via ransomware.live monitoring and is not independently confirmed.",
-          "image": "https://storage.ghost.io/c/c6/2f/c62fd27f-eb77-4add-bc6b-4ec865075df3/content/images/size/w720/2024/05/DALL-E-2024-05-23-16.52.56---A-digital-illustration-representing-ransomware.-The-image-shows-a-computer-screen-with-a-red-lock-icon-prominently-displayed--signifying-a-system-lock-1.webp",
+          "action": "Monitor dark-web channels for the named credential sets and rotate any exposed API keys; treat the claimed data volumes as unverified but assume the worst for the RSA key and database credentials.",
+          "details": "Infomedia A/S is a Danish media-monitoring hub serving clients including the EU Parliament and A.P. Møller-Mærsk. The claim, indexed from the group's public post on October 5, includes SQL Server 'sa' credentials for the Opoint CRM database, an RSA private key for the Export Data API, financial records tied to Danske Bank, and salary specifications for over 100 employees in Denmark and Estonia.",
+          "image": "https://racin.mk/wp-content/uploads/2025/05/20250504194348_big_730x400_62.webp",
           "severity": "High",
-          "summary": "Qilin listed Chadwick Switchboards, an Australian manufacturer, on its leak site on October 4.",
-          "title": "Qilin claims Chadwick Switchboards in Australia",
-          "url": "https://www.hendryadrian.com/ransom-chadwick-switchboards-oct-2026/"
+          "summary": "The Aurora ransomware group claimed Infomedia A/S, a Danish media-monitoring company, on October 5 — alleging ~30 GB of exfiltrated data including financial records, database credentials, and a private API key. The claim is unverified.",
+          "title": "Aurora ransomware claims Danish media monitor Infomedia, alleges 30 GB haul",
+          "url": "https://qpulse.quasarcybertech.com/news/6326/aurora-ransomware-group-claims-attack-on-infomedia-a-s-exposing-financial-data-and-api-credentials"
         },
         {
-          "action": "Municipal contractors should audit access logs and confirm whether any sensitive project data appears in dark-web monitoring.",
-          "details": "The thegentlemen group claimed Center State Engineering, a New Jersey civil engineering consultancy, on October 4, with reporting associating roughly 340 GB of data. The breach record dates the incident to October 3.",
-          "image": "https://darkdotweb.com/wp-content/uploads/2026/02/randsome-tech-DDW.webp",
+          "action": "Check dark-web monitoring for any exposure linked to your organization if you deal with Turn5; treat the leak-site claim as unverified until the company confirms.",
+          "details": "Turn5 (turn5.com) is a Pennsylvania-based automotive aftermarket retailer reporting about $84.4M in revenue with 300–500 employees. The claim, published to the group's Tor leak site on October 5 and indexed via ransomware.live, covers 328 GB across 26,503 files and 446 folders.",
+          "image": "https://blog.b-parts.com/wp-content/uploads/2022/02/OEM-and-Aftermarket-Parts.png",
           "severity": "High",
-          "summary": "The thegentlemen ransomware group claimed US-based Center State Engineering on October 4, alleging ~340 GB of data.",
-          "title": "thegentlemen claims Center State Engineering (US)",
-          "url": "https://www.hookphish.com/blog/ransomware-group-thegentlemen-hits-center-state-engineering/"
-        },
-        {
-          "action": "Brazilian technology firms should review exposure on dark-web monitoring feeds and harden backup and recovery plans.",
-          "details": "The direwolf group listed Softruck, a Brazilian software company, on October 4. The claim is unverified and based on the group's leak-site publication.",
-          "image": "https://www.ormrd.com/wp-content/uploads/2026/01/Screenshot_1-9-768x468.jpg",
-          "severity": "High",
-          "summary": "direwolf claimed Brazil's Softruck on its leak site on October 4.",
-          "title": "direwolf claims Softruck (Brazil)",
-          "url": "https://www.hookphish.com/blog/ransomware-group-direwolf-hits-softruck/"
+          "summary": "The Global Secret Group ransomware operation claimed Turn5, a US auto-parts retailer, on October 5, alleging 328 GB of encrypted/exfiltrated data across 26,503 files. The claim is unverified.",
+          "title": "Global Secret Group claims 328 GB theft from auto-parts retailer Turn5",
+          "url": "https://www.hendryadrian.com/ransom-turn5-oct-2026/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -77,36 +68,36 @@
     {
       "items": [
         {
-          "action": "Banks and financial institutions should reassess cyber-risk scenarios for payment and clearing infrastructure; no specific incident is named.",
-          "details": "The warning was reported in the October 4 India cyber-tech brief from the Centre for Police Technology in association with Algoritha Security.",
-          "image": "https://moneytimes.in/wp-content/uploads/2026/08/RBI.webp",
-          "severity": "Medium",
-          "summary": "The RBI Governor warned that the next financial crisis could begin with a cyberattack, putting systemic risk at the center of the October 4 cyber-crime roundup.",
-          "title": "RBI Governor: the next financial crisis could begin with a cyberattack",
-          "url": "https://the420.in/india-cyber-tech-brief-4-october-2026-cyber-risk-mule-accounts/"
+          "action": "For DFIR and insider-risk teams: review social-engineering awareness for staff with access to classified systems, and ensure mobile-device and messaging-app forensics capabilities cover encrypted chats, deleted artifacts, and cloud backups.",
+          "details": "The sailor was arrested in Coimbatore; the case is being investigated by the Andhra Pradesh Police Counter Intelligence wing, which is examining the suspect's electronic communications and the classification of information allegedly transmitted to a suspected Pakistani intelligence operative.",
+          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCKjD8ZzJMCNKcRW3Hgr_i0ck7GejIKH0B8l4eFtiyT3HmVPeoxjJD2XAfIrTsUiS9NhUfS6wCjcexQEqloalCDMHrr8N4-aNctrQ_Q3dGwWJw8KjEc_u2PZIpqdHh4D5_cWxznlPO9qXxGkKuWvJ4pZDH6-Bc7efsiWOrxd2owZ-Ue_jsKzPOOK19FTsX/s1700-nu-rw-lo-l85-e365/spyware.jpg",
+          "severity": "High",
+          "summary": "An Indian Navy sailor was arrested in Coimbatore in an alleged Pakistan-linked honey-trap espionage case involving leaked defence information, per the October 5 India cyber brief. Investigators are forensically examining devices and encrypted communications — a reminder that modern espionage cases are now DFIR investigations.",
+          "title": "Navy sailor arrested in alleged Pakistan-linked honey-trap espionage case",
+          "url": "https://nationalcybersecurity.com/cyber-alert-todays-biggest-cyber-crime-stories-shaking-india-5th-october-cybercrime-infosec/"
         },
         {
-          "action": "Defenders who tracked ShinyHunters-linked extortions should watch for indictments and new disclosures as cooperation proceeds.",
-          "details": "Reported in the October 4 India cyber-tech brief from the Centre for Police Technology and Algoritha Security; cooperation details have not been independently verified.",
-          "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2024/05/Hacker-Arrest-web-760x570.jpg",
+          "action": "Anyone receiving a 'digital arrest' call should disconnect immediately and report via the 1930 helpline or the National Cyber Crime Reporting Portal; no legitimate agency conducts investigations over video calls demanding money transfers.",
+          "details": "South Delhi Cyber Police arrested two men after a businessman reported being coerced over WhatsApp video by fraudsters posing as law-enforcement officials into transferring ₹6 lakh. Tracing the beneficiary infrastructure revealed at least 10 linked cybercrime complaints, transactions approaching ₹50 lakh, and suspected international links — per the October 5 India cyber brief.",
+          "image": "https://www.thecsrjournal.in/wp-content/uploads/2026/07/Lucknow-Police-Uncover-Fraud-Call-Centre-Targeting-US-Residents-696x380.jpg",
           "severity": "Medium",
-          "summary": "A suspected ShinyHunters-linked hacker was reportedly detained in Jordan and is cooperating with the FBI.",
-          "title": "Suspected ShinyHunters hacker detained in Jordan, reportedly cooperating with FBI",
-          "url": "https://the420.in/india-cyber-tech-brief-4-october-2026-cyber-risk-mule-accounts/"
+          "summary": "A Delhi digital-arrest case where a businessman lost ₹6 lakh to fraudsters posing as officials over WhatsApp video led police to a ₹50-lakh money trail across 10 complaints — with suspected international links.",
+          "title": "Delhi digital-arrest bust: ₹6-lakh case unravels ₹50-lakh trail across 10 complaints",
+          "url": "https://nationalcybersecurity.com/cyber-alert-todays-biggest-cyber-crime-stories-shaking-india-5th-october-cybercrime-infosec/"
         },
         {
-          "action": "Indian businesses should tighten account-opening verification and monitor mule-account indicators ahead of the festive season.",
-          "details": "Also in the October 4 roundup: a doctor allegedly kept under 'digital arrest' for a month lost Rs 1.78 crore, Himachal Police began systematic verification of suspicious mule accounts, and a Mumbai case exposed an emerging 'three-way call merge' fraud technique.",
-          "image": "https://www.rasra.in/wp-content/uploads/2026/08/mumbai-police-busts-fake_large_20260818055641447_80f1228_24-576x288.webp",
-          "severity": "Medium",
-          "summary": "Bhubaneswar Police busted a sophisticated mule-account network allegedly linked to foreign operators.",
-          "title": "Bhubaneswar Police bust mule-account network linked to foreign operators",
-          "url": "https://the420.in/india-cyber-tech-brief-4-october-2026-cyber-risk-mule-accounts/"
+          "action": "Internet-facing SharePoint infrastructure should be inventoried, patched, and actively hunted for historical compromise — not merely version-checked. Indian government, BFSI, and critical-infrastructure teams should assume residual risk from these old flaws.",
+          "details": "Researchers report the China-linked cluster (also tracked as Longlegs/Storm-2603) continues exploiting Microsoft SharePoint vulnerabilities against a water utility, a telecom provider, a government body, and a university — and has previously been observed targeting organisations in India. The attackers use compromised SharePoint environments to disable security controls before deploying ransomware.",
+          "image": "https://www.netstriveconsulting.com/wp-content/uploads/2026/02/data.jpg",
+          "severity": "High",
+          "summary": "The China-linked Warlock ransomware cluster continues exploiting old Microsoft SharePoint vulnerabilities against critical infrastructure — including organisations in India — using compromised SharePoint servers to disable defences and stage ransomware.",
+          "title": "Warlock ransomware keeps exploiting SharePoint flaws against critical infra, India in the blast radius",
+          "url": "https://nationalcybersecurity.com/cyber-alert-todays-biggest-cyber-crime-stories-shaking-india-5th-october-cybercrime-infosec/"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Monday, October 5 — Here's what's worth your attention today.",
+  "subtitle": "Tuesday, October 6 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
