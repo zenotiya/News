@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-05",
+  "date": "2026-10-06",
   "items": [
+    {
+      "cvss": 9.3,
+      "id": "CVE-2026-61500",
+      "severity": "Critical",
+      "summary": "Rejetto HTTP File Server 3.0.0–3.2.0 derives its session-cookie signing key from the non-cryptographic Math.random() generator and leaks generator outputs to unauthenticated clients during login, letting an attacker reconstruct the key, forge an admin session, and reach RCE via the server_code feature. VulnCheck observed active exploitation of exposed instances (US, Japan) on Oct 5, 2026; the flaw was found with Anthropic's Mythos model and fixed in 3.2.1.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61500"
+    },
     {
       "cvss": 9.8,
       "id": "CVE-2026-104286",
       "severity": "Critical",
-      "summary": "Fortinet FortiMail zero-day (advisory FG-IR-26-175) combining path traversal with NULL-byte neutralization, letting unauthenticated attackers write arbitrary files to the FortiMail OS via crafted requests to the management interface. Actively exploited in the wild; CISA added it to KEV on Oct 1, and at publication no patch existed — only interim workarounds.",
+      "summary": "Fortinet FortiMail (FG-IR-26-175) combines a path traversal flaw with improper NULL-byte neutralization, letting an unauthenticated remote attacker write arbitrary files via crafted HTTP/HTTPS requests. Fortinet confirmed zero-day exploitation in the wild with real intrusion IOCs (ld.so.preload implants, backdoor binaries); CISA added it to KEV on Oct 1, 2026 with a federal remediation deadline of Oct 4.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104286"
     },
     {
-      "cvss": 9.9,
-      "id": "CVE-2026-82041",
+      "cvss": 10.0,
+      "id": "CVE-2026-105134",
       "severity": "Critical",
-      "summary": "UTMStack's incident-command WebSocket handler (/command/{hostname} STOMP destination) applies no role check or command allowlist, so any authenticated user can send arbitrary OS commands via gRPC to every connected agent — which typically run as root/SYSTEM. Disclosed Oct 2 alongside six other UTMStack flaws; fixed in 11.2.16.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82041"
+      "summary": "Ahsay AhsayCBS up to 10.3.2 has an unauthenticated OS command injection in the Replication Receiver's /rps/api/json/UpdateReceivers.do endpoint via the 'random' argument, enabling full remote compromise. A public PoC is available; the vendor fixed it in 10.3.4. Disclosed Oct 4, 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105134"
     },
     {
-      "cvss": 9.9,
-      "id": "CVE-2026-90970",
+      "cvss": 9.8,
+      "id": "CVE-2026-105207",
       "severity": "Critical",
-      "summary": "Sandbox escape in GitLab's self-hosted AI Gateway: a logged-in user with Duo Agent Platform access can craft a flow configuration that escapes the Jinja2 prompt-template sandbox and executes arbitrary commands on the gateway host (server-side, before any LLM invocation). Affects 18.1.6–19.4.0; operators must update the Gateway image itself to 19.2.4, 19.3.2 or 19.4.1.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90970"
+      "summary": "ZITADEL 3.0.0–3.4.15 and 4.0.0 before 4.17.3 links user accounts to external identity providers without verifying a primary factor or the caller's permission, so an unauthenticated attacker who knows a victim's login name can bind their own IdP identity and sign in as the victim. Part of ZITADEL's Oct 4, 2026 authentication-bypass cluster.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105207"
     },
     {
-      "cvss": 9.5,
-      "id": "CVE-2026-88771",
+      "cvss": 9.1,
+      "id": "CVE-2026-105215",
       "severity": "Critical",
-      "summary": "Citrix NetScaler ADC/Gateway zero-day enabling unauthenticated remote code execution in default configuration, part of a cluster of eight actively attacked vulnerabilities. Google Threat Intelligence Group and Mandiant report custom WHIPSHOT web shells and SLAPSHOT tunnelers being used for persistent access against targets in Europe and North America.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88771"
-    },
-    {
-      "cvss": 9.9,
-      "id": "CVE-2026-105080",
-      "severity": "Critical",
-      "summary": "ConvertX before 0.19.0 passes Calibre recipe files straight to the ebook-convert binary without blocking them, so executable code in a .recipe or .downloaded_recipe file runs on the host (CWE-829). Disclosed Oct 3; upgrade to 0.19.0 or later.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105080"
+      "summary": "ZITADEL before 3.4.14 and 4.x before 4.16.2 has an authentication bypass in the hosted Login V1 UI: the 'external account not found' registration endpoint trusts client-supplied external identity fields without a completed IdP callback, enabling unauthenticated account pre-hijacking. Disclosed Oct 4, 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105215"
     }
   ]
 }

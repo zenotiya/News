@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-05",
+  "date": "2026-10-06",
   "items": [
     {
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini_4_cyber_evals_deepswe.gif",
-      "name": "Gemini 4 Argon",
-      "summary": "Google DeepMind's new frontier model (announced Sep 30) built for long-horizon software engineering, enterprise knowledge work and cybersecurity defense, with an industry-leading 1M output-token limit. Rollout is deliberately gated: it is available first only to vetted cyber defenders via Google's Fairwind Program (without cyber guardrails for them) at $2/$10 per million input/output tokens, with broader API access to follow.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/10/Reflection-AI-Beam.png?resize=1200,669",
+      "name": "Reflection AI Beam",
+      "summary": "Reflection AI unveiled Beam on October 5 — a 501B-parameter (23B active) text-only MoE open-weight model trained on 23.8T tokens with a 1M-token context. Reflection claims GLM-5.2-level reasoning at 3–4x less inference compute, positioning it as the first credible Western open-weight rival to DeepSeek/Qwen; weights land later this month under Apache 2.0.",
+      "url": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/"
+    },
+    {
+      "image": "https://blog.cloudflare.com/_image?href=https%3A%2F%2Fblog.cloudflare.com%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3W09VBACVT4420YA2SDXZE8.01M3W09YK4NRJQNV2S8HMMCQF0.png&w=1920&h=790&f=webp",
+      "name": "Cloudflare Clef & Clef-flash",
+      "summary": "Cloudflare's Workers AI team shipped its first in-house trained models on October 1: two open-weight (Apache 2.0) decision models that return typed probabilities instead of text. Clef (27B, on Qwen3.8-27B) and Clef-flash (9B) are Jev-API compatible, take image/video input, and post median latencies of 209ms/39ms for agent decision loops, alongside a new RL fine-tuning service.",
+      "url": "https://blog.cloudflare.com/clef-decision-models"
+    },
+    {
+      "image": "https://www.techbox.sk/wp-content/uploads/2026/03/google-gemini-logo.jpg",
+      "name": "Google Gemini 4 Argon",
+      "summary": "Google DeepMind announced Gemini 4 Argon on September 30, its new frontier model for long-horizon coding, enterprise knowledge work, and defensive cybersecurity, with an industry-leading 1M-token output limit and top scores on DeepSWE v1.1 (77.9%) and AutomationBench (51.3%). Rollout is phased — trusted cyber defenders via the Fairwind Program first, then paid API and AI Ultra customers at $2/$10 per M tokens.",
+      "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/"
     },
     {
       "image": "https://1000marcas.net/wp-content/uploads/2024/07/OpenAI-Logo.png",
-      "name": "GPT-6.1 Sol",
-      "summary": "OpenAI's new coding model (DevDay, Sep 29) that matches GPT-6 Astra on DeepSWE v1.1 at one-fifth the token price ($2/$10 per M input/output), with stronger computer-use and factuality than GPT-6 Sol. Notably, OpenAI cancelled the planned GPT-6.1 Astra upgrade after internal tests flagged higher deception rates, and introduced an 'Ultrafast' inference tier at up to 300 tokens/sec.",
-      "url": "https://itbrief.in/story/openai-launches-gpt-6-1-sol-as-cheaper-coding-model"
+      "name": "OpenAI GPT-6.1 Sol",
+      "summary": "Announced at DevDay on September 29, GPT-6.1 Sol upgrades GPT-6 Sol to near-Astra capability on agentic coding, computer use, and professional work at one-fifth of Astra's token prices ($2 input / $10 output / $0.10 cached input per M). It replaces the paused GPT-6.1 Astra as OpenAI's workhorse tier, live via API and in ChatGPT Work and Codex.",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
     },
     {
-      "image": "https://images.fonearena.com/blog/wp-content/uploads/2026/09/Claude-Sonnet-5.5-1024x538.jpg",
-      "name": "Claude Sonnet 5.5",
-      "summary": "Anthropic's second Claude 5.5-family model (Sep 28) generates output 30%+ faster than Sonnet 5 and costs up to 30% less per task at unchanged token pricing ($2/$10), jumping from 10.3% to 70.6% on Terminal-Bench 4.0. Because its cyber capabilities now rival Opus 5.5, it ships with hardened safeguards including anti-distillation classifiers and an expanded Cyber Verification Program.",
-      "url": "https://www.fonearena.com/blog/493601/anthropic-claude-sonnet-5-5-features.html"
-    },
-    {
-      "image": "https://www.cantina.security/media/logos/svg/cantina-logo-wide-orange.svg",
-      "name": "Cantina apex-flash-1",
-      "summary": "An open-weights model (released Oct 4 with Yeta Labs) fine-tuned from GLM-5.3-Flash on 150 agentic tasks built from 50 real, disclosed vulnerability cases. It solved 40/60 held-out tasks (66.7% pass@1) at an estimated $2.38 run cost versus $74.68 for Claude Opus 5 High; weights plus an 'abliterated' variant are downloadable on Hugging Face.",
-      "url": "https://www.cantina.security/apex-flash"
-    },
-    {
-      "image": "https://legaltech.nz/wp-content/uploads/2024/11/Ivo-logo-1024x591.png",
-      "name": "Ivo Sage",
-      "summary": "The first free open-source model from a legal AI company (announced Oct 1 at Ivo Inscribe): DeepSeek V4 Flash post-trained with River AI on long-horizon contract work, lifting LAB Contracts scores from 70% to 91% pass criteria at frontier-comparable quality. Attorneys and developers can download, fine-tune and build on it for free.",
-      "url": "https://www.globenewswire.com/news-release/2026/10/01/3372932/0/en/ivo-becomes-the-first-legal-ai-company-to-publish-a-free-open-source-model-post-trained-for-long-horizon-contract-work.html"
+      "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/eaa6046f4ae8c88e368c3c530c4c1312f7ff6f2e-1200x630.jpg",
+      "name": "Anthropic Claude Sonnet 5.5",
+      "summary": "Released September 28, Sonnet 5.5 is the second model in the Claude 5.5 family: 30%+ faster output than Sonnet 5, up to 30% lower cost per task at unchanged pricing ($2/$10 per M tokens), and 70.6% on Terminal-Bench 4.0 — ahead of Opus 5.5's 66.4%. It's the first Sonnet with Opus-grade cyber safeguards and distillation defenses, running at effort levels Low→Max.",
+      "url": "https://www.anthropic.com/claude-sonnet-5-5"
     }
   ]
 }

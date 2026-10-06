@@ -2,30 +2,30 @@
   "date": "2026-10-06",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 9.9,
+  "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-82041",
-      "cvss": 9.9,
-      "summary": "UTMStack's incident-command WebSocket handler (/command/{hostname} STOMP destination) applies no role check or command allowlist, so any authenticated user can send arbitrary OS commands via gRPC to every connected agent — which typically run as root/SYSTEM. Disclosed Oct 2 alongside six other UTMStack flaws; fixed in 11.2.16.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82041"
+      "id": "CVE-2026-105134",
+      "cvss": 10.0,
+      "summary": "Ahsay AhsayCBS up to 10.3.2 has an unauthenticated OS command injection in the Replication Receiver's /rps/api/json/UpdateReceivers.do endpoint via the 'random' argument, enabling full remote compromise. A public PoC is available; the vendor fixed it in 10.3.4. Disclosed Oct 4, 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105134"
     },
     {
-      "id": "CVE-2026-90970",
-      "cvss": 9.9,
-      "summary": "Sandbox escape in GitLab's self-hosted AI Gateway: a logged-in user with Duo Agent Platform access can craft a flow configuration that escapes the Jinja2 prompt-template sandbox and executes arbitrary commands on the gateway host (server-side, before any LLM invocation). Affects 18.1.6–19.4.0; operators must update the Gateway image itself to 19.2.4, 19.3.2 or 19.4.1.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90970"
+      "id": "CVE-2026-104286",
+      "cvss": 9.8,
+      "summary": "Fortinet FortiMail (FG-IR-26-175) combines a path traversal flaw with improper NULL-byte neutralization, letting an unauthenticated remote attacker write arbitrary files via crafted HTTP/HTTPS requests. Fortinet confirmed zero-day exploitation in the wild with real intrusion IOCs (ld.so.preload implants, backdoor binaries); CISA added it to KEV on Oct 1, 2026 with a federal remediation deadline of Oct 4.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104286"
     },
     {
-      "id": "CVE-2026-105080",
-      "cvss": 9.9,
-      "summary": "ConvertX before 0.19.0 passes Calibre recipe files straight to the ebook-convert binary without blocking them, so executable code in a .recipe or .downloaded_recipe file runs on the host (CWE-829). Disclosed Oct 3; upgrade to 0.19.0 or later.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105080"
+      "id": "CVE-2026-105207",
+      "cvss": 9.8,
+      "summary": "ZITADEL 3.0.0–3.4.15 and 4.0.0 before 4.17.3 links user accounts to external identity providers without verifying a primary factor or the caller's permission, so an unauthenticated attacker who knows a victim's login name can bind their own IdP identity and sign in as the victim. Part of ZITADEL's Oct 4, 2026 authentication-bypass cluster.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105207"
     }
   ],
   "model": {
-    "name": "Gemini 4 Argon",
-    "summary": "Google DeepMind's new frontier model (announced Sep 30) built for long-horizon software engineering, enterprise knowledge work and cybersecurity defense, with an industry-leading 1M output-token limit. Rollout is deliberately gated: it is available first only to vetted cyber defenders via Google's Fairwind Program (without cyber guardrails for them) at $2/$10 per million input/output tokens, with broader API access to follow.",
-    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+    "name": "Reflection AI Beam",
+    "summary": "Reflection AI unveiled Beam on October 5 — a 501B-parameter (23B active) text-only MoE open-weight model trained on 23.8T tokens with a 1M-token context. Reflection claims GLM-5.2-level reasoning at 3–4x less inference compute, positioning it as the first credible Western open-weight rival to DeepSeek/Qwen; weights land later this month under Apache 2.0.",
+    "url": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/"
   }
 }
