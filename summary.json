@@ -2,30 +2,30 @@
   "date": "2026-10-07",
   "news_count": 10,
   "cve_count": 5,
-  "worst_cvss": 10.0,
+  "worst_cvss": 9.9,
   "priorities": [
     {
-      "id": "CVE-2026-105134",
-      "cvss": 10.0,
-      "summary": "Ahsay AhsayCBS up to 10.3.2 has an unauthenticated OS command injection in the Replication Receiver's /rps/api/json/UpdateReceivers.do endpoint via the 'random' argument, enabling full remote compromise. A public PoC is available; the vendor fixed it in 10.3.4. Disclosed Oct 4, 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105134"
+      "id": "CVE-2026-90970",
+      "cvss": 9.9,
+      "summary": "A prompt-template sandbox escape in GitLab's Duo Agent Platform lets an authenticated user with custom-flow privileges execute arbitrary commands on the self-hosted AI Gateway, exposing JWT signing keys and model-provider channels. Patch to 19.2.4, 19.3.2 or 19.4.1 immediately.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90970"
+    },
+    {
+      "id": "CVE-2026-76504",
+      "cvss": 9.8,
+      "summary": "An authentication bypass in Cisco Catalyst SD-WAN Manager lets an unauthenticated remote attacker gain administrative API access through improper URI encoding handling. Cisco confirms exploitation was observed in September; patch regardless of configuration.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76504"
     },
     {
       "id": "CVE-2026-104286",
       "cvss": 9.8,
-      "summary": "Fortinet FortiMail (FG-IR-26-175) combines a path traversal flaw with improper NULL-byte neutralization, letting an unauthenticated remote attacker write arbitrary files via crafted HTTP/HTTPS requests. Fortinet confirmed zero-day exploitation in the wild with real intrusion IOCs (ld.so.preload implants, backdoor binaries); CISA added it to KEV on Oct 1, 2026 with a federal remediation deadline of Oct 4.",
+      "summary": "A path traversal in Fortinet FortiMail allows an unauthenticated attacker to write arbitrary files to the system via crafted HTTP(S) requests. CISA added it to the Known Exploited Vulnerabilities catalog on October 1 — verify vendor patch availability now.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104286"
-    },
-    {
-      "id": "CVE-2026-105207",
-      "cvss": 9.8,
-      "summary": "ZITADEL 3.0.0–3.4.15 and 4.0.0 before 4.17.3 links user accounts to external identity providers without verifying a primary factor or the caller's permission, so an unauthenticated attacker who knows a victim's login name can bind their own IdP identity and sign in as the victim. Part of ZITADEL's Oct 4, 2026 authentication-bypass cluster.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105207"
     }
   ],
   "model": {
-    "name": "Reflection AI Beam",
-    "summary": "Reflection AI unveiled Beam on October 5 — a 501B-parameter (23B active) text-only MoE open-weight model trained on 23.8T tokens with a 1M-token context. Reflection claims GLM-5.2-level reasoning at 3–4x less inference compute, positioning it as the first credible Western open-weight rival to DeepSeek/Qwen; weights land later this month under Apache 2.0.",
-    "url": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/"
+    "name": "Mistral Large 4 (\"Le Chonk\")",
+    "summary": "Mistral's biggest model yet: a 1.05-trillion-parameter natively multimodal MoE with 49B active params, 1M-token context and frontier-tier cyber/coding scores. Available via API preview now; open weights land October 27 after red-teaming with governments and cybersecurity partners.",
+    "url": "https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/"
   }
 }

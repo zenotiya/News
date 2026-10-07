@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-06",
+  "date": "2026-10-07",
   "items": [
     {
-      "image": "https://techcrunch.com/wp-content/uploads/2026/10/Reflection-AI-Beam.png?resize=1200,669",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Mistral_AI_logo_%282025%E2%80%93%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "name": "Mistral Large 4 (\"Le Chonk\")",
+      "summary": "Mistral's biggest model yet: a 1.05-trillion-parameter natively multimodal MoE with 49B active params, 1M-token context and frontier-tier cyber/coding scores. Available via API preview now; open weights land October 27 after red-teaming with governments and cybersecurity partners.",
+      "url": "https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/"
+    },
+    {
+      "image": "https://images.seeklogo.com/logo-png/68/2/reflection-ai-logo-png_seeklogo-681892.png?v=1968941788550433872",
       "name": "Reflection AI Beam",
-      "summary": "Reflection AI unveiled Beam on October 5 — a 501B-parameter (23B active) text-only MoE open-weight model trained on 23.8T tokens with a 1M-token context. Reflection claims GLM-5.2-level reasoning at 3–4x less inference compute, positioning it as the first credible Western open-weight rival to DeepSeek/Qwen; weights land later this month under Apache 2.0.",
-      "url": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/"
+      "summary": "Nvidia-backed Reflection AI unveiled Beam, its first open-weight model: a 501B-parameter MoE (23B active) for coding and agentic work that claims GLM-5.2-level reasoning at 3-4x less inference compute. Weights due under Apache 2.0 later in October; early access via waitlist.",
+      "url": "https://indianexpress.com/article/technology/artificial-intelligence/nvidia-backed-reflection-unveils-first-ai-model-to-take-on-chinese-open-models-10908391/"
     },
     {
-      "image": "https://blog.cloudflare.com/_image?href=https%3A%2F%2Fblog.cloudflare.com%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3W09VBACVT4420YA2SDXZE8.01M3W09YK4NRJQNV2S8HMMCQF0.png&w=1920&h=790&f=webp",
-      "name": "Cloudflare Clef & Clef-flash",
-      "summary": "Cloudflare's Workers AI team shipped its first in-house trained models on October 1: two open-weight (Apache 2.0) decision models that return typed probabilities instead of text. Clef (27B, on Qwen3.8-27B) and Clef-flash (9B) are Jev-API compatible, take image/video input, and post median latencies of 209ms/39ms for agent decision loops, alongside a new RL fine-tuning service.",
-      "url": "https://blog.cloudflare.com/clef-decision-models"
+      "image": "https://aleph-alpha.com/_astro/kolibri-release.CN8-ZyV1_Z1CXXEA.webp",
+      "name": "Aleph Alpha Kolibri",
+      "summary": "Aleph Alpha released Kolibri, a 78B-parameter open-weight MoE (3B active per token) purpose-built for German: German-optimized tokenizer, 23% German pretraining data, 1M context, and weights under Apache 2.0 on Hugging Face. Pitched as sovereign AI for EU public administration and industry under the EU AI Act.",
+      "url": "https://aleph-alpha.com/en/news/kolibri-sovereign-ai-made-in-germany/"
     },
     {
-      "image": "https://www.techbox.sk/wp-content/uploads/2026/03/google-gemini-logo.jpg",
-      "name": "Google Gemini 4 Argon",
-      "summary": "Google DeepMind announced Gemini 4 Argon on September 30, its new frontier model for long-horizon coding, enterprise knowledge work, and defensive cybersecurity, with an industry-leading 1M-token output limit and top scores on DeepSWE v1.1 (77.9%) and AutomationBench (51.3%). Rollout is phased — trusted cyber defenders via the Fairwind Program first, then paid API and AI Ultra customers at $2/$10 per M tokens.",
-      "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/"
+      "image": "https://i0.wp.com/fourweekmba.com/wp-content/uploads/2026/09/openai-decisions-api-finite-output-space.png?fit=2400%2C1260&ssl=1",
+      "name": "OpenAI Decisions API (public beta)",
+      "summary": "OpenAI's DevDay-launched Decisions API entered public beta: a specialized GPT-6 Luna endpoint that returns one of a developer's fixed answers with a confidence score in ~150ms (about 10x faster than the Responses API) at $0.10 per 1M input tokens, no output charges.",
+      "url": "https://ai-tldr.dev/releases/openai-decisions-api/"
     },
     {
-      "image": "https://1000marcas.net/wp-content/uploads/2024/07/OpenAI-Logo.png",
-      "name": "OpenAI GPT-6.1 Sol",
-      "summary": "Announced at DevDay on September 29, GPT-6.1 Sol upgrades GPT-6 Sol to near-Astra capability on agentic coding, computer use, and professional work at one-fifth of Astra's token prices ($2 input / $10 output / $0.10 cached input per M). It replaces the paused GPT-6.1 Astra as OpenAI's workhorse tier, live via API and in ChatGPT Work and Codex.",
-      "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
-    },
-    {
-      "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/eaa6046f4ae8c88e368c3c530c4c1312f7ff6f2e-1200x630.jpg",
-      "name": "Anthropic Claude Sonnet 5.5",
-      "summary": "Released September 28, Sonnet 5.5 is the second model in the Claude 5.5 family: 30%+ faster output than Sonnet 5, up to 30% lower cost per task at unchanged pricing ($2/$10 per M tokens), and 70.6% on Terminal-Bench 4.0 — ahead of Opus 5.5's 66.4%. It's the first Sonnet with Opus-grade cyber safeguards and distillation defenses, running at effort levels Low→Max.",
-      "url": "https://www.anthropic.com/claude-sonnet-5-5"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/af/OpenAI_logo_2025_%28wordmark%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "name": "OpenAI frontier math results",
+      "summary": "OpenAI published mathematics results from an unreleased internal frontier model — Lean proof formalizations, reasoning summaries and compute estimates — averaging about three hours of ChatGPT Pro thinking per result. The company says it is working toward releasing the model.",
+      "url": "https://www.scriptbyai.com/timeline-of-chatgpt/"
     }
   ]
 }

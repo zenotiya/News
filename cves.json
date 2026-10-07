@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-06",
+  "date": "2026-10-07",
   "items": [
     {
-      "cvss": 9.3,
-      "id": "CVE-2026-61500",
+      "cvss": 9.9,
+      "id": "CVE-2026-90970",
       "severity": "Critical",
-      "summary": "Rejetto HTTP File Server 3.0.0–3.2.0 derives its session-cookie signing key from the non-cryptographic Math.random() generator and leaks generator outputs to unauthenticated clients during login, letting an attacker reconstruct the key, forge an admin session, and reach RCE via the server_code feature. VulnCheck observed active exploitation of exposed instances (US, Japan) on Oct 5, 2026; the flaw was found with Anthropic's Mythos model and fixed in 3.2.1.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61500"
+      "summary": "A prompt-template sandbox escape in GitLab's Duo Agent Platform lets an authenticated user with custom-flow privileges execute arbitrary commands on the self-hosted AI Gateway, exposing JWT signing keys and model-provider channels. Patch to 19.2.4, 19.3.2 or 19.4.1 immediately.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90970"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-76504",
+      "severity": "Critical",
+      "summary": "An authentication bypass in Cisco Catalyst SD-WAN Manager lets an unauthenticated remote attacker gain administrative API access through improper URI encoding handling. Cisco confirms exploitation was observed in September; patch regardless of configuration.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76504"
     },
     {
       "cvss": 9.8,
       "id": "CVE-2026-104286",
       "severity": "Critical",
-      "summary": "Fortinet FortiMail (FG-IR-26-175) combines a path traversal flaw with improper NULL-byte neutralization, letting an unauthenticated remote attacker write arbitrary files via crafted HTTP/HTTPS requests. Fortinet confirmed zero-day exploitation in the wild with real intrusion IOCs (ld.so.preload implants, backdoor binaries); CISA added it to KEV on Oct 1, 2026 with a federal remediation deadline of Oct 4.",
+      "summary": "A path traversal in Fortinet FortiMail allows an unauthenticated attacker to write arbitrary files to the system via crafted HTTP(S) requests. CISA added it to the Known Exploited Vulnerabilities catalog on October 1 — verify vendor patch availability now.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104286"
     },
     {
-      "cvss": 10.0,
-      "id": "CVE-2026-105134",
+      "cvss": 9.4,
+      "id": "CVE-2026-102489",
       "severity": "Critical",
-      "summary": "Ahsay AhsayCBS up to 10.3.2 has an unauthenticated OS command injection in the Replication Receiver's /rps/api/json/UpdateReceivers.do endpoint via the 'random' argument, enabling full remote compromise. A public PoC is available; the vendor fixed it in 10.3.4. Disclosed Oct 4, 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105134"
+      "summary": "A session-fixation flaw in Zammad lets an attacker hijack a session and run code as the zammad service account, chaining with CVE-2026-102490 (local root privesc) to own the host. The pair was used in the DIVD breach by an AI agent and both are in CISA KEV.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102489"
     },
     {
-      "cvss": 9.8,
-      "id": "CVE-2026-105207",
+      "cvss": 9.3,
+      "id": "CVE-2026-21589",
       "severity": "Critical",
-      "summary": "ZITADEL 3.0.0–3.4.15 and 4.0.0 before 4.17.3 links user accounts to external identity providers without verifying a primary factor or the caller's permission, so an unauthenticated attacker who knows a victim's login name can bind their own IdP identity and sign in as the victim. Part of ZITADEL's Oct 4, 2026 authentication-bypass cluster.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105207"
-    },
-    {
-      "cvss": 9.1,
-      "id": "CVE-2026-105215",
-      "severity": "Critical",
-      "summary": "ZITADEL before 3.4.14 and 4.x before 4.16.2 has an authentication bypass in the hosted Login V1 UI: the 'external account not found' registration endpoint trusts client-supplied external identity fields without a completed IdP callback, enabling unauthenticated account pre-hijacking. Disclosed Oct 4, 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105215"
+      "summary": "Atlassian's October 5 advisory warns of unauthenticated arbitrary file access in the web root of eight self-hosted Data Center products (Jira, Confluence, Bitbucket, Bamboo, Crowd, Crucible, Fisheye). Cloud instances are already patched; upgrade on-prem to the listed fixed releases.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21589"
     }
   ]
 }
