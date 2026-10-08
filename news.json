@@ -1,34 +1,43 @@
 {
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "sections": [
     {
       "items": [
         {
-          "action": "Patch to 14.1-73.41, 13.1-64.28 (or FIPS 14.1-73.41 FIPS / 13.1-37.282) immediately; apply Citrix Global Deny Lists as interim mitigation and hunt for repeated appliance crashes.",
-          "details": "Unauthenticated attackers can crash the nsaaad authentication service with crafted SAML requests, knocking VPN/SSO offline. Affects 14.1 before 14.1-73.41 and 13.1 before 13.1-64.28 on appliances configured as SAML SP or IdP. Prior patches for CVE-2026-88771/88772 do NOT cover it — organizations that patched last week must upgrade again. Researchers are investigating possible RCE beyond DoS.",
-          "image": "https://free-images.com/md/49d6/citrix_netscaler_computer_system.jpg",
+          "action": "Patch self-hosted Data Center deployments immediately or isolate them from the internet.",
+          "details": "Attackers need the exact filename/path, but a public PoC can escalate to Jira admin. Atlassian Cloud is already patched; self-hosted instances must patch or be taken off the internet.",
           "severity": "Critical",
-          "summary": "CVE-2026-88779, a memory-overflow flaw in NetScaler ADC/Gateway SAML authentication, is being actively exploited as a zero-day; CISA added it to the KEV catalog on Oct 4 with a federal patch deadline of October 7.",
-          "title": "Citrix NetScaler SAML zero-day under active attack — CISA deadline today",
-          "url": "https://cybersecuritynews.com/citrix-netscaler-saml-0-day-vulnerability/"
+          "summary": "CVE-2026-21589 (CVSS 9.3): unauthenticated arbitrary file access across 8 Atlassian Data Center products — Jira, Confluence, Bitbucket and more. Previdian saw exploit attempts from Japan and US IPs within 2 hours of watchTowr's disclosure; a Nuclei scan template is now public.",
+          "title": "Atlassian Data Center flaw exploited within hours of public PoC",
+          "url": "https://thehackernews.com/2026/10/atlassian-data-center-flaw-draws.html",
+          "image": "https://catworkx.one/hs-fs/hubfs/2560px-Atlassian-logo.svg.png?width=2560&height=318&name=2560px-Atlassian-logo.svg.png"
         },
         {
-          "action": "Upgrade to fixed versions in a change window; if patching is delayed, restrict internet-facing access to the instances immediately.",
-          "details": "Atlassian sent customers an 'Action required' email on Oct 6. Exploitation requires knowing the exact filename and path, and directory listings are not possible — but sensitive files in some configurations raise the risk. Fixed versions are available now.",
-          "image": "https://www.pyn.ai/_astro/intg-jira.CxOZWm2d.png",
+          "action": "Apply the SMA1000 hotfix and restrict portal access from the internet.",
+          "details": "Hotfixes released Oct 6 (12.4.3-03670+, 12.5.0-03082+). No in-the-wild exploitation confirmed, but Shadowserver tracks 400+ internet-exposed appliances and SMA1000 flaws have been zero-dayed repeatedly this year.",
           "severity": "Critical",
-          "summary": "CVE-2026-21589 (CVSS 9.3) lets an unauthenticated attacker read specific files within the web application root of Bitbucket, Confluence, Jira Software, Jira Service Management, Bamboo, Crowd, Crucible and Fisheye Data Center.",
-          "title": "Atlassian warns of critical file-access flaw in datacenter products",
-          "url": "https://www.theregister.com/security/2026/10/06/atlassian-warns-of-critical-file-access-flaw-in-its-datacenter-products/5301284"
+          "summary": "CVE-2026-102255: unauthenticated server-side request forgery in the SMA1000 (6210, 7210, 8200v) WorkPlace portal lets a remote attacker issue requests as the appliance and reach internal functions.",
+          "title": "SonicWall patches CVSS 10.0 pre-auth SSRF in SMA1000",
+          "url": "https://thehackernews.com/2026/10/sonicwall-patches-cvss-100-pre.html",
+          "image": "https://www.ipcstore.com/media/catalog/product/1/0/100862370_7549101497.jpg"
         },
         {
-          "action": "Install the out-of-band cumulative updates (KB5129955–KB5129958) on all on-prem Exchange servers; confirm Exchange 2016/2019 ESU enrollment.",
-          "details": "Released Oct 2, ahead of Patch Tuesday. Exchange Online received a service-side fix (cloud customers need no action). Affected: Exchange Subscription Edition RTM, 2019 CU14/CU15, 2016 CU23 — the 2016/2019 builds need ESU Period 2 enrollment (expiring October 2026) to receive the patch. Discovered by Microsoft researcher Jan Mitchell.",
-          "image": "https://boletimsec.com/wp-content/uploads/2023/01/microsoft-exchange-hacking-min-1024x576.png",
+          "action": "Audit FortiGate admin accounts for unauthorized additions, rotate credentials, and review the joint FBI/USSS advisory.",
+          "details": "The campaign feeds INC/Lynx and Payload ransomware groups via initial access brokering; at least 12 confirmed ransomware attacks trace back to it.",
           "severity": "High",
-          "summary": "CVE-2026-96940 (CVSS 8.8): weak authorization in on-premises Exchange Server lets an authenticated attacker read other users' mailboxes — messages and attachments — within the same organization. Microsoft rates exploitation 'More Likely'.",
-          "title": "Microsoft ships out-of-band Exchange fix for mailbox-read escalation",
-          "url": "https://securityaffairs.com/200476/security/cve-2026-96940-microsoft-fixes-high-severity-exchange-server-flaw.html"
+          "summary": "The Russian-speaking FortiBleed operation has harvested credentials from 86,644+ Fortinet devices across 194 countries (credential stuffing + GPU hash cracking) and is now locking admins out of their own FortiGates by creating new accounts and deleting legitimate ones.",
+          "title": "FBI/USSS confirm FortiBleed credential-harvesting campaign still active",
+          "url": "https://www.theregister.com/security/2026/10/07/fortibleed-still-a-bleeding-nuisance-as-fbi-confirms-ongoing-attacks/5301585",
+          "image": "https://cotech.com.ar/assets/images/fortinet-1.webp"
+        },
+        {
+          "action": "Upgrade NetScaler to the fixed builds even if the September patches are installed.",
+          "details": "Distinct bug from the Sep 29 zero-days (CVE-2026-88771/88772) — appliances already patched then must upgrade again.",
+          "severity": "High",
+          "summary": "CVE-2026-88779 (CVSS 8.7 v4.0): unauthenticated memory-overflow DoS in the SAML handler of NetScaler ADC/Gateway 14.1 (before 14.1-73.41) and 13.1 (before 13.1-64.28). Norway's NSM suspects possible RCE despite Citrix's DoS classification; added to CISA KEV Oct 4.",
+          "title": "Citrix NetScaler SAML zero-day added to CISA KEV",
+          "url": "https://threatprotect.qualys.com/2026/10/05/cisa-warns-of-citrix-vulnerability-active-exploitation-in-attacks-cve-2026-88779/",
+          "image": "https://loni.ai/wp-content/uploads/2021/06/Citrix.svg"
         }
       ],
       "title": "Act on Today"
@@ -36,40 +45,28 @@
     {
       "items": [
         {
-          "action": "Treat listings as indicators of compromise; hunt for Everest tooling and watch for leaked-sample drops before concluding scope.",
-          "details": "Everest has also hit Dutch firm B-accountants. As with most leak-site claims, a listing is not proof of compromise: no victim has acknowledged an incident and no data has been independently verified.",
-          "image": "https://www.fando.com/wp-content/uploads/2024/02/Manufacturing-1536x866.jpg",
+          "details": "ASOS has not named the platform or attributed the attack; the Snowflake claim is unverified. Reported via LSE filing Oct 7.",
           "severity": "High",
-          "summary": "ThreatMon dark-web monitoring reported Everest ransomware listings for industrial manufacturer Kennametal and Dubai airline flydubai on Oct 6 — claims that remain unconfirmed by either organization.",
-          "title": "Everest claims Kennametal and flydubai in fresh victim listings",
-          "url": "https://undercodenews.com/everest-ransomware-group-adds-kennametal-and-flydubai-to-its-alleged-victim-list-video/"
+          "summary": "Hackers compromised a third-party customer-communication platform; rogue push notifications titled 'ASOS hacked' went to app users on Oct 6 claiming the 'Snowflake instance' was fully compromised, demanding contact via a Telegram channel. Basic user info (names, contact details) may have been accessed; payment-card info and passwords not believed impacted.",
+          "title": "ASOS confirms cyberattack after rogue 'hacked' push notifications",
+          "url": "https://www.securityweek.com/asos-confirms-cyberattack-data-breach/",
+          "image": "https://uploads-ssl.webflow.com/620f72a07808425a42ca75f2/64d63879ee91b562a6a0a0ce_Logo_ASOS.png"
         },
         {
-          "action": "Watch for an HHS breach filing, a leak-site claim, or a UIC statement naming affected individuals; reset UIC-linked credentials as a precaution.",
-          "details": "The responsible group, ransom demand, and scope — including whether protected health information is involved — are unconfirmed. If PHI is in scope, HIPAA breach notification to HHS follows within 60 days.",
-          "image": "https://edufever.in/colleges/wp-content/uploads/2024/06/university-of-illinois-chicago-1.webp",
+          "details": "Number of affected individuals not stated in public reporting. Notification dated Oct 6.",
           "severity": "High",
-          "summary": "Ransomware struck the University of Illinois Chicago College of Medicine with confirmed data exfiltration; UIC has acknowledged the incident.",
-          "title": "Ransomware hits UIC College of Medicine, data stolen",
-          "url": "https://0daynews.com/articles/2026-10-05-uic-college-medicine-ransomware-data-stolen/"
+          "summary": "The Japanese semiconductor test-equipment maker confirms data was exfiltrated in the Feb 15 ransomware attack, after months of investigation. Exposed PII includes contact info, dates of birth, SSNs, national IDs, driver's licenses, passports, medical and financial information.",
+          "title": "Advantest confirms personal data stolen in February ransomware attack",
+          "url": "https://www.bleepingcomputer.com/news/security/advantest-confirms-personal-information-stolen-in-ransomware-attack/",
+          "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/942958784856.png"
         },
         {
-          "action": "Monitor for sample-data drops on the LockBit leak site and any revised statement from the bank.",
-          "details": "The incident report is based on BreachSense leak monitoring; the bank's customer notice acknowledges service disruption only. Scope of any data theft is unknown.",
-          "image": "https://lexpro.blog/wp-content/uploads/2025/09/article-15.png",
-          "severity": "Medium",
-          "summary": "LockBit 3.0 listed capitalbankhaiti.biz as a victim on Oct 5; the bank posted a notice Oct 4 about server-access issues, stating customer data is not affected. Neither claim is independently confirmed.",
-          "title": "LockBit 3.0 claims Capital Bank Haiti; bank cites 'technical incident'",
-          "url": "https://www.instagram.com/p/DeIy_QjlpyI/"
-        },
-        {
-          "action": "Do not treat listings as breach confirmations; corroborate with network telemetry and leak-site evidence before alerting stakeholders.",
-          "details": "No independent evidence of data theft or encryption has surfaced for either; neither company has issued a statement.",
-          "image": "https://www.bcs.org/media/10458/red-padlock-binary-code.jpg?width=500&height=500&v=1d9f2d6dddb4c00",
-          "severity": "Medium",
-          "summary": "ThreatMon reported Akira listing Hygrade and Qilin listing Corby Rock Mill on Oct 6 — threat-intel leads, not confirmed breaches or confirmed encryption events.",
-          "title": "Akira and Qilin add Hygrade and Corby Rock Mill to victim lists",
-          "url": "https://undercodenews.com/akira-and-qilin-add-new-victims-to-ransomware-hit-lists-threatmon-reports-video/"
+          "details": "SRG targets law firms via phone calls, emails and in-person visits; the FBI warned about the group in May 2026.",
+          "severity": "High",
+          "summary": "An unknown party published alleged troves of Silent Ransom Group data — chat logs, ransom demand totals, docs, dozens of crypto wallets. Chainalysis confirmed some leaked addresses sit downstream of millions in ransomware payments, including a $10M mid-2026 payment. Reuters could not independently verify the leak's authenticity.",
+          "title": "'Luna Moth Files' leak exposes Silent Ransom Group's ransom payments",
+          "url": "https://www.reuters.com/legal/government/leak-exposes-payments-made-hacking-group-that-has-extorted-millions-law-firms-2026-10-07/",
+          "image": "https://digitrendz.blog/wp-content/uploads/2025/12/ransomware-2-780x470.webp"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -77,36 +74,32 @@
     {
       "items": [
         {
-          "action": "Policy and IR teams: track the Oct 17 order — it sets precedent on who investigates insurer breaches; Star Health customers should watch for official breach notices.",
-          "details": "MeitY told the court IRDA, not the Centre, should investigate. The petition also seeks halting Star Health's online operations and a probe into claims that the CISO sold customer data to a hacker ('xenZen').",
-          "image": "https://play-lh.googleusercontent.com/NqHk7pvp_7FRXT-B4LwKtubB6qNsacFU4JUI9UAwNrfzAWUnlVi8tW0WY5XnrCzN1HwU",
-          "severity": "High",
-          "summary": "A petition by cybersecurity researcher Himanshu Pathak before the Madras High Court seeks a probe into the alleged Star Health breach said to expose personal data of ~3.1 crore customers; Justice Dhandapani will rule on Oct 17 whether the Union government can order the inquiry.",
-          "title": "Madras HC petition seeks probe into Star Health data breach",
-          "url": "https://www.barandbench.com/news/petition-madras-high-court-seeks-probe-star-health-insurance-data-breach"
-        },
-        {
-          "action": "Customers: monitor for phishing referencing Teleforce services; validate dataset attribution (record formats, timestamps) before treating this as a confirmed breach.",
-          "details": "Threat level assessed as medium-unverified: claims could be recycled or misattributed datasets. Watch for phishing leveraging any leaked contact/telephone data.",
-          "image": "https://www.media-system.co.jp/wp/wp-content/uploads/2026/02/DTSqG_7hLWRu-4tVClE1L.png",
+          "details": "Kerala led with 35 arrests; mule commissions went up to 5%. Director Shikha Goel briefed the press Oct 7.",
           "severity": "Medium",
-          "summary": "An Oct 6 dark-web intelligence post references an alleged data exposure tied to Indian cloud-telephony provider Teleforce; the company has not confirmed any breach and no dataset size or attacker is established.",
-          "title": "Alleged Teleforce Cloud Telephony data surfaces on the dark web",
-          "url": "https://undercodenews.com/india-teleforce-cloud-telecom-data-allegedly-surfaces-on-the-dark-web-video/"
+          "summary": "TGCSB announced Oct 7 a two-week operation across six states targeting mule-account networks behind online fraud: 101 arrested (19 agents, 81 mule account holders). Investigators traced 1,172 crime links across India involving roughly ₹17 crore, linked to 51 registered cases.",
+          "title": "Telangana Cyber Security Bureau arrests 101 in six-state mule-account crackdown",
+          "url": "https://thesouthfirst.com/telangana/telangana-cyber-security-bureau-arrests-101-in-six-state-operation-against-cyber-fraud/",
+          "image": "https://telugu.themangonews.com/wp-content/uploads/2025/02/scam-in-hyderabad-1068x601.jpg"
         },
         {
-          "action": "Patch SharePoint urgently; threat-hunt for prior Warlock footholds rather than relying on current version checks.",
-          "details": "Symantec tied the same actor to active SharePoint exploitation earlier this week. Lesson for Indian government, BFSI and infra orgs: internet-facing SharePoint must be inventoried, patched and hunted for historical compromise.",
-          "image": "https://www.asksimon.ai/images/integrations/Sources-11.png",
+          "details": "Caveat: police have NOT established that Adani Gas or UCO Bank systems were hacked — the data's source (breach vs insider vs purchased databases) is still under investigation. Five earlier arrests (Surat residents) are already jailed.",
           "severity": "High",
-          "summary": "Researchers report the Warlock/Longlegs/Storm-2603 cluster continues exploiting Microsoft SharePoint vulnerabilities — including against Indian targets — to disable security controls and deploy ransomware, hitting a water utility, telecom provider, government body and university.",
-          "title": "China-linked Warlock keeps hammering SharePoint at critical infrastructure",
-          "url": "https://nationalcybersecurity.com/cyber-alert-todays-biggest-cyber-crime-stories-shaking-india-5th-october-cybercrime-infosec/"
+          "summary": "Faridabad Cyber Central Police arrested two more men — alleged ringleader Deepak Kumar Mandal (Giridih) and Anil Kumar Mandal (Deoghar) — in a case where a gang posed as Adani Gas staff, sent malicious APK 'gas bill' files and siphoned ₹5,12,334 from a victim. Police recovered data on ~20,000 Adani Gas consumers and ~1,000 UCO Bank customers; 116 people received the APKs.",
+          "title": "Data on ~20,000 Adani Gas customers found with interstate APK-fraud gang",
+          "url": "https://the420.in/faridabad-adani-gas-apk-fraud-deepak-mandal-arrest/",
+          "image": "https://www.adanilogisticspark.com/-/media/Project/AdaniLogisticsPark/Common/Our-websites-new-images/8-Adani-Gas.jpg"
+        },
+        {
+          "severity": "Medium",
+          "summary": "Surat City Cyber Crime Cell arrested Mumbai businessman Imran Khilchi on Oct 7 for allegedly lending his firm's current account to fraudsters for a ₹12,000 commission. The account was used in a fake e-commerce scheme where the complainant lost ₹5,88,909; investigators found ₹1.36 crore moved through it between April 2021 and Sept 2026.",
+          "title": "Surat cyber crime arrests Mumbai businessman over mule account",
+          "url": "https://www.nationpress.com/national/mumbai-man-held-in-surat-e-commerce-cyber-fraud",
+          "image": "https://www.deccanchronicle.com/h-upload/2025/03/07/1896870-cybercops.jpg"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Wednesday, October 7 — Here's what's worth your attention today.",
+  "subtitle": "Thursday, October 8 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
