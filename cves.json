@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "items": [
     {
       "cvss": 9.9,
-      "id": "CVE-2026-90970",
+      "id": "CVE-2026-105636",
       "severity": "Critical",
-      "summary": "A prompt-template sandbox escape in GitLab's Duo Agent Platform lets an authenticated user with custom-flow privileges execute arbitrary commands on the self-hosted AI Gateway, exposing JWT signing keys and model-provider channels. Patch to 19.2.4, 19.3.2 or 19.4.1 immediately.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90970"
+      "summary": "SSRF flaw in the open-source project-management tool Plane (before 1.4.0): the webhook delivery task follows redirects without validation, so a workspace user can point a webhook at an attacker URL that redirects to internal resources (including cloud metadata) and exfiltrate responses via webhook logs. Fixed in Plane 1.4.0.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105636"
     },
     {
-      "cvss": 9.8,
-      "id": "CVE-2026-76504",
+      "cvss": 9.9,
+      "id": "CVE-2026-82041",
       "severity": "Critical",
-      "summary": "An authentication bypass in Cisco Catalyst SD-WAN Manager lets an unauthenticated remote attacker gain administrative API access through improper URI encoding handling. Cisco confirms exploitation was observed in September; patch regardless of configuration.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76504"
+      "summary": "Missing authorization flaw in UTMStack (before 11.2.16): the command WebSocket handler applies no role check or command allowlist, so any authenticated user — regardless of role — can push arbitrary OS commands over gRPC to connected monitoring agents, where agent processes commonly run as root/SYSTEM.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82041"
     },
     {
       "cvss": 9.8,
       "id": "CVE-2026-104286",
       "severity": "Critical",
-      "summary": "A path traversal in Fortinet FortiMail allows an unauthenticated attacker to write arbitrary files to the system via crafted HTTP(S) requests. CISA added it to the Known Exploited Vulnerabilities catalog on October 1 — verify vendor patch availability now.",
+      "summary": "Path traversal flaw in Fortinet FortiMail (versions 7.2.x–8.0.1) that lets an unauthenticated remote attacker write arbitrary files to the underlying system via crafted HTTP/HTTPS requests, enabling code/command execution. Confirmed exploited in zero-day attacks; added to CISA's KEV catalog on Oct 1 with an Oct 4 federal remediation deadline.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104286"
-    },
-    {
-      "cvss": 9.4,
-      "id": "CVE-2026-102489",
-      "severity": "Critical",
-      "summary": "A session-fixation flaw in Zammad lets an attacker hijack a session and run code as the zammad service account, chaining with CVE-2026-102490 (local root privesc) to own the host. The pair was used in the DIVD breach by an AI agent and both are in CISA KEV.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102489"
     },
     {
       "cvss": 9.3,
       "id": "CVE-2026-21589",
       "severity": "Critical",
-      "summary": "Atlassian's October 5 advisory warns of unauthenticated arbitrary file access in the web root of eight self-hosted Data Center products (Jira, Confluence, Bitbucket, Bamboo, Crowd, Crucible, Fisheye). Cloud instances are already patched; upgrade on-prem to the listed fixed releases.",
+      "summary": "Arbitrary file-access vulnerability in Atlassian's self-hosted Data Center products (Jira, Confluence, Bitbucket, Bamboo, Crowd, Crucible, Fisheye) letting an unauthenticated attacker read specific files within the web application root. A public PoC was released Oct 7 and exploitation attempts are already being observed in the wild.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21589"
+    },
+    {
+      "cvss": 9.3,
+      "id": "CVE-2026-104019",
+      "severity": "Critical",
+      "summary": "OS command injection in the Studio Space startup validation script of Amazon SageMaker Distribution (2.x, 3.x, 4.0.x–4.4.x lines): an authenticated project contributor can execute arbitrary commands in another project member's Studio Space and steal that member's temporary execution-role credentials via a crafted connection-resource property.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104019"
     }
   ]
 }

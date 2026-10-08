@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "items": [
     {
-      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Mistral_AI_logo_%282025%E2%80%93%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "image": "https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp",
       "name": "Mistral Large 4 (\"Le Chonk\")",
-      "summary": "Mistral's biggest model yet: a 1.05-trillion-parameter natively multimodal MoE with 49B active params, 1M-token context and frontier-tier cyber/coding scores. Available via API preview now; open weights land October 27 after red-teaming with governments and cybersecurity partners.",
-      "url": "https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/"
+      "summary": "Mistral's largest and most capable model to date — a 1-trillion-parameter multimodal MoE (49B active parameters) trained from scratch on 3,800 NVIDIA Grace Blackwell GPUs in Europe, targeting coding, agentic workflows, cybersecurity, finance and law. Available now as a public preview with open weights promised for end of October; Mistral claims it leads open-weight models built outside China.",
+      "url": "https://mistral.ai/news/mistral-large-4/"
     },
     {
-      "image": "https://images.seeklogo.com/logo-png/68/2/reflection-ai-logo-png_seeklogo-681892.png?v=1968941788550433872",
+      "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/89e9b0fbfe0181f6ca565d913686ce8e49b5e9c2-1200x630.jpg",
+      "name": "Claude Haiku 5.5",
+      "summary": "Anthropic's cheapest, fastest small model yet — built for high-volume tasks (classification, summarization, extraction, live support, voice agents) and as a subagent to Sonnet/Opus, at ~75% lower cost than Haiku 4.5. The first Haiku with an adjustable effort setting and built-in safeguards for high-risk cybersecurity requests.",
+      "url": "https://www.anthropic.com/claude-haiku-5-5"
+    },
+    {
+      "image": "https://cdn.sanity.io/images/sp40emik/production/771cfe201a3d24d7a340c3372e6a1654ec1a6e42-1800x1013.png",
       "name": "Reflection AI Beam",
-      "summary": "Nvidia-backed Reflection AI unveiled Beam, its first open-weight model: a 501B-parameter MoE (23B active) for coding and agentic work that claims GLM-5.2-level reasoning at 3-4x less inference compute. Weights due under Apache 2.0 later in October; early access via waitlist.",
-      "url": "https://indianexpress.com/article/technology/artificial-intelligence/nvidia-backed-reflection-unveils-first-ai-model-to-take-on-chinese-open-models-10908391/"
+      "summary": "The first open-weight model from Nvidia-backed Reflection AI — a 501B-total/23B-active-parameter MoE aimed at coding and agentic tasks, positioned against Chinese open models like DeepSeek and Z.ai's GLM-5.2. The startup was founded in 2024 by ex-DeepMind researchers Misha Laskin and Ioannis Antonoglou.",
+      "url": "https://reflection.ai/blog/introducing-beam"
     },
     {
-      "image": "https://aleph-alpha.com/_astro/kolibri-release.CN8-ZyV1_Z1CXXEA.webp",
-      "name": "Aleph Alpha Kolibri",
-      "summary": "Aleph Alpha released Kolibri, a 78B-parameter open-weight MoE (3B active per token) purpose-built for German: German-optimized tokenizer, 23% German pretraining data, 1M context, and weights under Apache 2.0 on Hugging Face. Pitched as sovereign AI for EU public administration and industry under the EU AI Act.",
-      "url": "https://aleph-alpha.com/en/news/kolibri-sovereign-ai-made-in-germany/"
+      "image": "https://media.assettype.com/analyticsinsight%2F2026-10-07%2Fu2cnkwlw%2FGoogle-Nano-Banana-2.1-Brings-Sharper-Editing-and-50-Cost-Cuts.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
+      "name": "Google Nano Banana 2.1",
+      "summary": "Google's updated image generation and conversational-editing model (built on Gemini 3.6 Flash) with 1K/2K/4K outputs, multi-image fusion (up to 14 references), search grounding and stronger text rendering. Rolling out across the Gemini app, AI Studio, the Gemini API and Search AI Mode, with image API prices cut ~50% (a 1K image now costs $0.0336).",
+      "url": "https://www.analyticsinsight.net/news/google-nano-banana-21-50-cheaper-ai-image-generation"
     },
     {
-      "image": "https://i0.wp.com/fourweekmba.com/wp-content/uploads/2026/09/openai-decisions-api-finite-output-space.png?fit=2400%2C1260&ssl=1",
-      "name": "OpenAI Decisions API (public beta)",
-      "summary": "OpenAI's DevDay-launched Decisions API entered public beta: a specialized GPT-6 Luna endpoint that returns one of a developer's fixed answers with a confidence score in ~150ms (about 10x faster than the Responses API) at $0.10 per 1M input tokens, no output charges.",
-      "url": "https://ai-tldr.dev/releases/openai-decisions-api/"
-    },
-    {
-      "image": "https://upload.wikimedia.org/wikipedia/commons/a/af/OpenAI_logo_2025_%28wordmark%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "name": "OpenAI frontier math results",
-      "summary": "OpenAI published mathematics results from an unreleased internal frontier model — Lean proof formalizations, reasoning summaries and compute estimates — averaging about three hours of ChatGPT Pro thinking per result. The company says it is working toward releasing the model.",
-      "url": "https://www.scriptbyai.com/timeline-of-chatgpt/"
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/google/embeddinggemma-2.png",
+      "name": "EmbeddingGemma 2",
+      "summary": "Google DeepMind's open-weight (Apache 2.0) 740M-parameter multimodal embedding model that natively maps text, code, images, video and audio into a single 768-dim vector space — built for on-device search, classification and privacy-first RAG. Weights are live on Hugging Face and Kaggle with LiteRT/MediaPipe tooling.",
+      "url": "https://huggingface.co/google/embeddinggemma-2"
     }
   ]
 }
