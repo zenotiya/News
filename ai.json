@@ -1,35 +1,23 @@
 {
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "items": [
     {
-      "image": "https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp",
-      "name": "Mistral Large 4 (\"Le Chonk\")",
-      "summary": "Mistral's largest and most capable model to date — a 1-trillion-parameter multimodal MoE (49B active parameters) trained from scratch on 3,800 NVIDIA Grace Blackwell GPUs in Europe, targeting coding, agentic workflows, cybersecurity, finance and law. Available now as a public preview with open weights promised for end of October; Mistral claims it leads open-weight models built outside China.",
-      "url": "https://mistral.ai/news/mistral-large-4/"
+      "image": "https://image.blockchain.news:443/features/D11B7CFCA58E34BD7D45FE96B9319DC677103B086D2B5DC6241654AB7083E58E.jpg",
+      "name": "OpenAI GPT-6 with Intelligent UI",
+      "summary": "OpenAI began the global rollout of GPT-6 in ChatGPT on Oct 7, adding an Intelligent UI that renders interactive elements — charts, forms, calculators, games — inside responses instead of plain text. Paid tiers get GPT-6 Sol while Free and Go users get GPT-6 Luna, with free-tier access starting Oct 8.",
+      "url": "https://www.gadgets360.com/ai/news/openai-gpt-6-with-intelligent-ui-global-roll-out-availability-features-12157773"
     },
     {
-      "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/89e9b0fbfe0181f6ca565d913686ce8e49b5e9c2-1200x630.jpg",
-      "name": "Claude Haiku 5.5",
-      "summary": "Anthropic's cheapest, fastest small model yet — built for high-volume tasks (classification, summarization, extraction, live support, voice agents) and as a subagent to Sonnet/Opus, at ~75% lower cost than Haiku 4.5. The first Haiku with an adjustable effort setting and built-in safeguards for high-risk cybersecurity requests.",
-      "url": "https://www.anthropic.com/claude-haiku-5-5"
+      "image": "https://th-i.thgim.com/public/incoming/o5z12z/article71558629.ece/alternates/LANDSCAPE_1200/2026-10-03T050005Z_873277736_RC2UNLAN9HVH_RTRMADP_3_GLOBAL-ECONOMY-AI.JPG",
+      "name": "Anthropic Claude Haiku 5.5",
+      "summary": "Anthropic released Claude Haiku 5.5 on Oct 7, closing out the Claude 5.5 family with a 1M-token context window and aggressive pricing at $0.10/$0.50 per million tokens — a tenth of Haiku 4.5 and exactly matching OpenAI's GPT-6 Luna. It posts major agent-benchmark gains, including 72.4% on OSWorld 2.1.",
+      "url": "https://www.thehindu.com/sci-tech/technology/anthropic-introduces-claude-haiku-55-in-competition-to-cheaper-open-source-models/article71558643.ece"
     },
     {
-      "image": "https://cdn.sanity.io/images/sp40emik/production/771cfe201a3d24d7a340c3372e6a1654ec1a6e42-1800x1013.png",
-      "name": "Reflection AI Beam",
-      "summary": "The first open-weight model from Nvidia-backed Reflection AI — a 501B-total/23B-active-parameter MoE aimed at coding and agentic tasks, positioned against Chinese open models like DeepSeek and Z.ai's GLM-5.2. The startup was founded in 2024 by ex-DeepMind researchers Misha Laskin and Ioannis Antonoglou.",
-      "url": "https://reflection.ai/blog/introducing-beam"
-    },
-    {
-      "image": "https://media.assettype.com/analyticsinsight%2F2026-10-07%2Fu2cnkwlw%2FGoogle-Nano-Banana-2.1-Brings-Sharper-Editing-and-50-Cost-Cuts.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
-      "name": "Google Nano Banana 2.1",
-      "summary": "Google's updated image generation and conversational-editing model (built on Gemini 3.6 Flash) with 1K/2K/4K outputs, multi-image fusion (up to 14 references), search grounding and stronger text rendering. Rolling out across the Gemini app, AI Studio, the Gemini API and Search AI Mode, with image API prices cut ~50% (a 1K image now costs $0.0336).",
-      "url": "https://www.analyticsinsight.net/news/google-nano-banana-21-50-cheaper-ai-image-generation"
-    },
-    {
-      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/google/embeddinggemma-2.png",
-      "name": "EmbeddingGemma 2",
-      "summary": "Google DeepMind's open-weight (Apache 2.0) 740M-parameter multimodal embedding model that natively maps text, code, images, video and audio into a single 768-dim vector space — built for on-device search, classification and privacy-first RAG. Weights are live on Hugging Face and Kaggle with LiteRT/MediaPipe tooling.",
-      "url": "https://huggingface.co/google/embeddinggemma-2"
+      "image": "https://www.unite.ai/wp-content/uploads/2026/10/illumina-launches-spliceai2-model-splice-variant-interpretation.jpg",
+      "name": "Illumina SpliceAI2",
+      "summary": "Illumina launched SpliceAI2 on Oct 8, a genomic AI model from its BioInsight AI Lab that predicts how genetic variants alter RNA splicing, trained on 100x more data than its 2019 predecessor. It identified 17% more disease-relevant variants than other splicing models and joins PromoterAI and PrimateAI-3D in its genomic model suite.",
+      "url": "https://www.unite.ai/illumina-launches-spliceai2-model-for-splice-variant-interpretation/"
     }
   ]
 }

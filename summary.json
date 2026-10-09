@@ -2,30 +2,30 @@
   "date": "2026-10-09",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 9.9,
+  "worst_cvss": 9.8,
   "priorities": [
     {
-      "id": "CVE-2026-105636",
-      "cvss": 9.9,
-      "summary": "SSRF flaw in the open-source project-management tool Plane (before 1.4.0): the webhook delivery task follows redirects without validation, so a workspace user can point a webhook at an attacker URL that redirects to internal resources (including cloud metadata) and exfiltrate responses via webhook logs. Fixed in Plane 1.4.0.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105636"
-    },
-    {
-      "id": "CVE-2026-82041",
-      "cvss": 9.9,
-      "summary": "Missing authorization flaw in UTMStack (before 11.2.16): the command WebSocket handler applies no role check or command allowlist, so any authenticated user — regardless of role — can push arbitrary OS commands over gRPC to connected monitoring agents, where agent processes commonly run as root/SYSTEM.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82041"
-    },
-    {
-      "id": "CVE-2026-104286",
+      "id": "CVE-2026-105192",
       "cvss": 9.8,
-      "summary": "Path traversal flaw in Fortinet FortiMail (versions 7.2.x–8.0.1) that lets an unauthenticated remote attacker write arbitrary files to the underlying system via crafted HTTP/HTTPS requests, enabling code/command execution. Confirmed exploited in zero-day attacks; added to CISA's KEV catalog on Oct 1 with an Oct 4 federal remediation deadline.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104286"
+      "summary": "LMCache's multiprocess (distributed) mode opens an unauthenticated ZeroMQ ROUTER socket where msgpack extension code 1 is passed to pickle.loads before any handler validation, letting an unauthenticated remote attacker execute arbitrary code — as root in official container images — with a single ZMQ message. Discovered by JFrog Security Research.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105192"
+    },
+    {
+      "id": "CVE-2026-76268",
+      "cvss": 9.8,
+      "summary": "Splunk Enterprise (10.4.x before 10.4.3, 10.2.x before 10.2.7) exposes the Patroni REST API on search head cluster members without authentication for critical configuration operations, allowing any network-reachable attacker to execute attacker-controlled OS commands. Advisory SVD-2026-1001.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76268"
+    },
+    {
+      "id": "CVE-2026-107204",
+      "cvss": 9.8,
+      "summary": "LMCache through 0.5.5 contains an unauthenticated remote code execution flaw in its /run_script endpoint: remote attackers can post scripts that execute Python code and OS commands as the LMCache process, recovering real builtins through the injected FastAPI app object to bypass the guarded __import__. Disclosed by VulnCheck.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107204"
     }
   ],
   "model": {
-    "name": "Mistral Large 4 (\"Le Chonk\")",
-    "summary": "Mistral's largest and most capable model to date — a 1-trillion-parameter multimodal MoE (49B active parameters) trained from scratch on 3,800 NVIDIA Grace Blackwell GPUs in Europe, targeting coding, agentic workflows, cybersecurity, finance and law. Available now as a public preview with open weights promised for end of October; Mistral claims it leads open-weight models built outside China.",
-    "url": "https://mistral.ai/news/mistral-large-4/"
+    "name": "OpenAI GPT-6 with Intelligent UI",
+    "summary": "OpenAI began the global rollout of GPT-6 in ChatGPT on Oct 7, adding an Intelligent UI that renders interactive elements — charts, forms, calculators, games — inside responses instead of plain text. Paid tiers get GPT-6 Sol while Free and Go users get GPT-6 Luna, with free-tier access starting Oct 8.",
+    "url": "https://www.gadgets360.com/ai/news/openai-gpt-6-with-intelligent-ui-global-roll-out-availability-features-12157773"
   }
 }
