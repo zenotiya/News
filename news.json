@@ -1,34 +1,34 @@
 {
-  "date": "2026-10-09",
+  "date": "2026-10-10",
   "sections": [
     {
       "items": [
         {
-          "action": "Patch immediately to the fixed versions per product (or the latest release), or apply Atlassian's interim WAF / Tomcat RewriteValve / urlrewrite.xml mitigations and disconnect public-facing instances until patched.",
-          "details": "Atlassian disclosed the flaw in an Oct 5 advisory. watchTowr Labs published technical analysis on Oct 6 after diffing patched packages, tracing exploitation to double-colon (::) sequences treated as path separators. VulnCheck added it to its KEV list on Oct 7 citing exploitation against Bamboo Data Center, and Previdian telemetry caught 15 attempts from three IPs in Japan and the US.",
-          "image": "https://kurushin.com/wp-content/uploads/2022/12/atlassian_jira_logo_icon_170511.png",
+          "action": "Upgrade Data Center installs to the fixed releases immediately, outside the normal patch cycle; review access logs for traversal attempts since Oct 5.",
+          "details": "Disclosed Oct 5; every version before the fixed builds is affected, including unsupported ones. Technical analysis and file-read PoC scripts are now public, so attackers need only exact file paths to grab web-root config files — and Atlassian deployments follow predictable directory structures.",
+          "image": "https://cdn.prod.website-files.com/656da6fea306219773d04208/6953a9998d9c263ca1a59b63_Jira%20Software.svg",
           "severity": "Critical",
-          "summary": "A pre-authentication arbitrary file access flaw (CVSS 9.3) is being exploited in the wild across eight self-hosted Data Center products — Jira, Confluence, Bitbucket, Bamboo, Crowd, Crucible, Fisheye and Jira Service Management.",
-          "title": "Atlassian file-read flaw under active attack",
-          "url": "https://securityaffairs.com/200591/security/atlassian-vulnerability-comes-under-attack-hours-after-details-go-public.html"
+          "summary": "Atlassian patched CVE-2026-21589 (CVSS 9.3), a path-traversal flaw letting an unauthenticated remote attacker read specific files inside the web application root of Jira Software, Jira Service Management, Confluence, Bitbucket, Bamboo, Crowd, Crucible and Fisheye Data Center. Cloud is already fixed.",
+          "title": "Patch now: unauthenticated file read hits 8 Atlassian Data Center products",
+          "url": "https://www.rapid7.com/blog/post/etr-cve-2026-21589-critical-unauthenticated-arbitrary-file-access-in-atlassian-products/"
         },
         {
-          "action": "Hunt for rogue admin accounts, terminate all admin and VPN sessions, force credential resets, and switch to phishing-resistant MFA — patching alone won't evict attackers.",
-          "details": "SOCRadar verified over 86,644 compromised devices across 194 countries. Attackers steal and GPU-crack hashes (Hashcat/Hashtopolis), create persistent admin accounts, and sell working VPN configurations to ransomware affiliates — INC/Lynx and Payload activity are named as downstream buyers.",
-          "image": "https://www.corporatearmor.com/wp-content/uploads/2021/05/fortigate_200f_landing-page-graphic.png",
-          "severity": "High",
-          "summary": "The FBI and US Secret Service warned Oct 6 that the global credential-compromise campaign against exposed FortiGate firewalls and SSL VPN gateways is still ongoing — and victims are being locked out of their own appliances.",
-          "title": "FBI: FortiBleed attacks still locking out FortiGate admins",
-          "url": "https://www.scworld.com/news/fortibleed-campaign-still-attacking-fortinet-devices-us-agencies-warn"
+          "action": "Apply the platform hotfixes now; verify no rogue admin accounts or proxy paths were created on exposed appliances.",
+          "details": "Three more flaws in the same advisory: post-auth OS command injection (7.8), an Appliance Management Console Zip Slip leading to RCE (7.2), and stored XSS. Fixed in 12.4.3-03670 and 12.5.0-03082. SonicWall reports no in-the-wild exploitation yet, but this product line had zero-days exploited for weeks in July.",
+          "image": "https://content.etilize.com/Brand-Logo/1021173174.jpg?noimage=404",
+          "severity": "Critical",
+          "summary": "SonicWall's advisory SNWLID-2026-0017 fixes CVE-2026-102255, a pre-authentication SSRF in the SMA1000 WorkPlace interface (6210, 7210, 8200v) letting an unauthenticated attacker proxy requests through the appliance into internal functions.",
+          "title": "SonicWall SMA1000 pre-auth SSRF rated CVSS 10.0 — hotfix today",
+          "url": "https://cybersecuritynews.com/sonicwall-patches-sma1000-flaws/"
         },
         {
-          "action": "Update via Help → About Google Chrome, or let the normal update mechanism run.",
-          "details": "The 53 high-severity fixes include issues in ANGLE graphics, Autofill, Omnibox and Translate. Roughly $33,000 in bug bounties were disclosed; Google notes it will not reward the researcher for some AI-found reports as it pauses open-source bounties over automated submissions.",
-          "image": "https://www.modernhn.com/assets/chrome_logo-7261c532c634395fea3a636a2cb9fd2da46629c011c3b79edda2d130fa41055d.png",
-          "severity": "High",
-          "summary": "Chrome 155 (155.0.8059.39/.40) fixes 247 vulnerabilities, including four critical use-after-free flaws: CVE-2026-106382 (Chromecast), CVE-2026-106197 (Browser), CVE-2026-106358 (Navigation) and CVE-2026-106347 (Track). No in-the-wild exploitation disclosed.",
-          "title": "Chrome 155 patches 247 flaws, four of them critical",
-          "url": "https://www.securityweek.com/chrome-155-update-patches-247-vulnerabilities/"
+          "action": "Terminate all FortiGate admin and VPN sessions, reset every credential, upgrade FortiOS to complete PBKDF2 migration, enable phishing-resistant MFA, and restrict internet-facing management.",
+          "details": "Operators crack exfiltrated FortiOS hashes offline on rented GPU clusters and sell access to ransomware affiliates (INC/Lynx, Payload); at least 12 confirmed ransomware attacks trace back to FortiBleed. It can't be patched away — it rides on reused/leaked credentials and legacy SHA-256 password storage.",
+          "image": "https://www.intelligentciso.com/wp-content/uploads/sites/6/2020/03/FG_1800F_Side2_1000px-600x344.jpg",
+          "severity": "Critical",
+          "summary": "A joint FBI–US Secret Service advisory (Oct 6) warns the FortiBleed credential-harvesting campaign against internet-facing FortiGate firewalls is ongoing: 86,644 compromised devices across 194 countries, with attackers creating rogue admin accounts and locking legitimate admins out.",
+          "title": "FBI/Secret Service: FortiBleed still locking orgs out of 86K+ Fortinet devices",
+          "url": "https://thecyberexpress.com/fortibleed-campaign-hits-fortinet-devices/"
         }
       ],
       "title": "Act on Today"
@@ -36,28 +36,28 @@
     {
       "items": [
         {
-          "details": "At least 29 hospitals and health systems have publicly acknowledged impact, including Christus Health and Tri-City Medical Center. The FBI investigated the attack and reported ransom/extortion attempts. Oracle declined to comment.",
-          "image": "https://i2.wp.com/gadget.co.za/wp-content/uploads/2020/02/1280px-Oracle_Databases.jpg?fit=1280%2C780&ssl=1",
-          "severity": "Critical",
-          "summary": "A Texas Attorney General filing published Oct 2 puts the toll of the 2025 Oracle Health breach at nearly 20 million people (about 3 million Texans) — SSNs, home addresses and medical records taken from legacy Cerner servers via compromised customer credentials.",
-          "title": "Oracle Health breach toll hits ~20 million",
-          "url": "https://www.cnbctv18.com/technology/oracle-2025-health-breach-compromised-data-of-20-million-people-cybersecurity-cyberattack-fbi-social-security-number-20005294.htm"
-        },
-        {
-          "details": "Officials named 'Microscan' (scanning) and 'FishHub' (phishing) tooling operated by the Chinese firm Integrity Technology Group, which the FBI treats as the true identity of Flax Typhoon. Targets included a US power company, Japanese and Polish airports, and Taiwanese universities and critical infrastructure.",
-          "image": "https://files.cyberriskalliance.com/wp-content/uploads/2023/11/1114_fbi_seal.jpg",
+          "action": "If you run on shared cloud infrastructure, verify your off-platform backups are actually independent of the provider's control plane — this is the failure mode.",
+          "details": "JR East and JR Kyushu say up to 7.4 million email records may have leaked; Peach Aviation's itinerary-email system (~1.89M records) was disrupted. The attacker, entry vector and whether data was exfiltrated are undisclosed. Customers must restore from their own backups and rebuild in a separate environment.",
+          "image": "https://image.itmedia.co.jp/tt/news/2212/12/cover_news06.jpg",
           "severity": "High",
-          "summary": "The FBI and DOJ announced Oct 8 they seized domains and disrupted the scanning and spear-phishing tools of Flax Typhoon, a China-linked hacking operation the government says hit US and foreign critical infrastructure.",
-          "title": "FBI seizes Flax Typhoon's hacking toolkit",
-          "url": "https://beta.manilatimes.net/2026/10/09/world/americas-emea/the-fbi-has-seized-tools-used-by-chinese-hackers-for-cyber-operations-officials-say/2442357/amp"
+          "summary": "SoftBank's IDC Frontier confirmed on Oct 7 that ransomware hit East Japan Region 1 of its IDCF Cloud around 3:40 a.m., forcing isolation of the Shirakawa, Fukushima data center. 495 companies and local governments are affected; customer data in four zones is likely unrecoverable.",
+          "title": "Ransomware knocks out Japan's IDCF Cloud — 495 orgs down, data likely unrecoverable",
+          "url": "https://japancyberwatch.com/articles/idcf-cloud-unauthorized-access-outage-2026"
         },
         {
-          "details": "Tech Monitor reports seven new alleged victims, including UK fencing maker Zaun, the DIFC courts in Dubai, Bangkok's Siam Premier and Sweden's Luterkort. LockBit posted 15 victims last week. All are unverified leak-site claims until victims or investigators confirm.",
-          "image": "https://blogger.googleusercontent.com/img/a/AVvXsEgmZAP-dmcp4wbMJ64oyLXCpex5ahiGkVEShgY8mI16kXd5KQXLowMZdcFI4vtN9a_NQagpzkhmrjZy-GkP6C1M2dp-Ni7X6GanUycaan0ch_JLMM90hS0rFJnMU9HFtTbImFYZiJOIjsX_pDj2KBMsMMjtVBYo6bHhR35Qj81I6HcUOvmjKumBRww040Ek",
+          "details": "No ransomware group ever claimed the attack, and the company says it has no evidence the data was publicly disclosed or misused. Regulatory filings surfaced in California (500+ residents), Vermont and Massachusetts — a case study in how long 'we don't know yet' can legally stretch.",
+          "severity": "High",
+          "summary": "Japanese chip-test-equipment giant Advantest confirmed on Oct 6 that data was exfiltrated in the February 2026 ransomware incident: names, dates of birth, SSNs, passport and driver's license numbers, national IDs, plus medical and financial information.",
+          "title": "Advantest confirms data theft — eight months after the February ransomware hit",
+          "url": "https://labs.cosmicbytez.ca/news/2026-10-07-advantest-discloses-data-breach-months-after-ransomware-attack"
+        },
+        {
+          "details": "All three follow the double-extortion playbook: exfiltrate first, then threaten publication. Healthcare remains a premium target because patient-data sensitivity and downtime pressure raise payment odds.",
+          "image": "https://www.experten.de/content.4927326.images.qkzbq.Hacker-284296472-AS-Sergey-Nivens.jpg",
           "severity": "Medium",
-          "summary": "LockBit 5.0 listed new victims on its leak site this week, including AVSA (avsa.com.ar), an Argentina-based capital-markets firm — pure extortion leverage at this stage, not confirmed compromise.",
-          "title": "LockBit 5.0 keeps naming new victims",
-          "url": "https://www.techmonitor.ai/?p=400329"
+          "summary": "New leak-site listings this week: Nightspire claims KC Pharmaceuticals (US healthcare, listed Oct 9), Silentransomgroup claims law firm O'Hagan Meyer (Oct 8), and Anubis claims Mynd Group with property-owner data exfiltration (Oct 9).",
+          "title": "Leak-site watch: Nightspire claims KC Pharmaceuticals; Silentransomgroup hits O'Hagan Meyer",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/kc-pharmaceuticals-inc-nightspire-2026"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -65,33 +65,34 @@
     {
       "items": [
         {
-          "details": "Investigators traced 1,172 crime links across India (206 to Telangana). Some of those arrested are linked to dozens of cases each, including a Tata Capital employee and a Flipkart employee whose accounts were allegedly used for fraud.",
-          "image": "https://inc42.com/wp-content/uploads/2023/03/Cyberabad-Police-busted-Online-fraudsters-feature-1-760x570.png",
+          "action": "If you run Checkmarx or share sensitive client data with Big Four firms, inventory where your documents sit on their platforms and ask what controls cover them.",
+          "details": "EY notified regulators in California, Texas, Massachusetts and Vermont, and says broader enterprise systems were unaffected. Experts note this follows the 2023 MOVEit breach that hit 30,210 Bank of America clients — and flag AI tooling plus third-party software as the widening risk surface at the Big Four.",
+          "image": "https://eytaxworkflow.ey.com/images/background-login.jpg",
           "severity": "High",
-          "summary": "The Telangana Cyber Security Bureau arrested 101 people in a two-week, multi-state sweep targeting the mule-account and KYC-document infrastructure behind cyber fraud — tracing a ₹17 crore fraud trail across six states.",
-          "title": "Telangana nabs 101 in six-state mule-network sweep",
-          "url": "https://www.thehindu.com/news/national/telangana/101-held-in-tgcsbs-six-state-sweep-17-crore-cyber-fraud-trail-uncovered/article71554622.ece"
+          "summary": "EY told affected clients an unauthorized third party accessed an IT-team platform between March 28 and April 12, 2026 via a Checkmarx software vulnerability, downloading documents for several tax-services clients — reportedly linked to Goldman Sachs and Man Group.",
+          "title": "EY breach via Checkmarx flaw puts Big Four client-data controls in the spotlight",
+          "url": "https://ciso.economictimes.indiatimes.com/news/data-breaches/ey-data-breach-puts-spotlight-on-data-security-at-big-four-as-clients-demand-tighter-controls/134846327"
         },
         {
-          "details": "The accused allegedly kept 13% commission, bought USDT and transferred it to Dubai-based wallets. Police recovered a phone with details of 79 bank accounts; NCCRP checks revealed 53 complaints across 18 states and UTs.",
-          "image": "https://tethernews.com/wp-content/uploads/2025/11/15-6.webp",
-          "severity": "High",
-          "summary": "Surat Cyber Crime Cell arrested a Porbandar man for allegedly funneling cyber-fraud proceeds — withdrawn via ATMs and cheques — into USDT wallets on instructions from a Dubai-based handler.",
-          "title": "Surat busts ₹11 crore fraud trail routed to Dubai via USDT",
-          "url": "https://english.punjabkesari.com/india/chinese-handlers-dubai-link-gujarat-police-uncover-rs-11-crore-cyber-fraud-trail/amp/"
-        },
-        {
-          "details": "The APKs were disguised as senior-citizen cards, life certificates, traffic challans and credit-card update apps. Police seized a laptop, phones, hard disks and server infrastructure, and the number of linked victims may rise as the probe widens to the buyers.",
-          "image": "https://images.news18.com/ibnlive/uploads/2020/09/1601369415_phishing-tool-android-phones-alien-cerberus-threatfabric.jpg",
+          "details": "Manufacturing targets are prized because production downtime converts directly to financial loss. India ranks #8 worldwide for ransomware disclosures, with 485 victims in the tracking database.",
+          "image": "https://www.oswalvalves.com/lib/blogs/thumbs/1776638431_valve-manufacturing.jpg",
           "severity": "Medium",
-          "summary": "Mumbai Police arrested an Indore software developer who allegedly built and sold 2,805 malicious Android apps to cybercrime gangs — linked to at least 9,673 victims and an estimated ₹150 crore in fraud.",
-          "title": "Developer behind 2,805 malicious APKs arrested",
-          "url": "https://www.thehindu.com/news/national/maharashtra/mumbai-police-arrest-software-developer-from-madhya-pradesh-for-cyber-fraud/article71548011.ece"
+          "summary": "The Eclipse ransomware group listed simplexengg.in on its leak site on Oct 8, 2026. The Indian manufacturing-sector firm is now in double-extortion territory: data exfiltrated before encryption, publication threatened.",
+          "title": "Eclipse ransomware lists Indian engineering firm simplexengg.in",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/simplexengg-in-eclipse-2026"
+        },
+        {
+          "details": "The Oct 9 roundup also flags a Hyderabad loan-app extortion probe and the Centre's new AI regulatory framework bringing deepfakes and agentic AI under scrutiny.",
+          "image": "https://sw24news.com/wp-content/uploads/2026/08/upi_alert_7A_99_1-860x484.jpg",
+          "severity": "Medium",
+          "summary": "Gujarat Cyber Police uncovered a ₹11-crore fraud trail across 79 mule accounts run by Dubai-based operators, and the CBI sought prosecution sanction against six IAS officers in a ₹504-crore banking fraud case. Separately, the PM called for a global mechanism against cyber fraud and deepfakes.",
+          "title": "Oct 9 India cyber roundup: ₹11-cr mule network busted; PM pushes global anti-fraud mechanism",
+          "url": "https://the420.in/india-cyber-tech-news-9-october-2026/"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Friday, October 9 — Here's what's worth your attention today.",
+  "subtitle": "Saturday, October 10 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
