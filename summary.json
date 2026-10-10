@@ -5,27 +5,27 @@
   "worst_cvss": 9.8,
   "priorities": [
     {
-      "id": "CVE-2026-105192",
+      "id": "CVE-2026-76465",
       "cvss": 9.8,
-      "summary": "LMCache's multiprocess (distributed) mode opens an unauthenticated ZeroMQ ROUTER socket where msgpack extension code 1 is passed to pickle.loads before any handler validation, letting an unauthenticated remote attacker execute arbitrary code — as root in official container images — with a single ZMQ message. Discovered by JFrog Security Research.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105192"
+      "summary": "Cisco Nexus 3000 and 9000 Series switches: an unauthenticated, remote attacker can execute arbitrary code via crafted MPLS OAM packets, disclosed in Cisco's October 7 NX-OS security bundle. Switches are management-plane-adjacent, so patching should take priority in enterprise networks.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76465"
     },
     {
-      "id": "CVE-2026-76268",
+      "id": "CVE-2026-76471",
       "cvss": 9.8,
-      "summary": "Splunk Enterprise (10.4.x before 10.4.3, 10.2.x before 10.2.7) exposes the Patroni REST API on search head cluster members without authentication for critical configuration operations, allowing any network-reachable attacker to execute attacker-controlled OS commands. Advisory SVD-2026-1001.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76268"
+      "summary": "Cisco NX-OS Software NX-API remote code execution: unauthenticated attackers can run arbitrary commands with elevated privileges through the NX-API interface on Nexus switches. Part of the same October 7 Cisco bundle; exposed management APIs make this a strong wormable target.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76471"
     },
     {
-      "id": "CVE-2026-107204",
+      "id": "CVE-2026-78406",
       "cvss": 9.8,
-      "summary": "LMCache through 0.5.5 contains an unauthenticated remote code execution flaw in its /run_script endpoint: remote attackers can post scripts that execute Python code and OS commands as the LMCache process, recovering real builtins through the injected FastAPI app object to bypass the guarded __import__. Disclosed by VulnCheck.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107204"
+      "summary": "IBM Security Verify Access 10.0 through 10.0.9.2 and IBM Verify Identity Access 11.0 through 11.0.3: an insecure deserialization flaw lets a remote unauthenticated attacker execute arbitrary code, disclosed October 8. Identity infrastructure is a crown jewel, so treat this as an emergency patch.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78406"
     }
   ],
   "model": {
-    "name": "OpenAI GPT-6 with Intelligent UI",
-    "summary": "OpenAI began the global rollout of GPT-6 in ChatGPT on Oct 7, adding an Intelligent UI that renders interactive elements — charts, forms, calculators, games — inside responses instead of plain text. Paid tiers get GPT-6 Sol while Free and Go users get GPT-6 Luna, with free-tier access starting Oct 8.",
-    "url": "https://www.gadgets360.com/ai/news/openai-gpt-6-with-intelligent-ui-global-roll-out-availability-features-12157773"
+    "name": "OpenAI GPT-6 rollout + Intelligent UI",
+    "summary": "OpenAI rolled GPT-6 out to all ChatGPT tiers on October 7 (GPT-6 Sol for paid plans, GPT-6 Luna for Free/Go) alongside 'Intelligent UI', which lets the model answer with interactive charts, tappable buttons, forms and generated mini-tools instead of plain text. For ChatGPT's 1.2 billion weekly users, it is the biggest visible change to the interface since the product launched.",
+    "url": "https://aiweekly.co/alerts/openai-launches-chatgpt-intelligent-ui-alongside-gpt-6"
   }
 }
