@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-10",
+  "date": "2026-10-11",
   "items": [
     {
-      "image": "https://cdn.prod.website-files.com/66c5f7a83b0551f03aa4f983/6716214f93a1f48162872de0_GPT-p-500.jpg",
-      "name": "OpenAI GPT-6 rollout + Intelligent UI",
-      "summary": "OpenAI rolled GPT-6 out to all ChatGPT tiers on October 7 (GPT-6 Sol for paid plans, GPT-6 Luna for Free/Go) alongside 'Intelligent UI', which lets the model answer with interactive charts, tappable buttons, forms and generated mini-tools instead of plain text. For ChatGPT's 1.2 billion weekly users, it is the biggest visible change to the interface since the product launched.",
-      "url": "https://aiweekly.co/alerts/openai-launches-chatgpt-intelligent-ui-alongside-gpt-6"
+      "image": "https://www.hindustantimes.com/ht-img/img/2026/10/08/1600x900/logo/GPT-6-with-Intelligent-UI-is-now-rolling-out-globa_1791426709718_XsoQ.jpg",
+      "name": "OpenAI GPT-6 with Intelligent UI",
+      "summary": "OpenAI rolled GPT-6 into ChatGPT for all tiers on Oct 7-8, adding \"Intelligent UI\" - answers composed from text, visuals, charts, forms and interactive tools the user can operate inline, with answers starting to stream 44% sooner. It shifts ChatGPT from a text chatbot toward a task-specific software generator.",
+      "url": "https://openai.com/index/gpt-6-for-everyone/"
     },
     {
-      "image": "https://vzblmarketing.com/assets/logo-claude-DraTWU7k.png",
-      "name": "Anthropic Claude Haiku 5.5",
-      "summary": "Anthropic released Claude Haiku 5.5 on October 7 with API prices cut 90% for requests under 100,000 tokens ($0.10 input / $0.50 output per million), exactly matching OpenAI's GPT-6 Luna. It is Anthropic's fastest model yet, gains a one-million-token context window and an adjustable effort setting so developers can trade cost against intelligence.",
-      "url": "https://venturebeat.com/technology/anthropic-launches-claude-haiku-5-5-with-90-api-price-reduction-matching-gpt-6-luna"
+      "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/89e9b0fbfe0181f6ca565d913686ce8e49b5e9c2-1200x630.jpg",
+      "name": "Claude Haiku 5.5",
+      "summary": "Anthropic's third Claude 5.5 release (Oct 7): its cheapest, fastest, most capable small model at ~75% cheaper than Haiku 4.5, with 1M-token context, 128K max output, and the first Haiku with adjustable effort / adaptive thinking. Benchmarked head-to-head against OpenAI's GPT-6 Luna, it anchors the high-volume agentic subagent tier.",
+      "url": "https://www.anthropic.com/claude-haiku-5-5"
     },
     {
-      "image": "https://techcrunch.com/wp-content/uploads/2025/02/GjsjauvbsAAgUtD.jpeg?w=900",
-      "name": "Nous Research Hermes for Businesses",
-      "summary": "Nous Research confirmed a $90M Series B at a $1.5B valuation on October 7 to commercialize its open-source Hermes agent framework, which has been cloned over 24 million times and now drives roughly 2.5% of global AI token usage. The raise funds 'Hermes for Businesses', a paid enterprise version with private deployment, SSO and audit for companies running customized agents.",
-      "url": "https://techcrunch.com/2026/10/07/nous-research-confirms-it-hit-1-5b-valuation-launches-ai-agents-for-business-users/"
+      "image": "https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp",
+      "name": "Mistral Large 4",
+      "summary": "Mistral's largest model (public preview Oct 6): ~1-trillion-parameter natively multimodal MoE, trained from scratch on 3,800 Nvidia Grace Blackwell GPUs in Mistral's own European datacenters. Pitched as the strongest open-weight model built outside China, with weights promised by end of October - a European AI sovereignty play.",
+      "url": "https://mistral.ai/news/mistral-large-4/"
     },
     {
-      "image": "https://iphoneislam.com/wp-content/uploads/2025/08/mistral-ai.jpg",
-      "name": "Mistral Large 4 ('Le Chonk')",
-      "summary": "Mistral AI launched its flagship Mistral Large 4 on October 6: a natively multimodal mixture-of-experts model with 1 trillion total parameters and 52B active per token, trained from scratch on 3,800 Nvidia Grace Blackwell GPUs in its own European data centers. It ships first as a public preview API with open weights promised by the end of October, pitched as Europe's answer to Chinese open-weight models like Kimi K3.",
-      "url": "https://www.thehindu.com/sci-tech/technology/mistral-unveils-le-chonk-to-compete-with-chinese-open-weight-ai-models/article71554171.ece"
-    },
-    {
-      "image": "https://www.cryptopolitan.com/wp-content/uploads/2026/10/2026-10-06-reflection-ai-beam-early-access-open-weights-01.png",
+      "image": "https://cdn.sanity.io/images/sp40emik/production/771cfe201a3d24d7a340c3372e6a1654ec1a6e42-1800x1013.png",
       "name": "Reflection AI Beam",
-      "summary": "The Nvidia-backed US startup unveiled Beam on October 5, its first open-weight model: a 501B-parameter MoE with only 23B active per token, which the company claims matches Z.ai's GLM-5.2 on reasoning at 3-4x less inference compute. Final red-teaming wraps this month, with weights, technical report and model card shipping under Apache 2.0 later in October.",
-      "url": "https://www.cryptopolitan.com/reflection-ai-beam-early-access-open-weights/"
+      "summary": "Nvidia-backed Reflection's first open-weight model (announced Oct 5): 501B-parameter text-only sparse MoE with just 23B active per token, pretrained on 23.8T tokens and RL-tuned on 10,500 GB300 GPUs. The pitch is inference efficiency - GLM-5.2-level reasoning at 3-4x less compute - positioning it as the Western open-weight answer to Chinese labs.",
+      "url": "https://reflection.ai/blog/introducing-beam/"
+    },
+    {
+      "image": "https://static.digit.in/sundar-pichai-google.png",
+      "name": "Nano Banana 2.1",
+      "summary": "Google's upgraded image-generation/editing model (GA Oct 6, built on Gemini 3.6 Flash): 1K/2K/4K generation, up to 14 reference images for multi-image fusion, 4-character consistency, and clearer in-image text at roughly half the API price of Nano Banana 2. Rolling out across the Gemini app, AI Mode in Search, AI Studio, Flow and Stitch.",
+      "url": "https://www.digit.in/news/general/google-unveils-gemini-nano-banana-21-and-embeddinggemma-2-ai-models-check-key-updates.html/amp/"
     }
   ]
 }
