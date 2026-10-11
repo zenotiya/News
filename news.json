@@ -1,34 +1,34 @@
 {
-  "date": "2026-10-10",
+  "date": "2026-10-11",
   "sections": [
     {
       "items": [
         {
-          "action": "Upgrade Data Center installs to the fixed releases immediately, outside the normal patch cycle; review access logs for traversal attempts since Oct 5.",
-          "details": "Disclosed Oct 5; every version before the fixed builds is affected, including unsupported ones. Technical analysis and file-read PoC scripts are now public, so attackers need only exact file paths to grab web-root config files — and Atlassian deployments follow predictable directory structures.",
-          "image": "https://cdn.prod.website-files.com/656da6fea306219773d04208/6953a9998d9c263ca1a59b63_Jira%20Software.svg",
+          "action": "Upgrade FortiMail to 8.0.2, 7.6.7 or 7.4.9+ immediately; 7.2 users must migrate to 7.4+. Internet-facing appliances should be checked against Fortinet's IOCs (rogue liblog.so, ld.so.preload entries) — patching does not evict an existing implant.",
+          "details": "Fortinet disclosed the flaw on Oct 1 in advisory FG-IR-26-175 (path traversal + NULL-byte neutralization in the IBE request handler), confirmed in-the-wild exploitation as a zero-day, and CISA added it to the KEV catalog the same day. Attackers are using the file-write to implant persistent linker preloads and backdoor services on mail appliances.",
+          "image": "https://www.enbitcon.de/media/88/27/94/1597931534/FortiMail400F_FrontTop.png?ts=1611321295",
           "severity": "Critical",
-          "summary": "Atlassian patched CVE-2026-21589 (CVSS 9.3), a path-traversal flaw letting an unauthenticated remote attacker read specific files inside the web application root of Jira Software, Jira Service Management, Confluence, Bitbucket, Bamboo, Crowd, Crucible and Fisheye Data Center. Cloud is already fixed.",
-          "title": "Patch now: unauthenticated file read hits 8 Atlassian Data Center products",
-          "url": "https://www.rapid7.com/blog/post/etr-cve-2026-21589-critical-unauthenticated-arbitrary-file-access-in-atlassian-products/"
+          "summary": "Fortinet confirms CVE-2026-104286 (CVSS 9.8) — an unauthenticated arbitrary file write in FortiMail's Identity-Based Encryption handler — is being actively exploited as a zero-day.",
+          "title": "FortiMail zero-day CVE-2026-104286 under active exploitation",
+          "url": "https://brandefense.io/blog/cve-2026-104286-fortimail-zero-day/"
         },
         {
-          "action": "Apply the platform hotfixes now; verify no rogue admin accounts or proxy paths were created on exposed appliances.",
-          "details": "Three more flaws in the same advisory: post-auth OS command injection (7.8), an Appliance Management Console Zip Slip leading to RCE (7.2), and stored XSS. Fixed in 12.4.3-03670 and 12.5.0-03082. SonicWall reports no in-the-wild exploitation yet, but this product line had zero-days exploited for weeks in July.",
-          "image": "https://content.etilize.com/Brand-Logo/1021173174.jpg?noimage=404",
+          "action": "Upgrade to NetScaler ADC/Gateway 14.1-73.46+ or 13.1-64.29+ (FIPS 14.1-73.46) as soon as possible.",
+          "details": "The memory overflow flaw's impact depends on configuration — deployments running NetScaler as a SAML service provider or identity provider face both remote code execution and denial-of-service risk. Citrix says it is not aware of attacks in the wild so far.",
+          "image": "https://loni.ai/wp-content/uploads/2021/06/Citrix.svg",
           "severity": "Critical",
-          "summary": "SonicWall's advisory SNWLID-2026-0017 fixes CVE-2026-102255, a pre-authentication SSRF in the SMA1000 WorkPlace interface (6210, 7210, 8200v) letting an unauthenticated attacker proxy requests through the appliance into internal functions.",
-          "title": "SonicWall SMA1000 pre-auth SSRF rated CVSS 10.0 — hotfix today",
-          "url": "https://cybersecuritynews.com/sonicwall-patches-sma1000-flaws/"
+          "summary": "Citrix patched CVE-2026-107406 (CVSS 9.5), a critical memory-overflow flaw in NetScaler ADC and Gateway that can lead to remote code execution or DoS under specific configurations.",
+          "title": "Citrix patches critical NetScaler RCE CVE-2026-107406",
+          "url": "https://securityaffairs.com/200670/security/cve-2026-107406-citrix-fixes-critical-netscaler-adc-and-gateway-vulnerability.html"
         },
         {
-          "action": "Terminate all FortiGate admin and VPN sessions, reset every credential, upgrade FortiOS to complete PBKDF2 migration, enable phishing-resistant MFA, and restrict internet-facing management.",
-          "details": "Operators crack exfiltrated FortiOS hashes offline on rented GPU clusters and sell access to ransomware affiliates (INC/Lynx, Payload); at least 12 confirmed ransomware attacks trace back to FortiBleed. It can't be patched away — it rides on reused/leaked credentials and legacy SHA-256 password storage.",
-          "image": "https://www.intelligentciso.com/wp-content/uploads/sites/6/2020/03/FG_1800F_Side2_1000px-600x344.jpg",
+          "action": "Inventory Nexus 3000/9000 switches running NX-OS and Smart License On-Prem/Manager installs; plan the October security-hardening updates now — several flaws score 9.8–10.0.",
+          "details": "Highlights: Nexus 3000/9000 MPLS OAM RCE (CVE-2026-76465, 9.8), NGOAM RCE trio (CVE-2026-76485/86/76501, 9.8), NX-API RCE (CVE-2026-76471, 9.8), plus Smart License On-Prem CVEs rated 10.0 (CVE-2026-76480 series). Under Cisco's risk-based disclosure, advisories publish on the first and third Wednesday of each month.",
+          "image": "https://cdn.cs.1worldsync.com/1c/b5/1cb5cb5e-8b9b-4085-87ec-1d3c86302b30.jpg",
           "severity": "Critical",
-          "summary": "A joint FBI–US Secret Service advisory (Oct 6) warns the FortiBleed credential-harvesting campaign against internet-facing FortiGate firewalls is ongoing: 86,644 compromised devices across 194 countries, with attackers creating rogue admin accounts and locking legitimate admins out.",
-          "title": "FBI/Secret Service: FortiBleed still locking orgs out of 86K+ Fortinet devices",
-          "url": "https://thecyberexpress.com/fortibleed-campaign-hits-fortinet-devices/"
+          "summary": "Cisco's October security bundle packs a stack of Critical advisories for NX-OS (9.8 RCEs via MPLS OAM, NGOAM and NX-API), Smart License On-Prem (CVSS 10.0) and APIC.",
+          "title": "Cisco October bundle: Critical 9.8–10.0 RCEs hit NX-OS and licensing gear",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-notice-fBn58ELx"
         }
       ],
       "title": "Act on Today"
@@ -36,28 +36,28 @@
     {
       "items": [
         {
-          "action": "If you run on shared cloud infrastructure, verify your off-platform backups are actually independent of the provider's control plane — this is the failure mode.",
-          "details": "JR East and JR Kyushu say up to 7.4 million email records may have leaked; Peach Aviation's itinerary-email system (~1.89M records) was disrupted. The attacker, entry vector and whether data was exfiltrated are undisclosed. Customers must restore from their own backups and rebuild in a separate environment.",
-          "image": "https://image.itmedia.co.jp/tt/news/2212/12/cover_news06.jpg",
+          "details": "The listing, spotted Oct 9 on the Ransomware.live tracker, ties the exposure to the 'Cavalier' infostealer family. HudsonRock-linked reporting puts 615 employee accounts, 10,808 user accounts and 1,134 third-party credentials at risk, with ParanoidLab flagging ~300,000 exposed passwords. No official Deloitte statement on this specific claim yet.",
+          "image": "https://www.itsec.ru/hs-fs/hubfs/ISR/0gvjbzzqe443t9v97nx8qny1h51dt3id.png?width=768&name=0gvjbzzqe443t9v97nx8qny1h51dt3id.png",
           "severity": "High",
-          "summary": "SoftBank's IDC Frontier confirmed on Oct 7 that ransomware hit East Japan Region 1 of its IDCF Cloud around 3:40 a.m., forcing isolation of the Shirakawa, Fukushima data center. 495 companies and local governments are affected; customer data in four zones is likely unrecoverable.",
-          "title": "Ransomware knocks out Japan's IDCF Cloud — 495 orgs down, data likely unrecoverable",
-          "url": "https://japancyberwatch.com/articles/idcf-cloud-unauthorized-access-outage-2026"
+          "summary": "Thegentlemen ransomware group listed Deloitte on its leak site on Oct 9 — an unverified claim linked to Cavalier infostealer activity, per dark-web trackers.",
+          "title": "Thegentlemen ransomware group names Deloitte on its leak site",
+          "url": "https://qpulse.quasarcybertech.com/news/6574/deloitte-targeted-by-thegentlemen-ransomware-group-following-cavalier-infostealer-infection"
         },
         {
-          "details": "No ransomware group ever claimed the attack, and the company says it has no evidence the data was publicly disclosed or misused. Regulatory filings surfaced in California (500+ residents), Vermont and Massachusetts — a case study in how long 'we don't know yet' can legally stretch.",
+          "details": "The alleged loot includes tens of thousands of medical faxes (2022–2026) with patient names and diagnoses, methadone clinic records under 42 CFR Part 2, 47,602 medical-assistance files with driver licenses and SSN cards, county payroll registers and jail gang-intelligence files.",
+          "image": "https://fcc.cc/api/ext/img?url=https%3A%2F%2Fmarylandmatters.org%2Fwp-content%2Fuploads%2F2024%2F09%2FIMG_7655-newsletter-1024x683.jpeg&w=1280",
           "severity": "High",
-          "summary": "Japanese chip-test-equipment giant Advantest confirmed on Oct 6 that data was exfiltrated in the February 2026 ransomware incident: names, dates of birth, SSNs, passport and driver's license numbers, national IDs, plus medical and financial information.",
-          "title": "Advantest confirms data theft — eight months after the February ransomware hit",
-          "url": "https://labs.cosmicbytez.ca/news/2026-10-07-advantest-discloses-data-breach-months-after-ransomware-attack"
+          "summary": "Rhysida claims Anne Arundel County, Maryland, listing 814,500 files (2.6 TB) — including background-check dossiers with full SSNs, medical faxes and payroll registers.",
+          "title": "Rhysida claims Anne Arundel County: 2.6 TB of citizen data on the block",
+          "url": "https://www.hookphish.com/blog/ransomware-group-rhysida-hits-anne-arundel-county/"
         },
         {
-          "details": "All three follow the double-extortion playbook: exfiltrate first, then threaten publication. Healthcare remains a premium target because patient-data sensitivity and downtime pressure raise payment odds.",
-          "image": "https://www.experten.de/content.4927326.images.qkzbq.Hacker-284296472-AS-Sergey-Nivens.jpg",
-          "severity": "Medium",
-          "summary": "New leak-site listings this week: Nightspire claims KC Pharmaceuticals (US healthcare, listed Oct 9), Silentransomgroup claims law firm O'Hagan Meyer (Oct 8), and Anubis claims Mynd Group with property-owner data exfiltration (Oct 9).",
-          "title": "Leak-site watch: Nightspire claims KC Pharmaceuticals; Silentransomgroup hits O'Hagan Meyer",
-          "url": "https://cyberthreatintelligence.net/ransomware-victim/kc-pharmaceuticals-inc-nightspire-2026"
+          "details": "BYOD says it got in through an employee of Liberty Mobile, the MVNO behind Trump Mobile, via infostealer malware — and claims neither entity used MFA. The leaked data reportedly includes personal details of Eric Brunnett, the Trump Organization's CIO. Neither Trump Mobile nor Liberty Mobile has responded.",
+          "image": "https://bestlifeonline.com/wp-content/uploads/sites/3/2022/02/t-mobile.jpg?resize=500,333&quality=82&strip=all",
+          "severity": "High",
+          "summary": "The BYOD ransomware crew claims to have breached Trump Mobile and leaked customer names, emails, phone numbers, home addresses and order details for 3,615 people.",
+          "title": "BYOD ransomware group claims Trump Mobile breach via MVNO employee",
+          "url": "https://nationalcybersecurity.com/ransomware-group-byod-claims-trump-mobile-data-breach-brief-hacking-cybersecurity-infosec-comptia-pentest-ransomware/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -65,34 +65,33 @@
     {
       "items": [
         {
-          "action": "If you run Checkmarx or share sensitive client data with Big Four firms, inventory where your documents sit on their platforms and ask what controls cover them.",
-          "details": "EY notified regulators in California, Texas, Massachusetts and Vermont, and says broader enterprise systems were unaffected. Experts note this follows the 2023 MOVEit breach that hit 30,210 Bank of America clients — and flag AI tooling plus third-party software as the widening risk surface at the Big Four.",
-          "image": "https://eytaxworkflow.ey.com/images/background-login.jpg",
+          "details": "In the joint advisory with CSIRT-Fin, CERT-In says attackers compromise internet-facing apps and exposed APIs to steal payment gateway, aggregator and partner-bank credentials, then invoke fund-transfer APIs directly from the victim's whitelisted infrastructure — bypassing loan, KYC, beneficiary and transaction-limit checks. Entry points include unauthenticated APIs, unrestricted file uploads, static API tokens in source code and MFA-less remote services.",
+          "image": "https://ncsrc.in/assets/img/associations/Certin.png",
+          "severity": "Critical",
+          "summary": "CERT-In (advisory CIAD-2026-0046, Oct 9) warns NBFCs, fintechs and payment providers that attackers — possibly using AI-assisted offensive frameworks — are stealing payment API credentials and triggering direct fund transfers to mule accounts.",
+          "title": "CERT-In warns NBFCs/fintechs of AI-assisted payment-API attacks",
+          "url": "https://www.moneycontrol.com/technology/cert-in-warns-nbfcs-and-fintech-firms-of-cyberattacks-targeting-payment-apis-for-unauthorised-fund-transfers-article-14048920.html/amp?utm_campaign=fullarticle&utm_medium=referral&utm_source=inshorts"
+        },
+        {
+          "details": "The claim appeared on the group's leak feed on Oct 8. As with all leak-site listings, the claim is unverified — neither the group nor IIT Roorkee has confirmed compromise scope so far.",
+          "image": "https://media.collegedekho.com/media/img/news/IITR_JT-1.jpg",
           "severity": "High",
-          "summary": "EY told affected clients an unauthorized third party accessed an IT-team platform between March 28 and April 12, 2026 via a Checkmarx software vulnerability, downloading documents for several tax-services clients — reportedly linked to Goldman Sachs and Man Group.",
-          "title": "EY breach via Checkmarx flaw puts Big Four client-data controls in the spotlight",
-          "url": "https://ciso.economictimes.indiatimes.com/news/data-breaches/ey-data-breach-puts-spotlight-on-data-security-at-big-four-as-clients-demand-tighter-controls/134846327"
+          "summary": "The UmBra ransomware group listed IIT Roorkee on its leak site — an unverified claim making one of India's premier technical institutes the latest education-sector target.",
+          "title": "UmBra ransomware group claims IIT Roorkee",
+          "url": "https://www.hookphish.com/blog/ransomware-group-umbra-hits-iit-roorkee/"
         },
         {
-          "details": "Manufacturing targets are prized because production downtime converts directly to financial loss. India ranks #8 worldwide for ransomware disclosures, with 485 victims in the tracking database.",
-          "image": "https://www.oswalvalves.com/lib/blogs/thumbs/1776638431_valve-manufacturing.jpg",
+          "details": "The flaws could expose election officials' contact details and allow reading or forging data in the app. CERT-In's reply reached Adhikary on the evening of Oct 6 — a day after HT sent both agencies questions — saying one flaw was fixed and the rest were 'under progress'.",
+          "image": "https://imagesvs.oneindia.com/bn/img/2026/03/electioncommissionindiabig-1774870679.jpg",
           "severity": "Medium",
-          "summary": "The Eclipse ransomware group listed simplexengg.in on its leak site on Oct 8, 2026. The Indian manufacturing-sector firm is now in double-extortion territory: data exfiltrated before encryption, publication threatened.",
-          "title": "Eclipse ransomware lists Indian engineering firm simplexengg.in",
-          "url": "https://cyberthreatintelligence.net/ransomware-victim/simplexengg-in-eclipse-2026"
-        },
-        {
-          "details": "The Oct 9 roundup also flags a Hyderabad loan-app extortion probe and the Centre's new AI regulatory framework bringing deepfakes and agentic AI under scrutiny.",
-          "image": "https://sw24news.com/wp-content/uploads/2026/08/upi_alert_7A_99_1-860x484.jpg",
-          "severity": "Medium",
-          "summary": "Gujarat Cyber Police uncovered a ₹11-crore fraud trail across 79 mule accounts run by Dubai-based operators, and the CBI sought prosecution sanction against six IAS officers in a ₹504-crore banking fraud case. Separately, the PM called for a global mechanism against cyber fraud and deepfakes.",
-          "title": "Oct 9 India cyber roundup: ₹11-cr mule network busted; PM pushes global anti-fraud mechanism",
-          "url": "https://the420.in/india-cyber-tech-news-9-october-2026/"
+          "summary": "Security researcher Nisarga Adhikary says he warned ECI and CERT-In in July about flaws in the ECINET voter-services site and app; CERT-In has now fixed one flaw, with the rest under review.",
+          "title": "ECINET flaws were flagged to ECI and CERT-In back in July, says researcher",
+          "url": "https://www.hindustantimes.com/india-news/ecinet-flaws-were-flagged-to-poll-body-eci-cyber-security-agency-cert-in-in-july-says-researcher-101791401749277.html"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Saturday, October 10 — Here's what's worth your attention today.",
+  "subtitle": "Sunday, October 11 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
