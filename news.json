@@ -1,97 +1,97 @@
 {
-  "date": "2026-10-11",
+  "date": "2026-10-12",
+  "title": "Morning Cybersecurity Digest",
+  "subtitle": "Monday, October 12 — Here's what's worth your attention today.",
   "sections": [
     {
+      "title": "Act on Today",
       "items": [
         {
-          "action": "Upgrade FortiMail to 8.0.2, 7.6.7 or 7.4.9+ immediately; 7.2 users must migrate to 7.4+. Internet-facing appliances should be checked against Fortinet's IOCs (rogue liblog.so, ld.so.preload entries) — patching does not evict an existing implant.",
-          "details": "Fortinet disclosed the flaw on Oct 1 in advisory FG-IR-26-175 (path traversal + NULL-byte neutralization in the IBE request handler), confirmed in-the-wild exploitation as a zero-day, and CISA added it to the KEV catalog the same day. Attackers are using the file-write to implant persistent linker preloads and backdoor services on mail appliances.",
-          "image": "https://www.enbitcon.de/media/88/27/94/1597931534/FortiMail400F_FrontTop.png?ts=1611321295",
+          "title": "CVSS 10.0 flaw in argocd-mcp exposes AI coding agent pipelines",
           "severity": "Critical",
-          "summary": "Fortinet confirms CVE-2026-104286 (CVSS 9.8) — an unauthenticated arbitrary file write in FortiMail's Identity-Based Encryption handler — is being actively exploited as a zero-day.",
-          "title": "FortiMail zero-day CVE-2026-104286 under active exploitation",
-          "url": "https://brandefense.io/blog/cve-2026-104286-fortimail-zero-day/"
+          "summary": "Apiiro researchers disclosed CVE-2026-82456 in argocd-mcp 0.8.0, an MCP server that links AI coding agents to Argo CD. Unauthenticated attackers could abuse stored Argo CD tokens in exposed HTTP deployments to create and deploy applications from attacker-controlled repositories.",
+          "details": "Apiiro's broader scan found 375 of 525 MCP packages using HTTP or SSE transports without Origin validation. Fix: upgrade to argocd-mcp 0.9.0+, rotate tokens, review application and sync activity.",
+          "action": "If you run argocd-mcp, upgrade to 0.9.0 or later immediately, rotate all Argo CD tokens, and audit recent deploy/sync activity for rogue apps.",
+          "url": "https://www.tipranks.com/news/private-companies/critical-ai-development-security-vulnerability-highlights-growing-demand-for-apiiros-solutions",
+          "image": "https://kanzal.com/blog/argocd/hero.png"
         },
         {
-          "action": "Upgrade to NetScaler ADC/Gateway 14.1-73.46+ or 13.1-64.29+ (FIPS 14.1-73.46) as soon as possible.",
-          "details": "The memory overflow flaw's impact depends on configuration — deployments running NetScaler as a SAML service provider or identity provider face both remote code execution and denial-of-service risk. Citrix says it is not aware of attacks in the wild so far.",
-          "image": "https://loni.ai/wp-content/uploads/2021/06/Citrix.svg",
+          "title": "CISA slaps five N-day flaws on KEV with rare 3-day federal deadline",
           "severity": "Critical",
-          "summary": "Citrix patched CVE-2026-107406 (CVSS 9.5), a critical memory-overflow flaw in NetScaler ADC and Gateway that can lead to remote code execution or DoS under specific configurations.",
-          "title": "Citrix patches critical NetScaler RCE CVE-2026-107406",
-          "url": "https://securityaffairs.com/200670/security/cve-2026-107406-citrix-fixes-critical-netscaler-adc-and-gateway-vulnerability.html"
+          "summary": "CISA added five old but actively exploited flaws to its Known Exploited Vulnerabilities catalog on Oct 8: CVE-2015-3306 (ProFTPD, 10.0), CVE-2021-3199 (ONLYOFFICE, 9.8), CVE-2023-22894 (Strapi, 7.2), CVE-2016-3081 (Apache Struts, 8.1) and CVE-2015-5477 (ISC BIND, 7.5).",
+          "details": "Federal agencies were given a three-day patch-or-decommission window (deadline Oct 11). A joint advisory from seven nations attributes the campaign to Chinese state-linked actors associated with Integrity Technology Group.",
+          "action": "Treat any exposed ProFTPD, ONLYOFFICE Docs, Strapi, Apache Struts or BIND instance as compromised: patch now and run forensic triage, not just updates.",
+          "url": "https://deafnews.it/en/news/cybersecurity/cisa-adds-five-critical-vulnerabilities-to-kev-catalog-with-three-day-federal-deadline",
+          "image": "https://ecstech.com/wp-content/uploads/2024/09/CISA_Logo.png"
         },
         {
-          "action": "Inventory Nexus 3000/9000 switches running NX-OS and Smart License On-Prem/Manager installs; plan the October security-hardening updates now — several flaws score 9.8–10.0.",
-          "details": "Highlights: Nexus 3000/9000 MPLS OAM RCE (CVE-2026-76465, 9.8), NGOAM RCE trio (CVE-2026-76485/86/76501, 9.8), NX-API RCE (CVE-2026-76471, 9.8), plus Smart License On-Prem CVEs rated 10.0 (CVE-2026-76480 series). Under Cisco's risk-based disclosure, advisories publish on the first and third Wednesday of each month.",
-          "image": "https://cdn.cs.1worldsync.com/1c/b5/1cb5cb5e-8b9b-4085-87ec-1d3c86302b30.jpg",
+          "title": "Super Forms WordPress plugin lets strangers delete your whole site",
           "severity": "Critical",
-          "summary": "Cisco's October security bundle packs a stack of Critical advisories for NX-OS (9.8 RCEs via MPLS OAM, NGOAM and NX-API), Smart License On-Prem (CVSS 10.0) and APIC.",
-          "title": "Cisco October bundle: Critical 9.8–10.0 RCEs hit NX-OS and licensing gear",
-          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-notice-fBn58ELx"
+          "summary": "CVE-2026-17609 (CVSS 9.1) is an unauthenticated arbitrary directory deletion flaw in Super Forms Drag & Drop Form Builder 6.3.316 and earlier. Any visitor who can reach a form can delete the site's files and uploads when an affected setting is enabled.",
+          "details": "Fixed in 6.3.317 (and 6.4.008 on the beta line). The same release also patched an unauthenticated file read (CVE-2026-28167) and an upload extension bypass (CVE-2026-17196).",
+          "action": "Update past 6.3.317 at once, verify you have off-site backups, and check for unexpected deletions or injected files on any public WordPress host.",
+          "url": "https://dev.to/iamfaizanakhtar/cve-2026-17609-super-forms-wordpress-plugin-arbitrary-directory-deletion-vulnerability-cvss-91-24pl",
+          "image": "https://rtcamp.com/wp-content/uploads/sites/2/2025/11/WordPress-Security.webp"
         }
-      ],
-      "title": "Act on Today"
+      ]
     },
     {
+      "title": "Breaches & Ransomware",
       "items": [
         {
-          "details": "The listing, spotted Oct 9 on the Ransomware.live tracker, ties the exposure to the 'Cavalier' infostealer family. HudsonRock-linked reporting puts 615 employee accounts, 10,808 user accounts and 1,134 third-party credentials at risk, with ParanoidLab flagging ~300,000 exposed passwords. No official Deloitte statement on this specific claim yet.",
-          "image": "https://www.itsec.ru/hs-fs/hubfs/ISR/0gvjbzzqe443t9v97nx8qny1h51dt3id.png?width=768&name=0gvjbzzqe443t9v97nx8qny1h51dt3id.png",
+          "title": "Emperador claims Spelman Logistics, demands $500K",
           "severity": "High",
-          "summary": "Thegentlemen ransomware group listed Deloitte on its leak site on Oct 9 — an unverified claim linked to Cavalier infostealer activity, per dark-web trackers.",
-          "title": "Thegentlemen ransomware group names Deloitte on its leak site",
-          "url": "https://qpulse.quasarcybertech.com/news/6574/deloitte-targeted-by-thegentlemen-ransomware-group-following-cavalier-infostealer-infection"
+          "summary": "The Emperador ransomware group listed US transport firm Spelman Logistics on its leak site on Oct 11, claiming theft from the company's MVMNT transportation management system plus unnamed partners' systems.",
+          "details": "Claimed haul: 1.2M contact records, 245K carrier profiles with tax and Social Security data, 57K bank account records with routing numbers, and 4.5M carrier registry entries. $500,000 ransom demanded in Bitcoin or Monero. No screenshots posted; figures are the gang's unverified claims.",
+          "url": "https://www.redpacketsecurity.com/emperador-ransomware-victim-spelman-logistics/",
+          "image": "https://caliber.global/hs-fs/hubfs/Trucks.webp?width=1600"
         },
         {
-          "details": "The alleged loot includes tens of thousands of medical faxes (2022–2026) with patient names and diagnoses, methadone clinic records under 42 CFR Part 2, 47,602 medical-assistance files with driver licenses and SSN cards, county payroll registers and jail gang-intelligence files.",
-          "image": "https://fcc.cc/api/ext/img?url=https%3A%2F%2Fmarylandmatters.org%2Fwp-content%2Fuploads%2F2024%2F09%2FIMG_7655-newsletter-1024x683.jpeg&w=1280",
+          "title": "Incransom lists Manitoba's flagship hospital, HSC Winnipeg",
           "severity": "High",
-          "summary": "Rhysida claims Anne Arundel County, Maryland, listing 814,500 files (2.6 TB) — including background-check dossiers with full SSNs, medical faxes and payroll registers.",
-          "title": "Rhysida claims Anne Arundel County: 2.6 TB of citizen data on the block",
-          "url": "https://www.hookphish.com/blog/ransomware-group-rhysida-hits-anne-arundel-county/"
+          "summary": "ThreatMon spotted Incransom adding hsc.mb.ca — Health Sciences Centre Winnipeg, Manitoba's major trauma, neurosurgery, burn, transplant and psychiatric hospital — to its victim list on Oct 11.",
+          "details": "A leak-site listing is not proof of intrusion, data theft or service disruption; the hospital has not confirmed the claim. Healthcare stays a prime target for its data sensitivity and downtime pressure.",
+          "url": "https://undercodenews.com/incransom-ransomware-group-claims-hsc-winnipeg-as-a-victim-raising-concerns-for-manitobas-healthcare-sector-video/",
+          "image": "https://cdn.prod.website-files.com/62002f4fa1ec77f260f1e22c/62a90153a7363c9de5968df6_hospital.jpg"
         },
         {
-          "details": "BYOD says it got in through an employee of Liberty Mobile, the MVNO behind Trump Mobile, via infostealer malware — and claims neither entity used MFA. The leaked data reportedly includes personal details of Eric Brunnett, the Trump Organization's CIO. Neither Trump Mobile nor Liberty Mobile has responded.",
-          "image": "https://bestlifeonline.com/wp-content/uploads/sites/3/2022/02/t-mobile.jpg?resize=500,333&quality=82&strip=all",
+          "title": "Majinahanashi claims Spanish logistics major Grupo Caliche",
           "severity": "High",
-          "summary": "The BYOD ransomware crew claims to have breached Trump Mobile and leaked customer names, emails, phone numbers, home addresses and order details for 3,615 people.",
-          "title": "BYOD ransomware group claims Trump Mobile breach via MVNO employee",
-          "url": "https://nationalcybersecurity.com/ransomware-group-byod-claims-trump-mobile-data-breach-brief-hacking-cybersecurity-infosec-comptia-pentest-ransomware/"
+          "summary": "Majinahanashi listed Grupo Caliche — a Spanish international logistics, freight and telecom company — on its leak site, discovered Oct 10, with the initial attack estimated as early as Aug 11, 2026.",
+          "details": "No attack vector, encryption status or exfiltration volume disclosed; the claim is unverified. Notably, Majinahanashi also just listed an India-based target (see India section).",
+          "url": "https://qpulse.quasarcybertech.com/news/6608/majinahanashi-ransomware-group-claims-attack-on-spanish-logistics-firm-grupo-caliche",
+          "image": "https://images.pexels.com/photos/20034017/pexels-photo-20034017/free-photo-of-cargo-containers-at-warehouse.jpeg?auto=compress&cs=tinysrgb&w=600"
         }
-      ],
-      "title": "Breaches & Ransomware"
+      ]
     },
     {
+      "title": "India",
       "items": [
         {
-          "details": "In the joint advisory with CSIRT-Fin, CERT-In says attackers compromise internet-facing apps and exposed APIs to steal payment gateway, aggregator and partner-bank credentials, then invoke fund-transfer APIs directly from the victim's whitelisted infrastructure — bypassing loan, KYC, beneficiary and transaction-limit checks. Entry points include unauthenticated APIs, unrestricted file uploads, static API tokens in source code and MFA-less remote services.",
-          "image": "https://ncsrc.in/assets/img/associations/Certin.png",
-          "severity": "Critical",
-          "summary": "CERT-In (advisory CIAD-2026-0046, Oct 9) warns NBFCs, fintechs and payment providers that attackers — possibly using AI-assisted offensive frameworks — are stealing payment API credentials and triggering direct fund transfers to mule accounts.",
-          "title": "CERT-In warns NBFCs/fintechs of AI-assisted payment-API attacks",
-          "url": "https://www.moneycontrol.com/technology/cert-in-warns-nbfcs-and-fintech-firms-of-cyberattacks-targeting-payment-apis-for-unauthorised-fund-transfers-article-14048920.html/amp?utm_campaign=fullarticle&utm_medium=referral&utm_source=inshorts"
-        },
-        {
-          "details": "The claim appeared on the group's leak feed on Oct 8. As with all leak-site listings, the claim is unverified — neither the group nor IIT Roorkee has confirmed compromise scope so far.",
-          "image": "https://media.collegedekho.com/media/img/news/IITR_JT-1.jpg",
+          "title": "Hyderabad police bust ₹60–70 crore mule-account network, arrest two",
           "severity": "High",
-          "summary": "The UmBra ransomware group listed IIT Roorkee on its leak site — an unverified claim making one of India's premier technical institutes the latest education-sector target.",
-          "title": "UmBra ransomware group claims IIT Roorkee",
-          "url": "https://www.hookphish.com/blog/ransomware-group-umbra-hits-iit-roorkee/"
+          "summary": "Hyderabad Cybercrime Police arrested Gumma Ramesh (39) and Mudale Anil (19) of Ramanthapur for allegedly collecting ~70 mule bank accounts and SIM cards and supplying them to cybercriminals for commissions.",
+          "details": "Police say the accounts touch ~450 cybercrime cases across India worth ₹60–70 crore. The probe began from a Facebook old-currency-note scam where a victim lost ₹7,93,351. Case booked under IT Act 66C/66D and BNS provisions.",
+          "url": "https://www.thehindu.com/news/national/telangana/45-lakh-for-old-1-note-hyderabad-cyber-fraud-probe-uncovers-70-crore-mule-account-network/article71571816.ece",
+          "image": "https://www.deccanchronicle.com/h-upload/2025/03/07/1896870-cybercops.jpg"
         },
         {
-          "details": "The flaws could expose election officials' contact details and allow reading or forging data in the app. CERT-In's reply reached Adhikary on the evening of Oct 6 — a day after HT sent both agencies questions — saying one flaw was fixed and the rest were 'under progress'.",
-          "image": "https://imagesvs.oneindia.com/bn/img/2026/03/electioncommissionindiabig-1774870679.jpg",
+          "title": "Eclipse ransomware lists Indian manufacturer simplexengg.in",
           "severity": "Medium",
-          "summary": "Security researcher Nisarga Adhikary says he warned ECI and CERT-In in July about flaws in the ECINET voter-services site and app; CERT-In has now fixed one flaw, with the rest under review.",
-          "title": "ECINET flaws were flagged to ECI and CERT-In back in July, says researcher",
-          "url": "https://www.hindustantimes.com/india-news/ecinet-flaws-were-flagged-to-poll-body-eci-cyber-security-agency-cert-in-in-july-says-researcher-101791401749277.html"
+          "summary": "The Eclipse ransomware group added simplexengg.in, an Indian manufacturing firm, to its leak site on Oct 8. Eclipse runs a double-extortion model — exfiltrating data before encryption.",
+          "details": "Manufacturing is a favorite target: production downtime converts directly into ransom pressure. The listing is the group's claim and is unverified.",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/simplexengg-in-eclipse-2026",
+          "image": "https://www.hzmanufacturing.com/assets/about-factory.jpg"
+        },
+        {
+          "title": "Majinahanashi names India's BONJOUR GROUP on its leak site",
+          "severity": "Medium",
+          "summary": "The Majinahanashi ransomware group listed BONJOUR GROUP, an India-based organization, on Oct 10. The group has ~42 recorded victims and follows the standard double-extortion playbook.",
+          "details": "No victim sector details or claimed data volumes published yet; treat as an unverified threat-actor claim until corroborated.",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/bonjour-group-majinahanashi-2026-1",
+          "image": "https://static0.makeuseofimages.com/wordpress/wp-content/uploads/2021/04/ransomware-lock-computer-feature-logo.jpg"
         }
-      ],
-      "title": "India"
+      ]
     }
-  ],
-  "subtitle": "Sunday, October 11 — Here's what's worth your attention today.",
-  "title": "Morning Cybersecurity Digest"
+  ]
 }
