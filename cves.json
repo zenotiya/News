@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-11",
+  "date": "2026-10-12",
   "items": [
     {
       "cvss": 9.8,
       "id": "CVE-2026-76465",
       "severity": "Critical",
-      "summary": "Cisco disclosed an unauthenticated RCE flaw in MPLS OAM on Nexus 3000 and standalone-mode Nexus 9000 switches; a crafted MPLS echo request can yield root-level code execution or force a reload. MPLS OAM is disabled by default, which limits exposure; Cisco released fixes plus a Live Protect shield.",
+      "summary": "Cisco Nexus 3000 and 9000 Series switches: unauthenticated remote code execution with root privileges (or DoS) via a crafted MPLS echo request against the MPLS OAM feature; Cisco reported no exploitation at disclosure.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76465"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-93930",
+      "severity": "Critical",
+      "summary": "ThemeREX Group \"Tantra\" WordPress theme (through 2.9.0): insecure deserialization of untrusted data (CWE-502) allowing object injection; published Oct 10, 2026 via CNA advisory.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93930"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-93944",
+      "severity": "Critical",
+      "summary": "ThemeREX Group \"Camelia\" WordPress theme (through 1.2.15): insecure deserialization of untrusted data (CWE-502) allowing object injection; published Oct 10, 2026 via CNA advisory.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93944"
     },
     {
       "cvss": 9.5,
       "id": "CVE-2026-107406",
       "severity": "Critical",
-      "summary": "A critical memory overflow in NetScaler ADC and NetScaler Gateway, disclosed October 8, 2026, enabling RCE or DoS on appliances configured as SAML IdP or SP. Citrix shipped patched firmware for all release trains; no confirmed active exploitation at disclosure.",
+      "summary": "Citrix NetScaler ADC and NetScaler Gateway configured as a SAML SP/IdP: memory overflow allowing remote code execution and/or denial of service; ACSC issued an updated critical alert on Oct 9, 2026.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107406"
     },
     {
-      "cvss": 10.0,
-      "id": "CVE-2026-102255",
-      "severity": "Critical",
-      "summary": "A vendor-scored 10.0 pre-authentication SSRF/unintended-proxy flaw in the Work Place interface of SonicWall SMA1000 appliances (models 6210, 7210, 8200v), letting unauthenticated remote attackers reach internal functionality. The third pre-auth SSRF patched in this same interface in 2026; fixed in 12.4.3-03670 / 12.5.0-03082.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102255"
-    },
-    {
       "cvss": 9.3,
-      "id": "CVE-2026-21589",
+      "id": "CVE-2026-14911",
       "severity": "Critical",
-      "summary": "A critical arbitrary file access flaw across eight Atlassian Data Center products (Bitbucket, Confluence, Jira Software, Jira Service Management, Bamboo, Crowd, Crucible, Fisheye) that lets an unauthenticated attacker read specific files from the web app root. Exploitation observed in the wild - self-hosted instances are the priority risk; cloud was already patched.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21589"
-    },
-    {
-      "cvss": 9.9,
-      "id": "CVE-2026-105697",
-      "severity": "Critical",
-      "summary": "A 9.9 OS command injection (CWE-78) in Langflow's MCP server handling: pre-1.10.3 versions executed user-supplied MCP stdio command/args fields wrapped in bash -c with no allowlist. With Langflow's default LANGFLOW_AUTO_LOGIN=true, internet-exposed instances were exploitable without credentials. Fixed in Langflow 1.10.3; a public PoC exists.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105697"
+      "summary": "ASUS routers (firmware series 3.0.0.4_386, 3.0.0.4_388, 3.0.0.6_102): cross-site scripting letting a remote attacker read DOM data, modify router settings, and cause DoS when an authenticated user visits a crafted URL; firmware updates released.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14911"
     }
   ]
 }

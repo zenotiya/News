@@ -2,30 +2,30 @@
   "date": "2026-10-12",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 10.0,
+  "worst_cvss": 9.8,
   "priorities": [
-    {
-      "id": "CVE-2026-102255",
-      "cvss": 10.0,
-      "summary": "A vendor-scored 10.0 pre-authentication SSRF/unintended-proxy flaw in the Work Place interface of SonicWall SMA1000 appliances (models 6210, 7210, 8200v), letting unauthenticated remote attackers reach internal functionality. The third pre-auth SSRF patched in this same interface in 2026; fixed in 12.4.3-03670 / 12.5.0-03082.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102255"
-    },
-    {
-      "id": "CVE-2026-105697",
-      "cvss": 9.9,
-      "summary": "A 9.9 OS command injection (CWE-78) in Langflow's MCP server handling: pre-1.10.3 versions executed user-supplied MCP stdio command/args fields wrapped in bash -c with no allowlist. With Langflow's default LANGFLOW_AUTO_LOGIN=true, internet-exposed instances were exploitable without credentials. Fixed in Langflow 1.10.3; a public PoC exists.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105697"
-    },
     {
       "id": "CVE-2026-76465",
       "cvss": 9.8,
-      "summary": "Cisco disclosed an unauthenticated RCE flaw in MPLS OAM on Nexus 3000 and standalone-mode Nexus 9000 switches; a crafted MPLS echo request can yield root-level code execution or force a reload. MPLS OAM is disabled by default, which limits exposure; Cisco released fixes plus a Live Protect shield.",
+      "summary": "Cisco Nexus 3000 and 9000 Series switches: unauthenticated remote code execution with root privileges (or DoS) via a crafted MPLS echo request against the MPLS OAM feature; Cisco reported no exploitation at disclosure.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76465"
+    },
+    {
+      "id": "CVE-2026-93930",
+      "cvss": 9.8,
+      "summary": "ThemeREX Group \"Tantra\" WordPress theme (through 2.9.0): insecure deserialization of untrusted data (CWE-502) allowing object injection; published Oct 10, 2026 via CNA advisory.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93930"
+    },
+    {
+      "id": "CVE-2026-93944",
+      "cvss": 9.8,
+      "summary": "ThemeREX Group \"Camelia\" WordPress theme (through 1.2.15): insecure deserialization of untrusted data (CWE-502) allowing object injection; published Oct 10, 2026 via CNA advisory.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93944"
     }
   ],
   "model": {
-    "name": "OpenAI GPT-6 with Intelligent UI",
-    "summary": "OpenAI rolled GPT-6 into ChatGPT for all tiers on Oct 7-8, adding \"Intelligent UI\" - answers composed from text, visuals, charts, forms and interactive tools the user can operate inline, with answers starting to stream 44% sooner. It shifts ChatGPT from a text chatbot toward a task-specific software generator.",
-    "url": "https://openai.com/index/gpt-6-for-everyone/"
+    "name": "Claude Haiku 5.5 — Anthropic",
+    "summary": "Anthropic's cheapest, fastest small model ever — ~75% cheaper to run than Haiku 4.5, the first Haiku with an adjustable effort setting, and it beats OpenAI's GPT-6 Luna on Anthropic's benchmarks (OSWorld 2.1: 72.4% vs 48.9%).",
+    "url": "https://www.anthropic.com/claude-haiku-5-5"
   }
 }

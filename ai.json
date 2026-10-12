@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-11",
+  "date": "2026-10-12",
   "items": [
     {
-      "image": "https://www.hindustantimes.com/ht-img/img/2026/10/08/1600x900/logo/GPT-6-with-Intelligent-UI-is-now-rolling-out-globa_1791426709718_XsoQ.jpg",
-      "name": "OpenAI GPT-6 with Intelligent UI",
-      "summary": "OpenAI rolled GPT-6 into ChatGPT for all tiers on Oct 7-8, adding \"Intelligent UI\" - answers composed from text, visuals, charts, forms and interactive tools the user can operate inline, with answers starting to stream 44% sooner. It shifts ChatGPT from a text chatbot toward a task-specific software generator.",
-      "url": "https://openai.com/index/gpt-6-for-everyone/"
-    },
-    {
-      "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/89e9b0fbfe0181f6ca565d913686ce8e49b5e9c2-1200x630.jpg",
-      "name": "Claude Haiku 5.5",
-      "summary": "Anthropic's third Claude 5.5 release (Oct 7): its cheapest, fastest, most capable small model at ~75% cheaper than Haiku 4.5, with 1M-token context, 128K max output, and the first Haiku with adjustable effort / adaptive thinking. Benchmarked head-to-head against OpenAI's GPT-6 Luna, it anchors the high-volume agentic subagent tier.",
+      "image": "https://static.fx168api.com/img/user/b4194f9b81a2b4721e7240d283a86a31/20251023001302273.png",
+      "name": "Claude Haiku 5.5 — Anthropic",
+      "summary": "Anthropic's cheapest, fastest small model ever — ~75% cheaper to run than Haiku 4.5, the first Haiku with an adjustable effort setting, and it beats OpenAI's GPT-6 Luna on Anthropic's benchmarks (OSWorld 2.1: 72.4% vs 48.9%).",
       "url": "https://www.anthropic.com/claude-haiku-5-5"
     },
     {
-      "image": "https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp",
-      "name": "Mistral Large 4",
-      "summary": "Mistral's largest model (public preview Oct 6): ~1-trillion-parameter natively multimodal MoE, trained from scratch on 3,800 Nvidia Grace Blackwell GPUs in Mistral's own European datacenters. Pitched as the strongest open-weight model built outside China, with weights promised by end of October - a European AI sovereignty play.",
+      "image": "https://mistral.ai/_astro/human-evaluation---surge-(human-eval-on-code)%201_20jgWu.webp?dpl=6ac6a8353c2a68969e300fd2",
+      "name": "Mistral Large 4 (\"Le Chonk\") — Mistral AI",
+      "summary": "Mistral's largest model ever: a 1T-parameter natively multimodal MoE (52B active), pitched as the strongest open-weight model built outside China, trained from scratch on 3,800 NVIDIA Grace Blackwell GPUs in European datacenters.",
       "url": "https://mistral.ai/news/mistral-large-4/"
     },
     {
-      "image": "https://cdn.sanity.io/images/sp40emik/production/771cfe201a3d24d7a340c3372e6a1654ec1a6e42-1800x1013.png",
-      "name": "Reflection AI Beam",
-      "summary": "Nvidia-backed Reflection's first open-weight model (announced Oct 5): 501B-parameter text-only sparse MoE with just 23B active per token, pretrained on 23.8T tokens and RL-tuned on 10,500 GB300 GPUs. The pitch is inference efficiency - GLM-5.2-level reasoning at 3-4x less compute - positioning it as the Western open-weight answer to Chinese labs.",
-      "url": "https://reflection.ai/blog/introducing-beam/"
+      "image": "https://1000marcas.net/wp-content/uploads/2024/07/OpenAI-Logo.png",
+      "name": "GPT-6 and Intelligent UI — OpenAI",
+      "summary": "OpenAI rolled GPT-6 snapshots to all 1.2B+ weekly ChatGPT users with \"Intelligent UI\" — answers composed from text, visuals, and interactive elements per question — plus GPT-6 Instant starting web-search answers 44% sooner than GPT-5.6 Instant.",
+      "url": "https://openai.com/index/gpt-6-for-everyone/"
     },
     {
-      "image": "https://static.digit.in/sundar-pichai-google.png",
-      "name": "Nano Banana 2.1",
-      "summary": "Google's upgraded image-generation/editing model (GA Oct 6, built on Gemini 3.6 Flash): 1K/2K/4K generation, up to 14 reference images for multi-image fusion, 4-character consistency, and clearer in-image text at roughly half the API price of Nano Banana 2. Rolling out across the Gemini app, AI Mode in Search, AI Studio, Flow and Stitch.",
-      "url": "https://www.digit.in/news/general/google-unveils-gemini-nano-banana-21-and-embeddinggemma-2-ai-models-check-key-updates.html/amp/"
+      "image": "https://reflection.ai/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fsp40emik%2Fproduction%2F04c464d0bf944b2cc60f788e7bb8bcb1a8df0bb9-2400x1350.png%3Fw%3D3840%26fit%3Dmax&w=3840&q=75",
+      "name": "Beam — Reflection AI",
+      "summary": "The Nvidia-backed startup's first open-weight model: a 501B-parameter text-only sparse MoE (23B active per token) for coding, reasoning, and agentic workloads, trained on 10.5K NVIDIA GB300 GPUs; Apache 2.0 weights promised later in October.",
+      "url": "https://reflection.ai/blog/introducing-beam"
+    },
+    {
+      "image": "https://1000logos.net/wp-content/uploads/2020/09/Cloudflare-Logo-2009-700x350.png",
+      "name": "Clef — Cloudflare",
+      "summary": "A pair of open-weight decision models (27B multimodal + 9B Clef-Flash) for decision-making rather than text generation — they return probabilities per option in a single forward pass, aimed at agent hot-paths like ticket routing and bot filtering.",
+      "url": "https://oossa.com/en/cloudflare-releases-open-weight-decision-models-for-ai-agents"
     }
   ]
 }
