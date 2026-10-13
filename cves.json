@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "items": [
     {
+      "id": "CVE-2026-89107",
+      "summary": "SAP S/4HANA's Manage Substitution/Validation Rules function does not sufficiently validate input processed by its domain-specific scripting language, letting an authenticated attacker run arbitrary code. Apply SAP's October security notes.",
+      "cvss": 9.9,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89107"
+    },
+    {
+      "id": "CVE-2026-85955",
+      "summary": "Progress MarkLogic Server before 12.1.0 / 11.3.7 lets a remote attacker with query-execution access invoke an XQuery evaluation function without the required privilege, leading to server-side code execution with elevated permissions. Upgrade to 12.1.0 or 11.3.7.",
+      "cvss": 9.9,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85955"
+    },
+    {
+      "id": "CVE-2026-90920",
+      "summary": "IBM Maximo AI Service 9.1.0 and 9.2.0 allows a remote attacker to execute arbitrary code due to improper control of code generation. Update to the patched release.",
       "cvss": 9.8,
-      "id": "CVE-2026-76465",
       "severity": "Critical",
-      "summary": "Cisco Nexus 3000 and 9000 Series switches: unauthenticated remote code execution with root privileges (or DoS) via a crafted MPLS echo request against the MPLS OAM feature; Cisco reported no exploitation at disclosure.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76465"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90920"
     },
     {
+      "id": "CVE-2026-85097",
+      "summary": "Bricksforge WordPress plugin through 3.1.8.9 has an unauthenticated arbitrary file upload flaw allowing remote code execution; Patchstack observed automated in-the-wild exploitation starting Oct 7. Update to 3.1.8.10 immediately.",
       "cvss": 9.8,
-      "id": "CVE-2026-93930",
       "severity": "Critical",
-      "summary": "ThemeREX Group \"Tantra\" WordPress theme (through 2.9.0): insecure deserialization of untrusted data (CWE-502) allowing object injection; published Oct 10, 2026 via CNA advisory.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93930"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85097"
     },
     {
-      "cvss": 9.8,
-      "id": "CVE-2026-93944",
+      "id": "CVE-2026-85956",
+      "summary": "Progress MarkLogic Server before 12.1.0 / 11.3.7 lets a remote attacker with delegated database-administrator privileges run backup or restore operations on forests outside the authorized database scope, risking unauthorized access to security-critical data. Upgrade to 12.1.0 or 11.3.7.",
+      "cvss": 9.6,
       "severity": "Critical",
-      "summary": "ThemeREX Group \"Camelia\" WordPress theme (through 1.2.15): insecure deserialization of untrusted data (CWE-502) allowing object injection; published Oct 10, 2026 via CNA advisory.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93944"
-    },
-    {
-      "cvss": 9.5,
-      "id": "CVE-2026-107406",
-      "severity": "Critical",
-      "summary": "Citrix NetScaler ADC and NetScaler Gateway configured as a SAML SP/IdP: memory overflow allowing remote code execution and/or denial of service; ACSC issued an updated critical alert on Oct 9, 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107406"
-    },
-    {
-      "cvss": 9.3,
-      "id": "CVE-2026-14911",
-      "severity": "Critical",
-      "summary": "ASUS routers (firmware series 3.0.0.4_386, 3.0.0.4_388, 3.0.0.6_102): cross-site scripting letting a remote attacker read DOM data, modify router settings, and cause DoS when an authenticated user visits a crafted URL; firmware updates released.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14911"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85956"
     }
   ]
 }

@@ -2,30 +2,30 @@
   "date": "2026-10-13",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 9.8,
+  "worst_cvss": 9.9,
   "priorities": [
     {
-      "id": "CVE-2026-76465",
-      "cvss": 9.8,
-      "summary": "Cisco Nexus 3000 and 9000 Series switches: unauthenticated remote code execution with root privileges (or DoS) via a crafted MPLS echo request against the MPLS OAM feature; Cisco reported no exploitation at disclosure.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76465"
+      "id": "CVE-2026-89107",
+      "cvss": 9.9,
+      "summary": "SAP S/4HANA's Manage Substitution/Validation Rules function does not sufficiently validate input processed by its domain-specific scripting language, letting an authenticated attacker run arbitrary code. Apply SAP's October security notes.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89107"
     },
     {
-      "id": "CVE-2026-93930",
-      "cvss": 9.8,
-      "summary": "ThemeREX Group \"Tantra\" WordPress theme (through 2.9.0): insecure deserialization of untrusted data (CWE-502) allowing object injection; published Oct 10, 2026 via CNA advisory.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93930"
+      "id": "CVE-2026-85955",
+      "cvss": 9.9,
+      "summary": "Progress MarkLogic Server before 12.1.0 / 11.3.7 lets a remote attacker with query-execution access invoke an XQuery evaluation function without the required privilege, leading to server-side code execution with elevated permissions. Upgrade to 12.1.0 or 11.3.7.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85955"
     },
     {
-      "id": "CVE-2026-93944",
+      "id": "CVE-2026-90920",
       "cvss": 9.8,
-      "summary": "ThemeREX Group \"Camelia\" WordPress theme (through 1.2.15): insecure deserialization of untrusted data (CWE-502) allowing object injection; published Oct 10, 2026 via CNA advisory.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93944"
+      "summary": "IBM Maximo AI Service 9.1.0 and 9.2.0 allows a remote attacker to execute arbitrary code due to improper control of code generation. Update to the patched release.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90920"
     }
   ],
   "model": {
-    "name": "Claude Haiku 5.5 — Anthropic",
-    "summary": "Anthropic's cheapest, fastest small model ever — ~75% cheaper to run than Haiku 4.5, the first Haiku with an adjustable effort setting, and it beats OpenAI's GPT-6 Luna on Anthropic's benchmarks (OSWorld 2.1: 72.4% vs 48.9%).",
-    "url": "https://www.anthropic.com/claude-haiku-5-5"
+    "name": "Meta Muse Wonder & Muse Wonder Full",
+    "summary": "Meta's new frontier models launched Oct 12, built for personal and professional agentic work with Active Memory (retains context across conversations) and Active Focus (sustains multi-step tasks, recovers from errors). Muse Wonder ships via the Meta Model API and Muse Code; the stronger Wonder Full is Muse Code subscribers only. Meta claims state-of-the-art coding and finance/legal agent performance.",
+    "url": "https://www.reuters.com/business/meta-releases-muse-wonder-ai-models-challenge-anthropic-openai-2026-10-12/"
   }
 }

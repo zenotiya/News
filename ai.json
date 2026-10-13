@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "items": [
     {
-      "image": "https://static.fx168api.com/img/user/b4194f9b81a2b4721e7240d283a86a31/20251023001302273.png",
-      "name": "Claude Haiku 5.5 — Anthropic",
-      "summary": "Anthropic's cheapest, fastest small model ever — ~75% cheaper to run than Haiku 4.5, the first Haiku with an adjustable effort setting, and it beats OpenAI's GPT-6 Luna on Anthropic's benchmarks (OSWorld 2.1: 72.4% vs 48.9%).",
-      "url": "https://www.anthropic.com/claude-haiku-5-5"
+      "name": "Meta Muse Wonder & Muse Wonder Full",
+      "summary": "Meta's new frontier models launched Oct 12, built for personal and professional agentic work with Active Memory (retains context across conversations) and Active Focus (sustains multi-step tasks, recovers from errors). Muse Wonder ships via the Meta Model API and Muse Code; the stronger Wonder Full is Muse Code subscribers only. Meta claims state-of-the-art coding and finance/legal agent performance.",
+      "url": "https://www.reuters.com/business/meta-releases-muse-wonder-ai-models-challenge-anthropic-openai-2026-10-12/",
+      "image": "https://static.digit.in/mark-zuckerberg.png"
     },
     {
-      "image": "https://mistral.ai/_astro/human-evaluation---surge-(human-eval-on-code)%201_20jgWu.webp?dpl=6ac6a8353c2a68969e300fd2",
-      "name": "Mistral Large 4 (\"Le Chonk\") — Mistral AI",
-      "summary": "Mistral's largest model ever: a 1T-parameter natively multimodal MoE (52B active), pitched as the strongest open-weight model built outside China, trained from scratch on 3,800 NVIDIA Grace Blackwell GPUs in European datacenters.",
-      "url": "https://mistral.ai/news/mistral-large-4/"
+      "name": "Anthropic Claude Haiku 5.5",
+      "summary": "Launched Oct 7, Anthropic's fastest and cheapest small model with 1M-token context and adjustable effort, priced at $0.10/1M input and $0.50/1M output tokens to match OpenAI's GPT-6 Luna — aimed squarely at high-volume agent workloads like classification, extraction, and support.",
+      "url": "https://openaimaster.com/new-ai-tools-october-2026/",
+      "image": "https://openaimaster.com/wp-content/uploads/2026/10/new-ai-tools-oct-2026-hero.jpg"
     },
     {
-      "image": "https://1000marcas.net/wp-content/uploads/2024/07/OpenAI-Logo.png",
-      "name": "GPT-6 and Intelligent UI — OpenAI",
-      "summary": "OpenAI rolled GPT-6 snapshots to all 1.2B+ weekly ChatGPT users with \"Intelligent UI\" — answers composed from text, visuals, and interactive elements per question — plus GPT-6 Instant starting web-search answers 44% sooner than GPT-5.6 Instant.",
-      "url": "https://openai.com/index/gpt-6-for-everyone/"
+      "name": "Inner Sky Labs physical AI foundation models",
+      "summary": "The Mumbai-based Miko maker unveiled a hardware-agnostic platform of foundation models for robots and physical machines: Drishti (vision), Shruti (audio), Sparsh (touch) perception models plus Kriya/Prana/Karma action models, with Kavach — an independent safety layer that vetoes unsafe moves before execution. A ~₹300 crore funding round is nearing closure.",
+      "url": "https://inc42.com/buzz/miko-maker-inner-sky-labs-unveils-foundation-models-for-physical-ai/",
+      "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/10/SOC-81-1.jpg"
     },
     {
-      "image": "https://reflection.ai/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fsp40emik%2Fproduction%2F04c464d0bf944b2cc60f788e7bb8bcb1a8df0bb9-2400x1350.png%3Fw%3D3840%26fit%3Dmax&w=3840&q=75",
-      "name": "Beam — Reflection AI",
-      "summary": "The Nvidia-backed startup's first open-weight model: a 501B-parameter text-only sparse MoE (23B active per token) for coding, reasoning, and agentic workloads, trained on 10.5K NVIDIA GB300 GPUs; Apache 2.0 weights promised later in October.",
-      "url": "https://reflection.ai/blog/introducing-beam"
+      "name": "Amazon Strands Decider 2B",
+      "summary": "Amazon's 2B-parameter decision model ships Oct 1 as free open weights with training data and scripts — a classifier that returns typed verdicts with probabilities instead of prose, designed to run on local CPU/GPU so teams can keep routing and moderation calls off frontier APIs.",
+      "url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html",
+      "image": "https://local-ai-zone.github.io/blog/october-2026-ai-model-updates-hero.png"
     },
     {
-      "image": "https://1000logos.net/wp-content/uploads/2020/09/Cloudflare-Logo-2009-700x350.png",
-      "name": "Clef — Cloudflare",
-      "summary": "A pair of open-weight decision models (27B multimodal + 9B Clef-Flash) for decision-making rather than text generation — they return probabilities per option in a single forward pass, aimed at agent hot-paths like ticket routing and bot filtering.",
-      "url": "https://oossa.com/en/cloudflare-releases-open-weight-decision-models-for-ai-agents"
+      "name": "Mistral Large 4 (preview)",
+      "summary": "Mistral previewed Large 4, a 1-trillion-parameter open model — but early coverage notes it still trails the leading Chinese open models, and Ecosia publicly switched away from Mistral over quality concerns. Still one to watch as Europe's flagship open model.",
+      "url": "https://www.linkedin.com/pulse/weekly-ai-blast-thursday-october-8-2026-john-kump-fixcc",
+      "image": "https://cdn.prod.website-files.com/698b124276ef81513426a3db/69c51d0f6dec47a338102692_logo_Mistral.png"
     }
   ]
 }
