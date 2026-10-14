@@ -1,35 +1,29 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "items": [
     {
-      "name": "Meta Muse Wonder & Muse Wonder Full",
-      "summary": "Meta's new frontier models launched Oct 12, built for personal and professional agentic work with Active Memory (retains context across conversations) and Active Focus (sustains multi-step tasks, recovers from errors). Muse Wonder ships via the Meta Model API and Muse Code; the stronger Wonder Full is Muse Code subscribers only. Meta claims state-of-the-art coding and finance/legal agent performance.",
-      "url": "https://www.reuters.com/business/meta-releases-muse-wonder-ai-models-challenge-anthropic-openai-2026-10-12/",
-      "image": "https://static.digit.in/mark-zuckerberg.png"
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ArgonDemos_social.width-1300.png",
+      "name": "Gemini 4 Argon",
+      "summary": "Google's new flagship frontier model, now globally available via the Gemini API, AI Studio, and AI Mode in Search. Built for \"deep work\" — complex multi-step tasks across coding, finance, law, cybersecurity, and science — it launches at an introductory $2/$10 per million input/output tokens, doubling after Nov 30.",
+      "url": "https://blog.google/intl/en-mena/product-updates/explore-get-answers/gemini-4-argon-built-to-solve-your-hardest-problems/"
     },
     {
-      "name": "Anthropic Claude Haiku 5.5",
-      "summary": "Launched Oct 7, Anthropic's fastest and cheapest small model with 1M-token context and adjustable effort, priced at $0.10/1M input and $0.50/1M output tokens to match OpenAI's GPT-6 Luna — aimed squarely at high-volume agent workloads like classification, extraction, and support.",
-      "url": "https://openaimaster.com/new-ai-tools-october-2026/",
-      "image": "https://openaimaster.com/wp-content/uploads/2026/10/new-ai-tools-oct-2026-hero.jpg"
+      "image": "https://aypchzzf9pftwuto.public.blob.vercel-storage.com/image%20(3)-oOdUn61bDRSykk4H951SoDOHzqoOe1.png",
+      "name": "LFM2.5-24B-A2B",
+      "summary": "Liquid AI's largest and final LFM2.5 open-weight reasoning model: 24B parameters with only 2B active per token, built for fast private on-device agents. Beats Qwen3.6-35B-A3B on agentic benchmarks like AutomationBench and ships with day-one llama.cpp/MLX/vLLM/SGLang support.",
+      "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b"
     },
     {
-      "name": "Inner Sky Labs physical AI foundation models",
-      "summary": "The Mumbai-based Miko maker unveiled a hardware-agnostic platform of foundation models for robots and physical machines: Drishti (vision), Shruti (audio), Sparsh (touch) perception models plus Kriya/Prana/Karma action models, with Kavach — an independent safety layer that vetoes unsafe moves before execution. A ~₹300 crore funding round is nearing closure.",
-      "url": "https://inc42.com/buzz/miko-maker-inner-sky-labs-unveils-foundation-models-for-physical-ai/",
-      "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/10/SOC-81-1.jpg"
+      "image": "https://about.fb.com/wp-content/uploads/2021/10/meta-social-16x9-1.jpg?w=1200",
+      "name": "Muse Wonder & Muse Wonder Full",
+      "summary": "Meta's first frontier-class models from its rebuilt Superintelligence Labs, targeting personal and professional agent tasks with \"Active Memory\" (context carried across conversations) and \"Active Focus\" (goal persistence on hard tasks). Muse Wonder is live via the Meta Model API (~$4/$20 per M tokens); Muse Wonder Full is restricted to Muse Code subscribers.",
+      "url": "https://www.dawn.com/news/2036792/meta-says-its-new-ai-models-on-par-with-openai-anthropic"
     },
     {
-      "name": "Amazon Strands Decider 2B",
-      "summary": "Amazon's 2B-parameter decision model ships Oct 1 as free open weights with training data and scripts — a classifier that returns typed verdicts with probabilities instead of prose, designed to run on local CPU/GPU so teams can keep routing and moderation calls off frontier APIs.",
-      "url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html",
-      "image": "https://local-ai-zone.github.io/blog/october-2026-ai-model-updates-hero.png"
-    },
-    {
-      "name": "Mistral Large 4 (preview)",
-      "summary": "Mistral previewed Large 4, a 1-trillion-parameter open model — but early coverage notes it still trails the leading Chinese open models, and Ecosia publicly switched away from Mistral over quality concerns. Still one to watch as Europe's flagship open model.",
-      "url": "https://www.linkedin.com/pulse/weekly-ai-blast-thursday-october-8-2026-john-kump-fixcc",
-      "image": "https://cdn.prod.website-files.com/698b124276ef81513426a3db/69c51d0f6dec47a338102692_logo_Mistral.png"
+      "image": "https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp",
+      "name": "Mistral Large 4",
+      "summary": "Europe's largest open-weight model: 1.05T total parameters (52B active), natively multimodal with a 1M-token context, trained from scratch on 3,800 NVIDIA Grace Blackwell GPUs in Mistral's own European datacenters. Launched as a public API preview with downloadable weights promised by end of October.",
+      "url": "https://mistral.ai/news/mistral-large-4/"
     }
   ]
 }

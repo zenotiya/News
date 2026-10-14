@@ -2,30 +2,30 @@
   "date": "2026-10-14",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 9.9,
+  "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-89107",
-      "cvss": 9.9,
-      "summary": "SAP S/4HANA's Manage Substitution/Validation Rules function does not sufficiently validate input processed by its domain-specific scripting language, letting an authenticated attacker run arbitrary code. Apply SAP's October security notes.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89107"
+      "id": "CVE-2026-89111",
+      "cvss": 10.0,
+      "summary": "OAuth2 SSRF in the SAP Cloud SDK for Python (before 0.45.2): an attacker controlling the tenant_subdomain parameter can redirect OAuth2 token requests to an attacker-controlled server, exfiltrating client credentials from multi-tenant BTP apps with no login required.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89111"
     },
     {
-      "id": "CVE-2026-85955",
-      "cvss": 9.9,
-      "summary": "Progress MarkLogic Server before 12.1.0 / 11.3.7 lets a remote attacker with query-execution access invoke an XQuery evaluation function without the required privilege, leading to server-side code execution with elevated permissions. Upgrade to 12.1.0 or 11.3.7.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85955"
+      "id": "CVE-2026-65162",
+      "cvss": 10.0,
+      "summary": "NVIDIA AIStore (Linux) legacy ETL Kubernetes PodSpec initialization API lets a remote attacker supply Kubernetes host-namespace and container-security settings, enabling code execution, privilege escalation, and data tampering across the AIStore storage layer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65162"
     },
     {
-      "id": "CVE-2026-90920",
-      "cvss": 9.8,
-      "summary": "IBM Maximo AI Service 9.1.0 and 9.2.0 allows a remote attacker to execute arbitrary code due to improper control of code generation. Update to the patched release.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90920"
+      "id": "CVE-2026-96207",
+      "cvss": 10.0,
+      "summary": "Improper certificate validation in Microsoft Partner Center lets an unauthorized attacker elevate privileges over the network (October 2026 Patch Tuesday). Affects a broadly-deployed Microsoft partner management service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96207"
     }
   ],
   "model": {
-    "name": "Meta Muse Wonder & Muse Wonder Full",
-    "summary": "Meta's new frontier models launched Oct 12, built for personal and professional agentic work with Active Memory (retains context across conversations) and Active Focus (sustains multi-step tasks, recovers from errors). Muse Wonder ships via the Meta Model API and Muse Code; the stronger Wonder Full is Muse Code subscribers only. Meta claims state-of-the-art coding and finance/legal agent performance.",
-    "url": "https://www.reuters.com/business/meta-releases-muse-wonder-ai-models-challenge-anthropic-openai-2026-10-12/"
+    "name": "Gemini 4 Argon",
+    "summary": "Google's new flagship frontier model, now globally available via the Gemini API, AI Studio, and AI Mode in Search. Built for \"deep work\" — complex multi-step tasks across coding, finance, law, cybersecurity, and science — it launches at an introductory $2/$10 per million input/output tokens, doubling after Nov 30.",
+    "url": "https://blog.google/intl/en-mena/product-updates/explore-get-answers/gemini-4-argon-built-to-solve-your-hardest-problems/"
   }
 }

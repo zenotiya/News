@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "items": [
     {
-      "id": "CVE-2026-89107",
-      "summary": "SAP S/4HANA's Manage Substitution/Validation Rules function does not sufficiently validate input processed by its domain-specific scripting language, letting an authenticated attacker run arbitrary code. Apply SAP's October security notes.",
-      "cvss": 9.9,
+      "cvss": 10.0,
+      "id": "CVE-2026-89111",
       "severity": "Critical",
+      "summary": "OAuth2 SSRF in the SAP Cloud SDK for Python (before 0.45.2): an attacker controlling the tenant_subdomain parameter can redirect OAuth2 token requests to an attacker-controlled server, exfiltrating client credentials from multi-tenant BTP apps with no login required.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89111"
+    },
+    {
+      "cvss": 10.0,
+      "id": "CVE-2026-65162",
+      "severity": "Critical",
+      "summary": "NVIDIA AIStore (Linux) legacy ETL Kubernetes PodSpec initialization API lets a remote attacker supply Kubernetes host-namespace and container-security settings, enabling code execution, privilege escalation, and data tampering across the AIStore storage layer.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65162"
+    },
+    {
+      "cvss": 10.0,
+      "id": "CVE-2026-96207",
+      "severity": "Critical",
+      "summary": "Improper certificate validation in Microsoft Partner Center lets an unauthorized attacker elevate privileges over the network (October 2026 Patch Tuesday). Affects a broadly-deployed Microsoft partner management service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96207"
+    },
+    {
+      "cvss": 9.9,
+      "id": "CVE-2026-89107",
+      "severity": "Critical",
+      "summary": "SAP S/4HANA (Manage Substitution/Validation Rules, S4CORE 105-109) insufficiently validates input to its domain-specific scripting language; an authenticated attacker with specific business privileges can get crafted input interpreted as arbitrary ABAP code, enabling full system compromise.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89107"
     },
     {
-      "id": "CVE-2026-85955",
-      "summary": "Progress MarkLogic Server before 12.1.0 / 11.3.7 lets a remote attacker with query-execution access invoke an XQuery evaluation function without the required privilege, leading to server-side code execution with elevated permissions. Upgrade to 12.1.0 or 11.3.7.",
-      "cvss": 9.9,
+      "cvss": 9.1,
+      "id": "CVE-2026-92097",
       "severity": "Critical",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85955"
-    },
-    {
-      "id": "CVE-2026-90920",
-      "summary": "IBM Maximo AI Service 9.1.0 and 9.2.0 allows a remote attacker to execute arbitrary code due to improper control of code generation. Update to the patched release.",
-      "cvss": 9.8,
-      "severity": "Critical",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90920"
-    },
-    {
-      "id": "CVE-2026-85097",
-      "summary": "Bricksforge WordPress plugin through 3.1.8.9 has an unauthenticated arbitrary file upload flaw allowing remote code execution; Patchstack observed automated in-the-wild exploitation starting Oct 7. Update to 3.1.8.10 immediately.",
-      "cvss": 9.8,
-      "severity": "Critical",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85097"
-    },
-    {
-      "id": "CVE-2026-85956",
-      "summary": "Progress MarkLogic Server before 12.1.0 / 11.3.7 lets a remote attacker with delegated database-administrator privileges run backup or restore operations on forests outside the authorized database scope, risking unauthorized access to security-critical data. Upgrade to 12.1.0 or 11.3.7.",
-      "cvss": 9.6,
-      "severity": "Critical",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85956"
+      "summary": "The \"Click to Chat for WhatsApp\" WordPress plugin (up to 4.44) is vulnerable to unauthenticated arbitrary shortcode execution: attacker-controlled URL bytes from REQUEST_URI reach do_shortcode() unfiltered via the greetings templates.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92097"
     }
   ]
 }
