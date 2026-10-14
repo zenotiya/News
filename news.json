@@ -1,34 +1,34 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "sections": [
     {
       "items": [
         {
-          "action": "Upgrade self-managed GitLab to 19.2.8, 19.3.4 or 19.4.2 immediately — an internet-exposed instance holds source code, pipeline secrets, deploy keys and runner tokens.",
-          "details": "Affected: 19.2 before 19.2.8, 19.3 before 19.3.4, 19.4 before 19.4.2. Researcher 'joaxcar' reported it via GitLab's HackerOne program; the same release fixes 5 High, 14 Medium and 4 Low issues. GitLab.com is already patched; no exploitation in the wild reported as of Oct 12, and it's not yet on CISA's KEV.",
-          "image": "https://d311qkbtxl22d6.cloudfront.net/files/699887ed50f9570002c93d61/gitlab_original_wordmark_logo_icon_146504.png?width=2500",
+          "action": "Update to the latest Ivanti release immediately; if compromise is suspected, back up the appliance config, factory-reset or rebuild the virtual instance, upgrade to the fixed version, then restore. Run network and memory forensics — the Integrity Checker Tool may not catch this one.",
+          "details": "Affects Connect Secure 25.1.1.1 and prior, 25.1.2.2 and prior, and 22.8R2.4 and prior. Because threat actor commands execute in memory, Ivanti's Integrity Checker Tool may miss evidence of exploitation. Version 22.8 reaches end of life on January 31, 2027.",
+          "image": "https://hub.ivanti.com/servlet/rtaImage?eid=ka1UL000000cTfJ&feoid=00N1B00000B8iqE&refid=0EMUL000004ne8U",
           "severity": "Critical",
-          "summary": "GitLab's October 12 patch release fixes CVE-2026-97229, an integer overflow in the CI/CD regular expression compiler that lets unauthenticated attackers run arbitrary code on self-managed CE/EE servers via a crafted regex in pipeline configuration.",
-          "title": "GitLab patches CVSS 10.0 unauthenticated RCE in CI/CD regex compiler",
-          "url": "https://www.bleepingcomputer.com/news/security/gitlab-warns-of-max-severity-rce-flaw-in-regex-compiler-engine/"
+          "summary": "CISA added CVE-2026-104935 to its Known Exploited Vulnerabilities catalog on Oct 13 — a zero-day authentication bypass in Ivanti Connect Secure that lets remote, unauthenticated attackers execute arbitrary commands. Active exploitation for credential theft and data exfiltration is confirmed.",
+          "title": "Ivanti Connect Secure zero-day under active exploitation",
+          "url": "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure"
         },
         {
-          "action": "Patch SMA 1000 to 12.4.3-03670 or 12.5.0-03082 now and hunt exposed appliances for abnormal traffic and signs of lateral movement.",
-          "details": "The flaw lets remote attackers direct the appliance to issue requests on their behalf and reach internal functionality. Patches: 12.4.3-03670 and 12.5.0-03082 (platform-hotfix). First signs of exploitation were detected Oct 8 by Defused Cyber and Previdian; SonicWall has not yet updated its advisory to reflect it. In June, the same product was hit by zero-days (CVE-2026-15409/15410) used to deploy Java web shells and the KNUCKLEBALL malware.",
-          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglEbu7YOWX4lrTm_x8p2FnL6B7z2hhGC0fKWPBSCVJqTt8l0rbcXFhQinT3ja0sVyx7hObbCQlmem9y4-wsxrwU6mtgsBIJjvH7rgC8n5w8DpEcv7G1N_u4dtOzA3qxVk22FPvly-ZmjsLJKdJqgTsKPtMHpit1oq-fk7jPFN1gTHLeJdF2JQRZ8yuwjxv/s1600/sonics.jpg",
+          "action": "Apply the October 2026 SAP security notes now. No confirmed exploitation yet — a rare head start.",
+          "details": "CVE-2026-89107 and CVE-2026-89110 both score 9.9 (NetWeaver Visual Composer and S/4HANA), with CVE-2026-89108 at 9.1 and CVE-2026-89113 at 8.8. Also patched: CVE-2026-58249 (CVSS 7.5), an unauthenticated flaw that crashes NetWeaver and Web Dispatcher processes.",
+          "image": "https://usiscc.org/wp-content/uploads/2020/03/SAP_Logo.jpg",
           "severity": "Critical",
-          "summary": "CVE-2026-102255 (CVSS 10.0), a pre-authenticated server-side request forgery in SonicWall Secure Mobile Access 1000, is being actively exploited within days of the October 6 patch: Previdian observed 135 attempts from two US-based IPs.",
-          "title": "Critical SonicWall SMA 1000 SSRF under active exploitation — 135 attempts and counting",
-          "url": "http://thehackernews.com/2026/10/critical-sonicwall-sma-1000-flaw.html"
+          "summary": "SAP's October 13 security Patch Day fixes 20 CVEs, four of them critical. CVE-2026-89111 (CVSS 10.0) is an unauthenticated SSRF in the SAP Cloud SDK for Python that lets an attacker redirect OAuth2 token requests and exfiltrate client credentials from multi-tenant BTP applications.",
+          "title": "SAP October Patch Day: four critical CVEs led by a 10.0",
+          "url": "https://securityonline.info/sap-security-patch-day-october-2026/"
         },
         {
-          "action": "Upgrade to 2026.7.0 (or the latest patched minor on your branch). If patching is delayed, disable PDF uploads or limit upload rights to trusted users.",
-          "details": "CVE-2026-55674 fixed in 2026.7.0 / 2026.6.1 / 2026.5.2 / 2026.1.6; CVE-2026-55420 fixed in 2026.6.0 / 2026.5.1 / 2026.4.2 / 2026.1.5. Both were reported to Discourse in June; no confirmed in-the-wild exploitation. Discourse powers 22,000+ communities, many running open-registration forums.",
-          "image": "https://mavtools.com/wp-content/uploads/2024/07/Discourse.org-Logo.jpg",
-          "severity": "High",
-          "summary": "Research published Oct 7 by SL Cyber details two Discourse flaws: CVE-2026-55674 (cache poisoning that serves attacker JavaScript to anonymous visitors) and CVE-2026-55420 (an image-upload race leading to arbitrary file read/write via ImageMagick and GhostScript).",
-          "title": "Discourse patches JS-injection cache poisoning and image-upload file theft",
-          "url": "https://securityonline.info/discourse-vulnerabilities-cve-2026-55674-cve-2026-55420/"
+          "action": "Restrict the AhsayCBS management interface to trusted IP ranges or a VPN immediately — do not wait for a patch. Hunt for JSP webshells, a 'MicrosoftEdgeUpdateSvc' service, and the WinRing0x64.sys driver; restore compromised hosts from known-good backups.",
+          "details": "Huntress confirmed version 10.3.4, listed by the vendor as the fix, is still vulnerable. Attackers drop JSP webshells plus an XMRig Monero miner disguised as edge.exe, persisting via a fake MicrosoftEdgeUpdateSvc service that pauses when Task Manager opens. In one case the attackers also loaded the vulnerable WinRing0x64.sys driver to grab more hardware resources.",
+          "image": "https://www.cyber-gear.ai/wp-content/uploads/2026/08/ChatGPT-Image-20-Agu-2026-16_59_28-1100x564.png",
+          "severity": "Critical",
+          "summary": "Huntress confirms active exploitation of CVE-2026-105133 (authentication bypass) and CVE-2026-105134 (remote code execution) in the AhsayCBS backup management console, chained for unauthenticated SYSTEM-level code execution. At least five organizations were hit from Oct 7, and the vendor's stated fix does not close the flaws.",
+          "title": "AhsayCBS zero-days exploited to plant webshells and miners",
+          "url": "https://www.bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto/"
         }
       ],
       "title": "Act on Today"
@@ -36,28 +36,28 @@
     {
       "items": [
         {
-          "details": "State filings confirm 298,647 affected in Texas and 69,526 in South Carolina (one aggregation cites ~8.2M nationwide; iRhythm has not disclosed a total). Stolen: names, addresses, emails, phone numbers, dates of birth, account and device serial numbers, insurance numbers. The threat actor contacted the company June 9 demanding payment to prevent publication. Medical devices, clinical systems and patient safety were unaffected.",
-          "image": "https://mallory-core-public-images.s3.us-east-2.amazonaws.com/hca-healthcare-settles-class-action-over-patient-data-breach.png",
+          "details": "Claim is operator-side only for now — no victim statement or confirmed data leak reported yet.",
+          "image": "https://d9x705hv73pny.cloudfront.net/Pictures/1024x536/2/4/3/113243_ransomwarehackcyber_211109.jpg",
           "severity": "High",
-          "summary": "iRhythm Technologies is notifying hundreds of thousands of patients after hackers gained access to third-party-hosted business applications through social engineering and exfiltrated data between June 3 and 8, 2026.",
-          "title": "iRhythm breach: hackers stole data on 360,000+ cardiac patients",
-          "url": "https://www.securityweek.com/irhythm-data-breach-impacts-over-360000-people/"
+          "summary": "The Play ransomware group listed The Innovation Group (US) as a victim on Oct 13, per the Ransomware.live tracker. An associated exposure report flagged 120 passwords (6 critical) tied to the victim's environment.",
+          "title": "Play ransomware claims The Innovation Group",
+          "url": "https://www.hookphish.com/blog/ransomware-group-play-hits-the-innovation-group/"
         },
         {
-          "details": "Malware was found on the NCG computer Oct 5, isolated Oct 6, and disclosed Oct 11. Exposed fields: names, genders, dates of birth, email addresses, telephone numbers — no passwords or payment data. Credentials were reset; investigators are still checking for data leaks online. Affected brands include Big Echo and DK Dining.",
-          "image": "https://img.myloview.se/vaggdekor/karaoke-neon-signs-style-text-vector-700-276789599.jpg",
+          "details": "Threat-intel reports tied to the claim note infostealer activity (the Cavalier stealer family) and 125 exposed passwords — 5 of them critical — in the victim's environment.",
+          "image": "https://www.kz-today.com/neofiles/serve-image/6853dc72e3f66b4703819207/961x616/c1",
           "severity": "High",
-          "summary": "Japanese karaoke giant Daiichi Kosho disclosed that malware on a contractor's (Nippon Columbia Group) employee PC may have exposed ~8.63 million customer and 93,000 employee records — a supply-chain breach with no confirmed exfiltration yet.",
-          "title": "Malware at contractor exposes ~8.7M Daiichi Kosho customer records",
-          "url": "https://www.scworld.com/brief/japanese-karaoke-maker-daiichi-kosho-reports-data-breach-affecting-8-7-million-records"
+          "summary": "Ransomware group Dark Project claimed an Oct 12 attack on Franklin Miller Inc., a manufacturer of wastewater grinders and shredders, saying it exfiltrated over 250GB of confidential data — technical drawings, project documentation, banking records, and employee personal data.",
+          "title": "Dark Project claims 250GB theft from Franklin Miller Inc.",
+          "url": "https://qpulse.quasarcybertech.com/news/6707/dark-project-ransomware-group-claims-attack-on-franklin-miller-inc-resulting-in-250gb-data-theft"
         },
         {
-          "details": "The listing is the gang's unverified claim, with publication threatened soon. Akira remains one of the year's most prolific data-extortion crews; claims of this size typically precede staged leaks to force payment.",
-          "image": "https://dfrlab.org/wp-content/uploads/sites/3/2023/05/ransomware-gcd491791e_1920-e1683924809725-500x350.jpg",
-          "severity": "High",
-          "summary": "The Akira ransomware group listed the Louis Fusco Group on its leak site on Oct 12, claiming theft of 465GB of corporate data including employee passport and driver's license scans, project specifications, drawings and client/partner information.",
-          "title": "Akira claims 465GB heist from Louis Fusco Group",
-          "url": "https://qpulse.quasarcybertech.com/news/6702/akira-ransomware-group-claims-data-exfiltration-attack-on-louis-fusco-group"
+          "details": "Listed on Play's leak tracker the same day as The Innovation Group claim. Claim remains unverified operator-side data.",
+          "image": "https://www.novipro.com/hs-fs/hubfs/Imported_Blog_Media/Security%20concept%20Lock%20on%20digital%20screen%2c%20illustration-800x450-2.jpg?width=800&height=450&name=Security%20concept%20Lock%20on%20digital%20screen%2c%20illustration-800x450-2.jpg",
+          "severity": "Medium",
+          "summary": "Play ransomware also listed Germany's DFK Group (professional services) as a victim on Oct 13, making it at least two Play claims in a single day.",
+          "title": "Play ransomware also claims Germany's DFK Group",
+          "url": "https://www.hookphish.com/blog/ransomware-group-play-hits-dfk-group/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -65,33 +65,33 @@
     {
       "items": [
         {
-          "details": "No data volumes or exfiltration details published yet; the listing is the group's claim and is unverified.",
-          "image": "https://feeds.abplive.com/onecms/images/uploaded-images/2025/09/20/b8f1f1f1fcce2e901b48b0008718d7dc175835103115277_original.jpg?impolicy=abp_cdn&imwidth=470",
-          "severity": "Medium",
-          "summary": "The Orova ransomware crew added Amantya Technologies, an Indian technology company, to its leak site — disclosed Oct 12. Orova has listed ~47 victims since first appearing in May 2026.",
-          "title": "Orova ransomware lists Indian tech firm Amantya Technologies",
-          "url": "https://cyberthreatintelligence.net/ransomware-victim/amantya-technologies-orova-2026"
-        },
-        {
-          "details": "Two cases registered from January allege the accused ran call centres in Australia, Cambodia and elsewhere to defraud victims in India and abroad, routing proceeds through mule bank accounts. 55 people have been arrested so far in the two cases.",
-          "image": "https://pynr.in/wp-content/uploads/2024/06/cyber-crime.jpg",
+          "details": "The company says it detected the breach weeks earlier, contained it, and operations across its businesses were unaffected; no financial losses were disclosed. The authenticity of the leaked files has not been independently verified.",
+          "image": "https://images.bhaskarassets.com/thumb/730x382/web2images/521/2026/06/13/tata_1781357414.jpeg",
           "severity": "High",
-          "summary": "Telangana Cyber Security Bureau teams searched homes in Sathupalli and Rajugudem (Khammam district) linked to a cybercrime probe involving over ₹1,000 crore in transactions, seizing a Mercedes-Benz car, six phones, two laptops and property documents.",
-          "title": "Telangana CSB raids homes in ₹1,000-crore cybercrime probe",
-          "url": "https://m.dailyhunt.in/news/india/english/hyderabadmailcom-epaper-hydmail/satthupalli%20cyber%20security%20bureau%20searches%20homes%20in%201000%20crore%20cybercrime%20probe-newsid-n729849806"
+          "summary": "Tata Electronics confirmed a cybersecurity incident after extortion group World Leaks claimed to have stolen confidential files and released samples online — reported to include specifications linked to Apple suppliers and manufacturing documents tied to Tesla.",
+          "title": "Tata Electronics confirms breach after extortion group's leak claim",
+          "url": "https://www.business-standard.com/amp/technology/tech-news/from-supermarkets-to-airports-cyberattacks-that-disrupted-real-world-ops-126101300811_1.html"
         },
         {
-          "details": "The victim transferred money via RTGS to multiple accounts under the pretext of account verification, then reported through the 1930 national cybercrime helpline. Dakshina Kannada Cyber Crime Police registered a case under IT Act 66C/66D and BNS provisions.",
-          "image": "https://static.vecteezy.com/system/resources/thumbnails/073/493/504/small/protect-yourself-phone-scams-fraud-illustration-vector.jpg",
+          "details": "Operator-side claim only so far; no victim statement or confirmed data publication.",
+          "image": "https://static.collegedekho.com/media/img/users/Great_Lakes_Institute_of_Management.jpg",
           "severity": "Medium",
-          "summary": "A man from Puttur, Karnataka, transferred ₹1,31,50,000 between Sept 2 and Oct 6 to fraudsters impersonating Mumbai Police and ATS officers over WhatsApp video calls, who accused him of funding the Pahalgam attack and kept him under a month-long 'digital arrest'.",
-          "title": "Puttur man loses ₹1.31 crore in 'digital arrest' scam",
-          "url": "https://www.deccanherald.com/india/karnataka/puttur-man-loses-rs-131-crore-in-digital-arrest-scam-4180070"
+          "summary": "Ransomware group incransom listed Great Lakes Institute of Management — the Chennai/Gurgaon business school ranked among India's top 10 — as a victim on Oct 13.",
+          "title": "incransom claims Great Lakes Institute of Management",
+          "url": "https://www.hookphish.com/blog/ransomware-group-incransom-hits-great-lakes/"
+        },
+        {
+          "details": "The IoT vendor's platforms range from MAVID MIC-to-cloud devices to LS9 voice-assistant and music-streaming platforms. Claim is operator-side and unverified.",
+          "image": "https://www.dogtownmedia.com/wp-content/uploads/shutterstock_759387487.jpg",
+          "severity": "Medium",
+          "summary": "Ransomware group Orova claimed Libre Wireless Technologies (India), maker of MAVID and LS9 IoT platforms, on Oct 12 — the second India-based ransomware claim of the week.",
+          "title": "Orova hits Indian IoT maker Libre Wireless",
+          "url": "https://www.hookphish.com/blog/ransomware-group-orova-hits-libre-wireless-technologies/"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Tuesday, October 13 — Here's what's worth your attention today.",
+  "subtitle": "Wednesday, October 14 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
