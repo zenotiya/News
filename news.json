@@ -1,34 +1,43 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "sections": [
     {
       "items": [
         {
-          "action": "Update to the latest Ivanti release immediately; if compromise is suspected, back up the appliance config, factory-reset or rebuild the virtual instance, upgrade to the fixed version, then restore. Run network and memory forensics — the Integrity Checker Tool may not catch this one.",
-          "details": "Affects Connect Secure 25.1.1.1 and prior, 25.1.2.2 and prior, and 22.8R2.4 and prior. Because threat actor commands execute in memory, Ivanti's Integrity Checker Tool may miss evidence of exploitation. Version 22.8 reaches end of life on January 31, 2027.",
-          "image": "https://hub.ivanti.com/servlet/rtaImage?eid=ka1UL000000cTfJ&feoid=00N1B00000B8iqE&refid=0EMUL000004ne8U",
+          "action": "Update Content Scanner Tools to ≥ 25.3.0.5525 on all SEG appliances with File Reputation enabled; review Cisco's IOCs. Managed-cloud customers contacted by Cisco should engage with Cisco remediation.",
+          "details": "Found via Cisco's internal scanning; exploitation confirmed in October 2026. Affects SEG where File Reputation is enabled and Content Scanner Tools < 25.3.0.5525. Cisco published IOCs and contacted managed Secure Email Cloud customers showing compromise indicators.",
           "severity": "Critical",
-          "summary": "CISA added CVE-2026-104935 to its Known Exploited Vulnerabilities catalog on Oct 13 — a zero-day authentication bypass in Ivanti Connect Secure that lets remote, unauthenticated attackers execute arbitrary commands. Active exploitation for credential theft and data exfiltration is confirmed.",
-          "title": "Ivanti Connect Secure zero-day under active exploitation",
-          "url": "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure"
+          "summary": "Cisco disclosed on Oct 14 that attackers are actively exploiting CVE-2026-76519 (CVSS 9.8) in Secure Email Gateway: a path traversal in the AMP File Reputation feature lets an unauthenticated attacker send a crafted attachment that writes files and executes commands as root — no login or user interaction needed.",
+          "title": "Cisco Secure Email Gateway zero-day under active exploitation",
+          "url": "https://www.bleepingcomputer.com/news/security/cisco-patches-actively-exploited-secure-email-gateway-zero-day/",
+          "image": "https://www.captaindns.com/_next/image?url=%2Fblog%2F2026%2F04%2Fcisco-secure-email-gateway%2Fhero_en.png&w=2048&q=75&dpl=dpl_8P6cc8mHeoBpJ3h4NvBttLZWE22t"
         },
         {
-          "action": "Apply the October 2026 SAP security notes now. No confirmed exploitation yet — a rare head start.",
-          "details": "CVE-2026-89107 and CVE-2026-89110 both score 9.9 (NetWeaver Visual Composer and S/4HANA), with CVE-2026-89108 at 9.1 and CVE-2026-89113 at 8.8. Also patched: CVE-2026-58249 (CVSS 7.5), an unauthenticated flaw that crashes NetWeaver and Web Dispatcher processes.",
-          "image": "https://usiscc.org/wp-content/uploads/2020/03/SAP_Logo.jpg",
+          "action": "Patch to 25.1.3.0/25.1.3.1, 22.8R2.5, or 25.1.1.2; run memory + network forensics (not just the Integrity Checker); on suspected compromise, follow Ivanti's recovery procedure — assume compromise, factory-reset, and rotate every credential and certificate.",
+          "details": "CISA added it to the KEV catalog on Oct 13 with an Oct 16 federal deadline; used for credential theft and data exfiltration. Affects 25.1.1.1 and earlier, 25.1.2.2 and earlier, 22.8R2.4 and earlier. The third (privilege-escalation) flaw is still unpatched.",
           "severity": "Critical",
-          "summary": "SAP's October 13 security Patch Day fixes 20 CVEs, four of them critical. CVE-2026-89111 (CVSS 10.0) is an unauthenticated SSRF in the SAP Cloud SDK for Python that lets an attacker redirect OAuth2 token requests and exfiltrate client credentials from multi-tenant BTP applications.",
-          "title": "SAP October Patch Day: four critical CVEs led by a 10.0",
-          "url": "https://securityonline.info/sap-security-patch-day-october-2026/"
+          "summary": "Ivanti pushed emergency patches for CVE-2026-104935, an authentication bypass allowing unauthenticated remote command execution on Connect Secure. Volexity attributes exploitation to a new group, UTA0576, which chained three zero-days entirely in memory — so Ivanti's Integrity Checker Tool cannot detect the compromise.",
+          "title": "Ivanti Connect Secure zero-day chained by UTA0576 — KEV-listed, federal deadline Oct 16",
+          "url": "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure",
+          "image": "https://cdnglobal.secnews.gr/wp-content/uploads/2025/01/09101206/ivanti-Connect-Secure-eupatheia-630x420.jpg"
         },
         {
-          "action": "Restrict the AhsayCBS management interface to trusted IP ranges or a VPN immediately — do not wait for a patch. Hunt for JSP webshells, a 'MicrosoftEdgeUpdateSvc' service, and the WinRing0x64.sys driver; restore compromised hosts from known-good backups.",
-          "details": "Huntress confirmed version 10.3.4, listed by the vendor as the fix, is still vulnerable. Attackers drop JSP webshells plus an XMRig Monero miner disguised as edge.exe, persisting via a fake MicrosoftEdgeUpdateSvc service that pauses when Task Manager opens. In one case the attackers also loaded the vulnerable WinRing0x64.sys driver to grab more hardware resources.",
-          "image": "https://www.cyber-gear.ai/wp-content/uploads/2026/08/ChatGPT-Image-20-Agu-2026-16_59_28-1100x564.png",
+          "action": "Patch CVE-2026-96951 first (before Oct 16), then work through the 78 critical fixes prioritizing internet-facing systems; update .NET Framework where WDAC is enforced.",
+          "details": "Two more zero-days were publicly disclosed before patching: CVE-2026-108398 (.NET Framework WDAC bypass, found by Google Project Zero's James Forshaw) and CVE-2026-92707 (MessagePack-CSharp DoS) — neither confirmed exploited yet.",
           "severity": "Critical",
-          "summary": "Huntress confirms active exploitation of CVE-2026-105133 (authentication bypass) and CVE-2026-105134 (remote code execution) in the AhsayCBS backup management console, chained for unauthenticated SYSTEM-level code execution. At least five organizations were hit from Oct 7, and the vendor's stated fix does not close the flaws.",
-          "title": "AhsayCBS zero-days exploited to plant webshells and miners",
-          "url": "https://www.bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto/"
+          "summary": "Microsoft's October Patch Tuesday (Oct 14) fixes 1,414 vulnerabilities including 78 critical. The priority item is CVE-2026-96951 (CVSS 8.8), an actively exploited Windows Shell command-injection flaw that bypasses Mark of the Web protections (SmartScreen/Protected View); CISA KEV-listed it on Oct 13 with an Oct 16 federal deadline.",
+          "title": "Microsoft October Patch Tuesday: 1,414 flaws, one exploited zero-day",
+          "url": "https://securityonline.info/october-2026-patch-tuesday/",
+          "image": "https://www.cypro.se/wp-content/uploads/2024/01/ms-gTjmEs.png"
+        },
+        {
+          "action": "Nextcloud admins: update richdocumentscode to ≥ 26.4.303 or remove the app entirely; hunt for web shells, especially on servers restarted since early September.",
+          "details": "Disabling the app does NOT mitigate — it must be updated to 26.4.303 or removed. The fixed version shipped Sep 11 but the advisory only came Oct 14, leaving a disclosure gap.",
+          "severity": "High",
+          "summary": "Collabora published an Oct 14 advisory for CVE-2026-110447 in its 'Collabora Online – Built-in CODE Server' Nextcloud app: an unauthenticated request can execute commands on the server when the local document server isn't running (restart/upgrade/crash). Attackers have been planting web shells since Sep 10.",
+          "title": "Nextcloud servers backdoored via critical Collabora CODE app flaw",
+          "url": "https://realhacker.news/hackers-backdoor-nextcloud-servers-through-critical-flaw-in-collaboras-built-in-code-app/",
+          "image": "https://nextcloud.com/c/uploads/2020/03/hacker-coder-security-breach.jpg"
         }
       ],
       "title": "Act on Today"
@@ -36,28 +45,35 @@
     {
       "items": [
         {
-          "details": "Claim is operator-side only for now — no victim statement or confirmed data leak reported yet.",
-          "image": "https://d9x705hv73pny.cloudfront.net/Pictures/1024x536/2/4/3/113243_ransomwarehackcyber_211109.jpg",
-          "severity": "High",
-          "summary": "The Play ransomware group listed The Innovation Group (US) as a victim on Oct 13, per the Ransomware.live tracker. An associated exposure report flagged 120 passwords (6 critical) tied to the victim's environment.",
-          "title": "Play ransomware claims The Innovation Group",
-          "url": "https://www.hookphish.com/blog/ransomware-group-play-hits-the-innovation-group/"
+          "details": "The count was revised upward from 183 after two external security firms investigated. The bank blocked the attacker IPs, deployed emergency verification logic, is notifying affected customers individually, and reported to South Korea's Financial Supervisory Service.",
+          "severity": "Critical",
+          "summary": "South Korea's OK Savings Bank confirmed on Oct 15 that a hacking attack on its online loan application service (Oct 11, 8:44 PM – Oct 12, 2:14 AM) exposed personal and financial data of 250 customers — names, birth dates, mobile numbers, account numbers, addresses, annual income, and loan amounts.",
+          "title": "OK Savings Bank confirms breach: 250 customers' data exposed",
+          "url": "https://www.ajupress.com/view/20261015102070643"
         },
         {
-          "details": "Threat-intel reports tied to the claim note infostealer activity (the Cavalier stealer family) and 125 exposed passwords — 5 of them critical — in the victim's environment.",
-          "image": "https://www.kz-today.com/neofiles/serve-image/6853dc72e3f66b4703819207/961x616/c1",
+          "details": "The claim is unverified (from the actor's own listing, indexed on ransomware.live). If genuine, the group says client-site surveillance feeds are 'dark until settlement' — a supply-chain risk for all of Interior Technologies' customers.",
           "severity": "High",
-          "summary": "Ransomware group Dark Project claimed an Oct 12 attack on Franklin Miller Inc., a manufacturer of wastewater grinders and shredders, saying it exfiltrated over 250GB of confidential data — technical drawings, project documentation, banking records, and employee personal data.",
-          "title": "Dark Project claims 250GB theft from Franklin Miller Inc.",
-          "url": "https://qpulse.quasarcybertech.com/news/6707/dark-project-ransomware-group-claims-attack-on-franklin-miller-inc-resulting-in-250gb-data-theft"
+          "summary": "Emerging ransomware group N0n listed California-based Interior Technologies on its leak site on Oct 14, marking the entry 'NOT PAID — EXPOSED' and claiming to have taken the company's complete gateway configuration — every client site, device, user, and credential.",
+          "title": "N0n ransomware claims breach of smart-building integrator Interior Technologies",
+          "url": "https://qpulse.quasarcybertech.com/news/6818/ransomware-group-n0n-claims-breach-of-interior-technologies-exposing-smart-building-and-surveillance-infrastructure",
+          "image": "https://digitalinside.pt/wp-content/uploads/2024/02/Ransomware_1.jpeg"
         },
         {
-          "details": "Listed on Play's leak tracker the same day as The Innovation Group claim. Claim remains unverified operator-side data.",
-          "image": "https://www.novipro.com/hs-fs/hubfs/Imported_Blog_Media/Security%20concept%20Lock%20on%20digital%20screen%2c%20illustration-800x450-2.jpg?width=800&height=450&name=Security%20concept%20Lock%20on%20digital%20screen%2c%20illustration-800x450-2.jpg",
+          "details": "The claim is unverified; no entry vector or exfiltration extent disclosed. The healthcare/pharma angle makes it the more impactful of the day's pharma/manufacturing claims.",
+          "severity": "High",
+          "summary": "On Oct 14, the Eclipse ransomware group claimed Taiwan Otsuka Pharmaceutical (founded 1974) as a victim. Supporting infostealer exposure data cites 162 exposed passwords tied to the victim's domain — including two marked critical — suggesting an infostealer-led foothold.",
+          "title": "Eclipse ransomware claims Taiwan Otsuka Pharmaceutical",
+          "url": "https://qpulse.quasarcybertech.com/news/6808/eclipse-ransomware-group-claims-attack-on-taiwan-otsuka-pharmaceutical",
+          "image": "https://www.beforecrypt.com/wp-content/uploads/2026/01/deadlock-ransomware.png"
+        },
+        {
+          "details": "The claim is unverified; ransomware.live shows the listing with a note about the firm's complete business email archive. Qilin is an established group, which raises the claim's relative credibility.",
           "severity": "Medium",
-          "summary": "Play ransomware also listed Germany's DFK Group (professional services) as a victim on Oct 13, making it at least two Play claims in a single day.",
-          "title": "Play ransomware also claims Germany's DFK Group",
-          "url": "https://www.hookphish.com/blog/ransomware-group-play-hits-dfk-group/"
+          "summary": "On Oct 14, Qilin listed U.S. architecture firm MOA Architecture (moaarch.com) on its leak site, with the victim domain showing 137 exposed passwords — two classified critical — and Microsoft 365 usage.",
+          "title": "Qilin lists U.S. architecture firm MOA Architecture on its leak site",
+          "url": "https://qpulse.quasarcybertech.com/news/6815/qilin-ransomware-group-claims-moa-architecture-as-victim",
+          "image": "https://static0.makeuseofimages.com/wordpress/wp-content/uploads/2022/08/skull-chains-1.jpg?q=50&fit=crop&w=825&dpr=1.5"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -65,33 +81,33 @@
     {
       "items": [
         {
-          "details": "The company says it detected the breach weeks earlier, contained it, and operations across its businesses were unaffected; no financial losses were disclosed. The authenticity of the leaked files has not been independently verified.",
-          "image": "https://images.bhaskarassets.com/thumb/730x382/web2images/521/2026/06/13/tata_1781357414.jpeg",
+          "details": "Funds moved via IMPS/NEFT to mule accounts with dummy reference identifiers and amounts exceeding per-transaction limits; a Chennai-developed platform with deficient payout-API controls was allegedly the initial foothold. CERT-In advised suspending compromised APIs, rotating credentials, MFA, and maker-checker approvals.",
+          "severity": "Critical",
+          "summary": "CERT-In (with CSIRT-Fin) issued advisory CIAD-2026-0046 warning of coordinated campaigns stealing payment aggregator/gateway and partner-bank API credentials to trigger unauthorised fund transfers from within victims' own whitelisted infrastructure — bypassing KYC, loan-sanction, beneficiary-verification, and transaction-limit controls. ET reports up to 20 financial institutions were affected.",
+          "title": "CERT-In warns: API-hijacking campaign hit ~20 financial institutions",
+          "url": "https://bfsi.economictimes.indiatimes.com/articles/cyberattacks-affect-20-financial-institutions-cert-in-warns-on-api-vulnerabilities-and-security-measures/134955728",
+          "image": "https://py.gov.in/sites/default/files/ncsam24d232-2.jpg"
+        },
+        {
+          "details": "Dubai-based handlers supplied an app called 'Banker Panel' that split stolen funds across thousands of mule accounts in one click, defeating banks' 'golden hour' freeze window. Seizures: 15 laptops, 128 ATM cards, 85 phones, 76 SIM cards; ~₹120 crore frozen across 7,500 accounts. Funds went onward to Dubai via the informal 'angadia' courier network.",
           "severity": "High",
-          "summary": "Tata Electronics confirmed a cybersecurity incident after extortion group World Leaks claimed to have stolen confidential files and released samples online — reported to include specifications linked to Apple suppliers and manufacturing documents tied to Tesla.",
-          "title": "Tata Electronics confirms breach after extortion group's leak claim",
-          "url": "https://www.business-standard.com/amp/technology/tech-news/from-supermarkets-to-airports-cyberattacks-that-disrupted-real-world-ops-126101300811_1.html"
+          "summary": "The Mumbai Police Crime Branch uncovered two fraud networks operating out of luxury villas in Goa, arresting 22 men. Police estimate ~₹900 crore was routed through thousands of mule accounts linked to 186 cybercrime cases.",
+          "title": "Mumbai Police bust ₹900-crore cyber-fraud laundering network",
+          "url": "https://indianexpress.com/article/long-reads/inside-goa-villas-multi-crore-cyber-crime-money-laundering-scam-mumbai-police-raid-900-crore-10920429/",
+          "image": "https://images.gujaratimidday.com/Image_GMD/images/2025/aug/Righadcyberonejpg_d.jpg"
         },
         {
-          "details": "Operator-side claim only so far; no victim statement or confirmed data publication.",
-          "image": "https://static.collegedekho.com/media/img/users/Great_Lakes_Institute_of_Management.jpg",
-          "severity": "Medium",
-          "summary": "Ransomware group incransom listed Great Lakes Institute of Management — the Chennai/Gurgaon business school ranked among India's top 10 — as a victim on Oct 13.",
-          "title": "incransom claims Great Lakes Institute of Management",
-          "url": "https://www.hookphish.com/blog/ransomware-group-incransom-hits-great-lakes/"
-        },
-        {
-          "details": "The IoT vendor's platforms range from MAVID MIC-to-cloud devices to LS9 voice-assistant and music-streaming platforms. Claim is operator-side and unverified.",
-          "image": "https://www.dogtownmedia.com/wp-content/uploads/shutterstock_759387487.jpg",
-          "severity": "Medium",
-          "summary": "Ransomware group Orova claimed Libre Wireless Technologies (India), maker of MAVID and LS9 IoT platforms, on Oct 12 — the second India-based ransomware claim of the week.",
-          "title": "Orova hits Indian IoT maker Libre Wireless",
-          "url": "https://www.hookphish.com/blog/ransomware-group-orova-hits-libre-wireless-technologies/"
+          "details": "In the Mumbai case, the scam began Sep 19 and escalated through fake ATS/IPS personas with continuous video surveillance. Separately, Maharashtra Cyber Cell rescued two elderly women mid-scam — one in Sambhaji Nagar defrauded of ₹27 lakh of a demanded ₹3 crore — using real-time transaction tracing of a Layer-1 mule account.",
+          "severity": "High",
+          "summary": "On Oct 14, multiple high-value 'digital arrest' scams surfaced: a 74-year-old businessman and his 77-year-old wife from Peddar Road, Mumbai, lost ₹4.52 crore to fraudsters impersonating Mumbai Police, ATS, NIA, Supreme Court, and RBI officials; a 72-year-old woman in Hyderabad lost ₹2.2 crore to a fake-CBI caller, prompting a fresh police advisory.",
+          "title": "Digital-arrest scams surge: elderly lose crores in Mumbai and Hyderabad",
+          "url": "https://www.lokmattimes.com/mumbai/mumbai-cyber-fraud-elderly-peddar-road-couple-duped-of-rs-452-crore-in-digital-arrest-scam-a525/",
+          "image": "https://qaoci.quickheal.com/blogs/wp-content/uploads/2025/08/image-1.jpg"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Wednesday, October 14 — Here's what's worth your attention today.",
+  "subtitle": "Thursday, October 15 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
