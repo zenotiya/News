@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "items": [
     {
-      "cvss": 10.0,
-      "id": "CVE-2026-89111",
+      "id": "CVE-2026-76519",
+      "summary": "Zero-day in the Advanced Malware Protection (AMP) feature of Cisco Secure Email Gateway: improper handling of email attachments with File Reputation enabled lets an unauthenticated remote attacker write arbitrary files and execute commands with root privileges. Actively exploited; CISA added it to the KEV catalog on October 14 with a 3-day deadline.",
+      "cvss": 9.8,
       "severity": "Critical",
-      "summary": "OAuth2 SSRF in the SAP Cloud SDK for Python (before 0.45.2): an attacker controlling the tenant_subdomain parameter can redirect OAuth2 token requests to an attacker-controlled server, exfiltrating client credentials from multi-tenant BTP apps with no login required.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89111"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519"
     },
     {
+      "id": "CVE-2026-76482",
+      "summary": "Multiple CWE-347 cryptographic signature-verification flaws in Cisco License On-Prem (formerly Smart Software Manager On-Prem), found during an internal security review that also used frontier AI models. Affects all releases; the only remediation is the October 7 hardening release.",
       "cvss": 10.0,
-      "id": "CVE-2026-65162",
       "severity": "Critical",
-      "summary": "NVIDIA AIStore (Linux) legacy ETL Kubernetes PodSpec initialization API lets a remote attacker supply Kubernetes host-namespace and container-security settings, enabling code execution, privilege escalation, and data tampering across the AIStore storage layer.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65162"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76482"
     },
     {
-      "cvss": 10.0,
-      "id": "CVE-2026-96207",
-      "severity": "Critical",
-      "summary": "Improper certificate validation in Microsoft Partner Center lets an unauthorized attacker elevate privileges over the network (October 2026 Patch Tuesday). Affects a broadly-deployed Microsoft partner management service.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96207"
-    },
-    {
+      "id": "CVE-2026-85948",
+      "summary": "XQuery injection in a deprecated Management API package path in Progress MarkLogic Server (11.x before 11.3.7, 12.x before 12.1.0) lets a remote attacker with manage-user privileges obtain persistent administrative control. One of 31 flaws in Progress's October 14 critical bulletin.",
       "cvss": 9.9,
-      "id": "CVE-2026-89107",
       "severity": "Critical",
-      "summary": "SAP S/4HANA (Manage Substitution/Validation Rules, S4CORE 105-109) insufficiently validates input to its domain-specific scripting language; an authenticated attacker with specific business privileges can get crafted input interpreted as arbitrary ABAP code, enabling full system compromise.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89107"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85948"
     },
     {
-      "cvss": 9.1,
-      "id": "CVE-2026-92097",
+      "id": "CVE-2026-39919",
+      "summary": "Heap-based buffer overflow in Ghostscript's JPEG 2000 output adapter: a crafted PDF with mismatched component subsampling corrupts memory and enables remote code execution. Affects all versions before 10.08.0.",
+      "cvss": 9.3,
       "severity": "Critical",
-      "summary": "The \"Click to Chat for WhatsApp\" WordPress plugin (up to 4.44) is vulnerable to unauthenticated arbitrary shortcode execution: attacker-controlled URL bytes from REQUEST_URI reach do_shortcode() unfiltered via the greetings templates.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92097"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39919"
+    },
+    {
+      "id": "CVE-2026-107779",
+      "summary": "Missing authentication on Dromara Skyeye's bundled xxl-job-admin JobInfoController endpoints lets unauthenticated attackers POST shell, Python, or PowerShell jobs and execute commands on the executor host. Public proof-of-concept exists; no fixed release confirmed.",
+      "cvss": 9.3,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107779"
     }
   ]
 }

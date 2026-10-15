@@ -5,27 +5,27 @@
   "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-89111",
+      "id": "CVE-2026-76482",
       "cvss": 10.0,
-      "summary": "OAuth2 SSRF in the SAP Cloud SDK for Python (before 0.45.2): an attacker controlling the tenant_subdomain parameter can redirect OAuth2 token requests to an attacker-controlled server, exfiltrating client credentials from multi-tenant BTP apps with no login required.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89111"
+      "summary": "Multiple CWE-347 cryptographic signature-verification flaws in Cisco License On-Prem (formerly Smart Software Manager On-Prem), found during an internal security review that also used frontier AI models. Affects all releases; the only remediation is the October 7 hardening release.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76482"
     },
     {
-      "id": "CVE-2026-65162",
-      "cvss": 10.0,
-      "summary": "NVIDIA AIStore (Linux) legacy ETL Kubernetes PodSpec initialization API lets a remote attacker supply Kubernetes host-namespace and container-security settings, enabling code execution, privilege escalation, and data tampering across the AIStore storage layer.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65162"
+      "id": "CVE-2026-85948",
+      "cvss": 9.9,
+      "summary": "XQuery injection in a deprecated Management API package path in Progress MarkLogic Server (11.x before 11.3.7, 12.x before 12.1.0) lets a remote attacker with manage-user privileges obtain persistent administrative control. One of 31 flaws in Progress's October 14 critical bulletin.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85948"
     },
     {
-      "id": "CVE-2026-96207",
-      "cvss": 10.0,
-      "summary": "Improper certificate validation in Microsoft Partner Center lets an unauthorized attacker elevate privileges over the network (October 2026 Patch Tuesday). Affects a broadly-deployed Microsoft partner management service.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96207"
+      "id": "CVE-2026-76519",
+      "cvss": 9.8,
+      "summary": "Zero-day in the Advanced Malware Protection (AMP) feature of Cisco Secure Email Gateway: improper handling of email attachments with File Reputation enabled lets an unauthenticated remote attacker write arbitrary files and execute commands with root privileges. Actively exploited; CISA added it to the KEV catalog on October 14 with a 3-day deadline.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519"
     }
   ],
   "model": {
-    "name": "Gemini 4 Argon",
-    "summary": "Google's new flagship frontier model, now globally available via the Gemini API, AI Studio, and AI Mode in Search. Built for \"deep work\" — complex multi-step tasks across coding, finance, law, cybersecurity, and science — it launches at an introductory $2/$10 per million input/output tokens, doubling after Nov 30.",
-    "url": "https://blog.google/intl/en-mena/product-updates/explore-get-answers/gemini-4-argon-built-to-solve-your-hardest-problems/"
+    "name": "Grok Voice 3.0",
+    "summary": "xAI's new speech-to-speech voice model launched October 14, taking over the grok-voice-latest alias (Grok Voice 2.0 is deprecated). It tops the Artificial Analysis Speech-to-Speech Index at 86.9 with sub-second latency, at the same price as its predecessor.",
+    "url": "https://dev.to/gabrielanhaia/grok-voice-30-took-over-grok-voice-latest-on-october-14-pin-your-voice-agents-model-435"
   }
 }

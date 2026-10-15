@@ -1,29 +1,35 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "items": [
     {
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ArgonDemos_social.width-1300.png",
-      "name": "Gemini 4 Argon",
-      "summary": "Google's new flagship frontier model, now globally available via the Gemini API, AI Studio, and AI Mode in Search. Built for \"deep work\" — complex multi-step tasks across coding, finance, law, cybersecurity, and science — it launches at an introductory $2/$10 per million input/output tokens, doubling after Nov 30.",
-      "url": "https://blog.google/intl/en-mena/product-updates/explore-get-answers/gemini-4-argon-built-to-solve-your-hardest-problems/"
+      "name": "Grok Voice 3.0",
+      "summary": "xAI's new speech-to-speech voice model launched October 14, taking over the grok-voice-latest alias (Grok Voice 2.0 is deprecated). It tops the Artificial Analysis Speech-to-Speech Index at 86.9 with sub-second latency, at the same price as its predecessor.",
+      "url": "https://dev.to/gabrielanhaia/grok-voice-30-took-over-grok-voice-latest-on-october-14-pin-your-voice-agents-model-435",
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjtwlpo40qbrr3thcsnmf.png"
     },
     {
-      "image": "https://aypchzzf9pftwuto.public.blob.vercel-storage.com/image%20(3)-oOdUn61bDRSykk4H951SoDOHzqoOe1.png",
-      "name": "LFM2.5-24B-A2B",
-      "summary": "Liquid AI's largest and final LFM2.5 open-weight reasoning model: 24B parameters with only 2B active per token, built for fast private on-device agents. Beats Qwen3.6-35B-A3B on agentic benchmarks like AutomationBench and ships with day-one llama.cpp/MLX/vLLM/SGLang support.",
-      "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b"
+      "name": "Chainguard Harness",
+      "summary": "Chainguard's new offering announced October 14 uses Anthropic's Claude Mythos 5.1 to hunt exploitable vulnerabilities in a live, isolated build of an organization's application, delivering verified findings with recommended fixes. A beta waitlist opened the same day, purchasable through the Claude Marketplace.",
+      "url": "https://www.unite.ai/chainguard-introduces-harness-for-frontier-ai-vulnerability-hunting/",
+      "image": "https://www.unite.ai/wp-content/uploads/2026/10/chainguard-introduces-harness-frontier-ai-vulnerability-hunting.jpg"
     },
     {
-      "image": "https://about.fb.com/wp-content/uploads/2021/10/meta-social-16x9-1.jpg?w=1200",
-      "name": "Muse Wonder & Muse Wonder Full",
-      "summary": "Meta's first frontier-class models from its rebuilt Superintelligence Labs, targeting personal and professional agent tasks with \"Active Memory\" (context carried across conversations) and \"Active Focus\" (goal persistence on hard tasks). Muse Wonder is live via the Meta Model API (~$4/$20 per M tokens); Muse Wonder Full is restricted to Muse Code subscribers.",
-      "url": "https://www.dawn.com/news/2036792/meta-says-its-new-ai-models-on-par-with-openai-anthropic"
+      "name": "QVAC TranscribePsy",
+      "summary": "Tether AI Research released QVAC TranscribePsy on October 14, a 254M-parameter open-source speech recognition model that runs entirely on-device rather than sending audio to cloud servers, targeting smartphones, smart glasses, and humanoid robots.",
+      "url": "https://blockchain.news/news/tether-releases-on-device-speech-model-for-smart-glasses-and-robots",
+      "image": "https://image.blockchain.news:443/features/4C8627AA81EA58670F6DCCB3FD4FB9FFBE8860ACFBC8CAC8C78677B6430534FA.jpg"
     },
     {
-      "image": "https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp",
-      "name": "Mistral Large 4",
-      "summary": "Europe's largest open-weight model: 1.05T total parameters (52B active), natively multimodal with a 1M-token context, trained from scratch on 3,800 NVIDIA Grace Blackwell GPUs in Mistral's own European datacenters. Launched as a public API preview with downloadable weights promised by end of October.",
-      "url": "https://mistral.ai/news/mistral-large-4/"
+      "name": "Fish Audio Drama 3",
+      "summary": "Fish Audio released Drama 3, a text-to-speech model that takes plain-language voice direction, changes emotion partway through a sentence, generates multi-speaker scenes in a single pass, and can regenerate a selected segment of audio.",
+      "url": "https://sharedsapience.com/century-report/the-century-report-october-14-2026/",
+      "image": "https://mmx.prnewswire.com/media/MS1959175/Fish-Audio-Logo.jpg?id=OA2795887"
+    },
+    {
+      "name": "Multics (Tencent ARC Lab / HKU)",
+      "summary": "Tencent ARC Lab and HKU open-sourced Multics under Apache 2.0 — a world model that generates first-person video of one shared scene for 4 to 10 players, with training code, inference code, and weights published.",
+      "url": "https://sharedsapience.com/century-report/the-century-report-october-14-2026/",
+      "image": "https://arvohealth.ai/tencent.svg"
     }
   ]
 }
