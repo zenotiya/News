@@ -2,30 +2,30 @@
   "date": "2026-10-16",
   "news_count": 10,
   "cve_count": 5,
-  "worst_cvss": 10.0,
+  "worst_cvss": 9.9,
   "priorities": [
     {
-      "id": "CVE-2026-76482",
-      "cvss": 10.0,
-      "summary": "Multiple CWE-347 cryptographic signature-verification flaws in Cisco License On-Prem (formerly Smart Software Manager On-Prem), found during an internal security review that also used frontier AI models. Affects all releases; the only remediation is the October 7 hardening release.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76482"
+      "id": "CVE-2026-89107",
+      "cvss": 9.9,
+      "summary": "Code injection (CWE-94) in SAP S/4HANA's Manage Substitution/Validation Rules: an authenticated attacker with specific business privileges submits crafted input that escapes the scripting language and executes as arbitrary ABAP code, leading to full system compromise.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89107"
     },
     {
-      "id": "CVE-2026-85948",
+      "id": "CVE-2026-108263",
       "cvss": 9.9,
-      "summary": "XQuery injection in a deprecated Management API package path in Progress MarkLogic Server (11.x before 11.3.7, 12.x before 12.1.0) lets a remote attacker with manage-user privileges obtain persistent administrative control. One of 31 flaws in Progress's October 14 critical bulletin.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85948"
+      "summary": "iFlytek Astron Agent below 1.1.2: the default workflow code-node path uses an unsandboxed LocalExecutor, letting an authenticated low-privilege tenant run root Python in the core-workflow container and bypass tenant checks to read or modify other tenants' data.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108263"
     },
     {
       "id": "CVE-2026-76519",
       "cvss": 9.8,
-      "summary": "Zero-day in the Advanced Malware Protection (AMP) feature of Cisco Secure Email Gateway: improper handling of email attachments with File Reputation enabled lets an unauthenticated remote attacker write arbitrary files and execute commands with root privileges. Actively exploited; CISA added it to the KEV catalog on October 14 with a 3-day deadline.",
+      "summary": "Relative path traversal (CWE-23) in Cisco Secure Email Gateway's AMP File Reputation: a remote unauthenticated attacker sends a crafted email attachment, enabling arbitrary file write and root command execution with no user interaction. CISA KEV-listed Oct 14, 2026 with active exploitation confirmed.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519"
     }
   ],
   "model": {
-    "name": "Grok Voice 3.0",
-    "summary": "xAI's new speech-to-speech voice model launched October 14, taking over the grok-voice-latest alias (Grok Voice 2.0 is deprecated). It tops the Artificial Analysis Speech-to-Speech Index at 86.9 with sub-second latency, at the same price as its predecessor.",
-    "url": "https://dev.to/gabrielanhaia/grok-voice-30-took-over-grok-voice-latest-on-october-14-pin-your-voice-agents-model-435"
+    "name": "Meta Muse Spark Open",
+    "summary": "Meta released the open weights of Muse Spark Open, an 816B-total / 42B-active MoE model with a 1M-token context — built for coding and agentic work and billed by Meta as the most capable US open-weight model to date. It was co-optimized with Apple MLX to run on two M5 Ultra Mac Studios, a surprise Meta-Apple collaboration.",
+    "url": "https://9to5mac.com/2026/10/15/meta-launches-new-muse-spark-open-model-optimized-to-run-on-mac-studio/"
   }
 }

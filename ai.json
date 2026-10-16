@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "items": [
     {
-      "name": "Grok Voice 3.0",
-      "summary": "xAI's new speech-to-speech voice model launched October 14, taking over the grok-voice-latest alias (Grok Voice 2.0 is deprecated). It tops the Artificial Analysis Speech-to-Speech Index at 86.9 with sub-second latency, at the same price as its predecessor.",
-      "url": "https://dev.to/gabrielanhaia/grok-voice-30-took-over-grok-voice-latest-on-october-14-pin-your-voice-agents-model-435",
-      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjtwlpo40qbrr3thcsnmf.png"
+      "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/10/meta-muse-spark-mac.jpg",
+      "name": "Meta Muse Spark Open",
+      "summary": "Meta released the open weights of Muse Spark Open, an 816B-total / 42B-active MoE model with a 1M-token context — built for coding and agentic work and billed by Meta as the most capable US open-weight model to date. It was co-optimized with Apple MLX to run on two M5 Ultra Mac Studios, a surprise Meta-Apple collaboration.",
+      "url": "https://9to5mac.com/2026/10/15/meta-launches-new-muse-spark-open-model-optimized-to-run-on-mac-studio/"
     },
     {
-      "name": "Chainguard Harness",
-      "summary": "Chainguard's new offering announced October 14 uses Anthropic's Claude Mythos 5.1 to hunt exploitable vulnerabilities in a live, isolated build of an organization's application, delivering verified findings with recommended fixes. A beta waitlist opened the same day, purchasable through the Claude Marketplace.",
-      "url": "https://www.unite.ai/chainguard-introduces-harness-for-frontier-ai-vulnerability-hunting/",
-      "image": "https://www.unite.ai/wp-content/uploads/2026/10/chainguard-introduces-harness-frontier-ai-vulnerability-hunting.jpg"
+      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/10/LAST-post-training-delivers-leading-accuracy--960x540.png",
+      "name": "NVIDIA Nemotron 3.5 Super VL",
+      "summary": "NVIDIA shipped an open-weight 120B-parameter MoE model (~12B active) for multimodal, always-on enterprise agents, alongside two smaller Bolt edge models. It ships under NVIDIA's OpenMDW license permitting commercial use, with weights on Hugging Face.",
+      "url": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/"
     },
     {
-      "name": "QVAC TranscribePsy",
-      "summary": "Tether AI Research released QVAC TranscribePsy on October 14, a 254M-parameter open-source speech recognition model that runs entirely on-device rather than sending audio to cloud servers, targeting smartphones, smart glasses, and humanoid robots.",
-      "url": "https://blockchain.news/news/tether-releases-on-device-speech-model-for-smart-glasses-and-robots",
-      "image": "https://image.blockchain.news:443/features/4C8627AA81EA58670F6DCCB3FD4FB9FFBE8860ACFBC8CAC8C78677B6430534FA.jpg"
+      "image": "https://starthere.co/wp-content/uploads/2025/08/liquid-ai_cover-1.png",
+      "name": "Liquid AI LFM2.5-24B-A2B",
+      "summary": "Liquid AI released the final model of its LFM2.5 family: an open-weight 24B-total / 2.45B-active reasoning MoE for on-device agents with a 131K-token context, decoding 184 tokens/sec on an Apple M5 Max. Checkpoints ship in FP8, GGUF, ONNX and MLX formats.",
+      "url": "https://www.unite.ai/liquid-ai-releases-open-weight-lfm2-5-24b-a2b-for-on-device-agents/"
     },
     {
-      "name": "Fish Audio Drama 3",
-      "summary": "Fish Audio released Drama 3, a text-to-speech model that takes plain-language voice direction, changes emotion partway through a sentence, generates multi-speaker scenes in a single pass, and can regenerate a selected segment of audio.",
-      "url": "https://sharedsapience.com/century-report/the-century-report-october-14-2026/",
-      "image": "https://mmx.prnewswire.com/media/MS1959175/Fish-Audio-Logo.jpg?id=OA2795887"
+      "image": "https://www.cedr.com/hs-fs/hubfs/Client%20Logos/Meta.png",
+      "name": "Meta Muse Wonder + Muse Wonder Full",
+      "summary": "Meta Superintelligence Labs released its first frontier-class models: Muse Wonder (via the Meta Model API) and the stronger Muse Wonder Full (Muse Code plans). Meta pitches them as agent models with Active Memory and Active Focus, with independent benchmark scores of 52 and 56.",
+      "url": "https://foundermag.co/launches/meta-muse-wonder/"
     },
     {
-      "name": "Multics (Tencent ARC Lab / HKU)",
-      "summary": "Tencent ARC Lab and HKU open-sourced Multics under Apache 2.0 — a world model that generates first-person video of one shared scene for 4 to 10 players, with training code, inference code, and weights published.",
-      "url": "https://sharedsapience.com/century-report/the-century-report-october-14-2026/",
-      "image": "https://arvohealth.ai/tencent.svg"
+      "image": "https://www.greenlightconsulting.com/app/uploads/2026/07/Anthropic-Claude-Logo.png",
+      "name": "Anthropic Claude Haiku 5.5",
+      "summary": "Anthropic launched Claude Haiku 5.5, its cheapest, fastest and most capable small model: $0.10/$0.50 per M tokens, 1M-token context, an adjustable effort setting, and the first Haiku with built-in cybersecurity-misuse safeguards. The same announcement halved Sonnet 5.5 cache-read prices.",
+      "url": "https://www.reuters.com/business/anthropic-launches-third-claude-55-model-expanding-ai-lineup-before-planned-ipo-2026-10-07/"
     }
   ]
 }
