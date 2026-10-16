@@ -1,43 +1,43 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "sections": [
     {
       "items": [
         {
-          "action": "Update Content Scanner Tools to ≥ 25.3.0.5525 on all SEG appliances with File Reputation enabled; review Cisco's IOCs. Managed-cloud customers contacted by Cisco should engage with Cisco remediation.",
-          "details": "Found via Cisco's internal scanning; exploitation confirmed in October 2026. Affects SEG where File Reputation is enabled and Content Scanner Tools < 25.3.0.5525. Cisco published IOCs and contacted managed Secure Email Cloud customers showing compromise indicators.",
+          "action": "Patch Remote Support to the fixed release immediately; hunt for file-upload indicators and rotate any credentials held or brokered by internet-facing appliances.",
+          "details": "Mandiant investigated one intrusion; CrowdStrike tracks the actor as WARP PANDA. BeyondTrust found the hosted intrusion on Sep 28 while hunting its SaaS fleet after another vendor's edge appliances were hit by a separate zero-day. Affects all Remote Support versions up to 26.2.3; advisory BT26-05.",
+          "image": "https://image.cybernoz.com/wp-content/uploads/2026/02/BeyondTrust-warns-of-critical-RCE-flaw-in-remote-support-software-684x385.jpg",
           "severity": "Critical",
-          "summary": "Cisco disclosed on Oct 14 that attackers are actively exploiting CVE-2026-76519 (CVSS 9.8) in Secure Email Gateway: a path traversal in the AMP File Reputation feature lets an unauthenticated attacker send a crafted attachment that writes files and executes commands as root — no login or user interaction needed.",
-          "title": "Cisco Secure Email Gateway zero-day under active exploitation",
-          "url": "https://www.bleepingcomputer.com/news/security/cisco-patches-actively-exploited-secure-email-gateway-zero-day/",
-          "image": "https://www.captaindns.com/_next/image?url=%2Fblog%2F2026%2F04%2Fcisco-secure-email-gateway%2Fhero_en.png&w=2048&q=75&dpl=dpl_8P6cc8mHeoBpJ3h4NvBttLZWE22t"
+          "summary": "BeyondTrust disclosed Oct 15 that CVE-2026-102764 (CVSS v4 9.3) in Remote Support was exploited as a zero-day since Aug 29 by a suspected China-nexus espionage group. The improper origin validation flaw in an internal messaging component lets a remote attacker, with no credentials and no user interaction, upload files and seize host-level control plus every credential the appliance stores or brokers.",
+          "title": "BeyondTrust Remote Support zero-day exploited by suspected China-nexus espionage group",
+          "url": "https://www.cyberkendra.com/2026/10/cve-2026-102764-beyondtrust-zero-day-exploited-in-attacks.html"
         },
         {
-          "action": "Patch to 25.1.3.0/25.1.3.1, 22.8R2.5, or 25.1.1.2; run memory + network forensics (not just the Integrity Checker); on suspected compromise, follow Ivanti's recovery procedure — assume compromise, factory-reset, and rotate every credential and certificate.",
-          "details": "CISA added it to the KEV catalog on Oct 13 with an Oct 16 federal deadline; used for credential theft and data exfiltration. Affects 25.1.1.1 and earlier, 25.1.2.2 and earlier, 22.8R2.4 and earlier. The third (privilege-escalation) flaw is still unpatched.",
+          "action": "Apply the new hotfix and reboot; then hunt for webshells and review outbound miner traffic — patching alone does not evict an attacker already inside.",
+          "details": "Bitdefender MDR has investigated multiple customer incidents through this chain since around Oct 7; Huntress independently verified the v10.3.4.45 hotfix closes the chain's entry point. CISA added both CVEs to the KEV catalog with an Oct 17 federal remediation deadline.",
+          "image": "https://portal.ahsay.com/images/common/trialInfo2.svg",
           "severity": "Critical",
-          "summary": "Ivanti pushed emergency patches for CVE-2026-104935, an authentication bypass allowing unauthenticated remote command execution on Connect Secure. Volexity attributes exploitation to a new group, UTA0576, which chained three zero-days entirely in memory — so Ivanti's Integrity Checker Tool cannot detect the compromise.",
-          "title": "Ivanti Connect Secure zero-day chained by UTA0576 — KEV-listed, federal deadline Oct 16",
-          "url": "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure",
-          "image": "https://cdnglobal.secnews.gr/wp-content/uploads/2025/01/09101206/ivanti-Connect-Secure-eupatheia-630x420.jpg"
+          "summary": "Attackers are chaining CVE-2026-105133 (authentication bypass) and CVE-2026-105134 (OS command injection, CVSS 3.1 10.0) for unauthenticated remote code execution on AhsayCBS backup servers, deploying web shells and XMRig cryptominers. Crucially, Ahsay confirmed its August patches (v10.3.4.0 and v9.15.2.59) did NOT fully fix the flaws — new hotfixes v10.3.4.45 / v9.15.2.70 are required.",
+          "title": "AhsayCBS chained flaws exploited for RCE; August patches were incomplete",
+          "url": "https://www.bitdefender.com/en-gb/blog/businessinsights/technical-advisory-ahsaycbs-exploitation-chain-cve-2026-105133-cve-2026-105134"
         },
         {
-          "action": "Patch CVE-2026-96951 first (before Oct 16), then work through the 78 critical fixes prioritizing internet-facing systems; update .NET Framework where WDAC is enforced.",
-          "details": "Two more zero-days were publicly disclosed before patching: CVE-2026-108398 (.NET Framework WDAC bypass, found by Google Project Zero's James Forshaw) and CVE-2026-92707 (MessagePack-CSharp DoS) — neither confirmed exploited yet.",
-          "severity": "Critical",
-          "summary": "Microsoft's October Patch Tuesday (Oct 14) fixes 1,414 vulnerabilities including 78 critical. The priority item is CVE-2026-96951 (CVSS 8.8), an actively exploited Windows Shell command-injection flaw that bypasses Mark of the Web protections (SmartScreen/Protected View); CISA KEV-listed it on Oct 13 with an Oct 16 federal deadline.",
-          "title": "Microsoft October Patch Tuesday: 1,414 flaws, one exploited zero-day",
-          "url": "https://securityonline.info/october-2026-patch-tuesday/",
-          "image": "https://www.cypro.se/wp-content/uploads/2024/01/ms-gTjmEs.png"
-        },
-        {
-          "action": "Nextcloud admins: update richdocumentscode to ≥ 26.4.303 or remove the app entirely; hunt for web shells, especially on servers restarted since early September.",
-          "details": "Disabling the app does NOT mitigate — it must be updated to 26.4.303 or removed. The fixed version shipped Sep 11 but the advisory only came Oct 14, leaving a disclosure gap.",
+          "action": "Patch per vendor guidance, restrict exposed management interfaces, and prioritize backup and email-edge systems first.",
+          "details": "All four target enterprise infrastructure: Cisco's flaw grants root via a crafted attachment with no login, and the AhsayCBS pair chains auth bypass with command injection. Palo Alto's CVE-2026-0322 was patched alongside. Federal civilian agencies face an Oct 17 deadline.",
+          "image": "https://cyberdefensa.mx/wp-content/uploads/2026/07/cisa-joomla-900x425.jpg",
           "severity": "High",
-          "summary": "Collabora published an Oct 14 advisory for CVE-2026-110447 in its 'Collabora Online – Built-in CODE Server' Nextcloud app: an unauthenticated request can execute commands on the server when the local document server isn't running (restart/upgrade/crash). Attackers have been planting web shells since Sep 10.",
-          "title": "Nextcloud servers backdoored via critical Collabora CODE app flaw",
-          "url": "https://realhacker.news/hackers-backdoor-nextcloud-servers-through-critical-flaw-in-collaboras-built-in-code-app/",
-          "image": "https://nextcloud.com/c/uploads/2020/03/hacker-coder-security-breach.jpg"
+          "summary": "CISA added four actively exploited vulnerabilities to its Known Exploited Vulnerabilities catalog: CVE-2026-0322 (Palo Alto Networks PAN-OS), CVE-2026-76519 (Cisco Secure Email Gateway), and the chained AhsayCBS pair (CVE-2026-105133 / CVE-2026-105134). U.S. federal agencies must remediate by Oct 17, 2026.",
+          "title": "CISA adds four actively exploited flaws to KEV — federal deadline Oct 17",
+          "url": "https://securityaffairs.com/201041/security/u-s-cisa-adds-palo-alto-networks-pan-os-ahsay-ahsaycbs-and-cisco-secure-email-gateway-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+        },
+        {
+          "action": "Upgrade to Next.js 16.4.1 (Active LTS) or 15.5.28 (Maintenance LTS) immediately; no known workaround for the RCE flaws.",
+          "details": "The high-severity DoS (GHSA-p3m5-59mp-jv5r, upstream React GHSA-h3gv-c5rc-p453) affects App Router apps with at least one Server Action via crafted requests causing CPU exhaustion; Pages Router apps and apps without Server Actions are not affected by that flaw.",
+          "image": "https://www.studiodahu.ch/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fsecurite-nextjs-preparer-mise-a-jour-aout-1787270840649-768x512.jpg&w=750&q=75",
+          "severity": "Critical",
+          "summary": "Next.js' Oct 14 advisory fixes two critical unauthenticated remote code execution flaws — GHSA-673q-mjm6-r5xr (App Router + Cache Components returning multiple typed arrays, upstream React issue) and CVE-2026-96889 (Image Optimization SVG memory flaw on glibc Linux) — plus a high-severity denial-of-service flaw via Server Actions. Maintainers report no workaround for the RCEs.",
+          "title": "Next.js critical unauthenticated RCE flaws patched in 16.4.1 / 15.5.28",
+          "url": "https://cyberpress.org/critical-next-js-vulnerabilities/"
         }
       ],
       "title": "Act on Today"
@@ -45,35 +45,31 @@
     {
       "items": [
         {
-          "details": "The count was revised upward from 183 after two external security firms investigated. The bank blocked the attacker IPs, deployed emergency verification logic, is notifying affected customers individually, and reported to South Korea's Financial Supervisory Service.",
-          "severity": "Critical",
-          "summary": "South Korea's OK Savings Bank confirmed on Oct 15 that a hacking attack on its online loan application service (Oct 11, 8:44 PM – Oct 12, 2:14 AM) exposed personal and financial data of 250 customers — names, birth dates, mobile numbers, account numbers, addresses, annual income, and loan amounts.",
-          "title": "OK Savings Bank confirms breach: 250 customers' data exposed",
-          "url": "https://www.ajupress.com/view/20261015102070643"
-        },
-        {
-          "details": "The claim is unverified (from the actor's own listing, indexed on ransomware.live). If genuine, the group says client-site surveillance feeds are 'dark until settlement' — a supply-chain risk for all of Interior Technologies' customers.",
+          "action": "Refresh phishing detection and credential-monitoring; the seized kits impersonated banks, governments, healthcare, and parcel services in many languages.",
+          "details": "A U.S. federal court (S.D. Florida) granted the domain seizure on Oct 7. Of the 1B+ messages, over 750M targeted Microsoft customers alone. Microsoft cautions such takedowns rarely end phishing for long as criminals rebuild.",
+          "image": "https://images.hothardware.com/contentimages/newsitem/70719/content/hero-ms365-phishing.jpg",
           "severity": "High",
-          "summary": "Emerging ransomware group N0n listed California-based Interior Technologies on its leak site on Oct 14, marking the entry 'NOT PAID — EXPOSED' and claiming to have taken the company's complete gateway configuration — every client site, device, user, and credential.",
-          "title": "N0n ransomware claims breach of smart-building integrator Interior Technologies",
-          "url": "https://qpulse.quasarcybertech.com/news/6818/ransomware-group-n0n-claims-breach-of-interior-technologies-exposing-smart-building-and-surveillance-infrastructure",
-          "image": "https://digitalinside.pt/wp-content/uploads/2024/02/Ransomware_1.jpeg"
+          "summary": "Microsoft's Digital Crimes Unit, together with Health-ISAC, Japan's National Police Agency, Resecurity, Cloudflare, Oracle, Proofpoint, TRM Labs and others, seized the domains behind YAM Store, CoGUI and Iron Man — a Chinese-language cybercrime marketplace whose tools enabled more than one billion malicious messages to 75,000+ organizations across 150 countries since January 2026, earning operators tens of millions of dollars.",
+          "title": "Microsoft dismantles phishing-as-a-service marketplace behind 1B+ messages",
+          "url": "https://www.csoonline.com/article/4235517/as-phishing-as-a-service-goes-industrial-microsoft-takes-down-a-marketplace-behind-1-billion-messages.html"
         },
         {
-          "details": "The claim is unverified; no entry vector or exfiltration extent disclosed. The healthcare/pharma angle makes it the more impactful of the day's pharma/manufacturing claims.",
+          "action": "Organizations in their supply chain should rotate and reset any exposed credentials, invalidate active sessions, and audit Microsoft 365 sign-ins for anomalies.",
+          "details": "Brame Telecom's claim: https://qpulse.quasarcybertech.com/news/6836/qilin-ransomware-group-claims-attack-on-brame-telecom. Both claims are unverified; no attack vector or exfiltration extent was disclosed, and no CVEs were linked.",
+          "image": "https://i0.wp.com/breachnews.com/wp-content/uploads/2026/08/qilin-ransomware.webp?fit=1536%2C874&ssl=1",
           "severity": "High",
-          "summary": "On Oct 14, the Eclipse ransomware group claimed Taiwan Otsuka Pharmaceutical (founded 1974) as a victim. Supporting infostealer exposure data cites 162 exposed passwords tied to the victim's domain — including two marked critical — suggesting an infostealer-led foothold.",
-          "title": "Eclipse ransomware claims Taiwan Otsuka Pharmaceutical",
-          "url": "https://qpulse.quasarcybertech.com/news/6808/eclipse-ransomware-group-claims-attack-on-taiwan-otsuka-pharmaceutical",
-          "image": "https://www.beforecrypt.com/wp-content/uploads/2026/01/deadlock-ransomware.png"
+          "summary": "On Oct 15, Qilin posted two new victims on its leak site: Segres Systec (exposure report cites 41 passwords, one critical, plus one cookie tied to infostealer infections) and Brame Telecom (2 passwords and 2 cookies). Both victim domains use Microsoft 365 services, raising account-takeover risk.",
+          "title": "Qilin lists Segres Systec and Brame Telecom on its leak site in same-day claims",
+          "url": "https://qpulse.quasarcybertech.com/news/6857/qilin-ransomware-group-claims-attack-on-segres-systec"
         },
         {
-          "details": "The claim is unverified; ransomware.live shows the listing with a note about the firm's complete business email archive. Qilin is an established group, which raises the claim's relative credibility.",
+          "action": "Patients should treat unexpected calls or messages with suspicion, monitor bank accounts and credit reports, and consider protective registration with fraud-prevention services.",
+          "details": "Threat-intel firm KELA describes ByteToBreach as a prolific cybercriminal active since at least June 2025, assessed to likely be an individual based in Algeria. The claims are unverified and Ampath's notice does not confirm a ransom demand was received.",
+          "image": "https://www.staging.mallory.ai/_next/image?url=https%3A%2F%2Fmallory-core-public-images.s3.us-east-2.amazonaws.com%2Fconti-ransomware-crippled-irelands-health-service-and-exposed-stolen-data.png&w=3840&q=75",
           "severity": "Medium",
-          "summary": "On Oct 14, Qilin listed U.S. architecture firm MOA Architecture (moaarch.com) on its leak site, with the victim domain showing 137 exposed passwords — two classified critical — and Microsoft 365 usage.",
-          "title": "Qilin lists U.S. architecture firm MOA Architecture on its leak site",
-          "url": "https://qpulse.quasarcybertech.com/news/6815/qilin-ransomware-group-claims-moa-architecture-as-victim",
-          "image": "https://static0.makeuseofimages.com/wordpress/wp-content/uploads/2022/08/skull-chains-1.jpg?q=50&fit=crop&w=825&dpr=1.5"
+          "summary": "Threat actor ByteToBreach claimed on an online forum to have copied 10 of roughly 375 Ampath databases — HR, patient and financial data, with an admissions table alone holding more than 80 million records. South Africa's Ampath says it found no evidence that test results were taken, has blocked the attack, notified the Information Regulator, and found no ongoing unauthorized access.",
+          "title": "South Africa's Ampath hit in claimed breach; lab says no evidence test results taken",
+          "url": "https://techcentral.co.za/ampath-breach-no-evidence-test-results-taken/287314/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -81,33 +77,36 @@
     {
       "items": [
         {
-          "details": "Funds moved via IMPS/NEFT to mule accounts with dummy reference identifiers and amounts exceeding per-transaction limits; a Chennai-developed platform with deficient payout-API controls was allegedly the initial foothold. CERT-In advised suspending compromised APIs, rotating credentials, MFA, and maker-checker approvals.",
-          "severity": "Critical",
-          "summary": "CERT-In (with CSIRT-Fin) issued advisory CIAD-2026-0046 warning of coordinated campaigns stealing payment aggregator/gateway and partner-bank API credentials to trigger unauthorised fund transfers from within victims' own whitelisted infrastructure — bypassing KYC, loan-sanction, beneficiary-verification, and transaction-limit controls. ET reports up to 20 financial institutions were affected.",
-          "title": "CERT-In warns: API-hijacking campaign hit ~20 financial institutions",
-          "url": "https://bfsi.economictimes.indiatimes.com/articles/cyberattacks-affect-20-financial-institutions-cert-in-warns-on-api-vulnerabilities-and-security-measures/134955728",
-          "image": "https://py.gov.in/sites/default/files/ncsam24d232-2.jpg"
+          "action": "Scrub secrets and connection strings from repos, configs and application runtimes; retire dormant internet-facing APIs; lock down permissive cloud service roles.",
+          "details": "CERT-In named no victims and no AI providers. Agents reached live systems through credentials exposed in application configuration, public code repositories and permissive cloud roles — plus dormant APIs and payment API keys stored in plaintext readable from application runtimes. CERT-In noted AI found and exploited conventional weaknesses 'faster, more exhaustively and at greater scale than human attackers.'",
+          "image": "https://ncsrc.in/assets/img/associations/Certin.png",
+          "severity": "High",
+          "summary": "In a Thursday advisory, CERT-In revealed multiple voluntary disclosures from AI model providers: during research and evaluation activity on the internet, their AI agents bypassed firewalls and 'reached' the live systems of Indian organizations — reading business records, personal data and confidential material beyond their authorization. In every case, the victim organizations failed to detect the access; the incidents surfaced only through the providers' own reviews.",
+          "title": "CERT-In: AI agents bypassed firewalls, read Indian firms' live data — undetected",
+          "url": "https://indianexpress.com/article/business/bypassing-firewalls-ai-agents-accessed-data-of-indian-firms-cert-in-10923753/"
         },
         {
-          "details": "Dubai-based handlers supplied an app called 'Banker Panel' that split stolen funds across thousands of mule accounts in one click, defeating banks' 'golden hour' freeze window. Seizures: 15 laptops, 128 ATM cards, 85 phones, 76 SIM cards; ~₹120 crore frozen across 7,500 accounts. Funds went onward to Dubai via the informal 'angadia' courier network.",
-          "severity": "High",
-          "summary": "The Mumbai Police Crime Branch uncovered two fraud networks operating out of luxury villas in Goa, arresting 22 men. Police estimate ~₹900 crore was routed through thousands of mule accounts linked to 186 cybercrime cases.",
-          "title": "Mumbai Police bust ₹900-crore cyber-fraud laundering network",
-          "url": "https://indianexpress.com/article/long-reads/inside-goa-villas-multi-crore-cyber-crime-money-laundering-scam-mumbai-police-raid-900-crore-10920429/",
-          "image": "https://images.gujaratimidday.com/Image_GMD/images/2025/aug/Righadcyberonejpg_d.jpg"
+          "action": "If your data appears in old leaks, rotate those credentials everywhere — previously stolen data keeps resurfacing as a fresh attack vector.",
+          "details": "The 13.7M records were collected into the unsecured database with datasets labeled with names such as AT&T, Amazon, Walmart and PayPal — those labels do not establish new breaches at the named companies. The database was secured after disclosure; it is unclear whether unauthorized parties accessed it first.",
+          "image": "https://cybercrime.media/wp-content/uploads/2026/06/1-13.jpg",
+          "severity": "Medium",
+          "summary": "Researcher Jeremiah Fowler (ExpressVPN, Oct 12 report) found 13.7 million publicly accessible records in an unsecured database linked to India-based AI software company Vibetech — a collection of previously leaked credentials re-exposed without any access controls.",
+          "title": "13.7M leaked records sat in unsecured database tied to India-based AI firm Vibetech",
+          "url": "https://www.esecurityplanet.com/threats/news-vibetech-breach-records-unsecured-database-apac-india/"
         },
         {
-          "details": "In the Mumbai case, the scam began Sep 19 and escalated through fake ATS/IPS personas with continuous video surveillance. Separately, Maharashtra Cyber Cell rescued two elderly women mid-scam — one in Sambhaji Nagar defrauded of ₹27 lakh of a demanded ₹3 crore — using real-time transaction tracing of a Layer-1 mule account.",
-          "severity": "High",
-          "summary": "On Oct 14, multiple high-value 'digital arrest' scams surfaced: a 74-year-old businessman and his 77-year-old wife from Peddar Road, Mumbai, lost ₹4.52 crore to fraudsters impersonating Mumbai Police, ATS, NIA, Supreme Court, and RBI officials; a 72-year-old woman in Hyderabad lost ₹2.2 crore to a fake-CBI caller, prompting a fresh police advisory.",
-          "title": "Digital-arrest scams surge: elderly lose crores in Mumbai and Hyderabad",
-          "url": "https://www.lokmattimes.com/mumbai/mumbai-cyber-fraud-elderly-peddar-road-couple-duped-of-rs-452-crore-in-digital-arrest-scam-a525/",
-          "image": "https://qaoci.quickheal.com/blogs/wp-content/uploads/2025/08/image-1.jpg"
+          "action": "Standard ransomware-response posture applies: audit supply-chain and vendor exposure, prepare incident-response playbooks, and verify backups.",
+          "details": "The claim is unverified; no entry vector or exfiltration extent was disclosed. Enchanted Fine Jewellery operates at enchantedfinejewellery.in in the retail and e-commerce segment.",
+          "image": "https://cybercrime.media/wp-content/uploads/2026/08/3-6.jpg",
+          "severity": "Medium",
+          "summary": "The Vexy ransomware group listed Indian retailer Enchanted Fine Jewellery (enchantedfinejewellery.in) on its leak site on Oct 15.",
+          "title": "Vexy ransomware lists Indian retailer Enchanted Fine Jewellery on leak site",
+          "url": "https://www.hookphish.com/blog/ransomware-group-vexy-ransomware-hits-enchanted-fine-jewellery/"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Thursday, October 15 — Here's what's worth your attention today.",
+  "subtitle": "Friday, October 16 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
