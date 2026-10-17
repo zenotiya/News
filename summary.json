@@ -2,30 +2,30 @@
   "date": "2026-10-17",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 9.9,
+  "worst_cvss": 9.8,
   "priorities": [
     {
-      "id": "CVE-2026-89107",
-      "cvss": 9.9,
-      "summary": "Code injection (CWE-94) in SAP S/4HANA's Manage Substitution/Validation Rules: an authenticated attacker with specific business privileges submits crafted input that escapes the scripting language and executes as arbitrary ABAP code, leading to full system compromise.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89107"
-    },
-    {
-      "id": "CVE-2026-108263",
-      "cvss": 9.9,
-      "summary": "iFlytek Astron Agent below 1.1.2: the default workflow code-node path uses an unsandboxed LocalExecutor, letting an authenticated low-privilege tenant run root Python in the core-workflow container and bypass tenant checks to read or modify other tenants' data.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108263"
-    },
-    {
-      "id": "CVE-2026-76519",
+      "id": "CVE-2026-89656",
       "cvss": 9.8,
-      "summary": "Relative path traversal (CWE-23) in Cisco Secure Email Gateway's AMP File Reputation: a remote unauthenticated attacker sends a crafted email attachment, enabling arbitrary file write and root command execution with no user interaction. CISA KEV-listed Oct 14, 2026 with active exploitation confirmed.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519"
+      "summary": "Out-of-bounds write in the kernel's libceph code (bucket_perm_choose()), remotely triggerable with no privileges, affecting kernels up to 6.12.108/6.18.49/7.2.3.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89656"
+    },
+    {
+      "id": "CVE-2026-108587",
+      "cvss": 9.8,
+      "summary": "Arbitrary file upload in the 10Web Booster WordPress plugin (≤2.34.10) lets unauthenticated attackers upload executable files and achieve remote code execution via a leaked REST nonce.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108587"
+    },
+    {
+      "id": "CVE-2026-18516",
+      "cvss": 9.6,
+      "summary": "Stored XSS in Crafty Controller (≤4.10.8): unauthenticated attackers inject malicious content into server activity logs via spoofed X-Forwarded-For headers, executing in the admin's browser.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18516"
     }
   ],
   "model": {
     "name": "Meta Muse Spark Open",
-    "summary": "Meta released the open weights of Muse Spark Open, an 816B-total / 42B-active MoE model with a 1M-token context — built for coding and agentic work and billed by Meta as the most capable US open-weight model to date. It was co-optimized with Apple MLX to run on two M5 Ultra Mac Studios, a surprise Meta-Apple collaboration.",
-    "url": "https://9to5mac.com/2026/10/15/meta-launches-new-muse-spark-open-model-optimized-to-run-on-mac-studio/"
+    "summary": "Meta open-weighted its flagship Muse Spark model (816B total params, 42B active per token, 1M context) for coding and long-running agentic work — claiming the most capable U.S. open-weight model to date — under the Muse Model License with limited commercial terms.",
+    "url": "https://www.reuters.com/business/meta-releases-open-weight-muse-spark-model-coding-agentic-tasks-2026-10-15/"
   }
 }
