@@ -49,14 +49,16 @@
           "severity": "High",
           "summary": "Dragonforce ransomware claimed Oak Grove Technologies, a U.S. defense contractor specializing in multi-domain training and unmanned systems, on Oct 17 (estimated attack date Oct 2), claiming exfiltration of executive email archives and payroll/banking data.",
           "title": "Dragonforce claims U.S. defense contractor Oak Grove Technologies — 35 GB of executive email archives",
-          "url": "https://qpulse.quasarcybertech.com/news/6975/dragonforce-ransomware-group-claims-attack-on-oak-grove-technologies"
+          "url": "https://qpulse.quasarcybertech.com/news/6975/dragonforce-ransomware-group-claims-attack-on-oak-grove-technologies",
+          "image": "https://d2cto119c3bgok.cloudfront.net/thumbs/photos/2205/7240958/1000w_q95.jpg"
         },
         {
           "details": "Disclosure date Oct 17, 2026; no attack vector, data volume, or system scope confirmed. Trackers note everest has claimed 288 victims globally and runs classic double-extortion — exfiltrate, encrypt, threaten publication.",
           "severity": "High",
           "summary": "The everest ransomware group listed Taekwang Network, a South Korean technology-sector organization, on its dark web leak site on Oct 17, 2026.",
           "title": "everest lists South Korean tech firm Taekwang Network on leak site",
-          "url": "https://qpulse.quasarcybertech.com/news/6960/everest-ransomware-group-claims-taekwang-network-as-victim"
+          "url": "https://qpulse.quasarcybertech.com/news/6960/everest-ransomware-group-claims-taekwang-network-as-victim",
+          "image": "https://substackcdn.com/image/fetch/$s_!vMQ-!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c8528df-89b9-406a-a41d-01fc12d45e3e_700x422.jpeg"
         }
       ],
       "title": "Breaches & Ransomware"
