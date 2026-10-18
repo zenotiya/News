@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-17",
+  "date": "2026-10-18",
   "items": [
     {
-      "image": "https://images.macrumors.com/t/treC8Gkzb90Moo6b0u19g4p1LJo=/400x0/article-new/2026/10/muse-spark-open-zuck.jpg?lossy",
-      "name": "Meta Muse Spark Open",
-      "summary": "Meta open-weighted its flagship Muse Spark model (816B total params, 42B active per token, 1M context) for coding and long-running agentic work — claiming the most capable U.S. open-weight model to date — under the Muse Model License with limited commercial terms.",
-      "url": "https://www.reuters.com/business/meta-releases-open-weight-muse-spark-model-coding-agentic-tasks-2026-10-15/"
+      "image": "https://cassette.sphdigital.com.sg/image/straitstimes/1d39b2f9769af01d0c5ddf35935cbfccec7b0cecbc49615c82d91111388c7892?w=1200",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "summary": "DeepSeek's updated Flash-class model launched Oct 17, scoring 77% on DeepSWE 1.1 — topping Opus 5.0 and GPT-class rivals on coding and agentic benchmarks while cutting per-task costs with shorter, harness-optimized outputs.",
+      "url": "https://www.straitstimes.com/world/deepseek-pushes-out-updated-ai-model-it-says-is-faster-leaner"
     },
     {
-      "image": "https://cdn.sanity.io/images/6vfeftx9/articles/3354b33b2921df66469ef54e0bbb9ac226ef9b8b-1940x984.png?w=1200&auto=format",
+      "image": "https://www.unite.ai/wp-content/uploads/2026/10/reflection-releases-beams-open-weights-under-apache-2-0-license.jpg",
+      "name": "Reflection AI Beam (open weights)",
+      "summary": "NVIDIA-backed Reflection AI released the weights of Beam 1.0 on Hugging Face under Apache 2.0 on Oct 16 — a 501B-parameter MoE (23B active) built for coding and agentic workflows, the startup's first open model challenging Chinese open-weight labs.",
+      "url": "https://www.unite.ai/reflection-releases-beams-open-weights-under-apache-2-0-license/"
+    },
+    {
+      "image": "https://runtimewire.com/og/nvidia-nemotron-35-super-vl-open-multimodal-agents.16x9.jpg?v=og2-lnxw4j",
       "name": "NVIDIA Nemotron 3.5 Super VL",
-      "summary": "Open multimodal agent model (120B total, 12B active; text/image/video/doc inputs) targeting always-on enterprise agents under the OpenMDW-1.1 license, with NVIDIA claiming up to 5x throughput vs open peers; a 74B Bolt variant runs local agents on 24GB RTX PCs.",
-      "url": "https://www.marktechpost.com/2026/10/15/nvidia-nemotron-3-5-super-vl-release/"
+      "summary": "NVIDIA's new 120B-parameter open multimodal model for always-on enterprise agents shipped Oct 15 with open weights, datasets and training recipes, alongside two smaller Bolt edge models — claiming up to 5x the agentic throughput of peers in its class.",
+      "url": "https://runtimewire.com/article/nvidia-nemotron-35-super-vl-open-multimodal-agents"
     },
     {
-      "image": "https://ml.globenewswire.com/media/ZWEzNDQ1YjMtYTExMy00NDNiLThmTEtNTlmYTQzM2NlMmE1LTUwMDE2NTYwNi0yMDI2LTEwLTE1LWVu/tiny/Black-Forest-Labs.png",
-      "name": "Black Forest Labs FLUX 3 Image Klein",
-      "summary": "BFL's most capable open-weight image model to date (5.6B params, FLUX Kommunity License) — frontier-model quality with native 4K, pixel-perfect editing and multi-reference editing, running on consumer GPUs with as little as 8GB VRAM.",
-      "url": "https://beta.manilatimes.net/2026/10/15/tmt-newswire/globenewswire/black-forest-labs-expands-access-to-frontier-visual-intelligence-with-open-weights-release-of-flux-3-image-klein/2446851"
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpvymsk7obl6gw7064k7e.png",
+      "name": "Google Gemini 4 Argon",
+      "summary": "Google's first Gemini 4 frontier model rolled out globally Oct 13 to AI Pro/Ultra subscribers and API customers — a 1M-context reasoning model for deep-work tasks in coding, finance, legal and cybersecurity, with introductory pricing through Nov 30.",
+      "url": "https://dev.to/techpulse01239/google-launches-gemini-4-argon-its-new-frontier-model-for-deep-work-4plb"
     },
     {
-      "image": "https://www.liquid.ai/og/og-default.jpg",
-      "name": "Liquid AI LFM2.5-24B-A2B",
-      "summary": "Liquid AI's efficiency bet — a 24B-total/2B-active MoE (12:1 ratio) aimed at agentic tool-use workloads, reportedly hitting 184 tok/s on an Apple M5 Max; it beats Alibaba's Qwen3.6-35B-A3B on tool use while trailing on SWE-Bench Verified.",
-      "url": "https://tech-insider.org/liquid-ai-lfm2-5-24b-a2b-launch-2026/"
-    },
-    {
-      "image": "https://www.hpcwire.com/aiwire/wp-content/uploads/sites/3/2022/10/MBZUAI-Logo-300x157.jpg",
-      "name": "MBZUAI/Inception42 Jais 3 + Jais Speech",
-      "summary": "Arabic-native open model fleet (six models, 900M–375B params, 512K context) adapted from IFM's K2 Horizon, covering Modern Standard Arabic plus Gulf, Levant and North African dialects with agentic tool use, plus a companion Arabic speech-recognition model on Hugging Face.",
-      "url": "https://www.hpcwire.com/aiwire/2026/10/16/mbzuai-and-inception42-introduce-jais-3-and-arabic-speech-recognition-model/"
+      "image": "https://www.volanea.com/og-image.jpg",
+      "name": "Mistral Large 4 ('Le Chonk')",
+      "summary": "Mistral's 1.05-trillion-parameter MoE — Europe's largest model — launched in public API preview Oct 6 with 52B active parameters, native multimodal input and 1M-token context; open weights are promised by the end of October.",
+      "url": "https://www.datacamp.com/blog/mistral-4-large-le-chonk"
     }
   ]
 }

@@ -2,30 +2,30 @@
   "date": "2026-10-18",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 9.8,
+  "worst_cvss": 9.9,
   "priorities": [
     {
-      "id": "CVE-2026-89656",
-      "cvss": 9.8,
-      "summary": "Out-of-bounds write in the kernel's libceph code (bucket_perm_choose()), remotely triggerable with no privileges, affecting kernels up to 6.12.108/6.18.49/7.2.3.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89656"
+      "id": "CVE-2026-92262",
+      "cvss": 9.9,
+      "summary": "MariaDB server remote code execution via the #mysql50# table-name bypass prefix, affecting 10.6.1 through 13.0.2 releases; disclosed Oct 16, with fixed versions published including 10.6.28, 11.8.9 and 13.0.2.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92262"
     },
     {
-      "id": "CVE-2026-108587",
-      "cvss": 9.8,
-      "summary": "Arbitrary file upload in the 10Web Booster WordPress plugin (≤2.34.10) lets unauthenticated attackers upload executable files and achieve remote code execution via a leaked REST nonce.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108587"
+      "id": "CVE-2026-108263",
+      "cvss": 9.9,
+      "summary": "iFlytek astron-agent agentic workflow platform ships unsandboxed Python execution in its default code-node path, allowing an authenticated low-privilege tenant to run code as root and cross tenant boundaries; fixed in 1.1.2.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108263"
     },
     {
-      "id": "CVE-2026-18516",
-      "cvss": 9.6,
-      "summary": "Stored XSS in Crafty Controller (≤4.10.8): unauthenticated attackers inject malicious content into server activity logs via spoofed X-Forwarded-For headers, executing in the admin's browser.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18516"
+      "id": "CVE-2026-76519",
+      "cvss": 9.8,
+      "summary": "Cisco Secure Email Gateway (ESA) relative path traversal in the AMP attachment engine lets an unauthenticated attacker write arbitrary files and execute commands as root; Cisco confirms active in-the-wild exploitation and CISA added it to the KEV catalog on Oct 14.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519"
     }
   ],
   "model": {
-    "name": "Meta Muse Spark Open",
-    "summary": "Meta open-weighted its flagship Muse Spark model (816B total params, 42B active per token, 1M context) for coding and long-running agentic work — claiming the most capable U.S. open-weight model to date — under the Muse Model License with limited commercial terms.",
-    "url": "https://www.reuters.com/business/meta-releases-open-weight-muse-spark-model-coding-agentic-tasks-2026-10-15/"
+    "name": "DeepSeek V4.1 Flash 1017",
+    "summary": "DeepSeek's updated Flash-class model launched Oct 17, scoring 77% on DeepSWE 1.1 — topping Opus 5.0 and GPT-class rivals on coding and agentic benchmarks while cutting per-task costs with shorter, harness-optimized outputs.",
+    "url": "https://www.straitstimes.com/world/deepseek-pushes-out-updated-ai-model-it-says-is-faster-leaner"
   }
 }
