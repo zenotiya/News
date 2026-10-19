@@ -5,27 +5,27 @@
   "worst_cvss": 9.9,
   "priorities": [
     {
-      "id": "CVE-2026-92262",
-      "cvss": 9.9,
-      "summary": "MariaDB server remote code execution via the #mysql50# table-name bypass prefix, affecting 10.6.1 through 13.0.2 releases; disclosed Oct 16, with fixed versions published including 10.6.28, 11.8.9 and 13.0.2.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92262"
-    },
-    {
       "id": "CVE-2026-108263",
       "cvss": 9.9,
-      "summary": "iFlytek astron-agent agentic workflow platform ships unsandboxed Python execution in its default code-node path, allowing an authenticated low-privilege tenant to run code as root and cross tenant boundaries; fixed in 1.1.2.",
+      "summary": "iFlytek astron-agent before 1.1.2 defaults its workflow code-node path to an unsandboxed LocalExecutor that exposes full Python builtins. An authenticated low-privilege tenant can execute code as root in the core-workflow container and use shared credentials to read or modify other tenants' data.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108263"
     },
     {
-      "id": "CVE-2026-76519",
+      "id": "CVE-2026-111823",
       "cvss": 9.8,
-      "summary": "Cisco Secure Email Gateway (ESA) relative path traversal in the AMP attachment engine lets an unauthenticated attacker write arbitrary files and execute commands as root; Cisco confirms active in-the-wild exploitation and CISA added it to the KEV catalog on Oct 14.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519"
+      "summary": "Mage OSS through 0.9.80 proceeds with session creation when it encounters an unknown OAuth provider, a session-handling flaw that lets attackers establish sessions illegitimately. Public proof-of-concept exploit code is available, though it is not yet in the CISA KEV catalog.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111823"
+    },
+    {
+      "id": "CVE-2026-111643",
+      "cvss": 9.8,
+      "summary": "Misaka Danmu Server through 2.8.9 has an authentication bypass in the unprotected POST /api/ui/config-history/rollback endpoint, letting unauthenticated attackers write arbitrary configuration keys. No public exploit is confirmed yet; patch and monitor.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111643"
     }
   ],
   "model": {
     "name": "DeepSeek V4.1 Flash 1017",
-    "summary": "DeepSeek's updated Flash-class model launched Oct 17, scoring 77% on DeepSWE 1.1 — topping Opus 5.0 and GPT-class rivals on coding and agentic benchmarks while cutting per-task costs with shorter, harness-optimized outputs.",
-    "url": "https://www.straitstimes.com/world/deepseek-pushes-out-updated-ai-model-it-says-is-faster-leaner"
+    "summary": "DeepSeek released a faster, leaner update to its V4.1 Flash open-weight model on Oct 17 with MIT-licensed weights on Hugging Face and ModelScope. It improves reasoning, coding, and agentic benchmarks while cutting per-task cost roughly 60% versus its predecessor, intensifying the open-weight race against US frontier labs.",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
   }
 }
