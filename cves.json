@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "items": [
     {
       "cvss": 9.8,
-      "id": "CVE-2026-111823",
+      "id": "CVE-2026-109437",
       "severity": "Critical",
-      "summary": "Mage OSS through 0.9.80 proceeds with session creation when it encounters an unknown OAuth provider, a session-handling flaw that lets attackers establish sessions illegitimately. Public proof-of-concept exploit code is available, though it is not yet in the CISA KEV catalog.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111823"
+      "summary": "Cognition before 0.13.0 defaults its agent sandbox backend to local execution and ships no authentication on its REST/SSE API, letting unauthenticated attackers run arbitrary shell commands as the server process.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109437"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-111643",
+      "id": "CVE-2026-111998",
       "severity": "Critical",
-      "summary": "Misaka Danmu Server through 2.8.9 has an authentication bypass in the unprotected POST /api/ui/config-history/rollback endpoint, letting unauthenticated attackers write arbitrary configuration keys. No public exploit is confirmed yet; patch and monitor.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111643"
+      "summary": "Vanus 0.8.0 through 0.9.0 ships a hardcoded admin token, letting unauthenticated remote attackers gain cluster-admin access over the gateway gRPC proxy and manage namespaces, users, and events.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111998"
     },
     {
-      "cvss": 9.1,
-      "id": "CVE-2026-111235",
+      "cvss": 9.8,
+      "id": "CVE-2026-111862",
       "severity": "Critical",
-      "summary": "OpenNMS Meridian and Horizon REST APIs miss an authorization deny rule: Spring Security intercept-url rules compare the HTTP method case-sensitively, so a non-canonical (e.g. lowercase) method token skips authentication entirely. Unauthenticated attackers can read inventory and create, modify, or delete resources, including injecting events to fake or suppress alarms.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111235"
+      "summary": "Rank Math SEO PRO suffered a supply-chain compromise: a subset of version 3.0.123 packages downloaded or updated between Oct 15 20:02 UTC and Oct 16 07:12 UTC contained malware — reinstall clean packages now.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111862"
     },
     {
-      "cvss": 9.9,
-      "id": "CVE-2026-108263",
+      "cvss": 9.8,
+      "id": "CVE-2026-102764",
       "severity": "Critical",
-      "summary": "iFlytek astron-agent before 1.1.2 defaults its workflow code-node path to an unsandboxed LocalExecutor that exposes full Python builtins. An authenticated low-privilege tenant can execute code as root in the core-workflow container and use shared credentials to read or modify other tenants' data.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108263"
+      "summary": "An authentication bypass in BeyondTrust Remote Support lets unauthenticated remote attackers perform file operations on the appliance; CISA added it to the KEV catalog on Oct 16 amid confirmed active exploitation.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764"
     },
     {
-      "cvss": 9.1,
-      "id": "CVE-2026-97468",
+      "cvss": 9.3,
+      "id": "CVE-2026-103091",
       "severity": "Critical",
-      "summary": "Apache CXF's STSTokenValidator and Security Token Service cached validated tokens under a non-cryptographic 32-bit hash and treated a cache hit as proof of validation. An attacker can craft a token whose hash collides with a cached entry and be accepted without password or signature verification, authenticating as another user.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97468"
+      "summary": "Google's OSS Agent Mesh (SAM) 0.1.0-alpha.1 through alpha.8 lets a remote attacker self-enroll into the mesh and invoke arbitrary tools across connected MCP backends due to missing authorization and insecure defaults.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103091"
     }
   ]
 }

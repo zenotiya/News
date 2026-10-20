@@ -2,30 +2,30 @@
   "date": "2026-10-20",
   "news_count": 8,
   "cve_count": 5,
-  "worst_cvss": 9.9,
+  "worst_cvss": 9.8,
   "priorities": [
     {
-      "id": "CVE-2026-108263",
-      "cvss": 9.9,
-      "summary": "iFlytek astron-agent before 1.1.2 defaults its workflow code-node path to an unsandboxed LocalExecutor that exposes full Python builtins. An authenticated low-privilege tenant can execute code as root in the core-workflow container and use shared credentials to read or modify other tenants' data.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108263"
+      "id": "CVE-2026-109437",
+      "cvss": 9.8,
+      "summary": "Cognition before 0.13.0 defaults its agent sandbox backend to local execution and ships no authentication on its REST/SSE API, letting unauthenticated attackers run arbitrary shell commands as the server process.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109437"
     },
     {
-      "id": "CVE-2026-111823",
+      "id": "CVE-2026-111998",
       "cvss": 9.8,
-      "summary": "Mage OSS through 0.9.80 proceeds with session creation when it encounters an unknown OAuth provider, a session-handling flaw that lets attackers establish sessions illegitimately. Public proof-of-concept exploit code is available, though it is not yet in the CISA KEV catalog.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111823"
+      "summary": "Vanus 0.8.0 through 0.9.0 ships a hardcoded admin token, letting unauthenticated remote attackers gain cluster-admin access over the gateway gRPC proxy and manage namespaces, users, and events.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111998"
     },
     {
-      "id": "CVE-2026-111643",
+      "id": "CVE-2026-111862",
       "cvss": 9.8,
-      "summary": "Misaka Danmu Server through 2.8.9 has an authentication bypass in the unprotected POST /api/ui/config-history/rollback endpoint, letting unauthenticated attackers write arbitrary configuration keys. No public exploit is confirmed yet; patch and monitor.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111643"
+      "summary": "Rank Math SEO PRO suffered a supply-chain compromise: a subset of version 3.0.123 packages downloaded or updated between Oct 15 20:02 UTC and Oct 16 07:12 UTC contained malware — reinstall clean packages now.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111862"
     }
   ],
   "model": {
-    "name": "DeepSeek V4.1 Flash 1017",
-    "summary": "DeepSeek released a faster, leaner update to its V4.1 Flash open-weight model on Oct 17 with MIT-licensed weights on Hugging Face and ModelScope. It improves reasoning, coding, and agentic benchmarks while cutting per-task cost roughly 60% versus its predecessor, intensifying the open-weight race against US frontier labs.",
-    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    "name": "Inception Mercury 3",
+    "summary": "Inception's flagship diffusion LLM claims to outperform GPT-6 Luna and Claude Haiku 5.5 on benchmarks while generating 1,068 tokens per second — evidence that text-diffusion architectures can scale to frontier quality with a 1M-token context window.",
+    "url": "https://www.unite.ai/inception-releases-mercury-3-its-flagship-diffusion-llm/"
   }
 }
