@@ -1,34 +1,34 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "sections": [
     {
       "items": [
         {
-          "action": "Self-hosted Remote Support and PRA customers: apply the BT26-05 patch immediately, hunt for SAWFLY/BARECLAW artifacts, and review the Mandiant write-up for IOCs.",
-          "details": "Attackers deploy the SAWFLY webshell and BARECLAW tunneler, then escalate privileges and move laterally. Mandiant is assisting the investigation; only two customers are confirmed impacted so far, but Mandiant warns of likely widespread opportunistic exploitation now that the zero-day is public. The Privileged Remote Access (PRA) patch is also released as a precaution since it shares the affected code.",
-          "image": "https://res.cloudinary.com/momentum-media-group-pty-ltd/image/upload/v1792369416/BeyondTrust_Remote_Support_mjs1a4.png",
+          "action": "Upgrade to laravel/framework 12.68.0 or 13.29.0; audit any routes protected by the TokenGuard and review logs for odd impersonation patterns.",
+          "details": "The two advisories carry no CVE IDs yet, and neither wild exploitation nor a public PoC has been confirmed. TokenGuard bypass hits apps on MySQL or MariaDB: a crafted non-string credential during the login lookup matches the wrong user record. The data-destruction flaw (GHSA-5wcm-3v2w-8362, CVSS 6.5) affects 12.x from 12.45.0 before 12.68.0 and 13.x before 13.27.0.",
           "severity": "Critical",
-          "summary": "BeyondTrust disclosed CVE-2026-102764 (CVSS 9.3), a critical authentication bypass in Remote Support versions through 26.2.3, already being exploited by a suspected China-backed actor (UNC5221/Armory Castle) since late August. The vendor patched SaaS tenants on Oct 9; self-hosted customers must apply patch BT26-05-RS immediately — CISA's KEV remediation deadline was today, Oct 19.",
-          "title": "Patch BeyondTrust Remote Support now — zero-day CVE-2026-102764 under active exploitation",
-          "url": "https://www.cyberdaily.au/security/14316-patch-now-experts-us-cyber-agency-sound-alarm-over-critical-vulnerability-in-beyondtrust-remote-support"
+          "summary": "Laravel published two security advisories on October 19. The critical one (GHSA-f9x3-7vq9-cph6, CVSS 9.2) is a TokenGuard authentication bypass: an unauthenticated attacker may authenticate as another user without possessing that user's API token, i.e. full account takeover on any affected API route.",
+          "title": "Laravel critical TokenGuard bypass lets attackers log in as any user — no token needed",
+          "url": "https://securityonline.info/laravel-authentication-bypass-tokenguard/",
+          "image": "https://luminfire.com/wp-content/uploads/2023/07/laravel-logo.png"
         },
         {
-          "action": "Update virtualization hosts and sandbox fleets to the fixed stable kernels (5.10, 5.15, 6.1, 6.6, 6.12, 6.18, 7.2 line fixes are out) and check your distro's security tracker.",
-          "details": "Found by pwn.ai researcher Paulos Yibelo during Vercel's $1 million Sandbox challenge — the only critical finding among 1,285 submissions. The bug is a checksum-offload race in the IPv4 stack, not in KVM itself, so any Linux host running untrusted VMs needs the kernel update. Exploitation requires no privileges or user interaction from the guest.",
-          "image": "https://image.theregister.com/5265166.jpg?imageId=5265166&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+          "action": "Apply Fortinet's patch per its advisory, hunt for the PEERSTITCH implant across affected firewalls, and rotate credentials that transited them.",
+          "details": "The PEERSTITCH malware used the flaw in the FortiOS auto-script engine to deploy an implant and maintain stealthy access. CISA set the federal remediation deadline at Oct 19, 2026.",
           "severity": "Critical",
-          "summary": "A critical Linux kernel networking-stack flaw (CVSS 9.3), nicknamed PwnEscape and tracked as CVE-2026-99999, lets code inside a KVM guest VM read host memory and, in lab demonstrations, achieve full guest-to-host escape — simply by sending malformed IPv4 packets. Upstream mainline fix merged Oct 14; stable-branch fixes exist, but many distributions have not shipped them yet.",
-          "title": "PwnEscape (CVE-2026-99999): critical Linux kernel flaw lets VM guests escape to the host",
-          "url": "https://www.theregister.com/virtualization/2026/10/19/linux-kvm-guest-host-escape-rated-critical-may-represent-a-new-way-to-attack-penguin-powered-networking/5303744"
+          "summary": "CISA added CVE-2025-61624, a path traversal flaw in Fortinet products, to its Known Exploited Vulnerabilities catalog on October 19. The flaw was exploited by the PEERSTITCH malware to compromise more than 500 firewalls.",
+          "title": "Fortinet path-traversal flaw (CVE-2025-61624) joins CISA KEV — 500+ firewalls hit by PEERSTITCH",
+          "url": "https://www.scworld.com/brief/cisa-adds-fortinet-and-beyondtrust-vulnerabilities-to-exploited-list",
+          "image": "https://techstore.com.pk/wp-content/uploads/2025/11/Fortinet-FortiGate-600D-768x768.webp"
         },
         {
-          "action": "Upgrade to 25.1.1.2 / 25.1.3.x / 22.8R2.5, treat any exposed appliance as potentially compromised, rebuild and rotate secrets, and watch for the pending priv-esc patch.",
-          "details": "The chain combines an auth bypass and RCE on fully patched appliances, then escalates to root via a rogue dsinvoked maintenance task. Volexity observed credential and AD-secret theft with log wiping; CISA's KEV listing mandates factory-reset rebuild, credential/certificate rotation, and memory/network forensics — not just a version bump. Shadowserver counts 5,600+ internet-exposed appliances.",
-          "image": "https://carthageelectronics.com/wp-content/uploads/2026/10/october-16-2026-cve-threat-brief.png",
-          "severity": "High",
-          "summary": "Two of the three flaws in the UTA0576 attack chain against Ivanti Connect Secure were fixed Oct 13, but the privilege-escalation step — CVE-2026-111357 (CVSS 7.0) — had no published fix as of Oct 16. Patching alone is not enough: the chain ran in memory, so Ivanti's Integrity Checker may not detect compromise; CISA requires forensic triage of exposed appliances.",
-          "title": "Ivanti Connect Secure zero-day chain: the root-escalation step (CVE-2026-111357) still has no fix",
-          "url": "https://carthageelectronics.com/october-16-2026-cve-threat-brief/"
+          "action": "Upgrade self-managed instances to 19.2.8, 19.3.5 or 19.4.2 immediately; if internet-facing with open self-registration, treat the box as potentially compromised and rotate pipeline secrets.",
+          "details": "Rapid7 independently reproduced arbitrary code execution on an unpatched official GitLab CE image; a public PoC landed October 13. Attackers must first plant a malicious CI/CD configuration in a repository, but open self-registration collapses that precondition. GitLab.com and Dedicated are already safe.",
+          "severity": "Critical",
+          "summary": "GitLab's maximum-severity flaw (CVE-2026-97229, CVSS 10.0) — an integer overflow in the CI/CD regular-expression compiler — lets an unauthenticated attacker execute arbitrary code on self-managed GitLab servers. Censys still detects more than 25,000 hosts on vulnerable versions, so the patch wave is not done.",
+          "title": "GitLab CVSS 10.0 RCE (CVE-2026-97229) — patched Oct 12, but 25,000+ instances still exposed",
+          "url": "https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab/",
+          "image": "https://oussemadaoud.com/images/gitlab.png"
         }
       ],
       "title": "Act on Today"
@@ -36,31 +36,31 @@
     {
       "items": [
         {
-          "action": "Media-tech supply-chain teams should watch n0n's leak site and rotate any credentials shared with the vendor if the claim is confirmed.",
-          "details": "The listing appeared at 22:24 UTC on Oct 18. Amagi is a major cloud broadcast/playout platform provider, so leaked network maps and device configs could aid further intrusion. The claim has not been independently verified.",
-          "image": "https://www.hookphish.com/wp-content/uploads/feeds/hookphish-post-1792377032-ransomware-group-n0n-hits-amagi-media-labs.jpg",
+          "action": "Clients and counterparties should assume client-matter data may be in play; review engagements with the firm and watch for extortion-linked phishing.",
+          "details": "Baker Donelson is a large US law firm. Law firms are prime ransomware targets because of the confidential client data they hold. The claim has not been independently verified and the firm has not publicly commented.",
           "severity": "High",
-          "summary": "The n0n extortion group added US broadcast media firm Amagi Media Labs to its leak site on Oct 18, claiming to have taken network/device configuration files and internal network maps from a US broadcast playout site, and marking the data as exposed (\"not paid\").",
-          "title": "n0n ransomware claims Amagi Media Labs — network maps and device configs allegedly exfiltrated",
-          "url": "https://www.hookphish.com/blog/ransomware-group-n0n-hits-amagi-media-labs/"
+          "summary": "The Redact ransomware group listed US law firm Baker Donelson on its leak site on October 19, 2026, claiming to have exfiltrated 355 GB of data — the group's largest claimed haul to date.",
+          "title": "Redact ransomware claims US law firm Baker Donelson — 355 GB allegedly exfiltrated",
+          "url": "https://qpulse.quasarcybertech.com/news/7053/redact-ransomware-group-claims-data-exfiltration-from-law-firm-baker-donelson",
+          "image": "https://www.bakerdonelson.com/images/_wbmanaged/48067_wbc_socialimage.jpg"
         },
         {
-          "action": "Healthcare-adjacent organizations should monitor n0n's leak site and ensure incident-response playbooks for data-leak extortion are current.",
-          "details": "No technical details on the attack vector or data volume were published. Healthcare support providers typically hold sensitive patient and administrative data, making them high-value extortion targets.",
-          "image": "https://images.unsplash.com/photo-1597692969854-b615b33f9696?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "action": "Supply-chain and construction partners should monitor for leaked project data and rotate any credentials shared with the company.",
+          "details": "Payload has been active recently with other listed victims including BW Office World, the Brüninghoff Group's fellow German construction peers, and Qualiflex Datacenter. No attack vector, encryption details, or published files are confirmed yet; the claim remains a listing, not proof.",
           "severity": "High",
-          "summary": "The n0n ransomware group listed a US healthcare support services firm, identified only as 'Company #93', on its leak site at 00:22 UTC on Oct 19. The data status is marked 'pending exposure' — the group is pressuring the victim with the threat of publication rather than having released the dataset yet.",
-          "title": "n0n lists US healthcare support firm 'Company #93' as new victim",
-          "url": "https://qpulse.quasarcybertech.com/news/7014/ransomware-group-n0n-claims-healthcare-support-services-firm-company-93-as-victim"
+          "summary": "The Payload ransomware group added German construction and engineering company Brüninghoff Group to its leak site on October 20, 2026, claiming 40 GB of exfiltrated data.",
+          "title": "Payload ransomware lists German construction giant Brüninghoff Group — 40 GB claimed",
+          "url": "https://undercodenews.com/payload-ransomware-claims-bruninghoff-group-as-a-victim-while-n0n-targets-vormittag-associates-inc-video/",
+          "image": "https://csecrosscom.net/au/wp-content/uploads/sites/9/2026/08/Blog-Post-Image-Format-CSE-Crosscom-construction-cranes.webp"
         },
         {
-          "action": "Korean-market and IT-services firms should verify exposure via dark-web monitoring and have extortion-response comms ready.",
-          "details": "This is part of n0n's rapid-fire claiming pattern over the weekend — at least four victims (Amagi, #92, #93, and a maritime batch) hit within 24 hours. Claims are sourced from the group's public leak postings and remain unverified.",
-          "image": "https://www.hookphish.com/wp-content/uploads/feeds/hookphish-post-1792370432-ransomware-group-n0n-hits-company-92.jpg",
+          "action": "Anyone with a BK Japan app account should watch for phishing calls, texts and emails impersonating the company, and change the password if reused elsewhere.",
+          "details": "BK Japan says the stolen data leaked online, the compromised server held no credit-card numbers, and no user-credential theft or fraudulent use has been confirmed. The company has reported the incident to Japan's Personal Information Protection Commission and brought in external specialists.",
           "severity": "High",
-          "summary": "The n0n group listed 'Company #92', an IT services company based in South Korea, on its leak site on Oct 18. The listing is in 'pending exposure' status — claimed but not yet released.",
-          "title": "n0n adds South Korean IT services firm 'Company #92' to leak site",
-          "url": "https://www.hookphish.com/blog/ransomware-group-n0n-hits-company-92/"
+          "summary": "Burger King Japan disclosed that attackers accessed a server holding member information for its official smartphone app between October 2 and October 7, 2026, exposing roughly 11.18 million records — names, dates of birth, gender, emails, phone numbers and order history.",
+          "title": "Burger King Japan discloses breach: 11.18 million app users' records exposed",
+          "url": "https://www.bleepingcomputer.com/news/security/burger-king-japan-data-breach-exposes-11-million-customer-records/",
+          "image": "https://yamanashilocal.jp/wp-content/uploads/2025/06/9d1f7fadcbf26d1c18fdff83877e8f28.jpg"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -68,27 +68,27 @@
     {
       "items": [
         {
-          "action": "Indian port/terminal operators should validate n0n's claims against their own logs, lock down OT-adjacent access paths, and prepare a comms response ahead of the release deadline.",
-          "details": "The 38 facilities across 18 countries were added in a single batch on Oct 12, marking n0n's shift from traditional ransomware to maritime-targeted extortion. Of 21 earlier victims SOCRadar tracked, 19 remain at 'claimed' stage, one is negotiating, and one (Chibitek) has had data leaked.",
-          "image": "https://www.adani.com/-/media/project/adaniv1/revised-images/spotlight/resize_spotlight/homepage_spotlight_ports-bannerdeskto-1920x1080.jpg",
+          "action": "Treat any 'SBI support' call or SMS asking for OTPs, KYC documents or loan details as a scam attempt; SBI never asks for these on calls.",
+          "details": "The claim surfaced via CyberPulse56 on X; the threat actor calls it the first disclosure of the dataset and alleges over 3,75,000 accounts plus 2,722 PDF files (personal info, loan applications, addresses). The authenticity, origin and extent are unverified, and SBI had not responded to the Economic Times at press time.",
           "severity": "High",
-          "summary": "SOCRadar reports that n0n claims to have stolen data from 38 maritime facilities worldwide — including an Indian entry listed as 'NCT Kandla' — and threatens to publish the material at 13:27 UTC today (18:57 IST) unless ransom demands of $2.4M–$14M in Bitcoin are paid. The claims are unverified: neither The Week nor SOCRadar could independently confirm any breach, and no listed organization has confirmed one.",
-          "title": "n0n extortion group threatens data release from Indian facility 'NCT Kandla' — deadline 18:57 IST today",
-          "url": "https://www.theweek.in/news/maritime/2026/10/15/indian-maritime-facility-among-38-targeted-by-cyber-extortion-group-report-makes-shocking-claim.html"
+          "summary": "An anonymous hacker group calling itself 'Siriusim' claims to have obtained confidential data of 3.75 lakh State Bank of India customers — personal details, loan applications, account-opening forms and addresses. The claim, published October 20, is unverified.",
+          "title": "'Siriusim' group claims 3.75 lakh SBI customer accounts exposed — claim unverified",
+          "url": "https://economictimes.indiatimes.com/industry/banking/finance/banking/sbi-data-breach-claim-hackers-allegedly-access-3-75-lakh-accounts/articleshow/135059062.cms",
+          "image": "https://www.chaltapurza.com/wp-content/uploads/2020/04/SBI-Bank--740x552.jpg"
         },
         {
-          "action": "Rotate exposed credentials and keys in repos/configs, restrict AI agent identities to least-privilege short-lived credentials, and enable SOC monitoring for anomalous agent activity.",
-          "details": "The government is in direct contact with CISOs in sensitive sectors (finance, power) urging them to tighten controls, and upcoming AI-regulation consultations are expected to cover autonomous agents. Sources stress this should be treated as an early warning: real-time monitoring and least-privilege identities for AI workloads are now urgent.",
-          "image": "https://www.secureitworld.com/wp-content/uploads/2025/12/Understanding-AI-SOC.jpg",
+          "action": "Verify any investment or rewards link from brand handles before clicking — hijacked handles are a classic crypto-scam distribution channel.",
+          "details": "The official X account of Rajiv Gandhi International Airport was compromised on Monday (Oct 19) and posted crypto-rewards promotions. GHIAL says the account is not integrated with airport systems, so operations, passenger services and operational systems were unaffected; the incident is reported to cybercrime authorities and X.",
           "severity": "Medium",
-          "summary": "Government officials say the AI agents that accessed Indian organizations' live systems under CERT-In's Oct 15 advisory got in through plain-text credentials, exposed systems, dormant APIs and excessive cloud permissions — basic hygiene failures, not sophisticated AI techniques. None of the affected organizations detected the access themselves.",
-          "title": "CERT-In rogue-AI-agent incidents traced to basic hygiene lapses, not sophisticated AI attacks",
-          "url": "https://www.thehindubusinessline.com/news/cert-in-agent-alert-organisations-lacked-basic-cyber-controls-some-not-aware-of-incident-say-authorities/article71599643.ece"
+          "summary": "The official X account of Hyderabad's Rajiv Gandhi International Airport was hacked on October 19 and used to promote a cryptocurrency rewards scam before the airport's IT team detected and recovered it.",
+          "title": "Hyderabad airport's X account hijacked for crypto scam — recovered, no ops impact",
+          "url": "https://www.tribuneindia.com/news/india/hyderabad-airports-x-account-hacked-recovered-quickly/",
+          "image": "https://media.telanganatoday.com/wp-content/uploads/2024/04/Hyderabad-Airport-surpasses-25-million-passenger-mark-records-robust-growth-in-March.jpg"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Monday, October 19 — Here's what's worth your attention today.",
+  "subtitle": "Tuesday, October 20 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
