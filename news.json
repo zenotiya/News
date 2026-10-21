@@ -1,34 +1,34 @@
 {
-  "date": "2026-10-20",
+  "date": "2026-10-21",
   "sections": [
     {
       "items": [
         {
-          "action": "Upgrade to laravel/framework 12.68.0 or 13.29.0; audit any routes protected by the TokenGuard and review logs for odd impersonation patterns.",
-          "details": "The two advisories carry no CVE IDs yet, and neither wild exploitation nor a public PoC has been confirmed. TokenGuard bypass hits apps on MySQL or MariaDB: a crafted non-string credential during the login lookup matches the wrong user record. The data-destruction flaw (GHSA-5wcm-3v2w-8362, CVSS 6.5) affects 12.x from 12.45.0 before 12.68.0 and 13.x before 13.27.0.",
+          "action": "Inventory every PHP instance (including legacy 5/7 branches), back up, and apply vendor builds the moment they land today; EOL branches need backports or upgrades to a supported PHP 8 line. Ask hosting providers when they'll roll the update out.",
+          "details": "Embargo details leaked Oct 20 alongside a claimed exploit tool ('PHP2Shell', credited to Calif.IO) said to work against every PHP release from 5.4.0. The flaws affect PHP 5.4 and later — every web server running PHP, including WordPress, Magento, WooCommerce, Shopware and Drupal. PHP only supports 8.2+, so servers on 8.1 or older get no official fix. No in-the-wild exploitation observed yet; watchTowr confirmed the bugs are real and reproducible.",
+          "image": "https://i0.wp.com/unaaldia.hispasec.com/wp-content/uploads/2024/06/PHP.png?resize=1024,576&ssl=1",
           "severity": "Critical",
-          "summary": "Laravel published two security advisories on October 19. The critical one (GHSA-f9x3-7vq9-cph6, CVSS 9.2) is a TokenGuard authentication bypass: an unauthenticated attacker may authenticate as another user without possessing that user's API token, i.e. full account takeover on any affected API route.",
-          "title": "Laravel critical TokenGuard bypass lets attackers log in as any user — no token needed",
-          "url": "https://securityonline.info/laravel-authentication-bypass-tokenguard/",
-          "image": "https://luminfire.com/wp-content/uploads/2023/07/laravel-logo.png"
+          "summary": "PHP ships an emergency out-of-band release today fixing two remote code execution flaws in PHP core, CVE-2026-109618 and CVE-2026-109619 (CVSS 9.2 each; watchTowr rates them 10.0).",
+          "title": "PHP emergency out-of-band release: two critical core RCE flaws",
+          "url": "https://sansec.io/research/php2shell"
         },
         {
-          "action": "Apply Fortinet's patch per its advisory, hunt for the PEERSTITCH implant across affected firewalls, and rotate credentials that transited them.",
-          "details": "The PEERSTITCH malware used the flaw in the FortiOS auto-script engine to deploy an implant and maintain stealthy access. CISA set the federal remediation deadline at Oct 19, 2026.",
+          "action": "Patch Fortinet and BeyondTrust Remote Support immediately; hunt for PEERSTITCH implant indicators on FortiOS devices.",
+          "details": "CVE-2025-61624 is a path traversal in Fortinet products exploited by PEERSTITCH malware to compromise 500+ firewalls via the FortiOS auto-script engine, deploying a stealth implant. CVE-2026-102764 is an authentication bypass in BeyondTrust Remote Support enabling initial access, privilege escalation and lateral movement.",
+          "image": "https://content.etilize.com/900/1060514700.jpg",
           "severity": "Critical",
-          "summary": "CISA added CVE-2025-61624, a path traversal flaw in Fortinet products, to its Known Exploited Vulnerabilities catalog on October 19. The flaw was exploited by the PEERSTITCH malware to compromise more than 500 firewalls.",
-          "title": "Fortinet path-traversal flaw (CVE-2025-61624) joins CISA KEV — 500+ firewalls hit by PEERSTITCH",
-          "url": "https://www.scworld.com/brief/cisa-adds-fortinet-and-beyondtrust-vulnerabilities-to-exploited-list",
-          "image": "https://techstore.com.pk/wp-content/uploads/2025/11/Fortinet-FortiGate-600D-768x768.webp"
+          "summary": "CISA added CVE-2025-61624 (Fortinet path traversal, exploited by PEERSTITCH malware on 500+ firewalls) and CVE-2026-102764 (BeyondTrust Remote Support auth bypass) to the Known Exploited Vulnerabilities catalog.",
+          "title": "CISA adds Fortinet and BeyondTrust flaws to KEV catalog",
+          "url": "https://www.scworld.com/brief/cisa-adds-fortinet-and-beyondtrust-vulnerabilities-to-exploited-list"
         },
         {
-          "action": "Upgrade self-managed instances to 19.2.8, 19.3.5 or 19.4.2 immediately; if internet-facing with open self-registration, treat the box as potentially compromised and rotate pipeline secrets.",
-          "details": "Rapid7 independently reproduced arbitrary code execution on an unpatched official GitLab CE image; a public PoC landed October 13. Attackers must first plant a malicious CI/CD configuration in a repository, but open self-registration collapses that precondition. GitLab.com and Dedicated are already safe.",
+          "action": "Patch PAN-OS immediately if not done; hunt for suspicious VPN sessions and RMM tool installs.",
+          "details": "Unit 42 (reported Oct 20) confirmed Spikey Scorpius (Qilin) and Tarnished Scorpius (INC) exploiting the flaw to establish unauthorized VPN sessions, bypass MFA, then recon with RMM tools and move laterally via RDP/SMB. ReliaQuest independently reported active exploitation by Qilin and Settra.",
+          "image": "https://www.paloaltonetworks.sg/blog/wp-content/uploads/2024/12/XSIAM-1536x775.png",
           "severity": "Critical",
-          "summary": "GitLab's maximum-severity flaw (CVE-2026-97229, CVSS 10.0) — an integer overflow in the CI/CD regular-expression compiler — lets an unauthenticated attacker execute arbitrary code on self-managed GitLab servers. Censys still detects more than 25,000 hosts on vulnerable versions, so the patch wave is not done.",
-          "title": "GitLab CVSS 10.0 RCE (CVE-2026-97229) — patched Oct 12, but 25,000+ instances still exposed",
-          "url": "https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab/",
-          "image": "https://oussemadaoud.com/images/gitlab.png"
+          "summary": "Qilin and INC ransomware operators are actively exploiting CVE-2026-0257 (CVSS 7.8, PAN-OS/Prisma Access authentication bypass, patched May 2026) to bypass MFA, establish unauthorized VPN sessions and move laterally.",
+          "title": "Qilin and INC exploiting PAN-OS flaw CVE-2026-0257 to bypass MFA",
+          "url": "https://cybernoz.com/qilin-and-inc-ransomware-groups-exploit-palo-alto-networks-flaw-to-bypass-mfa/"
         }
       ],
       "title": "Act on Today"
@@ -36,31 +36,36 @@
     {
       "items": [
         {
-          "action": "Clients and counterparties should assume client-matter data may be in play; review engagements with the firm and watch for extortion-linked phishing.",
-          "details": "Baker Donelson is a large US law firm. Law firms are prime ransomware targets because of the confidential client data they hold. The claim has not been independently verified and the firm has not publicly commented.",
+          "details": "Asensus Surgical (US medical-device maker, part of KARL STORZ since 2024) has not publicly confirmed the incident. No encryption confirmed; no ransom figure published.",
+          "image": "https://media-proxy.41kg.com/static.webp?url=https%3A%2F%2Fcdn.masto.host%2Fmastodonuno%2Fmedia_attachments%2Ffiles%2F117%2F001%2F975%2F740%2F413%2F916%2Foriginal%2F67a39d1c3b451090.png&static=1",
           "severity": "High",
-          "summary": "The Redact ransomware group listed US law firm Baker Donelson on its leak site on October 19, 2026, claiming to have exfiltrated 355 GB of data — the group's largest claimed haul to date.",
-          "title": "Redact ransomware claims US law firm Baker Donelson — 355 GB allegedly exfiltrated",
-          "url": "https://qpulse.quasarcybertech.com/news/7053/redact-ransomware-group-claims-data-exfiltration-from-law-firm-baker-donelson",
-          "image": "https://www.bakerdonelson.com/images/_wbmanaged/48067_wbc_socialimage.jpg"
+          "summary": "The 'Dark Project' ransomware group listed Asensus Surgical on its leak site on Oct 20, claiming exfiltration of 600 GB / 85,000+ files including employee personal documents, research data and internal records. Unverified — no company confirmation.",
+          "title": "Dark Project claims Asensus Surgical breach (600 GB)",
+          "url": "https://qpulse.quasarcybertech.com/news/7092/dark-project-ransomware-group-exfiltrates-600gb-of-data-from-asensus-surgical"
         },
         {
-          "action": "Supply-chain and construction partners should monitor for leaked project data and rotate any credentials shared with the company.",
-          "details": "Payload has been active recently with other listed victims including BW Office World, the Brüninghoff Group's fellow German construction peers, and Qualiflex Datacenter. No attack vector, encryption details, or published files are confirmed yet; the claim remains a listing, not proof.",
-          "severity": "High",
-          "summary": "The Payload ransomware group added German construction and engineering company Brüninghoff Group to its leak site on October 20, 2026, claiming 40 GB of exfiltrated data.",
-          "title": "Payload ransomware lists German construction giant Brüninghoff Group — 40 GB claimed",
-          "url": "https://undercodenews.com/payload-ransomware-claims-bruninghoff-group-as-a-victim-while-n0n-targets-vormittag-associates-inc-video/",
-          "image": "https://csecrosscom.net/au/wp-content/uploads/sites/9/2026/08/Blog-Post-Image-Format-CSE-Crosscom-construction-cranes.webp"
+          "details": "On Oct 7, attackers used stolen credentials to access a cloud-based development environment. No credit cards exposed; no evidence of misuse as of Oct 16. Reported to Japan's Personal Information Protection Commission on Oct 11.",
+          "image": "https://resource.puzzleabc.com/com_nikkei_newspaper.webp",
+          "severity": "Critical",
+          "summary": "Nikkei Inc. (owner of the Financial Times) disclosed its third incident in ~30 days: attackers accessed a cloud development environment, exposing 1.83M records, 150,000 containing PII (names, addresses, emails, phone numbers, DOBs).",
+          "title": "Nikkei discloses third breach in a month — 1.83M records exposed",
+          "url": "https://www.bleepingcomputer.com/news/security/nikkei-discloses-third-data-breach-in-a-month-18m-records-exposed/"
         },
         {
-          "action": "Anyone with a BK Japan app account should watch for phishing calls, texts and emails impersonating the company, and change the password if reused elsewhere.",
-          "details": "BK Japan says the stolen data leaked online, the compromised server held no credit-card numbers, and no user-credential theft or fraudulent use has been confirmed. The company has reported the incident to Japan's Personal Information Protection Commission and brought in external specialists.",
+          "details": "Details on ransomware vs. intrusion were not established in reporting seen so far.",
+          "image": "https://www.securityweek.com/wp-content/uploads/2025/08/Auchan.jpg",
           "severity": "High",
-          "summary": "Burger King Japan disclosed that attackers accessed a server holding member information for its official smartphone app between October 2 and October 7, 2026, exposing roughly 11.18 million records — names, dates of birth, gender, emails, phone numbers and order history.",
-          "title": "Burger King Japan discloses breach: 11.18 million app users' records exposed",
-          "url": "https://www.bleepingcomputer.com/news/security/burger-king-japan-data-breach-exposes-11-million-customer-records/",
-          "image": "https://yamanashilocal.jp/wp-content/uploads/2025/06/9d1f7fadcbf26d1c18fdff83877e8f28.jpg"
+          "summary": "Ahold Delhaize disclosed a cyberattack on Oct 20 disrupting services across multiple US and European regions. Supply-chain exposure for retail and supplier partners.",
+          "title": "Ahold Delhaize cyberattack disrupts services across US and Europe",
+          "url": "https://newsmon.ai/briefings/cybersecurity/2026-10-21/"
+        },
+        {
+          "details": "No company statement found; monitor for a data-leak publication before treating as confirmed.",
+          "image": "https://www.redhotcyber.com/wp-content/uploads/2025/03/image-144.jpg",
+          "severity": "Medium",
+          "summary": "The INC Ransom group listed centralrogers.com (a US organization) as a victim on its leak site on Oct 20. Unverified leak-site claim.",
+          "title": "INC Ransom claims centralrogers.com",
+          "url": "https://www.hookphish.com/blog/ransomware-group-incransom-hits-centralrogers-com/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -68,27 +73,26 @@
     {
       "items": [
         {
-          "action": "Treat any 'SBI support' call or SMS asking for OTPs, KYC documents or loan details as a scam attempt; SBI never asks for these on calls.",
-          "details": "The claim surfaced via CyberPulse56 on X; the threat actor calls it the first disclosure of the dataset and alleges over 3,75,000 accounts plus 2,722 PDF files (personal info, loan applications, addresses). The authenticity, origin and extent are unverified, and SBI had not responded to the Economic Times at press time.",
-          "severity": "High",
-          "summary": "An anonymous hacker group calling itself 'Siriusim' claims to have obtained confidential data of 3.75 lakh State Bank of India customers — personal details, loan applications, account-opening forms and addresses. The claim, published October 20, is unverified.",
-          "title": "'Siriusim' group claims 3.75 lakh SBI customer accounts exposed — claim unverified",
-          "url": "https://economictimes.indiatimes.com/industry/banking/finance/banking/sbi-data-breach-claim-hackers-allegedly-access-3-75-lakh-accounts/articleshow/135059062.cms",
-          "image": "https://www.chaltapurza.com/wp-content/uploads/2020/04/SBI-Bank--740x552.jpg"
+          "action": "Treat any SBI-related loan/account data as potentially circulating; watch for targeted phishing and fraudulent loan applications using KYC documents.",
+          "details": "This follows an earlier claim flagged Oct 16 by OSINT account CyberPulse56 of a threat actor 'Siriusim' claiming ~375,000 CSV rows + 2,722 PDFs allegedly linked to SBI — authenticity unverified and a separate, unconfirmed claim.",
+          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
+          "severity": "Critical",
+          "summary": "State Bank of India reported on Oct 21 that a cyberattack led to 3,897 customer records containing personally identifiable information being disclosed on the dark web.",
+          "title": "SBI reports cyberattack; 3,897 customer records on dark web",
+          "url": "https://www.reuters.com/legal/litigation/state-bank-india-reports-cyberattack-involving-customer-records-2026-10-21/"
         },
         {
-          "action": "Verify any investment or rewards link from brand handles before clicking — hijacked handles are a classic crypto-scam distribution channel.",
-          "details": "The official X account of Rajiv Gandhi International Airport was compromised on Monday (Oct 19) and posted crypto-rewards promotions. GHIAL says the account is not integrated with airport systems, so operations, passenger services and operational systems were unaffected; the incident is reported to cybercrime authorities and X.",
-          "severity": "Medium",
-          "summary": "The official X account of Hyderabad's Rajiv Gandhi International Airport was hacked on October 19 and used to promote a cryptocurrency rewards scam before the airport's IT team detected and recovered it.",
-          "title": "Hyderabad airport's X account hijacked for crypto scam — recovered, no ops impact",
-          "url": "https://www.tribuneindia.com/news/india/hyderabad-airports-x-account-hacked-recovered-quickly/",
-          "image": "https://media.telanganatoday.com/wp-content/uploads/2024/04/Hyderabad-Airport-surpasses-25-million-passenger-mark-records-robust-growth-in-March.jpg"
+          "details": "The claims remain unverified; SBI had not responded to queries and it is unclear whether the records are genuine or originated from SBI's systems. This is separate from the 3,897-record incident SBI itself reported.",
+          "image": "https://rocket-boys.co.jp/wp-content/uploads/2026/01/kobayashi-resin-sales-company-breach-8149-personal-records-world-leaks-claim-768x512.png",
+          "severity": "High",
+          "summary": "On Oct 20, Indian media reported that cybersecurity monitoring account CyberPulse56 flagged a hacker group named 'Siriusim' claiming ~3.75 lakh SBI-linked records in CSV format plus 2,722 PDFs (personal details, loan applications, account-opening forms). Unverified allegation.",
+          "title": "Hacker group 'Siriusim' claims 3.75 lakh SBI records (unverified)",
+          "url": "https://www.moneycontrol.com/news/business/sbi-data-breach-claim-hacker-group-alleges-access-to-3-75-lakh-records-2-722-documents-14056008.html/amp?utm_campaign=fullarticle&utm_medium=referral&utm_source=inshorts"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Tuesday, October 20 — Here's what's worth your attention today.",
+  "subtitle": "Wednesday, October 21 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
