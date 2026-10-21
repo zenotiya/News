@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-20",
+  "date": "2026-10-21",
   "items": [
     {
-      "cvss": 9.8,
-      "id": "CVE-2026-109437",
+      "cvss": 10.0,
+      "id": "CVE-2026-87337",
       "severity": "Critical",
-      "summary": "Cognition before 0.13.0 defaults its agent sandbox backend to local execution and ships no authentication on its REST/SSE API, letting unauthenticated attackers run arbitrary shell commands as the server process.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109437"
+      "summary": "Unauthenticated network attacker can compromise Oracle Access Manager's Authentication Engine via HTTP; scope-change allows full read/write/delete of critical data. Versions 12.2.1.4.0 and 14.1.2.1.0 affected; patch in Oracle's October 2026 CPU.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87337"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-111998",
+      "id": "CVE-2026-101767",
       "severity": "Critical",
-      "summary": "Vanus 0.8.0 through 0.9.0 ships a hardcoded admin token, letting unauthenticated remote attackers gain cluster-admin access over the gateway gRPC proxy and manage namespaces, users, and events.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111998"
+      "summary": "Easily exploitable unauthenticated HTTP vulnerability in Oracle E-Business Suite's Application Object Library (AppsTCFServer servlet) resulting in full takeover of the component. Versions 12.2.3–12.2.15 affected; patch in Oracle's October 2026 CPU.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101767"
     },
     {
       "cvss": 9.8,
       "id": "CVE-2026-111862",
       "severity": "Critical",
-      "summary": "Rank Math SEO PRO suffered a supply-chain compromise: a subset of version 3.0.123 packages downloaded or updated between Oct 15 20:02 UTC and Oct 16 07:12 UTC contained malware — reinstall clean packages now.",
+      "summary": "A subset of Rank Math SEO PRO 3.0.123 packages downloaded Oct 15–16 shipped with embedded malware: self-restoring PHP backdoors, rogue admin accounts, and credential theft via an external C2. Sites that activated affected packages must treat themselves as compromised; 3.0.124 is the clean replacement.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111862"
     },
     {
-      "cvss": 9.8,
-      "id": "CVE-2026-102764",
+      "cvss": 9.3,
+      "id": "CVE-2026-113703",
       "severity": "Critical",
-      "summary": "An authentication bypass in BeyondTrust Remote Support lets unauthenticated remote attackers perform file operations on the appliance; CISA added it to the KEV catalog on Oct 16 amid confirmed active exploitation.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764"
+      "summary": "In SuggestArr's local_bypass auth mode before 3.0.0, authentication trusts the spoofable X-Forwarded-For header — sending X-Forwarded-For: 127.0.0.1 grants unauthenticated admin sessions and full access to endpoints like /api/users and /api/jobs.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113703"
     },
     {
-      "cvss": 9.3,
-      "id": "CVE-2026-103091",
+      "cvss": 9.1,
+      "id": "CVE-2026-101296",
       "severity": "Critical",
-      "summary": "Google's OSS Agent Mesh (SAM) 0.1.0-alpha.1 through alpha.8 lets a remote attacker self-enroll into the mesh and invoke arbitrary tools across connected MCP backends due to missing authorization and insecure defaults.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103091"
+      "summary": "A missing critical step in Apache Tomcat's JNDIRealm authentication lets attackers log in without the correct password when a non-GSSAPI SASL mechanism is configured. Affects 11.0.0-M1–11.0.26, 10.1.0-M1–10.1.60, 9.0.0.M1–9.0.122; fixed in 11.0.27 / 10.1.61 / 9.0.123.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101296"
     }
   ]
 }
