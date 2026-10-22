@@ -1,34 +1,34 @@
 {
-  "date": "2026-10-21",
+  "date": "2026-10-22",
   "sections": [
     {
       "items": [
         {
-          "action": "Inventory every PHP instance (including legacy 5/7 branches), back up, and apply vendor builds the moment they land today; EOL branches need backports or upgrades to a supported PHP 8 line. Ask hosting providers when they'll roll the update out.",
-          "details": "Embargo details leaked Oct 20 alongside a claimed exploit tool ('PHP2Shell', credited to Calif.IO) said to work against every PHP release from 5.4.0. The flaws affect PHP 5.4 and later — every web server running PHP, including WordPress, Magento, WooCommerce, Shopware and Drupal. PHP only supports 8.2+, so servers on 8.1 or older get no official fix. No in-the-wild exploitation observed yet; watchTowr confirmed the bugs are real and reproducible.",
-          "image": "https://i0.wp.com/unaaldia.hispasec.com/wp-content/uploads/2024/06/PHP.png?resize=1024,576&ssl=1",
+          "action": "Patch the PHP runtime itself (WordPress/plugin updates will NOT fix this). Interim: limit request sizes at the web server and set session.upload_progress.enabled=0; CERT-EU advises isolating internet-facing apps that cannot be patched immediately.",
+          "details": "Discovered via AI-assisted research by Wiz (with Calif.io, OpenAI and Quarkslab). Details leaked before the coordinated release, and Cloudflare observed live attack traffic mutating payloads around WAF rules. FBI Cyber Division, NSA, CERT-EU, UK NCSC and multiple European ministries issued advisories; government and gaming portals (incl. Pokemon/Cygames) went offline preemptively.",
+          "image": "https://data.windowsforum.com/attachments/88/88627-ac131c6c2a3b7c43d28523bc920cab36.jpg?hash=XXjR4gt23f",
           "severity": "Critical",
-          "summary": "PHP ships an emergency out-of-band release today fixing two remote code execution flaws in PHP core, CVE-2026-109618 and CVE-2026-109619 (CVSS 9.2 each; watchTowr rates them 10.0).",
-          "title": "PHP emergency out-of-band release: two critical core RCE flaws",
-          "url": "https://sansec.io/research/php2shell"
+          "summary": "Two unauthenticated remote-code-execution flaws in PHP core (CVE-2026-109618, CVE-2026-109619), dubbed PHP2Shell, carry CVSS 4.0 9.2. Emergency patches released Oct 21: PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35; all web-serving setups (FPM, mod_php, php-cgi, FrankenPHP, LiteSpeed) are at risk.",
+          "title": "'PHP2Shell': critical PHP RCE (CVE-2026-109618/109619) — patch runtime now",
+          "url": "https://www.webpronews.com/php2shell-php-remote-code-execution-vulnerabilities-patch/"
         },
         {
-          "action": "Patch Fortinet and BeyondTrust Remote Support immediately; hunt for PEERSTITCH implant indicators on FortiOS devices.",
-          "details": "CVE-2025-61624 is a path traversal in Fortinet products exploited by PEERSTITCH malware to compromise 500+ firewalls via the FortiOS auto-script engine, deploying a stealth implant. CVE-2026-102764 is an authentication bypass in BeyondTrust Remote Support enabling initial access, privilege escalation and lateral movement.",
-          "image": "https://content.etilize.com/900/1060514700.jpg",
+          "action": "Self-managed GitLab admins: upgrade to a fixed release immediately and run GitLab's two published detection rules ('Onigmo native worker crash', 'Org mode render error burst') against application logs.",
+          "details": "Fixed branches: 19.5.1, 19.4.3, 19.3.6, 19.2.9, 19.1.9, 19.0.10 and 18.11.13. GitLab.com is already updated; Dedicated customers on the specified internal releases need no action.",
+          "image": "https://rootstackcms.b-cdn.net/sites/default/files/inline-images/gitlab_0.png",
           "severity": "Critical",
-          "summary": "CISA added CVE-2025-61624 (Fortinet path traversal, exploited by PEERSTITCH malware on 500+ firewalls) and CVE-2026-102764 (BeyondTrust Remote Support auth bypass) to the Known Exploited Vulnerabilities catalog.",
-          "title": "CISA adds Fortinet and BeyondTrust flaws to KEV catalog",
-          "url": "https://www.scworld.com/brief/cisa-adds-fortinet-and-beyondtrust-vulnerabilities-to-exploited-list"
+          "summary": "GitLab patched a CVSS 10.0 unauthenticated remote-code-execution flaw (CVE-2026-110264) on Oct 21 — an integer overflow in the Onigmo regex engine affecting CE/EE releases dating back to GitLab 7.0 (2014), putting source code and CI/CD infrastructure at risk.",
+          "title": "GitLab patches CVSS 10.0 RCE (CVE-2026-110264)",
+          "url": "https://www.abijita.com/gitlab-critical-cve-2026-110264/"
         },
         {
-          "action": "Patch PAN-OS immediately if not done; hunt for suspicious VPN sessions and RMM tool installs.",
-          "details": "Unit 42 (reported Oct 20) confirmed Spikey Scorpius (Qilin) and Tarnished Scorpius (INC) exploiting the flaw to establish unauthorized VPN sessions, bypass MFA, then recon with RMM tools and move laterally via RDP/SMB. ReliaQuest independently reported active exploitation by Qilin and Settra.",
-          "image": "https://www.paloaltonetworks.sg/blog/wp-content/uploads/2024/12/XSIAM-1536x775.png",
-          "severity": "Critical",
-          "summary": "Qilin and INC ransomware operators are actively exploiting CVE-2026-0257 (CVSS 7.8, PAN-OS/Prisma Access authentication bypass, patched May 2026) to bypass MFA, establish unauthorized VPN sessions and move laterally.",
-          "title": "Qilin and INC exploiting PAN-OS flaw CVE-2026-0257 to bypass MFA",
-          "url": "https://cybernoz.com/qilin-and-inc-ransomware-groups-exploit-palo-alto-networks-flaw-to-bypass-mfa/"
+          "action": "Apply Cisco release 15SU5; customers on release 14 must migrate to a fixed release. Prioritize internet-exposed Cisco assets in your ASM sweep.",
+          "details": "Vulns found in Cisco's internal testing (including frontier AI models). PSIRT says none are known to be exploited and no workarounds exist; the 22.8-style short KEV-style deadlines don't apply here.",
+          "image": "https://galileosg.com/wp-content/uploads/2025/08/cisco-flaw-z5Nc9S.jpg",
+          "severity": "High",
+          "summary": "Cisco published three October hardening advisories covering 20 CVEs in voice/collaboration products, Expressway and Snort 3 — including two Unified CM CVEs scored 9.8 (CVE-2026-76473 injection, CVE-2026-76474 improper authentication) and a Snort 3 CVE at 9.0.",
+          "title": "Cisco hardens 20 CVEs incl. two 9.8s in Unified CM",
+          "url": "https://thecircuitry.to/article/ciscos-october-hardening-releases-cover-20-cves-including-critical-bugs-in-unifi-mvitsqh7"
         }
       ],
       "title": "Act on Today"
@@ -36,42 +36,51 @@
     {
       "items": [
         {
-          "details": "Asensus Surgical (US medical-device maker, part of KARL STORZ since 2024) has not publicly confirmed the incident. No encryption confirmed; no ransom figure published.",
-          "image": "https://media-proxy.41kg.com/static.webp?url=https%3A%2F%2Fcdn.masto.host%2Fmastodonuno%2Fmedia_attachments%2Ffiles%2F117%2F001%2F975%2F740%2F413%2F916%2Foriginal%2F67a39d1c3b451090.png&static=1",
-          "severity": "High",
-          "summary": "The 'Dark Project' ransomware group listed Asensus Surgical on its leak site on Oct 20, claiming exfiltration of 600 GB / 85,000+ files including employee personal documents, research data and internal records. Unverified — no company confirmation.",
-          "title": "Dark Project claims Asensus Surgical breach (600 GB)",
-          "url": "https://qpulse.quasarcybertech.com/news/7092/dark-project-ransomware-group-exfiltrates-600gb-of-data-from-asensus-surgical"
-        },
-        {
-          "details": "On Oct 7, attackers used stolen credentials to access a cloud-based development environment. No credit cards exposed; no evidence of misuse as of Oct 16. Reported to Japan's Personal Information Protection Commission on Oct 11.",
-          "image": "https://resource.puzzleabc.com/com_nikkei_newspaper.webp",
-          "severity": "Critical",
-          "summary": "Nikkei Inc. (owner of the Financial Times) disclosed its third incident in ~30 days: attackers accessed a cloud development environment, exposing 1.83M records, 150,000 containing PII (names, addresses, emails, phone numbers, DOBs).",
-          "title": "Nikkei discloses third breach in a month — 1.83M records exposed",
-          "url": "https://www.bleepingcomputer.com/news/security/nikkei-discloses-third-data-breach-in-a-month-18m-records-exposed/"
-        },
-        {
-          "details": "Details on ransomware vs. intrusion were not established in reporting seen so far.",
-          "image": "https://www.securityweek.com/wp-content/uploads/2025/08/Auchan.jpg",
-          "severity": "High",
-          "summary": "Ahold Delhaize disclosed a cyberattack on Oct 20 disrupting services across multiple US and European regions. Supply-chain exposure for retail and supplier partners.",
-          "title": "Ahold Delhaize cyberattack disrupts services across US and Europe",
-          "url": "https://newsmon.ai/briefings/cybersecurity/2026-10-21/"
-        },
-        {
-          "details": "No company statement found; monitor for a data-leak publication before treating as confirmed.",
+          "details": "Tracker-tracked discovery 13:52 UTC Oct 21. Estimated attack date Oct 21. Tracker lists Hypertherm Group at ~$650.7M yearly revenue; passwords to the GoFile archives were expected within 24 hours of posting.",
           "image": "https://www.redhotcyber.com/wp-content/uploads/2025/03/image-144.jpg",
-          "severity": "Medium",
-          "summary": "The INC Ransom group listed centralrogers.com (a US organization) as a victim on its leak site on Oct 20. Unverified leak-site claim.",
-          "title": "INC Ransom claims centralrogers.com",
-          "url": "https://www.hookphish.com/blog/ransomware-group-incransom-hits-centralrogers-com/"
+          "severity": "High",
+          "summary": "Ransomware group Helix listed industrial manufacturer Hypertherm Group on its leak site Oct 21, claiming data exfiltration and posting GoFile links to the allegedly stolen data.",
+          "title": "Helix ransomware claims Hypertherm Group",
+          "url": "https://qpulse.quasarcybertech.com/news/7131/helix-ransomware-group-claims-data-exfiltration-from-hypertherm-group"
+        },
+        {
+          "details": "Lindauer Dornier manufactures textile machinery, composites equipment, plastics film lines and paper-machine components. No entry vector or encryption details disclosed; company systems' status unconfirmed.",
+          "image": "https://www.redhotcyber.com/wp-content/uploads/2025/03/image-144.jpg",
+          "severity": "High",
+          "summary": "Everest ransomware group publicly claimed German mechanical-engineering firm Lindauer Dornier on Oct 21, per Ransomware.live tracking (claim discovered 13:28 UTC).",
+          "title": "Everest ransomware claims Lindauer Dornier (Germany)",
+          "url": "https://qpulse.quasarcybertech.com/news/7132/everest-ransomware-group-claims-attack-on-lindauer-dornier"
+        },
+        {
+          "details": "Houston-based business law firm serving energy and corporate clients. SilentRansomGroup is an extortion-style group known for exfiltration without deploying encryptors.",
+          "image": "https://www.redhotcyber.com/wp-content/uploads/2025/03/image-144.jpg",
+          "severity": "High",
+          "summary": "SilentRansomGroup claimed Porter Hedges LLP, a Houston law firm, on Oct 21 — a high-risk target for sensitive client data exfiltration even absent encryption.",
+          "title": "SilentRansomGroup claims Houston law firm Porter Hedges",
+          "url": "https://www.hookphish.com/blog/ransomware-group-silentransomgroup-hits-porter-hedges-llp/"
+        },
+        {
+          "details": "Claim discovered Oct 21. Report describes a corporate identity directory: 999 personnel accounts with names and corporate email addresses, client secondment staffing structure, and third-party vendor accounts.",
+          "image": "https://www.redhotcyber.com/wp-content/uploads/2025/03/image-144.jpg",
+          "severity": "High",
+          "summary": "N0n ransomware claimed Hanjin Information Systems & Telecommunication (South Korea) on Oct 21, advertising exposed personnel directories — prime material for downstream social-engineering.",
+          "title": "N0n ransomware claims Hanjin Information Systems (SK)",
+          "url": "https://www.hookphish.com/blog/ransomware-group-n0n-hits-hanjin-information-systems-and-telecommunication-co-ltd/"
         }
       ],
       "title": "Breaches & Ransomware"
     },
     {
       "items": [
+        {
+          "action": "If you hold an SBI account, treat unexpected calls/messages referencing loan or KYC details as phishing until proven otherwise.",
+          "details": "First alerted Oct 16 by its threat-intelligence vendor, the Defence Cyber Agency and CERT-In. Shares slipped 0.88% to ₹963.90 on the news; the bank says core operations are unaffected.",
+          "image": "https://imgc.ap7am.com/bimg/cr-202605226a10718139a2c.jpg",
+          "severity": "Critical",
+          "summary": "SBI told stock exchanges on Oct 21 that preliminary analysis of ~375,000 dark-web records identified 3,897 customer records with PII (names, mobile numbers, DOB, emails, addresses, CIF/lead IDs, loan metadata). An independent CERT-In-empanelled agency is now investigating.",
+          "title": "SBI confirms cyberattack: 3,897 customer records on dark web",
+          "url": "https://cfo.economictimes.indiatimes.com/news/governance-risk-compliance/sbi-investigates-dark-web-leak-of-3-8-lakh-records/135105410"
+        },
         {
           "action": "Treat any SBI-related loan/account data as potentially circulating; watch for targeted phishing and fraudulent loan applications using KYC documents.",
           "details": "This follows an earlier claim flagged Oct 16 by OSINT account CyberPulse56 of a threat actor 'Siriusim' claiming ~375,000 CSV rows + 2,722 PDFs allegedly linked to SBI — authenticity unverified and a separate, unconfirmed claim.",
@@ -93,6 +102,5 @@
       "title": "India"
     }
   ],
-  "subtitle": "Wednesday, October 21 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
