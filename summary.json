@@ -2,30 +2,30 @@
   "date": "2026-10-22",
   "news_count": 10,
   "cve_count": 5,
-  "worst_cvss": 10.0,
+  "worst_cvss": 9.8,
   "priorities": [
     {
-      "id": "CVE-2026-87337",
-      "cvss": 10.0,
-      "summary": "Unauthenticated network attacker can compromise Oracle Access Manager's Authentication Engine via HTTP; scope-change allows full read/write/delete of critical data. Versions 12.2.1.4.0 and 14.1.2.1.0 affected; patch in Oracle's October 2026 CPU.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87337"
+      "id": "CVE-2026-76473",
+      "cvss": 9.8,
+      "summary": "Injection-class vulnerability (CWE-74) in Cisco's Unified Communications family — Emergency Responder, Unified CM, Unity Connection and others — network-reachable without authentication. Part of Cisco's October 21 hardening release; fixed in 15SU5, no workarounds.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76473"
     },
     {
-      "id": "CVE-2026-101767",
+      "id": "CVE-2026-76474",
       "cvss": 9.8,
-      "summary": "Easily exploitable unauthenticated HTTP vulnerability in Oracle E-Business Suite's Application Object Library (AppsTCFServer servlet) resulting in full takeover of the component. Versions 12.2.3–12.2.15 affected; patch in Oracle's October 2026 CPU.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101767"
+      "summary": "Improper-authentication vulnerability (CWE-287) across Cisco's Unified Communications products, exploitable remotely without credentials. Disclosed in Cisco's October 21 security hardening release alongside 7 other grouped CVEs; fixed in 15SU5, no workarounds.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76474"
     },
     {
-      "id": "CVE-2026-111862",
-      "cvss": 9.8,
-      "summary": "A subset of Rank Math SEO PRO 3.0.123 packages downloaded Oct 15–16 shipped with embedded malware: self-restoring PHP backdoors, rogue admin accounts, and credential theft via an external C2. Sites that activated affected packages must treat themselves as compromised; 3.0.124 is the clean replacement.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111862"
+      "id": "CVE-2026-76475",
+      "cvss": 9.3,
+      "summary": "Cross-site scripting vulnerability class (CWE-79) in Cisco Unified Communications products scoring 9.3. Found by Cisco's internal testing (aided by frontier AI models) and patched in the October 21 hardening release; fixed in 15SU5, no workarounds.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76475"
     }
   ],
   "model": {
-    "name": "MiniMax M3.1 Flash",
-    "summary": "MiniMax's 428B-parameter MoE text model (23B active) with 1M-token context and always-on reasoning across five effort levels, delivering ~3x faster inference and ~70% lower agentic-task costs than M3 at flat $0.15/$0.60 per million tokens; the anonymous \"Space Bunny\" checkpoint was an early build, and open weights are promised Oct 23.",
-    "url": "https://www.minimax.io/blog/minimax-m31f"
+    "name": "Claude Duet",
+    "summary": "Anthropic's new standalone proactive AI agent, built on Opus 5.5, that monitors connected apps, sends a morning brief, and completes tasks in its own cloud VM — its answer to Meta's Muse and OpenAI's Dots. Available as a waitlisted research preview for US Pro/Max subscribers on iOS, Android and claude.ai.",
+    "url": "https://www.reuters.com/technology/anthropic-unveils-claude-duet-ai-agent-app-2026-10-21/"
   }
 }

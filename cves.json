@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-21",
+  "date": "2026-10-22",
   "items": [
     {
-      "cvss": 10.0,
-      "id": "CVE-2026-87337",
+      "cvss": 9.8,
+      "id": "CVE-2026-76473",
       "severity": "Critical",
-      "summary": "Unauthenticated network attacker can compromise Oracle Access Manager's Authentication Engine via HTTP; scope-change allows full read/write/delete of critical data. Versions 12.2.1.4.0 and 14.1.2.1.0 affected; patch in Oracle's October 2026 CPU.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87337"
+      "summary": "Injection-class vulnerability (CWE-74) in Cisco's Unified Communications family — Emergency Responder, Unified CM, Unity Connection and others — network-reachable without authentication. Part of Cisco's October 21 hardening release; fixed in 15SU5, no workarounds.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76473"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-101767",
+      "id": "CVE-2026-76474",
       "severity": "Critical",
-      "summary": "Easily exploitable unauthenticated HTTP vulnerability in Oracle E-Business Suite's Application Object Library (AppsTCFServer servlet) resulting in full takeover of the component. Versions 12.2.3–12.2.15 affected; patch in Oracle's October 2026 CPU.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101767"
-    },
-    {
-      "cvss": 9.8,
-      "id": "CVE-2026-111862",
-      "severity": "Critical",
-      "summary": "A subset of Rank Math SEO PRO 3.0.123 packages downloaded Oct 15–16 shipped with embedded malware: self-restoring PHP backdoors, rogue admin accounts, and credential theft via an external C2. Sites that activated affected packages must treat themselves as compromised; 3.0.124 is the clean replacement.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111862"
+      "summary": "Improper-authentication vulnerability (CWE-287) across Cisco's Unified Communications products, exploitable remotely without credentials. Disclosed in Cisco's October 21 security hardening release alongside 7 other grouped CVEs; fixed in 15SU5, no workarounds.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76474"
     },
     {
       "cvss": 9.3,
-      "id": "CVE-2026-113703",
+      "id": "CVE-2026-76475",
       "severity": "Critical",
-      "summary": "In SuggestArr's local_bypass auth mode before 3.0.0, authentication trusts the spoofable X-Forwarded-For header — sending X-Forwarded-For: 127.0.0.1 grants unauthenticated admin sessions and full access to endpoints like /api/users and /api/jobs.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113703"
+      "summary": "Cross-site scripting vulnerability class (CWE-79) in Cisco Unified Communications products scoring 9.3. Found by Cisco's internal testing (aided by frontier AI models) and patched in the October 21 hardening release; fixed in 15SU5, no workarounds.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76475"
     },
     {
-      "cvss": 9.1,
-      "id": "CVE-2026-101296",
+      "cvss": 9.2,
+      "id": "CVE-2026-109618",
       "severity": "Critical",
-      "summary": "A missing critical step in Apache Tomcat's JNDIRealm authentication lets attackers log in without the correct password when a non-GSSAPI SASL mechanism is configured. Affects 11.0.0-M1–11.0.26, 10.1.0-M1–10.1.60, 9.0.0.M1–9.0.122; fixed in 11.0.27 / 10.1.61 / 9.0.123.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101296"
+      "summary": "One of the two 'PHP2Shell' critical flaws: remote code execution via out-of-memory corruption in the PHP runtime itself (session upload progress handler), reachable on arbitrary endpoints before app code runs. Fixed Oct 21 in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35; 8.1 and older get no official patch.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618"
+    },
+    {
+      "cvss": 9.2,
+      "id": "CVE-2026-109619",
+      "severity": "Critical",
+      "summary": "The second 'PHP2Shell' critical flaw: remote code execution via stale global state after a fatal error, affecting PHP-FPM and mod_php alike, with a public PoC already circulating. Emergency Oct 21 releases fix it on supported branches; set session.upload_progress.enabled=0 as a partial mitigation if you can't patch yet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109619"
     }
   ]
 }

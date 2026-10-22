@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-21",
+  "date": "2026-10-22",
   "items": [
     {
-      "image": "https://filecdn.minimax.chat/public/m31-flash-en-2-1792403273121-webp-1.m31-flash-en-2-1792403273121-webp",
-      "name": "MiniMax M3.1 Flash",
-      "summary": "MiniMax's 428B-parameter MoE text model (23B active) with 1M-token context and always-on reasoning across five effort levels, delivering ~3x faster inference and ~70% lower agentic-task costs than M3 at flat $0.15/$0.60 per million tokens; the anonymous \"Space Bunny\" checkpoint was an early build, and open weights are promised Oct 23.",
-      "url": "https://www.minimax.io/blog/minimax-m31f"
+      "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+      "name": "Claude Duet",
+      "summary": "Anthropic's new standalone proactive AI agent, built on Opus 5.5, that monitors connected apps, sends a morning brief, and completes tasks in its own cloud VM — its answer to Meta's Muse and OpenAI's Dots. Available as a waitlisted research preview for US Pro/Max subscribers on iOS, Android and claude.ai.",
+      "url": "https://www.reuters.com/technology/anthropic-unveils-claude-duet-ai-agent-app-2026-10-21/"
     },
     {
-      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/deepseek-ai/DeepSeek-V4.1-Flash-1017.png",
-      "name": "DeepSeek-V4.1-Flash-1017",
-      "summary": "An updated MIT-licensed checkpoint of DeepSeek's open-weight multimodal MoE Flash model, described as a Pareto improvement in performance and cost — gains on all 11 reported benchmarks — served under the existing deepseek-flash API name alongside new Search and Fetch APIs for agents.",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      "image": "https://framerusercontent.com/images/uPJ2g2tfhMjyq8tvyzpakcfg.png",
+      "name": "Flint (Recursive)",
+      "summary": "The first released model from Richard Socher's Recursive lab, a step toward 'recursively self-improving superintelligence' built with its AI-driven Eureka Machine research loop. A local-first model that hits ~150 tokens/sec on personal hardware like Apple silicon Macs and the RTX Spark laptop.",
+      "url": "https://fourweekmba.com/ai-650m-backed-recursive-says-ai-helped-build-its-first-model/"
     },
     {
-      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/10/SECOND-Artificial-Analysis-Index-960x408.png",
-      "name": "NVIDIA Nemotron 3.5 (Super VL + Bolt)",
-      "summary": "NVIDIA's three new open models purpose-built for always-on AI agents: Nemotron 3.5 Super VL, an open 120B-parameter (12B active) multimodal MoE model claiming frontier-class agentic accuracy at one-fifth the parameter count of NVIDIA's largest reasoning model, plus two Bolt edge models for data center to desktop.",
-      "url": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/"
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/653fb52cbfd890805461d691/M_JJyIOBOWVzHXdy7CVVG.png",
+      "name": "Granite Speech 5.0",
+      "summary": "IBM's refreshed open-weight speech AI family (Apache 2.0): a new 2B model for high-accuracy transcription and translation, an updated ultra-fast 470M TurboCTC for on-device use, and updated weights for multi-speaker recordings with speaker attribution — all with native Transformers support.",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5"
     },
     {
-      "image": "https://research.meta.ai/articles/introducing-muse-wonder/social/muse-wonder-social-v1.webp",
-      "name": "Meta Muse Wonder & Muse Wonder Full",
-      "summary": "Meta Superintelligence Labs' first frontier-class models, built around \"Active Memory\" (long-horizon user context) and \"Active Focus\" (persistent goal pursuit) for personal and professional agents; Wonder is on the Meta Model API at $4/$20 per million tokens while the stronger Wonder Full is Muse Code-subscription-only, and neither ships open weights — a notable shift from Llama.",
-      "url": "https://research.meta.ai/blog/muse-wonder"
+      "image": "https://www.nuix.com/themes/custom/bootstrap5/assets/images/nuix-2026-logo.png",
+      "name": "Nuix Neo AI Agent",
+      "summary": "An agentic AI layer for Nuix Neo's investigative analytics platform that answers plain-language questions, links every answer to its source, and records its full reasoning steps with a built-in audit trail — designed to be defensible in court for legal, regulatory and law-enforcement matters.",
+      "url": "https://www.nuix.com/news/nuix-launches-agentic-ai-nuix-neo-audit-trail-built"
     },
     {
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5AKCESJ3FJ73690V4KK3A8H.jpg",
-      "name": "Cloudflare Clairic",
-      "summary": "Cloudflare's first \"System One\" extraction model, live in preview on Workers AI — instead of generating text it returns typed values (numbers, dates, lists, forecasts) from unstructured text and images in a single forward pass with zero output tokens at $0.10 per million input tokens, with open weights promised.",
-      "url": "https://blog.cloudflare.com/clairic-extraction-model/"
+      "image": "https://mmx.prnewswire.com/media/MS1834754/Logo-Text-Padding-Transparent-C1-Logo.jpg?id=OA3027129&p=facebook",
+      "name": "FLUX 3 Max",
+      "summary": "fal Research and Black Forest Labs' post-trained video model that renders a 10-second clip in ~12 seconds — about 22x faster than Seedance 2.5 at the same quality tier — launched at $0.0425/sec (75% off through November 7) exclusively through fal's API.",
+      "url": "https://www.prnewswire.com/news-releases/fal-launches-flux-3-max-delivering-1-tier-image-to-video-quality-at-industry-leading-speeds-302913033.html"
     }
   ]
 }
