@@ -1,34 +1,25 @@
 {
-  "date": "2026-10-22",
+  "date": "2026-10-23",
   "sections": [
     {
       "items": [
         {
-          "action": "Patch the PHP runtime itself (WordPress/plugin updates will NOT fix this). Interim: limit request sizes at the web server and set session.upload_progress.enabled=0; CERT-EU advises isolating internet-facing apps that cannot be patched immediately.",
-          "details": "Discovered via AI-assisted research by Wiz (with Calif.io, OpenAI and Quarkslab). Details leaked before the coordinated release, and Cloudflare observed live attack traffic mutating payloads around WAF rules. FBI Cyber Division, NSA, CERT-EU, UK NCSC and multiple European ministries issued advisories; government and gaming portals (incl. Pokemon/Cygames) went offline preemptively.",
-          "image": "https://data.windowsforum.com/attachments/88/88627-ac131c6c2a3b7c43d28523bc920cab36.jpg?hash=XXjR4gt23f",
+          "action": "Upgrade PHP immediately on all internet-facing servers; no WAF or app-level fix removes the engine flaw. If patching is delayed, NSA/NCSC guidance is to take affected systems offline and investigate for prior compromise.",
+          "details": "Flaws affect all PHP versions from 5.4 onward; unauthenticated attackers can achieve remote code execution. Cloudflare's CEO said the network has seen millions of exploitation attempts in the past two days. Discovered by Wiz, OpenAI's Patch the Planet and Calif; AI assistance was key to turning a complex memory-safety bug chain into a working exploit.",
+          "image": "https://appsecsanta.com/images/tools/pt-application-inspector/jetbrains-vulnerability-panel-800w.webp",
           "severity": "Critical",
-          "summary": "Two unauthenticated remote-code-execution flaws in PHP core (CVE-2026-109618, CVE-2026-109619), dubbed PHP2Shell, carry CVSS 4.0 9.2. Emergency patches released Oct 21: PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35; all web-serving setups (FPM, mod_php, php-cgi, FrankenPHP, LiteSpeed) are at risk.",
-          "title": "'PHP2Shell': critical PHP RCE (CVE-2026-109618/109619) — patch runtime now",
-          "url": "https://www.webpronews.com/php2shell-php-remote-code-execution-vulnerabilities-patch/"
+          "summary": "Emergency patches released Oct 21 for two decade-old critical PHP flaws (CVE-2026-109618, CVE-2026-109619, CVSS 9.2), dubbed PHP2Shell, affecting up to 70% of the web's server-side language footprint. Wikipedia and the Internet Archive briefly went offline to patch.",
+          "title": "PHP2Shell: critical RCE flaws hit PHP — emergency patching underway",
+          "url": "https://www.cnn.com/2026/10/21/tech/php2shell-vulnerability-ai-intl?cid=external-feeds_iluminar_meta"
         },
         {
-          "action": "Self-managed GitLab admins: upgrade to a fixed release immediately and run GitLab's two published detection rules ('Onigmo native worker crash', 'Org mode render error burst') against application logs.",
-          "details": "Fixed branches: 19.5.1, 19.4.3, 19.3.6, 19.2.9, 19.1.9, 19.0.10 and 18.11.13. GitLab.com is already updated; Dedicated customers on the specified internal releases need no action.",
-          "image": "https://rootstackcms.b-cdn.net/sites/default/files/inline-images/gitlab_0.png",
+          "action": "Rotate every environment variable and private registry credential, generate new Railway API/project tokens, reconnect GitHub, redeploy services using storage buckets, and scan usage for AI API keys (OpenAI, Anthropic, Grok, OpenRouter), Stripe, AWS, GCP and GitHub.",
+          "details": "Detection Oct 21; Railway invalidated all API tokens Oct 22 (pre-incident tokens remain dead) and reset every storage-bucket credential plus the GitHub tokens it held. External analysis linked suspected credential abuse to ~$371K in crypto drains across 19 chains — not yet confirmed by Railway. Railway believes this fits a broader pattern of attacks on platform companies targeting AI-inference provider keys.",
+          "image": "https://cybeready.com/wp-content/uploads/shutterstock_1314468308-595xh.webp",
           "severity": "Critical",
-          "summary": "GitLab patched a CVSS 10.0 unauthenticated remote-code-execution flaw (CVE-2026-110264) on Oct 21 — an integer overflow in the Onigmo regex engine affecting CE/EE releases dating back to GitLab 7.0 (2014), putting source code and CI/CD infrastructure at risk.",
-          "title": "GitLab patches CVSS 10.0 RCE (CVE-2026-110264)",
-          "url": "https://www.abijita.com/gitlab-critical-cve-2026-110264/"
-        },
-        {
-          "action": "Apply Cisco release 15SU5; customers on release 14 must migrate to a fixed release. Prioritize internet-exposed Cisco assets in your ASM sweep.",
-          "details": "Vulns found in Cisco's internal testing (including frontier AI models). PSIRT says none are known to be exploited and no workarounds exist; the 22.8-style short KEV-style deadlines don't apply here.",
-          "image": "https://galileosg.com/wp-content/uploads/2025/08/cisco-flaw-z5Nc9S.jpg",
-          "severity": "High",
-          "summary": "Cisco published three October hardening advisories covering 20 CVEs in voice/collaboration products, Expressway and Snort 3 — including two Unified CM CVEs scored 9.8 (CVE-2026-76473 injection, CVE-2026-76474 improper authentication) and a Snort 3 CVE at 9.0.",
-          "title": "Cisco hardens 20 CVEs incl. two 9.8s in Unified CM",
-          "url": "https://thecircuitry.to/article/ciscos-october-hardening-releases-cover-20-cves-including-critical-bugs-in-unifi-mvitsqh7"
+          "summary": "Cloud platform Railway disclosed Oct 21 that a third party may have accessed encrypted environment variables and obtained decrypted contents for some. Customers are told to roll all secrets; deployments were paused and are being restored in stages.",
+          "title": "Railway discloses security incident; customers must rotate all secrets",
+          "url": "https://blog.railway.com/p/security-disclosure-recommendation-redeploy-buckets-and-reconnect-github-after-the-credential-reset"
         }
       ],
       "title": "Act on Today"
@@ -36,36 +27,31 @@
     {
       "items": [
         {
-          "details": "Tracker-tracked discovery 13:52 UTC Oct 21. Estimated attack date Oct 21. Tracker lists Hypertherm Group at ~$650.7M yearly revenue; passwords to the GoFile archives were expected within 24 hours of posting.",
-          "image": "https://www.redhotcyber.com/wp-content/uploads/2025/03/image-144.jpg",
+          "action": "If Quest or your provider notifies you that your records were affected, follow its official protective guidance; watch for phishing using lab-result lures.",
+          "details": "Quest notified federal law enforcement and engaged external cybersecurity experts. Scope (patient count, data categories, attacker identity, entry method) remains under investigation; no ransomware/extortion attribution established. Disclosure filed under 8-K Item 8.01 (incident not yet judged material).",
+          "image": "https://thewellnews.com/wp-content/uploads/2020/07/QUEST-DIAGNOSTICS2.jpg",
           "severity": "High",
-          "summary": "Ransomware group Helix listed industrial manufacturer Hypertherm Group on its leak site Oct 21, claiming data exfiltration and posting GoFile links to the allegedly stolen data.",
-          "title": "Helix ransomware claims Hypertherm Group",
-          "url": "https://qpulse.quasarcybertech.com/news/7131/helix-ransomware-group-claims-data-exfiltration-from-hypertherm-group"
+          "summary": "Quest Diagnostics filed an SEC 8-K on Oct 22: on Oct 21 it learned an unauthorized party had accessed its Quanum LSM portal (used by clients to place test orders and look up results) and believes certain patient records were accessed. Operations not materially disrupted.",
+          "title": "Quest Diagnostics discloses unauthorized access to patient records portal",
+          "url": "https://kalkine.com/news/announcements/quest-diagnostics-discloses-quanum-lsm-unauthorized-access"
         },
         {
-          "details": "Lindauer Dornier manufactures textile machinery, composites equipment, plastics film lines and paper-machine components. No entry vector or encryption details disclosed; company systems' status unconfirmed.",
-          "image": "https://www.redhotcyber.com/wp-content/uploads/2025/03/image-144.jpg",
-          "severity": "High",
-          "summary": "Everest ransomware group publicly claimed German mechanical-engineering firm Lindauer Dornier on Oct 21, per Ransomware.live tracking (claim discovered 13:28 UTC).",
-          "title": "Everest ransomware claims Lindauer Dornier (Germany)",
-          "url": "https://qpulse.quasarcybertech.com/news/7132/everest-ransomware-group-claims-attack-on-lindauer-dornier"
+          "action": "Treat leak-site claims as a verification trigger, not proof: check privileged access, auth logs, backups, and confirm no ransom contact before engaging.",
+          "details": "Reportedly the Mimori entry names AVEVA, cites 177,234 files and a publication date of Oct 23, 2026. Nothing in the public record independently confirms intrusion, data theft, or a ransom demand. Leak-site listings are often extortion pressure first and evidence second.",
+          "image": "https://hacked.com/_next/image?url=%2Farticles%2Fbusiness-attacked-with-ransomware%2Ffeatured.jpg&w=828&q=75&dpl=dpl_FWoubQkG9on77gQDbhufjdDRvveR",
+          "severity": "Medium",
+          "summary": "A leak-site listing attributed to Mimori names industrial-software firm AVEVA, citing ~177K files with a publication date of Oct 23 — unverified, no breach or data theft confirmed.",
+          "title": "Mimori leak-site listing names AVEVA; claim unverified",
+          "url": "https://netcrook.com/written_article?slug=aveva-ransomware-listing-unverified-claim&lang=en"
         },
         {
-          "details": "Houston-based business law firm serving energy and corporate clients. SilentRansomGroup is an extortion-style group known for exfiltration without deploying encryptors.",
-          "image": "https://www.redhotcyber.com/wp-content/uploads/2025/03/image-144.jpg",
-          "severity": "High",
-          "summary": "SilentRansomGroup claimed Porter Hedges LLP, a Houston law firm, on Oct 21 — a high-risk target for sensitive client data exfiltration even absent encryption.",
-          "title": "SilentRansomGroup claims Houston law firm Porter Hedges",
-          "url": "https://www.hookphish.com/blog/ransomware-group-silentransomgroup-hits-porter-hedges-llp/"
-        },
-        {
-          "details": "Claim discovered Oct 21. Report describes a corporate identity directory: 999 personnel accounts with names and corporate email addresses, client secondment staffing structure, and third-party vendor accounts.",
-          "image": "https://www.redhotcyber.com/wp-content/uploads/2025/03/image-144.jpg",
-          "severity": "High",
-          "summary": "N0n ransomware claimed Hanjin Information Systems & Telecommunication (South Korea) on Oct 21, advertising exposed personnel directories — prime material for downstream social-engineering.",
-          "title": "N0n ransomware claims Hanjin Information Systems (SK)",
-          "url": "https://www.hookphish.com/blog/ransomware-group-n0n-hits-hanjin-information-systems-and-telecommunication-co-ltd/"
+          "action": "If this is your vendor or appears in your threat feeds, treat as unverified until confirmed; monitor the group's leak page for any data publication.",
+          "details": "HookPhish's incident record lists target istanbultrading.com (TR, retail & e-commerce), threat group lockbit5, discovered 2026-10-22. LockBit's previous operation was dismantled in 2024; successor branding continues under new versions.",
+          "image": "https://boletimsec.com/wp-content/uploads/2025/01/ransomhub-ataques-min-1024x576.png",
+          "severity": "Medium",
+          "summary": "LockBit5 named istanbultrading.com on its leak feed on Oct 22, claiming a ransomware incident — a threat-feed claim, not a confirmed breach.",
+          "title": "LockBit5 claims istanbultrading.com ransomware hit",
+          "url": "https://www.hookphish.com/blog/ransomware-group-lockbit5-hits-istanbultrading-com/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -73,13 +59,13 @@
     {
       "items": [
         {
-          "action": "If you hold an SBI account, treat unexpected calls/messages referencing loan or KYC details as phishing until proven otherwise.",
-          "details": "First alerted Oct 16 by its threat-intelligence vendor, the Defence Cyber Agency and CERT-In. Shares slipped 0.88% to ₹963.90 on the news; the bank says core operations are unaffected.",
-          "image": "https://imgc.ap7am.com/bimg/cr-202605226a10718139a2c.jpg",
+          "action": "Update browsers and operating systems so the new distrust rules reach every device; find and replace any certificates chaining to the affected eMudhra roots, and never bypass certificate warnings.",
+          "details": "The P-384 private keys were tiny single-byte values (4, 56, 66, 115, 155, 156, 230, 237), recoverable in under a second — a 2025 key-ceremony script bug is blamed. Google/Mozilla blocked the affected TLS intermediates Oct 17; Apple blocked Oct 19, Microsoft Oct 20; eMudhra revoked all eight intermediates Oct 18. ~30,000 certificates need migration. CERT-In advisory CIAD-2026-0050 (Oct 21). eMudhra says its Indian DSC/eSign services run on separate systems and its infrastructure was not breached.",
+          "image": "https://g-cdn.dline-media.com/images/legal/ssl/what-is-ssl.avif",
           "severity": "Critical",
-          "summary": "SBI told stock exchanges on Oct 21 that preliminary analysis of ~375,000 dark-web records identified 3,897 customer records with PII (names, mobile numbers, DOB, emails, addresses, CIF/lead IDs, loan metadata). An independent CERT-In-empanelled agency is now investigating.",
-          "title": "SBI confirms cyberattack: 3,897 customer records on dark web",
-          "url": "https://cfo.economictimes.indiatimes.com/news/governance-risk-compliance/sbi-investigates-dark-web-leak-of-3-8-lakh-records/135105410"
+          "summary": "Bengaluru CA eMudhra is exiting the global SSL/TLS business after researchers recovered eight intermediate private keys generated with almost no randomness. Google, Mozilla, Apple and Microsoft distrusted the certificates; the stock crashed ~20% and the government called a high-level review on Oct 23.",
+          "title": "eMudhra exits global SSL business after private-key blunder; govt probe ordered",
+          "url": "https://www.businesstoday.in/technology/story/emudhra-php-security-scare-govt-to-hold-high-level-review-audit-to-assess-potential-damage-563183-2026-10-23"
         },
         {
           "action": "Treat any SBI-related loan/account data as potentially circulating; watch for targeted phishing and fraudulent loan applications using KYC documents.",
@@ -102,5 +88,6 @@
       "title": "India"
     }
   ],
+  "subtitle": "Friday, October 23 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
