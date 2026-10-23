@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-22",
+  "date": "2026-10-23",
   "items": [
     {
-      "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
-      "name": "Claude Duet",
-      "summary": "Anthropic's new standalone proactive AI agent, built on Opus 5.5, that monitors connected apps, sends a morning brief, and completes tasks in its own cloud VM — its answer to Meta's Muse and OpenAI's Dots. Available as a waitlisted research preview for US Pro/Max subscribers on iOS, Android and claude.ai.",
-      "url": "https://www.reuters.com/technology/anthropic-unveils-claude-duet-ai-agent-app-2026-10-21/"
+      "image": "https://imgs.etvbharat.com/etvbharat/prod-images/22-10-2026/1200-675-27930435-thumbnail-16x9-eclau.jpg",
+      "name": "Anthropic Claude Duet",
+      "summary": "Anthropic launched Claude Duet, a proactive personal AI agent powered by Claude Opus 5.5, as a waitlisted research preview for US Pro and Max subscribers on iOS, Android, and claude.ai. It runs on its own cloud computer with 6,000+ Marketplace connectors, sends daily briefings, and keeps working while devices are off — Anthropic's direct answer to Meta's Muse and OpenAI's Dots.",
+      "url": "https://www.etvbharat.com/en/technology/claude-duet-anthropic-announces-personal-ai-agent-to-compete-with-metas-muse-and-openais-dots-enn26102203220"
     },
     {
-      "image": "https://framerusercontent.com/images/uPJ2g2tfhMjyq8tvyzpakcfg.png",
-      "name": "Flint (Recursive)",
-      "summary": "The first released model from Richard Socher's Recursive lab, a step toward 'recursively self-improving superintelligence' built with its AI-driven Eureka Machine research loop. A local-first model that hits ~150 tokens/sec on personal hardware like Apple silicon Macs and the RTX Spark laptop.",
-      "url": "https://fourweekmba.com/ai-650m-backed-recursive-says-ai-helped-build-its-first-model/"
+      "image": "https://hitechexpert.top/wp-content/uploads/2026/10/news_cover-475-696x412.jpg",
+      "name": "iFlytek Spark X2.6",
+      "summary": "iFlytek unveiled Spark X2.6 at its Global 1024 Developer Festival — a 293B-parameter MoE (A30B) model with 1M-token context, claimed as a breakthrough in code and agent capabilities trained entirely on domestic Chinese computing hardware. It also open-sourced the Spark X2.6-4B edge model.",
+      "url": "https://hitechexpert.top/iflytek-unveils-spark-x2-6-a-chinese-leap-in-large-language-models-built-on-domestic-power/"
     },
     {
-      "image": "https://cdn-uploads.huggingface.co/production/uploads/653fb52cbfd890805461d691/M_JJyIOBOWVzHXdy7CVVG.png",
-      "name": "Granite Speech 5.0",
-      "summary": "IBM's refreshed open-weight speech AI family (Apache 2.0): a new 2B model for high-accuracy transcription and translation, an updated ultra-fast 470M TurboCTC for on-device use, and updated weights for multi-speaker recordings with speaker attribution — all with native Transformers support.",
-      "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5"
+      "image": "https://poweredbyai.app/_next/image?url=https%3A%2F%2Fteenyfy-assets.s3.us-east-1.amazonaws.com%2Ftemp_recursive_6598f366fa.jpg&w=3840&q=75",
+      "name": "Recursive Flint",
+      "summary": "AI startup Recursive (CEO Richard Socher, ex-Salesforce chief scientist) released Flint, its first model: a free open-weight (Apache 2.0) coding MoE with 40B total / 2.5B active parameters that runs offline on laptops at ~131 tokens/sec on an M4 Pro. It was built from scratch in under four months with Recursive's automated research system handling nearly every step.",
+      "url": "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/"
     },
     {
-      "image": "https://www.nuix.com/themes/custom/bootstrap5/assets/images/nuix-2026-logo.png",
-      "name": "Nuix Neo AI Agent",
-      "summary": "An agentic AI layer for Nuix Neo's investigative analytics platform that answers plain-language questions, links every answer to its source, and records its full reasoning steps with a built-in audit trail — designed to be defensible in court for legal, regulatory and law-enforcement matters.",
-      "url": "https://www.nuix.com/news/nuix-launches-agentic-ai-nuix-neo-audit-trail-built"
+      "image": "https://forkast.news/wp-content/uploads/2026/10/nvidia-kumo-structured-data-rag-1024x687.jpg",
+      "name": "NVIDIA Kumo",
+      "summary": "NVIDIA announced the Kumo family of open-weight foundation models that give AI agents a knowledge layer over structured enterprise data — specialized Tabular, Relational, Time Series, and Forecast models for predictions from databases. Available immediately on Hugging Face and as NVIDIA NIM microservices, with Coinbase among the early users.",
+      "url": "https://forkast.news/nvidia-kumo-open-weight-models-for-reasoning-over-structured-enterprise-data/"
     },
     {
-      "image": "https://mmx.prnewswire.com/media/MS1834754/Logo-Text-Padding-Transparent-C1-Logo.jpg?id=OA3027129&p=facebook",
-      "name": "FLUX 3 Max",
-      "summary": "fal Research and Black Forest Labs' post-trained video model that renders a 10-second clip in ~12 seconds — about 22x faster than Seedance 2.5 at the same quality tier — launched at $0.0425/sec (75% off through November 7) exclusively through fal's API.",
-      "url": "https://www.prnewswire.com/news-releases/fal-launches-flux-3-max-delivering-1-tier-image-to-video-quality-at-industry-leading-speeds-302913033.html"
+      "image": "https://www.datocms-assets.com/64837/1792611867-olmoearth-v1-3-globe.png",
+      "name": "Ai2 OlmoEarth v1.3",
+      "summary": "The Allen Institute for AI released OlmoEarth v1.3, an open satellite-embedding model (ViT-Base) paired with precomputed annual embeddings for the entire planet at 10-meter resolution plus a no-sign-in browser-based Embeddings Explorer, making global land-cover mapping and change detection possible without a GPU.",
+      "url": "https://huggingface.co/blog/allenai/olmoearth-v1-3"
     }
   ]
 }

@@ -2,30 +2,30 @@
   "date": "2026-10-23",
   "news_count": 8,
   "cve_count": 5,
-  "worst_cvss": 9.8,
+  "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-76473",
-      "cvss": 9.8,
-      "summary": "Injection-class vulnerability (CWE-74) in Cisco's Unified Communications family — Emergency Responder, Unified CM, Unity Connection and others — network-reachable without authentication. Part of Cisco's October 21 hardening release; fixed in 15SU5, no workarounds.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76473"
+      "id": "CVE-2026-110264",
+      "cvss": 10.0,
+      "summary": "Integer overflow in GitLab's Onigmo regex compiler (all versions since 7.0) lets an unauthenticated remote user execute arbitrary code on the GitLab server via a specially crafted regular expression. GitLab shipped emergency patches Oct 21, 2026 (18.11.13 / 19.0.10 / 19.1.9 / 19.2.9 / 19.3.6 / 19.4.3 / 19.5.1).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110264"
     },
     {
-      "id": "CVE-2026-76474",
-      "cvss": 9.8,
-      "summary": "Improper-authentication vulnerability (CWE-287) across Cisco's Unified Communications products, exploitable remotely without credentials. Disclosed in Cisco's October 21 security hardening release alongside 7 other grouped CVEs; fixed in 15SU5, no workarounds.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76474"
-    },
-    {
-      "id": "CVE-2026-76475",
+      "id": "CVE-2026-114575",
       "cvss": 9.3,
-      "summary": "Cross-site scripting vulnerability class (CWE-79) in Cisco Unified Communications products scoring 9.3. Found by Cisco's internal testing (aided by frontier AI models) and patched in the October 21 hardening release; fixed in 15SU5, no workarounds.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76475"
+      "summary": "Command injection in the UploadCustomModule function of TOTOLINK A950RG firmware 4.1.2cu.5268_B20221104 via the FileMd5 argument; remotely exploitable with no authentication, and a public exploit has been published.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114575"
+    },
+    {
+      "id": "CVE-2026-109618",
+      "cvss": 9.2,
+      "summary": "PHP's use of longjmp() for out-of-memory errors can leave request memory uninitialized before an allocation; subsequent request cleanup may read it, and multiple OOM strategies can reliably trigger remote code execution ('PHP2Shell'). Affects PHP 8.2–8.5; Cloudflare reported early in-the-wild attack attempts.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618"
     }
   ],
   "model": {
-    "name": "Claude Duet",
-    "summary": "Anthropic's new standalone proactive AI agent, built on Opus 5.5, that monitors connected apps, sends a morning brief, and completes tasks in its own cloud VM — its answer to Meta's Muse and OpenAI's Dots. Available as a waitlisted research preview for US Pro/Max subscribers on iOS, Android and claude.ai.",
-    "url": "https://www.reuters.com/technology/anthropic-unveils-claude-duet-ai-agent-app-2026-10-21/"
+    "name": "Anthropic Claude Duet",
+    "summary": "Anthropic launched Claude Duet, a proactive personal AI agent powered by Claude Opus 5.5, as a waitlisted research preview for US Pro and Max subscribers on iOS, Android, and claude.ai. It runs on its own cloud computer with 6,000+ Marketplace connectors, sends daily briefings, and keeps working while devices are off — Anthropic's direct answer to Meta's Muse and OpenAI's Dots.",
+    "url": "https://www.etvbharat.com/en/technology/claude-duet-anthropic-announces-personal-ai-agent-to-compete-with-metas-muse-and-openais-dots-enn26102203220"
   }
 }
