@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "items": [
     {
       "cvss": 10.0,
-      "id": "CVE-2026-110264",
-      "severity": "Critical",
-      "summary": "Integer overflow in GitLab's Onigmo regex compiler (all versions since 7.0) lets an unauthenticated remote user execute arbitrary code on the GitLab server via a specially crafted regular expression. GitLab shipped emergency patches Oct 21, 2026 (18.11.13 / 19.0.10 / 19.1.9 / 19.2.9 / 19.3.6 / 19.4.3 / 19.5.1).",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110264"
-    },
-    {
-      "cvss": 9.3,
       "id": "CVE-2026-114575",
       "severity": "Critical",
-      "summary": "Command injection in the UploadCustomModule function of TOTOLINK A950RG firmware 4.1.2cu.5268_B20221104 via the FileMd5 argument; remotely exploitable with no authentication, and a public exploit has been published.",
+      "summary": "Command injection in TOTOLINK A950RG (lib/cste_modules/product.so UploadCustomModule) via a manipulated FileMd5 argument; remotely exploitable with a published public exploit.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114575"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-76466",
+      "severity": "Critical",
+      "summary": "Unauthenticated remote code execution as root in Cisco Expressway Series via persistent cookie manipulation and insufficient certificate validation; network-accessible, no credentials needed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76466"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-76473",
+      "severity": "Critical",
+      "summary": "Critical authentication bypass in Cisco Unified Communications products, one of three Cisco UC auth-bypass flaws patched Oct 23; patch before exposure.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76473"
     },
     {
       "cvss": 9.2,
       "id": "CVE-2026-109618",
       "severity": "Critical",
-      "summary": "PHP's use of longjmp() for out-of-memory errors can leave request memory uninitialized before an allocation; subsequent request cleanup may read it, and multiple OOM strategies can reliably trigger remote code execution ('PHP2Shell'). Affects PHP 8.2–8.5; Cloudflare reported early in-the-wild attack attempts.",
+      "summary": "'PHP2Shell': unauthenticated remote code execution in the PHP engine itself via crafted HTTP requests, code present since PHP 5.4 (2012); Cloudflare saw millions of exploit attempts within a day of disclosure.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618"
     },
     {
-      "cvss": 9.0,
-      "id": "CVE-2026-20043",
+      "cvss": 9.2,
+      "id": "CVE-2026-109619",
       "severity": "Critical",
-      "summary": "Grouped out-of-bounds write vulnerabilities found in Cisco's internal Snort 3 security review; most let an unauthenticated remote attacker crash or restart the Snort 3 detection engine. Also affects Secure Firewall Threat Defense, Cisco Cyber Vision, and UTD SNORT IPS Engine.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20043"
-    },
-    {
-      "cvss": 9.0,
-      "id": "CVE-2026-114661",
-      "severity": "Critical",
-      "summary": "Missing authorization in OpenRemote's GatewayServiceResource (1.2.0 through <1.31.0) lets any authenticated non-admin user start, stop, and query gateway tunnels, opening persistent bidirectional TCP circuits into an edge gateway's network.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114661"
+      "summary": "Second 'PHP2Shell' critical flaw in PHP (companion to CVE-2026-109618), also CVSS 9.2; 34M+ PHP services still unpatched per Censys — patch every PHP web stack immediately.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109619"
     }
   ]
 }

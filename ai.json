@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "items": [
     {
-      "image": "https://imgs.etvbharat.com/etvbharat/prod-images/22-10-2026/1200-675-27930435-thumbnail-16x9-eclau.jpg",
-      "name": "Anthropic Claude Duet",
-      "summary": "Anthropic launched Claude Duet, a proactive personal AI agent powered by Claude Opus 5.5, as a waitlisted research preview for US Pro and Max subscribers on iOS, Android, and claude.ai. It runs on its own cloud computer with 6,000+ Marketplace connectors, sends daily briefings, and keeps working while devices are off — Anthropic's direct answer to Meta's Muse and OpenAI's Dots.",
-      "url": "https://www.etvbharat.com/en/technology/claude-duet-anthropic-announces-personal-ai-agent-to-compete-with-metas-muse-and-openais-dots-enn26102203220"
+      "image": "https://tech-insider.org/wp-content/uploads/2026/10/minimax-m3-1-flash-launch-2026-gen-3.webp",
+      "name": "MiniMax M3.1 Flash",
+      "summary": "MiniMax's new flagship-tier model (Oct 19) claims a generational leap in agentic tasks, coding and cybersecurity with ~3x faster inference and 70% lower cost than its predecessor, plus a 1M-token context window at budget pricing.",
+      "url": "https://tech-insider.org/minimax-m3-1-flash-launch-2026/"
     },
     {
-      "image": "https://hitechexpert.top/wp-content/uploads/2026/10/news_cover-475-696x412.jpg",
-      "name": "iFlytek Spark X2.6",
-      "summary": "iFlytek unveiled Spark X2.6 at its Global 1024 Developer Festival — a 293B-parameter MoE (A30B) model with 1M-token context, claimed as a breakthrough in code and agent capabilities trained entirely on domestic Chinese computing hardware. It also open-sourced the Spark X2.6-4B edge model.",
-      "url": "https://hitechexpert.top/iflytek-unveils-spark-x2-6-a-chinese-leap-in-large-language-models-built-on-domestic-power/"
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhK3f9WoHAzqOIlwdAX7YV4iRJye4aWuckWgWiRXQRDAJUkhPVaTB63iA9daZq8NUGQE7Yg8mOIW-YjeZlRE0v3NpmjlebGipt2Rf0IJPXbnSAEwMHsJieM1KKa28WBMQ-IKWFqu1fC_a2JOe3Y7-UYQ15ry4Oi6tAyBhIyhJnNVMpYRMISH8-UmDHJ9zM/s1200/og-image.png",
+      "name": "DeepSeek-V4.1-Flash-1017",
+      "summary": "DeepSeek's Oct 17 Pareto update to V4.1 Flash ships open weights under the MIT license on Hugging Face, continuing the Chinese lab's pace of cheap, permissively-licensed frontier-class updates.",
+      "url": "https://www.techsambad.com/2026/10/deepseek-reflection-and-nvidia-open.html"
     },
     {
-      "image": "https://poweredbyai.app/_next/image?url=https%3A%2F%2Fteenyfy-assets.s3.us-east-1.amazonaws.com%2Ftemp_recursive_6598f366fa.jpg&w=3840&q=75",
-      "name": "Recursive Flint",
-      "summary": "AI startup Recursive (CEO Richard Socher, ex-Salesforce chief scientist) released Flint, its first model: a free open-weight (Apache 2.0) coding MoE with 40B total / 2.5B active parameters that runs offline on laptops at ~131 tokens/sec on an M4 Pro. It was built from scratch in under four months with Recursive's automated research system handling nearly every step.",
-      "url": "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/"
+      "image": "https://madrobot.blog/images/reflection-beam-open-weight-key-art.jpg",
+      "name": "Reflection Beam 1.0",
+      "summary": "Reflection AI's first open-weight model (Oct 16): a 501B-total / 23B-active sparse MoE under Apache 2.0 with 1M context, reporting 81.6% on SWE-bench Verified and ~3x fewer inference reasoning tokens than rivals.",
+      "url": "https://madrobot.blog/2026/10/16/reflection-ai-beam-open-weight-501b-model-weights-released-nvidia/"
     },
     {
-      "image": "https://forkast.news/wp-content/uploads/2026/10/nvidia-kumo-structured-data-rag-1024x687.jpg",
-      "name": "NVIDIA Kumo",
-      "summary": "NVIDIA announced the Kumo family of open-weight foundation models that give AI agents a knowledge layer over structured enterprise data — specialized Tabular, Relational, Time Series, and Forecast models for predictions from databases. Available immediately on Hugging Face and as NVIDIA NIM microservices, with Coinbase among the early users.",
-      "url": "https://forkast.news/nvidia-kumo-open-weight-models-for-reasoning-over-structured-enterprise-data/"
+      "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-1781239,resizemode-75,msid-134913099/tech/artificial-intelligence/meta-launches-frontier-ai-models-under-muse-series-heres-the-lowdown.jpg",
+      "name": "Meta Muse Wonder / Wonder Full",
+      "summary": "Meta's new Muse-series frontier models (Oct 13) target state-of-the-art personal and professional agentic tasks as Meta pushes deeper into the frontier race against OpenAI and Anthropic.",
+      "url": "https://m.economictimes.com/tech/artificial-intelligence/meta-launches-frontier-ai-models-under-muse-series-heres-the-lowdown/amp_articleshow/134913099.cms"
     },
     {
-      "image": "https://www.datocms-assets.com/64837/1792611867-olmoearth-v1-3-globe.png",
-      "name": "Ai2 OlmoEarth v1.3",
-      "summary": "The Allen Institute for AI released OlmoEarth v1.3, an open satellite-embedding model (ViT-Base) paired with precomputed annual embeddings for the entire planet at 10-meter resolution plus a no-sign-in browser-based Embeddings Explorer, making global land-cover mapping and change detection possible without a GPU.",
-      "url": "https://huggingface.co/blog/allenai/olmoearth-v1-3"
+      "image": "https://www.pymnts.com/wp-content/uploads/2025/12/Google-Gemini-agentic-browsing1.jpg",
+      "name": "Google Gemini 4 Argon (GA)",
+      "summary": "Google's frontier model went globally available Oct 13 with aggressive $2/$10 per-M token introductory pricing (doubling Nov 30), plus misuse/jailbreak defenses, agent alignment and prompt-injection resistance for its security story.",
+      "url": "https://www.pymnts.com/news/artificial-intelligence/2026/google-says-new-frontier-model-excels-at-deep-work-across-domains/"
     }
   ]
 }
