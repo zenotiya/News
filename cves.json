@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-25",
   "items": [
     {
-      "cvss": 10.0,
-      "id": "CVE-2026-114575",
+      "cvss": 9.9,
+      "id": "CVE-2026-113389",
       "severity": "Critical",
-      "summary": "Command injection in TOTOLINK A950RG (lib/cste_modules/product.so UploadCustomModule) via a manipulated FileMd5 argument; remotely exploitable with a published public exploit.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114575"
+      "summary": "Command injection in DrayTek Vigor2960 1.5.1.6 (set_table in /cgi-bin/mainfunction.cgi) via a manipulated sectiontype argument; remotely exploitable with a public exploit. The device is end-of-support — replace it, as only major unauthenticated issues get reviewed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113389"
+    },
+    {
+      "cvss": 9.9,
+      "id": "CVE-2026-114268",
+      "severity": "Critical",
+      "summary": "Buffer overflow in Tenda BE3L Pro 16.03.60.62 (formWifiBasicSet in /goform/WifiBasicSet) via a manipulated security_5g argument; remotely exploitable with a published exploit. Patch or retire affected units.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114268"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-76466",
+      "id": "CVE-2026-115806",
       "severity": "Critical",
-      "summary": "Unauthenticated remote code execution as root in Cisco Expressway Series via persistent cookie manipulation and insufficient certificate validation; network-accessible, no credentials needed.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76466"
+      "summary": "PHP object injection in the WordPress Prime Mover backup/migration plugin up to 2.2.1 via deserialization in the migration search-and-replace routine; an unauthenticated attacker can plant a crafted serialized object through a comment. Update past 2.2.1 immediately.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115806"
     },
     {
-      "cvss": 9.8,
-      "id": "CVE-2026-76473",
+      "cvss": 9.3,
+      "id": "CVE-2026-111809",
       "severity": "Critical",
-      "summary": "Critical authentication bypass in Cisco Unified Communications products, one of three Cisco UC auth-bypass flaws patched Oct 23; patch before exposure.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76473"
+      "summary": "Request smuggling in Apache Traffic Server via HEAD requests carrying Content-Length or Transfer-Encoding, affecting 8.0.0–8.1.11, 9.0.0–9.2.15 and 10.x lines. Upgrade to 9.2.16, 10.1.5 or 10.2.1.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111809"
     },
     {
-      "cvss": 9.2,
-      "id": "CVE-2026-109618",
+      "cvss": 9.0,
+      "id": "CVE-2026-114661",
       "severity": "Critical",
-      "summary": "'PHP2Shell': unauthenticated remote code execution in the PHP engine itself via crafted HTTP requests, code present since PHP 5.4 (2012); Cloudflare saw millions of exploit attempts within a day of disclosure.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618"
-    },
-    {
-      "cvss": 9.2,
-      "id": "CVE-2026-109619",
-      "severity": "Critical",
-      "summary": "Second 'PHP2Shell' critical flaw in PHP (companion to CVE-2026-109618), also CVSS 9.2; 34M+ PHP services still unpatched per Censys — patch every PHP web stack immediately.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109619"
+      "summary": "Missing authorization in OpenRemote before 1.31.0 (GatewayServiceResource) lets any authenticated user start, stop and query gateway tunnels, opening persistent TCP circuits into an edge gateway's network. Upgrade to 1.31.0.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114661"
     }
   ]
 }

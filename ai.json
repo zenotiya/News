@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-25",
   "items": [
     {
-      "image": "https://tech-insider.org/wp-content/uploads/2026/10/minimax-m3-1-flash-launch-2026-gen-3.webp",
-      "name": "MiniMax M3.1 Flash",
-      "summary": "MiniMax's new flagship-tier model (Oct 19) claims a generational leap in agentic tasks, coding and cybersecurity with ~3x faster inference and 70% lower cost than its predecessor, plus a 1M-token context window at budget pricing.",
-      "url": "https://tech-insider.org/minimax-m3-1-flash-launch-2026/"
+      "image": "https://news.cgtn.com/news/2026-10-24/Kimi-K3-1-Pro-an-open-weight-model-within-3-points-of-the-frontier-1Rvpycrxw2s/img/cea712c504614cd29fffc4e4d2e65758/cea712c504614cd29fffc4e4d2e65758.jpeg",
+      "name": "Kimi K3.1 Pro",
+      "summary": "Moonshot AI's Oct 23 release is a heavily post-trained Kimi K3 (2.8T parameters, 1M context) that scores 55 on Artificial Analysis' Intelligence Index — fourth overall and within 3 points of the frontier. Full open weights are promised by Nov 4, which would make it the highest-scoring open-weight model ever.",
+      "url": "https://news.cgtn.com/news/2026-10-24/Kimi-K3-1-Pro-an-open-weight-model-within-3-points-of-the-frontier-1Rvpycrxw2s/p.html"
     },
     {
-      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhK3f9WoHAzqOIlwdAX7YV4iRJye4aWuckWgWiRXQRDAJUkhPVaTB63iA9daZq8NUGQE7Yg8mOIW-YjeZlRE0v3NpmjlebGipt2Rf0IJPXbnSAEwMHsJieM1KKa28WBMQ-IKWFqu1fC_a2JOe3Y7-UYQ15ry4Oi6tAyBhIyhJnNVMpYRMISH8-UmDHJ9zM/s1200/og-image.png",
-      "name": "DeepSeek-V4.1-Flash-1017",
-      "summary": "DeepSeek's Oct 17 Pareto update to V4.1 Flash ships open weights under the MIT license on Hugging Face, continuing the Chinese lab's pace of cheap, permissively-licensed frontier-class updates.",
-      "url": "https://www.techsambad.com/2026/10/deepseek-reflection-and-nvidia-open.html"
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/7aad17172474a7876af59da08b2b538535468c12-2048x1365.jpg?auto=format&fit=crop&crop=focalpoint&w=1200&h=675&q=75",
+      "name": "Block Dessa",
+      "summary": "Block (Jack Dorsey) unveiled Dessa on Oct 24, a full-duplex voice AI trained only on human speech — no text stage — that listens while speaking, laughs mid-sentence and runs locally on an M4 Max MacBook Pro. It is a research preview for AI safety researchers first, and its humanlike quality is already raising scam-call concerns.",
+      "url": "https://www.coindesk.com/tech/2026/10/24/block-s-new-voice-ai-sounds-eerily-human-sparking-awe-and-scam-fears"
     },
     {
-      "image": "https://madrobot.blog/images/reflection-beam-open-weight-key-art.jpg",
-      "name": "Reflection Beam 1.0",
-      "summary": "Reflection AI's first open-weight model (Oct 16): a 501B-total / 23B-active sparse MoE under Apache 2.0 with 1M context, reporting 81.6% on SWE-bench Verified and ~3x fewer inference reasoning tokens than rivals.",
-      "url": "https://madrobot.blog/2026/10/16/reflection-ai-beam-open-weight-501b-model-weights-released-nvidia/"
+      "image": "https://news-ai.co/wp-content/uploads/2026/10/recursive-flint-local-coding-1024x576.png",
+      "name": "Recursive Flint",
+      "summary": "Recursive's Oct 21 open-weight coding model (39.8B parameters, ~2.5B active per token, Apache 2.0) is built to run locally on high-memory Apple Silicon Macs with a dedicated inference engine. It targets code investigation, bug fixes and test writing without depending on a remote inference service.",
+      "url": "https://news-ai.co/recursive-flint-local-ai-coding-model/"
     },
     {
-      "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-1781239,resizemode-75,msid-134913099/tech/artificial-intelligence/meta-launches-frontier-ai-models-under-muse-series-heres-the-lowdown.jpg",
-      "name": "Meta Muse Wonder / Wonder Full",
-      "summary": "Meta's new Muse-series frontier models (Oct 13) target state-of-the-art personal and professional agentic tasks as Meta pushes deeper into the frontier race against OpenAI and Anthropic.",
-      "url": "https://m.economictimes.com/tech/artificial-intelligence/meta-launches-frontier-ai-models-under-muse-series-heres-the-lowdown/amp_articleshow/134913099.cms"
+      "image": "https://www.unite.ai/wp-content/uploads/2026/10/inception-releases-mercury-3-flagship-diffusion-llm.jpg",
+      "name": "Inception Mercury 3",
+      "summary": "Inception's Oct 19 flagship diffusion LLM claims to beat GPT-6 Luna and Claude Haiku 5.5 on benchmarks while generating over 1,000 tokens per second, with a 1M-token context window. It is Inception's case that text diffusion scales to frontier quality, at launch pricing of $0.10/$0.35 per million input/output tokens.",
+      "url": "https://www.unite.ai/inception-releases-mercury-3-its-flagship-diffusion-llm/"
     },
     {
-      "image": "https://www.pymnts.com/wp-content/uploads/2025/12/Google-Gemini-agentic-browsing1.jpg",
-      "name": "Google Gemini 4 Argon (GA)",
-      "summary": "Google's frontier model went globally available Oct 13 with aggressive $2/$10 per-M token introductory pricing (doubling Nov 30), plus misuse/jailbreak defenses, agent alignment and prompt-injection resistance for its security story.",
-      "url": "https://www.pymnts.com/news/artificial-intelligence/2026/google-says-new-frontier-model-excels-at-deep-work-across-domains/"
+      "image": "https://hitem3dstatic.zaohaowu.net/FE/blog/1280_X1280_39_a372cf5732.PNG",
+      "name": "Hi3D V1.0 (open source)",
+      "summary": "Hi3D open-sourced its production-validated AI 3D model on Oct 23, with weights and code public and free generation on its site. Trained on 2M curated 3D assets with up to 1536³ sparse-grid reconstruction, it targets 3D printing, product design and VR/AR workflows.",
+      "url": "https://www.wcia.com/business/press-releases/cision/20261023CN79574/hi3d-v1-0-goes-open-source-the-first-production-validated-open-source-ai-3d-model/"
     }
   ]
 }

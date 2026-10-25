@@ -2,30 +2,30 @@
   "date": "2026-10-25",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 10.0,
+  "worst_cvss": 9.9,
   "priorities": [
     {
-      "id": "CVE-2026-114575",
-      "cvss": 10.0,
-      "summary": "Command injection in TOTOLINK A950RG (lib/cste_modules/product.so UploadCustomModule) via a manipulated FileMd5 argument; remotely exploitable with a published public exploit.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114575"
+      "id": "CVE-2026-113389",
+      "cvss": 9.9,
+      "summary": "Command injection in DrayTek Vigor2960 1.5.1.6 (set_table in /cgi-bin/mainfunction.cgi) via a manipulated sectiontype argument; remotely exploitable with a public exploit. The device is end-of-support — replace it, as only major unauthenticated issues get reviewed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113389"
     },
     {
-      "id": "CVE-2026-76466",
-      "cvss": 9.8,
-      "summary": "Unauthenticated remote code execution as root in Cisco Expressway Series via persistent cookie manipulation and insufficient certificate validation; network-accessible, no credentials needed.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76466"
+      "id": "CVE-2026-114268",
+      "cvss": 9.9,
+      "summary": "Buffer overflow in Tenda BE3L Pro 16.03.60.62 (formWifiBasicSet in /goform/WifiBasicSet) via a manipulated security_5g argument; remotely exploitable with a published exploit. Patch or retire affected units.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114268"
     },
     {
-      "id": "CVE-2026-76473",
+      "id": "CVE-2026-115806",
       "cvss": 9.8,
-      "summary": "Critical authentication bypass in Cisco Unified Communications products, one of three Cisco UC auth-bypass flaws patched Oct 23; patch before exposure.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76473"
+      "summary": "PHP object injection in the WordPress Prime Mover backup/migration plugin up to 2.2.1 via deserialization in the migration search-and-replace routine; an unauthenticated attacker can plant a crafted serialized object through a comment. Update past 2.2.1 immediately.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115806"
     }
   ],
   "model": {
-    "name": "MiniMax M3.1 Flash",
-    "summary": "MiniMax's new flagship-tier model (Oct 19) claims a generational leap in agentic tasks, coding and cybersecurity with ~3x faster inference and 70% lower cost than its predecessor, plus a 1M-token context window at budget pricing.",
-    "url": "https://tech-insider.org/minimax-m3-1-flash-launch-2026/"
+    "name": "Kimi K3.1 Pro",
+    "summary": "Moonshot AI's Oct 23 release is a heavily post-trained Kimi K3 (2.8T parameters, 1M context) that scores 55 on Artificial Analysis' Intelligence Index — fourth overall and within 3 points of the frontier. Full open weights are promised by Nov 4, which would make it the highest-scoring open-weight model ever.",
+    "url": "https://news.cgtn.com/news/2026-10-24/Kimi-K3-1-Pro-an-open-weight-model-within-3-points-of-the-frontier-1Rvpycrxw2s/p.html"
   }
 }
