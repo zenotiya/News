@@ -1,25 +1,25 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-25",
   "sections": [
     {
       "items": [
         {
-          "action": "Patch all internet-facing PHP immediately; deploy CISA's SIGMA rule to the SIEM and check for suspicious PHP worker activity.",
-          "details": "Cloudflare observed millions of exploit attempts within days of disclosure; Censys counts over 34.4M PHP services still running vulnerable versions. Patching to 8.5.12/8.4.27/8.3.36/8.2.35 remains the only safe fix.",
-          "image": "https://www.arpatech.com/wp-content/uploads/2017/02/php-blunders.png",
+          "action": "Patch on-premises VeloCloud Orchestrator to 5.2.3.18, 6.1.3.10 or 6.4.2.12 (hosted instances already patched) and update Collabora's Built-in CODE Server to 26.4.303; restrict the VCO portal to trusted management networks and hunt logs for prior access.",
+          "details": "Arista confirmed active exploitation of CVE-2026-114625, which lets even an Enterprise Read-Only user escalate to superuser operator on on-premises VCO; it is the third VCO flaw weaponized since July. CVE-2026-110447 allows remote code execution via proxy.php when the local CODE server is not running, and attackers have used it to plant web shells on Nextcloud instances.",
+          "image": "https://www.computable.nl/wp-content/uploads/2025/07/img-1751524135_bbc8fcb181690132b00e.png",
           "severity": "Critical",
-          "summary": "CISA updated its Oct 21 alert on Oct 23 with a SIGMA detection rule and partner guidance for CVE-2026-109618 and CVE-2026-109619 (CVSS 9.2), while PHP separately warned users on Oct 23 to temporarily disable the session upload-progress feature until the next regular release.",
-          "title": "PHP2Shell: CISA adds SIGMA rule; PHP warns on upload-progress feature",
-          "url": "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching"
+          "summary": "CISA added two actively exploited critical flaws to its Known Exploited Vulnerabilities catalog on Oct 23: Arista VeloCloud Orchestrator SQL injection CVE-2026-114625 (CVSS 9.9) and Collabora Online Built-in CODE Server command injection CVE-2026-110447 (CVSS 9.2), with an Oct 26 remediation deadline for federal agencies.",
+          "title": "CISA adds VeloCloud and Collabora flaws to KEV; patch by Oct 26",
+          "url": "http://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html"
         },
         {
-          "action": "Upgrade and redeploy affected services; teams still on Node 20 should plan migration to 22 or 24.",
-          "details": "Exposed if application code or a library decompresses attacker-controlled Brotli data. Node.js 20 and older receive no fix.",
-          "image": "https://bstechnique.com/images/logos/nodejs.jpg",
-          "severity": "High",
-          "summary": "Node.js shipped security releases 22.23.4, 24.22.1 and 26.12.1 on Oct 21 fixing ten CVEs, including a Brotli decoder flaw (CVE-2026-111497) allowing remote code execution, credited to OpenAI Codex Security researchers.",
-          "title": "Node.js security release fixes Brotli RCE (CVE-2026-111497)",
-          "url": "https://digitalmatters.me/security/nodejs-october-2026-security-release/"
+          "action": "Patch the cited edge-device flaws, pull management interfaces off the internet, and rotate every credential stored on or reachable via affected appliances — patching alone does not revoke already-stolen keys.",
+          "details": "The actor scanned for exposed edge devices via FOFA and ZoomEye, then exploited CVE-2025-64446 (FortiWeb) and CVE-2026-0257 (PAN-OS) or brute-forced logins, gaining persistent VPN and remote-management access; about 38% of victims were in Asia Pacific. Some victims later appeared on ransomware leak sites linked to Qilin and The Gentlemen.",
+          "image": "https://www.enbitcon.de/media/19/b9/83/1620996288/Fortinet-VPN-Neu.png",
+          "severity": "Critical",
+          "summary": "A joint Group-IB and NyxLab investigation published Oct 21 details an access-broker campaign by actor 'k0t' that harvested more than 70,000 credentials and LDAP data from exposed Fortinet FortiGate/FortiWeb and Palo Alto GlobalProtect devices.",
+          "title": "k0t campaign harvested 70,000+ firewall and VPN credentials",
+          "url": "http://thehackernews.com/2026/10/hackers-breach-enterprise-firewalls-and.html"
         }
       ],
       "title": "Act on Today"
@@ -27,22 +27,31 @@
     {
       "items": [
         {
-          "action": "Watch the countdown deadline; review exposure through third-party vendors hosting HR/learning data.",
-          "details": "Everest claims the data includes regional HR and learning exports, integration documentation and e-learning courses. PwC says the affected site holds no client data, sensitive personal data or financial information, and declined to comment on the veracity of the group's claims.",
-          "image": "https://www.vivementlundi.com/wp-content/uploads/2024/06/pwc-logo-768x768.png",
+          "action": "Treat infostealer-exposed credentials as compromised: force resets, revoke sessions, and check for follow-on ransomware deployment.",
+          "details": "Reporting ties the compromise to the 'Cavalier' stealer family, with one employee, four users and nine third-party employee credentials compromised, and 331 exposed passwords identified, 70 of them critical.",
+          "image": "https://i0.wp.com/www.aufieroinformatica.com/wp-content/uploads/sites/7/2026/05/Digital_padlock_over_data_files_202605271401.jpeg?w=1376&ssl=1",
           "severity": "High",
-          "summary": "PwC confirmed on Oct 23 a cybersecurity incident involving a third-party vendor hosting employee learning records, a day after extortion group Everest listed PwC on its site claiming 590GB of data with a five-day countdown.",
-          "title": "PwC confirms incident after Everest group claims 590GB stolen",
-          "url": "https://www.channelnewsasia.com/business/pwc-confirms-cybersecurity-incident-involving-employee-learning-records-6487381"
+          "summary": "On Oct 24, the Krybit ransomware group listed Mexican business conglomerate Grupo Euro Corporativo on its leak site, in an incident tracked by Ransomware.live and linked to infostealer activity.",
+          "title": "Krybit lists Mexican conglomerate Grupo Euro Corporativo",
+          "url": "https://qpulse.quasarcybertech.com/news/7268/krybit-ransomware-group-targets-mexican-conglomerate-grupo-euro-corporativo"
         },
         {
-          "action": "Monitor for data publication; treat as an unverified gang claim.",
-          "details": "Italian reporting notes the Oct 23 listing date is when the name was published; the actual intrusion may go back further.",
-          "image": "https://www.commvault.com/wp-content/uploads/2025/08/ransomware-img-3.jpg?width=960&format=auto",
-          "severity": "Medium",
-          "summary": "The Qilin ransomware group listed Coop, Italy's large retail cooperative, on its leak site on Oct 23, claiming around 250GB of data. The claim is unverified and the company has not confirmed.",
-          "title": "Qilin claims Coop Italy hack, ~250GB allegedly stolen (unverified)",
-          "url": "https://pasqualepillitteri.it/en/news/26576/qilin-claims-coop-italy-hack-250-gb"
+          "action": "Assume listed data is exposed: notify affected individuals, monitor for publication, and review backups and segmentation before any recovery decision.",
+          "details": "The group, which has about 70 recorded victims, listed archived personal and corporate data of employees and customers.",
+          "image": "https://i0.wp.com/www.aufieroinformatica.com/wp-content/uploads/sites/7/2026/05/Digital_padlock_over_data_files_202605271401.jpeg?w=1376&ssl=1",
+          "severity": "High",
+          "summary": "Emperador ransomware listed German fuel distributor Frommann Energie GmbH on its leak site on Oct 24, following a double-extortion model of exfiltration before encryption.",
+          "title": "Emperador lists German energy firm Frommann Energie",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/frommann-energie-gmbh-emperador-2026"
+        },
+        {
+          "action": "Manufacturers with exposed edge or VPN access should treat ransomware-claim listings as a prompt to verify backups and incident response readiness.",
+          "details": "Penco, based in Greenville, North Carolina, makes steel lockers, shelving and pallet racks used in schools, hospitals and military facilities.",
+          "image": "https://i0.wp.com/www.aufieroinformatica.com/wp-content/uploads/sites/7/2026/05/Digital_padlock_over_data_files_202605271401.jpeg?w=1376&ssl=1",
+          "severity": "High",
+          "summary": "The Gentlemen ransomware group listed US steel-locker manufacturer Penco Products on Oct 24, in a claim discovered the same day.",
+          "title": "The Gentlemen claims US manufacturer Penco Products",
+          "url": "https://www.hookphish.com/blog/ransomware-group-thegentlemen-hits-penco-products/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -50,22 +59,13 @@
     {
       "items": [
         {
-          "action": "Reinforce mule-detection controls — insider assistance was central to this network.",
-          "details": "Accounts were opened with forged signatures and KYC documents taken from daily-wage labourers; proceeds were partly converted to USDT crypto via Trust Wallet. Police seized 63 Aadhaar cards, 60 PAN cards, phones and gold.",
-          "image": "https://cf-images.assettype.com/newindianexpress%2F2024-09-22%2Fonm83ex6%2Fimage-1.png?rect=0%2C89%2C941%2C529&w=640&auto=format%2Ccompress&fit=max",
+          "action": "SBI customers should never share OTPs, PINs or passwords and should treat unsolicited calls or messages referencing the incident as potential phishing.",
+          "details": "The notice follows SBI's Oct 21 stock-exchange disclosure that preliminary analysis of ~3.75 lakh dark-web records identified 3,897 customer records containing PII, including names, mobile numbers, dates of birth, addresses, branch and CIF identifiers and loan/lead metadata. A detailed investigation into authenticity, source and extent is ongoing.",
+          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
           "severity": "High",
-          "summary": "Delhi Police dismantled a network of 37 mule bank accounts that received ₹7.36 crore linked to 99 cyber-fraud complaints across India, arresting six people including two bank branch managers and four sales staff.",
-          "title": "Delhi Police busts ₹7.36 crore mule-account network; bank managers arrested",
-          "url": "https://www.tribuneindia.com/news/delhi/delhi-cops-bust-7-36-cr-cyber-fraud-network/"
-        },
-        {
-          "action": "Share with teams as user-awareness content; report suspicious calls to 1930.",
-          "details": "Public urged to disconnect, report on the National Cyber Crime portal or the 1930 helpline, and flag malicious SIMs on Sanchar Saathi.",
-          "image": "https://static.india.com/wp-content/uploads/2024/05/Scam-.png?impolicy=Medium_Widthonly&w=700",
-          "severity": "Medium",
-          "summary": "Authorities issued an urgent advisory on rising 'digital arrest' scam calls: fraudsters posing as CBI/TRAI officials use video calls, AI deepfakes and forged court documents to coerce victims into transferring money. No Indian legal framework permits digital arrests or online clearance payments.",
-          "title": "Urgent advisory on fake 'digital arrest' scams",
-          "url": "https://nationsbizz.com/urgent-govt-advisory-warning-issued-over-fake-digital-arrest-scams"
+          "summary": "On Oct 23, State Bank of India said it had individually informed every customer whose data was identified as involved in the recent cyber incident, via email and/or WhatsApp, and reiterated that account balances and funds are safe.",
+          "title": "SBI individually notifies customers hit by cyber incident",
+          "url": "https://www.thehindu.com/business/Industry/data-breach-sbi-says-it-individually-informed-all-affected-customers/article71615008.ece"
         },
         {
           "action": "Treat any SBI-related loan/account data as potentially circulating; watch for targeted phishing and fraudulent loan applications using KYC documents.",
@@ -83,11 +83,19 @@
           "summary": "On Oct 20, Indian media reported that cybersecurity monitoring account CyberPulse56 flagged a hacker group named 'Siriusim' claiming ~3.75 lakh SBI-linked records in CSV format plus 2,722 PDFs (personal details, loan applications, account-opening forms). Unverified allegation.",
           "title": "Hacker group 'Siriusim' claims 3.75 lakh SBI records (unverified)",
           "url": "https://www.moneycontrol.com/news/business/sbi-data-breach-claim-hacker-group-alleges-access-to-3-75-lakh-records-2-722-documents-14056008.html/amp?utm_campaign=fullarticle&utm_medium=referral&utm_source=inshorts"
+        },
+        {
+          "action": "Site operators relying on eMudhra certificates should watch for revocation and reissuance guidance from browsers and CERT-In.",
+          "details": "MeitY said the incident primarily affected eMudhra's global certificate business and that the impact on Indian websites and applications was 'very limited' and short-lived, following a CERT-In advisory and browser blocks by Google and Mozilla.",
+          "severity": "Medium",
+          "summary": "On Oct 21, MeitY said it had constituted a special team to investigate a security incident at digital certification authority eMudhra, after private keys associated with its globally trusted certificates were reported compromised.",
+          "title": "MeitY sets up special team to probe eMudhra security incident",
+          "url": "https://www.newindianexpress.com/india/2026/Oct/21/government-sets-up-special-team-to-probe-emudhra-security-incident-meity-says-indian-impact-very-limited"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Saturday, October 24 — Here's what's worth your attention today.",
+  "subtitle": "Sunday, October 25 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
