@@ -1,25 +1,34 @@
 {
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "sections": [
     {
       "items": [
         {
-          "action": "Patch on-premises VeloCloud Orchestrator to 5.2.3.18, 6.1.3.10 or 6.4.2.12 (hosted instances already patched) and update Collabora's Built-in CODE Server to 26.4.303; restrict the VCO portal to trusted management networks and hunt logs for prior access.",
-          "details": "Arista confirmed active exploitation of CVE-2026-114625, which lets even an Enterprise Read-Only user escalate to superuser operator on on-premises VCO; it is the third VCO flaw weaponized since July. CVE-2026-110447 allows remote code execution via proxy.php when the local CODE server is not running, and attackers have used it to plant web shells on Nextcloud instances.",
-          "image": "https://www.computable.nl/wp-content/uploads/2025/07/img-1751524135_bbc8fcb181690132b00e.png",
-          "severity": "Critical",
-          "summary": "CISA added two actively exploited critical flaws to its Known Exploited Vulnerabilities catalog on Oct 23: Arista VeloCloud Orchestrator SQL injection CVE-2026-114625 (CVSS 9.9) and Collabora Online Built-in CODE Server command injection CVE-2026-110447 (CVSS 9.2), with an Oct 26 remediation deadline for federal agencies.",
-          "title": "CISA adds VeloCloud and Collabora flaws to KEV; patch by Oct 26",
-          "url": "http://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html"
+          "action": "Update Node.js to 22.23.4, 24.22.1, 26.12.1 or later; for end-of-support Node.js 20 and earlier, check OS or LTS vendor updates.",
+          "details": "Theori's Oct 26 reproduction notes the flaw is in the runtime itself, not application code, with exposure paths including Express 5's body-parser, the global fetch() method, and HTTP clients such as axios, got and node-fetch. Affected lines are Node.js 22.x, 24.x and 26.x without the latest security patches.",
+          "image": "https://nodejs.org/static/images/logo.svg",
+          "severity": "High",
+          "summary": "Node2Shell (CVE-2026-111497) is an out-of-bounds write flaw in Node.js's Brotli decompression handling that an unauthenticated attacker can trigger with crafted Brotli data, risking crashes, memory disclosure and possible remote code execution.",
+          "title": "Node2Shell flaw in Node.js: patch to 22.23.4, 24.22.1 or 26.12.1",
+          "url": "https://biz.chosun.com/en/en-it/2026/10/26/FGUJ4UIHONFR3J6JNIYGKSTKTY/"
         },
         {
-          "action": "Patch the cited edge-device flaws, pull management interfaces off the internet, and rotate every credential stored on or reachable via affected appliances — patching alone does not revoke already-stolen keys.",
-          "details": "The actor scanned for exposed edge devices via FOFA and ZoomEye, then exploited CVE-2025-64446 (FortiWeb) and CVE-2026-0257 (PAN-OS) or brute-forced logins, gaining persistent VPN and remote-management access; about 38% of victims were in Asia Pacific. Some victims later appeared on ransomware leak sites linked to Qilin and The Gentlemen.",
-          "image": "https://www.enbitcon.de/media/19/b9/83/1620996288/Fortinet-VPN-Neu.png",
+          "action": "Patch PHP to the Oct 21 security release everywhere it serves web requests, including PHP-FPM, Apache mod_php, php-cgi, FrankenPHP and LiteSpeed; take unpatchable sites offline.",
+          "details": "Researchers at Wiz and Calif discovered the flaws in PHP versions released over the last decade; PHP published its security release on Oct 21. Authorities in several countries have temporarily taken some government websites offline as a precaution.",
+          "image": "https://thewiremagazine.com/wp-content/uploads/2022/09/How-to-Secure-Website-From-Hackers-in-PHP-–-6-Best-Ways-01-01-01-1024x547.jpg",
           "severity": "Critical",
-          "summary": "A joint Group-IB and NyxLab investigation published Oct 21 details an access-broker campaign by actor 'k0t' that harvested more than 70,000 credentials and LDAP data from exposed Fortinet FortiGate/FortiWeb and Palo Alto GlobalProtect devices.",
-          "title": "k0t campaign harvested 70,000+ firewall and VPN credentials",
-          "url": "http://thehackernews.com/2026/10/hackers-breach-enterprise-firewalls-and.html"
+          "summary": "Two critical PHP flaws, dubbed PHP2Shell, can let an unauthenticated attacker take complete control of vulnerable web servers and steal data, with the US NSA issuing a rare public warning to take sites offline if they cannot be updated immediately.",
+          "title": "PHP2Shell flaws (CVE-2026-109618, CVE-2026-109619) rated critical 9.2",
+          "url": "https://dailynews.lk/2026/10/26/breaking-news/1046788/ministry-issues-urgent-alert-over-critical-global-php-vulnerabilities/"
+        },
+        {
+          "action": "Prioritise the actively exploited Windows Shell flaw, then the publicly known and wormable CVEs, across Windows, Office, SharePoint, Exchange and Azure services.",
+          "details": "Two further flaws were publicly known: CVE-2026-108398 (.NET Framework) and CVE-2026-92707 (MessagePack-CSharp). TrendAI/ZDI classified 59 of the October CVEs as wormable, spanning DHCP servers, Network Policy Server, Windows Error Reporting and Remote Desktop Gateway.",
+          "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800",
+          "severity": "Critical",
+          "summary": "Microsoft's October 2026 Patch Tuesday fixed a record 1,415 vulnerabilities — its first four-figure month — including one actively exploited flaw, CVE-2026-96951 in Windows Shell, while Adobe closed 174 gaps including three CVSS 10.0 flaws.",
+          "title": "Microsoft's October Patch Tuesday sets record with 1,415 CVEs",
+          "url": "https://b2b-cyber-security.de/en/oktober-2026-erneuter-rekord-patchday-mit-1-415-microsoft-cves/"
         }
       ],
       "title": "Act on Today"
@@ -27,31 +36,31 @@
     {
       "items": [
         {
-          "action": "Treat infostealer-exposed credentials as compromised: force resets, revoke sessions, and check for follow-on ransomware deployment.",
-          "details": "Reporting ties the compromise to the 'Cavalier' stealer family, with one employee, four users and nine third-party employee credentials compromised, and 331 exposed passwords identified, 70 of them critical.",
-          "image": "https://i0.wp.com/www.aufieroinformatica.com/wp-content/uploads/sites/7/2026/05/Digital_padlock_over_data_files_202605271401.jpeg?w=1376&ssl=1",
+          "action": "Treat any Qilin leak-site listing as a presumed data-theft incident: contain, hunt for exfiltration, and warn affected customers and partners early.",
+          "details": "Qilin, first observed in July 2022, is a Golang ransomware operation with more than 2,300 victims listed since October 2022, according to the threat-intelligence record for the Hossner-Textil listing.",
+          "image": "https://assets.techrepublic.com/uploads/2024/04/FeatuerImage-ransomware-threats-apac.jpg",
           "severity": "High",
-          "summary": "On Oct 24, the Krybit ransomware group listed Mexican business conglomerate Grupo Euro Corporativo on its leak site, in an incident tracked by Ransomware.live and linked to infostealer activity.",
-          "title": "Krybit lists Mexican conglomerate Grupo Euro Corporativo",
-          "url": "https://qpulse.quasarcybertech.com/news/7268/krybit-ransomware-group-targets-mexican-conglomerate-grupo-euro-corporativo"
+          "summary": "Qilin listed German manufacturers Hossner-Textil GmbH and ETO, plus Ooredoo Myanmar, on its dark-web leak site on Oct 25, continuing its double-extortion pattern of encrypting data while threatening to publish stolen data.",
+          "title": "Qilin lists German manufacturers and Ooredoo Myanmar on Oct 25",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/hossner-textil-gmbh-qilin-2026"
         },
         {
-          "action": "Assume listed data is exposed: notify affected individuals, monitor for publication, and review backups and segmentation before any recovery decision.",
-          "details": "The group, which has about 70 recorded victims, listed archived personal and corporate data of employees and customers.",
-          "image": "https://i0.wp.com/www.aufieroinformatica.com/wp-content/uploads/sites/7/2026/05/Digital_padlock_over_data_files_202605271401.jpeg?w=1376&ssl=1",
+          "action": "If you share data with Keidel or similar distributors, watch for exposed customer/order data and rotate any credentials that may have been in the backup image.",
+          "details": "The claim, discovered Oct 25 at 06:54 UTC, is reported as a leak-site exposure rather than a confirmed company disclosure; the company has not been quoted confirming the incident in the source report.",
+          "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800",
           "severity": "High",
-          "summary": "Emperador ransomware listed German fuel distributor Frommann Energie GmbH on its leak site on Oct 24, following a double-extortion model of exfiltration before encryption.",
-          "title": "Emperador lists German energy firm Frommann Energie",
-          "url": "https://cyberthreatintelligence.net/ransomware-victim/frommann-energie-gmbh-emperador-2026"
+          "summary": "Ransomware group N0n claimed Cincinnati-based Keidel Supply Company on Oct 25, listing sales orders with customer names and item details, customer and order files with over 16,000 records, and a full backup image of its main application library as exposed and unpaid.",
+          "title": "N0n ransomware claims Keidel Supply Company, exposes 16,000+ records",
+          "url": "https://www.hookphish.com/blog/ransomware-group-n0n-hits-keidel-supply-company-incorporated/"
         },
         {
-          "action": "Manufacturers with exposed edge or VPN access should treat ransomware-claim listings as a prompt to verify backups and incident response readiness.",
-          "details": "Penco, based in Greenville, North Carolina, makes steel lockers, shelving and pallet racks used in schools, hospitals and military facilities.",
-          "image": "https://i0.wp.com/www.aufieroinformatica.com/wp-content/uploads/sites/7/2026/05/Digital_padlock_over_data_files_202605271401.jpeg?w=1376&ssl=1",
+          "action": "Treat personal-document exposure claims seriously for affected customers: monitor for identity-theft misuse and prepare notification if the claim is confirmed.",
+          "details": "The claim was discovered Oct 25 at 00:31 UTC; as with other leak-site claims, it is an attacker allegation, not a confirmed company disclosure, and the scope of any genuine exposure is unverified.",
+          "image": "https://assets.techrepublic.com/uploads/2024/04/FeatuerImage-ransomware-threats-apac.jpg",
           "severity": "High",
-          "summary": "The Gentlemen ransomware group listed US steel-locker manufacturer Penco Products on Oct 24, in a claim discovered the same day.",
-          "title": "The Gentlemen claims US manufacturer Penco Products",
-          "url": "https://www.hookphish.com/blog/ransomware-group-thegentlemen-hits-penco-products/"
+          "summary": "Anubis ransomware claimed US funeral-services provider Newcomer Cremations, Funerals and Receptions on Oct 25, listing customers' personal documents and the company's internal documents among the allegedly stolen data.",
+          "title": "Anubis ransomware claims Newcomer Cremations, Funerals and Receptions",
+          "url": "https://www.hookphish.com/blog/ransomware-group-anubis-hits-newcomer-cremations-funerals-and-receptions/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -59,43 +68,36 @@
     {
       "items": [
         {
-          "action": "SBI customers should never share OTPs, PINs or passwords and should treat unsolicited calls or messages referencing the incident as potential phishing.",
-          "details": "The notice follows SBI's Oct 21 stock-exchange disclosure that preliminary analysis of ~3.75 lakh dark-web records identified 3,897 customer records containing PII, including names, mobile numbers, dates of birth, addresses, branch and CIF identifiers and loan/lead metadata. A detailed investigation into authenticity, source and extent is ongoing.",
-          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
-          "severity": "High",
-          "summary": "On Oct 23, State Bank of India said it had individually informed every customer whose data was identified as involved in the recent cyber incident, via email and/or WhatsApp, and reiterated that account balances and funds are safe.",
-          "title": "SBI individually notifies customers hit by cyber incident",
-          "url": "https://www.thehindu.com/business/Industry/data-breach-sbi-says-it-individually-informed-all-affected-customers/article71615008.ece"
-        },
-        {
-          "action": "Treat any SBI-related loan/account data as potentially circulating; watch for targeted phishing and fraudulent loan applications using KYC documents.",
-          "details": "This follows an earlier claim flagged Oct 16 by OSINT account CyberPulse56 of a threat actor 'Siriusim' claiming ~375,000 CSV rows + 2,722 PDFs allegedly linked to SBI — authenticity unverified and a separate, unconfirmed claim.",
-          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
+          "action": "Indian operators on the CERT-In lists should verify their PHP installations and patch to the Oct 21 security release, or take unpatchable sites offline.",
+          "details": "The 303 comprise 89 central-government instances, 80 state/UT instances, 27 central PSUs, 24 state-owned companies and 83 critical-sector organisations. Krishnan stressed these are potentially vulnerable instances for verification, not confirmed vulnerable installations, and said CERT-In has observed active exploitation attempts and shared indicators of compromise.",
+          "image": "https://www.medianama.com/wp-content/uploads/2025/07/Gemini_Generated_Image_wtwh05wtwh05wtwh-444x230.png",
           "severity": "Critical",
-          "summary": "State Bank of India reported on Oct 21 that a cyberattack led to 3,897 customer records containing personally identifiable information being disclosed on the dark web.",
-          "title": "SBI reports cyberattack; 3,897 customer records on dark web",
-          "url": "https://www.reuters.com/legal/litigation/state-bank-india-reports-cyberattack-involving-customer-records-2026-10-21/"
+          "summary": "India's CERT-In has flagged 303 government, state-owned and critical-sector websites as potentially vulnerable to the PHP2Shell flaws, MeitY secretary S Krishnan said on Oct 25, as part of about 60,000 Indian websites identified as potentially vulnerable.",
+          "title": "CERT-In flags 303 government and critical-sector websites over PHP2Shell",
+          "url": "https://www.newindianexpress.com/thesundaystandard/2026/Oct/25/meity-secretary-says-303-government-websites-are-vulnerable"
         },
         {
-          "details": "The claims remain unverified; SBI had not responded to queries and it is unclear whether the records are genuine or originated from SBI's systems. This is separate from the 3,897-record incident SBI itself reported.",
-          "image": "https://rocket-boys.co.jp/wp-content/uploads/2026/01/kobayashi-resin-sales-company-breach-8149-personal-records-world-leaks-claim-768x512.png",
+          "action": "Industry bodies should evidence regular audits and certification updates; member organisations should close basic-hygiene gaps first.",
+          "details": "Officials said the Centre is reviewing the reported events and monitoring developments, and noted systems were often compromised when basic cyber hygiene was not followed. CERT-In has advised organisations to upgrade to the latest patched versions of affected software.",
+          "image": "https://www.medianama.com/wp-content/uploads/2025/07/Gemini_Generated_Image_wtwh05wtwh05wtwh-444x230.png",
           "severity": "High",
-          "summary": "On Oct 20, Indian media reported that cybersecurity monitoring account CyberPulse56 flagged a hacker group named 'Siriusim' claiming ~3.75 lakh SBI-linked records in CSV format plus 2,722 PDFs (personal details, loan applications, account-opening forms). Unverified allegation.",
-          "title": "Hacker group 'Siriusim' claims 3.75 lakh SBI records (unverified)",
-          "url": "https://www.moneycontrol.com/news/business/sbi-data-breach-claim-hacker-group-alleges-access-to-3-75-lakh-records-2-722-documents-14056008.html/amp?utm_campaign=fullarticle&utm_medium=referral&utm_source=inshorts"
+          "summary": "MeitY has written to industry bodies and associations directing them to tighten certification processes and carry out regular security audits, following recent breaches and vulnerabilities including the SBI data exposure, the PHP flaws and lapses linked to certificate issuer eMudhra.",
+          "title": "MeitY directs industry bodies to tighten certifications and security audits",
+          "url": "https://www.deccanherald.com/amp/story/technology/meity-directs-industry-bodies-to-strengthen-certifications-security-audits-4194160"
         },
         {
-          "action": "Site operators relying on eMudhra certificates should watch for revocation and reissuance guidance from browsers and CERT-In.",
-          "details": "MeitY said the incident primarily affected eMudhra's global certificate business and that the impact on Indian websites and applications was 'very limited' and short-lived, following a CERT-In advisory and browser blocks by Google and Mozilla.",
+          "action": "Banking and financial-sector teams should treat the new institute as a signal of rising regulatory focus on banking cyber resilience and keep incident-response readiness current.",
+          "details": "Modi said safeguarding financial infrastructure from cybercriminals and cyberterrorists had become increasingly important as India's economy and digital banking expand; the remarks come amid wider concern following the SBI data exposure disclosed Oct 21.",
+          "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800",
           "severity": "Medium",
-          "summary": "On Oct 21, MeitY said it had constituted a special team to investigate a security incident at digital certification authority eMudhra, after private keys associated with its globally trusted certificates were reported compromised.",
-          "title": "MeitY sets up special team to probe eMudhra security incident",
-          "url": "https://www.newindianexpress.com/india/2026/Oct/21/government-sets-up-special-team-to-probe-emudhra-security-incident-meity-says-indian-impact-very-limited"
+          "summary": "Prime Minister Narendra Modi inaugurated the Reserve Bank of India's ₹169-crore data centre and Cybersecurity Training Institute in Bhubaneswar on Oct 25, warning that cyberattacks could weaken a country's economy and stressing protection for the banking system.",
+          "title": "PM Modi opens RBI's ₹169-crore data centre and cybersecurity training institute",
+          "url": "https://news.abplive.com/news/india/pm-modi-inaugurates-rs-169-crore-rbi-facility-hits-out-at-congress-era-phone-banking-1873108/amp"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Sunday, October 25 — Here's what's worth your attention today.",
+  "subtitle": "Monday, October 26 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
