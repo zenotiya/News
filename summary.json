@@ -2,30 +2,30 @@
   "date": "2026-10-26",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 9.9,
+  "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-113389",
-      "cvss": 9.9,
-      "summary": "Command injection in DrayTek Vigor2960 1.5.1.6 (set_table in /cgi-bin/mainfunction.cgi) via a manipulated sectiontype argument; remotely exploitable with a public exploit. The device is end-of-support — replace it, as only major unauthenticated issues get reviewed.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113389"
+      "id": "CVE-2026-101809",
+      "cvss": 10.0,
+      "summary": "Unauthenticated remote takeover of Oracle E-Business Suite Workflow, exploitable over HTTP with no privileges or user interaction. Fixed in Oracle's October 2026 Critical Patch Update; EBS versions 12.2.3 to 12.2.15 are affected.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101809"
     },
     {
-      "id": "CVE-2026-114268",
-      "cvss": 9.9,
-      "summary": "Buffer overflow in Tenda BE3L Pro 16.03.60.62 (formWifiBasicSet in /goform/WifiBasicSet) via a manipulated security_5g argument; remotely exploitable with a published exploit. Patch or retire affected units.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114268"
+      "id": "CVE-2026-97785",
+      "cvss": 10.0,
+      "summary": "Improper authentication in Microsoft's AAD App Proxy lets an unauthorized attacker elevate privileges over the network without authentication. One of several CVSS 10.0 flaws disclosed in the October 2026 round of Microsoft advisories.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97785"
     },
     {
-      "id": "CVE-2026-115806",
-      "cvss": 9.8,
-      "summary": "PHP object injection in the WordPress Prime Mover backup/migration plugin up to 2.2.1 via deserialization in the migration search-and-replace routine; an unauthenticated attacker can plant a crafted serialized object through a comment. Update past 2.2.1 immediately.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115806"
+      "id": "CVE-2026-111406",
+      "cvss": 9.9,
+      "summary": "Unrestricted file upload in the WordPress MapSVG plugin (through 8.16.1) allows an attacker with low privileges to upload a web shell to the server. Site owners should update MapSVG past 8.16.1 immediately.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111406"
     }
   ],
   "model": {
-    "name": "Kimi K3.1 Pro",
-    "summary": "Moonshot AI's Oct 23 release is a heavily post-trained Kimi K3 (2.8T parameters, 1M context) that scores 55 on Artificial Analysis' Intelligence Index — fourth overall and within 3 points of the frontier. Full open weights are promised by Nov 4, which would make it the highest-scoring open-weight model ever.",
-    "url": "https://news.cgtn.com/news/2026-10-24/Kimi-K3-1-Pro-an-open-weight-model-within-3-points-of-the-frontier-1Rvpycrxw2s/p.html"
+    "name": "Nvidia Flora",
+    "summary": "Nvidia's GEAR lab open-sourced Flora, a trio of models that turn raw robot and human manipulation video into training labels — segmenting actions, captioning them, and scoring outcomes. Nvidia says the suite already labels 200,000 hours of video a day for its GR00T humanoid models at a claimed 125x lower cost than GPT-6 Astra.",
+    "url": "https://the-decoder.com/nvidia-open-sources-flora-to-make-robot-video-labeling-125x-cheaper-than-gpt-6-astra/"
   }
 }
