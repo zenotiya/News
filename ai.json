@@ -1,35 +1,35 @@
 {
-  "date": "2026-10-26",
+  "date": "2026-10-27",
   "items": [
     {
-      "image": "https://the-decoder.com/wp-content/uploads/2026/10/nvidia-flora-hero-robot-hands.jpg",
-      "name": "Nvidia Flora",
-      "summary": "Nvidia's GEAR lab open-sourced Flora, a trio of models that turn raw robot and human manipulation video into training labels — segmenting actions, captioning them, and scoring outcomes. Nvidia says the suite already labels 200,000 hours of video a day for its GR00T humanoid models at a claimed 125x lower cost than GPT-6 Astra.",
-      "url": "https://the-decoder.com/nvidia-open-sources-flora-to-make-robot-video-labeling-125x-cheaper-than-gpt-6-astra/"
+      "image": "https://images.siliconangle.com/blogs.dir/1/files/2026/10/Screenshot-from-2026-10-27-07-32-52.png",
+      "name": "OpenAI GPT-6.1 Terra",
+      "summary": "OpenAI's fast everyday-work model, launched October 26, combines visual reasoning with precise computer use and clearer writing at 50% lower standard API prices than GPT-5.6 Terra and GPT-6.1 Sol. It is available in ChatGPT Work and Codex and via the API as gpt-6.1-terra, and OpenAI says it finishes tasks over 3x faster than GPT-6 Astra and GPT-6.1 Sol.",
+      "url": "https://siliconangle.com/2026/10/26/openai-launches-gpt-6-1-terra-for-faster-better-performing-ai-agents-at-half-the-price/"
     },
     {
-      "image": "https://static.aws-news.com/article-banners/01a169b6-9619-0b29-4be0-9d03e3aa8c8e.png",
-      "name": "AWS Infinity",
-      "summary": "AWS and UC Berkeley released Infinity, an open-source agent runtime under Apache 2.0 that suspends agents during tool calls instead of holding a process open. The design lets huge numbers of mostly-idle agents share little memory — AWS claims 75,000 concurrent agents fit in 8 GB — and run on serverless platforms even when a tool call takes days.",
-      "url": "https://aws.amazon.com/blogs/opensource/introducing-infinity-a-runtime-for-extreme-agent-concurrency/"
+      "image": "https://plotly.com/cms/img/OkWYJreqV8gk4PdJ_kimi-k3-1-pro-data-analytics-benchmark-v3.png?auto=compress&fm=webp",
+      "name": "Moonshot AI Kimi K3.1 Pro",
+      "summary": "Moonshot's post-trained Kimi K3, released October 23, keeps 2.8 trillion total parameters (104 billion active) and a 1M-token context, scoring 55 on Artificial Analysis' Intelligence Index — fourth overall and the highest open-weight score recorded there. It costs $2/$10 per million tokens, with full open weights promised by November 4, 2026.",
+      "url": "https://plotly.com/blog/kimi-k3-1-pro-plotly-data-analytics-bench/"
     },
     {
-      "image": "https://www.siliconreport.com/article-image/carbon-x-integrates-dna-and-natural-language-in-14b-model",
-      "name": "Hugging Face Carbon-X",
-      "summary": "Hugging Face released Carbon-X, an open 14.8-billion-parameter model that reads raw DNA sequences inside a chat message and answers in English — predicting mutation effects, classifying sequences, and explaining its reasoning. Released under Apache 2.0, it runs locally on a single 80 GB GPU, so labs can keep sensitive genomic data off cloud APIs.",
-      "url": "https://www.siliconreport.com/carbon-x-integrates-dna-and-natural-language-in-14b-model"
+      "image": "https://i0.wp.com/technode.com/wp-content/uploads/2026/10/feed-20261023-cn-363514.png?fit=1920%2C816&ssl=1",
+      "name": "MiniMax M3.1 Flash (open weights)",
+      "summary": "MiniMax published the weights for M3.1 Flash on October 23, four days after its API launch: a 428-billion-parameter mixture-of-experts model with 23 billion active per token, a 1M-token context, and text, image and video input. It is built for coding, agents and computer-use tasks, with deployment support for vLLM and SGLang.",
+      "url": "https://technode.com/2026/10/23/minimax-releases-open-weights-for-428-billion-parameter-m3-1-flash-model/"
     },
     {
-      "image": "https://images.macrumors.com/t/5v3SEszlh4H0v29GfpQnHJvImds=/3840x/article-new/2026/10/claude-duet.jpg",
-      "name": "Anthropic Claude Duet",
-      "summary": "Anthropic launched Claude Duet, a proactive AI agent built on Claude Opus 5.5 that monitors connected apps, sends a morning brief, and works tasks in the cloud while the user is away. Now in a waitlisted research preview for US Pro and Max subscribers, it requires approval before sensitive actions like payments or deletions.",
-      "url": "https://www.macrumors.com/2026/10/21/anthropic-claude-duet/"
+      "image": "https://forkast.news/wp-content/uploads/2026/10/hero-flint-40b-regen-1024x687.jpg",
+      "name": "Recursive Flint",
+      "summary": "Recursive's first model, released October 21 under Apache 2.0, is a 39.8-billion-parameter mixture-of-experts coder with only about 2.5 billion active parameters per token, designed to run coding agents locally on a laptop. Recursive reports over 125 tokens per second on an M4 Pro MacBook Pro with its optimised engine, keeping source code on-device.",
+      "url": "https://forkast.news/recursive-si-launches-flint-40b-open-weights-that-run-on-the-developers-own-machine/"
     },
     {
-      "image": "https://ainewsround.com/storage/mcp/2026/10/Y4OdMFvKzQ46paoC3jgiYS5V3icdrnhM.webp",
-      "name": "DeepSeek V4.1-Flash-1017",
-      "summary": "DeepSeek shipped V4.1-Flash-1017, a new checkpoint of its low-cost long-context model with MIT-licensed open weights and improved scores across every official benchmark, including 77.0 on DeepSWE v1.1. The release also opens DeepSeek's Search and Fetch APIs to all developers at $0.75 per 1,000 calls.",
-      "url": "https://ainewsround.com/blog/deepseek-v41-flash-1017-adds-paid-search-api-and-tops-its-own-agent-benchmarks"
+      "image": "https://the-decoder.com/wp-content/uploads/2026/06/mistral-logo-wall-nano-banana-pro-scaled.jpg",
+      "name": "Mistral Voxtral 3",
+      "summary": "Mistral's Voxtral 3 family, released October 20, bundles speech-to-text and text-to-speech models with a LiveKit-based voice-agent SDK into one streaming pipeline for real-time voice agents. Transcription covers over 50 languages and text-to-speech over 35 languages, with agents able to call external systems mid-conversation.",
+      "url": "https://the-decoder.com/mistral-ai-launches-voxtral-3-a-full-voice-agent-stack-that-listens-thinks-and-talks-in-real-time/"
     }
   ]
 }

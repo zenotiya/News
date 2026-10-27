@@ -5,27 +5,27 @@
   "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-101809",
+      "id": "CVE-2026-110264",
       "cvss": 10.0,
-      "summary": "Unauthenticated remote takeover of Oracle E-Business Suite Workflow, exploitable over HTTP with no privileges or user interaction. Fixed in Oracle's October 2026 Critical Patch Update; EBS versions 12.2.3 to 12.2.15 are affected.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101809"
+      "summary": "An integer overflow when compiling a specially crafted regular expression lets an unauthenticated attacker execute arbitrary code on self-managed GitLab CE/EE, affecting all versions from 7.0 (2014) up to the fixed releases. There is no workaround: upgrade to 19.5.1, 19.4.3, 19.3.6 or the other patched lines; GitLab.com is already fixed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110264"
     },
     {
-      "id": "CVE-2026-97785",
+      "id": "CVE-2026-83938",
       "cvss": 10.0,
-      "summary": "Improper authentication in Microsoft's AAD App Proxy lets an unauthorized attacker elevate privileges over the network without authentication. One of several CVSS 10.0 flaws disclosed in the October 2026 round of Microsoft advisories.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97785"
+      "summary": "Missing authentication for a critical function in Microsoft Azure Kubernetes Configuration Service allows an unauthorized attacker to elevate privileges over a network, with no authentication or user interaction required.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83938"
     },
     {
-      "id": "CVE-2026-111406",
-      "cvss": 9.9,
-      "summary": "Unrestricted file upload in the WordPress MapSVG plugin (through 8.16.1) allows an attacker with low privileges to upload a web shell to the server. Site owners should update MapSVG past 8.16.1 immediately.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111406"
+      "id": "CVE-2026-110063",
+      "cvss": 10.0,
+      "summary": "Improper link resolution before file access ('link following') in VM Inspector for Azure Virtual Machines allows an unauthorized attacker to elevate privileges over a network.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110063"
     }
   ],
   "model": {
-    "name": "Nvidia Flora",
-    "summary": "Nvidia's GEAR lab open-sourced Flora, a trio of models that turn raw robot and human manipulation video into training labels — segmenting actions, captioning them, and scoring outcomes. Nvidia says the suite already labels 200,000 hours of video a day for its GR00T humanoid models at a claimed 125x lower cost than GPT-6 Astra.",
-    "url": "https://the-decoder.com/nvidia-open-sources-flora-to-make-robot-video-labeling-125x-cheaper-than-gpt-6-astra/"
+    "name": "OpenAI GPT-6.1 Terra",
+    "summary": "OpenAI's fast everyday-work model, launched October 26, combines visual reasoning with precise computer use and clearer writing at 50% lower standard API prices than GPT-5.6 Terra and GPT-6.1 Sol. It is available in ChatGPT Work and Codex and via the API as gpt-6.1-terra, and OpenAI says it finishes tasks over 3x faster than GPT-6 Astra and GPT-6.1 Sol.",
+    "url": "https://siliconangle.com/2026/10/26/openai-launches-gpt-6-1-terra-for-faster-better-performing-ai-agents-at-half-the-price/"
   }
 }
