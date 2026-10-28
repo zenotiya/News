@@ -1,6 +1,18 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "items": [
+    {
+      "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
+      "name": "Google DeepMind Genie 4",
+      "summary": "Google DeepMind's Genie 4, announced October 27, is a world model that generates interactive, photorealistic simulated environments in real time, with native audio — music, ambient sound and character dialogue — generated alongside the scene. Users steer it with keyboard controls and natural-language prompts; it is rolling out first as a research preview for trusted testers, then to Google AI Ultra subscribers in Project Genie.",
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+    },
+    {
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/644249b08443bce4c9890a0f/wEKXxH6qGa7vmHjn5KA-W.png",
+      "name": "Liquid AI LFM3",
+      "summary": "Liquid AI's LFM3, released October 27, is a family of six open-weight models in the 2-billion-parameter class — text, vision, audio, omni and two decision variants — all branched from one 1.7B base pre-trained on 22 trillion tokens. The text model has a 256K-token context and fits in about 1 GB at 4-bit precision, targeting on-device and edge deployment.",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm3"
+    },
     {
       "image": "https://images.siliconangle.com/blogs.dir/1/files/2026/10/Screenshot-from-2026-10-27-07-32-52.png",
       "name": "OpenAI GPT-6.1 Terra",
@@ -8,28 +20,16 @@
       "url": "https://siliconangle.com/2026/10/26/openai-launches-gpt-6-1-terra-for-faster-better-performing-ai-agents-at-half-the-price/"
     },
     {
-      "image": "https://plotly.com/cms/img/OkWYJreqV8gk4PdJ_kimi-k3-1-pro-data-analytics-benchmark-v3.png?auto=compress&fm=webp",
-      "name": "Moonshot AI Kimi K3.1 Pro",
-      "summary": "Moonshot's post-trained Kimi K3, released October 23, keeps 2.8 trillion total parameters (104 billion active) and a 1M-token context, scoring 55 on Artificial Analysis' Intelligence Index — fourth overall and the highest open-weight score recorded there. It costs $2/$10 per million tokens, with full open weights promised by November 4, 2026.",
-      "url": "https://plotly.com/blog/kimi-k3-1-pro-plotly-data-analytics-bench/"
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/vllm-sr/d3-ultra.png",
+      "name": "vLLM Semantic Router d3-ultra",
+      "summary": "vLLM Semantic Router's d3-ultra, opened October 26, is a 26-billion-parameter open (Apache-2.0) multimodal decision model that returns structured answers — choices, yes/no judgements and scores — for text, JSON, images and video instead of open-ended text. It is built for routing, ranking and evaluation inside larger AI systems, with a free API and self-hosting via Hugging Face.",
+      "url": "https://huggingface.co/vllm-sr/d3-ultra"
     },
     {
-      "image": "https://i0.wp.com/technode.com/wp-content/uploads/2026/10/feed-20261023-cn-363514.png?fit=1920%2C816&ssl=1",
-      "name": "MiniMax M3.1 Flash (open weights)",
-      "summary": "MiniMax published the weights for M3.1 Flash on October 23, four days after its API launch: a 428-billion-parameter mixture-of-experts model with 23 billion active per token, a 1M-token context, and text, image and video input. It is built for coding, agents and computer-use tasks, with deployment support for vLLM and SGLang.",
-      "url": "https://technode.com/2026/10/23/minimax-releases-open-weights-for-428-billion-parameter-m3-1-flash-model/"
-    },
-    {
-      "image": "https://forkast.news/wp-content/uploads/2026/10/hero-flint-40b-regen-1024x687.jpg",
-      "name": "Recursive Flint",
-      "summary": "Recursive's first model, released October 21 under Apache 2.0, is a 39.8-billion-parameter mixture-of-experts coder with only about 2.5 billion active parameters per token, designed to run coding agents locally on a laptop. Recursive reports over 125 tokens per second on an M4 Pro MacBook Pro with its optimised engine, keeping source code on-device.",
-      "url": "https://forkast.news/recursive-si-launches-flint-40b-open-weights-that-run-on-the-developers-own-machine/"
-    },
-    {
-      "image": "https://the-decoder.com/wp-content/uploads/2026/06/mistral-logo-wall-nano-banana-pro-scaled.jpg",
-      "name": "Mistral Voxtral 3",
-      "summary": "Mistral's Voxtral 3 family, released October 20, bundles speech-to-text and text-to-speech models with a LiveKit-based voice-agent SDK into one streaming pipeline for real-time voice agents. Transcription covers over 50 languages and text-to-speech over 35 languages, with agents able to call external systems mid-conversation.",
-      "url": "https://the-decoder.com/mistral-ai-launches-voxtral-3-a-full-voice-agent-stack-that-listens-thinks-and-talks-in-real-time/"
+      "image": "https://stackfutures.com/images/blog/openmobile-2-androidworld-79-9-gemini-beaten-open-agent-october-2026.png",
+      "name": "OpenMobile-2",
+      "summary": "OpenMobile-2, an open smartphone agent from researchers at Nanjing University, SenseTime and partner institutions, posted 79.9 on the AndroidWorld benchmark in results reported October 26, ahead of Google's Gemini 3.1 Pro Preview at 70.7. The 27-billion-parameter model, built on Qwen3.6-27B, is aimed at agents that operate phone apps through their screens.",
+      "url": "https://stackfutures.com/blog/openmobile-2-androidworld-79-9-gemini-beaten-open-agent-october-2026/"
     }
   ]
 }

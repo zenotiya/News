@@ -5,27 +5,27 @@
   "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-110264",
+      "id": "CVE-2026-105781",
       "cvss": 10.0,
-      "summary": "An integer overflow when compiling a specially crafted regular expression lets an unauthenticated attacker execute arbitrary code on self-managed GitLab CE/EE, affecting all versions from 7.0 (2014) up to the fixed releases. There is no workaround: upgrade to 19.5.1, 19.4.3, 19.3.6 or the other patched lines; GitLab.com is already fixed.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110264"
+      "summary": "Adobe Campaign Classic is affected by a SQL injection vulnerability that could result in arbitrary code execution in the context of the current user; an attacker could execute arbitrary SQL commands, potentially gaining elevated access or control over the victim's account or session.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105781"
     },
     {
-      "id": "CVE-2026-83938",
+      "id": "CVE-2026-116508",
       "cvss": 10.0,
-      "summary": "Missing authentication for a critical function in Microsoft Azure Kubernetes Configuration Service allows an unauthorized attacker to elevate privileges over a network, with no authentication or user interaction required.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83938"
+      "summary": "A stack-based buffer overflow in the TOTOLINK A950RG (4.1.2cu.5268_B20221104) Device-Information CGI, via manipulation of the CONTENT_LENGTH argument to infostat.cgi, can be exploited remotely; the exploit has been released to the public and may be used for attacks.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116508"
     },
     {
-      "id": "CVE-2026-110063",
-      "cvss": 10.0,
-      "summary": "Improper link resolution before file access ('link following') in VM Inspector for Azure Virtual Machines allows an unauthorized attacker to elevate privileges over a network.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110063"
+      "id": "CVE-2026-105489",
+      "cvss": 9.9,
+      "summary": "Adobe Campaign Classic is affected by a SQL injection vulnerability that could result in arbitrary code execution in the context of the current user; a low-privileged attacker could exploit it with no user interaction required, and the scope is changed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105489"
     }
   ],
   "model": {
-    "name": "OpenAI GPT-6.1 Terra",
-    "summary": "OpenAI's fast everyday-work model, launched October 26, combines visual reasoning with precise computer use and clearer writing at 50% lower standard API prices than GPT-5.6 Terra and GPT-6.1 Sol. It is available in ChatGPT Work and Codex and via the API as gpt-6.1-terra, and OpenAI says it finishes tasks over 3x faster than GPT-6 Astra and GPT-6.1 Sol.",
-    "url": "https://siliconangle.com/2026/10/26/openai-launches-gpt-6-1-terra-for-faster-better-performing-ai-agents-at-half-the-price/"
+    "name": "Google DeepMind Genie 4",
+    "summary": "Google DeepMind's Genie 4, announced October 27, is a world model that generates interactive, photorealistic simulated environments in real time, with native audio — music, ambient sound and character dialogue — generated alongside the scene. Users steer it with keyboard controls and natural-language prompts; it is rolling out first as a research preview for trusted testers, then to Google AI Ultra subscribers in Project Genie.",
+    "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
   }
 }

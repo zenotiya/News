@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "items": [
     {
       "cvss": 10.0,
-      "id": "CVE-2026-110264",
+      "id": "CVE-2026-105781",
       "severity": "Critical",
-      "summary": "An integer overflow when compiling a specially crafted regular expression lets an unauthenticated attacker execute arbitrary code on self-managed GitLab CE/EE, affecting all versions from 7.0 (2014) up to the fixed releases. There is no workaround: upgrade to 19.5.1, 19.4.3, 19.3.6 or the other patched lines; GitLab.com is already fixed.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110264"
+      "summary": "Adobe Campaign Classic is affected by a SQL injection vulnerability that could result in arbitrary code execution in the context of the current user; an attacker could execute arbitrary SQL commands, potentially gaining elevated access or control over the victim's account or session.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105781"
     },
     {
       "cvss": 10.0,
-      "id": "CVE-2026-83938",
+      "id": "CVE-2026-116508",
       "severity": "Critical",
-      "summary": "Missing authentication for a critical function in Microsoft Azure Kubernetes Configuration Service allows an unauthorized attacker to elevate privileges over a network, with no authentication or user interaction required.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83938"
-    },
-    {
-      "cvss": 10.0,
-      "id": "CVE-2026-110063",
-      "severity": "Critical",
-      "summary": "Improper link resolution before file access ('link following') in VM Inspector for Azure Virtual Machines allows an unauthorized attacker to elevate privileges over a network.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110063"
+      "summary": "A stack-based buffer overflow in the TOTOLINK A950RG (4.1.2cu.5268_B20221104) Device-Information CGI, via manipulation of the CONTENT_LENGTH argument to infostat.cgi, can be exploited remotely; the exploit has been released to the public and may be used for attacks.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116508"
     },
     {
       "cvss": 9.9,
-      "id": "CVE-2026-114625",
+      "id": "CVE-2026-105489",
       "severity": "Critical",
-      "summary": "SQL injection in on-premises Arista VeloCloud Orchestrator can let a remote attacker access privileged internal functionality. CISA added it to the Known Exploited Vulnerabilities catalog on October 23 after confirmed active exploitation; fixes are in versions 5.2.3.18, 6.1.3.10 and 6.4.2.12.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114625"
+      "summary": "Adobe Campaign Classic is affected by a SQL injection vulnerability that could result in arbitrary code execution in the context of the current user; a low-privileged attacker could exploit it with no user interaction required, and the scope is changed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105489"
     },
     {
-      "cvss": 9.9,
-      "id": "CVE-2026-115384",
+      "cvss": 9.8,
+      "id": "CVE-2026-117532",
       "severity": "Critical",
-      "summary": "A stack buffer overflow in Wasmtime lets a malicious WebAssembly guest write about 16KB to the native stack via unvalidated async callback result types, potentially crashing the host or escaping the sandbox. It affects Wasmtime 39.0.0 before 48.0.4 and 49.0.0 before 49.0.2; update to a fixed release.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115384"
+      "summary": "REDAXO core from 5.3.0 before 5.21.4 contains an authentication bypass in the structure/history plugin that allows unauthenticated attackers to forge temporary login tokens, forcing the session-tied secret into a predictable state to gain backend access as accounts like admin and code execution outside live mode.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117532"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-112346",
+      "severity": "Critical",
+      "summary": "OpenHands Software Agent SDK before 1.52.0 contains an unauthenticated remote code execution vulnerability: the DockerWorkspace and Apptainer workspace launchers bind the sandbox agent server to all network interfaces (0.0.0.0) with an empty session API keys list, disabling authentication by default for anyone who can reach the published container port.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112346"
     }
   ]
 }
