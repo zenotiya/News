@@ -1,33 +1,43 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "sections": [
     {
       "items": [
         {
-          "action": "Patch internet-facing PHP to a fixed release now and check for signs of compromise; treat Apache mod_php as highest risk.",
-          "details": "Both are unauthenticated remote code execution flaws (CVSS 9.2 each) in PHP's request handling. Fixed releases are PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35; CISA directs agencies that cannot patch immediately to take PHP systems offline.",
+          "action": "Patch internet-facing PHP to a fixed release now and hunt for signs of compromise; treat Apache mod_php deployments as highest risk.",
+          "details": "The flaws allow unauthenticated remote code execution and are reported at CVSS 9.2. Fixed releases are PHP 8.2.35, 8.3.36, 8.4.27 and 8.5.12; exploitation leading to remote code execution was detected against an Apache mod_php installation in a honeypot on October 25.",
+          "image": "https://www.arpatech.com/wp-content/uploads/2017/02/php-blunders.png",
           "severity": "Critical",
-          "summary": "CISA added PHP flaws CVE-2026-109618 and CVE-2026-109619 to its Known Exploited Vulnerabilities catalog on Oct 26, classifying them as exploited in the wild.",
-          "title": "CISA adds PHP2Shell flaws to KEV; federal deadline Oct 29",
-          "url": "https://undercodenews.com/php2shell-escalates-cisa-adds-two-critical-php-remote-code-execution-flaws-to-its-kev-catalog-video/",
-          "image": "https://www.arpatech.com/wp-content/uploads/2017/02/php-blunders.png"
+          "summary": "CISA added the PHP2Shell vulnerabilities CVE-2026-109618 and CVE-2026-109619 to its Known Exploited Vulnerabilities catalogue after confirming live exploitation, with a patch deadline of Thursday, October 29 for US federal civilian agencies.",
+          "title": "CISA adds PHP2Shell flaws to KEV; patch by Oct 29",
+          "url": "https://www.computerweekly.com/news/366652834/PHP2Shell-US-updates-Kev-catalogue-as-exploits-spread"
         },
         {
-          "action": "Apply the PAN-OS hotfix for your branch and update Node.js runtimes and Brotli libraries to patched versions.",
-          "details": "The out-of-bounds write in Google Brotli lets a remote unauthenticated attacker corrupt decoder memory, disclose memory contents, cause denial of service, or potentially execute code. Node.js patched the same flaw in 22.23.4, 24.22.1 and 26.12.1; PAN-OS 11.1 and 10.2 are not affected.",
+          "action": "Update NeMo Agent Toolkit to 1.9.0 and TensorRT-LLM to 1.3.0rc25, and restrict any unpatched toolkit instances from untrusted networks.",
+          "details": "According to NVIDIA, the flaw could lead to code execution, privilege escalation, data tampering, denial of service and information disclosure. The update fixes six flaws in total across NeMo Agent Toolkit, TensorRT-LLM and PhysX; no active exploitation was confirmed in the reporting.",
+          "image": "https://securityonline.info/wp-content/uploads/2026/10/Nvidia-1.webp",
           "severity": "Critical",
-          "summary": "Palo Alto Networks confirmed on Oct 26 that the Brotli decoder flaw CVE-2026-111497 (CVSS 9.2) affects PAN-OS 12.2, 12.1 and 11.2.",
-          "title": "Node2Shell Brotli flaw confirmed in PAN-OS; patch now",
-          "url": "https://securityonline.info/pan-os-brotli-vulnerability-cve-2026-111497/",
-          "image": "https://ultimatepocket.com/wp-content/uploads/2026/09/jsnode-768x401.jpg"
+          "summary": "NVIDIA's October 27 security update patches CVE-2026-65145, a missing-authentication flaw in NeMo Agent Toolkit scored CVSS 10.0 that lets a remote attacker act with no login.",
+          "title": "NVIDIA patches CVSS 10.0 flaw in NeMo Agent Toolkit",
+          "url": "https://securityonline.info/nemo-agent-toolkit-vulnerability-cve-2026-65145/"
         },
         {
-          "action": "Upgrade self-managed GitLab to the fixed build for your release line, starting with internet-facing servers; Oct 12 patch builds are still vulnerable.",
-          "details": "An integer overflow in the Onigmo regex engine, reached by rendering a crafted .org file, affects self-managed GitLab CE/EE back to version 7.0. Fixed in 19.5.1, 19.4.3, 19.3.6 and backports to 18.11.13; GitLab.com is already patched.",
+          "action": "Upgrade MLflow to 3.17.0 and never expose an unauthenticated MLflow server to untrusted networks.",
+          "details": "The flaw affects MLflow 3.12.0rc0 through versions before 3.17.0. On the default no-auth server using the official MLflow image, exploitation produced arbitrary Python code execution as the server process, which runs as root in the reproduced image. The same October 27 disclosure included an arbitrary file-read flaw (CVE-2026-116690, CVSS 7.5) and an API-key logging flaw (CVE-2026-116691).",
+          "image": "https://vectorwire.ai/img/aa151f05-fca4-473e-9653-8a5848aad709?ar=16x9",
           "severity": "Critical",
-          "summary": "GitLab's CVE-2026-110264, rated CVSS 10.0, lets an unauthenticated attacker run code on self-managed GitLab servers and was reiterated in Oct 26 threat briefings.",
-          "title": "GitLab CVSS 10.0 flaw still top patch priority",
-          "url": "https://www.techtarget.com/cybersecurity/news/366652429/Max-severity-GitLab-flaw-lets-attackers-run-code-on-servers"
+          "summary": "CVE-2026-116692, disclosed October 27, lets an unauthenticated attacker achieve remote code execution on MLflow servers through third-party scorer deserialization; it is patched in MLflow 3.17.0.",
+          "title": "Critical MLflow RCE gives root on unauthenticated servers",
+          "url": "https://vectorwire.ai/article/critical-mlflow-rce-gives-root-on-unauthenticated-servers-7f9e5e"
+        },
+        {
+          "action": "Check device firmware for GoAhead 6.1.1 or later and press vendors for updated firmware, especially for equipment using mutual TLS.",
+          "details": "The most severe is CVE-2026-115881 (CVSS 9.1): GoAhead loads a certificate revocation list but never enables revocation checking on OpenSSL-compatible builds. The other two score 7.4 and 5.9. All are fixed in GoAhead 6.1.1, released to device makers on August 2 with advisories published October 12; GoAhead runs in hundreds of millions of devices from vendors including Palo Alto Networks, Siemens, Honeywell and Boeing.",
+          "image": "https://framerusercontent.com/images/PZZxAfRozIks13F8wNYf8GKDve0.png",
+          "severity": "Critical",
+          "summary": "Three TLS integration flaws in the GoAhead embedded web server, disclosed by FoxIO on October 26, can leave revoked client certificates accepted, encrypted sessions recoverable, or a chain-depth limit unenforced, depending on the TLS backend built into the device.",
+          "title": "GoAhead TLS flaws put hundreds of millions of devices at risk",
+          "url": "https://foxio.io/blog/choose-your-backend-three-tls-bugs-in-goahead"
         }
       ],
       "title": "Act on Today"
@@ -35,31 +45,31 @@
     {
       "items": [
         {
-          "action": "Patch known-exploited edge flaws, enforce MFA on VPNs, segment networks, and keep offline, immutable backups with tested recovery.",
-          "details": "SafePay gains access via stolen or guessed credentials, phishing and brute force, plus five older edge-device flaws in Cisco ASA, Veeam and SonicWall gear. Operators use legitimate admin tools, steal data, encrypt files with a .SafePay extension, and deliberately destroy backups including shadow copies.",
-          "severity": "High",
-          "summary": "US, German and UK agencies' joint advisory AA26-293A (Oct 20) ties SafePay ransomware to at least 600 victims across critical-infrastructure sectors since August 2024.",
-          "title": "SafePay ransomware hit at least 600 victims, joint advisory warns",
-          "url": "https://securityonline.info/safepay-ransomware-cisa-advisory/",
-          "image": "https://www.itsec.ru/hs-fs/hubfs/ISR/hack71-Sep-17-2021-11-23-03-41-AM.jpg?width=450&name=hack71-Sep-17-2021-11-23-03-41-AM.jpg"
+          "action": "Customers should follow GMO's guidance on scanning, backing up and disconnecting affected devices, and should not share any disclosed information.",
+          "details": "The access targeted the Onamae.com Desktop Cloud service, with up to 26,739 servers potentially affected. GMO said the attackers claim they will keep releasing information daily at noon; it will offer a special consolation payment of up to 3 million yen to customers whose personal information is exposed and a reward of up to $1 million for information identifying the perpetrators.",
+          "image": "https://www.nippon.com/en/ncommon/contents/news/3094393/3094393.jpg",
+          "severity": "Critical",
+          "summary": "GMO Internet said on October 27 that personal information believed to belong to a customer was disclosed by those behind unauthorised access to its systems, after the company did not meet a noon deadline tied to a $50 million cryptocurrency demand it refuses to pay.",
+          "title": "GMO customer data disclosed after $50 million demand refused",
+          "url": "https://www.nippon.com/en/news/yjj2026102700370/"
         },
         {
-          "action": "Treat legal-sector leak-site listings as exposure risk: monitor for client data exposure and review third-party and vendor access.",
-          "details": "The listing was tracked via ransomware.live; no technical details on initial access, affected systems or data scope have been published, and the claim itself is unverified by the firm.",
+          "action": "Affected customers should change reused passwords and watch for phishing using the exposed personal details.",
+          "details": "The exposed records include names, telephone numbers, email addresses, user IDs, dates of birth, gender and internet connection IDs, and 16 sets of bank account details. The company said passwords for the general membership records were not leaked and no credit-card data was involved; the access occurred on October 19 and PlayStation Network accounts were not affected.",
+          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbvWvgGiiEqFS7O-Sme6ProJxPjWMN0xuj5agUQp3pIZl3LrJzMIk8qjN2EA6xkbLufr-kkkU1zVIsX4gFQClKAj5unzcClM4b5rJ5IPujbAwXhOjCkEePaQfECJSYKgN3sOa6z2H-ZuzgBlSTgkt_IP9Fy_FLo3UFclg5bAdsKydR8Fj7vCkvTPGPhuc/w1280-h720-p-k-no-nu/Sony%20Network%20Communications%20Data%20Breach%20Exposes%20Over%202.58%20Million%20So%20net%20Customer%20Records.webp",
           "severity": "High",
-          "summary": "Silentransomgroup listed New York law firm Morrison Cohen on its leak site on Oct 26, 2026, in a double-extortion ransomware claim.",
-          "title": "Law firm Morrison Cohen listed by Silentransomgroup",
-          "url": "https://www.hookphish.com/blog/ransomware-group-silentransomgroup-hits-morrison-cohen/",
-          "image": "https://cdn.prod.website-files.com/60dde6ff658d917f6e8be44c/632b749ba933637160c3b1b5_UH_Law_Building_081922-1.webp"
+          "summary": "Sony Network Communications disclosed on October 27 that unauthorised access to its So-net member database exposed 2,585,481 member records across So-net and plala S Course, plus email addresses and passwords for 54,401 email accounts.",
+          "title": "Sony Network Communications discloses breach of 2.58 million records",
+          "url": "https://www.technetbooks.com/2026/10/sony-network-communications-data-breach.html"
         },
         {
-          "action": "Rotate long-lived service and machine accounts, audit admin-side accounts, and revoke stale credentials.",
-          "details": "The group alleges entry via an unrotated internal machine account with admin reach, following a separate hot-wallet incident; the claim and figures are unverified.",
+          "action": "Treat the listing as an unverified claim; affected organisations should verify independently before acting on the alleged data categories.",
+          "details": "The claim, as reported from the leak-site listing, describes social-welfare and migration client files, nursing-home medical files, civil-status records, payslips and database backups. The claim remains unverified and no independent confirmation from the municipality was cited in the reporting.",
+          "image": "https://www.commvault.com/wp-content/uploads/2025/08/ransomware-img-3.jpg?width=960&format=auto",
           "severity": "High",
-          "summary": "Whitearmor claims to hold Gamdom's full user database — 15,420,003 accounts — and is demanding $15 million in BTC, per an Oct 27 report of the Oct 26 claim.",
-          "title": "Gamdom hit by Whitearmor claim: 15.4M accounts alleged",
-          "url": "https://www.hookphish.com/blog/ransomware-group-whitearmor-hits-gamdom/",
-          "image": "https://balatacamp.net/wp-content/uploads/2025/06/online-casino-real-money-cash-games-768x768.jpg"
+          "summary": "Rhysida listed the Belgian municipality of Machelen on its leak site on October 27, claiming about 1.3 million files totalling roughly 2.9 TB from municipal and social-welfare (OCMW) file servers.",
+          "title": "Rhysida lists Belgian municipality of Machelen (claim)",
+          "url": "https://www.hookphish.com/blog/ransomware-group-rhysida-hits-machelen-belgium/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -67,36 +77,36 @@
     {
       "items": [
         {
-          "action": "Check for reliance on affected eMudhra intermediates and replace certificates as directed; do not dismiss the issue because browsers updated.",
-          "details": "CERT-In said affected keys had values smaller than 256, making them easy to recover. eMudhra said it found no infrastructure or customer-data compromise, that its signature and eSign services were unaffected, and that browsers blocked the affected certificates.",
+          "action": "Hospitals should isolate affected systems, preserve logs for investigators, and verify backups before any restore.",
+          "details": "A notepad message on screen identified the group as 'Crypto 24' and claimed sensitive data had been stolen and encrypted, with a 3-to-7-day ultimatum and a threat to leak data on a Tor site. Police said the complaint does not disclose the amount of ransom allegedly demanded.",
+          "image": "https://static.toiimg.com/thumb/msid-135243175,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg",
           "severity": "High",
-          "summary": "On Oct 26, Indian trust provider eMudhra apologised after a script error produced weak private keys for eight intermediate certificate authorities, including one with a numerical value of just four.",
-          "title": "eMudhra apologises over weak certificate keys",
-          "url": "https://www.opindia.com/2026/10/emudhras-certificate-crisis-exposes-webs-fragile-foundations/",
-          "image": "https://imperiacvetov.kz/image/ssl-certificate.webp"
+          "summary": "A cyberattack in the early hours of October 18 encrypted all nine servers at Kamalnayan Bajaj Hospital in Chhatrapati Sambhajinagar, disrupting its hospital management system, billing, insurance claims and government-scheme benefits; the incident was reported on October 27.",
+          "title": "Ransomware attack encrypts 9 servers at Kamalnayan Bajaj Hospital",
+          "url": "https://timesofindia.indiatimes.com/city/aurangabad/cyber-attack-cripples-services-at-kamalnayan-bajaj-hospital-billing-insurance-claims-hit/articleshow/135243178.cms"
         },
         {
-          "action": "Public-sector teams should prioritise PHP patching and compromise checks on all internet-facing portals.",
-          "details": "State government portals, district sites, municipal services and grievance systems widely rely on PHP-based CMSs and frameworks, making the PHP2Shell flaws a broad exposure for public services.",
-          "severity": "High",
-          "summary": "Cert-In is coordinating with state IT departments to patch thousands of government websites against the critical PHP flaws, officials told The Economic Times on Oct 27.",
-          "title": "Cert-In and states rush to patch PHP flaws on govt portals",
-          "url": "https://economictimes.indiatimes.com/tech/technology/cert-in-and-states-rush-to-patch-php-flaws-across-govt-portals/articleshow/135216600.cms",
-          "image": "https://cryptospiel.com/wp-content/uploads/2022/03/India_Government.jpg"
+          "action": "Apply the out-of-band update (KB5134133 for Windows 11 24H2/25H2/26H2, KB5134125 for Windows 10 21H2/22H2) on systems without automatic trust updates and check dependent certificates.",
+          "details": "The same seven certificates were scheduled for removal from the Edge trust list on October 27. The updates are aimed particularly at systems that cannot receive automatic certificate trust updates, such as disconnected environments; organisations using certificates chaining to the removed roots should inventory them and arrange replacements.",
+          "image": "https://image.theregister.com/5302230.jpg?imageId=5302230&x=0&y=5.75&cropw=100&croph=49.43&panox=0&panoy=5.75&panow=100&panoh=49.43&width=1200&height=683",
+          "severity": "Critical",
+          "summary": "Microsoft released out-of-band Windows updates on October 26 removing seven certificates — six eMudhra G3 roots and an AAA Certificate Services cross-sign — from the Windows trust list, following the exposure of eight weak eMudhra intermediate CA private keys.",
+          "title": "Microsoft's out-of-band update removes trust in 7 eMudhra certificates",
+          "url": "https://www.theregister.com/security/2026/10/27/microsoft-releases-out-of-band-windows-fixes-with-certificate-updates/5305637"
         },
         {
-          "action": "Monitor for corroboration or official comment before treating this as a confirmed incident.",
-          "details": "The report provides no independently verified evidence of a compromise, affected systems, data involved or publication — treat it as an early-warning indicator, not a confirmed breach.",
-          "severity": "Medium",
-          "summary": "ThreatMon reported on Oct 26 that ScarlettGroup claimed Rajasthan Police as a new victim; no systems, data or intrusion details have been confirmed.",
-          "title": "ScarlettGroup claims Rajasthan Police as victim (unverified)",
-          "url": "https://undercodenews.com/scarlettgroup-claims-rajasthan-police-as-a-victim-as-qilin-reports-another-alleged-target-video/",
-          "image": "https://en-media.thebetterindia.com/uploads/2017/09/indian-police.jpg"
+          "action": "Update Chrome to the latest available version on all desktops and prioritise systems where browsing is used for sensitive work.",
+          "details": "The advisory lists use-after-free errors, memory corruption, improper input validation, out-of-bounds read and write, type confusion, range errors and information leaks. An attacker could exploit the flaws by getting a user to open a specially crafted web request.",
+          "image": "https://images.gizbot.com/img/2026/10/chrome-certin-lead-1200x675-64111793091766.jpg",
+          "severity": "Critical",
+          "summary": "CERT-In's advisory CIVN-2026-0524, published October 26, rates several Chrome vulnerabilities on Windows, macOS and Linux as critical and warns they could allow arbitrary code execution, information disclosure, security bypass or denial of service.",
+          "title": "CERT-In flags critical Chrome flaws; update now",
+          "url": "https://www.gizbot.com/news/google-chrome-users-on-windows-beware-cert-in-flags-critical-security-flaws-129459.html"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Tuesday, October 27 — Here's what's worth your attention today.",
+  "subtitle": "Wednesday, October 28 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
