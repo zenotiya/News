@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-10-29",
   "items": [
     {
       "cvss": 10.0,
-      "id": "CVE-2026-105781",
+      "id": "CVE-2026-65145",
       "severity": "Critical",
-      "summary": "Adobe Campaign Classic is affected by a SQL injection vulnerability that could result in arbitrary code execution in the context of the current user; an attacker could execute arbitrary SQL commands, potentially gaining elevated access or control over the victim's account or session.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105781"
-    },
-    {
-      "cvss": 10.0,
-      "id": "CVE-2026-116508",
-      "severity": "Critical",
-      "summary": "A stack-based buffer overflow in the TOTOLINK A950RG (4.1.2cu.5268_B20221104) Device-Information CGI, via manipulation of the CONTENT_LENGTH argument to infostat.cgi, can be exploited remotely; the exploit has been released to the public and may be used for attacks.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116508"
+      "summary": "NVIDIA NeMo Agent Toolkit contains a missing-authentication flaw that lets a remote attacker access the toolkit without logging in, potentially leading to code execution, privilege escalation, data tampering, denial of service and information disclosure. Fixed in NeMo Agent Toolkit 1.9.0.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65145"
     },
     {
       "cvss": 9.9,
-      "id": "CVE-2026-105489",
+      "id": "CVE-2026-104351",
       "severity": "Critical",
-      "summary": "Adobe Campaign Classic is affected by a SQL injection vulnerability that could result in arbitrary code execution in the context of the current user; a low-privileged attacker could exploit it with no user interaction required, and the scope is changed.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105489"
+      "summary": "Adobe Campaign Classic is affected by a code-injection vulnerability that could result in arbitrary code execution in the context of the current user; a low-privileged attacker could exploit it with no user interaction required. Fixed in Campaign Classic 7.4.4 build 9403 (APSB26-162).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104351"
+    },
+    {
+      "cvss": 9.9,
+      "id": "CVE-2026-104353",
+      "severity": "Critical",
+      "summary": "Adobe Campaign Classic is affected by an OS command-injection vulnerability that could result in arbitrary code execution in the context of the current user; a low-privileged attacker could exploit it with no user interaction required. Fixed in Campaign Classic 7.4.4 build 9403 (APSB26-162).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104353"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-117532",
+      "id": "CVE-2026-86400",
       "severity": "Critical",
-      "summary": "REDAXO core from 5.3.0 before 5.21.4 contains an authentication bypass in the structure/history plugin that allows unauthenticated attackers to forge temporary login tokens, forcing the session-tied secret into a predictable state to gain backend access as accounts like admin and code execution outside live mode.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117532"
+      "summary": "Dell PowerProtect Data Domain contains an improper-authentication vulnerability that lets an unauthenticated attacker with remote access exploit it to run arbitrary commands with root privileges. Upgrade to a fixed DD OS release (DSA-2026-416) at the earliest opportunity.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86400"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-112346",
+      "id": "CVE-2026-103406",
       "severity": "Critical",
-      "summary": "OpenHands Software Agent SDK before 1.52.0 contains an unauthenticated remote code execution vulnerability: the DockerWorkspace and Apptainer workspace launchers bind the sandbox agent server to all network interfaces (0.0.0.0) with an empty session API keys list, disabling authentication by default for anyone who can reach the published container port.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112346"
+      "summary": "An OS command-injection vulnerability in the AutomatedProvisioner in Juniper Networks Session Smart Conductor allows a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID. Apply Juniper's fix (JSA112183) and restrict remote access where possible.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103406"
     }
   ]
 }

@@ -5,27 +5,27 @@
   "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-105781",
+      "id": "CVE-2026-65145",
       "cvss": 10.0,
-      "summary": "Adobe Campaign Classic is affected by a SQL injection vulnerability that could result in arbitrary code execution in the context of the current user; an attacker could execute arbitrary SQL commands, potentially gaining elevated access or control over the victim's account or session.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105781"
+      "summary": "NVIDIA NeMo Agent Toolkit contains a missing-authentication flaw that lets a remote attacker access the toolkit without logging in, potentially leading to code execution, privilege escalation, data tampering, denial of service and information disclosure. Fixed in NeMo Agent Toolkit 1.9.0.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65145"
     },
     {
-      "id": "CVE-2026-116508",
-      "cvss": 10.0,
-      "summary": "A stack-based buffer overflow in the TOTOLINK A950RG (4.1.2cu.5268_B20221104) Device-Information CGI, via manipulation of the CONTENT_LENGTH argument to infostat.cgi, can be exploited remotely; the exploit has been released to the public and may be used for attacks.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116508"
-    },
-    {
-      "id": "CVE-2026-105489",
+      "id": "CVE-2026-104351",
       "cvss": 9.9,
-      "summary": "Adobe Campaign Classic is affected by a SQL injection vulnerability that could result in arbitrary code execution in the context of the current user; a low-privileged attacker could exploit it with no user interaction required, and the scope is changed.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105489"
+      "summary": "Adobe Campaign Classic is affected by a code-injection vulnerability that could result in arbitrary code execution in the context of the current user; a low-privileged attacker could exploit it with no user interaction required. Fixed in Campaign Classic 7.4.4 build 9403 (APSB26-162).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104351"
+    },
+    {
+      "id": "CVE-2026-104353",
+      "cvss": 9.9,
+      "summary": "Adobe Campaign Classic is affected by an OS command-injection vulnerability that could result in arbitrary code execution in the context of the current user; a low-privileged attacker could exploit it with no user interaction required. Fixed in Campaign Classic 7.4.4 build 9403 (APSB26-162).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104353"
     }
   ],
   "model": {
-    "name": "Google DeepMind Genie 4",
-    "summary": "Google DeepMind's Genie 4, announced October 27, is a world model that generates interactive, photorealistic simulated environments in real time, with native audio — music, ambient sound and character dialogue — generated alongside the scene. Users steer it with keyboard controls and natural-language prompts; it is rolling out first as a research preview for trusted testers, then to Google AI Ultra subscribers in Project Genie.",
-    "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+    "name": "Google Gemini 4 Carbon",
+    "summary": "Google DeepMind's Gemini 4 Carbon, announced October 28, is its strongest frontier model yet, built for long-horizon engineering and cybersecurity defence: it ranks #1 on the Artificial Analysis Intelligence Index (59) and leads SEC-bench Pro (88.2%), ExploitGym (54.8%) and CWE-bench (71.0%). It is rolling out first to a subset of cyber defenders through the Fairwind Program, at $2/$10 per million input/output tokens introductory pricing.",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
   }
 }
