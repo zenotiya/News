@@ -1,29 +1,29 @@
 {
-  "date": "2026-10-29",
+  "date": "2026-10-30",
   "items": [
     {
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_carbon_102726_header.width-200.format-webp.webp",
-      "name": "Google Gemini 4 Carbon",
-      "summary": "Google DeepMind's Gemini 4 Carbon, announced October 28, is its strongest frontier model yet, built for long-horizon engineering and cybersecurity defence: it ranks #1 on the Artificial Analysis Intelligence Index (59) and leads SEC-bench Pro (88.2%), ExploitGym (54.8%) and CWE-bench (71.0%). It is rolling out first to a subset of cyber defenders through the Fairwind Program, at $2/$10 per million input/output tokens introductory pricing.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+      "name": "Mistral Large 4 open weights (Le Chonk)",
+      "summary": "Mistral released the open weights of its improved 1-trillion-parameter flagship on October 29, three weeks after its October 6 preview. The natively multimodal mixture-of-experts model (52 billion active parameters, 1-million-token context) leads open-weight coding benchmarks including FrontierCode 2.0 (19.7%) and can now be self-hosted under the Mistral Ecosystem Open-Weight Licence.",
+      "url": "https://mistral.ai/news/mistral-large-4-oss/",
+      "image": "https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp"
     },
     {
-      "image": "https://cdn-uploads.huggingface.co/production/uploads/68127936de624fb6f57d9989/vGIg17AxweCAnacvnPOet.png",
-      "name": "NVIDIA Nemotron 3.5 Transcribe",
-      "summary": "NVIDIA's Nemotron 3.5 Transcribe, released October 28, is an open-weight speech model that combines transcription in 40 languages, translation in 31 languages, speaker attribution for up to eight speakers, and audio question-answering in a single checkpoint. It ships alongside Granary v2, an open data-curation pipeline covering 463,062 hours of speech across 48 languages.",
-      "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
+      "name": "GitHub Copilot Fusion",
+      "summary": "GitHub made Copilot Fusion generally available on October 28: instead of picking a model per task, developers choose an effort level (Standard, High or Max) and Copilot routes and orchestrates models for each task. GitHub says Fusion Max scored 60 on the Artificial Analysis Coding Agent Index, near Claude Code with Opus 5.5 Max, at about half the API cost per task.",
+      "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/",
+      "image": "https://github.blog/wp-content/uploads/2026/11/683299408-b1d020a6-0c6d-49a5-ab57-5434d64fb7f9.png"
     },
     {
-      "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
-      "name": "Google DeepMind Genie 4",
-      "summary": "Google DeepMind's Genie 4, announced October 27, is a world model that generates interactive, photorealistic simulated environments in real time, with native audio — music, ambient sound and character dialogue — generated alongside the scene. Users steer it with keyboard controls and natural-language prompts; it is rolling out first as a research preview for trusted testers, then to Google AI Ultra subscribers in Project Genie.",
-      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+      "name": "Liquid AI LFM3",
+      "summary": "Liquid AI announced LFM3 on October 27, a family of six open-weight models of around 2 billion parameters — text, vision, audio, omni and two decision models — all branched from one shared backbone trained on 22 trillion tokens. Built for on-device agents, the 1.7B text model fits in about 1 GB of memory at 4-bit precision with a 256K-token context window.",
+      "url": "https://www.liquid.ai/blog/lfm3",
+      "image": "https://www.liquid.ai/og/og-default.jpg"
     },
     {
-      "image": "https://images.siliconangle.com/blogs.dir/1/files/2026/10/Screenshot-from-2026-10-27-07-32-52.png",
-      "name": "OpenAI GPT-6.1 Terra",
-      "summary": "OpenAI's fast everyday-work model, launched October 26, combines visual reasoning with precise computer use and clearer writing at 50% lower standard API prices than GPT-5.6 Terra and GPT-6.1 Sol. It is available in ChatGPT Work and Codex and via the API as gpt-6.1-terra, and OpenAI says it finishes tasks over 3x faster than GPT-6 Astra and GPT-6.1 Sol.",
-      "url": "https://openai.com/index/introducing-gpt-6-1-terra/"
+      "name": "Baseten joey-1",
+      "summary": "Baseten released joey-1 on October 29, a 2B-parameter open-weight decision model that returns a calibrated label and confidence score instead of generated text, for high-volume routing, classification and guardrail checks. Post-trained from Qwen3.5-2B, it costs $0.01 per million tokens with a reported 20 ms P50 latency, and its weights are on Hugging Face under the MIT licence.",
+      "url": "https://www.baseten.co/blog/decisions-for-a-penny-introducing-joey-1/",
+      "image": "https://www.datocms-assets.com/104802/1793290906-li-image_joey-1-1.png?auto=compress,format&fit=crop&h=630&q=75&w=1200"
     }
   ]
 }

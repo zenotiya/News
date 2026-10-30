@@ -5,27 +5,27 @@
   "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-65145",
+      "id": "CVE-2026-84295",
       "cvss": 10.0,
-      "summary": "NVIDIA NeMo Agent Toolkit contains a missing-authentication flaw that lets a remote attacker access the toolkit without logging in, potentially leading to code execution, privilege escalation, data tampering, denial of service and information disclosure. Fixed in NeMo Agent Toolkit 1.9.0.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65145"
+      "summary": "Improper authentication in Progress WS_FTP Server versions prior to 2024.0.6 and 2025.0.3 on Windows could allow an unauthenticated remote attacker to access sensitive information, including administrative credentials. Upgrade to a fixed WS_FTP Server release.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84295"
     },
     {
-      "id": "CVE-2026-104351",
+      "id": "CVE-2026-90868",
       "cvss": 9.9,
-      "summary": "Adobe Campaign Classic is affected by a code-injection vulnerability that could result in arbitrary code execution in the context of the current user; a low-privileged attacker could exploit it with no user interaction required. Fixed in Campaign Classic 7.4.4 build 9403 (APSB26-162).",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104351"
+      "summary": "An OS command injection vulnerability in Progress WS_FTP Server versions prior to 2024.0.7 and 2025.0.4 on Windows could allow arbitrary command execution under certain configurations. Upgrade to WS_FTP Server 2024.0.7 or 2025.0.4.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90868"
     },
     {
-      "id": "CVE-2026-104353",
-      "cvss": 9.9,
-      "summary": "Adobe Campaign Classic is affected by an OS command-injection vulnerability that could result in arbitrary code execution in the context of the current user; a low-privileged attacker could exploit it with no user interaction required. Fixed in Campaign Classic 7.4.4 build 9403 (APSB26-162).",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104353"
+      "id": "CVE-2026-98432",
+      "cvss": 9.8,
+      "summary": "A use-after-free in the Linux kernel's IPv4 TCP handshake code could allow a remote unauthenticated attacker to trigger memory corruption; the kernel CNA rates it 9.8. An upstream fix exists, but as of October 29 Ubuntu and RHEL had not yet shipped fixed kernels, so track distro advisories and patch when available.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98432"
     }
   ],
   "model": {
-    "name": "Google Gemini 4 Carbon",
-    "summary": "Google DeepMind's Gemini 4 Carbon, announced October 28, is its strongest frontier model yet, built for long-horizon engineering and cybersecurity defence: it ranks #1 on the Artificial Analysis Intelligence Index (59) and leads SEC-bench Pro (88.2%), ExploitGym (54.8%) and CWE-bench (71.0%). It is rolling out first to a subset of cyber defenders through the Fairwind Program, at $2/$10 per million input/output tokens introductory pricing.",
-    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+    "name": "Mistral Large 4 open weights (Le Chonk)",
+    "summary": "Mistral released the open weights of its improved 1-trillion-parameter flagship on October 29, three weeks after its October 6 preview. The natively multimodal mixture-of-experts model (52 billion active parameters, 1-million-token context) leads open-weight coding benchmarks including FrontierCode 2.0 (19.7%) and can now be self-hosted under the Mistral Ecosystem Open-Weight Licence.",
+    "url": "https://mistral.ai/news/mistral-large-4-oss/"
   }
 }
