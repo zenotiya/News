@@ -1,29 +1,35 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-10-31",
   "items": [
     {
-      "name": "Mistral Large 4 open weights (Le Chonk)",
-      "summary": "Mistral released the open weights of its improved 1-trillion-parameter flagship on October 29, three weeks after its October 6 preview. The natively multimodal mixture-of-experts model (52 billion active parameters, 1-million-token context) leads open-weight coding benchmarks including FrontierCode 2.0 (19.7%) and can now be self-hosted under the Mistral Ecosystem Open-Weight Licence.",
-      "url": "https://mistral.ai/news/mistral-large-4-oss/",
-      "image": "https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp"
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_carbon_102726_social_share.width-1300.png",
+      "name": "Gemini 4 Carbon",
+      "summary": "Google announced Gemini 4 Carbon on October 28 as its strongest model, with state-of-the-art cybersecurity and long-horizon capabilities, ranking first on the Artificial Analysis Intelligence Index v5.0 at 59. Rollout starts with a subset of cyber defenders through the Fairwind Program, with no date yet for developers, businesses or consumers.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
     },
     {
-      "name": "GitHub Copilot Fusion",
-      "summary": "GitHub made Copilot Fusion generally available on October 28: instead of picking a model per task, developers choose an effort level (Standard, High or Max) and Copilot routes and orchestrates models for each task. GitHub says Fusion Max scored 60 on the Artificial Analysis Coding Agent Index, near Claude Code with Opus 5.5 Max, at about half the API cost per task.",
-      "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/",
-      "image": "https://github.blog/wp-content/uploads/2026/11/683299408-b1d020a6-0c6d-49a5-ab57-5434d64fb7f9.png"
+      "image": "https://cdn.openai.com/mdx-assets/71f084db-a08b-48c5-b96e-5fbdc21a1a00/terra-art-card-16x9.0394724b.png",
+      "name": "GPT-6.1 Terra",
+      "summary": "OpenAI released GPT-6.1 Terra on October 26, a fast, efficient model combining detailed visual reasoning and precise computer use with clearer writing. Standard API prices are 50% lower than GPT-5.6 Terra and GPT-6.1 Sol at $1 per million input tokens and $5 per million output tokens, available to Plus, Pro, Enterprise and Edu users in ChatGPT Work and Codex and via the API.",
+      "url": "https://openai.com/index/introducing-gpt-6-1-terra/"
     },
     {
-      "name": "Liquid AI LFM3",
-      "summary": "Liquid AI announced LFM3 on October 27, a family of six open-weight models of around 2 billion parameters — text, vision, audio, omni and two decision models — all branched from one shared backbone trained on 22 trillion tokens. Built for on-device agents, the 1.7B text model fits in about 1 GB of memory at 4-bit precision with a 256K-token context window.",
-      "url": "https://www.liquid.ai/blog/lfm3",
-      "image": "https://www.liquid.ai/og/og-default.jpg"
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/68127936de624fb6f57d9989/3vFxCEUXz_xJVrTBr4hNr.jpeg",
+      "name": "NVIDIA Nemotron 3.5 Transcribe",
+      "summary": "NVIDIA released Nemotron 3.5 Transcribe on October 28, an open-weight speech model that transcribes 40 languages, translates 31 of them to or from English, and attributes up to eight speakers in 13 languages in recordings up to an hour long. It shipped alongside Granary v2, an open speech dataset and curation pipeline covering 463,062 hours across 48 languages.",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
     },
     {
-      "name": "Baseten joey-1",
-      "summary": "Baseten released joey-1 on October 29, a 2B-parameter open-weight decision model that returns a calibrated label and confidence score instead of generated text, for high-volume routing, classification and guardrail checks. Post-trained from Qwen3.5-2B, it costs $0.01 per million tokens with a reported 20 ms P50 latency, and its weights are on Hugging Face under the MIT licence.",
-      "url": "https://www.baseten.co/blog/decisions-for-a-penny-introducing-joey-1/",
-      "image": "https://www.datocms-assets.com/104802/1793290906-li-image_joey-1-1.png?auto=compress,format&fit=crop&h=630&q=75&w=1200"
+      "image": "https://aipolix.com/uploads/2026/10/69730026-902f-42db-b0bb-3ac0ad88cde8_social.jpg",
+      "name": "Kimi K3.1 Pro",
+      "summary": "Moonshot AI launched Kimi K3.1 Pro on October 23, a heavily post-trained version of Kimi K3 described as its most capable 3-trillion-parameter-class open-weight model, with a 1-million-token context window and live access via Kimi.ai, its apps and API. Full open weights are promised by November 4, 2026, with cyber-related training data deliberately removed for the open release.",
+      "url": "https://aipolix.com/en-us/news/moonshot-kimi-k3-1-pro-cyber-data-removal-open-weights"
+    },
+    {
+      "image": "https://eleven-public-cdn.elevenlabs.io/payloadcms/vemqqy7citb-OG%20Image%20SFX.webp",
+      "name": "ElevenLabs SFX v3",
+      "summary": "ElevenLabs released SFX v3 on October 29, a text-to-sound-effects model that follows multi-sound prompts more reliably, with more natural sound, better prompt following and improved music and vocals than SFX v2. It is available in ElevenCreative (Flows, Sound Effects, Studio and Music Editor) and via ElevenAPI as eleven_text_to_sound_v3.",
+      "url": "https://elevenlabs.io/sound-effects"
     }
   ]
 }
