@@ -5,27 +5,27 @@
   "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-97229",
+      "id": "CVE-2026-84295",
       "cvss": 10.0,
-      "summary": "An integer overflow in the Onigmo regex engine used to compile regular expressions in GitLab CI/CD configuration files allows unauthenticated remote code execution on self-managed GitLab instances that allow self-registration and public projects. Fixed in GitLab 19.2.8, 19.3.5 and 19.4.2; CISA added it to the Known Exploited Vulnerabilities catalog on October 29, with a November 1 remediation date for federal agencies.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229"
+      "summary": "Improper authentication in Progress WS_FTP Server versions before 2024.0.6 and 2025.0.3 on Windows allows an unauthenticated remote attacker to access sensitive information, including administrative credentials. Update to WS_FTP Server 2024.0.6 or 2025.0.3.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84295"
     },
     {
-      "id": "CVE-2026-103039",
-      "cvss": 9.8,
-      "summary": "The Gravity Forms plugin for WordPress is vulnerable to PHP object injection in all versions up to and including 3.1.2, via a Post Custom Field whose input type is List. An unauthenticated remote attacker could exploit the deserialization flaw; update Gravity Forms to a fixed release.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103039"
+      "id": "CVE-2026-120189",
+      "cvss": 10.0,
+      "summary": "A stack-based buffer overflow in the TFTP upload filename handler of D-Link DIR-505 firmware 1.10B02 can be triggered remotely, and a public exploit is available. The affected device is an end-of-life consumer router; replace or isolate affected units, as no vendor fix is indicated in the CVE record.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120189"
     },
     {
-      "id": "CVE-2026-107249",
+      "id": "CVE-2026-118636",
       "cvss": 9.8,
-      "summary": "Improperly controlled modification of dynamically-determined object attributes in the Drupal Block AJAX module allows PHP object injection, affecting Block AJAX versions from 0.0.0 to 3.0.2. Update Block AJAX to a version beyond 3.0.2.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107249"
+      "summary": "JavaNativeMessageDecoder in the inactive Apache MINA 3.0 codec module calls ObjectInputStream.readObject() on frame bytes with no class filter, allowing gadget-chain remote code execution when an application puts it in front of an untrusted peer. The 3.0 branch will not be fixed; use the latest Apache MINA 2.2.x branch instead.",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-118636"
     }
   ],
   "model": {
-    "name": "Gemini 4 Carbon",
-    "summary": "Google announced Gemini 4 Carbon on October 28 as its strongest model, with state-of-the-art cybersecurity and long-horizon capabilities, ranking first on the Artificial Analysis Intelligence Index v5.0 at 59. Rollout starts with a subset of cyber defenders through the Fairwind Program, with no date yet for developers, businesses or consumers.",
-    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+    "name": "Apple Intelligence in China with Alibaba's Qwen",
+    "summary": "Apple confirmed on October 31 that Apple Intelligence will reach mainland China, with testing from November 4 in the latest iOS developer beta and a public launch with iOS 27.3 in December. Alibaba's Qwen model will power selected experiences — Siri, Writing Tools and Visual Intelligence — in place of ChatGPT, while the rebuilt Siri AI is not included in this first release.",
+    "url": "https://www.theapplepost.com/2026/10/31/73757/apple-intelligence-finally-coming-to-china-in-december-with-ios-27-3/"
   }
 }
