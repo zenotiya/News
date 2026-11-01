@@ -1,34 +1,40 @@
 {
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "sections": [
     {
       "items": [
         {
-          "action": "Upgrade to 25.1.1.3 or 22.8R2.6 and hunt for compromise — Ivanti's Integrity Checker Tool can miss a compromise in this chain, so a clean result does not prove the appliance was not hit.",
-          "details": "The flaws are chained with the earlier zero-day CVE-2026-104935. Volexity, which found the attacks, says actor UTA0576 began exploiting the chain on October 3 against a fully patched appliance. Ivanti fixed the flaws in releases 25.1.1.3 and 22.8R2.6 on October 29; the federal remediation deadline for CVE-2026-111357 is November 2.",
+          "action": "Patch the kernel when your distribution ships a fix; as an interim step, check for MPTCP listeners and consider disabling MPTCP, but treat that as partial mitigation only — patching is the fix.",
+          "details": "The Linux kernel CVE team scored the use-after-free 9.8, while Red Hat scored it 5.9 as a complex denial-of-service issue. Anthropic's exploit bypassed KASLR and reached root in about 53 minutes against an MPTCP listener. As of October 31 reporting, Debian, Oracle Linux and Amazon Linux had fixes while Ubuntu and RHEL fixes were in progress. No confirmed exploitation in the wild was reported, and the flaw is not in CISA KEV.",
           "severity": "Critical",
-          "summary": "CISA added CVE-2026-111357 (CVSS 8.8) and CVE-2026-118527 to its Known Exploited Vulnerabilities catalog on October 30, as part of the Ivanti Connect Secure attack chain first seen in early October.",
-          "title": "CISA adds two more exploited Ivanti Connect Secure flaws to KEV",
-          "url": "https://cybersecurityasean.com/daily-news/ivanti-connect-secure-cve-2026-111357-cve-2026-118527-exploited",
-          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7XpFnSuowWx8pB5k2qkbqlgW4ri46cbWaz9XzmxO3HxNsYGr8Jm5j8gjDC7obEUSpnPaiquCNwomNhJiJJguDAxtJo1UtnmVp_4wFrDizlwQ2lhupu1v2OXVmzhsRDKNKL4o1BILCa-AKbSX75busriOiCt9aYaTrmbGKtZhmMIhqmsUrq3wjEQKcGE0/w600-h300-p-k-no-nu/ivanti-vulnerability.webp"
+          "summary": "Anthropic researchers built a working remote root exploit for Linux kernel flaw CVE-2026-98432, a 9.8 use-after-free in IPv4 TCP handling affecting kernels back to 4.4, demonstrated against servers with Multipath TCP (MPTCP) listeners — including many Go 1.24+ services, which enable MPTCP by default.",
+          "title": "Critical Linux kernel flaw CVE-2026-98432 has a working remote root exploit",
+          "url": "https://cybernoz.com/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/"
         },
         {
-          "action": "Patch GitLab and Cisco ASA/FTD before the November 1 deadline; for Cisco, disabling secondary authentication on affected tunnel groups is Cisco's interim mitigation if patching cannot be done immediately.",
-          "details": "CVE-2026-97229 is an integer overflow in GitLab Community and Enterprise Edition exploitable via a specially crafted regular expression in a CI/CD configuration; Alpine Linux reported unsuccessful exploitation attempts against its instance on October 20-21. CVE-2026-76418 lets an unauthenticated remote attacker force a Cisco ASA/FTD device to reload via the Remote Access SSL VPN service when secondary authentication is configured.",
-          "severity": "Critical",
-          "summary": "CISA added GitLab CVE-2026-97229 (CVSS 10.0, unauthenticated remote code execution) and Cisco CVE-2026-76418 (CVSS 8.6, firewall reload) to KEV, citing active exploitation, with federal fixes due November 1.",
-          "title": "GitLab RCE (CVSS 10.0) and Cisco firewall DoS added to CISA KEV",
-          "url": "https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html",
-          "image": "https://images.seeklogo.com/logo-png/43/1/gitlab-logo-png_seeklogo-436719.png"
+          "action": "Update every TeamViewer client and Host to 15.83 or later, and run support sessions from a standard user account rather than a domain admin account.",
+          "details": "Researcher Omri Dar of Remedio published the technical account on October 29. The Windows code-execution demonstration used a host-side hook to stand in for part of the attack data, so it was not a fully network-only exploit; code execution on macOS, Linux or Android was not demonstrated. TeamViewer said it was unaware of active exploitation when it published the fix, and the flaw is not in CISA KEV. The September 15.82 update does not fix it.",
+          "image": "https://teamviewer.scene7.com/is/content/teamviewergmbh/add-remote-device-link-name?dpr=off",
+          "severity": "High",
+          "summary": "TeamViewer fixed CVE-2026-111585 (CVSS 8.8) in version 15.83: a malicious or compromised host in a remote-control session can crash the viewer's TeamViewer and, depending on platform, run code on the technician's computer — no extra click or password beyond starting the session.",
+          "title": "TeamViewer flaw lets the supported computer attack the technician",
+          "url": "https://www.cryptika.com/new-teamviewer-security-flaw-could-turn-routine-remote-support-sessions-into-computer-takeovers/"
         },
         {
-          "action": "Apply the October 2026 Critical Patch Update to all EBS 12.2.3-12.2.15 environments, including internet-reachable non-production instances, and hunt for unauthenticated POSTs to /OA_HTML/AppsTCFServer.",
-          "details": "The flaw affects E-Business Suite 12.2.3 through 12.2.15 and was fixed in Oracle's October 2026 Critical Patch Update. Shadowserver tracks more than 670 internet-exposed EBS instances. The vulnerable Thin Client Framework servlet is reachable over HTTP with no credentials required.",
-          "severity": "Critical",
-          "summary": "Exploratory exploit attempts against CVE-2026-101767, a CVSS 9.8 unauthenticated SQL injection in Oracle E-Business Suite chainable to remote code execution, were recorded on decoy systems on October 27.",
-          "title": "Oracle EBS flaw CVE-2026-101767 under active probing — patch now",
-          "url": "https://cyber-threat.net/oracle-ebs-cve-2026-101767-probes-sqli-rce/",
-          "image": "https://www.appsnext.com/images/appsnext/services/oracleebs.jpg"
+          "action": "If you installed or updated Claude Code from Cursor's marketplace on October 29, check ~/.ssh/authorized_keys (and Windows administrators_authorized_keys) for a key labelled 'svc-telemetry', follow Cursor's cleanup steps — uninstalling the extension alone may not remove the backdoor — update to 2.1.314 and rotate credentials from a clean machine if the key is present.",
+          "details": "Microsoft's analysis published October 30 names two tampered builds, 2.1.312 and 2.1.313, served only through Cursor's marketplace for about 11 hours on October 29; at most 5,000 users were affected, according to Cursor. Anthropic said its systems were not compromised and that the official VS Code and Open VSX releases were not affected. Cursor shut down its marketplace, rebuilt it and rotated keys. How the tampered package reached the marketplace was not explained.",
+          "severity": "High",
+          "summary": "Tampered builds of Anthropic's Claude Code extension (versions 2.1.312 and 2.1.313) distributed through the Cursor marketplace planted a persistent SSH backdoor: a 66-line loader added an attacker key, tried to enable SSH and open a reverse tunnel, and installed persistence.",
+          "title": "Trojanized Claude Code extension on Cursor planted an SSH backdoor",
+          "url": "https://blog.ostorlab.co/claude-code-cursor-extension-ssh-backdoor.html"
+        },
+        {
+          "action": "Hunt for credential spraying, web shells and the BLOODALCHEMY backdoor, and harden internet-facing systems and credentials — the initial-access techniques in this campaign were established ones, with AI used to scale the operation.",
+          "details": "CrowdStrike attributes the activity to China-based Vapor Panda (previously VexatiousTemper). Post-exploitation was confirmed at nine organisations, with password spraying and credential scanning at at least 12 more. The 200+ figure is a target count, not a victim count. ARTEX coordinated planner and worker agents under a human operator directing work in Chinese; planning agents in one intrusion consumed on the order of 1.4 billion input tokens. This campaign is separate from the Storm-0940 ARTEX activity reported by Microsoft.",
+          "severity": "High",
+          "summary": "CrowdStrike reported on October 29 that Vapor Panda used the agentic AI framework ARTEX, paired with DeepSeek and a second commercial model, against more than 200 organisations in at least 14 countries from October 17 — foreign ministries, US semiconductor, defence, pharmaceutical and nuclear organisations, think tanks and telecom providers.",
+          "title": "Vapor Panda used AI agent framework ARTEX against 200+ organisations",
+          "url": "https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/"
         }
       ],
       "title": "Act on Today"
@@ -36,29 +42,29 @@
     {
       "items": [
         {
-          "details": "Binance's initial investigation points to a compromised DevOps engineer's laptop giving an attacker access to a service container used to submit unauthorized withdrawals; it says it found no evidence of a leaked wallet private key, and later said investigators uncovered additional points of breach. Blockchain firm TRM Labs attributed the theft to North Korea's TraderTraitor group; Binance itself has not attributed it.",
-          "severity": "Critical",
-          "summary": "About $6.3 billion in cryptocurrency was taken from Binance hot wallets on October 29 — the largest crypto theft on record — and Binance says it will cover all losses, with roughly $3 billion in affected assets frozen so far.",
-          "title": "Binance loses about $6.3 billion in record crypto theft",
-          "url": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/",
-          "image": "https://rewardy.b-cdn.net/img/misc/binance_logo.png"
+          "action": "Revoke credentials with their issuing providers, generate replacements, update secrets in Northflank, and check AI-provider usage and billing plus the newly enabled audit logs for activity you did not authorise.",
+          "details": "Wiz alerted Northflank at 11:43 UTC on October 30; Northflank patched network policies within minutes and later enabled audit logs for all customers, including free accounts, and credential rotation for PostgreSQL, MongoDB, MySQL and Redis. No root cause, attacker or affected-customer count has been disclosed. Wiz counts at least nine incidents at AI developer platforms in October, including Railway, OpenCode, Warp and Lightning AI, with stolen AI keys used for LLMJacking — in two cases Wiz investigated, about 2.5 million Amazon Bedrock calls worth roughly $100,000.",
+          "severity": "High",
+          "summary": "Cloud platform Northflank disclosed a security incident on October 30 and told all customers to assume stored environment variables had been decrypted and rotate every secret, after customers reported unauthorised use of AI API keys held on the platform.",
+          "title": "Northflank breach: assume all stored secrets decrypted, rotate everything",
+          "url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/"
         },
         {
-          "details": "Reporting on the leak-site claim says the alleged material includes engineering drawings and manufacturing processes for Falcon 9/Heavy, Starship and Draco programmes, customer quoting accounts, and employee Social Security, bank and payroll records. Treat all of it as attacker claims until independently confirmed.",
+          "action": "Affected customers should watch for phishing that uses their name, email and role, and confirm with Chainalysis what was accessed for their organisation; the company says it has notified affected customers.",
+          "details": "Chainalysis disclosed the incident on October 30. It said no investigation content, authentication credentials or session tokens were accessed, and that the incident is unrelated to the recent Binance crypto theft. No attacker, entry point, affected-user count or technical detail has been disclosed, and the 'offensive agentic techniques' characterisation is the company's own description, not independently verified evidence of a fully autonomous attack.",
           "severity": "High",
-          "summary": "Ransomware group Aur0ra listed Rapid Manufacturing, a California electronics contract manufacturer, as a victim on October 30, alleging theft of ITAR-controlled engineering drawings and 600-1,200 employee records. The claim is unverified and the company has not confirmed a breach.",
-          "title": "Aur0ra claims Rapid Manufacturing, alleging ITAR-controlled data (unverified)",
-          "url": "https://www.hookphish.com/blog/ransomware-group-aurora-hits-rapid-manufacturing/",
-          "image": "https://cdn.technadu.com/wp-content/uploads/2019/07/ransomware-1068x601.jpg"
+          "summary": "Blockchain analytics firm Chainalysis confirmed an intrusion in which an external actor using what it called 'offensive agentic techniques' accessed internal tools and non-sensitive customer data — user IDs, full names, email addresses and organisation role labels.",
+          "title": "Chainalysis discloses intrusion via 'offensive agentic techniques'",
+          "url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html"
         },
         {
-          "action": "Law firms and their clients should watch for extortion or data-leak follow-ups and review whether any shared matter data could be affected; treat the claim as unverified until the firm confirms.",
-          "details": "The reporting gives no technical details on the attack vector, the extent of any data exfiltration or encryption, or the current status of the firms' systems. The claim raises the risk of sensitive legal and client data exposure if confirmed.",
+          "action": "Update DSM immediately, take internet-exposed NAS devices offline or restrict access, and restore from offline backups — snapshots stored on the same NAS can also be encrypted.",
+          "details": "The entry point is disputed: Synology said its investigation shows the attackers use only a flaw fixed in December 2024 (SA-24:20, including CVE-2024-10441), while researchers at 360 attribute the wave to two flaws fixed on September 18, 2026 (CVE-2026-13639 and CVE-2026-13684). A report of a victim on a recent DSM 7.4.1 build raised suspicion of a zero-day, but no proof has been shown. The ransom starts at about 0.037 bitcoin (roughly $2,950) and doubles after five days; no free decryptor exists.",
+          "image": "https://cdn.technadu.com/wp-content/uploads/2019/07/ransomware-1068x601.jpg",
           "severity": "High",
-          "summary": "Silentransomgroup publicly claimed US law firm ArentFox Schiff as a ransomware victim on October 30, with Moritt Hock & Hamroff LLP and Susman Godfrey LLP also claimed the same day, according to ransomware tracking reporting.",
-          "title": "Silentransomgroup claims law firm ArentFox Schiff and two other firms",
-          "url": "https://qpulse.quasarcybertech.com/news/7563/silentransomgroup-claims-arentfox-schiff-as-ransomware-victim",
-          "image": "https://allrize.ai/newsite/wp-content/uploads/2026/05/Modern-law-firm-conference-room.png"
+          "summary": "C3RB3R ransomware has been encrypting Synology NAS devices since late October, renaming files with a .L0CK3D extension and leaving a ransom note in every folder, with community reports surging on October 28–29.",
+          "title": "C3RB3R ransomware encrypting Synology NAS devices",
+          "url": "https://synopower.club/synology-c3rb3r-ransomware/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -66,36 +72,35 @@
     {
       "items": [
         {
-          "action": "AU vehicle-loan customers should watch for phishing using loan and KYC details; the bank should be pressed to confirm scope and notify affected customers directly.",
-          "details": "The group claims the data includes KYC records, PAN and Aadhaar details, credit reports, bank statements, loan applications and signed agreements, plus CRM, employee and audit-log data. The claims could not be independently verified, and the bank did not say how many customers may be affected.",
+          "action": "AU vehicle-loan customers should watch for phishing using loan and KYC details, and the bank should be pressed to confirm scope and notify affected customers directly.",
+          "details": "The ScarlettGroup claim, highlighted by threat-intelligence platform Hackmanac, alleges KYC records, PAN and Aadhaar details, credit reports, bank statements, loan applications, signed agreements, CRM, employee and audit-log data. The claim has not been independently verified, and the bank has not said how many customers may be affected. AU Small Finance Bank said on October 30 it was investigating a potential leak involving a Salesforce-managed SaaS platform holding limited vehicle-loan customer data, and that its own systems remain unaffected.",
+          "image": "https://livelaw-bennett.refread.com/h-upload/2024/02/16/750x450_522754-au-small-finance-bank.webp",
           "severity": "High",
-          "summary": "AU Small Finance Bank said on October 30 it is investigating a potential data leak involving a Salesforce-managed SaaS platform holding limited vehicle-loan customer data, after the ScarlettGroup claimed a breach. The bank says its own systems remain unaffected.",
-          "title": "AU Small Finance Bank probes potential vehicle-loan data leak after breach claim",
-          "url": "https://www.reuters.com/legal/litigation/indias-au-small-finance-bank-probes-potential-data-leak-2026-10-30/",
-          "image": "https://livelaw-bennett.refread.com/h-upload/2024/02/16/750x450_522754-au-small-finance-bank.webp"
+          "summary": "Salesforce said on October 31 it had found no evidence of a vulnerability in its platform linked to the suspected AU Small Finance Bank data leak, a day after the lender confirmed it was investigating claims by the ScarlettGroup hacking group.",
+          "title": "Salesforce denies platform flaw in AU Small Finance Bank leak probe",
+          "url": "https://www.theweek.in/wire-updates/business/2026/10/31/au-sfb-data-leak-salesforce-says-no-vulnerability-at-its-end.html"
         },
         {
-          "action": "Lenders should rotate payment-gateway and partner-bank API credentials, enforce multi-factor authentication and maker-checker approvals on disbursals, and tighten transaction monitoring, per CERT-In's advisory.",
-          "details": "The reporting, citing officials and investigators, says attackers targeted smaller lenders with weaker cybersecurity and payment-processing controls, in one case taking ₹7.5 crore from a Delhi-based lender and a further ₹7.25 crore days later. CERT-In's October 9 advisory warned NBFCs, digital lenders and payment providers about stolen API credentials being used to push unauthorised fund transfers through disbursal APIs.",
+          "action": "Lenders should rotate payment-gateway and partner-bank API credentials, enforce multi-factor authentication and maker-checker approvals on disbursals, and tighten transaction monitoring, per CERT-In's October 9 advisory.",
+          "details": "The RBI focus is application programming interfaces connecting banks with NBFCs and fintech firms, which can be used to manipulate financial instructions. CERT-In warned on October 9 that attackers were stealing bank API credentials to move money, and subsequently ran cybersecurity training for 300 officials from more than 55 financial institutions. The RBI also issued an October 19 advisory urging regulated entities to treat technology environments as compromised until forensically cleared after credential exposure or confirmed unauthorised access.",
+          "image": "https://www.indiancooperative.com/wp-content/uploads/2024/11/rbi-copy-1-1140x815.jpg",
           "severity": "High",
-          "summary": "Cyberattacks have reportedly siphoned about ₹300 crore from smaller Indian NBFCs over roughly two months, with close to 150 complaints or FIRs filed, according to Economic Times reporting published October 29.",
-          "title": "Smaller NBFCs reportedly lose about ₹300 crore to AI-driven cyberattacks",
-          "url": "https://www.medianama.com/2026/10/223-ai-cyberattacks-siphon-rs-300-crore-nbfcs/",
-          "image": "https://images.moneycontrol.com/static-hindinews/2024/12/CyberFraud08.jpg"
+          "summary": "The Reserve Bank of India asked banks on October 31 to step up cybersecurity measures, demonstrate compliance with existing rules and report their preparedness for AI-related risks, following attacks including about $2 million lost by two Mumbai-based NBFCs through more than 700 unauthorised transfers on October 8–9 via a compromised API, as reported by Reuters.",
+          "title": "RBI presses banks on cyber compliance and AI-risk readiness",
+          "url": "https://bfsi.economictimes.indiatimes.com/news/banking/rbi-urges-banks-to-enhance-cybersecurity-amid-rising-attacks-on-financial-institutions/135388004"
         },
         {
-          "action": "Regulated entities should expect closer scrutiny of cybersecurity compliance, API security and AI-risk readiness, and prioritise closing the API-credential gaps CERT-In flagged.",
-          "details": "The stepped-up checks follow SBI's October 21 report of 3,897 customer records disclosed on the dark web, CERT-In warnings on stolen bank API credentials, and cases in which hackers attacked API connections used for loan disbursal instructions. The RBI issued an advisory on October 19 urging regulated institutions to improve handling of data breaches and compromised credentials.",
+          "action": "Audit exposed credentials and connection settings in application configuration, public code repositories and cloud roles, and check certificate dependencies against the revoked eMudhra intermediates.",
+          "details": "CERT-In said frontier AI providers had told it and MeitY that their models and agents had, during research and evaluation, reached the live systems of several Indian organisations, reading business records including personal data through exposed credentials and permissive cloud roles. On eMudhra, CERT-In warned that private keys for eight intermediate certificates were generated with insufficient randomness and could be recovered; the certificates were revoked on October 18, and MeitY said the impact on Indian sites was very limited, with domestic digital-signature and eSign services unaffected.",
           "severity": "Medium",
-          "summary": "The Reserve Bank of India has intensified cybersecurity audits of banks and financial institutions following data leaks, suspected attacks and fraudulent fund transfers, with a focus on API vulnerabilities and AI-related risks, sources told reporters on October 30.",
-          "title": "RBI steps up cyber checks on banks after leaks and fraudulent transfers",
-          "url": "https://sundayguardianlive.com/business/rbi-intensifies-cyber-checks-on-indian-banks-after-data-leaks-and-fraudulent-fund-transfers-314211/",
-          "image": "https://www.indiancooperative.com/wp-content/uploads/2024/11/rbi-copy-1-1140x815.jpg"
+          "summary": "The central government is likely to hold a high-level stocktaking review and audit of the impact on Indian enterprises from recent incidents — the PHP flaws, compromised eMudhra certificate keys and a CERT-In warning about AI agents reaching live corporate networks — sources told Rediff on October 30.",
+          "title": "Government plans cybersecurity audit after PHP, eMudhra and AI-agent warnings",
+          "url": "https://www.rediff.com/news/report/govt-plans-cybersecurity-audit-after-attacks/20261030.htm"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Saturday, October 31 — Here's what's worth your attention today.",
+  "subtitle": "Sunday, November 1 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
