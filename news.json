@@ -74,7 +74,6 @@
         {
           "action": "AU vehicle-loan customers should watch for phishing using loan and KYC details, and the bank should be pressed to confirm scope and notify affected customers directly.",
           "details": "The ScarlettGroup claim, highlighted by threat-intelligence platform Hackmanac, alleges KYC records, PAN and Aadhaar details, credit reports, bank statements, loan applications, signed agreements, CRM, employee and audit-log data. The claim has not been independently verified, and the bank has not said how many customers may be affected. AU Small Finance Bank said on October 30 it was investigating a potential leak involving a Salesforce-managed SaaS platform holding limited vehicle-loan customer data, and that its own systems remain unaffected.",
-          "image": "https://livelaw-bennett.refread.com/h-upload/2024/02/16/750x450_522754-au-small-finance-bank.webp",
           "severity": "High",
           "summary": "Salesforce said on October 31 it had found no evidence of a vulnerability in its platform linked to the suspected AU Small Finance Bank data leak, a day after the lender confirmed it was investigating claims by the ScarlettGroup hacking group.",
           "title": "Salesforce denies platform flaw in AU Small Finance Bank leak probe",
