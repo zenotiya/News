@@ -1,40 +1,40 @@
 {
-  "date": "2026-11-01",
+  "date": "2026-11-02",
   "items": [
     {
       "cvss": 10.0,
-      "id": "CVE-2026-84295",
+      "id": "CVE-2026-112816",
       "severity": "Critical",
-      "summary": "Improper authentication in Progress WS_FTP Server versions before 2024.0.6 and 2025.0.3 on Windows allows an unauthenticated remote attacker to access sensitive information, including administrative credentials. Update to WS_FTP Server 2024.0.6 or 2025.0.3.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84295"
+      "summary": "An authentication bypass in Canonical's LXD and MicroCloud lets a remote attacker impersonate any trusted client without holding that client's private key, by attaching the client's public certificate to their own TLS chain. Fixed in LXD 6.10.1, 5.21.9, 5.0.11 and 4.0.15 and MicroCloud 3.4.1 and 2.1.5; no known exploitation as of October 30.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112816"
     },
     {
       "cvss": 10.0,
-      "id": "CVE-2026-120189",
+      "id": "CVE-2026-97229",
       "severity": "Critical",
-      "summary": "A stack-based buffer overflow in the TFTP upload filename handler of D-Link DIR-505 firmware 1.10B02 can be triggered remotely, and a public exploit is available. The affected device is an end-of-life consumer router; replace or isolate affected units, as no vendor fix is indicated in the CVE record.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120189"
+      "summary": "An integer overflow in the Onigmo regular-expression engine used by GitLab's CI/CD configuration processing lets an unauthenticated attacker execute arbitrary code on a self-managed GitLab server. CISA added it to the Known Exploited Vulnerabilities catalog on October 29 after probing of Alpine Linux's instance; patch to GitLab 19.2.8, 19.3.5 or 19.4.2 and confirm the underlying Ruby is fixed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-118636",
+      "id": "CVE-2026-98432",
       "severity": "Critical",
-      "summary": "JavaNativeMessageDecoder in the inactive Apache MINA 3.0 codec module calls ObjectInputStream.readObject() on frame bytes with no class filter, allowing gadget-chain remote code execution when an application puts it in front of an untrusted peer. The 3.0 branch will not be fixed; use the latest Apache MINA 2.2.x branch instead.",
-      "url": "https://www.cve.org/CVERecord?id=CVE-2026-118636"
+      "summary": "A use-after-free race in the Linux kernel's IPv4 TCP connection handling can be triggered remotely without authentication, and Anthropic demonstrated unauthenticated root command execution against a multipath TCP listener in a lab setting. Fixed kernels include 5.10.272, 5.15.223, 6.1.190, 6.6.159, 6.12.113, 6.18.56 and 7.2.10; apply the distribution kernel update and reboot.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98432"
     },
     {
-      "cvss": 9.6,
-      "id": "CVE-2026-62863",
+      "cvss": 9.3,
+      "id": "CVE-2026-48356",
       "severity": "Critical",
-      "summary": "MoLing, a computer-use and browser-use MCP server, does not authenticate its /sse and /message endpoints in SSE mode before version 0.5.0, and a malicious web page can steal the session ID cross-origin and send unauthorised MCP tool calls that can read or write files or execute commands. Update MoLing to 0.5.0.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62863"
+      "summary": "An unrestricted upload of files with dangerous types in Adobe Commerce and Magento Open Source can allow remote code execution. CISA added it to the Known Exploited Vulnerabilities catalog on October 27; apply the vendor patch as a priority.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356"
     },
     {
-      "cvss": 9.1,
-      "id": "CVE-2026-103882",
+      "cvss": 9.2,
+      "id": "CVE-2026-111497",
       "severity": "Critical",
-      "summary": "The Acadlix LMS WordPress plugin (all versions up to and including 1.1.9) allows arbitrary file deletion through insufficient path validation, effectively unauthenticated via a nonce exposed on every frontend page, which can lead to remote code execution when a file such as wp-config.php is deleted. Update beyond 1.1.9.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103882"
+      "summary": "An out-of-bounds write in Google's Brotli decoder (versions 1.0.3 through 1.2.0) is being exploited in the wild and was added to CISA's Known Exploited Vulnerabilities catalog on October 27. Update every product embedding Brotli, including browsers, servers and libraries, to a fixed decoder build.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497"
     }
   ]
 }
