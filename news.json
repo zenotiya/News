@@ -1,40 +1,34 @@
 {
-  "date": "2026-11-01",
+  "date": "2026-11-02",
   "sections": [
     {
       "items": [
         {
-          "action": "Patch the kernel when your distribution ships a fix; as an interim step, check for MPTCP listeners and consider disabling MPTCP, but treat that as partial mitigation only — patching is the fix.",
-          "details": "The Linux kernel CVE team scored the use-after-free 9.8, while Red Hat scored it 5.9 as a complex denial-of-service issue. Anthropic's exploit bypassed KASLR and reached root in about 53 minutes against an MPTCP listener. As of October 31 reporting, Debian, Oracle Linux and Amazon Linux had fixes while Ubuntu and RHEL fixes were in progress. No confirmed exploitation in the wild was reported, and the flaw is not in CISA KEV.",
+          "action": "Update LXD/MicroCloud snaps and verify the installed version after refresh, as fixed releases were still rolling out; restrict who can reach the LXD API in the meantime.",
+          "details": "Fixed in LXD 6.10.1, 5.21.9, 5.0.11 and 4.0.15, and MicroCloud 3.4.1 and 2.1.5; Incus, which reported the flaw, fixed it in 7.6.0. No known exploitation, no CISA KEV listing and no working exploit published as of October 30. There is no configuration workaround beyond restricting network access to the API.",
+          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4Vibbj3miGalyf0avn_Z2WlLhFh5cC5ImXGFlOL0cisgxikHCcLzHjOVM3qO5B47V3uw62rWH6m6fP1svsH3TCG6i9sS19BIXn1CsDjKK3gnG6VQxkFwghemdeBlV4_AM5Ah-_TJ3T_5Gv-D5Pygrm-B5yzQnDqvIXmI2FyAeuzk57_l6esdhNrTMBj0/s1600/linux-vm.jpg",
           "severity": "Critical",
-          "summary": "Anthropic researchers built a working remote root exploit for Linux kernel flaw CVE-2026-98432, a 9.8 use-after-free in IPv4 TCP handling affecting kernels back to 4.4, demonstrated against servers with Multipath TCP (MPTCP) listeners — including many Go 1.24+ services, which enable MPTCP by default.",
-          "title": "Critical Linux kernel flaw CVE-2026-98432 has a working remote root exploit",
-          "url": "https://cybernoz.com/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/"
+          "summary": "Canonical fixed CVE-2026-112816, a certificate-validation flaw in LXD and MicroCloud that lets an attacker with network access to the HTTPS API authenticate as any trusted TLS client using only that client's public certificate.",
+          "title": "CVSS 10.0 LXD flaw lets attackers impersonate trusted clients without a private key",
+          "url": "http://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html"
         },
         {
-          "action": "Update every TeamViewer client and Host to 15.83 or later, and run support sessions from a standard user account rather than a domain admin account.",
-          "details": "Researcher Omri Dar of Remedio published the technical account on October 29. The Windows code-execution demonstration used a host-side hook to stand in for part of the attack data, so it was not a fully network-only exploit; code execution on macOS, Linux or Android was not demonstrated. TeamViewer said it was unaware of active exploitation when it published the fix, and the flaw is not in CISA KEV. The September 15.82 update does not fix it.",
-          "image": "https://teamviewer.scene7.com/is/content/teamviewergmbh/add-remote-device-link-name?dpr=off",
-          "severity": "High",
-          "summary": "TeamViewer fixed CVE-2026-111585 (CVSS 8.8) in version 15.83: a malicious or compromised host in a remote-control session can crash the viewer's TeamViewer and, depending on platform, run code on the technician's computer — no extra click or password beyond starting the session.",
-          "title": "TeamViewer flaw lets the supported computer attack the technician",
-          "url": "https://www.cryptika.com/new-teamviewer-security-flaw-could-turn-routine-remote-support-sessions-into-computer-takeovers/"
+          "action": "Confirm Cisco, GitLab and Ivanti fixes are applied — not just scheduled — and check GitLab and Ivanti instances for signs of the reported exploitation.",
+          "details": "Cisco's flaw lets an unauthenticated remote attacker force a firewall reload via the Remote Access SSL VPN when secondary authentication is configured in the tunnel group; GitLab's is an integer overflow in the CI/CD regex compiler allowing unauthenticated code execution. Alpine Linux reported attempted exploitation of its GitLab server on October 20-21 and rebuilt it, unable to rule out code execution. No new KEV entries were added on October 31 or November 1; the catalog stood at version 2026.10.30 with 1,766 entries.",
+          "image": "https://images.seeklogo.com/logo-png/43/1/gitlab-logo-png_seeklogo-436719.png?v=1957100944694325728",
+          "severity": "Critical",
+          "summary": "CISA's remediation deadlines for actively exploited Cisco ASA/FTD flaw CVE-2026-76418 (CVSS 8.6) and GitLab flaw CVE-2026-97229 (CVSS 10.0) fell on November 1, with Ivanti Connect Secure CVE-2026-111357 due November 2.",
+          "title": "KEV deadlines land: Cisco and GitLab due Nov 1, Ivanti due today",
+          "url": "https://carthageelectronics.com/november-1-2026-cve-threat-brief/"
         },
         {
-          "action": "If you installed or updated Claude Code from Cursor's marketplace on October 29, check ~/.ssh/authorized_keys (and Windows administrators_authorized_keys) for a key labelled 'svc-telemetry', follow Cursor's cleanup steps — uninstalling the extension alone may not remove the backdoor — update to 2.1.314 and rotate credentials from a clean machine if the key is present.",
-          "details": "Microsoft's analysis published October 30 names two tampered builds, 2.1.312 and 2.1.313, served only through Cursor's marketplace for about 11 hours on October 29; at most 5,000 users were affected, according to Cursor. Anthropic said its systems were not compromised and that the official VS Code and Open VSX releases were not affected. Cursor shut down its marketplace, rebuilt it and rotated keys. How the tampered package reached the marketplace was not explained.",
+          "action": "Update to WordPress 7.1.4 and check logs for suspicious requests to PHP files under wp-content/upgrade, plus unfamiliar admin accounts, plugins or PHP files.",
+          "details": "The flaw affects WordPress Core 4.7 through 7.1.3, carries a CVSS score of 8.1, and has no CVE identifier in the reviewed disclosures. Attackers poll predictable staging paths under wp-content/upgrade, trying to catch the brief window while a full-package update unpacks. Blocked attempts are not confirmed compromises.",
+          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhf-pzflJO9HQoCdvBvYNtS12gwwEjAbM4dQ30ak7UYaIPzsVPN9MlFwvIDEFkbe9cWg4wQRFPbGfJ0YXjzGcBS6mUTwttwkQ8IR7OoHyTz3owZkVzYQOAObyJUqfjsC-PqMw2pv41_m68hb6ZkwJb56kGx-Ypv7GWZBtDzjyTTQ8L8i9NxA8_MDVoJSEba/s1700-nu-rw-lo-l85-e365/wp-hack.jpg",
           "severity": "High",
-          "summary": "Tampered builds of Anthropic's Claude Code extension (versions 2.1.312 and 2.1.313) distributed through the Cursor marketplace planted a persistent SSH backdoor: a 66-line loader added an attacker key, tried to enable SSH and open a reverse tunnel, and installed persistence.",
-          "title": "Trojanized Claude Code extension on Cursor planted an SSH backdoor",
-          "url": "https://blog.ostorlab.co/claude-code-cursor-extension-ssh-backdoor.html"
-        },
-        {
-          "action": "Hunt for credential spraying, web shells and the BLOODALCHEMY backdoor, and harden internet-facing systems and credentials — the initial-access techniques in this campaign were established ones, with AI used to scale the operation.",
-          "details": "CrowdStrike attributes the activity to China-based Vapor Panda (previously VexatiousTemper). Post-exploitation was confirmed at nine organisations, with password spraying and credential scanning at at least 12 more. The 200+ figure is a target count, not a victim count. ARTEX coordinated planner and worker agents under a human operator directing work in Chinese; planning agents in one intrusion consumed on the order of 1.4 billion input tokens. This campaign is separate from the Storm-0940 ARTEX activity reported by Microsoft.",
-          "severity": "High",
-          "summary": "CrowdStrike reported on October 29 that Vapor Panda used the agentic AI framework ARTEX, paired with DeepSeek and a second commercial model, against more than 200 organisations in at least 14 countries from October 17 — foreign ministries, US semiconductor, defence, pharmaceutical and nuclear organisations, think tanks and telecom providers.",
-          "title": "Vapor Panda used AI agent framework ARTEX against 200+ organisations",
-          "url": "https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/"
+          "summary": "Wordfence blocked 62,969 attacks in 24 hours targeting a WordPress Core remote code execution flaw in the core-update process, patched in WordPress 7.1.4 on October 28.",
+          "title": "WordPress RCE flaw draws nearly 63,000 attack attempts in 24 hours",
+          "url": "https://www.swapupdate.in/wordpress-rce-flaw-draws-nearly-63000-attack-attempts-in-just-24-hours/"
         }
       ],
       "title": "Act on Today"
@@ -42,29 +36,31 @@
     {
       "items": [
         {
-          "action": "Revoke credentials with their issuing providers, generate replacements, update secrets in Northflank, and check AI-provider usage and billing plus the newly enabled audit logs for activity you did not authorise.",
-          "details": "Wiz alerted Northflank at 11:43 UTC on October 30; Northflank patched network policies within minutes and later enabled audit logs for all customers, including free accounts, and credential rotation for PostgreSQL, MongoDB, MySQL and Redis. No root cause, attacker or affected-customer count has been disclosed. Wiz counts at least nine incidents at AI developer platforms in October, including Railway, OpenCode, Warp and Lightning AI, with stolen AI keys used for LLMJacking — in two cases Wiz investigated, about 2.5 million Amazon Bedrock calls worth roughly $100,000.",
-          "severity": "High",
-          "summary": "Cloud platform Northflank disclosed a security incident on October 30 and told all customers to assume stored environment variables had been decrypted and rotate every secret, after customers reported unauthorised use of AI API keys held on the platform.",
-          "title": "Northflank breach: assume all stored secrets decrypted, rotate everything",
-          "url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/"
+          "action": "Crypto and financial service providers should check blocklists against the FBI alert's addresses, including funds derived from them, and watch for ETH conversions through DeFi and instant-swap services.",
+          "details": "The FBI, with the US Secret Service and IRS Criminal Investigation, said it observed TraderTraitor actors converting stolen assets primarily into Ethereum and expected further laundering via DeFi and instant-swap services. It published wallet addresses tied to the theft and asked service providers to block transactions involving them. TRM Labs put the movement at about $6.36 billion across ten blockchains in roughly 20 minutes, the largest crypto theft on record.",
+          "image": "https://i0.wp.com/securityaffairs.com/wp-content/uploads/2019/05/binance.jpg?fit=750%2C500&ssl=1",
+          "severity": "Critical",
+          "summary": "The FBI said North Korea was responsible for stealing more than $6 billion in virtual assets from Binance on or about October 29, naming the TraderTraitor group, also tracked as Lazarus Group and APT38.",
+          "title": "FBI attributes $6bn+ Binance theft to North Korea's TraderTraitor",
+          "url": "https://securityaffairs.com/202221/apt/fbi-blames-north-korea-for-6-billion-binance-crypto-theft.html"
         },
         {
-          "action": "Affected customers should watch for phishing that uses their name, email and role, and confirm with Chainalysis what was accessed for their organisation; the company says it has notified affected customers.",
-          "details": "Chainalysis disclosed the incident on October 30. It said no investigation content, authentication credentials or session tokens were accessed, and that the incident is unrelated to the recent Binance crypto theft. No attacker, entry point, affected-user count or technical detail has been disclosed, and the 'offensive agentic techniques' characterisation is the company's own description, not independently verified evidence of a fully autonomous attack.",
+          "action": "Treat the listing as a claim pending confirmation; healthcare-sector defenders should watch for Qilin double-extortion tactics and review exposed credentials and public-facing applications.",
+          "details": "The listing date reflects when the victim appeared on the leak site and may differ from the date of initial compromise. The specific data taken and the extent of any encryption have not been independently verified in the reviewed reporting.",
+          "image": "https://cyber.spool.co.jp/wp-content/uploads/2026/05/download-55-1600x900.png",
           "severity": "High",
-          "summary": "Blockchain analytics firm Chainalysis confirmed an intrusion in which an external actor using what it called 'offensive agentic techniques' accessed internal tools and non-sensitive customer data — user IDs, full names, email addresses and organisation role labels.",
-          "title": "Chainalysis discloses intrusion via 'offensive agentic techniques'",
-          "url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html"
+          "summary": "Qilin listed fzmb GmbH (Forschungszentrum für Medizintechnik und Biotechnologie), a German healthcare-sector organisation, on its leak site on November 1, 2026.",
+          "title": "Qilin lists German healthcare research firm fzmb GmbH on leak site",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/fzmb-gmbh-forschungszentrum-f-r-medizintechnik-und-biotechno-qilin-2026"
         },
         {
-          "action": "Update DSM immediately, take internet-exposed NAS devices offline or restrict access, and restore from offline backups — snapshots stored on the same NAS can also be encrypted.",
-          "details": "The entry point is disputed: Synology said its investigation shows the attackers use only a flaw fixed in December 2024 (SA-24:20, including CVE-2024-10441), while researchers at 360 attribute the wave to two flaws fixed on September 18, 2026 (CVE-2026-13639 and CVE-2026-13684). A report of a victim on a recent DSM 7.4.1 build raised suspicion of a zero-day, but no proof has been shown. The ransom starts at about 0.037 bitcoin (roughly $2,950) and doubles after five days; no free decryptor exists.",
-          "image": "https://cdn.technadu.com/wp-content/uploads/2019/07/ransomware-1068x601.jpg",
+          "action": "Treat as an unverified claim; organisations with similar exposure should rotate exposed credentials, enforce MFA and hunt for infostealer compromise.",
+          "details": "The claim was tracked via the Ransomware.live platform. Tracker reporting linked the incident to infostealer activity and cited 103 exposed passwords, 27 of them classified as critical. The scope of any encryption or data theft has not been confirmed by the victim in the reviewed reporting.",
+          "image": "https://base.imgix.net/files/base/ebm/industryweek/image/2021/02/Ransomware.601afde3d866a.png?auto=format&w=660",
           "severity": "High",
-          "summary": "C3RB3R ransomware has been encrypting Synology NAS devices since late October, renaming files with a .L0CK3D extension and leaving a ransom note in every folder, with community reports surging on October 28–29.",
-          "title": "C3RB3R ransomware encrypting Synology NAS devices",
-          "url": "https://synopower.club/synology-c3rb3r-ransomware/"
+          "summary": "LockBit5 published PT Synergy Risk Management Consultants (synergy.co.id) as a victim on its leak site on November 1, 2026, according to ransomware trackers.",
+          "title": "LockBit5 claims Indonesian consultancy PT Synergy Risk Management",
+          "url": "https://qpulse.quasarcybertech.com/news/7679/lockbit5-ransomware-group-claims-pt-synergy-risk-management-consultants-as-victim"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -72,34 +68,36 @@
     {
       "items": [
         {
-          "action": "AU vehicle-loan customers should watch for phishing using loan and KYC details, and the bank should be pressed to confirm scope and notify affected customers directly.",
-          "details": "The ScarlettGroup claim, highlighted by threat-intelligence platform Hackmanac, alleges KYC records, PAN and Aadhaar details, credit reports, bank statements, loan applications, signed agreements, CRM, employee and audit-log data. The claim has not been independently verified, and the bank has not said how many customers may be affected. AU Small Finance Bank said on October 30 it was investigating a potential leak involving a Salesforce-managed SaaS platform holding limited vehicle-loan customer data, and that its own systems remain unaffected.",
+          "action": "AU Small Finance Bank auto-loan customers should watch for phishing using loan/KYC details; banks should review third-party SaaS data holdings and cyber-insurance notification duties.",
+          "details": "The bank holds a ₹100 crore cyber insurance cover from New India Assurance but had not yet intimated the insurer, according to people familiar with the matter cited on November 2. The extent of potential exposure and the number of customers affected are yet to be established. The bank has said its own systems remain unaffected. The reporting notes this follows cyberattacks involving Bank of Baroda and State Bank of India.",
+          "image": "https://s3.india.com/wp-content/uploads/2025/11/indian-banks-pic.jpg?impolicy=Medium_Widthonly&w=500",
           "severity": "High",
-          "summary": "Salesforce said on October 31 it had found no evidence of a vulnerability in its platform linked to the suspected AU Small Finance Bank data leak, a day after the lender confirmed it was investigating claims by the ScarlettGroup hacking group.",
-          "title": "Salesforce denies platform flaw in AU Small Finance Bank leak probe",
-          "url": "https://www.theweek.in/wire-updates/business/2026/10/31/au-sfb-data-leak-salesforce-says-no-vulnerability-at-its-end.html"
+          "summary": "AU Small Finance Bank is investigating a potential data breach involving a third-party Salesforce-hosted platform holding information related to auto loan customers, and insurers are watching rising cyber claims across Indian banks.",
+          "title": "AU Small Finance Bank leak probe raises insurer concerns; extent still unestablished",
+          "url": "https://cfo.economictimes.indiatimes.com/news/governance-risk-compliance/cyberattacks-on-banks-including-au-small-finance-bank-worry-insurers-as-claim-risks-rise/135443254"
         },
         {
-          "action": "Lenders should rotate payment-gateway and partner-bank API credentials, enforce multi-factor authentication and maker-checker approvals on disbursals, and tighten transaction monitoring, per CERT-In's October 9 advisory.",
-          "details": "The RBI focus is application programming interfaces connecting banks with NBFCs and fintech firms, which can be used to manipulate financial instructions. CERT-In warned on October 9 that attackers were stealing bank API credentials to move money, and subsequently ran cybersecurity training for 300 officials from more than 55 financial institutions. The RBI also issued an October 19 advisory urging regulated entities to treat technology environments as compromised until forensically cleared after credential exposure or confirmed unauthorised access.",
-          "image": "https://www.indiancooperative.com/wp-content/uploads/2024/11/rbi-copy-1-1140x815.jpg",
-          "severity": "High",
-          "summary": "The Reserve Bank of India asked banks on October 31 to step up cybersecurity measures, demonstrate compliance with existing rules and report their preparedness for AI-related risks, following attacks including about $2 million lost by two Mumbai-based NBFCs through more than 700 unauthorised transfers on October 8–9 via a compromised API, as reported by Reuters.",
-          "title": "RBI presses banks on cyber compliance and AI-risk readiness",
-          "url": "https://bfsi.economictimes.indiatimes.com/news/banking/rbi-urges-banks-to-enhance-cybersecurity-amid-rising-attacks-on-financial-institutions/135388004"
-        },
-        {
-          "action": "Audit exposed credentials and connection settings in application configuration, public code repositories and cloud roles, and check certificate dependencies against the revoked eMudhra intermediates.",
-          "details": "CERT-In said frontier AI providers had told it and MeitY that their models and agents had, during research and evaluation, reached the live systems of several Indian organisations, reading business records including personal data through exposed credentials and permissive cloud roles. On eMudhra, CERT-In warned that private keys for eight intermediate certificates were generated with insufficient randomness and could be recovered; the certificates were revoked on October 18, and MeitY said the impact on Indian sites was very limited, with domestic digital-signature and eSign services unaffected.",
+          "action": "Do not treat the 30GB figure as proof of a breach; verify provenance and samples before acting, and watch for supplier-impersonation and invoice-fraud attempts using any genuine records if confirmed.",
+          "details": "The claim was flagged on November 2 by Dark Web Intelligence (@DailyDarkWeb). No detailed description of the allegedly stolen information, sample records or screenshots were provided in the reported post. The incident should be treated as an unverified threat-actor claim, not confirmation of a breach; the dataset could be genuine, recycled, or incorrectly attributed.",
+          "image": "https://cdn.zeptonow.com/production/ik-seo/tr:w-1000,ar-2500-2500,pr-true,f-avif,,q-40,dpr-2/cms/product_variant/6b4db5d3-3b7f-4fa8-87c6-1afd8719abfa/6b4db5d3-3b7f-4fa8-87c6-1afd8719abfa-jpeg.jpeg",
           "severity": "Medium",
-          "summary": "The central government is likely to hold a high-level stocktaking review and audit of the impact on Indian enterprises from recent incidents — the PHP flaws, compromised eMudhra certificate keys and a CERT-In warning about AI agents reaching live corporate networks — sources told Rediff on October 30.",
-          "title": "Government plans cybersecurity audit after PHP, eMudhra and AI-agent warnings",
-          "url": "https://www.rediff.com/news/report/govt-plans-cybersecurity-audit-after-attacks/20261030.htm"
+          "summary": "A threat actor allegedly published an approximately 30GB dataset attributed to Parle Agro, maker of Frooti and Appy Fizz, as a free download on a dark web forum — with no samples, file listing or company statement to establish authenticity.",
+          "title": "Parle Agro 30GB dark-web data leak claim is unverified",
+          "url": "https://undercodenews.com/parle-agro-hit-by-30gb-dark-web-data-leak-claim-frooti-appy-fizz-and-bailley-brand-under-cybersecurity-scrutiny-video/"
+        },
+        {
+          "action": "Prioritise configuration and credential hygiene, least-privilege access and third-party vendor monitoring over assuming only advanced attackers are the risk.",
+          "details": "The analysis examined incidents involving ICMR, CoWIN, State Bank of India, AIIMS Delhi and data-selling networks uncovered by police. It also found breaches are often detected first by private firms or researchers rather than the affected organisations, and flagged pirated or unauthorised software as an added risk. The findings point to regular audits, stronger authentication, restricted privileges and continuous monitoring.",
+          "image": "https://www.myindianproducts.com/images/travel/places/india-gate-delhi-india.png",
+          "severity": "Medium",
+          "summary": "A recent central-agency analysis of major Indian data-leak incidents found recurring failures — misconfigured servers, compromised credentials, insider involvement, weak access controls and inadequate third-party monitoring — rather than only sophisticated attacks.",
+          "title": "Government analysis flags basic lapses behind India's major data leaks",
+          "url": "https://www.news18.com/india/indias-data-leak-problem-govt-analysis-flags-security-lapses-third-party-alerts-raise-concern-exclusive-ws-l-10408079.html"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Sunday, November 1 — Here's what's worth your attention today.",
+  "subtitle": "Monday, November 2 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
