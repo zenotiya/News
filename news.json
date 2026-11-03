@@ -1,34 +1,34 @@
 {
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "sections": [
     {
       "items": [
         {
-          "action": "Update LXD/MicroCloud snaps and verify the installed version after refresh, as fixed releases were still rolling out; restrict who can reach the LXD API in the meantime.",
-          "details": "Fixed in LXD 6.10.1, 5.21.9, 5.0.11 and 4.0.15, and MicroCloud 3.4.1 and 2.1.5; Incus, which reported the flaw, fixed it in 7.6.0. No known exploitation, no CISA KEV listing and no working exploit published as of October 30. There is no configuration workaround beyond restricting network access to the API.",
-          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4Vibbj3miGalyf0avn_Z2WlLhFh5cC5ImXGFlOL0cisgxikHCcLzHjOVM3qO5B47V3uw62rWH6m6fP1svsH3TCG6i9sS19BIXn1CsDjKK3gnG6VQxkFwghemdeBlV4_AM5Ah-_TJ3T_5Gv-D5Pygrm-B5yzQnDqvIXmI2FyAeuzk57_l6esdhNrTMBj0/s1600/linux-vm.jpg",
+          "action": "Update Siemens SIMATIC IoT2050 Advanced to V4.3.4.1 now and do not expose Node-RED admin interfaces to the internet.",
+          "details": "Tracked as CVE-2026-58115 with a CVSS score of 10.0, the flaw allows unauthenticated access to programming nodes that can execute system commands. Affected versions are below V4.3.4.1.",
+          "image": "https://www.asteamtechno.com/wp-content/uploads/2022/06/automation.png",
           "severity": "Critical",
-          "summary": "Canonical fixed CVE-2026-112816, a certificate-validation flaw in LXD and MicroCloud that lets an attacker with network access to the HTTPS API authenticate as any trusted TLS client using only that client's public certificate.",
-          "title": "CVSS 10.0 LXD flaw lets attackers impersonate trusted clients without a private key",
-          "url": "http://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html"
+          "summary": "VulnCheck warned on November 2 that attackers are actively exploiting a missing-authentication flaw in Node-RED on Siemens SIMATIC IoT2050 Advanced, allowing unauthenticated remote code execution. Exploitation reportedly began on October 30, with malicious flows used to drop bot implants and webshells on operational technology networks.",
+          "title": "Node-RED flaw CVE-2026-58115 (CVSS 10.0) exploited in the wild",
+          "url": "https://securityonline.info/node-red-rce-vulnerability-cve-2026-58115/"
         },
         {
-          "action": "Confirm Cisco, GitLab and Ivanti fixes are applied — not just scheduled — and check GitLab and Ivanti instances for signs of the reported exploitation.",
-          "details": "Cisco's flaw lets an unauthenticated remote attacker force a firewall reload via the Remote Access SSL VPN when secondary authentication is configured in the tunnel group; GitLab's is an integer overflow in the CI/CD regex compiler allowing unauthenticated code execution. Alpine Linux reported attempted exploitation of its GitLab server on October 20-21 and rebuilt it, unable to rule out code execution. No new KEV entries were added on October 31 or November 1; the catalog stood at version 2026.10.30 with 1,766 entries.",
-          "image": "https://images.seeklogo.com/logo-png/43/1/gitlab-logo-png_seeklogo-436719.png?v=1957100944694325728",
+          "action": "Upgrade Langflow to 1.13.0, verify automatic login is off, and check internet-exposed instances for abuse.",
+          "details": "IBM published the bulletin on October 28–29. Langflow 1.13.0 also turns automatic login off by default. No confirmed active exploitation of these two flaws had been established as of November 2, and neither was in CISA's KEV catalog at that point.",
+          "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1744547517603/39aeca3c-fc97-476c-9154-124510224b32.avif?w=800&h=420&auto=compress,format&format=webp",
           "severity": "Critical",
-          "summary": "CISA's remediation deadlines for actively exploited Cisco ASA/FTD flaw CVE-2026-76418 (CVSS 8.6) and GitLab flaw CVE-2026-97229 (CVSS 10.0) fell on November 1, with Ivanti Connect Secure CVE-2026-111357 due November 2.",
-          "title": "KEV deadlines land: Cisco and GitLab due Nov 1, Ivanti due today",
-          "url": "https://carthageelectronics.com/november-1-2026-cve-threat-brief/"
+          "summary": "Two critical Langflow flaws rated 9.8, CVE-2026-93680 (authentication bypass) and CVE-2026-110186 (improper control of code generation), affect every release from 1.0.0 through 1.12.8 and can chain into unauthenticated remote code execution. The only fix is version 1.13.0.",
+          "title": "Critical Langflow flaws allow unauthenticated code execution — upgrade to 1.13.0",
+          "url": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html?m=1"
         },
         {
-          "action": "Update to WordPress 7.1.4 and check logs for suspicious requests to PHP files under wp-content/upgrade, plus unfamiliar admin accounts, plugins or PHP files.",
-          "details": "The flaw affects WordPress Core 4.7 through 7.1.3, carries a CVSS score of 8.1, and has no CVE identifier in the reviewed disclosures. Attackers poll predictable staging paths under wp-content/upgrade, trying to catch the brief window while a full-package update unpacks. Blocked attempts are not confirmed compromises.",
-          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhf-pzflJO9HQoCdvBvYNtS12gwwEjAbM4dQ30ak7UYaIPzsVPN9MlFwvIDEFkbe9cWg4wQRFPbGfJ0YXjzGcBS6mUTwttwkQ8IR7OoHyTz3owZkVzYQOAObyJUqfjsC-PqMw2pv41_m68hb6ZkwJb56kGx-Ypv7GWZBtDzjyTTQ8L8i9NxA8_MDVoJSEba/s1700-nu-rw-lo-l85-e365/wp-hack.jpg",
-          "severity": "High",
-          "summary": "Wordfence blocked 62,969 attacks in 24 hours targeting a WordPress Core remote code execution flaw in the core-update process, patched in WordPress 7.1.4 on October 28.",
-          "title": "WordPress RCE flaw draws nearly 63,000 attack attempts in 24 hours",
-          "url": "https://www.swapupdate.in/wordpress-rce-flaw-draws-nearly-63000-attack-attempts-in-just-24-hours/"
+          "action": "Patch to 25.1.1.3 or 22.8R2.6 (per branch) and complete the forensic triage CISA requires for CVE-2026-111357.",
+          "details": "Ivanti shipped fixes on October 29 in versions 25.1.1.3 and 22.8R2.6. Appliances patched on October 13 to 25.1.1.2 or 22.8R2.5 remain affected by the two newer flaws.",
+          "image": "https://vpncentral.com/wp-content/uploads/2026/02/Ivanti-Risks-Exploits-700x394.jpg",
+          "severity": "Critical",
+          "summary": "CISA added Ivanti Connect Secure flaws CVE-2026-111357 and CVE-2026-118527 to its Known Exploited Vulnerabilities catalog on October 30; the federal remediation deadline for CVE-2026-111357 was November 2 and requires forensic triage, not only a patch. The flaws chain with the earlier login bypass CVE-2026-104935.",
+          "title": "Ivanti Connect Secure KEV deadline passed — patch and run forensic triage",
+          "url": "https://hol.org/blog/cve-2026-111357-ivanti-connect-secure-root-escalation-cisa-kev"
         }
       ],
       "title": "Act on Today"
@@ -36,31 +36,31 @@
     {
       "items": [
         {
-          "action": "Crypto and financial service providers should check blocklists against the FBI alert's addresses, including funds derived from them, and watch for ETH conversions through DeFi and instant-swap services.",
-          "details": "The FBI, with the US Secret Service and IRS Criminal Investigation, said it observed TraderTraitor actors converting stolen assets primarily into Ethereum and expected further laundering via DeFi and instant-swap services. It published wallet addresses tied to the theft and asked service providers to block transactions involving them. TRM Labs put the movement at about $6.36 billion across ten blockchains in roughly 20 minutes, the largest crypto theft on record.",
-          "image": "https://i0.wp.com/securityaffairs.com/wp-content/uploads/2019/05/binance.jpg?fit=750%2C500&ssl=1",
-          "severity": "Critical",
-          "summary": "The FBI said North Korea was responsible for stealing more than $6 billion in virtual assets from Binance on or about October 29, naming the TraderTraitor group, also tracked as Lazarus Group and APT38.",
-          "title": "FBI attributes $6bn+ Binance theft to North Korea's TraderTraitor",
-          "url": "https://securityaffairs.com/202221/apt/fbi-blames-north-korea-for-6-billion-binance-crypto-theft.html"
+          "action": "Update DSM to a fixed release, enable automatic updates, and block the management interface from the internet.",
+          "details": "Synology has not named the specific flaw exploited; its advisory links a November 2024 bulletin covering CVE-2024-10441, CVE-2024-50629 and CVE-2024-10445. Shadowserver counts cited in reporting put more than 380,000 Synology NAS devices exposed to the internet.",
+          "image": "https://bitlooptech.com/products/synology/synology-ds1525-plus.jpg",
+          "severity": "High",
+          "summary": "Synology warned customers to update immediately after a surge in C3RB3R ransomware attacks on devices running outdated DiskStation Manager, exploiting a vulnerability patched in December 2024. Victims report files renamed with a .L0CK3D extension and a ransom note named read-me3.txt.",
+          "title": "Synology warns C3RB3R ransomware is encrypting outdated NAS devices",
+          "url": "https://www.scworld.com/brief/synology-warns-of-c3rb3r-ransomware-targeting-outdated-nas-devices"
         },
         {
-          "action": "Treat the listing as a claim pending confirmation; healthcare-sector defenders should watch for Qilin double-extortion tactics and review exposed credentials and public-facing applications.",
-          "details": "The listing date reflects when the victim appeared on the leak site and may differ from the date of initial compromise. The specific data taken and the extent of any encryption have not been independently verified in the reviewed reporting.",
-          "image": "https://cyber.spool.co.jp/wp-content/uploads/2026/05/download-55-1600x900.png",
+          "action": "Treat the claim as unconfirmed; universities should force credential resets and audit access logs if they see matching indicators.",
+          "details": "Reporting links the claim to a campus security incident in early October that prompted password resets. BYOD drew attention in October for an attack on the University of New Mexico.",
+          "image": "https://lmnarchitects.com/wp-content/uploads/2023/03/Edward-J.-Minskoff-Pavilion-Michigan-State-University_315.jpg",
           "severity": "High",
-          "summary": "Qilin listed fzmb GmbH (Forschungszentrum für Medizintechnik und Biotechnologie), a German healthcare-sector organisation, on its leak site on November 1, 2026.",
-          "title": "Qilin lists German healthcare research firm fzmb GmbH on leak site",
-          "url": "https://cyberthreatintelligence.net/ransomware-victim/fzmb-gmbh-forschungszentrum-f-r-medizintechnik-und-biotechno-qilin-2026"
+          "summary": "The emerging BYOD ransomware group listed Michigan State University on its leak site on November 2, claiming personal data on 1.03 million current and former students plus passwords and broad system access. The claim is unverified and should be treated with caution.",
+          "title": "BYOD gang claims Michigan State data on 1.03 million students (unverified)",
+          "url": "https://www.itsecuritynews.info/michigan-state-cyber-incident-claimed-by-ransomware-gang-behind-recent-hospital-attack/"
         },
         {
-          "action": "Treat as an unverified claim; organisations with similar exposure should rotate exposed credentials, enforce MFA and hunt for infostealer compromise.",
-          "details": "The claim was tracked via the Ransomware.live platform. Tracker reporting linked the incident to infostealer activity and cited 103 exposed passwords, 27 of them classified as critical. The scope of any encryption or data theft has not been confirmed by the victim in the reviewed reporting.",
-          "image": "https://base.imgix.net/files/base/ebm/industryweek/image/2021/02/Ransomware.601afde3d866a.png?auto=format&w=660",
+          "action": "On any suspected infection, revoke and rotate OAuth tokens, cloud keys and saved credentials, and hunt for volta_log.zip, volta_dox.zip and volta_debug.txt artefacts.",
+          "details": "The malware enriches its haul from Gmail receipts, food-delivery history and Discord sessions to corroborate identity and address, and falls back across models if one refuses. Talos first saw it on October 11.",
+          "image": "https://hackread.com/wp-content/uploads/2025/07/infostealers-as-a-service-identity-hacks-record-highs-1024x597.jpg",
           "severity": "High",
-          "summary": "LockBit5 published PT Synergy Risk Management Consultants (synergy.co.id) as a victim on its leak site on November 1, 2026, according to ransomware trackers.",
-          "title": "LockBit5 claims Indonesian consultancy PT Synergy Risk Management",
-          "url": "https://qpulse.quasarcybertech.com/news/7679/lockbit5-ransomware-group-claims-pt-synergy-risk-management-consultants-as-victim"
+          "summary": "Cisco Talos analysed VOLTA-AUTODOXER, a self-deleting Windows infostealer that steals browser passwords, cookies, payment cards, tokens and keys, then sends a victim profile through OpenRouter to a language model to rank what the victim is worth. Stolen data is exfiltrated via Telegram.",
+          "title": "VOLTA infostealer sends stolen data to an AI model to rank victims",
+          "url": "https://securityaffairs.com/202281/malware/volta-the-infostealer-that-asks-an-ai-which-victims-are-worth-the-effort.html"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -68,36 +68,34 @@
     {
       "items": [
         {
-          "action": "AU Small Finance Bank auto-loan customers should watch for phishing using loan/KYC details; banks should review third-party SaaS data holdings and cyber-insurance notification duties.",
-          "details": "The bank holds a ₹100 crore cyber insurance cover from New India Assurance but had not yet intimated the insurer, according to people familiar with the matter cited on November 2. The extent of potential exposure and the number of customers affected are yet to be established. The bank has said its own systems remain unaffected. The reporting notes this follows cyberattacks involving Bank of Baroda and State Bank of India.",
-          "image": "https://s3.india.com/wp-content/uploads/2025/11/indian-banks-pic.jpg?impolicy=Medium_Widthonly&w=500",
+          "action": "Watch for follow-up disclosures on recovery and root cause; financial firms should review payment-approval controls for bulk beneficiary transfers.",
+          "details": "The company said it has cyber fraud insurance and is filing a claim with its insurer; the investigation is underway and further updates on recoveries are to follow.",
+          "image": "https://img.etimg.com/thumb/msid-111429614,width-525,height-393,imgsize-39166,resizemode-75/markets/stocks/news/comeback-trail-after-it-time-for-large-private-banks-to-make-a-comeback-6-top-private-banks-with-an-upside-potential-of-upto-40.jpg",
           "severity": "High",
-          "summary": "AU Small Finance Bank is investigating a potential data breach involving a third-party Salesforce-hosted platform holding information related to auto loan customers, and insurers are watching rising cyber claims across Indian banks.",
-          "title": "AU Small Finance Bank leak probe raises insurer concerns; extent still unestablished",
-          "url": "https://cfo.economictimes.indiatimes.com/news/governance-risk-compliance/cyberattacks-on-banks-including-au-small-finance-bank-worry-insurers-as-claim-risks-rise/135443254"
+          "summary": "Spandana Sphoorty Financial Ltd reported unauthorised transactions of about ₹7.80 crore from one of its bank accounts, identified on November 1, with funds transferred across 82 beneficiary accounts. The company stopped the affected services, sought reversals and freezing of beneficiary accounts, and filed a complaint on the National Cyber Crime Reporting Portal.",
+          "title": "Spandana Sphoorty reports ₹7.80 crore cyber fraud across 82 accounts",
+          "url": "https://newsable.asianetnews.com/business/spandana-sphoorty-reports-rs-7-80-crore-fraud-through-cyber-attack-articleshow-09v5z5v"
         },
         {
-          "action": "Do not treat the 30GB figure as proof of a breach; verify provenance and samples before acting, and watch for supplier-impersonation and invoice-fraud attempts using any genuine records if confirmed.",
-          "details": "The claim was flagged on November 2 by Dark Web Intelligence (@DailyDarkWeb). No detailed description of the allegedly stolen information, sample records or screenshots were provided in the reported post. The incident should be treated as an unverified threat-actor claim, not confirmation of a breach; the dataset could be genuine, recycled, or incorrectly attributed.",
-          "image": "https://cdn.zeptonow.com/production/ik-seo/tr:w-1000,ar-2500-2500,pr-true,f-avif,,q-40,dpr-2/cms/product_variant/6b4db5d3-3b7f-4fa8-87c6-1afd8719abfa/6b4db5d3-3b7f-4fa8-87c6-1afd8719abfa-jpeg.jpeg",
+          "details": "The analysis examined incidents involving ICMR, CoWIN, State Bank of India and AIIMS Delhi, among others, and pointed to common vulnerabilities across government departments, financial institutions and healthcare platforms.",
+          "image": "https://indiaverve.com/wp-content/uploads/2026/03/Delhi_India_Government.jpg",
           "severity": "Medium",
-          "summary": "A threat actor allegedly published an approximately 30GB dataset attributed to Parle Agro, maker of Frooti and Appy Fizz, as a free download on a dark web forum — with no samples, file listing or company statement to establish authenticity.",
-          "title": "Parle Agro 30GB dark-web data leak claim is unverified",
-          "url": "https://undercodenews.com/parle-agro-hit-by-30gb-dark-web-data-leak-claim-frooti-appy-fizz-and-bailley-brand-under-cybersecurity-scrutiny-video/"
-        },
-        {
-          "action": "Prioritise configuration and credential hygiene, least-privilege access and third-party vendor monitoring over assuming only advanced attackers are the risk.",
-          "details": "The analysis examined incidents involving ICMR, CoWIN, State Bank of India, AIIMS Delhi and data-selling networks uncovered by police. It also found breaches are often detected first by private firms or researchers rather than the affected organisations, and flagged pirated or unauthorised software as an added risk. The findings point to regular audits, stronger authentication, restricted privileges and continuous monitoring.",
-          "image": "https://www.myindianproducts.com/images/travel/places/india-gate-delhi-india.png",
-          "severity": "Medium",
-          "summary": "A recent central-agency analysis of major Indian data-leak incidents found recurring failures — misconfigured servers, compromised credentials, insider involvement, weak access controls and inadequate third-party monitoring — rather than only sophisticated attacks.",
-          "title": "Government analysis flags basic lapses behind India's major data leaks",
+          "summary": "A government analysis of major Indian data-leak incidents flagged recurring failures including misconfigured servers, compromised credentials, insider involvement, weak access controls and inadequate monitoring of third-party systems, with private entities and researchers often detecting breaches first.",
+          "title": "Government analysis flags recurring lapses behind India's data leaks",
           "url": "https://www.news18.com/india/indias-data-leak-problem-govt-analysis-flags-security-lapses-third-party-alerts-raise-concern-exclusive-ws-l-10408079.html"
+        },
+        {
+          "action": "Treat the claim as unverified; affected customers should watch for phishing using loan or KYC details.",
+          "details": "Salesforce said there was no sign its own platform had been compromised, according to reporting. The bank has not said whether the Salesforce platform is the source of the claimed data or how many customers may be affected.",
+          "severity": "High",
+          "summary": "AU Small Finance Bank said it is investigating a potential data leak involving a Salesforce-managed SaaS platform holding limited data on vehicle loan customers, after the ScarlettGroup claimed KYC, PAN, Aadhaar and loan records. The claims are unverified; the bank says its own systems remain unaffected and services are operating normally.",
+          "title": "AU Small Finance Bank probes alleged SaaS data leak after ScarlettGroup claim (unverified)",
+          "url": "https://theprint.in/tech/au-small-finance-bank-probes-potential-data-leak-from-saas-platform-after-hacker-group-claims-breach/3086172/"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Monday, November 2 — Here's what's worth your attention today.",
+  "subtitle": "Tuesday, November 3 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
