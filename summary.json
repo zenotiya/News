@@ -5,27 +5,27 @@
   "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-112816",
+      "id": "CVE-2026-58115",
       "cvss": 10.0,
-      "summary": "An authentication bypass in Canonical's LXD and MicroCloud lets a remote attacker impersonate any trusted client without holding that client's private key, by attaching the client's public certificate to their own TLS chain. Fixed in LXD 6.10.1, 5.21.9, 5.0.11 and 4.0.15 and MicroCloud 3.4.1 and 2.1.5; no known exploitation as of October 30.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112816"
+      "summary": "Missing authentication on the Node-RED HTTP interface in Siemens SIMATIC IoT2050 Advanced (below V4.3.4.1) lets an unauthenticated remote attacker create malicious flows and execute arbitrary code with maximum privileges. VulnCheck warned on November 2 that exploitation in the wild began on October 30; update to V4.3.4.1 and do not expose Node-RED interfaces to the internet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58115"
     },
     {
-      "id": "CVE-2026-97229",
+      "id": "CVE-2026-120277",
       "cvss": 10.0,
-      "summary": "An integer overflow in the Onigmo regular-expression engine used by GitLab's CI/CD configuration processing lets an unauthenticated attacker execute arbitrary code on a self-managed GitLab server. CISA added it to the Known Exploited Vulnerabilities catalog on October 29 after probing of Alpine Linux's instance; patch to GitLab 19.2.8, 19.3.5 or 19.4.2 and confirm the underlying Ruby is fixed.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229"
+      "summary": "A remote OS command injection flaw in the WireGuard CLI Group Handler of WAVLINK WN536AX6-A firmware V260507_2.0.0 lets an attacker manipulate the group_name argument to execute commands on the router. A proof of concept has been publicly disclosed; the vendor was contacted early about the disclosure.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120277"
     },
     {
-      "id": "CVE-2026-98432",
-      "cvss": 9.8,
-      "summary": "A use-after-free race in the Linux kernel's IPv4 TCP connection handling can be triggered remotely without authentication, and Anthropic demonstrated unauthenticated root command execution against a multipath TCP listener in a lab setting. Fixed kernels include 5.10.272, 5.15.223, 6.1.190, 6.6.159, 6.12.113, 6.18.56 and 7.2.10; apply the distribution kernel update and reboot.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98432"
+      "id": "CVE-2026-120279",
+      "cvss": 10.0,
+      "summary": "A remote OS command injection flaw in the openvpn_cli handler of WAVLINK WN536AX6-A firmware V260507 lets an attacker manipulate the file_id argument in /protocol.csp to execute commands on the router. The exploit has been publicly disclosed and may be used; the vendor was contacted early about the disclosure.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120279"
     }
   ],
   "model": {
-    "name": "GPT-6 Rosalind Research",
-    "summary": "OpenAI released GPT-6 Rosalind Research on October 30, a frontier reasoning model for biology, drug discovery and translational medicine built on GPT-6 Astra's weights with no additional training. It is available only through a trusted-access programme for approved research organisations, with fewer refusals on dual-use biology queries but refusals retained for biological weaponisation.",
-    "url": "https://help.openai.com/en/articles/20001193-gpt-rosalind-for-life-sciences-research"
+    "name": "Hydrogen-1.0",
+    "summary": "Deep Principle released Hydrogen-1.0 on November 2, a 753-billion-parameter open-weight model for chemistry, materials science and life sciences, built by post-training Z.ai's GLM-5.3 on domain data, laboratory records and discovery trajectories. Its MIT-licensed weights are on Hugging Face, and the company reports 38.3% on FrontierScience-Research against 33.3% for GPT-6-Astra, though full training data and recipes were not released.",
+    "url": "https://blog.deepprinciple.com/introducing-hydrogen-1.0/"
   }
 }

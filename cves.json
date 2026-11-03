@@ -1,40 +1,40 @@
 {
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "items": [
     {
       "cvss": 10.0,
-      "id": "CVE-2026-112816",
+      "id": "CVE-2026-58115",
       "severity": "Critical",
-      "summary": "An authentication bypass in Canonical's LXD and MicroCloud lets a remote attacker impersonate any trusted client without holding that client's private key, by attaching the client's public certificate to their own TLS chain. Fixed in LXD 6.10.1, 5.21.9, 5.0.11 and 4.0.15 and MicroCloud 3.4.1 and 2.1.5; no known exploitation as of October 30.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112816"
+      "summary": "Missing authentication on the Node-RED HTTP interface in Siemens SIMATIC IoT2050 Advanced (below V4.3.4.1) lets an unauthenticated remote attacker create malicious flows and execute arbitrary code with maximum privileges. VulnCheck warned on November 2 that exploitation in the wild began on October 30; update to V4.3.4.1 and do not expose Node-RED interfaces to the internet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58115"
     },
     {
       "cvss": 10.0,
-      "id": "CVE-2026-97229",
+      "id": "CVE-2026-120277",
       "severity": "Critical",
-      "summary": "An integer overflow in the Onigmo regular-expression engine used by GitLab's CI/CD configuration processing lets an unauthenticated attacker execute arbitrary code on a self-managed GitLab server. CISA added it to the Known Exploited Vulnerabilities catalog on October 29 after probing of Alpine Linux's instance; patch to GitLab 19.2.8, 19.3.5 or 19.4.2 and confirm the underlying Ruby is fixed.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229"
+      "summary": "A remote OS command injection flaw in the WireGuard CLI Group Handler of WAVLINK WN536AX6-A firmware V260507_2.0.0 lets an attacker manipulate the group_name argument to execute commands on the router. A proof of concept has been publicly disclosed; the vendor was contacted early about the disclosure.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120277"
+    },
+    {
+      "cvss": 10.0,
+      "id": "CVE-2026-120279",
+      "severity": "Critical",
+      "summary": "A remote OS command injection flaw in the openvpn_cli handler of WAVLINK WN536AX6-A firmware V260507 lets an attacker manipulate the file_id argument in /protocol.csp to execute commands on the router. The exploit has been publicly disclosed and may be used; the vendor was contacted early about the disclosure.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120279"
+    },
+    {
+      "cvss": 9.9,
+      "id": "CVE-2026-120322",
+      "severity": "Critical",
+      "summary": "A path traversal flaw in Termix up to 2.9.2, via the destPath argument of /plugin-api/file-manager/transferToHost, lets a remote attacker write arbitrary files. The exploit is publicly available; the shortcut was removed in the standalone File Manager plugin v1.0.0 and in core v26.10.0.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120322"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-98432",
+      "id": "CVE-2026-64618",
       "severity": "Critical",
-      "summary": "A use-after-free race in the Linux kernel's IPv4 TCP connection handling can be triggered remotely without authentication, and Anthropic demonstrated unauthenticated root command execution against a multipath TCP listener in a lab setting. Fixed kernels include 5.10.272, 5.15.223, 6.1.190, 6.6.159, 6.12.113, 6.18.56 and 7.2.10; apply the distribution kernel update and reboot.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98432"
-    },
-    {
-      "cvss": 9.3,
-      "id": "CVE-2026-48356",
-      "severity": "Critical",
-      "summary": "An unrestricted upload of files with dangerous types in Adobe Commerce and Magento Open Source can allow remote code execution. CISA added it to the Known Exploited Vulnerabilities catalog on October 27; apply the vendor patch as a priority.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356"
-    },
-    {
-      "cvss": 9.2,
-      "id": "CVE-2026-111497",
-      "severity": "Critical",
-      "summary": "An out-of-bounds write in Google's Brotli decoder (versions 1.0.3 through 1.2.0) is being exploited in the wild and was added to CISA's Known Exploited Vulnerabilities catalog on October 27. Update every product embedding Brotli, including browsers, servers and libraries, to a fixed decoder build.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497"
+      "summary": "A SQL injection flaw in Apache Fineract through 1.15.0, via the outStandingAmountPercentageCondition parameter of the advanced search API, allows SQL injection due to insufficient input neutralisation. Upgrade to version 1.16.1, which fixes the issue; no active exploitation was confirmed in the advisory.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64618"
     }
   ]
 }
