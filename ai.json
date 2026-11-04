@@ -1,35 +1,35 @@
 {
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "items": [
     {
-      "image": "https://www.deepprinciple.com/blog-assets/hydrogen-1.0/v20261102a/assets/training-infra/publication/rl-publication.gif",
-      "name": "Hydrogen-1.0",
-      "summary": "Deep Principle released Hydrogen-1.0 on November 2, a 753-billion-parameter open-weight model for chemistry, materials science and life sciences, built by post-training Z.ai's GLM-5.3 on domain data, laboratory records and discovery trajectories. Its MIT-licensed weights are on Hugging Face, and the company reports 38.3% on FrontierScience-Research against 33.3% for GPT-6-Astra, though full training data and recipes were not released.",
-      "url": "https://blog.deepprinciple.com/introducing-hydrogen-1.0/"
+      "image": "https://static.pib.gov.in/WriteReadData/userfiles/image/2026/nov/image001_20261103220404_c8db8d.jpg",
+      "name": "EKA-1",
+      "summary": "The IndiaAI Mission released EKA-1 on November 3, a 26.3-billion-parameter foundation model from Soket Labs trained on about 7.5 trillion tokens. It covers all 22 scheduled Indian languages plus English and is aimed at banking, financial services and cybersecurity work, including math, code, reasoning and agentic tasks.",
+      "url": "https://economictimes.indiatimes.com/ai/ai-insights/soket-labs-zenteiq-launch-indigenous-foundation-models-under-indiaai-mission/articleshow/135502992.cms"
     },
     {
-      "image": "https://images.ctfassets.net/kftzwdyauwt9/2fkAIT3PbTRytKTBx9cx8o/229bc28cb338565fe735d8935abc801f/OpenAI_Wordmark_Gif.gif?w=3840&q=90&fm=webp",
-      "name": "GPT-6 Rosalind Research",
-      "summary": "OpenAI released GPT-6 Rosalind Research on October 30, a frontier reasoning model for biology, drug discovery and translational medicine built on GPT-6 Astra's weights with no additional training. It is available only through a trusted-access programme for approved research organisations, with fewer refusals on dual-use biology queries but refusals retained for biological weaponisation.",
-      "url": "https://help.openai.com/en/articles/20001193-gpt-rosalind-for-life-sciences-research"
+      "image": "https://static.pib.gov.in/WriteReadData/userfiles/image/2026/nov/image002_20261103220419_424123.jpg",
+      "name": "Dhīr 2B & Dhīr 5B",
+      "summary": "ZenteiQ's Dhīr 2B and Dhīr 5B were released alongside EKA-1 on November 3 as open-source multilingual assistants for English and 10 Indian languages. Their lightweight design targets secure on-premise and offline use, including on-device deployment, for defence, government, industrial and education settings with low connectivity.",
+      "url": "https://www.moneycontrol.com/artificial-intelligence/meity-releases-2-more-foundational-models-under-indiaai-mission-article-14068073.html/amp"
     },
     {
-      "image": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/ml4/ml4.png",
-      "name": "Mistral Large 4 open weights",
-      "summary": "Mistral released the weights of Mistral Large 4 (Le Chonk) on October 29, an improved build after three more weeks of reinforcement learning following its October 6 preview. The roughly 1-trillion-parameter multimodal model leads open-weight coding benchmarks and scores 51% on the Artificial Analysis Cyber Index for defensive security work, and can be downloaded and self-hosted under the Mistral Ecosystem Open-Weight License.",
-      "url": "https://mistral.ai/news/mistral-large-4-oss/"
+      "image": "https://flower.ai/static/images/previews/1200x628/2026-11-03-introducing-endeavor-1.1.jpg",
+      "name": "Flower Labs Endeavor 1.1",
+      "summary": "Flower Labs released Endeavor 1.1 on November 3, a frontier model update adding image inputs and EU-based GPU inference, with private-cloud or on-premise deployment and inspectable reasoning traces. The company reports GPQA rising from 92.0 to 94.4 and HumanEval from 98.2 to 99.9 over version 1.0, though its headline composite equally weights only four benchmarks.",
+      "url": "https://flower.ai/blog/2026-11-03-introducing-endeavor-1.1"
     },
     {
-      "image": "https://assets.techrepublic.com/uploads/2026/10/gemini-4-carbon-wordpress-optimized-1.jpg?w=1024",
-      "name": "Gemini 4 Carbon",
-      "summary": "Google DeepMind announced Gemini 4 Carbon on October 28, its strongest model yet, built for cybersecurity defence and long-horizon engineering work. It ranks first on the Artificial Analysis Intelligence Index v5.0 at 59 and leads SEC-bench Pro (88.2%), ExploitGym (54.8%) and CWE-bench (71.0%), but rolls out first only to a subset of cyber defenders through the Fairwind Program.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+      "image": "https://www.eesel.ai/_next/image?url=https%3A%2F%2Fwmeojibgfvjvinftolho.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fblog-research%2Flongcat%2Fimages%2Flc25-changelog-20261102.png&w=1680&q=75",
+      "name": "Meituan LongCat-2.5",
+      "summary": "Meituan made LongCat-2.5 generally available on November 2, a 1.6-trillion-parameter multimodal model for long-horizon coding agents that accepts text, images and video with a 1-million-token context window. It is API-only for now, with open weights still listed as coming soon, at $0.30 per million input tokens and $1.20 per million output tokens.",
+      "url": "https://www.eesel.ai/blog/longcat-2-5"
     },
     {
-      "image": "https://cdn-uploads.huggingface.co/production/uploads/644249b08443bce4c9890a0f/iZQBqXVZfrcUNCklF4eAs.png",
-      "name": "Liquid AI LFM3",
-      "summary": "Liquid AI released LFM3 on October 27, a family of six open-weight 2B-class models for text, vision, audio, omni and decision tasks, all branched from a single 1.7B-parameter backbone trained on 22 trillion tokens. The text model fits in about 1 GB at 4-bit precision with a 256K-token context window, targeting on-device agents that can be fine-tuned on a single GPU.",
-      "url": "https://huggingface.co/blog/LiquidAI/lfm3"
+      "image": "https://www.i-scoop.eu/wp-content/uploads/2026/11/glm-legal-timeline.webp",
+      "name": "Z.ai GLM-5.3 FlashX Legal",
+      "summary": "Z.ai's legal variant GLM-5.3-FlashX-Legal surfaced on OpenRouter and Vercel's AI Gateway on November 2, bringing its GLM-Legal agent to API access at $0.37 per million input tokens and $1.25 per million output tokens. Built on the open GLM-5.3-Flash base, it reads contracts and case files and returns Word edits as tracked changes, but the legal weights themselves are closed and direct API access remains by application.",
+      "url": "https://www.i-scoop.eu/glm-5-3-flashx-legal/"
     }
   ]
 }

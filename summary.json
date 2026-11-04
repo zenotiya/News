@@ -2,30 +2,30 @@
   "date": "2026-11-04",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 10.0,
+  "worst_cvss": 9.9,
   "priorities": [
     {
-      "id": "CVE-2026-58115",
-      "cvss": 10.0,
-      "summary": "Missing authentication on the Node-RED HTTP interface in Siemens SIMATIC IoT2050 Advanced (below V4.3.4.1) lets an unauthenticated remote attacker create malicious flows and execute arbitrary code with maximum privileges. VulnCheck warned on November 2 that exploitation in the wild began on October 30; update to V4.3.4.1 and do not expose Node-RED interfaces to the internet.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58115"
+      "id": "CVE-2026-28336",
+      "cvss": 9.9,
+      "summary": "SolarWinds patched a critical command injection flaw in Dameware, rated CVSS 9.9 and disclosed on November 3. No exploitation had been confirmed at disclosure; apply the fixed Dameware release promptly.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28336"
     },
     {
-      "id": "CVE-2026-120277",
-      "cvss": 10.0,
-      "summary": "A remote OS command injection flaw in the WireGuard CLI Group Handler of WAVLINK WN536AX6-A firmware V260507_2.0.0 lets an attacker manipulate the group_name argument to execute commands on the router. A proof of concept has been publicly disclosed; the vendor was contacted early about the disclosure.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120277"
+      "id": "CVE-2026-95731",
+      "cvss": 9.8,
+      "summary": "HPE patched 46 flaws in Fabric Composer, worst CVE-2026-95731 (CVSS 9.8), an unauthenticated hardcoded-password flaw letting an attacker log in and gain administrative access. It affects Fabric Composer 7.4.0 and below and 7.3.4 and below; upgrade to 7.4.1 or 7.3.5.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-95731"
     },
     {
-      "id": "CVE-2026-120279",
-      "cvss": 10.0,
-      "summary": "A remote OS command injection flaw in the openvpn_cli handler of WAVLINK WN536AX6-A firmware V260507 lets an attacker manipulate the file_id argument in /protocol.csp to execute commands on the router. The exploit has been publicly disclosed and may be used; the vendor was contacted early about the disclosure.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120279"
+      "id": "CVE-2026-98432",
+      "cvss": 9.8,
+      "summary": "A use-after-free flaw in the Linux kernel's IPv4 TCP handling, rated CVSS 9.8, can allow remote unauthenticated code execution via a race during TCP connection setup. Red Hat shipped fixed kernels for RHEL 8, 9 and 10; Ubuntu fixes for older LTS releases were still in testing as of November 3.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98432"
     }
   ],
   "model": {
-    "name": "Hydrogen-1.0",
-    "summary": "Deep Principle released Hydrogen-1.0 on November 2, a 753-billion-parameter open-weight model for chemistry, materials science and life sciences, built by post-training Z.ai's GLM-5.3 on domain data, laboratory records and discovery trajectories. Its MIT-licensed weights are on Hugging Face, and the company reports 38.3% on FrontierScience-Research against 33.3% for GPT-6-Astra, though full training data and recipes were not released.",
-    "url": "https://blog.deepprinciple.com/introducing-hydrogen-1.0/"
+    "name": "EKA-1",
+    "summary": "The IndiaAI Mission released EKA-1 on November 3, a 26.3-billion-parameter foundation model from Soket Labs trained on about 7.5 trillion tokens. It covers all 22 scheduled Indian languages plus English and is aimed at banking, financial services and cybersecurity work, including math, code, reasoning and agentic tasks.",
+    "url": "https://economictimes.indiatimes.com/ai/ai-insights/soket-labs-zenteiq-launch-indigenous-foundation-models-under-indiaai-mission/articleshow/135502992.cms"
   }
 }

@@ -1,40 +1,40 @@
 {
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "items": [
     {
-      "cvss": 10.0,
-      "id": "CVE-2026-58115",
-      "severity": "Critical",
-      "summary": "Missing authentication on the Node-RED HTTP interface in Siemens SIMATIC IoT2050 Advanced (below V4.3.4.1) lets an unauthenticated remote attacker create malicious flows and execute arbitrary code with maximum privileges. VulnCheck warned on November 2 that exploitation in the wild began on October 30; update to V4.3.4.1 and do not expose Node-RED interfaces to the internet.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58115"
-    },
-    {
-      "cvss": 10.0,
-      "id": "CVE-2026-120277",
-      "severity": "Critical",
-      "summary": "A remote OS command injection flaw in the WireGuard CLI Group Handler of WAVLINK WN536AX6-A firmware V260507_2.0.0 lets an attacker manipulate the group_name argument to execute commands on the router. A proof of concept has been publicly disclosed; the vendor was contacted early about the disclosure.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120277"
-    },
-    {
-      "cvss": 10.0,
-      "id": "CVE-2026-120279",
-      "severity": "Critical",
-      "summary": "A remote OS command injection flaw in the openvpn_cli handler of WAVLINK WN536AX6-A firmware V260507 lets an attacker manipulate the file_id argument in /protocol.csp to execute commands on the router. The exploit has been publicly disclosed and may be used; the vendor was contacted early about the disclosure.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120279"
-    },
-    {
       "cvss": 9.9,
-      "id": "CVE-2026-120322",
+      "id": "CVE-2026-28336",
       "severity": "Critical",
-      "summary": "A path traversal flaw in Termix up to 2.9.2, via the destPath argument of /plugin-api/file-manager/transferToHost, lets a remote attacker write arbitrary files. The exploit is publicly available; the shortcut was removed in the standalone File Manager plugin v1.0.0 and in core v26.10.0.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120322"
+      "summary": "SolarWinds patched a critical command injection flaw in Dameware, rated CVSS 9.9 and disclosed on November 3. No exploitation had been confirmed at disclosure; apply the fixed Dameware release promptly.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28336"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-64618",
+      "id": "CVE-2026-95731",
       "severity": "Critical",
-      "summary": "A SQL injection flaw in Apache Fineract through 1.15.0, via the outStandingAmountPercentageCondition parameter of the advanced search API, allows SQL injection due to insufficient input neutralisation. Upgrade to version 1.16.1, which fixes the issue; no active exploitation was confirmed in the advisory.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64618"
+      "summary": "HPE patched 46 flaws in Fabric Composer, worst CVE-2026-95731 (CVSS 9.8), an unauthenticated hardcoded-password flaw letting an attacker log in and gain administrative access. It affects Fabric Composer 7.4.0 and below and 7.3.4 and below; upgrade to 7.4.1 or 7.3.5.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-95731"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-98432",
+      "severity": "Critical",
+      "summary": "A use-after-free flaw in the Linux kernel's IPv4 TCP handling, rated CVSS 9.8, can allow remote unauthenticated code execution via a race during TCP connection setup. Red Hat shipped fixed kernels for RHEL 8, 9 and 10; Ubuntu fixes for older LTS releases were still in testing as of November 3.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98432"
+    },
+    {
+      "cvss": 9.4,
+      "id": "CVE-2026-115731",
+      "severity": "Critical",
+      "summary": "A report-deserialization remote code execution flaw in Puppet Server, rated CVSS 9.4 and disclosed November 3, now has a public proof of concept that runs a shell command on the server. Update OpenVox or Puppet Enterprise to 2023.8.13, 2025.12.1 or 2026.0.1; no exploitation had been confirmed at disclosure.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115731"
+    },
+    {
+      "cvss": 9.1,
+      "id": "CVE-2026-95860",
+      "severity": "Critical",
+      "summary": "In node-opcua before 2.180.0, namespace-level access control set via setDefaultRolePermissions is not honoured for nodes without explicit per-node RolePermissions, a critical flaw rated CVSS 9.1 disclosed November 3. Upgrade to version 2.180.0, which fixes the issue.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-95860"
     }
   ]
 }
