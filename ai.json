@@ -1,35 +1,35 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "items": [
     {
-      "image": "https://static.pib.gov.in/WriteReadData/userfiles/image/2026/nov/image001_20261103220404_c8db8d.jpg",
-      "name": "EKA-1",
-      "summary": "The IndiaAI Mission released EKA-1 on November 3, a 26.3-billion-parameter foundation model from Soket Labs trained on about 7.5 trillion tokens. It covers all 22 scheduled Indian languages plus English and is aimed at banking, financial services and cybersecurity work, including math, code, reasoning and agentic tasks.",
-      "url": "https://economictimes.indiatimes.com/ai/ai-insights/soket-labs-zenteiq-launch-indigenous-foundation-models-under-indiaai-mission/articleshow/135502992.cms"
+      "name": "Tencent Hy4",
+      "summary": "Tencent launched the full Hy4 model on November 4, a 770-billion-parameter mixture-of-experts model that adds native visual understanding and computer-use abilities to the Hunyuan line for the first time. It can read images and operate software via command-line and graphical interfaces, and is live through Tencent Cloud TokenHub, OpenRouter and Tencent's own apps, with open weights promised soon.",
+      "url": "https://emergent.sh/news/tencent-hy4-launch-770b-vision-model-computer",
+      "image": "https://cdn.prod.website-files.com/6a0f028de6df6a6fd88c3f89/6aeaee272b971e96e675cfb9_6aeaee256732c3bfba398525_tencent-hy4-launch-770b-vision-model-computer-use.avif"
     },
     {
-      "image": "https://static.pib.gov.in/WriteReadData/userfiles/image/2026/nov/image002_20261103220419_424123.jpg",
-      "name": "Dhīr 2B & Dhīr 5B",
-      "summary": "ZenteiQ's Dhīr 2B and Dhīr 5B were released alongside EKA-1 on November 3 as open-source multilingual assistants for English and 10 Indian languages. Their lightweight design targets secure on-premise and offline use, including on-device deployment, for defence, government, industrial and education settings with low connectivity.",
-      "url": "https://www.moneycontrol.com/artificial-intelligence/meity-releases-2-more-foundational-models-under-indiaai-mission-article-14068073.html/amp"
+      "name": "MiniMax M3",
+      "summary": "MiniMax unveiled M3 on November 3, billed as the first open-weight model to combine frontier coding and agentic capabilities, a 1-million-token context window and native multimodality. Built on its MiniMax Sparse Attention architecture, it is aimed at coding assistants and autonomous multi-step workflows, with full open-sourcing on Hugging Face and GitHub to follow.",
+      "url": "https://aichina.news/news/minimax-unveils-m3-an-open-weight-model-combining-1m-context-native-7u2chs/",
+      "image": "https://aichina.news/images/7u2chsu9vftizlx_original.webp"
     },
     {
-      "image": "https://flower.ai/static/images/previews/1200x628/2026-11-03-introducing-endeavor-1.1.jpg",
-      "name": "Flower Labs Endeavor 1.1",
-      "summary": "Flower Labs released Endeavor 1.1 on November 3, a frontier model update adding image inputs and EU-based GPU inference, with private-cloud or on-premise deployment and inspectable reasoning traces. The company reports GPQA rising from 92.0 to 94.4 and HumanEval from 98.2 to 99.9 over version 1.0, though its headline composite equally weights only four benchmarks.",
-      "url": "https://flower.ai/blog/2026-11-03-introducing-endeavor-1.1"
+      "name": "Sarvam Prism",
+      "summary": "Sarvam AI released Prism on November 3, an open-weight decision model built on its Sarvam 105B base that evaluates predefined options in a single forward pass instead of generating token by token. It answers in a reported 44 milliseconds on one NVIDIA B200 GPU with a 71.8 average across three benchmarks, and its Apache 2.0 weights let enterprises run it on their own infrastructure.",
+      "url": "https://www.sarvam.ai/blogs/sarvam-prism",
+      "image": "https://assets.sarvam.ai/tr:w-1600,q-90,f-auto,dpr-auto/images/03117ysv/production/9de24f0346149d6c43848c8d4bb5b2611badf37a-1535x1025.png?rect=0,30,1535,768"
     },
     {
-      "image": "https://www.eesel.ai/_next/image?url=https%3A%2F%2Fwmeojibgfvjvinftolho.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fblog-research%2Flongcat%2Fimages%2Flc25-changelog-20261102.png&w=1680&q=75",
-      "name": "Meituan LongCat-2.5",
-      "summary": "Meituan made LongCat-2.5 generally available on November 2, a 1.6-trillion-parameter multimodal model for long-horizon coding agents that accepts text, images and video with a 1-million-token context window. It is API-only for now, with open weights still listed as coming soon, at $0.30 per million input tokens and $1.20 per million output tokens.",
-      "url": "https://www.eesel.ai/blog/longcat-2-5"
+      "name": "Deep Principle Hydrogen-1.0",
+      "summary": "Deep Principle launched Hydrogen-1.0 on November 2, a 753-billion-parameter open-weight scientific foundation model for chemistry, materials science and life sciences, post-trained from Z.ai's GLM-5.3 on lab records and discovery trajectories. Its MIT-licensed weights, 1-million-token context and reported edge over GPT-6 Astra on FrontierScience-Research make it a notable specialist challenger to general frontier models.",
+      "url": "https://emergent.sh/news/deep-principle-hydrogen-1-0-753b-open-weight",
+      "image": "https://cdn.prod.website-files.com/6a0f028de6df6a6fd88c3f89/6aea360eff3f1758d7a77262_6aea360bd840cf1595200837_deep-principle-hydrogen-1-0-753b-open-weight-science-model.avif"
     },
     {
-      "image": "https://www.i-scoop.eu/wp-content/uploads/2026/11/glm-legal-timeline.webp",
-      "name": "Z.ai GLM-5.3 FlashX Legal",
-      "summary": "Z.ai's legal variant GLM-5.3-FlashX-Legal surfaced on OpenRouter and Vercel's AI Gateway on November 2, bringing its GLM-Legal agent to API access at $0.37 per million input tokens and $1.25 per million output tokens. Built on the open GLM-5.3-Flash base, it reads contracts and case files and returns Word edits as tracked changes, but the legal weights themselves are closed and direct API access remains by application.",
-      "url": "https://www.i-scoop.eu/glm-5-3-flashx-legal/"
+      "name": "Google Gemini 4 Carbon",
+      "summary": "Google DeepMind announced Gemini 4 Carbon on October 28 as its strongest model to date, built for cybersecurity and long-horizon agentic engineering, ranking first on the Artificial Analysis Intelligence Index v5.0 with a score of 59. Initial access is limited to a subset of vetted cybersecurity defenders through Google's Fairwind Program, with wider developer and consumer availability still undated.",
+      "url": "https://pulse2.com/google-introduces-gemini-4-carbon-with-advanced-cybersecurity-and-long-horizon-agentic-capabilities/",
+      "image": "https://cdn.pulse2.com/cdn/2026/06/Google-Gemini-Logo.jpeg"
     }
   ]
 }

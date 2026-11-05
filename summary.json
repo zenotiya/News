@@ -2,30 +2,30 @@
   "date": "2026-11-05",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 9.9,
+  "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-28336",
+      "id": "CVE-2026-121606",
+      "cvss": 10.0,
+      "summary": "A firmware signature verification flaw in Qihoo 360 routers (D621-2, D603-2, D600-2, D619, D606-6 and D706 up to 6.4.9) allows improper verification of cryptographic signatures, rated the maximum CVSS 10.0. Affected devices should be updated to fixed firmware or replaced if no fix is available.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121606"
+    },
+    {
+      "id": "CVE-2026-120322",
       "cvss": 9.9,
-      "summary": "SolarWinds patched a critical command injection flaw in Dameware, rated CVSS 9.9 and disclosed on November 3. No exploitation had been confirmed at disclosure; apply the fixed Dameware release promptly.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28336"
+      "summary": "A path traversal flaw in Termix-SSH Termix up to 2.9.2 lets a remote attacker manipulate the destPath argument of the file-manager transferToHost endpoint, with a public exploit available. Update Termix beyond 2.9.2 and restrict access to the file-manager API.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120322"
     },
     {
-      "id": "CVE-2026-95731",
+      "id": "CVE-2026-122006",
       "cvss": 9.8,
-      "summary": "HPE patched 46 flaws in Fabric Composer, worst CVE-2026-95731 (CVSS 9.8), an unauthenticated hardcoded-password flaw letting an attacker log in and gain administrative access. It affects Fabric Composer 7.4.0 and below and 7.3.4 and below; upgrade to 7.4.1 or 7.3.5.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-95731"
-    },
-    {
-      "id": "CVE-2026-98432",
-      "cvss": 9.8,
-      "summary": "A use-after-free flaw in the Linux kernel's IPv4 TCP handling, rated CVSS 9.8, can allow remote unauthenticated code execution via a race during TCP connection setup. Red Hat shipped fixed kernels for RHEL 8, 9 and 10; Ubuntu fixes for older LTS releases were still in testing as of November 3.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98432"
+      "summary": "The Ruby on Rails Active Storage gem before 8.1.4.1 can allow server read and write operations, such as reading secret_key_base, when ImageMagick attachment processing runs without a security policy blocking unintended functionality. Published November 4; upgrade Active Storage to the fixed release.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122006"
     }
   ],
   "model": {
-    "name": "EKA-1",
-    "summary": "The IndiaAI Mission released EKA-1 on November 3, a 26.3-billion-parameter foundation model from Soket Labs trained on about 7.5 trillion tokens. It covers all 22 scheduled Indian languages plus English and is aimed at banking, financial services and cybersecurity work, including math, code, reasoning and agentic tasks.",
-    "url": "https://economictimes.indiatimes.com/ai/ai-insights/soket-labs-zenteiq-launch-indigenous-foundation-models-under-indiaai-mission/articleshow/135502992.cms"
+    "name": "Tencent Hy4",
+    "summary": "Tencent launched the full Hy4 model on November 4, a 770-billion-parameter mixture-of-experts model that adds native visual understanding and computer-use abilities to the Hunyuan line for the first time. It can read images and operate software via command-line and graphical interfaces, and is live through Tencent Cloud TokenHub, OpenRouter and Tencent's own apps, with open weights promised soon.",
+    "url": "https://emergent.sh/news/tencent-hy4-launch-770b-vision-model-computer"
   }
 }
