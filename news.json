@@ -1,34 +1,34 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "sections": [
     {
       "items": [
         {
-          "action": "Update WordPress core to 7.1.4 or the branch backport, and block HTTP access to /wp-content/upgrade/ until patched.",
-          "details": "Wordfence, the assigning CNA, scores the flaw CVSS 8.1 and says it affects WordPress Core 4.7 through 7.1.3; WordPress 7.1.4, released October 28, fixes it. CISA flagged the entry for forensic triage, meaning affected sites should be checked for signs of compromise, not just patched.",
-          "image": "https://bentenweb.com/blog/wp-content/uploads/2026/03/ead672b23ce5a01726d77b537bfa7d7e-768x429.jpg",
+          "action": "Update WordPress Core to 7.1.4 or later immediately, and check sites that recently ran full-package upgrades for signs of compromise.",
+          "details": "The flaw is a time-of-check time-of-use (TOCTOU) race condition in full-package core upgrades, where predictable, web-accessible staging paths could let an unauthenticated attacker execute code on the server during the upgrade window. WordPress 7.1.4 addresses it.",
+          "severity": "Critical",
+          "summary": "CISA has added WordPress Core vulnerability CVE-2026-119977 to its Known Exploited Vulnerabilities catalog after evidence of active exploitation, with a November 6 remediation deadline for federal civilian agencies.",
+          "title": "CISA adds exploited WordPress Core flaw to KEV; patch by Nov 6",
+          "url": "https://undercodenews.com/cisa-adds-critical-wordpress-core-vulnerability-cve-2026-119977-to-kev-catalog-following-active-exploitation-video/",
+          "image": "https://www.anwarpress.com/wp-content/uploads/2026/03/e35ceba7-ec59-43e7-ac0e-d420149a8297_16032026111632.webp"
+        },
+        {
+          "action": "Apply the November 2026 Android security patch (2026-11-01 level or later) as soon as your manufacturer ships it, and prioritise devices still on older patch levels.",
+          "details": "Devices receive the fix through security patch level 2026-11-01 or later, depending on manufacturer and carrier. The bulletin includes 23 vulnerabilities rated Critical, including flaws in the System component and modem code.",
+          "severity": "Critical",
+          "summary": "Google's November 2026 Android security bulletin fixes 216 vulnerabilities, including critical flaw CVE-2026-58868, a heap buffer overflow in FrameDecoder that could allow remote code execution with no user interaction on Android 14 through 17.",
+          "title": "Google's November Android bulletin fixes critical remote-code flaw",
+          "url": "https://securityaffairs.com/202414/mobile-2/cve-2026-58868-critical-android-bug-could-let-attackers-run-remote-code.html",
+          "image": "https://www.2-remove-virus.com/wp-content/uploads/2026/05/Google-warns-Android-users-to-install-urgent-security-update-fixing-critical-phone-takeover-flaw-624x416.png"
+        },
+        {
+          "action": "Apply Barracuda's November 2 firmware patches and restrict appliance administrative interfaces to trusted internal networks only.",
+          "details": "Barracuda has not reported exploitation of either flaw. Exploitation requires access to the appliance's administrative interface, so internet-exposed admin interfaces are the priority. ESG patches are BNSF-40425 (9.4.017+) and BNSF-40430 (earlier versions).",
           "severity": "High",
-          "summary": "CISA added CVE-2026-119977, a time-of-check time-of-use race condition in the WordPress core upgrade process, to its Known Exploited Vulnerabilities catalog on November 3 based on evidence of active exploitation. Federal agencies must remediate by November 6.",
-          "title": "CISA adds actively exploited WordPress flaw to KEV; patch by Nov 6",
-          "url": "https://carthageelectronics.com/november-3-2026-cve-threat-brief/"
-        },
-        {
-          "action": "Update every cPGuard server to 5.88.25 or later, then reset passwords and rotate database credentials, cloud secrets and SSH keys.",
-          "details": "The script collected /etc/shadow and /etc/passwd, root database configuration, root shell history and root SSH files. OpsShield detected the compromise within 12 hours; its advisory put the preliminary count of confirmed retrieved files at 32 customer servers, so the full scope was still being verified. Updating to 5.88.25 or later removes the backdoor and staged files but does not invalidate stolen secrets.",
-          "image": "https://www.transgridenergy.com/assets/data-center-racks-309.jpg",
-          "severity": "Critical",
-          "summary": "OpsShield said an attacker used compromised credentials on November 2 at 02:06 UTC to push a malicious script through the cPGuard update channel to versions 5.88.12 through 5.88.19, installing a backdoor and collecting password hashes and sensitive files. An OpsShield spokesperson told BleepingComputer 2,946 servers were affected.",
-          "title": "cPGuard update channel hijacked to push backdoor to nearly 3,000 servers",
-          "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-cpguard-autoupdate-to-deploy-backdoor-steal-data/"
-        },
-        {
-          "action": "Apply your distribution's fixed kernel and reboot; on Ubuntu, watch for the fix leaving -proposed, and consider the IPv4-options firewall mitigation in the meantime.",
-          "details": "No exploitation in the wild had been reported as of late October, and a demonstrated research exploit had not been published. Red Hat described a firewall mitigation dropping inbound TCP packets carrying IPv4 options, which the known attack relies on.",
-          "image": "https://tuxcare.com/wp-content/uploads/2024/01/debian-linux-security-updates.png",
-          "severity": "Critical",
-          "summary": "CVE-2026-98432, a use-after-free race condition in the Linux kernel's IPv4 TCP handshake code scored CVSS 9.8, affects kernels as far back as 4.4 and is reachable by a remote, unauthenticated attacker. Red Hat has shipped fixes; Canonical's fixed kernels were still sitting in Ubuntu's -proposed pocket on November 3, not delivered by a normal apt upgrade.",
-          "title": "Critical Linux kernel TCP flaw CVE-2026-98432: Red Hat fixed, Ubuntu fix still in testing",
-          "url": "https://pbxscience.com/ubuntu-fix-for-cve-2026-98432-is-built-but-not-yet-released/"
+          "summary": "Barracuda has patched CVE-2026-116606, a pre-authentication authorization bypass in Email Security Gateway (CVSS 9.3), and CVE-2026-111560, a command-injection flaw across six products (CVSS 8.6), which combined could give root access to a device.",
+          "title": "Barracuda patches two flaws chainable to root on security appliances",
+          "url": "https://securityaffairs.com/202440/security/two-barracuda-esg-flaws-could-be-combined-for-full-root-access-patches-released.html",
+          "image": "https://www.openedr.com/blog/wp-content/uploads/2025/12/email-security-gateway-432x288.png"
         }
       ],
       "title": "Act on Today"
@@ -36,31 +36,31 @@
     {
       "items": [
         {
-          "action": "Protect backup-server credentials, restrict unmanaged hosts, and segment Active Directory trusts between sites so one estate cannot pivot into another.",
-          "details": "The suspicion rests on command behaviour: repeated, slightly modified commands issued at roughly 40-to-100-second intervals. Bitdefender said it could not access the machine the attacker worked from, so it could not identify a model or rule out a person relaying commands, and it could not establish the initial access method. The attacker used a modified PowerShell tool to extract credentials from three Veeam backup servers and deployed Mimikatz and LSASS dumping tools.",
-          "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:good:444,e_sharpen:60/rockcms/2021-04/210409-ransomware-schools-2x1-cs-e05329.jpg",
-          "severity": "High",
-          "summary": "Bitdefender reported on November 3 that a 3AM ransomware affiliate encrypted around 37 of nearly 50 machines it reached at a UK school estate during an intrusion spanning September 10-19, after stealing backup credentials and creating rogue domain-admin accounts. Bitdefender suspects an AI-driven agentic loop drove some commands, but says it could not confirm model use.",
-          "title": "3AM ransomware hit UK school estate in suspected AI-assisted attack",
-          "url": "https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/"
+          "action": "Law and insurance firms should review exposed credentials and third-party access, and watch for client data appearing in extortion channels.",
+          "details": "The claimed haul includes 4,477 workers' compensation defence case files, 6,461 DICOM medical imaging files, and 28,410 medical explanations of benefits containing personal information and diagnoses. This is a threat-actor claim, not yet independently confirmed by the firm.",
+          "severity": "Critical",
+          "summary": "The Rhysida ransomware group has claimed the law firm Juge, Napolitano, Ruli, Putfark & Pittman (WC Defense), claiming to have exfiltrated about 3.2 TB of data totalling 2,383,324 files.",
+          "title": "Rhysida claims 3.2 TB theft from Louisiana law firm WC Defense",
+          "url": "https://qpulse.quasarcybertech.com/news/7787/rhysida-ransomware-group-exfiltrates-3-2-tb-of-data-from-law-firm-juge-napolitano-ruli-putfark-pittman",
+          "image": "https://base.imgix.net/files/base/ebm/industryweek/image/2021/02/Ransomware.601afde3d866a.png?auto=format&w=660"
         },
         {
-          "action": "Rotate AI API keys, manage them in a central secrets platform, enforce phishing-resistant MFA, and set API usage and spending limits with billing alerts.",
-          "details": "One actor made more than 500,000 LLM API calls in under eight hours through the Jet Night routing service, passing nearly $1 million in token costs to one victim. Researchers identified two operational clusters, including UNC6993, and saw attackers exploiting CVE-2026-40217 in LiteLLM to run arbitrary code.",
-          "image": "https://www.gstatic.com/bricks/image/Ez-iDBLhZQi_x6HbM6tSGZjkFe9K4Ycc9QyFOwejCZP6SaHMFDpvVDaqAEm03-rGoYkLsqX1sTop.jpeg",
+          "action": "Monitor for corroboration and, if you share data with the named supply chain, verify whether any of your records are in scope.",
+          "details": "The group claims the data spans three regions and includes contacts, shipment records, invoices and distributor loyalty profiles. The claim is unverified and the group is newly discovered, so treat it as an emerging allegation, not a confirmed breach.",
           "severity": "High",
-          "summary": "Google Threat Intelligence Group and Mandiant reported on November 2 that LLMjacking incidents in 2026 ran up fraudulent cloud charges exceeding $100,000 in a single day at some organisations, reaching $1 million cumulatively before access was revoked. Attackers steal API keys or find exposed LLM endpoints, then resell the access through 'LLM mixer' gateways.",
-          "title": "LLMjacking: stolen AI keys ran up $1 million in cloud charges, Google and Mandiant warn",
-          "url": "https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/"
+          "summary": "A newly surfaced ransomware group calling itself Whitearmor listed Unilever on its leak site on November 4, claiming 79 GB of exfiltrated data across 1.8 million files and demanding $15 million in Bitcoin.",
+          "title": "New group Whitearmor claims Unilever breach, demands $15M",
+          "url": "https://qpulse.quasarcybertech.com/news/7819/whitearmor-ransomware-group-claims-compromise-of-unilever-with-15m-demand",
+          "image": "https://cdn.uconnectlabs.com/wp-content/uploads/sites/218/2024/11/supply_chain-480x320-center-middle.jpg?v=125059"
         },
         {
-          "action": "If you share suppliers or credentials with a listed organisation, rotate shared credentials and watch for phishing using the claimed data.",
-          "details": "The exposure report cited in the listing pointed to 34 compromised users and 84 passwords associated with the domain, with 10 classified as critical. Treat leak-site listings as claims until the named organisation confirms an incident.",
-          "image": "https://securitybrief.co.nz/uploads/story/2026/04/29/compatible_dark-lock-ransomware-extortion-leak-site-laptop-screens.jpg",
-          "severity": "Medium",
-          "summary": "The Ransomware.live tracker reported that INC Ransom claimed roundglass.com as a victim on November 3, with the report citing infostealer-linked credential exposure. The claim is unverified: the report does not confirm what data was exfiltrated or the victim's current operational status.",
-          "title": "INC Ransom claims Roundglass among November 3 leak-site listings (unverified claim)",
-          "url": "https://qpulse.quasarcybertech.com/news/7757/incransom-ransomware-group-claims-attack-on-roundglass-com"
+          "action": "Nonprofits holding donor and beneficiary data should rotate exposed credentials and review financial-system access after any such claim.",
+          "details": "The claim, reported November 4, also notes infostealer-linked credential exposure for the organisation. No ransom demand, attack vector or recovery status has been reported.",
+          "severity": "High",
+          "summary": "The Dark Project ransomware group claims to have exfiltrated more than 130 GB of data from the Food Bank of Central Louisiana, including banking and financial information and personal data of employees and clients.",
+          "title": "Dark Project claims 130 GB theft from Food Bank of Central Louisiana",
+          "url": "https://qpulse.quasarcybertech.com/news/7822/dark-project-ransomware-group-claims-theft-of-130gb-of-data-from-food-bank-of-central-louisiana",
+          "image": "https://rccgcranottingham.org/wp-content/uploads/2024/09/unsplash_Djtc1T38-GY-6-973x1024.png"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -68,33 +68,33 @@
     {
       "items": [
         {
-          "action": "Treat any SBI-related loan or account data as potentially circulating; watch for targeted phishing and fraudulent loan applications using KYC documents.",
-          "details": "The exposed records reportedly included names, mobile numbers, dates of birth, email and residential addresses, branch and CIF identifiers, lead IDs and loan/lead metadata. SBI received alerts about the possible exposure on October 16 from its threat-intelligence provider, the Defence Cyber Agency and CERT-In, and engaged an independent CERT-In-empanelled agency to investigate.",
-          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
-          "severity": "High",
-          "summary": "State Bank of India chairman C. S. Setty said on November 3 that the root-cause analysis of the suspected cyberattack that exposed 3,897 customer records on the dark web was still under way, alongside an API sweep and vulnerability assessments. SBI is stepping up AI-powered cybersecurity tools and working with the banking industry on a common sandbox to evaluate AI models.",
-          "title": "SBI still probing breach; chairman says root-cause analysis under way",
-          "url": "https://www.businesstoday.in/technology/news/story/sbis-cyber-wake-up-call-after-data-breach-fight-ai-with-ai-565464-2026-11-03"
+          "action": "BFSI entities should harden payment and disbursement APIs, retire dormant interfaces, enforce transaction limits and beneficiary verification, and report incidents to CERT-In promptly.",
+          "details": "The November 4 advisory, an update to the October 9 advisory, says the actor uses publicly available AI tools such as ARTEX, PentAGI and Cairn, re-targets entities that already remediated, and times attacks for holidays and low-monitoring windows. It urges heightened 24x7 monitoring and staffing during low-coverage periods.",
+          "severity": "Critical",
+          "summary": "CERT-In has issued critical advisory CIAD-2026-0058 naming 'Crafty Falcon', an AI-assisted threat actor exploiting payment and disbursement APIs for unauthorised fund transfers at machine speed across banks, NBFCs and fintechs.",
+          "title": "CERT-In warns of AI-driven 'Crafty Falcon' attacks on BFSI payment APIs",
+          "url": "https://bfsi.economictimes.indiatimes.com/articles/explained-why-cyberattacks-are-rising-on-indian-banks-and-fintechs-and-whats-being-done-to-stop-them/135555327"
         },
         {
-          "details": "The disclosure came in a regulatory filing on November 2. The company said an investigation was under way, with updates on potential recoveries to be communicated to stock exchanges, and that it had filed insurance claims.",
+          "action": "Corporate treasury teams should review API-based payment controls, dual authorisation and anomaly alerts on high-value RTGS flows.",
+          "details": "The company says the transactions went through Yes Bank's payment API, that it activated incident response, moved to freeze beneficiary accounts, and reported the matter to the Cyber Crime Cell, RBI and CERT-In, appointing an independent investigating agency. Core operations and customer data are stated to be unaffected.",
           "severity": "High",
-          "summary": "Spandana Sphoorty Financial Ltd reported unauthorised transactions of approximately Rs 7.80 crore debited from one of its bank accounts on November 1, transferred through multiple transactions to 82 beneficiary accounts. The company stopped the affected services, informed the bank seeking reversal and freezing of beneficiary accounts, and filed a complaint on the National Cyber Crime Reporting Portal.",
-          "title": "Spandana Sphoorty reports Rs 7.80 crore cyber fraud across 82 accounts",
-          "url": "https://newsable.asianetnews.com/business/spandana-sphoorty-reports-rs-7-80-crore-fraud-through-cyber-attack-articleshow-09v5z5v"
+          "summary": "SG Finserve disclosed on November 3 that 15 unauthorised RTGS and electronic banking transactions totalling ₹5.10 crore were executed from two of its Yes Bank current accounts without its knowledge or authorisation.",
+          "title": "SG Finserve discloses ₹5.10 crore unauthorised RTGS fraud via Yes Bank API",
+          "url": "https://www.kalkine.co.in/article/announcements/sg-finserve-nsesgfin-what-does-the-rs-510-crore-cyber-fraud-mean-for-shareholders"
         },
         {
-          "details": "SBI is investigating the cause and strengthening its cybersecurity measures while the shared mechanism is developed. Faster structured sharing between banks is intended to improve collective response to incidents affecting the sector.",
-          "image": "https://static.toiimg.com/photo/90947057.cms",
+          "action": "Treat the listing as a watch item: check for any exposure linked to the named organisation rather than assuming a confirmed compromise.",
+          "details": "No intrusion details, stolen-data volume, ransom demand or operational impact were reported with the listing. Akira also listed a manufacturing firm, Erowa, the same day.",
           "severity": "Medium",
-          "summary": "The Indian Banks' Association is developing a mechanism for banks to share cyber-incident information and improve response coordination, following the breach that exposed 3,897 SBI customer records, according to a November 4 report.",
-          "title": "Indian Banks' Association building shared cyber-incident sharing mechanism after SBI breach",
-          "url": "https://www.thehindubusinessline.com/multimedia/audio/top-business-market-headlines-today-bl-morning-report-november-4-2026/article71662298.ece"
+          "summary": "Threat-intelligence monitoring reports that the Akira ransomware group listed Krishnan, categorised under India's finance sector, as a victim on November 4 — a threat-actor claim that has not been independently confirmed as a breach.",
+          "title": "Akira claims Indian finance firm Krishnan among new victims (unverified)",
+          "url": "https://undercodenews.com/akira-ransomware-claims-two-new-victims-in-india-and-manufacturing-sector-video/"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Wednesday, November 4 — Here's what's worth your attention today.",
+  "subtitle": "Thursday, November 5 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
