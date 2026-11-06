@@ -1,35 +1,35 @@
 {
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "items": [
     {
-      "name": "Tencent Hy4",
-      "summary": "Tencent launched the full Hy4 model on November 4, a 770-billion-parameter mixture-of-experts model that adds native visual understanding and computer-use abilities to the Hunyuan line for the first time. It can read images and operate software via command-line and graphical interfaces, and is live through Tencent Cloud TokenHub, OpenRouter and Tencent's own apps, with open weights promised soon.",
-      "url": "https://emergent.sh/news/tencent-hy4-launch-770b-vision-model-computer",
-      "image": "https://cdn.prod.website-files.com/6a0f028de6df6a6fd88c3f89/6aeaee272b971e96e675cfb9_6aeaee256732c3bfba398525_tencent-hy4-launch-770b-vision-model-computer-use.avif"
+      "image": "https://cybersecuritynews.com/wp-content/uploads/2026/11/GPT-6-Cyber.webp",
+      "name": "OpenAI GPT-6 Cyber",
+      "summary": "OpenAI launched GPT-6 Cyber on November 5, a security-focused variant of GPT-6 Astra for authorized vulnerability research. It scores 48.5% on ExploitGym (up from 32.1% for GPT-5.6 Cyber) and is rated 'Critical' under OpenAI's Preparedness Framework; access starts with vetted Daybreak Red customers.",
+      "url": "https://www.reuters.com/technology/openai-launches-gpt-6-cyber-with-critical-cybersecurity-rating-2026-11-05/"
     },
     {
-      "name": "MiniMax M3",
-      "summary": "MiniMax unveiled M3 on November 3, billed as the first open-weight model to combine frontier coding and agentic capabilities, a 1-million-token context window and native multimodality. Built on its MiniMax Sparse Attention architecture, it is aimed at coding assistants and autonomous multi-step workflows, with full open-sourcing on Hugging Face and GitHub to follow.",
-      "url": "https://aichina.news/news/minimax-unveils-m3-an-open-weight-model-combining-1m-context-native-7u2chs/",
-      "image": "https://aichina.news/images/7u2chsu9vftizlx_original.webp"
+      "image": "https://www.unite.ai/wp-content/uploads/2026/11/thinking-machines-lab-launches-inkling-2-small-with-open-weights-pending.jpg",
+      "name": "Thinking Machines Lab Inkling 2 Small",
+      "summary": "Thinking Machines Lab introduced Inkling 2 Small on November 5, a 594-billion-parameter sparse mixture-of-experts model (17B active) aimed at long-horizon autonomous work, coding and vision. It is available now through Tinker, with full open weights under Apache 2.0 promised in the week after launch, pending external safety testing.",
+      "url": "https://www.unite.ai/thinking-machines-lab-launches-inkling-2-small-with-open-weights-pending/"
     },
     {
-      "name": "Sarvam Prism",
-      "summary": "Sarvam AI released Prism on November 3, an open-weight decision model built on its Sarvam 105B base that evaluates predefined options in a single forward pass instead of generating token by token. It answers in a reported 44 milliseconds on one NVIDIA B200 GPU with a 71.8 average across three benchmarks, and its Apache 2.0 weights let enterprises run it on their own infrastructure.",
-      "url": "https://www.sarvam.ai/blogs/sarvam-prism",
-      "image": "https://assets.sarvam.ai/tr:w-1600,q-90,f-auto,dpr-auto/images/03117ysv/production/9de24f0346149d6c43848c8d4bb5b2611badf37a-1535x1025.png?rect=0,30,1535,768"
+      "image": "https://www.unite.ai/wp-content/uploads/2026/11/baidu-releases-ernie-5-5-flash-base-for-further-training.jpg",
+      "name": "Baidu ERNIE 5.5 Flash Base",
+      "summary": "Baidu released ERNIE-5.5-Flash-Base on November 5, a downloadable 280-billion-parameter mixture-of-experts checkpoint (14B activated per token) that stops at pre-training. It is a fixed research baseline for domain adaptation and training-method comparisons, with a post-trained Flash model to follow.",
+      "url": "https://www.unite.ai/baidu-releases-ernie-5-5-flash-base-for-further-training/"
     },
     {
-      "name": "Deep Principle Hydrogen-1.0",
-      "summary": "Deep Principle launched Hydrogen-1.0 on November 2, a 753-billion-parameter open-weight scientific foundation model for chemistry, materials science and life sciences, post-trained from Z.ai's GLM-5.3 on lab records and discovery trajectories. Its MIT-licensed weights, 1-million-token context and reported edge over GPT-6 Astra on FrontierScience-Research make it a notable specialist challenger to general frontier models.",
-      "url": "https://emergent.sh/news/deep-principle-hydrogen-1-0-753b-open-weight",
-      "image": "https://cdn.prod.website-files.com/6a0f028de6df6a6fd88c3f89/6aea360eff3f1758d7a77262_6aea360bd840cf1595200837_deep-principle-hydrogen-1-0-753b-open-weight-science-model.avif"
+      "image": "https://pfn-web-static-contents-kuroco.s3.ap-northeast-1.amazonaws.com/files/a/public/news/PLaMo_3_Translate_benchmarks_en.png",
+      "name": "Preferred Networks PLaMo 3 Translate",
+      "summary": "Preferred Networks released PLaMo 3 Translate as open weights on November 5, a translation-specialized LLM family in 0.8B, 2B, 8B and 31B sizes built for on-device and edge use. The models are free for individuals and enterprises with annual revenue of 1 billion yen or less under the PLaMo Community License.",
+      "url": "https://www.preferred.jp/en/news/pr20261105"
     },
     {
-      "name": "Google Gemini 4 Carbon",
-      "summary": "Google DeepMind announced Gemini 4 Carbon on October 28 as its strongest model to date, built for cybersecurity and long-horizon agentic engineering, ranking first on the Artificial Analysis Intelligence Index v5.0 with a score of 59. Initial access is limited to a subset of vetted cybersecurity defenders through Google's Fairwind Program, with wider developer and consumer availability still undated.",
-      "url": "https://pulse2.com/google-introduces-gemini-4-carbon-with-advanced-cybersecurity-and-long-horizon-agentic-capabilities/",
-      "image": "https://cdn.pulse2.com/cdn/2026/06/Google-Gemini-Logo.jpeg"
+      "image": "https://www.digitalapplied.com/blog/ripple-65b-preview-open-weight-model/article-image",
+      "name": "Ricursive Ripple-65B Preview",
+      "summary": "Chip-design lab Ricursive released Ripple-65B Preview on November 4, a 65-billion-parameter dense open-weight model under Apache 2.0 with a 1M-token context window, pretrained on 12 trillion tokens. The vendor claims US open-weight best on Terminal-Bench 2.1, with hosted inference via Together AI, GMI Cloud and OpenRouter.",
+      "url": "https://www.digitalapplied.com/blog/ripple-65b-preview-open-weight-model"
     }
   ]
 }

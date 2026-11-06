@@ -2,30 +2,30 @@
   "date": "2026-11-06",
   "news_count": 8,
   "cve_count": 5,
-  "worst_cvss": 10.0,
+  "worst_cvss": 9.9,
   "priorities": [
     {
-      "id": "CVE-2026-121606",
-      "cvss": 10.0,
-      "summary": "A firmware signature verification flaw in Qihoo 360 routers (D621-2, D603-2, D600-2, D619, D606-6 and D706 up to 6.4.9) allows improper verification of cryptographic signatures, rated the maximum CVSS 10.0. Affected devices should be updated to fixed firmware or replaced if no fix is available.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121606"
-    },
-    {
-      "id": "CVE-2026-120322",
+      "id": "CVE-2026-122311",
       "cvss": 9.9,
-      "summary": "A path traversal flaw in Termix-SSH Termix up to 2.9.2 lets a remote attacker manipulate the destPath argument of the file-manager transferToHost endpoint, with a public exploit available. Update Termix beyond 2.9.2 and restrict access to the file-manager API.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120322"
+      "summary": "Kyverno 1.16.0 through 1.19.1 fails to validate path segments in the resource argument of resource.get() and resource.post(), letting namespaced CEL policies escape their namespace. Published November 5; upgrade to Kyverno 1.19.2 or later.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122311"
     },
     {
-      "id": "CVE-2026-122006",
+      "id": "CVE-2026-98432",
       "cvss": 9.8,
-      "summary": "The Ruby on Rails Active Storage gem before 8.1.4.1 can allow server read and write operations, such as reading secret_key_base, when ImageMagick attachment processing runs without a security policy blocking unintended functionality. Published November 4; upgrade Active Storage to the fixed release.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122006"
+      "summary": "A use-after-free in the Linux kernel's IPv4 TCP request-socket handling, present since kernel 4.4, lets a remote unauthenticated attacker reach remote code execution; Anthropic demonstrated a remote-root exploit against multipath TCP listeners. Red Hat shipped fixed kernels November 1; Ubuntu fixes are in its testing channel.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98432"
+    },
+    {
+      "id": "CVE-2026-109618",
+      "cvss": 9.8,
+      "summary": "PHP's use of longjmp() for out-of-memory errors can be abused for remote code execution (PHP2Shell), confirmed exploited in the wild against internet-facing PAN-OS management interfaces and chained with a Linux kernel flaw to reach root. Patch PHP and restrict management-plane access.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618"
     }
   ],
   "model": {
-    "name": "Tencent Hy4",
-    "summary": "Tencent launched the full Hy4 model on November 4, a 770-billion-parameter mixture-of-experts model that adds native visual understanding and computer-use abilities to the Hunyuan line for the first time. It can read images and operate software via command-line and graphical interfaces, and is live through Tencent Cloud TokenHub, OpenRouter and Tencent's own apps, with open weights promised soon.",
-    "url": "https://emergent.sh/news/tencent-hy4-launch-770b-vision-model-computer"
+    "name": "OpenAI GPT-6 Cyber",
+    "summary": "OpenAI launched GPT-6 Cyber on November 5, a security-focused variant of GPT-6 Astra for authorized vulnerability research. It scores 48.5% on ExploitGym (up from 32.1% for GPT-5.6 Cyber) and is rated 'Critical' under OpenAI's Preparedness Framework; access starts with vetted Daybreak Red customers.",
+    "url": "https://www.reuters.com/technology/openai-launches-gpt-6-cyber-with-critical-cybersecurity-rating-2026-11-05/"
   }
 }
