@@ -1,34 +1,34 @@
 {
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "sections": [
     {
       "items": [
         {
-          "action": "Update WordPress Core to 7.1.4 or later immediately, and check sites that recently ran full-package upgrades for signs of compromise.",
-          "details": "The flaw is a time-of-check time-of-use (TOCTOU) race condition in full-package core upgrades, where predictable, web-accessible staging paths could let an unauthenticated attacker execute code on the server during the upgrade window. WordPress 7.1.4 addresses it.",
-          "severity": "Critical",
-          "summary": "CISA has added WordPress Core vulnerability CVE-2026-119977 to its Known Exploited Vulnerabilities catalog after evidence of active exploitation, with a November 6 remediation deadline for federal civilian agencies.",
-          "title": "CISA adds exploited WordPress Core flaw to KEV; patch by Nov 6",
-          "url": "https://undercodenews.com/cisa-adds-critical-wordpress-core-vulnerability-cve-2026-119977-to-kev-catalog-following-active-exploitation-video/",
-          "image": "https://www.anwarpress.com/wp-content/uploads/2026/03/e35ceba7-ec59-43e7-ac0e-d420149a8297_16032026111632.webp"
-        },
-        {
-          "action": "Apply the November 2026 Android security patch (2026-11-01 level or later) as soon as your manufacturer ships it, and prioritise devices still on older patch levels.",
-          "details": "Devices receive the fix through security patch level 2026-11-01 or later, depending on manufacturer and carrier. The bulletin includes 23 vulnerabilities rated Critical, including flaws in the System component and modem code.",
-          "severity": "Critical",
-          "summary": "Google's November 2026 Android security bulletin fixes 216 vulnerabilities, including critical flaw CVE-2026-58868, a heap buffer overflow in FrameDecoder that could allow remote code execution with no user interaction on Android 14 through 17.",
-          "title": "Google's November Android bulletin fixes critical remote-code flaw",
-          "url": "https://securityaffairs.com/202414/mobile-2/cve-2026-58868-critical-android-bug-could-let-attackers-run-remote-code.html",
-          "image": "https://www.2-remove-virus.com/wp-content/uploads/2026/05/Google-warns-Android-users-to-install-urgent-security-update-fixing-critical-phone-takeover-flaw-624x416.png"
-        },
-        {
-          "action": "Apply Barracuda's November 2 firmware patches and restrict appliance administrative interfaces to trusted internal networks only.",
-          "details": "Barracuda has not reported exploitation of either flaw. Exploitation requires access to the appliance's administrative interface, so internet-exposed admin interfaces are the priority. ESG patches are BNSF-40425 (9.4.017+) and BNSF-40430 (earlier versions).",
+          "action": "Upgrade to OpenSSH 10.6p2 (or patched Alpine packages); until then set PasswordAuthentication no in sshd_config and restart the service.",
+          "details": "Reported by Özgün Kültekin of Wakefield. Affects Alpine Linux, OpenWrt, Buildroot and Yocto; against an account with no password set, any password between 256 and 1,024 characters is accepted. CVSS 3.1 score 8.1. Public reproduction labs already exist.",
+          "image": "https://candid.technology/wp-content/uploads/2021/03/ssh-1.1.jpg",
           "severity": "High",
-          "summary": "Barracuda has patched CVE-2026-116606, a pre-authentication authorization bypass in Email Security Gateway (CVSS 9.3), and CVE-2026-111560, a command-injection flaw across six products (CVSS 8.6), which combined could give root access to a device.",
-          "title": "Barracuda patches two flaws chainable to root on security appliances",
-          "url": "https://securityaffairs.com/202440/security/two-barracuda-esg-flaws-could-be-combined-for-full-root-access-patches-released.html",
-          "image": "https://www.openedr.com/blog/wp-content/uploads/2025/12/email-security-gateway-432x288.png"
+          "summary": "A password longer than 256 bytes can bypass authentication on OpenSSH servers built on musl libc without PAM, opening accounts that were supposed to reject passwords entirely. Fixed in OpenSSH 10.6p2, released November 5.",
+          "title": "SSHhole: OpenSSH password bypass on musl systems (CVE-2026-123158)",
+          "url": "https://securityboulevard.com/2026/11/sshhole-cve-2026-123158-and-how-ionix-is-helping-you-respond/"
+        },
+        {
+          "action": "Apply kernel updates as they land in your distribution; audit exposure of MPTCP listeners on port 443.",
+          "details": "Ubuntu's tracker, last updated November 5, lists generic kernel targets for Ubuntu 22.04, 24.04, 26.04 and 26.10 as 'Vulnerable, work in progress.' Canonical has fixes in the opt-in -proposed pocket for the first three releases.",
+          "image": "https://techcentral.co.za/wp-content/uploads/2018/06/tux-linux-2156-1120-768x399.jpg",
+          "severity": "Critical",
+          "summary": "A CVSS 9.8 use-after-free in Linux kernel IPv4 TCP connection handling allows remote code execution. Researcher Marcus Hutchins reports apparent internet-wide probing of MPTCP port 443 since November 2.",
+          "title": "Critical Linux kernel TCP flaw (CVE-2026-98432) under internet-wide scanning",
+          "url": "https://www.neoteo.com/en/ubuntus-cve-2026-98432-tracker-lists-four-generic-kernels-as-vulnerable"
+        },
+        {
+          "action": "Patch Cisco AsyncOS Software for Secure Email Gateway per Cisco's advisory.",
+          "details": "CVSS 3.1 score 9.8. A crafted email message containing malicious SQL statements triggers the flaw, leading to command execution on the underlying operating system.",
+          "image": "https://it-market.com/thumbnail/64/cc/8f/1696272538/d2b1b132bc5bdd4c2ca453d8c3316d70_1920x1920.jpg?ts=1696426666",
+          "severity": "Critical",
+          "summary": "An unauthenticated remote attacker can execute arbitrary commands with root privileges on Cisco Secure Email Gateway by sending a crafted email that exploits insufficient validation in the email parsing logic.",
+          "title": "Cisco Secure Email Gateway SQL injection allows root command execution (CVE-2026-76461)",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-inj-2bLVGmhX"
         }
       ],
       "title": "Act on Today"
@@ -36,31 +36,31 @@
     {
       "items": [
         {
-          "action": "Law and insurance firms should review exposed credentials and third-party access, and watch for client data appearing in extortion channels.",
-          "details": "The claimed haul includes 4,477 workers' compensation defence case files, 6,461 DICOM medical imaging files, and 28,410 medical explanations of benefits containing personal information and diagnoses. This is a threat-actor claim, not yet independently confirmed by the firm.",
+          "action": "Affected members should watch for identity theft and targeted phishing using the leaked personal and health data.",
+          "details": "Discovered November 5; the leak is marked 'NOT PAID — EXPOSED'. Employer group client records, including insurance broker channel contacts, were also exposed.",
+          "image": "https://rincondentistry.com/wp-content/uploads/2019/06/insurance.jpg",
           "severity": "Critical",
-          "summary": "The Rhysida ransomware group has claimed the law firm Juge, Napolitano, Ruli, Putfark & Pittman (WC Defense), claiming to have exfiltrated about 3.2 TB of data totalling 2,383,324 files.",
-          "title": "Rhysida claims 3.2 TB theft from Louisiana law firm WC Defense",
-          "url": "https://qpulse.quasarcybertech.com/news/7787/rhysida-ransomware-group-exfiltrates-3-2-tb-of-data-from-law-firm-juge-napolitano-ruli-putfark-pittman",
-          "image": "https://base.imgix.net/files/base/ebm/industryweek/image/2021/02/Ransomware.601afde3d866a.png?auto=format&w=660"
+          "summary": "The N0n group published Delta Dental of Missouri's customer relationship database after the victim reportedly did not pay: 48,528 email addresses, 17,913 phone numbers, and member records with Social Security numbers, dates of birth, home addresses and dental treatment details.",
+          "title": "N0n ransomware leaks Delta Dental of Missouri member data",
+          "url": "https://qpulse.quasarcybertech.com/news/7880/n0n-ransomware-group-exposes-delta-dental-of-missouri-customer-and-member-data"
         },
         {
-          "action": "Monitor for corroboration and, if you share data with the named supply chain, verify whether any of your records are in scope.",
-          "details": "The group claims the data spans three regions and includes contacts, shipment records, invoices and distributor loyalty profiles. The claim is unverified and the group is newly discovered, so treat it as an emerging allegation, not a confirmed breach.",
+          "action": "Customers should treat any unexpected message about their account as suspicious and contact the retailer only via a number they already have.",
+          "details": "Discovered November 5 and listed as 'NOT PAID — EXPOSED' on ransomware trackers. The claim has not been independently confirmed by the retailer.",
+          "image": "https://assets-global.website-files.com/62f2764b9576fd8a2837b94c/634d6d9d55ed6cbf9c5a165d_shopping%20experience.jpg",
           "severity": "High",
-          "summary": "A newly surfaced ransomware group calling itself Whitearmor listed Unilever on its leak site on November 4, claiming 79 GB of exfiltrated data across 1.8 million files and demanding $15 million in Bitcoin.",
-          "title": "New group Whitearmor claims Unilever breach, demands $15M",
-          "url": "https://qpulse.quasarcybertech.com/news/7819/whitearmor-ransomware-group-claims-compromise-of-unilever-with-15m-demand",
-          "image": "https://cdn.uconnectlabs.com/wp-content/uploads/sites/218/2024/11/supply_chain-480x320-center-middle.jpg?v=125059"
+          "summary": "N0n published data from The Container Store: a corpus of 46,013 typed customer chat messages, search session analytics with revenue-per-query data, 9,305 named customer email addresses from the account portal, and a staff directory.",
+          "title": "N0n leaks The Container Store customer chat logs and emails",
+          "url": "https://qpulse.quasarcybertech.com/news/7881/n0n-ransomware-group-leaks-data-from-the-container-store"
         },
         {
-          "action": "Nonprofits holding donor and beneficiary data should rotate exposed credentials and review financial-system access after any such claim.",
-          "details": "The claim, reported November 4, also notes infostealer-linked credential exposure for the organisation. No ransom demand, attack vector or recovery status has been reported.",
+          "action": "Treat as an unverified claim; affected staff should rotate credentials and watch for credential-stuffing attempts.",
+          "details": "Listed November 5 via Ransomware.live. Exposure reports found 27 passwords and 22 cookies associated with the victim's domain. The claim itself is unverified.",
+          "image": "https://aibinternational.com/cdn/shop/files/Banner_CakesManufacturing.jpg?v=1725639896&width=1920",
           "severity": "High",
-          "summary": "The Dark Project ransomware group claims to have exfiltrated more than 130 GB of data from the Food Bank of Central Louisiana, including banking and financial information and personal data of employees and clients.",
-          "title": "Dark Project claims 130 GB theft from Food Bank of Central Louisiana",
-          "url": "https://qpulse.quasarcybertech.com/news/7822/dark-project-ransomware-group-claims-theft-of-130gb-of-data-from-food-bank-of-central-louisiana",
-          "image": "https://rccgcranottingham.org/wp-content/uploads/2024/09/unsplash_Djtc1T38-GY-6-973x1024.png"
+          "summary": "The Dark Project ransomware group claims to have exfiltrated over 100 GB of documents from Custom Bakehouse, a US baking-mix company, with infostealer activity linked to 18 compromised user accounts.",
+          "title": "Dark Project claims 100+ GB theft from Custom Bakehouse",
+          "url": "https://qpulse.quasarcybertech.com/news/7853/dark-project-ransomware-group-targets-custom-bakehouse-in-data-exfiltration-attack"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -68,33 +68,27 @@
     {
       "items": [
         {
-          "action": "BFSI entities should harden payment and disbursement APIs, retire dormant interfaces, enforce transaction limits and beneficiary verification, and report incidents to CERT-In promptly.",
-          "details": "The November 4 advisory, an update to the October 9 advisory, says the actor uses publicly available AI tools such as ARTEX, PentAGI and Cairn, re-targets entities that already remediated, and times attacks for holidays and low-monitoring windows. It urges heightened 24x7 monitoring and staffing during low-coverage periods.",
-          "severity": "Critical",
-          "summary": "CERT-In has issued critical advisory CIAD-2026-0058 naming 'Crafty Falcon', an AI-assisted threat actor exploiting payment and disbursement APIs for unauthorised fund transfers at machine speed across banks, NBFCs and fintechs.",
-          "title": "CERT-In warns of AI-driven 'Crafty Falcon' attacks on BFSI payment APIs",
-          "url": "https://bfsi.economictimes.indiatimes.com/articles/explained-why-cyberattacks-are-rising-on-indian-banks-and-fintechs-and-whats-being-done-to-stop-them/135555327"
-        },
-        {
-          "action": "Corporate treasury teams should review API-based payment controls, dual authorisation and anomaly alerts on high-value RTGS flows.",
-          "details": "The company says the transactions went through Yes Bank's payment API, that it activated incident response, moved to freeze beneficiary accounts, and reported the matter to the Cyber Crime Cell, RBI and CERT-In, appointing an independent investigating agency. Core operations and customer data are stated to be unaffected.",
-          "severity": "High",
-          "summary": "SG Finserve disclosed on November 3 that 15 unauthorised RTGS and electronic banking transactions totalling ₹5.10 crore were executed from two of its Yes Bank current accounts without its knowledge or authorisation.",
-          "title": "SG Finserve discloses ₹5.10 crore unauthorised RTGS fraud via Yes Bank API",
-          "url": "https://www.kalkine.co.in/article/announcements/sg-finserve-nsesgfin-what-does-the-rs-510-crore-cyber-fraud-mean-for-shareholders"
-        },
-        {
-          "action": "Treat the listing as a watch item: check for any exposure linked to the named organisation rather than assuming a confirmed compromise.",
-          "details": "No intrusion details, stolen-data volume, ransom demand or operational impact were reported with the listing. Akira also listed a manufacturing firm, Erowa, the same day.",
+          "action": "Monitor for a data sample or a company statement before treating this as a confirmed breach.",
+          "details": "Reported by the ThreatMon Threat Intelligence Team. No independently verified information establishes a successful intrusion, data theft or operational disruption; the claim remains an unverified threat-actor allegation.",
+          "image": "https://wanjun.my/wp-content/uploads/2026/04/Wanjun-ProjectPortfolio-Glove-Manufacturing.png",
           "severity": "Medium",
-          "summary": "Threat-intelligence monitoring reports that the Akira ransomware group listed Krishnan, categorised under India's finance sector, as a victim on November 4 — a threat-actor claim that has not been independently confirmed as a breach.",
-          "title": "Akira claims Indian finance firm Krishnan among new victims (unverified)",
-          "url": "https://undercodenews.com/akira-ransomware-claims-two-new-victims-in-india-and-manufacturing-sector-video/"
+          "summary": "MedusaLocker added Vinit Gloves Manufacturing — an Indian maker of industrial leather gloves and protective workwear — to its victim list on November 5. No data volume, samples or ransom details were disclosed.",
+          "title": "MedusaLocker lists Indian glove maker Vinit Gloves as victim (unverified)",
+          "url": "https://undercodenews.com/medusalocker-claims-two-new-victims-in-india-and-the-it-sector-video/"
+        },
+        {
+          "action": "SBI customers should watch for targeted phishing and fraudulent loan applications using KYC documents.",
+          "details": "SBI's guidance notes that bank employees never ask for passwords or PINs. Report financial cyber fraud by calling 1930 or visiting cybercrime.gov.in. The incident should not be described as confirmed exposure of customers' banking credentials.",
+          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
+          "severity": "Critical",
+          "summary": "Fresh reporting on the confirmed SBI incident says the 3,897 customer records found on the dark web included names, mobile numbers, email and residential addresses, dates of birth, gender, branch and CIF identifiers, and loan-related metadata.",
+          "title": "SBI breach fallout: what was exposed and how to protect your account",
+          "url": "https://www.freepressjournal.in/tech/sbi-data-breach-raises-cybersecurity-concerns-8-steps-to-protect-your-bank-account"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Thursday, November 5 — Here's what's worth your attention today.",
+  "subtitle": "Friday, November 6 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
