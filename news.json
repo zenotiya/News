@@ -1,34 +1,43 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "sections": [
     {
       "items": [
         {
-          "action": "Upgrade to OpenSSH 10.6p2 (or patched Alpine packages); until then set PasswordAuthentication no in sshd_config and restart the service.",
-          "details": "Reported by Özgün Kültekin of Wakefield. Affects Alpine Linux, OpenWrt, Buildroot and Yocto; against an account with no password set, any password between 256 and 1,024 characters is accepted. CVSS 3.1 score 8.1. Public reproduction labs already exist.",
-          "image": "https://candid.technology/wp-content/uploads/2021/03/ssh-1.1.jpg",
+          "action": "Patch to OpenSSH 10.6p2 (or Alpine's updated packages) and restart sshd — the update alone is not enough. Audit Alpine-based container images and CI/CD pipelines.",
+          "details": "The flaw traces to a 2016 patch for CVE-2016-6210 and affects OpenSSH on musl libc with PAM disabled, including Alpine's default server config. glibc-based distributions, Dropbear, and systems that check passwords through PAM are not affected. Fixed in OpenSSH 10.6p2.",
+          "image": "https://asciinema.org/a/554275.svg?f=t&v=0",
+          "severity": "Critical",
+          "summary": "CVE-2026-123158 (CVSS 8.1), dubbed 'SSHole', lets an unauthenticated attacker log in to password-less accounts on OpenSSH running over musl libc — including Alpine Linux — with a single oversized password. Threat intel firm Previdian saw the first exploitation attempt under nine hours after disclosure and confirmed root access on a honeypot.",
+          "title": "OpenSSH 'SSHole' auth bypass exploited within hours of disclosure",
+          "url": "http://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html"
+        },
+        {
+          "action": "Apply Barracuda patches BNSF-40425 (9.4.017+) or BNSF-40430 (below 9.4.017) and keep ESG admin interfaces off the internet.",
+          "details": "The bypass lives in the ESG's Index.pm handler, where a failed password change returns a valid role instead of halting the request. The command injection also affects five other Barracuda products, but there it still needs an admin account. ESG is fixed in firmware 9.4.0.030. Neither CVE is in CISA's KEV catalog and no in-the-wild exploitation has been reported.",
+          "image": "https://www.smtp.com/wp-content/uploads/2026/07/email-filtering-server-gate-security.webp",
+          "severity": "Critical",
+          "summary": "Two flaws in Barracuda's Email Security Gateway chain to unauthenticated root command execution: CVE-2026-116606 (CVSS 9.3), a pre-auth authorization bypass, and CVE-2026-111560 (CVSS 8.6), a command injection. watchTowr Labs published the full chain on Nov 5; Barracuda released patches on Nov 2.",
+          "title": "Barracuda ESG flaws chained for root access without login",
+          "url": "https://thehackernews.com/2026/11/experts-demonstrate-barracuda-email.html"
+        },
+        {
+          "action": "Install your distribution's fixed kernel and reboot. Prioritise internet-facing servers with MPTCP listeners.",
+          "details": "Fixed kernels are already available from Red Hat, AlmaLinux, Debian and Amazon Linux; Ubuntu's fixes for 22.04, 24.04 and 26.04 LTS were still in testing as of Nov 6. Researchers have also seen residential proxies and Russia-based VPN servers scanning port 443 with MPTCP connections since Nov 2, though no vendor had reported attacks in the wild.",
+          "image": "https://iubemcenter.indiana.edu/images/linux-coding.png",
+          "severity": "Critical",
+          "summary": "A race condition leading to a use-after-free in the Linux kernel's IPv4 TCP handshake affects nearly every Linux distribution. Anthropic disclosed that an internal research version of its Claude model built a working exploit that runs commands as root against a server with a Multipath TCP (MPTCP) listener.",
+          "title": "Critical Linux kernel TCP flaw (CVE-2026-98432, CVSS 9.8)",
+          "url": "https://edledge.com/linux-kernel-tcp-cve-2026-98432-openssh-alpine/"
+        },
+        {
+          "action": "Patch Gen7 and Gen8 SSL-VPN to the fixed releases and review which accounts can still sign in through alternate authentication methods.",
+          "details": "Affects SSL-VPN configured for SAML on SonicOS Gen7 versions 7.3.3-7015 and earlier, and Gen8 versions 8.2.2-8015 and earlier. SonicWall's advisory is SNWLID-2026-0014. Known ransomware use is listed as unknown.",
+          "image": "https://static01.galaxus.com/productimages/1/2/2/1/4/7/5/3/6/1/1/1/4/9/0/3/3/4/4/b0d544fe-b89c-41f0-8c88-32a9fcec80a2_cropped.jpg_sea.jpeg",
           "severity": "High",
-          "summary": "A password longer than 256 bytes can bypass authentication on OpenSSH servers built on musl libc without PAM, opening accounts that were supposed to reject passwords entirely. Fixed in OpenSSH 10.6p2, released November 5.",
-          "title": "SSHhole: OpenSSH password bypass on musl systems (CVE-2026-123158)",
-          "url": "https://securityboulevard.com/2026/11/sshhole-cve-2026-123158-and-how-ionix-is-helping-you-respond/"
-        },
-        {
-          "action": "Apply kernel updates as they land in your distribution; audit exposure of MPTCP listeners on port 443.",
-          "details": "Ubuntu's tracker, last updated November 5, lists generic kernel targets for Ubuntu 22.04, 24.04, 26.04 and 26.10 as 'Vulnerable, work in progress.' Canonical has fixes in the opt-in -proposed pocket for the first three releases.",
-          "image": "https://techcentral.co.za/wp-content/uploads/2018/06/tux-linux-2156-1120-768x399.jpg",
-          "severity": "Critical",
-          "summary": "A CVSS 9.8 use-after-free in Linux kernel IPv4 TCP connection handling allows remote code execution. Researcher Marcus Hutchins reports apparent internet-wide probing of MPTCP port 443 since November 2.",
-          "title": "Critical Linux kernel TCP flaw (CVE-2026-98432) under internet-wide scanning",
-          "url": "https://www.neoteo.com/en/ubuntus-cve-2026-98432-tracker-lists-four-generic-kernels-as-vulnerable"
-        },
-        {
-          "action": "Patch Cisco AsyncOS Software for Secure Email Gateway per Cisco's advisory.",
-          "details": "CVSS 3.1 score 9.8. A crafted email message containing malicious SQL statements triggers the flaw, leading to command execution on the underlying operating system.",
-          "image": "https://it-market.com/thumbnail/64/cc/8f/1696272538/d2b1b132bc5bdd4c2ca453d8c3316d70_1920x1920.jpg?ts=1696426666",
-          "severity": "Critical",
-          "summary": "An unauthenticated remote attacker can execute arbitrary commands with root privileges on Cisco Secure Email Gateway by sending a crafted email that exploits insufficient validation in the email parsing logic.",
-          "title": "Cisco Secure Email Gateway SQL injection allows root command execution (CVE-2026-76461)",
-          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-inj-2bLVGmhX"
+          "summary": "CISA added CVE-2026-19868 to its Known Exploited Vulnerabilities catalog on Nov 6. The SonicWall SonicOS SSL-VPN flaw lets a user with valid credentials for an alternate authentication method bypass SAML controls — including SAML-enforced MFA. Federal agencies must patch by Nov 20 under BOD 26-04.",
+          "title": "CISA adds exploited SonicWall SSL-VPN flaw to KEV; patch by Nov 20",
+          "url": "https://dugganusa.com/post/sonicwall-sslvpn-saml-bypass-cve-2026-19868"
         }
       ],
       "title": "Act on Today"
@@ -36,31 +45,31 @@
     {
       "items": [
         {
-          "action": "Affected members should watch for identity theft and targeted phishing using the leaked personal and health data.",
-          "details": "Discovered November 5; the leak is marked 'NOT PAID — EXPOSED'. Employer group client records, including insurance broker channel contacts, were also exposed.",
-          "image": "https://rincondentistry.com/wp-content/uploads/2019/06/insurance.jpg",
+          "action": "Chainalysis customers should rotate passwords and API keys as access returns, and watch for credential-stuffing and targeted phishing using the exposed identities.",
+          "details": "The firm first disclosed the incident on Oct 30, initially saying no credentials were accessed. It still reports no evidence that investigation data was accessed or attribution data manipulated, and says the incident is unrelated to the recent Binance theft.",
+          "image": "https://www.cointribune.com/app/uploads/2023/11/on-chain-analysis-tools-1.png",
           "severity": "Critical",
-          "summary": "The N0n group published Delta Dental of Missouri's customer relationship database after the victim reportedly did not pay: 48,528 email addresses, 17,913 phone numbers, and member records with Social Security numbers, dates of birth, home addresses and dental treatment details.",
-          "title": "N0n ransomware leaks Delta Dental of Missouri member data",
-          "url": "https://qpulse.quasarcybertech.com/news/7880/n0n-ransomware-group-exposes-delta-dental-of-missouri-customer-and-member-data"
+          "summary": "Chainalysis widened its disclosure on Nov 4: names, usernames, password hashes and live tokens for all users were exposed to a malicious actor in an 'agentic' intrusion, and a separate on-path attack exposed a subset of customers' plaintext passwords. Reactor and Data Solutions remain offline; phased restoration of KYT and Address Screening began Nov 6.",
+          "title": "Chainalysis breach widens: password hashes and live tokens for all users exposed",
+          "url": "https://www.chainalysis.com/blog/security-incident-october-30/"
         },
         {
-          "action": "Customers should treat any unexpected message about their account as suspicious and contact the retailer only via a number they already have.",
-          "details": "Discovered November 5 and listed as 'NOT PAID — EXPOSED' on ransomware trackers. The claim has not been independently confirmed by the retailer.",
-          "image": "https://assets-global.website-files.com/62f2764b9576fd8a2837b94c/634d6d9d55ed6cbf9c5a165d_shopping%20experience.jpg",
+          "action": "Centrepoint customers should watch for phishing using their loyalty details; retailers should review loyalty-program data exposure and third-party access.",
+          "details": "The claim was discovered on Nov 6. The exposed data reportedly also includes shopper search sessions and per-query revenue intelligence. The claim is unverified by the retailer.",
+          "image": "https://wallpapers.com/images/high/shopping-mall-fashion-iknu3avsfv57ni0g.webp",
           "severity": "High",
-          "summary": "N0n published data from The Container Store: a corpus of 46,013 typed customer chat messages, search session analytics with revenue-per-query data, 9,305 named customer email addresses from the account portal, and a staff directory.",
-          "title": "N0n leaks The Container Store customer chat logs and emails",
-          "url": "https://qpulse.quasarcybertech.com/news/7881/n0n-ransomware-group-leaks-data-from-the-container-store"
+          "summary": "The ransomware group N0n claims to have exfiltrated loyalty program records for 3,094,863 distinct customers of Saudi fashion retailer Centrepoint, including full names, email addresses, phone numbers and dates of birth. The data is listed as 'NOT PAID — EXPOSED' on the Ransomware.live tracker.",
+          "title": "Ransomware group N0n claims 3.1M Centrepoint loyalty records",
+          "url": "https://qpulse.quasarcybertech.com/news/7937/ransomware-group-n0n-claims-data-exfiltration-from-saudi-retailer-centrepoint"
         },
         {
-          "action": "Treat as an unverified claim; affected staff should rotate credentials and watch for credential-stuffing attempts.",
-          "details": "Listed November 5 via Ransomware.live. Exposure reports found 27 passwords and 22 cookies associated with the victim's domain. The claim itself is unverified.",
-          "image": "https://aibinternational.com/cdn/shop/files/Banner_CakesManufacturing.jpg?v=1725639896&width=1920",
+          "action": "Advertisers and publishers in the Chartboost ecosystem should treat account and performance data as exposed and watch for fraud using the leaked pricing and earnings details.",
+          "details": "The data is listed as 'NOT PAID — EXPOSED'. The archive spans January 2018 through September 2026 and includes impressions, clicks, installs, spend and earnings data, plus auction and bid pricing.",
+          "image": "https://www.brax.io/hs-fs/hubfs/native%20ads%20for%20mobile%20advertising.jpg?width=450&height=263&name=native%20ads%20for%20mobile%20advertising.jpg",
           "severity": "High",
-          "summary": "The Dark Project ransomware group claims to have exfiltrated over 100 GB of documents from Custom Bakehouse, a US baking-mix company, with infostealer activity linked to 18 compromised user accounts.",
-          "title": "Dark Project claims 100+ GB theft from Custom Bakehouse",
-          "url": "https://qpulse.quasarcybertech.com/news/7853/dark-project-ransomware-group-targets-custom-bakehouse-in-data-exfiltration-attack"
+          "summary": "Ransomware group N0n published a large archive stolen from mobile advertising network Chartboost on Nov 6, including publisher balance snapshots for 185,545 accounts, 1,129,048,884 performance rows covering 14,497 advertisers and 43,211 publishers, and a 293GB marketplace transaction archive.",
+          "title": "N0n leaks massive Chartboost archive: 1.1B rows and a 293GB marketplace dump",
+          "url": "https://qpulse.quasarcybertech.com/news/7936/n0n-ransomware-group-exposes-massive-data-archive-from-mobile-advertising-network-chartboost-llc"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -68,27 +77,27 @@
     {
       "items": [
         {
-          "action": "Monitor for a data sample or a company statement before treating this as a confirmed breach.",
-          "details": "Reported by the ThreatMon Threat Intelligence Team. No independently verified information establishes a successful intrusion, data theft or operational disruption; the claim remains an unverified threat-actor allegation.",
-          "image": "https://wanjun.my/wp-content/uploads/2026/04/Wanjun-ProjectPortfolio-Glove-Manufacturing.png",
-          "severity": "Medium",
-          "summary": "MedusaLocker added Vinit Gloves Manufacturing — an Indian maker of industrial leather gloves and protective workwear — to its victim list on November 5. No data volume, samples or ransom details were disclosed.",
-          "title": "MedusaLocker lists Indian glove maker Vinit Gloves as victim (unverified)",
-          "url": "https://undercodenews.com/medusalocker-claims-two-new-victims-in-india-and-the-it-sector-video/"
+          "action": "Indian financial firms should treat AI-agent tooling as an active threat: tighten controls on payment and disbursement systems and staff monitoring through holidays and weekends.",
+          "details": "The attackers use publicly available AI tools to automate break-ins 'at machine speed' and move money through victims' own payment and disbursement systems, timing attacks around holidays and weekends. Reuters previously reported two Mumbai-based non-bank lenders lost about $2 million in more than 700 unauthorised instant transfers from ICICI Bank accounts on Oct 8–9. CERT-In did not name the affected companies or say which incidents were linked to Crafty Falcon.",
+          "image": "https://shieldoperations.co.uk/wp-content/uploads/2026/04/how-hackers-use-ai-offensive-ai-tools-and-real-att.jpg",
+          "severity": "Critical",
+          "summary": "CERT-In has named the hacking group 'Crafty Falcon' behind a wave of AI-driven attacks on Indian banks, non-bank lenders, fintech firms and crypto exchanges, calling the threat 'active and ongoing'. It named four AI tools the attackers use — ARTEX, PentAGI, Cairn and CyberStrikeAI — at least two of them linked to China.",
+          "title": "CERT-In names 'Crafty Falcon' behind AI-driven attacks on Indian financial firms",
+          "url": "https://985theriver.com/2026/11/05/india-flags-chinese-linked-ai-tools-in-hacking-campaign-against-financial-firms/"
         },
         {
-          "action": "SBI customers should watch for targeted phishing and fraudulent loan applications using KYC documents.",
-          "details": "SBI's guidance notes that bank employees never ask for passwords or PINs. Report financial cyber fraud by calling 1930 or visiting cybercrime.gov.in. The incident should not be described as confirmed exposure of customers' banking credentials.",
-          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
-          "severity": "Critical",
-          "summary": "Fresh reporting on the confirmed SBI incident says the 3,897 customer records found on the dark web included names, mobile numbers, email and residential addresses, dates of birth, gender, branch and CIF identifiers, and loan-related metadata.",
-          "title": "SBI breach fallout: what was exposed and how to protect your account",
-          "url": "https://www.freepressjournal.in/tech/sbi-data-breach-raises-cybersecurity-concerns-8-steps-to-protect-your-bank-account"
+          "action": "SBI customers should watch for targeted phishing and fraudulent loan applications using their KYC details; the bank says passwords and PINs are never asked for by its staff.",
+          "details": "The exposed records reportedly included names, mobile numbers, email and residential addresses, dates of birth, gender, branch and CIF identifiers, lead IDs and metadata from loan or lead records. SBI learned of the exposure on Oct 16 from CERT-In, the Defence Cyber Agency and its threat-intelligence provider.",
+          "image": "https://images.forbesindia.com/blog/wp-content/uploads//media/images/2020/Oct/img_145457_statebankofindia.jpg?im=FitAndFill,width=1200,height=900",
+          "severity": "High",
+          "summary": "State Bank of India is still evaluating the root cause of the recent breach that exposed personal data of 3,897 customers on the dark web, Chairman C. S. Setty said on Nov 3. The bank has run a cybersecurity drill including an API sweep and vulnerability assessments, with work ongoing.",
+          "title": "SBI still probing cause of breach that exposed 3,897 customer records",
+          "url": "https://www.financialexpress.com/business/banking-finance-sbi-still-evaluating-cause-of-recent-data-breach-setty-4376324/"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Friday, November 6 — Here's what's worth your attention today.",
+  "subtitle": "Saturday, November 7 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
