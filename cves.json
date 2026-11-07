@@ -1,40 +1,40 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "items": [
     {
+      "cvss": 10.0,
+      "id": "CVE-2026-109469",
+      "severity": "Critical",
+      "summary": "Authorization bypass through a user-controlled key in Microsoft Entra Device Registration lets an unauthorized attacker elevate privileges over a network. Microsoft rates it the maximum CVSS 10.0, the most severe CVE published this week.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109469"
+    },
+    {
       "cvss": 9.9,
-      "id": "CVE-2026-122311",
+      "id": "CVE-2026-122303",
       "severity": "Critical",
-      "summary": "Kyverno 1.16.0 through 1.19.1 fails to validate path segments in the resource argument of resource.get() and resource.post(), letting namespaced CEL policies escape their namespace. Published November 5; upgrade to Kyverno 1.19.2 or later.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122311"
+      "summary": "Kyverno 1.17.0 to 1.19.1 lets namespace tenants abuse NamespacedMutatingPolicy to overwrite resources in other namespaces, including Secrets and Deployments cluster-wide. Fixed in Kyverno 1.19.2.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122303"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-98432",
+      "id": "CVE-2026-93754",
       "severity": "Critical",
-      "summary": "A use-after-free in the Linux kernel's IPv4 TCP request-socket handling, present since kernel 4.4, lets a remote unauthenticated attacker reach remote code execution; Anthropic demonstrated a remote-root exploit against multipath TCP listeners. Red Hat shipped fixed kernels November 1; Ubuntu fixes are in its testing channel.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98432"
+      "summary": "The payever WooCommerce Gateway plugin for WordPress (up to 4.8.0) exposes unauthenticated API callbacks and writes an attacker-controlled file to the public uploads directory before validating its type, allowing unauthenticated remote code execution.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93754"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-109618",
+      "id": "CVE-2026-123488",
       "severity": "Critical",
-      "summary": "PHP's use of longjmp() for out-of-memory errors can be abused for remote code execution (PHP2Shell), confirmed exploited in the wild against internet-facing PAN-OS management interfaces and chained with a Linux kernel flaw to reach root. Patch PHP and restrict management-plane access.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618"
+      "summary": "Craft CMS 4.x and 5.x contain an unauthenticated SQL injection flaw in the element search endpoint, where an unsanitized attribute parameter is concatenated into the query. Attackers can read and write the database, including setting the admin flag or overwriting password hashes. Fixed in 4.18.9 and 5.11.2.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123488"
     },
     {
-      "cvss": 9.3,
-      "id": "CVE-2026-99999",
+      "cvss": 9.1,
+      "id": "CVE-2026-117691",
       "severity": "Critical",
-      "summary": "A Linux kernel flaw in how virtio-net handles IPv4 checksum metadata lets an untrusted VM guest overwrite two bytes of an already-validated IPv4 header on the host, escaping the guest. The bug dates to kernel 2.6.27; CloudLinux has livepatches on its main feed and kernel updates are rolling out.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99999"
-    },
-    {
-      "cvss": 9.3,
-      "id": "CVE-2026-48356",
-      "severity": "Critical",
-      "summary": "Adobe Commerce and Magento are affected by an unrestricted upload of a file with a dangerous type, rated CVSS 9.3, with exploitation tracked since March 2026 across hundreds of stores. Apply Adobe's security update and audit storefront uploads.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356"
+      "summary": "Keycloak's SAML HTTP-Redirect binding processes percent-encoded parameter names (like %53AMLResponse) while signature verification only checks literal names, letting an attacker substitute a crafted unsigned SAML message. The flaw can lead to full account takeover of federated users.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117691"
     }
   ]
 }

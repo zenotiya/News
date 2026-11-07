@@ -2,30 +2,30 @@
   "date": "2026-11-07",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 9.9,
+  "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-122311",
+      "id": "CVE-2026-109469",
+      "cvss": 10.0,
+      "summary": "Authorization bypass through a user-controlled key in Microsoft Entra Device Registration lets an unauthorized attacker elevate privileges over a network. Microsoft rates it the maximum CVSS 10.0, the most severe CVE published this week.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109469"
+    },
+    {
+      "id": "CVE-2026-122303",
       "cvss": 9.9,
-      "summary": "Kyverno 1.16.0 through 1.19.1 fails to validate path segments in the resource argument of resource.get() and resource.post(), letting namespaced CEL policies escape their namespace. Published November 5; upgrade to Kyverno 1.19.2 or later.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122311"
+      "summary": "Kyverno 1.17.0 to 1.19.1 lets namespace tenants abuse NamespacedMutatingPolicy to overwrite resources in other namespaces, including Secrets and Deployments cluster-wide. Fixed in Kyverno 1.19.2.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122303"
     },
     {
-      "id": "CVE-2026-98432",
+      "id": "CVE-2026-93754",
       "cvss": 9.8,
-      "summary": "A use-after-free in the Linux kernel's IPv4 TCP request-socket handling, present since kernel 4.4, lets a remote unauthenticated attacker reach remote code execution; Anthropic demonstrated a remote-root exploit against multipath TCP listeners. Red Hat shipped fixed kernels November 1; Ubuntu fixes are in its testing channel.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98432"
-    },
-    {
-      "id": "CVE-2026-109618",
-      "cvss": 9.8,
-      "summary": "PHP's use of longjmp() for out-of-memory errors can be abused for remote code execution (PHP2Shell), confirmed exploited in the wild against internet-facing PAN-OS management interfaces and chained with a Linux kernel flaw to reach root. Patch PHP and restrict management-plane access.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618"
+      "summary": "The payever WooCommerce Gateway plugin for WordPress (up to 4.8.0) exposes unauthenticated API callbacks and writes an attacker-controlled file to the public uploads directory before validating its type, allowing unauthenticated remote code execution.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93754"
     }
   ],
   "model": {
-    "name": "OpenAI GPT-6 Cyber",
-    "summary": "OpenAI launched GPT-6 Cyber on November 5, a security-focused variant of GPT-6 Astra for authorized vulnerability research. It scores 48.5% on ExploitGym (up from 32.1% for GPT-5.6 Cyber) and is rated 'Critical' under OpenAI's Preparedness Framework; access starts with vetted Daybreak Red customers.",
-    "url": "https://www.reuters.com/technology/openai-launches-gpt-6-cyber-with-critical-cybersecurity-rating-2026-11-05/"
+    "name": "Google Gemini Omni 1.2 Flash",
+    "summary": "Google's fast video generation and editing model is now generally available, with native clips up to 15 seconds (up from 10), multi-turn conversational editing, and a 30% price cut to $0.07 per second for 720p. It rolls out across the Gemini API, Google Cloud, and Gemini for business.",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
   }
 }
