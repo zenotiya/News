@@ -2,30 +2,30 @@
   "date": "2026-11-08",
   "news_count": 8,
   "cve_count": 5,
-  "worst_cvss": 10.0,
+  "worst_cvss": 9.9,
   "priorities": [
     {
-      "id": "CVE-2026-109469",
-      "cvss": 10.0,
-      "summary": "Authorization bypass through a user-controlled key in Microsoft Entra Device Registration lets an unauthorized attacker elevate privileges over a network. Microsoft rates it the maximum CVSS 10.0, the most severe CVE published this week.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109469"
-    },
-    {
-      "id": "CVE-2026-122303",
+      "id": "CVE-2026-17392",
       "cvss": 9.9,
-      "summary": "Kyverno 1.17.0 to 1.19.1 lets namespace tenants abuse NamespacedMutatingPolicy to overwrite resources in other namespaces, including Secrets and Deployments cluster-wide. Fixed in Kyverno 1.19.2.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122303"
+      "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2: an authenticated attacker can exploit LDAP injection to gain unauthorized administrative access to other tenants. Fixed in 12.1.1.3.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17392"
     },
     {
-      "id": "CVE-2026-93754",
-      "cvss": 9.8,
-      "summary": "The payever WooCommerce Gateway plugin for WordPress (up to 4.8.0) exposes unauthenticated API callbacks and writes an attacker-controlled file to the public uploads directory before validating its type, allowing unauthenticated remote code execution.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93754"
+      "id": "CVE-2026-123957",
+      "cvss": 9.9,
+      "summary": "TOTOLINK CA300-PoE 6.2c.884: a buffer overflow in the setIpQosRules handler, triggered remotely via the ipStart argument, with the exploit publicly disclosed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123957"
+    },
+    {
+      "id": "CVE-2026-120984",
+      "cvss": 9.1,
+      "summary": "Keycloak's client management component fails to clear a session attribute during client setup, letting an authenticated attacker with client-management permissions import a malicious JavaScript policy that executes on the server — arbitrary code execution.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120984"
     }
   ],
   "model": {
-    "name": "Google Gemini Omni 1.2 Flash",
-    "summary": "Google's fast video generation and editing model is now generally available, with native clips up to 15 seconds (up from 10), multi-turn conversational editing, and a 30% price cut to $0.07 per second for 720p. It rolls out across the Gemini API, Google Cloud, and Gemini for business.",
-    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+    "name": "Inkling 2 Small",
+    "summary": "Thinking Machines Lab's second-generation model is a 594B-parameter mixture-of-experts model with 17B active per token, scoring 31 on the Artificial Analysis Intelligence Index. It runs on the company's Tinker platform for now, with full weights promised under Apache 2.0 next week once external safety testing finishes.",
+    "url": "https://thinkingmachines.ai/news/inkling-2-small/"
   }
 }

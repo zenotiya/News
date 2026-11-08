@@ -1,40 +1,40 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "items": [
     {
-      "cvss": 10.0,
-      "id": "CVE-2026-109469",
+      "cvss": 9.9,
+      "id": "CVE-2026-17392",
       "severity": "Critical",
-      "summary": "Authorization bypass through a user-controlled key in Microsoft Entra Device Registration lets an unauthorized attacker elevate privileges over a network. Microsoft rates it the maximum CVSS 10.0, the most severe CVE published this week.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109469"
+      "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2: an authenticated attacker can exploit LDAP injection to gain unauthorized administrative access to other tenants. Fixed in 12.1.1.3.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17392"
     },
     {
       "cvss": 9.9,
-      "id": "CVE-2026-122303",
+      "id": "CVE-2026-123957",
       "severity": "Critical",
-      "summary": "Kyverno 1.17.0 to 1.19.1 lets namespace tenants abuse NamespacedMutatingPolicy to overwrite resources in other namespaces, including Secrets and Deployments cluster-wide. Fixed in Kyverno 1.19.2.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122303"
-    },
-    {
-      "cvss": 9.8,
-      "id": "CVE-2026-93754",
-      "severity": "Critical",
-      "summary": "The payever WooCommerce Gateway plugin for WordPress (up to 4.8.0) exposes unauthenticated API callbacks and writes an attacker-controlled file to the public uploads directory before validating its type, allowing unauthenticated remote code execution.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93754"
-    },
-    {
-      "cvss": 9.8,
-      "id": "CVE-2026-123488",
-      "severity": "Critical",
-      "summary": "Craft CMS 4.x and 5.x contain an unauthenticated SQL injection flaw in the element search endpoint, where an unsanitized attribute parameter is concatenated into the query. Attackers can read and write the database, including setting the admin flag or overwriting password hashes. Fixed in 4.18.9 and 5.11.2.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123488"
+      "summary": "TOTOLINK CA300-PoE 6.2c.884: a buffer overflow in the setIpQosRules handler, triggered remotely via the ipStart argument, with the exploit publicly disclosed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123957"
     },
     {
       "cvss": 9.1,
-      "id": "CVE-2026-117691",
+      "id": "CVE-2026-120984",
       "severity": "Critical",
-      "summary": "Keycloak's SAML HTTP-Redirect binding processes percent-encoded parameter names (like %53AMLResponse) while signature verification only checks literal names, letting an attacker substitute a crafted unsigned SAML message. The flaw can lead to full account takeover of federated users.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117691"
+      "summary": "Keycloak's client management component fails to clear a session attribute during client setup, letting an authenticated attacker with client-management permissions import a malicious JavaScript policy that executes on the server — arbitrary code execution.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120984"
+    },
+    {
+      "cvss": 9.0,
+      "id": "CVE-2026-17403",
+      "severity": "Critical",
+      "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2: hard-coded credentials could allow a remote attacker to gain full administrative control.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17403"
+    },
+    {
+      "cvss": 9.0,
+      "id": "CVE-2026-121491",
+      "severity": "Critical",
+      "summary": "The Fiber Admin WordPress plugin before 4.0.1 writes an unvalidated request header into a regenerated PHP file, allowing unauthenticated attackers to execute arbitrary code when its custom database error page is enabled.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121491"
     }
   ]
 }
