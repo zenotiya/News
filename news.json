@@ -1,32 +1,34 @@
 {
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "sections": [
     {
       "items": [
         {
-          "action": "Check devices are on the 2026-11-01 patch level (2026-11-05 covers all November flaws) and push OEM/carrier updates urgently; flag unpatched Android 14–17 devices in fleet inventories.",
-          "details": "The flaw is an out-of-bounds write in FrameDecoder.cpp. Google's November bulletin lists 216 vulnerabilities, 23 rated Critical, including CVE-2026-58882, which can crash emergency calls via a malformed WAP Push SMS. No active exploitation was reported as of the bulletin date.",
-          "image": "https://mjbtechtips.com/wp-content/uploads/2025/03/android-security-update-860x483.jpg",
+          "action": "Upgrade SonicOS to the fixed builds now; check whether any alternate login methods (local, RADIUS, LDAP) sit alongside SAML on your SSLVPN.",
+          "details": "Affects SonicOS Gen7 up to 7.3.3-7015 and Gen8 up to 8.2.2-8015, only where SSLVPN uses SAML. Fixed in 7.3.4-7013 / 8.2.3-8015. SonicWall says it investigated a report of likely real-world exploitation and has published no workaround — upgrading is the only fix. Two related management-interface flaws in the same advisory (SNWLID-2026-0014) are rated 8.8.",
+          "image": "https://cdn.kaseyaquotemanager.com/c3systems/brandimages/1153-ca3c438d0c9498d45287cc044654ab44.png?width=450&height=450&fit=pad",
           "severity": "Critical",
-          "summary": "Google's November security bulletin patches CVE-2026-58868, a heap buffer overflow in Android 14–17 that lets a remote attacker run code with no user interaction. It is fixed in security patch level 2026-11-01 or later.",
-          "title": "Critical Android RCE (CVE-2026-58868) needs no user interaction",
-          "url": "https://thehackernews.com/2026/11/google-patches-critical-android-flaw.html"
+          "summary": "CISA added CVE-2026-19868 to its Known Exploited Vulnerabilities catalog on Nov 6: an attacker holding valid credentials for an alternate login method can bypass SAML authentication — and SAML-enforced MFA — on SonicWall SonicOS SSLVPN. US federal agencies must remediate by Nov 20.",
+          "title": "SonicWall SSLVPN MFA bypass is exploited — patch before Nov 20",
+          "url": "https://pandromeda.com/security/sonicwall-cve-2026-19868-ssl-vpn-mfa-bypass-under-attack"
         },
         {
-          "action": "Update SIMATIC IoT2050 Advanced gateways to V4.3.4-1 immediately; ensure Node-RED instances are never exposed to the internet without authentication.",
-          "details": "Siemens confirmed the flaw affects Industrial OS versions before V4.3.4-1 on the SIMATIC IoT2050 Advanced (6ES7647-0BA00-1YA2). The maximum CVSS 10.0 score reflects unauthenticated remote code execution on exposed hosts.",
-          "severity": "Critical",
-          "summary": "VulnCheck warned on Nov 2 that threat actors are actively exploiting CVE-2026-58115, a missing-authentication flaw in Node-RED on Siemens SIMATIC IoT2050 Advanced gateways, letting unauthenticated attackers run arbitrary system commands. Exploitation began Oct 30.",
-          "title": "Node-RED RCE (CVE-2026-58115, CVSS 10.0) exploited in the wild",
-          "url": "https://securityonline.info/node-red-rce-vulnerability-cve-2026-58115/"
+          "action": "Update Paint via Microsoft Store > Library > Get updates, or run: winget upgrade --id 9PCFS5B6T72H --source msstore. Verify build 11.2609.401.0 or later.",
+          "details": "The out-of-bounds read (CWE-125) was disclosed Oct 13; Microsoft revised the advisory on Nov 6 to name build 11.2609.401.0 as the fix, then on Nov 7 lowered the CVSS score from 8.1 to 7.0 (local vector, user interaction required), calling it an informational change. No exploitation has been reported and no public exploit exists.",
+          "image": "https://static0.makeuseofimages.com/wordpress/wp-content/uploads/2021/04/mspaint-icon.png?q=50&fit=crop&w=825&dpr=1.5",
+          "severity": "High",
+          "summary": "Microsoft's fix for the Paint remote code execution flaw CVE-2026-83844 ships only through the Microsoft Store, as Paint build 11.2609.401.0. Installing the October Windows update does not patch it, so fleets relying on WSUS or Windows Update are still exposed.",
+          "title": "Windows Paint RCE fix is Store-only — Windows Update won't deliver it",
+          "url": "https://threatdefence.com/article/microsoft-paint-cve-2026-83844-patching-hunting"
         },
         {
-          "action": "Update Node.js to the patched 22.x/24.x/26.x releases and upgrade Brotli libraries in all dependent software; scan for bundled copies in containers and edge services.",
-          "details": "The flaw drew attention through Node.js, which bundles the Brotli decoder; Node.js shipped security updates for its 22.x, 24.x and 26.x lines on Oct 21. Vulnerable upstream Brotli versions are 1.0.3–before 1.0.10, 1.1.0–before 1.1.1, and 1.2.0–before 1.2.1.",
+          "action": "Upgrade OpenAM to 16.1.4 or later and rotate session tokens on exposed deployments.",
+          "details": "Published Nov 8. A fix is available in OpenAM 16.1.4 and later. Session-token disclosure can let an attacker hijack authenticated sessions outright, so exposed deployments should be treated as potentially compromised until patched and sessions rotated.",
+          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTPLwL4_3_kkn9L56IkSFDonBBa-QdXEs4yp3Y4E-c_NkP9lLwcDeAm2Qrh6hIJZBMbCYYC3wGflDnl0s4EO2K8hrfW__VSqo3jRJxCvZlRerJx9J3S13GcjZMWkm_qizwq7mfCAd6qi0/s640/08.openam.png",
           "severity": "Critical",
-          "summary": "A memory-corruption flaw in Google's Brotli decompression library (CVE-2026-111497) is being actively exploited, according to Malaysia's national cyber centre, and was added to CISA's KEV catalog on Oct 27. Crafted compressed data can crash processes, leak memory or lead to remote code execution.",
-          "title": "Brotli flaw (CVE-2026-111497) exploited — patch Node.js and dependents",
-          "url": "https://newsflayer.com/2026/11/04/cve-2026-111497-brotli-vulnerability/"
+          "summary": "CVE-2026-123551 lets unauthenticated attackers read live session tokens from OpenAM's notification WebSocket by bypassing the agent-only check. It affects OpenAM 14.0.0 through 16.1.3 and is rated the maximum CVSS 10.0.",
+          "title": "OpenAM flaw (CVSS 10.0) leaks live session tokens to unauthenticated attackers",
+          "url": "https://cve.now/daily/2026-11-08"
         }
       ],
       "title": "Act on Today"
@@ -34,31 +36,30 @@
     {
       "items": [
         {
-          "action": "Treat as an unverified claim for now; watch for Maersk confirmation and, if you ship with Maersk, review any shared credentials and monitor for credential-stuffing attempts.",
-          "details": "The leak-site post claims 16,093 driver records include plaintext passwords, plus 16,123 staff accounts (33 SUPER_ADMIN), 18,913 delivery recipient names and addresses, and 64,665 signed delivery receipts. The claim is unverified by Maersk.",
-          "image": "https://cdn.prod.website-files.com/6673f8e6b5e0188c03e013cc/687c8648873346a516b4ff17_container%20ship%20and%20shipping%20port%20software.jpg",
+          "action": "If you use Chainalysis, reset passwords, rotate API keys, and check for any KYT account access without authorization.",
+          "details": "The company discovered the broader exposure on Nov 2 and disclosed it late Nov 4. Every user must reset passwords and rotate API keys; KYT restoration requires customers to register trusted IPs for an allowlist. Chainalysis says it has no evidence investigation data was accessed or attribution data manipulated, and has not named the actor or published a user count.",
+          "image": "https://cryps.pl/wp-content/uploads/2020/01/Chainalysis-768x264.jpeg",
           "severity": "High",
-          "summary": "Ransomware group WhiteArmor listed shipping giant Maersk on its leak site on Nov 7, claiming about 100GB of data from the OCF/LF Logistics platform, including 29,297 driver records, and setting a $5 million Bitcoin ransom with a Dec 7 publication deadline.",
-          "title": "WhiteArmor lists Maersk, claims ~100GB and demands $5M",
-          "url": "https://www.hookphish.com/blog/ransomware-group-whitearmor-hits-maersk/"
+          "summary": "Chainalysis now says an 'agentic' attack exposed names, usernames, password hashes and live tokens for all of its users — reversing its Oct 30 assurance that no credentials were touched. In its Nov 7 update, Reactor, KYT and Address Screening are back online with tighter controls, while Data Solutions and Chain (Beta) remain offline.",
+          "title": "Chainalysis breach exposed password hashes and live tokens for all users",
+          "url": "https://tech-insider.org/chainalysis-breach-widens-all-users-tokens-two-products-offline-2026/"
         },
         {
-          "action": "Brokerage and insurance clients should watch for phishing using policy details; firms should review third-party and broker data-sharing exposure.",
-          "details": "The leak exposes sensitive client documents and internal underwriting records, raising identity-theft, fraud and regulatory risks for affected clients. The attack vector was not disclosed.",
-          "image": "https://www.staplesagency.com/wp-content/uploads/2026/03/How-to-File-an-Insurance-Claim-A-Step-by-Step-Guide-980x551.jpg",
-          "severity": "High",
-          "summary": "Ransomware group N0n published stolen data from US insurance brokerage Higginbotham on Nov 7 — over 217,000 client policy and working documents dating from 2013 to 2026 — after the firm did not pay.",
-          "title": "N0n leaks 217,000+ documents from insurance broker Higginbotham",
-          "url": "https://qpulse.quasarcybertech.com/news/7984/n0n-ransomware-group-leaks-over-217-000-documents-from-insurance-brokerage-higginbotham"
+          "action": "Treat as an unverified claim; healthcare teams should watch for the group's indicators and review backup and segmentation posture.",
+          "details": "The claim surfaced Nov 8. The alleged haul includes MD5-hashed staff credentials, 691,000 admissions, 34.5 million medical-history rows and 1.5 million invoices. No independently verified evidence of data exfiltration or disruption to clinical services has been published.",
+          "image": "https://cyber.spool.co.jp/wp-content/uploads/2026/05/download-55-1600x900.png",
+          "severity": "Critical",
+          "summary": "The WhiteArmor ransomware group claims it breached Clínica La Sagrada Familia in Colombia, alleging it holds 254,670 patient identities plus ~598.7 million rows of clinical, financial and identity data, and is demanding $2 million in Bitcoin. The claim is unverified.",
+          "title": "WhiteArmor claims Colombian hospital, alleges 254,670 patient identities stolen",
+          "url": "https://www.hookphish.com/blog/ransomware-group-whitearmor-hits-clinica-la-sagrada-familia-colombia/"
         },
         {
-          "action": "Healthcare and pharma teams should treat infostealer credentials as a ransomware precursor — rotate exposed credentials and hunt for stealer infections.",
-          "details": "The compromise was flagged through infostealer activity detected by Hudson Rock. No encryption details or ransom demand were disclosed, and the claim remains an active threat-actor claim.",
-          "image": "https://cyberflux.pl/wp-content/uploads/2026/03/wpis-o-ransomware-480x320.webp",
-          "severity": "Medium",
-          "summary": "The Qilin ransomware group claimed an attack on Brazilian healthcare company Roxfarma on Nov 7. Infostealer telemetry linked to the incident shows 219 exposed passwords (28 critical) and 23 cookies.",
-          "title": "Qilin claims Brazilian pharma firm Roxfarma",
-          "url": "https://qpulse.quasarcybertech.com/news/8006/qilin-ransomware-group-claims-attack-on-roxfarma"
+          "action": "Monitor for confirmation and for any published data; treat the listing as a claim, not a confirmed breach.",
+          "details": "The listing is an unverified threat-actor claim at this stage. LockBit 5.0 has been one of the most active ransomware operations through 2026.",
+          "severity": "High",
+          "summary": "LockBit 5.0 listed Grupo Telles, a Brazilian agricultural company, as a new victim on its leak site on Nov 8, according to ThreatMon. No independently verified information on the intrusion, data volume or operational impact has been published.",
+          "title": "LockBit 5.0 lists Brazilian agricultural firm Grupo Telles",
+          "url": "https://undercodenews.com/lockbit-50-claims-brazilian-agricultural-company-grupo-telles-as-new-victim-while-whitearmor-targets-colombian-healthcare-provider-video/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -66,26 +67,27 @@
     {
       "items": [
         {
-          "action": "BFSI teams should follow CERT-In advisories CIAD-2026-0046 and CIAD-2026-0049: set transfer limits, verify beneficiaries, flag fast transactions, separate test from live systems, and heighten monitoring on weekends and holidays.",
-          "details": "The campaign uses publicly available AI offensive-security tools (ARTEX, PentAGI, Cairn, CyberStrikeAI) to automate break-ins at machine speed, probing payment APIs, testing with Re 1 transfers, then moving funds via mule accounts over IMPS/NEFT. CERT-In calls the threat active and ongoing; at least two of the tools have been linked to China.",
-          "image": "https://www.infinixtechnology.com/_next/image?url=https%3A%2F%2Fuploads.infinixtechnology.com%2Fcybersecurity-ai-how-ai-is-changing-digital-security.png&w=750&q=75",
+          "action": "Yatra users should change passwords and enable 2FA; Yatra account holders should watch for credential-stuffing and phishing using the exposed data.",
+          "details": "The report also cites 34 compromised employee credentials and 43 third-party employee credentials, with the company's external attack surface measured at 117. The leak-site listing itself gives no details on how the incident occurred or whether systems were encrypted; the data-theft claim is unverified.",
+          "image": "https://livelaw-hpnlu.refread.com/h-upload/2024/01/02/750x450_513339-yatra.webp",
           "severity": "High",
-          "summary": "CERT-In's Nov 4 advisory named the AI-assisted 'Crafty Falcon' campaign hitting Indian banks, NBFCs, fintechs and crypto exchanges — and researchers found the ARTEX tool it uses was shipped as a backdoored Docker image, with 62 consoles serving the trojanised build between Nov 2 and 4.",
-          "title": "Backdoored ARTEX build found behind CERT-In's 'Crafty Falcon' bank attacks",
-          "url": "https://thehackernews.com/2026/11/backdoored-docker-image-for-artex-ai.html"
+          "summary": "LockBit5 published Yatra.com, the Gurugram-based online travel agency, as a new victim on its leak site on Nov 8. Hudson Rock infostealer data linked to the incident shows 24,829 compromised user accounts, 84,364 passwords and 15,316 cookies.",
+          "title": "LockBit5 lists Yatra.com; infostealer data exposes 24,829 user accounts",
+          "url": "https://qpulse.quasarcybertech.com/news/8028/lockbit5-ransomware-group-targets-yatra-com-exposing-over-24-000-user-credentials"
         },
         {
-          "action": "Public institutions should review payment-approval controls, dual authorisation and transaction alerts on salary and institutional accounts.",
-          "details": "The funds were the institution's salary deposits. The incident was reported by UNI on Nov 4; investigation details and recovery status were not disclosed.",
-          "severity": "High",
-          "summary": "The bank account of Puducherry's Mahatma Gandhi Postgraduate Institute of Dental Sciences was hacked on Nov 4, and three months' salary for staff — about ₹8.5 crore — was siphoned off. Police cyber crime wing has registered a case.",
-          "title": "Puducherry dental college loses ₹8.5 crore in bank account hack",
-          "url": "https://www.uniindia.com/south-india/crime-pondy-dental-college-account-hacked/236065"
+          "action": "SBI customers should stay alert for phishing and fraudulent loan applications using KYC details; report suspicious messages to the bank and to 1930.",
+          "details": "The exposed data reportedly included registered mobile numbers, dates of birth, names, gender, email and residential addresses, branch and CIF identifiers and loan/lead metadata. SBI has begun notifying affected customers and says the incident had no material impact on core operations. The bank is also leading an Indian Banks' Association effort on AI-era cybersecurity strategy.",
+          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
+          "severity": "Medium",
+          "summary": "SBI chairman C.S. Setty says the bank is stepping up cybersecurity with AI tools, API sweeps and vulnerability assessments after its Oct 21 disclosure that a cyberattack exposed personally identifiable information of 3,897 customers on the dark web. Root-cause analysis is still underway.",
+          "title": "SBI steps up AI defences after dark-web exposure of 3,897 customer records",
+          "url": "https://www.businesstoday.in/technology/news/story/sbis-cyber-wake-up-call-after-data-breach-fight-ai-with-ai-565464-2026-11-03"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Sunday, November 8 — Here's what's worth your attention today.",
+  "subtitle": "Monday, November 9 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
