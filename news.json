@@ -1,34 +1,34 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "sections": [
     {
       "items": [
         {
-          "action": "Upgrade SonicOS to the fixed builds now; check whether any alternate login methods (local, RADIUS, LDAP) sit alongside SAML on your SSLVPN.",
-          "details": "Affects SonicOS Gen7 up to 7.3.3-7015 and Gen8 up to 8.2.2-8015, only where SSLVPN uses SAML. Fixed in 7.3.4-7013 / 8.2.3-8015. SonicWall says it investigated a report of likely real-world exploitation and has published no workaround — upgrading is the only fix. Two related management-interface flaws in the same advisory (SNWLID-2026-0014) are rated 8.8.",
-          "image": "https://cdn.kaseyaquotemanager.com/c3systems/brandimages/1153-ca3c438d0c9498d45287cc044654ab44.png?width=450&height=450&fit=pad",
-          "severity": "Critical",
-          "summary": "CISA added CVE-2026-19868 to its Known Exploited Vulnerabilities catalog on Nov 6: an attacker holding valid credentials for an alternate login method can bypass SAML authentication — and SAML-enforced MFA — on SonicWall SonicOS SSLVPN. US federal agencies must remediate by Nov 20.",
-          "title": "SonicWall SSLVPN MFA bypass is exploited — patch before Nov 20",
-          "url": "https://pandromeda.com/security/sonicwall-cve-2026-19868-ssl-vpn-mfa-bypass-under-attack"
-        },
-        {
-          "action": "Update Paint via Microsoft Store > Library > Get updates, or run: winget upgrade --id 9PCFS5B6T72H --source msstore. Verify build 11.2609.401.0 or later.",
-          "details": "The out-of-bounds read (CWE-125) was disclosed Oct 13; Microsoft revised the advisory on Nov 6 to name build 11.2609.401.0 as the fix, then on Nov 7 lowered the CVSS score from 8.1 to 7.0 (local vector, user interaction required), calling it an informational change. No exploitation has been reported and no public exploit exists.",
-          "image": "https://static0.makeuseofimages.com/wordpress/wp-content/uploads/2021/04/mspaint-icon.png?q=50&fit=crop&w=825&dpr=1.5",
+          "action": "Upgrade OpenSSH to 10.6p2 on Alpine, OpenWrt, Buildroot and other musl-based hosts, and set passwords or disable password auth on any account that currently has none.",
+          "details": "As of November 9, 2026, 20 exploitation attempts were recorded from 13 unique IP addresses across Denmark, Iran, Japan, the Netherlands, Norway, Singapore, Sweden, Switzerland and the U.S. Fixed in OpenSSH 10.6p2.",
+          "image": "https://www.ciksiti.com/f/5c77eb6672644cb931baab76fb35421d.png",
           "severity": "High",
-          "summary": "Microsoft's fix for the Paint remote code execution flaw CVE-2026-83844 ships only through the Microsoft Store, as Paint build 11.2609.401.0. Installing the October Windows update does not patch it, so fleets relying on WSUS or Windows Update are still exposed.",
-          "title": "Windows Paint RCE fix is Store-only — Windows Update won't deliver it",
-          "url": "https://threatdefence.com/article/microsoft-paint-cve-2026-83844-patching-hunting"
+          "summary": "Attackers are attempting to exploit CVE-2026-123158 (CVSS 8.1), the OpenSSH flaw dubbed SSHole that lets anyone sign in to password-less accounts on musl-libc systems with PAM disabled, including Alpine Linux's default sshd setup.",
+          "title": "SSHole flaw now seeing exploitation attempts",
+          "url": "https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html"
         },
         {
-          "action": "Upgrade OpenAM to 16.1.4 or later and rotate session tokens on exposed deployments.",
-          "details": "Published Nov 8. A fix is available in OpenAM 16.1.4 and later. Session-token disclosure can let an attacker hijack authenticated sessions outright, so exposed deployments should be treated as potentially compromised until patched and sessions rotated.",
-          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTPLwL4_3_kkn9L56IkSFDonBBa-QdXEs4yp3Y4E-c_NkP9lLwcDeAm2Qrh6hIJZBMbCYYC3wGflDnl0s4EO2K8hrfW__VSqo3jRJxCvZlRerJx9J3S13GcjZMWkm_qizwq7mfCAd6qi0/s640/08.openam.png",
-          "severity": "Critical",
-          "summary": "CVE-2026-123551 lets unauthenticated attackers read live session tokens from OpenAM's notification WebSocket by bypassing the agent-only check. It affects OpenAM 14.0.0 through 16.1.3 and is rated the maximum CVSS 10.0.",
-          "title": "OpenAM flaw (CVSS 10.0) leaks live session tokens to unauthenticated attackers",
-          "url": "https://cve.now/daily/2026-11-08"
+          "action": "Patch GS1900 switches immediately and audit them for unexpected config changes, new accounts and the JITTERLY/SIXZUT indicators.",
+          "details": "The out-of-bounds write flaw lets a LAN-based unauthenticated attacker execute OS commands via a crafted HTTP request. Activity is attributed to a Chinese-speaking actor tracked as Kapibala (aka Red Heron), which deployed the JITTERLY backdoor and the SIXZUT ring-3 rootkit. Zyxel has released a fix.",
+          "image": "https://strapi-bucket-prod-287678752366.s3.us-east-1.amazonaws.com/cisco_nexus_9000_hardware_support_technician_55f456d81b.webp",
+          "severity": "High",
+          "summary": "Threat actors exploited a zero-day in Zyxel GS1900 series switches, tracked as CVE-2026-107441 (CVSS 8.8), to compromise nearly 1,000 devices worldwide and steal configuration files and credentials.",
+          "title": "Zyxel zero-day exploited on ~1,000 network switches",
+          "url": "https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html"
+        },
+        {
+          "action": "Apply today's cumulative update and plan migration off 23H2 Enterprise/Education before the next Patch Tuesday; prioritise the Entra fix (CVE-2026-109469) in Azure environments.",
+          "details": "Microsoft's servicing documentation states the November 2026 update is the final one for 23H2 Enterprise and Education, and recommends moving eligible devices to Windows 11 25H2, which is supported until October 11, 2028. The early-November release also included a Critical Entra Device Registration elevation-of-privilege flaw, CVE-2026-109469 (CVSS 10.0).",
+          "image": "https://cdn.urbandigital.id/wp-content/uploads/2022/01/windows-11-update-on-laptop-cnet-july-2021-lifestyle-764x430.jpg",
+          "severity": "High",
+          "summary": "Microsoft ships its November security update today, November 10 — the last ever for Windows 11 version 23H2 Enterprise and Education. After today those editions receive no further monthly security fixes.",
+          "title": "Patch Tuesday: Windows 11 23H2 Enterprise reaches end of updates today",
+          "url": "https://myindustrynews.net/TenantSites/1bf91c5e-dbc9-4e91-a10c-d949ca1d094d/2026/11/1a6b9ae5-d078-4285-bd3e-756f93ae7596.html"
         }
       ],
       "title": "Act on Today"
@@ -36,30 +36,30 @@
     {
       "items": [
         {
-          "action": "If you use Chainalysis, reset passwords, rotate API keys, and check for any KYT account access without authorization.",
-          "details": "The company discovered the broader exposure on Nov 2 and disclosed it late Nov 4. Every user must reset passwords and rotate API keys; KYT restoration requires customers to register trusted IPs for an allowlist. Chainalysis says it has no evidence investigation data was accessed or attribution data manipulated, and has not named the actor or published a user count.",
-          "image": "https://cryps.pl/wp-content/uploads/2020/01/Chainalysis-768x264.jpeg",
-          "severity": "High",
-          "summary": "Chainalysis now says an 'agentic' attack exposed names, usernames, password hashes and live tokens for all of its users — reversing its Oct 30 assurance that no credentials were touched. In its Nov 7 update, Reactor, KYT and Address Screening are back online with tighter controls, while Data Solutions and Chain (Beta) remain offline.",
-          "title": "Chainalysis breach exposed password hashes and live tokens for all users",
-          "url": "https://tech-insider.org/chainalysis-breach-widens-all-users-tokens-two-products-offline-2026/"
-        },
-        {
-          "action": "Treat as an unverified claim; healthcare teams should watch for the group's indicators and review backup and segmentation posture.",
-          "details": "The claim surfaced Nov 8. The alleged haul includes MD5-hashed staff credentials, 691,000 admissions, 34.5 million medical-history rows and 1.5 million invoices. No independently verified evidence of data exfiltration or disruption to clinical services has been published.",
-          "image": "https://cyber.spool.co.jp/wp-content/uploads/2026/05/download-55-1600x900.png",
+          "action": "Treat any Vanderbilt credentials as exposed; watch for phishing using university data and expect the gang to publish samples if its demands are not met.",
+          "details": "BYOD, which emerged in September, listed Vanderbilt on its leak site claiming full domain-controller takeover plus SSNs, names, emails, phone numbers and student and employee records. The claims are unverified and no sample files have been published; the university has confirmed a breach but not what data was taken. The same gang also listed the Texas Health and Human Services Commission on Monday.",
+          "image": "https://labs.k7computing.com/wp-content/uploads/2022/05/APT-Attacks-on-EDU2-1024x512.png",
           "severity": "Critical",
-          "summary": "The WhiteArmor ransomware group claims it breached Clínica La Sagrada Familia in Colombia, alleging it holds 254,670 patient identities plus ~598.7 million rows of clinical, financial and identity data, and is demanding $2 million in Bitcoin. The claim is unverified.",
-          "title": "WhiteArmor claims Colombian hospital, alleges 254,670 patient identities stolen",
-          "url": "https://www.hookphish.com/blog/ransomware-group-whitearmor-hits-clinica-la-sagrada-familia-colombia/"
+          "summary": "Vanderbilt University told students, faculty and staff on November 9 to shut down university devices and leave campus Wi-Fi while IT responds to an active cybersecurity incident, as the new ransomware gang BYOD claims to have taken over the network and stolen over a million Social Security numbers.",
+          "title": "Vanderbilt University goes offline as BYOD ransomware gang claims 1M+ SSNs",
+          "url": "https://databreach.com/news/77-vanderbilt-orders-campus-offline-as-ransomware-gang-says-it-took-over-the-network"
         },
         {
-          "action": "Monitor for confirmation and for any published data; treat the listing as a claim, not a confirmed breach.",
-          "details": "The listing is an unverified threat-actor claim at this stage. LockBit 5.0 has been one of the most active ransomware operations through 2026.",
+          "details": "The incident was discovered at 03:59 UTC on November 9, the same day listed as the estimated attack date. Details of what data was taken have not been independently verified.",
+          "image": "https://informationage-production.s3.amazonaws.com/uploads/2022/10/AdobeStock_152684268-scaled.jpeg",
           "severity": "High",
-          "summary": "LockBit 5.0 listed Grupo Telles, a Brazilian agricultural company, as a new victim on its leak site on Nov 8, according to ThreatMon. No independently verified information on the intrusion, data volume or operational impact has been published.",
-          "title": "LockBit 5.0 lists Brazilian agricultural firm Grupo Telles",
-          "url": "https://undercodenews.com/lockbit-50-claims-brazilian-agricultural-company-grupo-telles-as-new-victim-while-whitearmor-targets-colombian-healthcare-provider-video/"
+          "summary": "The Anubis ransomware group claimed a data breach of Cuomo LLC on November 9, 2026, listed via the Ransomware.live tracker. The group has recently targeted several other organisations including Kahler Automation, Santiam Hospital & Clinics and Mynd.",
+          "title": "Anubis ransomware claims breach of law firm Cuomo LLC",
+          "url": "https://qpulse.quasarcybertech.com/news/8037/anubis-ransomware-group-claims-data-breach-of-cuomo-llc"
+        },
+        {
+          "action": "If you use mSecure, change your master password, rotate stored credentials starting with email and banking, and reset 2FA and passkeys.",
+          "details": "mSeven Software said it launched an investigation, took mitigation steps and engaged external experts, but has not answered what the activity involved, when it occurred, or whether customer data was accessed. In December 2025 Germany's BSI found the maker could, in theory, access the data users store in it.",
+          "image": "https://blog.grantmcgregor.co.uk/hubfs/password%20manager%202.png",
+          "severity": "High",
+          "summary": "Password manager mSecure has warned customers to change their passwords, reset two-factor authentication and potentially remove passkeys after detecting suspicious activity — but has not explained what happened or whether any secrets were exposed.",
+          "title": "Password manager mSecure urges customers to change passwords after suspicious activity",
+          "url": "https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -67,27 +67,34 @@
     {
       "items": [
         {
-          "action": "Yatra users should change passwords and enable 2FA; Yatra account holders should watch for credential-stuffing and phishing using the exposed data.",
-          "details": "The report also cites 34 compromised employee credentials and 43 third-party employee credentials, with the company's external attack surface measured at 117. The leak-site listing itself gives no details on how the incident occurred or whether systems were encrypted; the data-theft claim is unverified.",
-          "image": "https://livelaw-hpnlu.refread.com/h-upload/2024/01/02/750x450_513339-yatra.webp",
-          "severity": "High",
-          "summary": "LockBit5 published Yatra.com, the Gurugram-based online travel agency, as a new victim on its leak site on Nov 8. Hudson Rock infostealer data linked to the incident shows 24,829 compromised user accounts, 84,364 passwords and 15,316 cookies.",
-          "title": "LockBit5 lists Yatra.com; infostealer data exposes 24,829 user accounts",
-          "url": "https://qpulse.quasarcybertech.com/news/8028/lockbit5-ransomware-group-targets-yatra-com-exposing-over-24-000-user-credentials"
+          "action": "BFSI teams should audit payment APIs and disbursement flows, flag Re 1 test transfers, and tighten monitoring over weekends and holidays; report incidents to CERT-In within six hours.",
+          "details": "The November 4 advisory (CSIRT-Fin) says the actor uses publicly available AI offensive tools — ARTEX, PentAGI, Cairn and CyberStrikeAI — to exploit payment and disbursement APIs, test fund flows with a Re 1 transfer, then move money to mule accounts via IMPS and NEFT. Attacks are timed for holidays and weekends to delay detection. Separately, a backdoored ARTEX build was found serving 62 internet-exposed consoles to root access between November 2 and 4.",
+          "image": "https://klearstack.com/_next/image?url=%2Fassets%2Fimages%2Fsolution-template%2Ffraud-patterns%2Fpattern-duplicate-detection.png&w=640&q=75",
+          "severity": "Critical",
+          "summary": "CERT-In has disclosed that an AI-assisted threat actor it tracks as Crafty Falcon is targeting Indian banking, financial services and insurance organisations, re-attacking firms that remediated incompletely after its October warning.",
+          "title": "CERT-In flags AI-driven 'Crafty Falcon' attacks on Indian banks and fintechs",
+          "url": "https://thehackernews.com/2026/11/backdoored-docker-image-for-artex-ai.html"
         },
         {
-          "action": "SBI customers should stay alert for phishing and fraudulent loan applications using KYC details; report suspicious messages to the bank and to 1930.",
-          "details": "The exposed data reportedly included registered mobile numbers, dates of birth, names, gender, email and residential addresses, branch and CIF identifiers and loan/lead metadata. SBI has begun notifying affected customers and says the incident had no material impact on core operations. The bank is also leading an Indian Banks' Association effort on AI-era cybersecurity strategy.",
-          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
+          "action": "SBI customers should watch for phishing and fraudulent loan applications using the exposed KYC details; the bank says account balances and funds are safe.",
+          "details": "The bank says containment is complete, affected customers have been contacted, and it has run API sweeps and vulnerability assessments. The leaked data reportedly included names, mobile numbers, email and residential addresses, dates of birth, gender, branch and CIF identifiers and loan/lead metadata. The Indian Banks' Association is working on faster incident information-sharing among banks.",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/State_Bank_of_India.svg/3840px-State_Bank_of_India.svg.png",
+          "severity": "High",
+          "summary": "State Bank of India is still evaluating the root cause of the recent breach that exposed personal data of 3,897 customers on the dark web, chairman C. S. Setty said at the bank's post-earnings press conference on November 3.",
+          "title": "SBI still evaluating root cause of data breach, chairman says",
+          "url": "https://www.financialexpress.com/business/banking-finance-sbi-still-evaluating-cause-of-recent-data-breach-setty-4376324/"
+        },
+        {
+          "details": "The claim was flagged by Dark Web Intelligence (@DailyDarkWeb). No sample records, screenshots or file listing have been provided to establish authenticity, and Parle Agro has not confirmed anything. Treat this as an unverified claim, not a confirmed breach.",
           "severity": "Medium",
-          "summary": "SBI chairman C.S. Setty says the bank is stepping up cybersecurity with AI tools, API sweeps and vulnerability assessments after its Oct 21 disclosure that a cyberattack exposed personally identifiable information of 3,897 customers on the dark web. Root-cause analysis is still underway.",
-          "title": "SBI steps up AI defences after dark-web exposure of 3,897 customer records",
-          "url": "https://www.businesstoday.in/technology/news/story/sbis-cyber-wake-up-call-after-data-breach-fight-ai-with-ai-565464-2026-11-03"
+          "summary": "A threat actor allegedly published about 30GB of data attributed to Parle Agro, the Indian beverage company behind Frooti, Appy Fizz and Bailley, on a dark web forum on November 2.",
+          "title": "Threat actor claims 30GB data leak from Parle Agro — unverified",
+          "url": "https://undercodenews.com/parle-agro-hit-by-30gb-dark-web-data-leak-claim-frooti-appy-fizz-and-bailley-brand-under-cybersecurity-scrutiny-video/"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Monday, November 9 — Here's what's worth your attention today.",
+  "subtitle": "Tuesday, November 10 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
