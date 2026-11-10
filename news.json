@@ -6,7 +6,7 @@
         {
           "action": "Upgrade OpenSSH to 10.6p2 on Alpine, OpenWrt, Buildroot and other musl-based hosts, and set passwords or disable password auth on any account that currently has none.",
           "details": "As of November 9, 2026, 20 exploitation attempts were recorded from 13 unique IP addresses across Denmark, Iran, Japan, the Netherlands, Norway, Singapore, Sweden, Switzerland and the U.S. Fixed in OpenSSH 10.6p2.",
-          "image": "https://www.ciksiti.com/f/5c77eb6672644cb931baab76fb35421d.png",
+          "image": "https://www.101howto.com/wp-content/uploads/2026/03/2026-03-28-07-06-00-linux-server-security-hardening.jpg",
           "severity": "High",
           "summary": "Attackers are attempting to exploit CVE-2026-123158 (CVSS 8.1), the OpenSSH flaw dubbed SSHole that lets anyone sign in to password-less accounts on musl-libc systems with PAM disabled, including Alpine Linux's default sshd setup.",
           "title": "SSHole flaw now seeing exploitation attempts",
