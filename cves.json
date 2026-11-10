@@ -1,40 +1,40 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "items": [
     {
       "cvss": 9.9,
-      "id": "CVE-2026-120322",
+      "id": "CVE-2026-17359",
       "severity": "Critical",
-      "summary": "A path traversal flaw in Termix-SSH Termix up to 2.9.2 lets an attacker manipulate the destPath argument of the file-manager transferToHost endpoint to write files outside the intended directory. Published 2 November 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120322"
+      "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 lets a remote authenticated attacker execute arbitrary code, because a user-supplied value can influence code the product generates. Published 7 November 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17359"
     },
     {
-      "cvss": 9.3,
-      "id": "CVE-2026-99999",
+      "cvss": 9.9,
+      "id": "CVE-2026-17354",
       "severity": "Critical",
-      "summary": "A Linux kernel flaw in IPv4 checksum handling for virtio-net lets an untrusted VM guest overwrite two bytes of an already-validated IPv4 header on the host, escaping the guest — dubbed PwnEscape. The bug dates to kernel 2.6.27; fixed kernels and KernelCare livepatches are available.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99999"
+      "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 lets a remote authenticated attacker perform arbitrary file writes via path traversal. Published 7 November 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17354"
     },
     {
       "cvss": 9.1,
-      "id": "CVE-2026-117691",
+      "id": "CVE-2026-120984",
       "severity": "Critical",
-      "summary": "Keycloak's SAML HTTP-Redirect binding processes percent-encoded parameter names (such as %53AMLResponse) while signature verification uses a different form, allowing an attacker to bypass SAML signature checks. Published 5 November 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117691"
+      "summary": "A flaw in Keycloak's client management lets an authenticated attacker with client-management permissions bypass security controls and upload a malicious JavaScript policy, leading to remote code execution. Affects Red Hat Build of Keycloak and Red Hat Single Sign-On 7; published 7 November 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120984"
+    },
+    {
+      "cvss": 9.1,
+      "id": "CVE-2026-101117",
+      "severity": "Critical",
+      "summary": "IBM WebSphere Extreme Scale 8.6.1.0 through 8.6.2.2 lets a remote attacker bypass security restrictions due to an improper Content Security Policy configuration. Published 8 November 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101117"
     },
     {
       "cvss": 9.0,
-      "id": "CVE-2026-121491",
+      "id": "CVE-2026-17403",
       "severity": "Critical",
-      "summary": "The Fiber Admin WordPress plugin before 4.0.1 writes an unvalidated request header into a PHP file it regenerates on an unprotected admin hook, enabling unauthenticated remote code execution when its custom database error page is enabled. Published 7 November 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121491"
-    },
-    {
-      "cvss": 9.0,
-      "id": "CVE-2026-54141",
-      "severity": "Critical",
-      "summary": "OpenHuman before 0.57.13 converts a remote direct message received through a configured Yuanbao channel into a generic channel agent message without proper validation, enabling code injection. Fixed in version 0.57.13; published 5 November 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54141"
+      "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 uses hard-coded credentials, allowing a remote attacker to gain full administrative control. Published 7 November 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17403"
     }
   ]
 }

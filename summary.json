@@ -5,27 +5,27 @@
   "worst_cvss": 9.9,
   "priorities": [
     {
-      "id": "CVE-2026-120322",
+      "id": "CVE-2026-17359",
       "cvss": 9.9,
-      "summary": "A path traversal flaw in Termix-SSH Termix up to 2.9.2 lets an attacker manipulate the destPath argument of the file-manager transferToHost endpoint to write files outside the intended directory. Published 2 November 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120322"
+      "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 lets a remote authenticated attacker execute arbitrary code, because a user-supplied value can influence code the product generates. Published 7 November 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17359"
     },
     {
-      "id": "CVE-2026-99999",
-      "cvss": 9.3,
-      "summary": "A Linux kernel flaw in IPv4 checksum handling for virtio-net lets an untrusted VM guest overwrite two bytes of an already-validated IPv4 header on the host, escaping the guest — dubbed PwnEscape. The bug dates to kernel 2.6.27; fixed kernels and KernelCare livepatches are available.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99999"
+      "id": "CVE-2026-17354",
+      "cvss": 9.9,
+      "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 lets a remote authenticated attacker perform arbitrary file writes via path traversal. Published 7 November 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17354"
     },
     {
-      "id": "CVE-2026-117691",
+      "id": "CVE-2026-120984",
       "cvss": 9.1,
-      "summary": "Keycloak's SAML HTTP-Redirect binding processes percent-encoded parameter names (such as %53AMLResponse) while signature verification uses a different form, allowing an attacker to bypass SAML signature checks. Published 5 November 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117691"
+      "summary": "A flaw in Keycloak's client management lets an authenticated attacker with client-management permissions bypass security controls and upload a malicious JavaScript policy, leading to remote code execution. Affects Red Hat Build of Keycloak and Red Hat Single Sign-On 7; published 7 November 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120984"
     }
   ],
   "model": {
-    "name": "OpenAI GPT-6 Cyber",
-    "summary": "OpenAI's cyber-specialised variant of GPT-6 Astra, launched 5 November for vetted Daybreak Red defenders. It scores 48.5% on ExploitGym, is rated Critical for cybersecurity under OpenAI's Preparedness Framework, and was used to find 81 previously unknown high-severity Firefox flaws and build 948 working Linux kernel exploits in research.",
-    "url": "https://openai.com/index/introducing-gpt-6-cyber/"
+    "name": "Anthropic Claude Fable 5.2",
+    "summary": "Anthropic's most capable model for technical work, launched 9 November. It tops the Artificial Analysis Intelligence Index at 64.6, generates outputs up to 30% faster than Fable 5.1, and costs 20% less at $8/$40 per million tokens; the same underlying model ships as Mythos 5.2 for vetted cybersecurity and life-science users.",
+    "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
   }
 }
