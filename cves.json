@@ -1,40 +1,40 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "items": [
     {
-      "cvss": 9.9,
-      "id": "CVE-2026-17359",
+      "cvss": 10.0,
+      "id": "CVE-2026-120017",
       "severity": "Critical",
-      "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 lets a remote authenticated attacker execute arbitrary code, because a user-supplied value can influence code the product generates. Published 7 November 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17359"
+      "summary": "SAP NetWeaver AS ABAP's SAML2 service provider fails to properly verify authentication assertions, letting an unauthenticated attacker impersonate any user, including privileged accounts. Published in SAP's November 2026 Patch Day; patch with SAP Note 3849308.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120017"
     },
     {
-      "cvss": 9.9,
-      "id": "CVE-2026-17354",
+      "cvss": 10.0,
+      "id": "CVE-2026-76964",
       "severity": "Critical",
-      "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 lets a remote authenticated attacker perform arbitrary file writes via path traversal. Published 7 November 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17354"
+      "summary": "A memory-corruption flaw in SAP NetWeaver AS ABAP's Internet Communication Manager lets an unauthenticated attacker trigger arbitrary code execution with crafted network traffic. One of four CVSS 10.0 flaws in SAP's November 2026 Patch Day; patch with SAP Note 3778530.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76964"
     },
     {
-      "cvss": 9.1,
-      "id": "CVE-2026-120984",
+      "cvss": 10.0,
+      "id": "CVE-2026-89103",
       "severity": "Critical",
-      "summary": "A flaw in Keycloak's client management lets an authenticated attacker with client-management permissions bypass security controls and upload a malicious JavaScript policy, leading to remote code execution. Affects Red Hat Build of Keycloak and Red Hat Single Sign-On 7; published 7 November 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120984"
+      "summary": "SAP Gateway ships with a default access-control list that grants high privileges, so an external attacker is treated as a trusted internal application server. The vulnerable state is the shipped default, making unhardened installations directly exposed; patch with SAP Note 3798345.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89103"
     },
     {
-      "cvss": 9.1,
-      "id": "CVE-2026-101117",
+      "cvss": 10.0,
+      "id": "CVE-2026-89126",
       "severity": "Critical",
-      "summary": "IBM WebSphere Extreme Scale 8.6.1.0 through 8.6.2.2 lets a remote attacker bypass security restrictions due to an improper Content Security Policy configuration. Published 8 November 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101117"
+      "summary": "A heap-based buffer overflow in SAP Web Dispatcher allows unauthenticated remote code execution. One of four CVSS 10.0 flaws in SAP's November 2026 Patch Day; internet-facing Web Dispatcher instances should be patched first.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89126"
     },
     {
-      "cvss": 9.0,
-      "id": "CVE-2026-17403",
+      "cvss": 9.8,
+      "id": "CVE-2026-126170",
       "severity": "Critical",
-      "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 uses hard-coded credentials, allowing a remote attacker to gain full administrative control. Published 7 November 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17403"
+      "summary": "An output-encoding flaw in the FortiManager and FortiAnalyzer JSON RPC API may allow an unauthenticated attacker to execute unauthorised code or commands when the JSON API is enabled. The worst of eight critical Fortinet advisories published November 10; no exploitation reported yet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126170"
     }
   ]
 }

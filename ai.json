@@ -1,35 +1,35 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "items": [
     {
-      "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/b2dab182c77b4ccfd36423470106915b20f676ae-1200x630.jpg",
-      "name": "Anthropic Claude Fable 5.2",
-      "summary": "Anthropic's most capable model for technical work, launched 9 November. It tops the Artificial Analysis Intelligence Index at 64.6, generates outputs up to 30% faster than Fable 5.1, and costs 20% less at $8/$40 per million tokens; the same underlying model ships as Mythos 5.2 for vetted cybersecurity and life-science users.",
+      "image": "https://assets.claude.com/21b3240f9264f8e4c8ab1390e2702cf1401b2367.jpg",
+      "name": "Claude Fable 5.2",
+      "summary": "Anthropic's most capable model to date, released November 9 with a 1M-token context window, output up to 30% faster than Fable 5.1, and pricing 20% lower at $8/$40 per million tokens. It took first place on the Artificial Analysis Intelligence Index, while the same underlying model ships as the restricted Mythos 5.2 for verified cybersecurity and life-sciences organisations.",
       "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
     },
     {
-      "image": "https://madrobot.blog/images/meta-muse-ember-launch-art.jpg",
+      "image": "https://research.meta.ai/articles/muse-glint/hero/blog-header-light-v1.webp",
       "name": "Meta Muse Ember",
-      "summary": "Meta's smallest and most efficient model, launched 9 November for the high-volume work AI agents repeat all day: tool calls, coding subtasks, routing and extraction. At $0.10/$0.50 per million tokens with a 1M-token context, it matches Claude Haiku 5.5 on the Artificial Analysis Intelligence Index at about a third of the cost per task.",
+      "summary": "Meta's smallest and cheapest Muse model, launched November 9 for the repetitive work agents do all day — tool calls, coding subtasks, routing, extraction and long-document parsing. At $0.10 per million input tokens it matches Claude Haiku 5.5's benchmark score at about a third of the cost per task, with a 1M-token context window.",
       "url": "https://research.meta.ai/blog/muse-ember"
     },
     {
       "image": "https://blogs.nvidia.com/wp-content/uploads/2026/11/corl-corp-blog-promo-pack-1920x1080-1-1680x945.png",
       "name": "NVIDIA GR00T 2",
-      "summary": "NVIDIA's open world-action model for robots, unveiled 9 November at CoRL. Trained partly on 100,000 hours of first-person human video, it completed 40 of 50 unseen manipulation tasks with no task-specific demonstrations; Isaac Lab 3.0 shipped alongside it.",
+      "summary": "An open robot foundation model unveiled November 9 at the Conference on Robot Learning, built on NVIDIA Cosmos to learn dexterous manipulation largely by watching human video. NVIDIA reports 95% average success across 50 tasks after five demonstrations each, and is releasing 100,000 hours of human training video openly; model code is due in December.",
       "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/"
     },
     {
-      "image": "https://explainx.ai/images/blog-library/computer-use-cursor-hand.webp",
-      "name": "Tencent Hy4",
-      "summary": "Tencent's 770B-parameter mixture-of-experts flagship, launched 4 November — the first Hy model with vision input and computer use, with a 1M-token context window. It is available via Tencent Cloud TokenHub and OpenRouter, with open weights promised but not yet released.",
-      "url": "https://hy.tencent.com/research/hy4"
+      "image": "https://thinkingmachines.ai/news/inkling-2-small/images/cover-social.png",
+      "name": "Thinking Machines Inkling 2 Small",
+      "summary": "Thinking Machines Lab's second-generation model, announced November 5: a 594-billion-parameter mixture-of-experts model with 17 billion active parameters per token, multimodal input and a 1M-token context. It is available now through the company's Tinker platform, with full weights promised under Apache 2.0 next week once external safety testing finishes.",
+      "url": "https://thinkingmachines.ai/news/inkling-2-small/"
     },
     {
-      "image": "https://cognition.com/images/swe-2-flash/cover.jpg",
-      "name": "Cognition SWE-2 Flash",
-      "summary": "Cognition's fast coding model, launched 4 November and post-trained from Thinking Machines' Inkling-Small (276B total, 12B active parameters). It runs about 3x faster than SWE-2 at a fifth of the price and is free in Devin Desktop and CLI through 30 November, though its weights are withheld over cyber-misuse risk.",
-      "url": "https://cognition.com/blog/swe-2-flash"
+      "image": "https://www.digitalapplied.com/blog/gpt-image-2-6-flare-sunburst-api-guide/article-image",
+      "name": "OpenAI GPT-Image-2.6",
+      "summary": "OpenAI's Images 2.6, released November 4 in ChatGPT, Codex and the API, generates images 50% faster and adds animated GIF output, SVG export and markup-guided edits. Developers get two API models — Flare for fast iteration (as little as six seconds per image) and Sunburst for detailed, consistent edits — at unchanged 2.5-generation pricing.",
+      "url": "https://openai.com/index/introducing-images-2-6/"
     }
   ]
 }

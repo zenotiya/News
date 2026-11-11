@@ -2,30 +2,30 @@
   "date": "2026-11-11",
   "news_count": 11,
   "cve_count": 5,
-  "worst_cvss": 9.9,
+  "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-17359",
-      "cvss": 9.9,
-      "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 lets a remote authenticated attacker execute arbitrary code, because a user-supplied value can influence code the product generates. Published 7 November 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17359"
+      "id": "CVE-2026-120017",
+      "cvss": 10.0,
+      "summary": "SAP NetWeaver AS ABAP's SAML2 service provider fails to properly verify authentication assertions, letting an unauthenticated attacker impersonate any user, including privileged accounts. Published in SAP's November 2026 Patch Day; patch with SAP Note 3849308.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120017"
     },
     {
-      "id": "CVE-2026-17354",
-      "cvss": 9.9,
-      "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 lets a remote authenticated attacker perform arbitrary file writes via path traversal. Published 7 November 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17354"
+      "id": "CVE-2026-76964",
+      "cvss": 10.0,
+      "summary": "A memory-corruption flaw in SAP NetWeaver AS ABAP's Internet Communication Manager lets an unauthenticated attacker trigger arbitrary code execution with crafted network traffic. One of four CVSS 10.0 flaws in SAP's November 2026 Patch Day; patch with SAP Note 3778530.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76964"
     },
     {
-      "id": "CVE-2026-120984",
-      "cvss": 9.1,
-      "summary": "A flaw in Keycloak's client management lets an authenticated attacker with client-management permissions bypass security controls and upload a malicious JavaScript policy, leading to remote code execution. Affects Red Hat Build of Keycloak and Red Hat Single Sign-On 7; published 7 November 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120984"
+      "id": "CVE-2026-89103",
+      "cvss": 10.0,
+      "summary": "SAP Gateway ships with a default access-control list that grants high privileges, so an external attacker is treated as a trusted internal application server. The vulnerable state is the shipped default, making unhardened installations directly exposed; patch with SAP Note 3798345.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89103"
     }
   ],
   "model": {
-    "name": "Anthropic Claude Fable 5.2",
-    "summary": "Anthropic's most capable model for technical work, launched 9 November. It tops the Artificial Analysis Intelligence Index at 64.6, generates outputs up to 30% faster than Fable 5.1, and costs 20% less at $8/$40 per million tokens; the same underlying model ships as Mythos 5.2 for vetted cybersecurity and life-science users.",
+    "name": "Claude Fable 5.2",
+    "summary": "Anthropic's most capable model to date, released November 9 with a 1M-token context window, output up to 30% faster than Fable 5.1, and pricing 20% lower at $8/$40 per million tokens. It took first place on the Artificial Analysis Intelligence Index, while the same underlying model ships as the restricted Mythos 5.2 for verified cybersecurity and life-sciences organisations.",
     "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
   }
 }
