@@ -2,30 +2,30 @@
   "date": "2026-11-12",
   "news_count": 10,
   "cve_count": 5,
-  "worst_cvss": 10.0,
+  "worst_cvss": 9.9,
   "priorities": [
     {
-      "id": "CVE-2026-120017",
-      "cvss": 10.0,
-      "summary": "SAP NetWeaver AS ABAP's SAML2 service provider fails to properly verify authentication assertions, letting an unauthenticated attacker impersonate any user, including privileged accounts. Published in SAP's November 2026 Patch Day; patch with SAP Note 3849308.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120017"
+      "id": "CVE-2026-13312",
+      "cvss": 9.9,
+      "summary": "An improper validation of the specified type of input in Axis Camera Station Pro and Axis Camera Station 5 could allow an attacker to compromise the system. Axis rates it critical; affected versions are Camera Station Pro below 6.17 and Camera Station 5 below 5.59 SR2.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13312"
     },
     {
-      "id": "CVE-2026-76964",
-      "cvss": 10.0,
-      "summary": "A memory-corruption flaw in SAP NetWeaver AS ABAP's Internet Communication Manager lets an unauthenticated attacker trigger arbitrary code execution with crafted network traffic. One of four CVSS 10.0 flaws in SAP's November 2026 Patch Day; patch with SAP Note 3778530.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76964"
+      "id": "CVE-2026-109795",
+      "cvss": 9.9,
+      "summary": "SAP NetWeaver lacks necessary authorization checks and sufficient input validation in certain remote-enabled functionality. A low-privileged attacker could send specially crafted input through a remote interface to inject and execute code.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109795"
     },
     {
-      "id": "CVE-2026-89103",
-      "cvss": 10.0,
-      "summary": "SAP Gateway ships with a default access-control list that grants high privileges, so an external attacker is treated as a trusted internal application server. The vulnerable state is the shipped default, making unhardened installations directly exposed; patch with SAP Note 3798345.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89103"
+      "id": "CVE-2026-109803",
+      "cvss": 9.9,
+      "summary": "SAP NetWeaver Knowledge Management (XML Forms) does not sufficiently restrict the selection of XSL transformations it processes. Under certain conditions, an authenticated user with access to the affected functionality could inject and execute code.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109803"
     }
   ],
   "model": {
-    "name": "Claude Fable 5.2",
-    "summary": "Anthropic's most capable model to date, released November 9 with a 1M-token context window, output up to 30% faster than Fable 5.1, and pricing 20% lower at $8/$40 per million tokens. It took first place on the Artificial Analysis Intelligence Index, while the same underlying model ships as the restricted Mythos 5.2 for verified cybersecurity and life-sciences organisations.",
-    "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+    "name": "Google DeepMind AlphaGenome 2",
+    "summary": "Google DeepMind's next-generation DNA model predicts how genetic variants change gene activity in specific human cell types and states, rather than tissue averages. Trained on more than 107 million cell profiles, it identifies nearly twice as many causal variants as the original AlphaGenome, and is available now for non-commercial research via the AlphaGenome API.",
+    "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/"
   }
 }
