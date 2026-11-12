@@ -1,42 +1,43 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "sections": [
     {
       "items": [
         {
-          "action": "Apply the November SAP kernel, Web Dispatcher and Gateway notes immediately; prioritise internet-facing NetWeaver and Web Dispatcher systems.",
-          "details": "The ICM and Web Dispatcher flaws, dubbed ICM2SHELL by researchers, allow unauthenticated remote code execution. No in-the-wild exploitation has been reported and none of the four is in CISA's KEV catalog.",
-          "image": "https://def-viii.delphiforum.gr/hubfs/SAP_19_04_2023.png",
+          "action": "Patch the Nov 12 deadline batch before end of day; Barracuda ESG and Chrome fixes follow by Nov 13.",
+          "details": "The Nov 12 deadline batch includes GPUStack CVE-2026-102895 (9.8, unauthenticated admin access), FreeSwitch CVE-2026-116779 (9.8, code injection), IBM Aspera Faspex CVE-2026-123218 (9.8, privilege escalation) and OpenSSH 'SSHole'. The Nov 10 additions include Chrome CVE-2026-125350 (8.8, exploited) and Barracuda CVE-2026-116606 (9.3) and CVE-2026-111560 (8.6), with a Nov 13 deadline.",
+          "image": "https://cyberdefensa.mx/wp-content/uploads/2026/07/cisa-joomla-900x425.jpg",
           "severity": "Critical",
-          "summary": "SAP's November 2026 Security Patch Day, released Nov 10, fixes 35 new security notes including four maximum-severity (CVSS 10.0) flaws: memory corruption in NetWeaver ICM (CVE-2026-76964) and Web Dispatcher (CVE-2026-89126), broken access control in SAP Gateway (CVE-2026-89103), and missing authentication in the SAML2 Service Provider (CVE-2026-120017).",
-          "title": "SAP November Patch Day fixes four CVSS 10.0 flaws, including pre-auth RCE",
-          "url": "https://cybersecuritynews.com/sap-security-patch-day-november/"
+          "summary": "CISA added exploited flaws in Barracuda Email Security Gateway, Outlook, Chrome and Cisco BroadWorks to its Known Exploited Vulnerabilities catalog on Nov 10. Four earlier additions — GPUStack, FreeSwitch, IBM Aspera Faspex and OpenSSH — carry a federal patch deadline of today, Nov 12.",
+          "title": "CISA KEV deadline hits today: exploited Barracuda, Outlook, Chrome and Cisco flaws added",
+          "url": "https://cvetodo.com/threat-report/sg"
         },
         {
-          "action": "Patch Outlook first despite its Moderate 6.5 rating, then identity and server infrastructure (AD, LDAP, SharePoint, Exchange).",
-          "details": "Exploitation requires the user to open a malicious file; the Preview Pane is not an attack vector. The release also includes Critical RCEs in SharePoint (CVE-2026-120002, CVSS 9.9), SQL Server and Windows Search. Windows 11 23H2 Enterprise/Education reached end of updates the same day.",
-          "image": "https://snsproglobal.com/wp-content/uploads/2026/01/ms.jpg",
+          "action": "Update PHP to the patched versions and redeploy affected applications immediately.",
+          "details": "The flaws were disclosed by Wiz Research with Google Cloud after AI-assisted research. Cloudflare said it saw thousands of exploitation attempts in the 10 hours before public announcement and has deployed mitigations for all customers; companies and government agencies in several countries temporarily restricted some online services as a precaution while patching.",
+          "image": "https://static.toiimg.com/thumb/msid-135128859,imgsize-90764,width-400,height-225,resizemode-4/illustration-shows-_cyber-security_-text-and-php-code.jpg",
           "severity": "Critical",
-          "summary": "Microsoft's November 2026 Patch Tuesday fixes 1,093 vulnerabilities, 63 of them Critical. The one actively exploited flaw is CVE-2026-124194, an Outlook spoofing bug that can leak a user's NTLMv2 authentication hash; it affects Microsoft 365 Apps, Office LTSC 2021/2024 and Outlook 2016.",
-          "title": "Microsoft Patch Tuesday: 1,093 flaws fixed, one Outlook zero-day already exploited",
-          "url": "https://cybersecuritynews.com/microsoft-november-2026-patch-tuesday/"
+          "summary": "CERT-In issued a critical-severity warning over two PHP vulnerabilities with confirmed large-scale exploitation in the wild. The flaws could let unauthenticated attackers execute code remotely and disclose memory on affected systems.",
+          "title": "Critical PHP flaws under large-scale exploitation; CERT-In urges urgent patching",
+          "url": "https://edailygraph.com/php-security-flaws-trigger-global-scramble-cert-in-flags-vulnerabilities/"
         },
         {
-          "action": "Update ESG to 9.4.0.030 or later now and restrict the admin interface to trusted networks; check for unexplained configuration restores.",
-          "details": "Public proof-of-concept code has circulated since Nov 3. Barracuda says a small number of organizations are affected; patches BNSF-40425 (firmware 9.4.017+) and BNSF-40430 (older firmware) are available.",
-          "image": "https://www.digitalsima.gr/wp-content/uploads/2023/10/Email-Security-Gateway_pos.png",
+          "action": "Upgrade Apache HTTP Server to 2.4.71 and Node.js to 26.13.1, 24.22.3 or 22.23.5.",
+          "details": "The Apache flaw was found by Anthropic's OSS Scanner and Google Cloud analysts; no exploitation has been reported yet. Node's fixes also cover HTTP/2 use-after-free flaws (CVE-2026-123866, CVE-2026-123874) and an SNI-based mTLS client-certificate bypass (CVE-2026-123872).",
+          "image": "https://www1.zonewebmaster.eu/_media/1920px-apache_http_server_logo__2016_.svg.png",
           "severity": "Critical",
-          "summary": "Barracuda confirmed on Nov 9 that attackers are exploiting a chain of two Email Security Gateway flaws — CVE-2026-116606 (authorization bypass, CVSS 9.3) and CVE-2026-111560 (command injection, CVSS 8.6) — to gain root access without logging in. Both were added to CISA's KEV catalog on Nov 10.",
-          "title": "Barracuda confirms active exploitation of ESG flaws chaining to unauthenticated root",
-          "url": "https://cybersecuritynews.com/barracuda-email-gateway-flaws/"
+          "summary": "Apache HTTP Server 2.4.71, released Nov 11, fixes a critical race condition in mod_http2 (CVE-2026-119618) that can lead to remote code execution on versions 2.4.55 through 2.4.70. The same day, Node.js 26.13.1, 24.22.3 and 22.23.5 patched 16 CVEs, including a cross-connection heap leak that can expose TLS private keys (CVE-2026-123864).",
+          "title": "Apache httpd 2.4.71 fixes critical mod_http2 RCE; Node.js patches 16 CVEs",
+          "url": "https://securityonline.info/apache-http-server-cve-2026-119618-rce-fixed/"
         },
         {
-          "action": "Upgrade OpenSSH to 10.6p2 (or apply the Alpine patched packages) on any musl-based host or container image; audit for password-less accounts.",
-          "details": "A password longer than 256 bytes can match a password-less account's stored asterisk. Exploitation attempts began within nine hours of disclosure on Nov 5; honeypot root access was reported. Fixed in OpenSSH 10.6p2; Alpine backported the fix to all branches from 3.16 to edge. glibc/PAM-based systems (Ubuntu, Debian, RHEL) are not affected.",
-          "severity": "High",
-          "summary": "CVE-2026-123158, nicknamed SSHole, is an OpenSSH password authentication bypass (CVSS 8.1) affecting Linux systems built on musl libc without PAM — notably Alpine Linux's default sshd and Alpine-based containers. CISA added it to the Known Exploited Vulnerabilities catalog this week, with a federal patch deadline of Nov 12.",
-          "title": "'SSHole' OpenSSH auth bypass added to CISA KEV with a Nov 12 federal deadline",
-          "url": "https://socradar.io/blog/sshole-openssh-password-bypass-alpine/"
+          "action": "Check Fortinet PSIRT FG-IR-26-219 for fixed releases and patch; restrict management interfaces to trusted networks.",
+          "details": "Affected versions include FortiAnalyzer and FortiManager 7.6.0 through 7.6.7 and 8.0.0 through 8.0.2, plus the Cloud editions. The CVE record listed no fixed version at publication; Fortinet's advisory is FG-IR-26-219. No exploitation has been reported yet.",
+          "image": "https://www.weefer.co.id/wp-content/uploads/FortiManager-Figure.png",
+          "severity": "Critical",
+          "summary": "CVE-2026-126170, published Nov 11, is an improper output-encoding flaw in FortiAnalyzer and FortiManager (including Cloud and BigData editions) that may allow an unauthenticated attacker to execute unauthorised code or commands via a specially crafted HTTP request.",
+          "title": "FortiAnalyzer and FortiManager unauthenticated RCE (CVE-2026-126170, CVSS 9.8)",
+          "url": "https://stackflag.com/vulnerabilities/cve-2026-126170-fortimanager"
         }
       ],
       "title": "Act on Today"
@@ -44,31 +45,31 @@
     {
       "items": [
         {
-          "action": "Treat as an unverified actor claim for now; watch for Vanderbilt's official disclosure and any leaked-data listings before acting on the 1M+ figure.",
-          "details": "Campus computers reportedly played an audio threat from the group. BYOD, a new operation that launched in 2026, also claimed an attack on Texas Health and Human Services the same day; last month it hit the University of New Mexico Health Sciences Center.",
-          "image": "https://cdn.vanderbilt.edu/vu-wpfsx/wp-content/uploads/sites/23/2021/09/20927751478_8f3dfbd90d_c.jpg",
+          "action": "Logistics customers should watch for phishing using driver and shipment data; Maersk says operations and bookings continue as usual.",
+          "details": "WhiteArmor claims the data came from the OCF/LF Logistics platform and includes nearly 30,000 driver records, plaintext passwords and 27,842 mobile device logs with phone numbers, emails and IMEI numbers. Maersk says its findings so far strongly suggest no sensitive data was disclosed and no other systems were impacted, and it has not linked the incident to WhiteArmor by name. The gang's claims are unverified.",
+          "image": "https://www.carbontax.org/wp-content/uploads/2016/01/Maersk-Ship-768x451.png",
           "severity": "Critical",
-          "summary": "The BYOD ransomware group claims it encrypted Vanderbilt University's databases and stole over 1 million Social Security numbers plus names, emails, phone numbers and student and employee records. Vanderbilt confirmed an active cybersecurity incident on Nov 10 but has not confirmed the group's claims or the extent of data theft.",
-          "title": "BYOD ransomware claims Vanderbilt University attack, says it stole 1M+ SSNs",
-          "url": "https://www.theregister.com/cyber-crime/2026/11/10/ransomware-threat-blares-from-vanderbilt-university-computers-during-cyberattack/5308687"
+          "summary": "Maersk confirmed on Nov 11 that an attacker accessed and extracted data from a local legacy system inherited through a previous acquisition. The WhiteArmor ransomware gang claims about 100GB of data and is demanding $5 million in bitcoin within 30 days.",
+          "title": "Maersk confirms data breach as WhiteArmor ransomware gang demands $5 million",
+          "url": "https://www.neowin.net/news/shipping-company-maersk-suffers-data-breach-ransomware-gang-demands-5-million/"
         },
         {
-          "action": "Affected families should watch for identity-theft and phishing attempts using school records; districts should review Interlock's leak-site claims against their own incident data.",
-          "details": "The district serves 22,000–24,000 students across 25 elementary, 7 middle and 5 comprehensive high schools. Interlock cited the district's 'lax approach to security' and unwillingness to negotiate.",
-          "image": "https://cyberflux.pl/wp-content/uploads/2026/03/wpis-o-ransomware-480x320.webp",
+          "action": "Treat as an unverified actor claim for now; watch for phishing built on identity-graph and hashed-email data.",
+          "details": "The claimed haul includes 1,006 per-client audience delivery files (220.5GB) spanning purchase, OTT, demographics and predictive segments, plus device refinement and compliance opt-out feeds dated October 2026. The claim has not been independently verified.",
+          "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,width=1200,onerror=redirect/uploads/asset/file/c0163b8d-a931-47e8-b1e7-8730090511ce/Ransomware_in_SA.jpg?t=1779099778",
           "severity": "High",
-          "summary": "The Interlock ransomware group claimed Richmond Public Schools (rvaschools.net) on Nov 10, saying it is releasing confidential data including disciplinary, medical, speech therapy and mental health records, special-needs education records and personal data such as names, birth dates, addresses and Social Security numbers.",
-          "title": "Interlock ransomware claims Richmond Public Schools, posts student and staff data",
-          "url": "https://www.dexpose.io/interlock-breaches-richmond-public-schools/"
+          "summary": "The N0n ransomware group claims it exfiltrated 39,055 files totalling over 2.2 terabytes from LiveRamp, a US data-collaboration and identity-resolution company, including identity graph feeds and 19.2 million hashed email identities. The data is listed as exposed and not paid.",
+          "title": "N0n ransomware claims 2.2TB theft from LiveRamp, including 19.2M hashed email identities",
+          "url": "https://www.dexpose.io/n0n-ransomware-group-strikes-liveramp/"
         },
         {
-          "action": "DomusVi clients should monitor bank accounts and watch for phishing using medical-record details; healthcare orgs should treat infostealer credentials as a live initial-access path.",
-          "details": "Threat-intel analysis links the initial access to infostealer activity, with 413 compromised user accounts and 18 third-party employee credentials identified, plus 1,238 exposed passwords associated with the victim's domain.",
-          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUabfxk05grX42qBYfSiLYwqAew7Bi03a2RtGybxJgaKX_D0M2ebrCG0ZQv1_8OqFZYR3B5KwrRgXlFxGEq85wnIg-XYiIPb9EciuVnwH-GoZANP5lJs2iLeKDs7ZzrEuXjI0-8mZMFhEY/s640/%25D8%25A3%25D8%25AF%25D8%25A7%25D9%2588%25D9%2586+%25D8%25AC%25D8%25AF%25D9%258A%25D8%25AF%25D8%25A9+%25D9%2585%25D9%2586+BitDefinder+%25D9%2584%25D9%2581%25D9%2583+%25D8%25AA%25D8%25B4%25D9%2581%25D9%258A%25D8%25B1+%25D8%25A7%25D9%2584%25D9%2581%25D8%25AF%25D9%258A%25D8%25A9+%25D8%25A7%25D9%2584%25D8%25AE%25D8%25B7%25D9%258A%25D8%25B1%25D8%25A9+Avaddon.jpg",
+          "action": "DraftKings customers should watch for phishing using old contact details; no current credential exposure is claimed.",
+          "details": "The exposed set also includes campaign demographic analytics from November 2019 covering age, gender, language, handset, carrier and app profiles across 11,421 devices. The data is historical, not current account credentials.",
+          "image": "https://d1izd2ae4ynet5.cloudfront.net/wp-content/uploads/20190905152423/draftkings-sportsbook-logo.png",
           "severity": "High",
-          "summary": "The Black X ransomware group listed Spanish healthcare provider DomusVi on its leak site on Nov 10, claiming client and contact data including medical record numbers, names, phone numbers, email and physical addresses, and bank account numbers. The attack is estimated to have occurred Nov 9.",
-          "title": "Black X ransomware claims data theft from Spanish care provider DomusVi",
-          "url": "https://qpulse.quasarcybertech.com/news/8155/black-x-ransomware-group-claims-data-exfiltration-from-domusvi"
+          "summary": "The N0n ransomware group listed DraftKings on Nov 11, exposing historical consumer data: 6.3 million mobile device advertising identifiers from 2020 and 7.4 million hashed consumer email addresses from 2020, marked 'NOT PAID — EXPOSED'.",
+          "title": "N0n lists DraftKings, exposing 6.3M device IDs and 7.4M hashed emails from 2020",
+          "url": "https://qpulse.quasarcybertech.com/news/8244/draftkings-targeted-by-n0n-ransomware-group-with-exposure-of-historical-consumer-data"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -76,45 +77,36 @@
     {
       "items": [
         {
-          "action": "Government fund-transfer portals should enforce multi-person approval and anomaly alerts on large transfers; panchayat unions should reconcile disbursements immediately.",
-          "details": "Preliminary probe found the diverted funds went to unauthorised accounts. Email logs showed suspicious access attempts originating from Bangladesh, the United States and Greece. No arrests had been reported at the time of writing.",
-          "image": "https://media.assettype.com/andhimazhai%2F2026-05-28%2Fhubvpogf%2Fassembly.avif?w=1200&auto=format%2Ccompress&fit=max",
+          "action": "Verify no reliance on eMudhra intermediate certificates remains in your trust stores; treat certificates chaining to them as untrusted.",
+          "details": "Sixteen intermediate key pairs were correctly generated on an HSM on April 30, 2025, but a wrap-unwrap script read the private keys back incorrectly, weakening them far below the intended 384-bit strength. eMudhra revoked eight additional RSA key pairs on Nov 7, has exited the global digital-certificate business, and a KPMG independent review is due by Dec 4, 2026.",
+          "image": "https://www.ssldragon.com/wp-content/uploads/2023/01/certificate-authority-960x680.png",
           "severity": "Critical",
-          "summary": "Cybercriminals siphoned ₹22.1 crore from the Tamil Nadu rural development department after breaching its online portal used to transfer funds to rural local bodies. Chennai Central Crime Branch has registered a case; ₹14 crore was transferred from Mandapam Panchayat Union in Ramanathapuram district.",
-          "title": "Cybercriminals siphon ₹22.1 crore from Tamil Nadu rural development department",
-          "url": "https://timesofindia.indiatimes.com/city/chennai/cyber-criminals-syphon-off-22crore-from-tn-rural-development-dept/articleshow/135718425.cms"
+          "summary": "eMudhra's full post-incident report, published Nov 10, blames a bug in its own Python key-handling script that truncated intermediate CA private keys — the smallest to the single byte '4' — leaving eight intermediate certificates (six TLS, two code-signing) weak enough for attackers to forge.",
+          "title": "eMudhra: coding error shrank CA private keys to as little as '4'",
+          "url": "https://indianexpress.com/article/technology/tech-news-technology/emudhra-security-incident-report-coding-error-key-findings-10959325/"
         },
         {
-          "action": "Yatra customers should watch for phishing using travel-booking details; treat the LockBit5 claim as unverified until Yatra or investigators confirm a link.",
-          "details": "This is a ransomware-group claim, not independent proof of compromise or customer-data exposure, and the available evidence does not establish that the LockBit5 listing and Yatra's disclosed incident are the same event.",
-          "image": "https://res.cloudinary.com/dhaae7rgr/image/upload/v1774885024/yatra_blogs/rcyz3ygr1wzcovg1ttgk.png",
+          "action": "Update Google Chrome to the latest version on all devices now.",
+          "details": "The advisory covers Chrome versions older than 157.0.8103.50 and Chrome Extended Stable versions older than 156.0.8078.96. The flaws could let attackers take control of a device.",
+          "image": "https://coywolf.com/wp-content/uploads/2019/10/og-chrome-1-600x315.png",
           "severity": "High",
-          "summary": "Leak-site monitoring associated yatra.com with the LockBit5 ransomware group on Nov 8. Separately, Yatra Online Limited filed a stock-exchange intimation dated Nov 2 confirming a cybersecurity incident, CERT-In notification and an ongoing assessment, stating no material impact to core operations at the time.",
-          "title": "Yatra.com listed by LockBit5; company had already disclosed a cyber incident",
-          "url": "https://www.linkedin.com/pulse/yatracom-listed-lockbit5-claim-evidence-customer-risk-8lbse"
+          "summary": "CERT-In advisory CIVN-2026-0544, published Nov 10, rates multiple Google Chrome vulnerabilities critical and urges users in India to update immediately. One flaw, CVE-2026-125350, is already being actively exploited in the wild.",
+          "title": "CERT-In flags critical Chrome flaws, urges Indian users to update now",
+          "url": "https://yourstory.com/2026/11/cert-in-flags-security-flaws-urges-chrome-users-in-india-to-update-browsers"
         },
         {
-          "action": "Manufacturing firms should assume double extortion and check for infostealer exposure and exposed remote-access services.",
-          "details": "Orova, first seen in July 2026, has listed 66 victims and typically follows a double-extortion model — exfiltrating data before encrypting. The specific data stolen from Herminio has not been independently verified.",
-          "image": "https://blog-aludecor.s3.ap-south-1.amazonaws.com/wp-content/uploads/2020/05/Make-in-India-bg-696x365.jpg",
-          "severity": "High",
-          "summary": "Herminio India Precision Technology, an Indian precision-components manufacturer serving automotive, refrigeration and air-conditioning segments, was listed by the Orova ransomware group on its leak site on Nov 10.",
-          "title": "Orova ransomware lists Indian manufacturer Herminio India Precision Technology",
-          "url": "https://cyberthreatintelligence.net/ransomware-victim/herminio-india-precision-technology-orova-2026"
-        },
-        {
-          "action": "BFSI security teams should verify last month's remediation is complete, staff monitoring over weekends and holidays, and hunt for repeat intrusions in previously hit environments.",
-          "details": "Intrusions are reportedly timed to coincide with holidays, weekends and other low-monitoring windows to delay detection and response.",
-          "image": "https://the420.in/wp-content/uploads/2026/01/cert-in.jpg",
-          "severity": "High",
-          "summary": "CERT-In has disclosed that an AI-assisted threat actor it tracks as 'Crafty Falcon' is targeting organizations in India's Banking, Financial Services and Insurance (BFSI) sectors, calling it a significant escalation. The actor is re-targeting entities hit last month after incomplete remediation.",
-          "title": "CERT-In flags AI-driven 'Crafty Falcon' attacks targeting Indian banks and insurers",
-          "url": "https://www.swapupdate.in/weekly-recap-sshole-exploited-apt-root-rce-robot-takeovers-15k-hacked-sites-and-more/"
+          "action": "Check for bank accounts opened in your name that you did not authorise; report unknown accounts to the bank and the national cybercrime portal.",
+          "details": "The accused, Naveen Hussain, allegedly operated an HDFC Bank Customer Service Point centre in Jalukbari, Guwahati. Investigators found several lakh rupees deposited in accounts linked to him and suspect he may be part of a larger network involved in fraudulent banking transactions.",
+          "image": "https://im.whatshot.in/img/2021/Oct/hdfc-is1-cropped1-1633691040.jpg",
+          "severity": "Medium",
+          "summary": "Assam CID's Cyber Cell arrested a Guwahati man who allegedly posed as an HDFC Bank employee and opened multiple bank accounts in people's names without their knowledge or consent, suspected of using them to receive cyber-fraud proceeds.",
+          "title": "Guwahati man arrested for opening fake bank accounts in HDFC employee's name",
+          "url": "https://www.indiatodayne.in/assam/story/guwahati-man-held-for-allegedly-opening-fake-bank-accounts-in-hdfc-employees-name-1474049-2026-11-11"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Wednesday, November 11 — Here's what's worth your attention today.",
+  "subtitle": "Thursday, November 12 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
