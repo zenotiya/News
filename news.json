@@ -1,43 +1,31 @@
 {
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "sections": [
     {
       "items": [
         {
-          "action": "Patch the Nov 12 deadline batch before end of day; Barracuda ESG and Chrome fixes follow by Nov 13.",
-          "details": "The Nov 12 deadline batch includes GPUStack CVE-2026-102895 (9.8, unauthenticated admin access), FreeSwitch CVE-2026-116779 (9.8, code injection), IBM Aspera Faspex CVE-2026-123218 (9.8, privilege escalation) and OpenSSH 'SSHole'. The Nov 10 additions include Chrome CVE-2026-125350 (8.8, exploited) and Barracuda CVE-2026-116606 (9.3) and CVE-2026-111560 (8.6), with a Nov 13 deadline.",
-          "image": "https://cyberdefensa.mx/wp-content/uploads/2026/07/cisa-joomla-900x425.jpg",
+          "action": "Patch Outlook first — the exploited zero-day needs only a crafted message in the Preview Pane — then Exchange, SharePoint and domain controllers.",
+          "details": "Also prioritize Exchange Server RCE CVE-2026-118207 (8.8), SharePoint elevation of privilege CVE-2026-120002 (9.9), Outlook RCE CVE-2026-110043 (8.8), Windows Search RCE CVE-2026-116928 (9.8) and Windows LDAP RCE CVE-2026-119958. Twenty of the fixes are Outlook RCEs.",
           "severity": "Critical",
-          "summary": "CISA added exploited flaws in Barracuda Email Security Gateway, Outlook, Chrome and Cisco BroadWorks to its Known Exploited Vulnerabilities catalog on Nov 10. Four earlier additions — GPUStack, FreeSwitch, IBM Aspera Faspex and OpenSSH — carry a federal patch deadline of today, Nov 12.",
-          "title": "CISA KEV deadline hits today: exploited Barracuda, Outlook, Chrome and Cisco flaws added",
-          "url": "https://cvetodo.com/threat-report/sg"
+          "summary": "Microsoft's November Patch Tuesday fixes 1,093 vulnerabilities, 63 rated Critical, including one actively exploited Outlook zero-day (CVE-2026-124194, CVSS 6.5) that leaks NTLMv2 hashes via a crafted email.",
+          "title": "Microsoft November Patch Tuesday: exploited Outlook zero-day steals NTLM hashes",
+          "url": "https://www.darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves"
         },
         {
-          "action": "Update PHP to the patched versions and redeploy affected applications immediately.",
-          "details": "The flaws were disclosed by Wiz Research with Google Cloud after AI-assisted research. Cloudflare said it saw thousands of exploitation attempts in the 10 hours before public announcement and has deployed mitigations for all customers; companies and government agencies in several countries temporarily restricted some online services as a precaution while patching.",
-          "image": "https://static.toiimg.com/thumb/msid-135128859,imgsize-90764,width-400,height-225,resizemode-4/illustration-shows-_cyber-security_-text-and-php-code.jpg",
+          "action": "Apply SAP Notes 3778530, 3778556, 3798345 and 3849308 immediately; treat internet-facing NetWeaver as exposed until patched.",
+          "details": "Patches released November 10, 2026 (SAP Notes 3778530, 3778556, 3798345, 3849308). No active exploitation confirmed as of Nov 12, but a proof-of-concept for the SAML2 bypass (CVE-2026-120017) has been posted publicly and Onapsis delivered a working ICM2SHELL exploit to SAP under coordinated disclosure.",
           "severity": "Critical",
-          "summary": "CERT-In issued a critical-severity warning over two PHP vulnerabilities with confirmed large-scale exploitation in the wild. The flaws could let unauthenticated attackers execute code remotely and disclose memory on affected systems.",
-          "title": "Critical PHP flaws under large-scale exploitation; CERT-In urges urgent patching",
-          "url": "https://edailygraph.com/php-security-flaws-trigger-global-scramble-cert-in-flags-vulnerabilities/"
+          "summary": "SAP's November Patch Day shipped four maximum-severity NetWeaver flaws — ICM2SHELL (CVE-2026-76964, CVE-2026-89126), PROXYGATE (CVE-2026-89103) and a SAML2 authentication bypass (CVE-2026-120017) — all unauthenticated, all allowing OS command execution.",
+          "title": "Four CVSS 10.0 SAP NetWeaver flaws need no login — patch now",
+          "url": "https://datawater.com/sap-icm2shell-proxygate-cvss-10-november-2026/"
         },
         {
-          "action": "Upgrade Apache HTTP Server to 2.4.71 and Node.js to 26.13.1, 24.22.3 or 22.23.5.",
-          "details": "The Apache flaw was found by Anthropic's OSS Scanner and Google Cloud analysts; no exploitation has been reported yet. Node's fixes also cover HTTP/2 use-after-free flaws (CVE-2026-123866, CVE-2026-123874) and an SNI-based mTLS client-certificate bypass (CVE-2026-123872).",
-          "image": "https://www1.zonewebmaster.eu/_media/1920px-apache_http_server_logo__2016_.svg.png",
+          "action": "Update every DSM branch to its fixed build; no workaround exists, so patching is the only fix.",
+          "details": "Also fixed: an rsync authentication bypass (CVE-2026-85101, 8.6), three 8.8 flaws in SSOAuth, the Sharing API and the Auth API, an OTP bypass and a VPN API command injection. Fixed builds: DSM 7.4.1-90080-1, 7.3.2-86009-5, 7.2.2-72806-10 and 7.2.1-69057-13. Synology says no workarounds exist — patching is the only remediation. No exploitation confirmed as of Nov 13.",
           "severity": "Critical",
-          "summary": "Apache HTTP Server 2.4.71, released Nov 11, fixes a critical race condition in mod_http2 (CVE-2026-119618) that can lead to remote code execution on versions 2.4.55 through 2.4.70. The same day, Node.js 26.13.1, 24.22.3 and 22.23.5 patched 16 CVEs, including a cross-connection heap leak that can expose TLS private keys (CVE-2026-123864).",
-          "title": "Apache httpd 2.4.71 fixes critical mod_http2 RCE; Node.js patches 16 CVEs",
-          "url": "https://securityonline.info/apache-http-server-cve-2026-119618-rce-fixed/"
-        },
-        {
-          "action": "Check Fortinet PSIRT FG-IR-26-219 for fixed releases and patch; restrict management interfaces to trusted networks.",
-          "details": "Affected versions include FortiAnalyzer and FortiManager 7.6.0 through 7.6.7 and 8.0.0 through 8.0.2, plus the Cloud editions. The CVE record listed no fixed version at publication; Fortinet's advisory is FG-IR-26-219. No exploitation has been reported yet.",
-          "image": "https://www.weefer.co.id/wp-content/uploads/FortiManager-Figure.png",
-          "severity": "Critical",
-          "summary": "CVE-2026-126170, published Nov 11, is an improper output-encoding flaw in FortiAnalyzer and FortiManager (including Cloud and BigData editions) that may allow an unauthenticated attacker to execute unauthorised code or commands via a specially crafted HTTP request.",
-          "title": "FortiAnalyzer and FortiManager unauthenticated RCE (CVE-2026-126170, CVSS 9.8)",
-          "url": "https://stackflag.com/vulnerabilities/cve-2026-126170-fortimanager"
+          "summary": "Synology's Nov 10 advisories (SA-26:19, SA-26:18) fix 27 DiskStation Manager vulnerabilities, led by CVE-2026-76954 — a pre-authentication SQL injection in the Auth API (CVSS 9.8) that lets unauthenticated attackers read or write arbitrary files.",
+          "title": "Synology DSM patches 27 flaws, including pre-auth SQL injection (CVSS 9.8)",
+          "url": "https://www.threataft.com/articles/synology-dsm-mass-disclosure-27-cves-november-2026"
         }
       ],
       "title": "Act on Today"
@@ -45,31 +33,29 @@
     {
       "items": [
         {
-          "action": "Logistics customers should watch for phishing using driver and shipment data; Maersk says operations and bookings continue as usual.",
-          "details": "WhiteArmor claims the data came from the OCF/LF Logistics platform and includes nearly 30,000 driver records, plaintext passwords and 27,842 mobile device logs with phone numbers, emails and IMEI numbers. Maersk says its findings so far strongly suggest no sensitive data was disclosed and no other systems were impacted, and it has not linked the incident to WhiteArmor by name. The gang's claims are unverified.",
-          "image": "https://www.carbontax.org/wp-content/uploads/2016/01/Maersk-Ship-768x451.png",
-          "severity": "Critical",
-          "summary": "Maersk confirmed on Nov 11 that an attacker accessed and extracted data from a local legacy system inherited through a previous acquisition. The WhiteArmor ransomware gang claims about 100GB of data and is demanding $5 million in bitcoin within 30 days.",
-          "title": "Maersk confirms data breach as WhiteArmor ransomware gang demands $5 million",
-          "url": "https://www.neowin.net/news/shipping-company-maersk-suffers-data-breach-ransomware-gang-demands-5-million/"
-        },
-        {
-          "action": "Treat as an unverified actor claim for now; watch for phishing built on identity-graph and hashed-email data.",
-          "details": "The claimed haul includes 1,006 per-client audience delivery files (220.5GB) spanning purchase, OTT, demographics and predictive segments, plus device refinement and compliance opt-out feeds dated October 2026. The claim has not been independently verified.",
+          "action": "Treat as unverified leak-site claims for now; affected-sector peers should watch for extortion and phishing using the named organisations.",
+          "details": "Incransom runs a double-extortion model — data is exfiltrated before encryption. The specific data stolen from each victim has not been independently verified, and Tanner Clinic has not published a notice about the incident.",
           "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,width=1200,onerror=redirect/uploads/asset/file/c0163b8d-a931-47e8-b1e7-8730090511ce/Ransomware_in_SA.jpg?t=1779099778",
           "severity": "High",
-          "summary": "The N0n ransomware group claims it exfiltrated 39,055 files totalling over 2.2 terabytes from LiveRamp, a US data-collaboration and identity-resolution company, including identity graph feeds and 19.2 million hashed email identities. The data is listed as exposed and not paid.",
-          "title": "N0n ransomware claims 2.2TB theft from LiveRamp, including 19.2M hashed email identities",
-          "url": "https://www.dexpose.io/n0n-ransomware-group-strikes-liveramp/"
+          "summary": "The Incransom ransomware group listed three victims on Nov 12: Computacenter subsidiaries Pivot Technology Solutions and Sigma Solutions (US technology), Tanner Clinic (Utah healthcare provider, attack estimated Oct 28, patient data threatened) and the HELP Foundation (Ohio disability-services provider, attack estimated Nov 9).",
+          "title": "Incransom lists Computacenter units, Tanner Clinic and HELP Foundation in one day",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/computacenter-pivot-technology-solutions-sigma-solutions-incransom-2026"
         },
         {
-          "action": "DraftKings customers should watch for phishing using old contact details; no current credential exposure is claimed.",
-          "details": "The exposed set also includes campaign demographic analytics from November 2019 covering age, gender, language, handset, carrier and app profiles across 11,421 devices. The data is historical, not current account credentials.",
-          "image": "https://d1izd2ae4ynet5.cloudfront.net/wp-content/uploads/20190905152423/draftkings-sportsbook-logo.png",
+          "action": "Treat as unverified leak-site claims; watch for follow-on extortion and phishing in the affected sectors.",
+          "details": "Thegentlemen is a prolific ransomware-as-a-service operation active since mid-2025, with over 1,000 victims listed. The specific data stolen from these three victims has not been independently verified.",
           "severity": "High",
-          "summary": "The N0n ransomware group listed DraftKings on Nov 11, exposing historical consumer data: 6.3 million mobile device advertising identifiers from 2020 and 7.4 million hashed consumer email addresses from 2020, marked 'NOT PAID — EXPOSED'.",
-          "title": "N0n lists DraftKings, exposing 6.3M device IDs and 7.4M hashed emails from 2020",
-          "url": "https://qpulse.quasarcybertech.com/news/8244/draftkings-targeted-by-n0n-ransomware-group-with-exposure-of-historical-consumer-data"
+          "summary": "The Thegentlemen ransomware group listed three victims on its leak site on Nov 12: Sielke (German paper and home-goods company), Clancy Systems International (Colorado parking-technology firm, attack estimated Nov 11) and United Pharmacy (Saudi Arabia, breach Nov 11).",
+          "title": "Thegentlemen lists Sielke, Clancy Systems and United Pharmacy on Nov 12",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/sielke-thegentlemen-2026"
+        },
+        {
+          "action": "Treat as an unverified claim; energy-sector peers should watch for related extortion activity.",
+          "details": "The claim has not been independently verified and Franc-Oil has not publicly commented. Leak-site listings are claims by the attackers, not confirmations.",
+          "severity": "High",
+          "summary": "The Vexy ransomware group listed Franc-Oil, a Nigerian energy company, on its leak site on Nov 12. The claim was discovered the same evening; no details of the data allegedly taken have been published.",
+          "title": "Vexy ransomware claims Franc-Oil (Nigeria) in Nov 12 leak-site listing",
+          "url": "https://www.hookphish.com/blog/ransomware-group-vexy-ransomware-hits-franc-oil/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -77,36 +63,33 @@
     {
       "items": [
         {
-          "action": "Verify no reliance on eMudhra intermediate certificates remains in your trust stores; treat certificates chaining to them as untrusted.",
-          "details": "Sixteen intermediate key pairs were correctly generated on an HSM on April 30, 2025, but a wrap-unwrap script read the private keys back incorrectly, weakening them far below the intended 384-bit strength. eMudhra revoked eight additional RSA key pairs on Nov 7, has exited the global digital-certificate business, and a KPMG independent review is due by Dec 4, 2026.",
-          "image": "https://www.ssldragon.com/wp-content/uploads/2023/01/certificate-authority-960x680.png",
+          "action": "Financial firms should isolate exposed staging environments, rotate potentially exposed secrets, lock down payment APIs and monitor cloud activity; report fraud via helpline 1930.",
+          "details": "The campaign uses publicly available AI offensive tools (ARTEX, PentAGI, Cairn, CyberStrikeAI) and has re-attacked victims after incomplete remediation, including on weekends and holidays. The Telangana Cyber Security Bureau convened NBFCs, fintechs and banks on Nov 12 to push API security, VAPTs and real-time fraud detection. CERT-In has not named the operators or a total loss figure.",
           "severity": "Critical",
-          "summary": "eMudhra's full post-incident report, published Nov 10, blames a bug in its own Python key-handling script that truncated intermediate CA private keys — the smallest to the single byte '4' — leaving eight intermediate certificates (six TLS, two code-signing) weak enough for attackers to forge.",
-          "title": "eMudhra: coding error shrank CA private keys to as little as '4'",
-          "url": "https://indianexpress.com/article/technology/tech-news-technology/emudhra-security-incident-report-coding-error-key-findings-10959325/"
+          "summary": "CERT-In's advisory CIAD-2026-0058 (Nov 4) warns that the AI-assisted threat actor 'CRAFTY FALCON' is actively targeting Indian banks, NBFCs, fintechs and payment firms, exploiting weak APIs and exposed staging environments to move funds — often after a Re 1 test transfer.",
+          "title": "CERT-In warns 'CRAFTY FALCON' AI attacks are actively hitting Indian financial firms",
+          "url": "https://undercodenews.com/crafty-falcon-cert-in-warns-indian-financial-institutions-of-active-cyberattacks-exploiting-weak-apis-and-exposed-staging-environments-video/"
         },
         {
-          "action": "Update Google Chrome to the latest version on all devices now.",
-          "details": "The advisory covers Chrome versions older than 157.0.8103.50 and Chrome Extended Stable versions older than 156.0.8078.96. The flaws could let attackers take control of a device.",
-          "image": "https://coywolf.com/wp-content/uploads/2019/10/og-chrome-1-600x315.png",
+          "action": "Treat as an unverified leak-site claim; Indian manufacturing peers should check exposure to Incransom tactics.",
+          "details": "Incransom typically follows a double-extortion model, exfiltrating data before encrypting systems. The specific data stolen from Nandan Terry Pvt has not been independently verified.",
           "severity": "High",
-          "summary": "CERT-In advisory CIVN-2026-0544, published Nov 10, rates multiple Google Chrome vulnerabilities critical and urges users in India to update immediately. One flaw, CVE-2026-125350, is already being actively exploited in the wild.",
-          "title": "CERT-In flags critical Chrome flaws, urges Indian users to update now",
-          "url": "https://yourstory.com/2026/11/cert-in-flags-security-flaws-urges-chrome-users-in-india-to-update-browsers"
+          "summary": "Nandan Terry Pvt, an India-based company, was listed as a victim by the Incransom ransomware group on Nov 12, 2026. India ranks 8th worldwide for ransomware disclosures in the tracking database, with 507 victims recorded.",
+          "title": "Incransom lists Indian firm Nandan Terry Pvt on Nov 12",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/nandan-terry-pvt-incransom-2026"
         },
         {
-          "action": "Check for bank accounts opened in your name that you did not authorise; report unknown accounts to the bank and the national cybercrime portal.",
-          "details": "The accused, Naveen Hussain, allegedly operated an HDFC Bank Customer Service Point centre in Jalukbari, Guwahati. Investigators found several lakh rupees deposited in accounts linked to him and suspect he may be part of a larger network involved in fraudulent banking transactions.",
-          "image": "https://im.whatshot.in/img/2021/Oct/hdfc-is1-cropped1-1633691040.jpg",
-          "severity": "Medium",
-          "summary": "Assam CID's Cyber Cell arrested a Guwahati man who allegedly posed as an HDFC Bank employee and opened multiple bank accounts in people's names without their knowledge or consent, suspected of using them to receive cyber-fraud proceeds.",
-          "title": "Guwahati man arrested for opening fake bank accounts in HDFC employee's name",
-          "url": "https://www.indiatodayne.in/assam/story/guwahati-man-held-for-allegedly-opening-fake-bank-accounts-in-hdfc-employees-name-1474049-2026-11-11"
+          "action": "Yatra customers should watch for phishing using travel-booking details; treat the claim as unverified until the company confirms.",
+          "details": "The claim has not been independently verified and no details of the data allegedly taken have been published. Yatra is one of India's largest online travel agents.",
+          "severity": "High",
+          "summary": "The LockBit5 ransomware group listed yatra.com, the Gurugram-based Indian online travel company, on its leak site; the claim was discovered on Nov 8, with an estimated breach date of Nov 8, 2026.",
+          "title": "LockBit5 claims breach of Indian travel firm Yatra.com",
+          "url": "https://www.hookphish.com/blog/ransomware-group-lockbit5-hits-yatra-com/"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Thursday, November 12 — Here's what's worth your attention today.",
+  "subtitle": "Friday, November 13 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
