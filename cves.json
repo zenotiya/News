@@ -1,40 +1,40 @@
 {
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "items": [
     {
-      "cvss": 9.9,
-      "id": "CVE-2026-13312",
-      "severity": "Critical",
-      "summary": "An improper validation of the specified type of input in Axis Camera Station Pro and Axis Camera Station 5 could allow an attacker to compromise the system. Axis rates it critical; affected versions are Camera Station Pro below 6.17 and Camera Station 5 below 5.59 SR2.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13312"
-    },
-    {
-      "cvss": 9.9,
-      "id": "CVE-2026-109795",
-      "severity": "Critical",
-      "summary": "SAP NetWeaver lacks necessary authorization checks and sufficient input validation in certain remote-enabled functionality. A low-privileged attacker could send specially crafted input through a remote interface to inject and execute code.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109795"
-    },
-    {
-      "cvss": 9.9,
-      "id": "CVE-2026-109803",
-      "severity": "Critical",
-      "summary": "SAP NetWeaver Knowledge Management (XML Forms) does not sufficiently restrict the selection of XSL transformations it processes. Under certain conditions, an authenticated user with access to the affected functionality could inject and execute code.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109803"
-    },
-    {
-      "cvss": 9.9,
-      "id": "CVE-2026-109467",
-      "severity": "Critical",
-      "summary": "Improper authentication in Azure DevOps Server allows an authorized attacker to execute code over a network. Microsoft published the flaw in its November 2026 Patch Tuesday release.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109467"
-    },
-    {
       "cvss": 9.8,
-      "id": "CVE-2026-126170",
+      "id": "CVE-2026-126262",
       "severity": "Critical",
-      "summary": "An improper encoding or escaping of output flaw in Fortinet FortiManager and FortiAnalyzer (including Cloud and BigData editions) may allow an unauthenticated attacker to execute unauthorized code or commands via a specially crafted HTTP request when the JSON API is enabled.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126170"
+      "summary": "SQL injection in FortiAnalyzer and FortiManager lets an unauthenticated attacker who can reach the OFTP port execute code or commands via crafted OFTP packets. Affects FortiAnalyzer 7.2-8.0.1 and FortiManager 7.2-8.0.0; Fortinet published the fix on November 10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126262"
+    },
+    {
+      "cvss": 9.6,
+      "id": "CVE-2026-108186",
+      "severity": "Critical",
+      "summary": "Improper input validation in Zoom Workplace for Windows allows an unauthenticated user to escalate privileges via network access. Affects Zoom Workplace 7.1 before 7.1.8; Zoom rates it CVSS 9.6 and fixed it in its November security bulletin ZSB-26023.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108186"
+    },
+    {
+      "cvss": 9.5,
+      "id": "CVE-2026-118383",
+      "severity": "Critical",
+      "summary": "A use-after-free in the replication component of MongoDB Server can be triggered by unauthenticated requests when a newly elected primary completes catch-up, crashing the server or, under certain conditions, leading to arbitrary code execution. Affects MongoDB Server 6.0 through 9.0.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118383"
+    },
+    {
+      "cvss": 9.3,
+      "id": "CVE-2026-116606",
+      "severity": "Critical",
+      "summary": "A pre-authentication authorization bypass in Barracuda Email Security Gateway (before 9.4.0.030) lets an unauthenticated remote attacker invoke a configuration-import function and restore a crafted backup, taking over the appliance's global configuration. Barracuda confirms exploitation in the wild; CISA KEV remediation is due today, November 13.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116606"
+    },
+    {
+      "cvss": 9.3,
+      "id": "CVE-2026-126253",
+      "severity": "Critical",
+      "summary": "An authentication bypass in the OSPF daemon of FortiOS and FortiSASE lets an unauthenticated attacker on an adjacent network broadcast crafted link-state advertisements. Affects FortiOS 7.0.1-8.0.1; Fortinet published the fix on November 10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126253"
     }
   ]
 }

@@ -1,31 +1,31 @@
 {
   "date": "2026-11-13",
-  "news_count": 9,
+  "news_count": 10,
   "cve_count": 5,
-  "worst_cvss": 9.9,
+  "worst_cvss": 9.8,
   "priorities": [
     {
-      "id": "CVE-2026-13312",
-      "cvss": 9.9,
-      "summary": "An improper validation of the specified type of input in Axis Camera Station Pro and Axis Camera Station 5 could allow an attacker to compromise the system. Axis rates it critical; affected versions are Camera Station Pro below 6.17 and Camera Station 5 below 5.59 SR2.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13312"
+      "id": "CVE-2026-126262",
+      "cvss": 9.8,
+      "summary": "SQL injection in FortiAnalyzer and FortiManager lets an unauthenticated attacker who can reach the OFTP port execute code or commands via crafted OFTP packets. Affects FortiAnalyzer 7.2-8.0.1 and FortiManager 7.2-8.0.0; Fortinet published the fix on November 10.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126262"
     },
     {
-      "id": "CVE-2026-109795",
-      "cvss": 9.9,
-      "summary": "SAP NetWeaver lacks necessary authorization checks and sufficient input validation in certain remote-enabled functionality. A low-privileged attacker could send specially crafted input through a remote interface to inject and execute code.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109795"
+      "id": "CVE-2026-108186",
+      "cvss": 9.6,
+      "summary": "Improper input validation in Zoom Workplace for Windows allows an unauthenticated user to escalate privileges via network access. Affects Zoom Workplace 7.1 before 7.1.8; Zoom rates it CVSS 9.6 and fixed it in its November security bulletin ZSB-26023.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108186"
     },
     {
-      "id": "CVE-2026-109803",
-      "cvss": 9.9,
-      "summary": "SAP NetWeaver Knowledge Management (XML Forms) does not sufficiently restrict the selection of XSL transformations it processes. Under certain conditions, an authenticated user with access to the affected functionality could inject and execute code.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109803"
+      "id": "CVE-2026-118383",
+      "cvss": 9.5,
+      "summary": "A use-after-free in the replication component of MongoDB Server can be triggered by unauthenticated requests when a newly elected primary completes catch-up, crashing the server or, under certain conditions, leading to arbitrary code execution. Affects MongoDB Server 6.0 through 9.0.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118383"
     }
   ],
   "model": {
-    "name": "Google DeepMind AlphaGenome 2",
-    "summary": "Google DeepMind's next-generation DNA model predicts how genetic variants change gene activity in specific human cell types and states, rather than tissue averages. Trained on more than 107 million cell profiles, it identifies nearly twice as many causal variants as the original AlphaGenome, and is available now for non-commercial research via the AlphaGenome API.",
-    "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/"
+    "name": "Google Gemini 4 Hydrogen",
+    "summary": "Google's fast execution model for agentic workflows, launched November 12 across AI Studio, the Gemini API, the Gemini app and Search. It scores 51 on the Artificial Analysis Intelligence Index at its default thinking level and costs $1.50/$7.50 per million input/output tokens across a 1M-token context window.",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
   }
 }
