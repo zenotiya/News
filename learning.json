@@ -4,7 +4,7 @@
   "items": [
     {
       "date": "2026-11-14",
-      "topic": "DFIR (forensics & incident response)",
+      "topic": "DFIR",
       "title": "CI/CD pipeline compromise forensics — the wfx-loot case",
       "what": "when a GitHub Actions runner is the crime scene, evidence is ephemeral by design (the attacker reverts the malicious workflow within ~1 minute and deletes the run + logs, and hosted runners are destroyed after the job). The surviving evidence lives OUTSIDE the runner: gaps in workflow run numbers, the GitHub audit log (pushes from wfx-docs branches, PRs titled \"docs: dependency audit notes\"), cloud audit trails (OIDC tokens minted in Actions and exchanged for AWS/Azure/GCP sessions — look for new access keys, widened trust policies, Vault/K8s token replays), and package-registry publish events (Packagist digitalelvis/neuronai-studio 3.14.3, Go module onuragtas/docker-env v1.0.278/280 were poisoned via auto-publish triggers). Rotation alone is NOT remediation — wfx-loot planted long-lived AWS keys and opened trust policies that survive a secret rotation, so the IR checklist is: (1) audit-log + run-number gap hunt, (2) cloud-side persistence hunt (access keys, trust policies, federated creds created 10–12 Nov), (3) then rotate everything the runner could see. Consultant takeaway: add \"CI/CD run-number continuity + OIDC-to-cloud trail\" to every client IR plan — if the runner logs are gone, the cloud audit log is the crime scene."
     },
