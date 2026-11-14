@@ -5,7 +5,8 @@
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini__decisions__blog-header_2784x1566.width-1300.png",
       "name": "Gemini Decision 1",
       "summary": "Google's new decision model scores up to 1,000 closed-set questions (yes/no, multiple-choice, rubric scoring) in a single forward pass instead of generating text, returning probabilities in 150-250 ms at $0.10 per million input tokens. Built for the judgement calls inside agents: tool selection, model routing, policy checks and context grading.",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "plain": "Google's new Gemini Decision 1 is a faster model for AI agent judgement calls — worth a look if clients are adopting agents."
     },
     {
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon_key_art_16-9_lockup.width-1300.jpg",

@@ -6,21 +6,30 @@
       "id": "CVE-2026-109803",
       "severity": "Critical",
       "summary": "SAP NetWeaver Knowledge Management (XML Forms) does not sufficiently restrict the selection of XSL transformations, letting an authenticated user trigger an unauthorized transformation that can lead to arbitrary code execution in the application context.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109803"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109803",
+      "product": "SAP NetWeaver Knowledge Management (XML Forms)",
+      "versions": "KMC-CM 7.50",
+      "plain": "An authenticated user can run code via crafted document transformations. Patch to the fixed release now."
     },
     {
       "cvss": 9.9,
       "id": "CVE-2026-109795",
       "severity": "Critical",
       "summary": "SAP NetWeaver misses authorization checks and input validation in remote-enabled functionality, allowing a low-privileged attacker to inject and execute arbitrary code through a remote interface, with high impact on confidentiality, integrity and availability.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109795"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109795",
+      "product": "SAP S4CRM",
+      "versions": "S4CRM 204–206 · S4CEXT 107–109 · BBPCRM 713–714",
+      "plain": "A low-privileged attacker can inject and run code remotely. Update to the fixed release now."
     },
     {
       "cvss": 9.8,
       "id": "CVE-2026-126261",
       "severity": "Critical",
       "summary": "An improper authorization flaw in Fortinet FortiManager lets an unauthenticated attacker who can reach the FGFM port execute code or commands via crafted FGFM packets, before the registration password is verified. Fortinet filed the 9.8 base score with NVD.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126261"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126261",
+      "product": "Fortinet FortiManager",
+      "versions": "8.0.0 · 7.6.0–7.6.7 · 7.4.0–7.4.5 · 7.2.0–7.2.8",
+      "plain": "An unauthenticated attacker who can reach the FGFM port can run code. Patch to the fixed release now."
     },
     {
       "cvss": 9.1,

@@ -8,24 +8,34 @@
       "id": "CVE-2026-109803",
       "cvss": 9.9,
       "summary": "SAP NetWeaver Knowledge Management (XML Forms) does not sufficiently restrict the selection of XSL transformations, letting an authenticated user trigger an unauthorized transformation that can lead to arbitrary code execution in the application context.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109803"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109803",
+      "plain": "An authenticated user can run code via crafted document transformations. Patch to the fixed release now.",
+      "product": "SAP NetWeaver Knowledge Management (XML Forms)",
+      "versions": "KMC-CM 7.50"
     },
     {
       "id": "CVE-2026-109795",
       "cvss": 9.9,
       "summary": "SAP NetWeaver misses authorization checks and input validation in remote-enabled functionality, allowing a low-privileged attacker to inject and execute arbitrary code through a remote interface, with high impact on confidentiality, integrity and availability.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109795"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109795",
+      "plain": "A low-privileged attacker can inject and run code remotely. Update to the fixed release now.",
+      "product": "SAP S4CRM",
+      "versions": "S4CRM 204–206 · S4CEXT 107–109 · BBPCRM 713–714"
     },
     {
       "id": "CVE-2026-126261",
       "cvss": 9.8,
       "summary": "An improper authorization flaw in Fortinet FortiManager lets an unauthenticated attacker who can reach the FGFM port execute code or commands via crafted FGFM packets, before the registration password is verified. Fortinet filed the 9.8 base score with NVD.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126261"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126261",
+      "plain": "An unauthenticated attacker who can reach the FGFM port can run code. Patch to the fixed release now.",
+      "product": "Fortinet FortiManager",
+      "versions": "8.0.0 · 7.6.0–7.6.7 · 7.4.0–7.4.5 · 7.2.0–7.2.8"
     }
   ],
   "model": {
     "name": "Gemini Decision 1",
     "summary": "Google's new decision model scores up to 1,000 closed-set questions (yes/no, multiple-choice, rubric scoring) in a single forward pass instead of generating text, returning probabilities in 150-250 ms at $0.10 per million input tokens. Built for the judgement calls inside agents: tool selection, model routing, policy checks and context grading.",
-    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+    "plain": "Google's new Gemini Decision 1 is a faster model for AI agent judgement calls — worth a look if clients are adopting agents."
   }
 }
