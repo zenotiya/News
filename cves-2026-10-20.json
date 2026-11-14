@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-20",
+  "items": [
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-109437",
+      "severity": "Critical",
+      "summary": "Cognition before 0.13.0 defaults its agent sandbox backend to local execution and ships no authentication on its REST/SSE API, letting unauthenticated attackers run arbitrary shell commands as the server process.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109437"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-111998",
+      "severity": "Critical",
+      "summary": "Vanus 0.8.0 through 0.9.0 ships a hardcoded admin token, letting unauthenticated remote attackers gain cluster-admin access over the gateway gRPC proxy and manage namespaces, users, and events.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111998"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-111862",
+      "severity": "Critical",
+      "summary": "Rank Math SEO PRO suffered a supply-chain compromise: a subset of version 3.0.123 packages downloaded or updated between Oct 15 20:02 UTC and Oct 16 07:12 UTC contained malware — reinstall clean packages now.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111862"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-102764",
+      "severity": "Critical",
+      "summary": "An authentication bypass in BeyondTrust Remote Support lets unauthenticated remote attackers perform file operations on the appliance; CISA added it to the KEV catalog on Oct 16 amid confirmed active exploitation.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764"
+    },
+    {
+      "cvss": 9.3,
+      "id": "CVE-2026-103091",
+      "severity": "Critical",
+      "summary": "Google's OSS Agent Mesh (SAM) 0.1.0-alpha.1 through alpha.8 lets a remote attacker self-enroll into the mesh and invoke arbitrary tools across connected MCP backends due to missing authorization and insecure defaults.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103091"
+    }
+  ]
+}

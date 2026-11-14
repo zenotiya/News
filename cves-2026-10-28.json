@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-28",
+  "items": [
+    {
+      "cvss": 10.0,
+      "id": "CVE-2026-105781",
+      "severity": "Critical",
+      "summary": "Adobe Campaign Classic is affected by a SQL injection vulnerability that could result in arbitrary code execution in the context of the current user; an attacker could execute arbitrary SQL commands, potentially gaining elevated access or control over the victim's account or session.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105781"
+    },
+    {
+      "cvss": 10.0,
+      "id": "CVE-2026-116508",
+      "severity": "Critical",
+      "summary": "A stack-based buffer overflow in the TOTOLINK A950RG (4.1.2cu.5268_B20221104) Device-Information CGI, via manipulation of the CONTENT_LENGTH argument to infostat.cgi, can be exploited remotely; the exploit has been released to the public and may be used for attacks.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116508"
+    },
+    {
+      "cvss": 9.9,
+      "id": "CVE-2026-105489",
+      "severity": "Critical",
+      "summary": "Adobe Campaign Classic is affected by a SQL injection vulnerability that could result in arbitrary code execution in the context of the current user; a low-privileged attacker could exploit it with no user interaction required, and the scope is changed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105489"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-117532",
+      "severity": "Critical",
+      "summary": "REDAXO core from 5.3.0 before 5.21.4 contains an authentication bypass in the structure/history plugin that allows unauthenticated attackers to forge temporary login tokens, forcing the session-tied secret into a predictable state to gain backend access as accounts like admin and code execution outside live mode.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117532"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-112346",
+      "severity": "Critical",
+      "summary": "OpenHands Software Agent SDK before 1.52.0 contains an unauthenticated remote code execution vulnerability: the DockerWorkspace and Apptainer workspace launchers bind the sandbox agent server to all network interfaces (0.0.0.0) with an empty session API keys list, disabling authentication by default for anyone who can reach the published container port.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112346"
+    }
+  ]
+}

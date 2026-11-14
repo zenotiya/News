@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-15",
+  "items": [
+    {
+      "id": "CVE-2026-76519",
+      "summary": "Zero-day in the Advanced Malware Protection (AMP) feature of Cisco Secure Email Gateway: improper handling of email attachments with File Reputation enabled lets an unauthenticated remote attacker write arbitrary files and execute commands with root privileges. Actively exploited; CISA added it to the KEV catalog on October 14 with a 3-day deadline.",
+      "cvss": 9.8,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519"
+    },
+    {
+      "id": "CVE-2026-76482",
+      "summary": "Multiple CWE-347 cryptographic signature-verification flaws in Cisco License On-Prem (formerly Smart Software Manager On-Prem), found during an internal security review that also used frontier AI models. Affects all releases; the only remediation is the October 7 hardening release.",
+      "cvss": 10.0,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76482"
+    },
+    {
+      "id": "CVE-2026-85948",
+      "summary": "XQuery injection in a deprecated Management API package path in Progress MarkLogic Server (11.x before 11.3.7, 12.x before 12.1.0) lets a remote attacker with manage-user privileges obtain persistent administrative control. One of 31 flaws in Progress's October 14 critical bulletin.",
+      "cvss": 9.9,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85948"
+    },
+    {
+      "id": "CVE-2026-39919",
+      "summary": "Heap-based buffer overflow in Ghostscript's JPEG 2000 output adapter: a crafted PDF with mismatched component subsampling corrupts memory and enables remote code execution. Affects all versions before 10.08.0.",
+      "cvss": 9.3,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39919"
+    },
+    {
+      "id": "CVE-2026-107779",
+      "summary": "Missing authentication on Dromara Skyeye's bundled xxl-job-admin JobInfoController endpoints lets unauthenticated attackers POST shell, Python, or PowerShell jobs and execute commands on the executor host. Public proof-of-concept exists; no fixed release confirmed.",
+      "cvss": 9.3,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107779"
+    }
+  ]
+}

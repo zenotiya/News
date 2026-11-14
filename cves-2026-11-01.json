@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-01",
+  "items": [
+    {
+      "cvss": 10.0,
+      "id": "CVE-2026-84295",
+      "severity": "Critical",
+      "summary": "Improper authentication in Progress WS_FTP Server versions before 2024.0.6 and 2025.0.3 on Windows allows an unauthenticated remote attacker to access sensitive information, including administrative credentials. Update to WS_FTP Server 2024.0.6 or 2025.0.3.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84295"
+    },
+    {
+      "cvss": 10.0,
+      "id": "CVE-2026-120189",
+      "severity": "Critical",
+      "summary": "A stack-based buffer overflow in the TFTP upload filename handler of D-Link DIR-505 firmware 1.10B02 can be triggered remotely, and a public exploit is available. The affected device is an end-of-life consumer router; replace or isolate affected units, as no vendor fix is indicated in the CVE record.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120189"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-118636",
+      "severity": "Critical",
+      "summary": "JavaNativeMessageDecoder in the inactive Apache MINA 3.0 codec module calls ObjectInputStream.readObject() on frame bytes with no class filter, allowing gadget-chain remote code execution when an application puts it in front of an untrusted peer. The 3.0 branch will not be fixed; use the latest Apache MINA 2.2.x branch instead.",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-118636"
+    },
+    {
+      "cvss": 9.6,
+      "id": "CVE-2026-62863",
+      "severity": "Critical",
+      "summary": "MoLing, a computer-use and browser-use MCP server, does not authenticate its /sse and /message endpoints in SSE mode before version 0.5.0, and a malicious web page can steal the session ID cross-origin and send unauthorised MCP tool calls that can read or write files or execute commands. Update MoLing to 0.5.0.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62863"
+    },
+    {
+      "cvss": 9.1,
+      "id": "CVE-2026-103882",
+      "severity": "Critical",
+      "summary": "The Acadlix LMS WordPress plugin (all versions up to and including 1.1.9) allows arbitrary file deletion through insufficient path validation, effectively unauthenticated via a nonce exposed on every frontend page, which can lead to remote code execution when a file such as wp-config.php is deleted. Update beyond 1.1.9.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103882"
+    }
+  ]
+}

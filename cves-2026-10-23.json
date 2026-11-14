@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-23",
+  "items": [
+    {
+      "cvss": 10.0,
+      "id": "CVE-2026-110264",
+      "severity": "Critical",
+      "summary": "Integer overflow in GitLab's Onigmo regex compiler (all versions since 7.0) lets an unauthenticated remote user execute arbitrary code on the GitLab server via a specially crafted regular expression. GitLab shipped emergency patches Oct 21, 2026 (18.11.13 / 19.0.10 / 19.1.9 / 19.2.9 / 19.3.6 / 19.4.3 / 19.5.1).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110264"
+    },
+    {
+      "cvss": 9.3,
+      "id": "CVE-2026-114575",
+      "severity": "Critical",
+      "summary": "Command injection in the UploadCustomModule function of TOTOLINK A950RG firmware 4.1.2cu.5268_B20221104 via the FileMd5 argument; remotely exploitable with no authentication, and a public exploit has been published.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114575"
+    },
+    {
+      "cvss": 9.2,
+      "id": "CVE-2026-109618",
+      "severity": "Critical",
+      "summary": "PHP's use of longjmp() for out-of-memory errors can leave request memory uninitialized before an allocation; subsequent request cleanup may read it, and multiple OOM strategies can reliably trigger remote code execution ('PHP2Shell'). Affects PHP 8.2–8.5; Cloudflare reported early in-the-wild attack attempts.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618"
+    },
+    {
+      "cvss": 9.0,
+      "id": "CVE-2026-20043",
+      "severity": "Critical",
+      "summary": "Grouped out-of-bounds write vulnerabilities found in Cisco's internal Snort 3 security review; most let an unauthenticated remote attacker crash or restart the Snort 3 detection engine. Also affects Secure Firewall Threat Defense, Cisco Cyber Vision, and UTD SNORT IPS Engine.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20043"
+    },
+    {
+      "cvss": 9.0,
+      "id": "CVE-2026-114661",
+      "severity": "Critical",
+      "summary": "Missing authorization in OpenRemote's GatewayServiceResource (1.2.0 through <1.31.0) lets any authenticated non-admin user start, stop, and query gateway tunnels, opening persistent bidirectional TCP circuits into an edge gateway's network.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114661"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-29",
+  "items": [
+    {
+      "cvss": 10.0,
+      "id": "CVE-2026-65145",
+      "severity": "Critical",
+      "summary": "NVIDIA NeMo Agent Toolkit contains a missing-authentication flaw that lets a remote attacker access the toolkit without logging in, potentially leading to code execution, privilege escalation, data tampering, denial of service and information disclosure. Fixed in NeMo Agent Toolkit 1.9.0.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65145"
+    },
+    {
+      "cvss": 9.9,
+      "id": "CVE-2026-104351",
+      "severity": "Critical",
+      "summary": "Adobe Campaign Classic is affected by a code-injection vulnerability that could result in arbitrary code execution in the context of the current user; a low-privileged attacker could exploit it with no user interaction required. Fixed in Campaign Classic 7.4.4 build 9403 (APSB26-162).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104351"
+    },
+    {
+      "cvss": 9.9,
+      "id": "CVE-2026-104353",
+      "severity": "Critical",
+      "summary": "Adobe Campaign Classic is affected by an OS command-injection vulnerability that could result in arbitrary code execution in the context of the current user; a low-privileged attacker could exploit it with no user interaction required. Fixed in Campaign Classic 7.4.4 build 9403 (APSB26-162).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104353"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-86400",
+      "severity": "Critical",
+      "summary": "Dell PowerProtect Data Domain contains an improper-authentication vulnerability that lets an unauthenticated attacker with remote access exploit it to run arbitrary commands with root privileges. Upgrade to a fixed DD OS release (DSA-2026-416) at the earliest opportunity.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86400"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-103406",
+      "severity": "Critical",
+      "summary": "An OS command-injection vulnerability in the AutomatedProvisioner in Juniper Networks Session Smart Conductor allows a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID. Apply Juniper's fix (JSA112183) and restrict remote access where possible.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103406"
+    }
+  ]
+}

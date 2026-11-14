@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-12",
+  "items": [
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-76465",
+      "severity": "Critical",
+      "summary": "Cisco Nexus 3000 and 9000 Series switches: unauthenticated remote code execution with root privileges (or DoS) via a crafted MPLS echo request against the MPLS OAM feature; Cisco reported no exploitation at disclosure.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76465"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-93930",
+      "severity": "Critical",
+      "summary": "ThemeREX Group \"Tantra\" WordPress theme (through 2.9.0): insecure deserialization of untrusted data (CWE-502) allowing object injection; published Oct 10, 2026 via CNA advisory.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93930"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-93944",
+      "severity": "Critical",
+      "summary": "ThemeREX Group \"Camelia\" WordPress theme (through 1.2.15): insecure deserialization of untrusted data (CWE-502) allowing object injection; published Oct 10, 2026 via CNA advisory.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93944"
+    },
+    {
+      "cvss": 9.5,
+      "id": "CVE-2026-107406",
+      "severity": "Critical",
+      "summary": "Citrix NetScaler ADC and NetScaler Gateway configured as a SAML SP/IdP: memory overflow allowing remote code execution and/or denial of service; ACSC issued an updated critical alert on Oct 9, 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107406"
+    },
+    {
+      "cvss": 9.3,
+      "id": "CVE-2026-14911",
+      "severity": "Critical",
+      "summary": "ASUS routers (firmware series 3.0.0.4_386, 3.0.0.4_388, 3.0.0.6_102): cross-site scripting letting a remote attacker read DOM data, modify router settings, and cause DoS when an authenticated user visits a crafted URL; firmware updates released.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14911"
+    }
+  ]
+}

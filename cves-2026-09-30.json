@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-30",
+  "items": [
+    {
+      "cvss": 9.9,
+      "id": "CVE-2026-84154",
+      "severity": "Critical",
+      "summary": "Code injection (CWE-94) in Dassault Systèmes' GEOVIA Geospatial Data Manager (3DEXPERIENCE releases R2024x through R2026x) lets an attacker execute arbitrary code on the server, risking unauthorized access and data loss.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84154"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-82384",
+      "severity": "Critical",
+      "summary": "Deserialization of untrusted data in Apache Roller 6.1.5's XML-RPC endpoint (fixed in 6.1.6) allows an unauthenticated remote attacker to achieve arbitrary code execution; the endpoint parses requests even when XML-RPC is disabled in configuration.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82384"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-76721",
+      "severity": "Critical",
+      "summary": "Buffer overflow in an interface of HPE Networking Instant ON lets an unauthenticated remote attacker run arbitrary code as a privileged user on the underlying host; disclosed under HPE advisory hpesbnw05150en_us.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76721"
+    },
+    {
+      "cvss": 9.6,
+      "id": "CVE-2026-100818",
+      "severity": "Critical",
+      "summary": "Use-after-free (CWE-416) in Firefox's Widget: Gtk component enabling a sandbox escape; fixed in Firefox 157, Firefox ESR 153.4, and Firefox ESR 140.17.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100818"
+    },
+    {
+      "cvss": 9.0,
+      "id": "CVE-2026-82378",
+      "severity": "Critical",
+      "summary": "Incorrect authorization in Apache Roller 6.1.5's OAuth 1.0a endpoint lets an unauthenticated attacker holding an outstanding request token for a site-wide consumer obtain an access token for any user without the normal approval step.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82378"
+    }
+  ]
+}

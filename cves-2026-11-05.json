@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-05",
+  "items": [
+    {
+      "id": "CVE-2026-122006",
+      "summary": "The Ruby on Rails Active Storage gem before 8.1.4.1 can allow server read and write operations, such as reading secret_key_base, when ImageMagick attachment processing runs without a security policy blocking unintended functionality. Published November 4; upgrade Active Storage to the fixed release.",
+      "cvss": 9.8,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122006"
+    },
+    {
+      "id": "CVE-2026-121606",
+      "summary": "A firmware signature verification flaw in Qihoo 360 routers (D621-2, D603-2, D600-2, D619, D606-6 and D706 up to 6.4.9) allows improper verification of cryptographic signatures, rated the maximum CVSS 10.0. Affected devices should be updated to fixed firmware or replaced if no fix is available.",
+      "cvss": 10.0,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121606"
+    },
+    {
+      "id": "CVE-2026-120322",
+      "summary": "A path traversal flaw in Termix-SSH Termix up to 2.9.2 lets a remote attacker manipulate the destPath argument of the file-manager transferToHost endpoint, with a public exploit available. Update Termix beyond 2.9.2 and restrict access to the file-manager API.",
+      "cvss": 9.9,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120322"
+    },
+    {
+      "id": "CVE-2026-109593",
+      "summary": "An unauthenticated attacker with network access to SonicWall GMS 9.5.2 and earlier may be able to read internal GMS files, potentially exposing sensitive information. Upgrade SonicWall GMS past 9.5.2 and restrict management-plane network access.",
+      "cvss": 9.1,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109593"
+    },
+    {
+      "id": "CVE-2026-115732",
+      "summary": "An incorrect authorization flaw in the certificate-name matching used by Puppet Server lets a client holding a CA-signed certificate whose name extends or shortens an authorized hostname be authorized as that host, enabling node impersonation. Update OpenVox or Puppet Enterprise to 2023.8.13, 2025.12.1 or 2026.0.1; exploitation in the wild has been reported.",
+      "cvss": 9.0,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115732"
+    }
+  ]
+}

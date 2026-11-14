@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-22",
+  "items": [
+    {
+      "cvss": 9.9,
+      "id": "CVE-2026-93985",
+      "severity": "Critical",
+      "summary": "OpenPanel js-runtime (through commit bad75bdd) has a sandbox escape in its JavaScript webhook template validator: computed member access reaches the Function constructor, letting an attacker with project write access execute arbitrary code in the shared worker process.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93985"
+    },
+    {
+      "cvss": 9.9,
+      "id": "CVE-2026-84064",
+      "severity": "Critical",
+      "summary": "IBM Guardium Data Protection 12.2 vulnerability batch (disclosed 19 Sep 2026) — CVE-2026-84064 is the highest-scoring of four 9.9 CVEs covering unauthenticated RCE, SQL injection and authentication bypass with no confirmed exploitation yet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84064"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-13684",
+      "severity": "Critical",
+      "summary": "Synology-SA-26:13 (18 Sep 2026): improper encoding/escaping in SCGI in DiskStation Manager lets remote attackers read or write arbitrary files and trigger denial of service on unpatched NAS devices.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13684"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-84434",
+      "severity": "Critical",
+      "summary": "Gravity Forms for WordPress (through 3.1.0.4) suffers an unauthenticated arbitrary file upload: a validation bypass lets hidden upload fields skip extension checks, enabling remote code execution via public forms.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84434"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-91843",
+      "severity": "Critical",
+      "summary": "Check Point Security Management / Log Server stack overflow in the pre-auth login process lets an unauthenticated remote attacker execute code as root; patched via LivePatch advisory sk1000155 (record active 17–18 Sep 2026).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91843"
+    }
+  ]
+}

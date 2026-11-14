@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-17",
+  "items": [
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-89656",
+      "severity": "Critical",
+      "summary": "Out-of-bounds write in the kernel's libceph code (bucket_perm_choose()), remotely triggerable with no privileges, affecting kernels up to 6.12.108/6.18.49/7.2.3.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89656"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-108587",
+      "severity": "Critical",
+      "summary": "Arbitrary file upload in the 10Web Booster WordPress plugin (≤2.34.10) lets unauthenticated attackers upload executable files and achieve remote code execution via a leaked REST nonce.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108587"
+    },
+    {
+      "cvss": 9.6,
+      "id": "CVE-2026-18516",
+      "severity": "Critical",
+      "summary": "Stored XSS in Crafty Controller (≤4.10.8): unauthenticated attackers inject malicious content into server activity logs via spoofed X-Forwarded-For headers, executing in the admin's browser.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18516"
+    },
+    {
+      "cvss": 9.3,
+      "id": "CVE-2026-102764",
+      "severity": "Critical",
+      "summary": "Improper origin validation in BeyondTrust Remote Support (≤26.2.3) lets remote attackers perform file operations unauthenticated; exploited as a zero-day since Aug 29, 2026 (Mandiant: ARMORY CASTLE) and added to CISA KEV.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764"
+    },
+    {
+      "cvss": 9.0,
+      "id": "CVE-2026-102608",
+      "severity": "Critical",
+      "summary": "OS command injection in ZoneMinder's downloadEvents() before v1.38.3: a monitor name with shell metacharacters breaks single-quote wrapping and executes commands via ffmpeg/tar/zip as the web user.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102608"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-06",
+  "items": [
+    {
+      "cvss": 9.9,
+      "id": "CVE-2026-122311",
+      "severity": "Critical",
+      "summary": "Kyverno 1.16.0 through 1.19.1 fails to validate path segments in the resource argument of resource.get() and resource.post(), letting namespaced CEL policies escape their namespace. Published November 5; upgrade to Kyverno 1.19.2 or later.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122311"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-98432",
+      "severity": "Critical",
+      "summary": "A use-after-free in the Linux kernel's IPv4 TCP request-socket handling, present since kernel 4.4, lets a remote unauthenticated attacker reach remote code execution; Anthropic demonstrated a remote-root exploit against multipath TCP listeners. Red Hat shipped fixed kernels November 1; Ubuntu fixes are in its testing channel.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-98432"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-109618",
+      "severity": "Critical",
+      "summary": "PHP's use of longjmp() for out-of-memory errors can be abused for remote code execution (PHP2Shell), confirmed exploited in the wild against internet-facing PAN-OS management interfaces and chained with a Linux kernel flaw to reach root. Patch PHP and restrict management-plane access.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618"
+    },
+    {
+      "cvss": 9.3,
+      "id": "CVE-2026-99999",
+      "severity": "Critical",
+      "summary": "A Linux kernel flaw in how virtio-net handles IPv4 checksum metadata lets an untrusted VM guest overwrite two bytes of an already-validated IPv4 header on the host, escaping the guest. The bug dates to kernel 2.6.27; CloudLinux has livepatches on its main feed and kernel updates are rolling out.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99999"
+    },
+    {
+      "cvss": 9.3,
+      "id": "CVE-2026-48356",
+      "severity": "Critical",
+      "summary": "Adobe Commerce and Magento are affected by an unrestricted upload of a file with a dangerous type, rated CVSS 9.3, with exploitation tracked since March 2026 across hundreds of stores. Apply Adobe's security update and audit storefront uploads.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356"
+    }
+  ]
+}

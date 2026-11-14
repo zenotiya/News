@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-24",
+  "items": [
+    {
+      "cvss": 9.9,
+      "id": "CVE-2026-83941",
+      "severity": "Critical",
+      "summary": "Missing-authorization elevation of privilege in Microsoft Entra ID lets a low-privileged authenticated attacker elevate privileges remotely without user interaction. Microsoft mitigated it server-side before publication; defenders should watch for anomalous authentication patterns and unexpected privilege changes.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83941"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-93616",
+      "severity": "Critical",
+      "summary": "Pre-authentication path traversal in the Check Point Security Management web service lets an unauthenticated attacker upload and execute arbitrary scripts or load arbitrary Java classes. Exploited in targeted attacks since July 23, 2026 — a true zero-day; CISA added it to KEV with a September 25 remediation deadline.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93616"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-90817",
+      "severity": "Critical",
+      "summary": "Unauthenticated remote code execution in Vanderbilt's REDCap research-data platform via survey passthrough routing and crafted Data Import parameters — only a valid public survey hash is needed. A public proof-of-concept is circulating; patch to 16.0.49 LTS, 17.3.10 LTS, or 17.4.4.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90817"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-82967",
+      "severity": "Critical",
+      "summary": "Authentication bypass in IBM Guardium Data Protection 12.2 lets an unauthenticated remote attacker bypass IP-based access controls. Disclosed September 18, 2026; apply the latest vendor patches and monitor for exploitation attempts.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82967"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-85102",
+      "severity": "Critical",
+      "summary": "Pre-authentication remote code execution in Check Point Security Gateway VPN certificate handling — an unauthenticated attacker can execute code during VPN negotiation. Active exploitation observed since September 12 against Spark customers; CISA KEV-listed with a September 25 deadline.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85102"
+    }
+  ]
+}

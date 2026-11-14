@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-09",
+  "items": [
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-105192",
+      "severity": "Critical",
+      "summary": "LMCache's multiprocess (distributed) mode opens an unauthenticated ZeroMQ ROUTER socket where msgpack extension code 1 is passed to pickle.loads before any handler validation, letting an unauthenticated remote attacker execute arbitrary code — as root in official container images — with a single ZMQ message. Discovered by JFrog Security Research.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105192"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-76268",
+      "severity": "Critical",
+      "summary": "Splunk Enterprise (10.4.x before 10.4.3, 10.2.x before 10.2.7) exposes the Patroni REST API on search head cluster members without authentication for critical configuration operations, allowing any network-reachable attacker to execute attacker-controlled OS commands. Advisory SVD-2026-1001.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76268"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-107204",
+      "severity": "Critical",
+      "summary": "LMCache through 0.5.5 contains an unauthenticated remote code execution flaw in its /run_script endpoint: remote attackers can post scripts that execute Python code and OS commands as the LMCache process, recovering real builtins through the injected FastAPI app object to bypass the guarded __import__. Disclosed by VulnCheck.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107204"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-93674",
+      "severity": "Critical",
+      "summary": "IBM Langflow OSS 1.0.0 through 1.12.2 allows a remote unauthenticated attacker to execute arbitrary code via improper neutralization of special elements used in an OS command (CWE-94 code injection). Fixed in 1.12.3 per the IBM advisory.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93674"
+    },
+    {
+      "cvss": 9.0,
+      "id": "CVE-2026-16516",
+      "severity": "Critical",
+      "summary": "wolfSSH (≤1.5.0, fixed in 1.6.0) does not validate that the ECDSA curve identifier in the KEXDH_REPLY host key blob matches the algorithm negotiated during key exchange, letting an active man-in-the-middle substitute a host key on a different curve it controls and pass signature verification — a forged server key. Requires lax host-key checking on the client.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16516"
+    }
+  ]
+}

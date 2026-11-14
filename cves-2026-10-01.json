@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-01",
+  "items": [
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-76504",
+      "severity": "Critical",
+      "summary": "Cisco disclosed on Sep 30 that attackers are actively exploiting a URI-encoding flaw in Catalyst SD-WAN Manager that lets an unauthenticated remote attacker use the management API as the admin user. Every on-prem release is affected, there is no workaround, and CISA added it to KEV with an Oct 3 remediation deadline.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76504"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-84411",
+      "severity": "Critical",
+      "summary": "MikroTik RouterOS before 7.24 carries an integer-underflow flaw in the web management service that executes before the login check — a single crafted HTTP request can yield root code execution or denial of service. CISA published advisory ICSA-26-272-06 on Sep 29.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84411"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-102455",
+      "severity": "Critical",
+      "summary": "Digiwin EasyFlow .NET has an insecure-deserialization vulnerability (CWE-502) that lets unauthenticated remote attackers execute arbitrary code on the server via crafted serialized content. Published Sep 30; no public exploit confirmed yet.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102455"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-103040",
+      "severity": "Critical",
+      "summary": "LightLLM through 1.2.0 exposes an unauthenticated RPyC server with pickle deserialization enabled when the router's --enable_profiling flag is on, giving any network-reachable attacker remote code execution on AI inference hosts — a direct threat to GPU-backed model infrastructure.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103040"
+    },
+    {
+      "cvss": 9.5,
+      "id": "CVE-2026-88771",
+      "severity": "Critical",
+      "summary": "One of two actively exploited Citrix NetScaler ADC/Gateway zero-days: an improper-input-validation flaw lets an unauthenticated attacker execute arbitrary commands on the appliance. Mandiant and Google GTIG observed exploitation since early September deploying WHIPSHOT/SLAPSHOT web shells for root access. Fixed in 14.1-73.37 and 13.1-64.23.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88771"
+    }
+  ]
+}

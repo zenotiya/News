@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-09",
+  "items": [
+    {
+      "cvss": 9.9,
+      "id": "CVE-2026-120322",
+      "severity": "Critical",
+      "summary": "A path traversal flaw in Termix-SSH Termix up to 2.9.2 lets an attacker manipulate the destPath argument of the file-manager transferToHost endpoint to write files outside the intended directory. Published 2 November 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120322"
+    },
+    {
+      "cvss": 9.3,
+      "id": "CVE-2026-99999",
+      "severity": "Critical",
+      "summary": "A Linux kernel flaw in IPv4 checksum handling for virtio-net lets an untrusted VM guest overwrite two bytes of an already-validated IPv4 header on the host, escaping the guest — dubbed PwnEscape. The bug dates to kernel 2.6.27; fixed kernels and KernelCare livepatches are available.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99999"
+    },
+    {
+      "cvss": 9.1,
+      "id": "CVE-2026-117691",
+      "severity": "Critical",
+      "summary": "Keycloak's SAML HTTP-Redirect binding processes percent-encoded parameter names (such as %53AMLResponse) while signature verification uses a different form, allowing an attacker to bypass SAML signature checks. Published 5 November 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117691"
+    },
+    {
+      "cvss": 9.0,
+      "id": "CVE-2026-121491",
+      "severity": "Critical",
+      "summary": "The Fiber Admin WordPress plugin before 4.0.1 writes an unvalidated request header into a PHP file it regenerates on an unprotected admin hook, enabling unauthenticated remote code execution when its custom database error page is enabled. Published 7 November 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121491"
+    },
+    {
+      "cvss": 9.0,
+      "id": "CVE-2026-54141",
+      "severity": "Critical",
+      "summary": "OpenHuman before 0.57.13 converts a remote direct message received through a configured Yuanbao channel into a generic channel agent message without proper validation, enabling code injection. Fixed in version 0.57.13; published 5 November 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54141"
+    }
+  ]
+}
