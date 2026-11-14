@@ -1,35 +1,35 @@
 {
-  "date": "2026-11-13",
+  "date": "2026-11-14",
   "items": [
     {
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg",
-      "name": "Google Gemini 4 Hydrogen",
-      "summary": "Google's fast execution model for agentic workflows, launched November 12 across AI Studio, the Gemini API, the Gemini app and Search. It scores 51 on the Artificial Analysis Intelligence Index at its default thinking level and costs $1.50/$7.50 per million input/output tokens across a 1M-token context window.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini__decisions__blog-header_2784x1566.width-1300.png",
+      "name": "Gemini Decision 1",
+      "summary": "Google's new decision model scores up to 1,000 closed-set questions (yes/no, multiple-choice, rubric scoring) in a single forward pass instead of generating text, returning probabilities in 150-250 ms at $0.10 per million input tokens. Built for the judgement calls inside agents: tool selection, model routing, policy checks and context grading.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
     },
     {
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini__decisions__blog-header_2784x1566.width-1300.png",
-      "name": "Google Gemini Decision 1",
-      "summary": "A new decision model behind the Gemini Decisions API, announced November 11. Instead of generating text, it scores up to 1,000 yes/no, choice or rubric questions over multimodal input in a single pass, at 150-250 ms end-to-end latency and $0.10 per million input tokens.",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon_key_art_16-9_lockup.width-1300.jpg",
+      "name": "Gemini 4 Carbon",
+      "summary": "Google's strongest model is now generally available to paid developers, enterprises and Google AI Ultra subscribers, pitched as frontier-class for cybersecurity and long-horizon agentic work. The launch also previewed /swarm in Antigravity, letting multiple Carbon agents collaborate on one task.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+    },
+    {
+      "image": "https://assets.claude.com/21b3240f9264f8e4c8ab1390e2702cf1401b2367.jpg",
+      "name": "Claude Fable 5.2",
+      "summary": "Anthropic's most capable model to date, released alongside the vetted-only Mythos 5.2 twin, with faster outputs and a price cut to $8 per million input tokens. It now tops the Artificial Analysis Intelligence Index and leads on agentic coding benchmarks.",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
     },
     {
       "image": "https://research.meta.ai/articles/muse-glint/hero/blog-header-light-v1.webp",
       "name": "Meta Muse Ember",
-      "summary": "Meta's smallest and most efficient Muse model, released November 9 for the repetitive work agents do all day: tool calls, coding subtasks, routing, extraction and long-document parsing. It costs $0.10 per million input tokens and $0.50 per million output tokens, with a 1M-token context window.",
+      "summary": "Meta's smallest and most efficient Muse model, built for the repetitive work inside agents: tool calls, coding subtasks, routing, extraction and long-document parsing. At $0.10 per million input tokens it matches Claude Haiku 5.5's intelligence score at about a third of the cost per task.",
       "url": "https://research.meta.ai/blog/muse-ember"
     },
     {
-      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/11/corl-corp-blog-promo-pack-1920x1080-1-1680x945.png",
-      "name": "NVIDIA GR00T 2",
-      "summary": "An open frontier world-action robot model built on NVIDIA Cosmos, unveiled November 9 at CoRL. It learns dexterous manipulation skills by watching human video, completing 40 of 50 evaluated tasks at least once with no task-specific demonstrations; weights and code are promised for December.",
-      "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/"
-    },
-    {
       "image": "https://ashutoshai.com/ai-compass/og/2026-11-05/inclusionai-ling-3-2-flash.jpg",
-      "name": "Ant Group Ling-3.2-flash",
-      "summary": "Ant Ling's first natively multimodal model, launched November 5: a 560B-parameter MoE (25B active per token) accepting text, image and video over a 1M-token context window, aimed at visual understanding, long-horizon agents, 3D and medical tasks. The API is free for its first two weeks.",
-      "url": "https://technode.com/2026/11/06/ant-launches-ling-3-2-flash-multimodal-model-with-million-token-context/"
+      "name": "Ant Ling-3.2-flash",
+      "summary": "Ant Group's inclusionAI launched a 560-billion-parameter multimodal mixture-of-experts model (25B active per token) with a 1-million-token context window, natively handling interleaved text, images and video. Free API access for two weeks, with OpenAI- and Anthropic-compatible endpoints.",
+      "url": "https://ashutoshai.com/ai-compass/2026/11/05/inclusionai-ling-3-2-flash/"
     }
   ]
 }

@@ -2,30 +2,30 @@
   "date": "2026-11-14",
   "news_count": 8,
   "cve_count": 5,
-  "worst_cvss": 9.8,
+  "worst_cvss": 9.9,
   "priorities": [
     {
-      "id": "CVE-2026-126262",
+      "id": "CVE-2026-109803",
+      "cvss": 9.9,
+      "summary": "SAP NetWeaver Knowledge Management (XML Forms) does not sufficiently restrict the selection of XSL transformations, letting an authenticated user trigger an unauthorized transformation that can lead to arbitrary code execution in the application context.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109803"
+    },
+    {
+      "id": "CVE-2026-109795",
+      "cvss": 9.9,
+      "summary": "SAP NetWeaver misses authorization checks and input validation in remote-enabled functionality, allowing a low-privileged attacker to inject and execute arbitrary code through a remote interface, with high impact on confidentiality, integrity and availability.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109795"
+    },
+    {
+      "id": "CVE-2026-126261",
       "cvss": 9.8,
-      "summary": "SQL injection in FortiAnalyzer and FortiManager lets an unauthenticated attacker who can reach the OFTP port execute code or commands via crafted OFTP packets. Affects FortiAnalyzer 7.2-8.0.1 and FortiManager 7.2-8.0.0; Fortinet published the fix on November 10.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126262"
-    },
-    {
-      "id": "CVE-2026-108186",
-      "cvss": 9.6,
-      "summary": "Improper input validation in Zoom Workplace for Windows allows an unauthenticated user to escalate privileges via network access. Affects Zoom Workplace 7.1 before 7.1.8; Zoom rates it CVSS 9.6 and fixed it in its November security bulletin ZSB-26023.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108186"
-    },
-    {
-      "id": "CVE-2026-118383",
-      "cvss": 9.5,
-      "summary": "A use-after-free in the replication component of MongoDB Server can be triggered by unauthenticated requests when a newly elected primary completes catch-up, crashing the server or, under certain conditions, leading to arbitrary code execution. Affects MongoDB Server 6.0 through 9.0.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118383"
+      "summary": "An improper authorization flaw in Fortinet FortiManager lets an unauthenticated attacker who can reach the FGFM port execute code or commands via crafted FGFM packets, before the registration password is verified. Fortinet filed the 9.8 base score with NVD.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126261"
     }
   ],
   "model": {
-    "name": "Google Gemini 4 Hydrogen",
-    "summary": "Google's fast execution model for agentic workflows, launched November 12 across AI Studio, the Gemini API, the Gemini app and Search. It scores 51 on the Artificial Analysis Intelligence Index at its default thinking level and costs $1.50/$7.50 per million input/output tokens across a 1M-token context window.",
-    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+    "name": "Gemini Decision 1",
+    "summary": "Google's new decision model scores up to 1,000 closed-set questions (yes/no, multiple-choice, rubric scoring) in a single forward pass instead of generating text, returning probabilities in 150-250 ms at $0.10 per million input tokens. Built for the judgement calls inside agents: tool selection, model routing, policy checks and context grading.",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
   }
 }
