@@ -1,0 +1,282 @@
+{
+  "updated": "2026-11-14",
+  "count": 44,
+  "items": [
+    {
+      "date": "2026-11-14",
+      "topic": "DFIR (forensics & incident response)",
+      "title": "CI/CD pipeline compromise forensics — the wfx-loot case",
+      "what": "when a GitHub Actions runner is the crime scene, evidence is ephemeral by design (the attacker reverts the malicious workflow within ~1 minute and deletes the run + logs, and hosted runners are destroyed after the job). The surviving evidence lives OUTSIDE the runner: gaps in workflow run numbers, the GitHub audit log (pushes from wfx-docs branches, PRs titled \"docs: dependency audit notes\"), cloud audit trails (OIDC tokens minted in Actions and exchanged for AWS/Azure/GCP sessions — look for new access keys, widened trust policies, Vault/K8s token replays), and package-registry publish events (Packagist digitalelvis/neuronai-studio 3.14.3, Go module onuragtas/docker-env v1.0.278/280 were poisoned via auto-publish triggers). Rotation alone is NOT remediation — wfx-loot planted long-lived AWS keys and opened trust policies that survive a secret rotation, so the IR checklist is: (1) audit-log + run-number gap hunt, (2) cloud-side persistence hunt (access keys, trust policies, federated creds created 10–12 Nov), (3) then rotate everything the runner could see. Consultant takeaway: add \"CI/CD run-number continuity + OIDC-to-cloud trail\" to every client IR plan — if the runner logs are gone, the cloud audit log is the crime scene."
+    },
+    {
+      "date": "2026-11-13",
+      "topic": "Active Directory & identity",
+      "title": "Resource-Based Constrained Delegation (RBCD) abuse",
+      "what": "an attacker with GenericWrite on a computer object writes msDS-AllowedToActOnBehalfOfOtherIdentity to point at a machine they control, then uses S4U2Proxy to mint a service ticket as any user (incl. a Domain Admin) to that machine and executes code via DCOM/WMI — computer-object write = DA path; detection: Event 5136 on msDS-AllowedToActOnBehalfOfOtherIdentity + anomalous S4U2Proxy 4769s; assessment takeaway: audit GenericWrite/GenericAll on computer objects, not just users/groups"
+    },
+    {
+      "date": "2026-11-12",
+      "topic": "Blue team & detection engineering",
+      "title": "Honeytokens & canary tokens as high-fidelity detection tripwires",
+      "what": "a fake credential/file/URL that no legitimate user ever touches, so any use is a true positive — Thinkst Canarytokens (free) plants canary AWS keys, DNS tokens, kubeconfigs, Word/PDF files and web bugs; plant them in code repos, .env files, password vaults, file shares and internal docs, and alert on any trigger (DNS/HTTP callback, cloud API call); consultant takeaway: in every assessment, seed canaries alongside the scan — they catch post-compromise lateral movement and credential theft that signature EDR misses, and a triggered canary is proof of compromise, not a maybe; limits: an attacker who never touches the bait stays invisible, and canaries are discoverable by grep, so rotate them and never put a real-looking canary where a legit process might trip it"
+    },
+    {
+      "date": "2026-11-11",
+      "topic": "Mobile security",
+      "title": "Android pKVM / AVF protected VMs",
+      "what": "hypervisor-level isolation at EL2 — a pVM's memory stays confidential even if the Android kernel is rooted; Microdroid + DICE attestation; Android 16 mandates AVF on new chipsets; SESIP Level 5 (hypervisor core only, Aug 2025)"
+    },
+    {
+      "date": "2026-11-10",
+      "topic": "Cloud security",
+      "title": "Kubernetes service-account token abuse",
+      "what": "automounted SA tokens as the bridge from pod compromise to cluster-admin and cloud creds — legacy long-lived JWTs vs bound TokenRequest tokens (audience-bound, ~1h TTL), escalation via overprivileged default SAs and secrets access, and the cloud bridge (EKS IRSA / GKE Workload Identity / AKS workload identity turn a pod token into cloud credentials); assessment checklist: audit automountServiceAccountToken defaults, list clusterrolebindings for SAs, test the token from inside a pod with kubectl auth can-i --list, and hunt TokenRequest/audit-log anomalies"
+    },
+    {
+      "date": "2026-11-09",
+      "topic": "Red team operations & C2",
+      "title": "BYOVD (Bring Your Own Vulnerable Driver)",
+      "what": "EDR evasion via signed-but-vulnerable kernel drivers — attackers load a legitimately Microsoft-signed driver with a known flaw (e.g. RTCore64.sys, gdrv.sys, dbutil_2_3.sys) and use its IOCTLs to read/write kernel memory, kill EDR processes, or unload the EDR driver from ring 0; the signature is real so HVCI/Secure Boot don't block it, and the driver need not be installed — it is dropped, loaded, used, and deleted in one operation; defences are Microsoft's vulnerable-driver blocklist (WDAC/ASR \"block vulnerable drivers\" rule, updated via Windows Update), HVCI + VBS, and detection via Sysmon Event 6 / Code Integrity 3033-3036 driver-load events for known-bad hashes (loldrivers project maintains the list); consultant takeaway: in red-team scoping BYOVD is the standard EDR-kill path to test, and in assessments check the blocklist is actually enforced (it is off by default on many builds) — a client whose EDR runs on a host that allows arbitrary signed drivers is one IOCTL away from blind"
+    },
+    {
+      "date": "2026-11-08",
+      "topic": "Web application security",
+      "title": "Cross-site WebSocket hijacking (CSWSH)",
+      "what": "the WebSocket handshake is a plain HTTP GET with cookies attached, so if the server authenticates the handshake by cookie alone (no Origin check, no CSRF token in the handshake), any site the victim visits can open an authenticated WebSocket to the app and read/write as the victim — full account takeover via the victim's browser, no XSS needed; detection: check Origin validation + handshake auth on every WS endpoint in scope, test with a cross-origin page + wscat; fix: Origin allow-list on the handshake, per-connection token, and treat WS like any state-changing endpoint"
+    },
+    {
+      "date": "2026-11-07",
+      "topic": "DFIR",
+      "title": "Chromium LevelDB forensics",
+      "what": "deleted browser history is recoverable — LevelDB stores history/sync/IndexedDB/local-storage as append-only key-value logs, so a deletion writes a tombstone (key kept, value emptied) and the old record survives in the .log WAL and in uncompacted .ldb files until compaction purges it; tools: crush (LevelDB viewer, built on CCL's ccl_chrome_indexeddb) reads MANIFEST/CURRENT, per-file compaction levels and tombstoned keys, and SQLite freelist/WAL carving recovers deleted History/Cookies rows; a tombstone key alone proves something existed and was deliberately removed; same stores exist in every Electron app and Chromium WebView on mobile — collect the whole profile dir read-only before the browser reopens and compacts it"
+    },
+    {
+      "date": "2026-11-06",
+      "topic": "Reverse engineering & malware analysis",
+      "title": "Indirect syscalls & Halo's Gate",
+      "what": "modern EDR evasion — malware resolves syscall numbers from ntdll at runtime and invokes syscalls via a clean \"syscall; ret\" gadget from an unhooked ntdll copy instead of calling hooked Nt* functions, defeating user-mode API hooking; detection pivots to kernel telemetry (ETW syscall tracing, call-stack analysis spotting return addresses outside ntdll) and memory scanning for unbacked executable regions"
+    },
+    {
+      "date": "2026-11-05",
+      "topic": "Hardware & firmware security",
+      "title": "BMCs as the forgotten computer inside every server",
+      "what": "IPMI 2.0 RAKP hash disclosure (CVE-2013-4786), Black Hat 2026 runZero BMC flaws, and persistence below the OS that EDR cannot see — audit OOB management networks, disable IPMI cipher 0, rotate factory creds, segment BMCs"
+    },
+    {
+      "date": "2026-11-04",
+      "topic": "Social engineering & physical security",
+      "title": "Quishing at record levels",
+      "what": "QR-code phishing bypassing email gateways via image-encoded URLs + device handoff to unmanaged phones, split/nested QR evasion, and OAuth ConsentFix token theft — ESET H1 2026 / Microsoft Q1 2026 (+146% QoQ)"
+    },
+    {
+      "date": "2026-11-03",
+      "topic": "Cryptography & post-quantum",
+      "title": "Weak-entropy CA keys",
+      "what": "eMudhra P-384 intermediate private keys below 256 (one was 4) — output validation beats process audits; wrap/unwrap ceremony flaw, CT-log and browser blocking response"
+    },
+    {
+      "date": "2026-11-02",
+      "topic": "Network security & pivoting",
+      "title": "MPTCP — the protocol your Go services enabled without telling you",
+      "what": "Multipath TCP lets one TCP connection use multiple paths (e.g. Wi-Fi + cellular). Since Go 1.24, Go programs open MPTCP listeners by default on Linux — so Caddy and countless Go services are MPTCP listeners even if nobody chose MPTCP. The switch follows the `go` line in go.mod, not just the toolchain: `go version -m` shows the compiled-in default, and `ss -Mlnp` lists live MPTCP listeners on a host.",
+      "why": "CVE-2026-98432 is a kernel UAF in IPv4 TCP handshake handling (IP options freed while another CPU reads them). Anthropic's exploit needed an MPTCP listener to turn it into remote root in ~53 min (48 min KASLR leak + 5 min hijack, retryable because a lost race just fails one handshake). The bug itself is NOT MPTCP-specific — ordinary TCP is also affected, RCE there just hasn't been publicly demonstrated — so disabling MPTCP narrows exposure, it does not fix the kernel.",
+      "takeaway": "on any Linux host you assess, run `ss -Mlnp` and `sysctl net.mptcp.enabled` before you even check the kernel version; patch-first order = MPTCP listeners, then everything else. Until a fixed kernel lands: `sysctl -w net.mptcp.enabled=0` (new sockets only, restart services), `GODEBUG=multipathtcp=0` per Go service (or `godebug multipathtcp=0` in go.mod + rebuild, or `ListenConfig.SetMultipathTCP(false)` in code — note SetMultipathTCP(true) in a dependency overrides GODEBUG), plus Red Hat's nftables drop of IPv4 TCP packets with IP options as a partial shield. Kernel patch + reboot is the only real fix; Ubuntu/RHEL status was still moving on 1 Nov, so re-check the tracker."
+    },
+    {
+      "date": "2026-11-01",
+      "topic": "Cloud security",
+      "title": "workload identity without stored secrets (SPIFFE/SPIRE + OIDC federation)",
+      "what": "SPIFFE gives every workload a cryptographic identity (an SVID, a short-lived X.509 cert) issued only after SPIRE attests the workload — is it really that pod, that binary, on that node? No password, no API key stored anywhere. SPIRE can then federate that identity to cloud IAM via OIDC, so a workload gets short-lived cloud credentials minted on demand. cyber-learning-log 2026-11-01. Finance study (silent, not in digest): STP mechanics, logged separately.",
+      "why": "the Black October wave above was credential theft at scale — env vars full of long-lived AI keys, tested within 30 minutes. Workloads that authenticate with a stored secret are one platform breach away from exactly that. Attested, short-lived identity shrinks the secret to a minutes-long window and removes the thing attackers steal.",
+      "takeaway": "when a client stores cloud/AI keys in env vars or mounted secrets, that is the finding — recommend workload identity federation (SPIRE, or the cloud-native equivalent: EKS IRSA / GKE Workload Identity / Azure workload identity) with short-lived tokens, and check for key usage from unexpected IPs/ASNs as the detection. Try: run SPIRE in a local k8s lab, attest one pod, and watch it mint an SVID and exchange it for an OIDC token with no secret on disk."
+    },
+    {
+      "date": "2026-10-31",
+      "topic": "Bug bounty techniques",
+      "title": "Web race conditions and the single-packet attack",
+      "what": "HTTP/2 multiplexing to land 20-30 requests in one TCP packet, eliminating network jitter — limit-overrun (coupon/rate-limit), partial-construction (empty-token confirmation), and state-machine smashing beyond simple overruns; test with Burp Repeater tab groups / Turbo Intruder BURP2 engine, in scope only"
+    },
+    {
+      "date": "2026-10-30",
+      "topic": "AI/ML security",
+      "title": "Skill-supply-chain scanning (SkillSpector model)",
+      "what": "agent skills execute with the agent's access on install, and NVIDIA's scan of 31,132 skills found 26.1% with vulnerabilities and 5.2% with likely malicious intent — defence is pre-install scanning (71 patterns / 17 categories, static + optional LLM semantic pass, 0-100 risk score, signed \"Verified Skills\" pipeline), not post-install trust; consultant takeaway: scan every third-party skill (incl. the 800+ skill libraries installed 2026-10-26/27) before use, run the LLM pass locally/offline where client code is involved, and treat unsigned skills like unsigned binaries"
+    },
+    {
+      "date": "2026-10-29",
+      "topic": "Red team operations & C2",
+      "title": "Disposable rotating relay infrastructure (Silent Train model)",
+      "what": "on-demand chains of compromised SOHO/IoT/enterprise devices, ~4-hour windows, post-operation cleanup — management-plane targeting without a persistent botnet"
+    },
+    {
+      "date": "2026-10-28",
+      "topic": "Active Directory & identity",
+      "title": "Primary Refresh Token (PRT) theft and Entra ID session hijacking",
+      "what": "stealing the PRT plus its TPM-bound session key lets an attacker mint access tokens inheriting a completed MFA sign-in, bypassing password + MFA; defences are Token Protection (device-bound tokens), compliant/hybrid-joined device Conditional Access, Continuous Access Evaluation for near-real-time revocation, and Defender for Endpoint detection of PRT access via LSASS/CloudAP"
+    },
+    {
+      "date": "2026-10-27",
+      "topic": "Blue team & detection engineering",
+      "title": "Certificate Transparency (CT) log monitoring as early-warning detection",
+      "what": "every publicly trusted cert is logged to CT, so monitoring CT for your domains (and lookalikes) catches rogue/misissued certs — the eMudhra lesson — before browsers or attackers use them; pair with CAA records, expect-CT-style alerting, and non-browser client checks that don't consult CT/revocation"
+    },
+    {
+      "date": "2026-10-26",
+      "topic": "Web application security",
+      "title": "Web cache poisoning via cache-key confusion",
+      "what": "CDNs/proxies cache a response under a key built from only part of the request (host + path, ignoring a header/query param the origin honors), so one crafted request poisons the cache for everyone — stored XSS, auth bypass, or open redirect served to all visitors from the edge; the inverse (cache-key includes a param the origin ignores) enables cache deception / account takeover via cached authenticated pages; consultant takeaway: in every web assessment, send request pairs differing only in one header/query param and compare cache status + origin behavior — if the edge key and origin key disagree, you have a finding; test with unkeyed headers (X-Forwarded-Host, Origin, Accept-Encoding variants) and unkeyed query params first"
+    },
+    {
+      "date": "2026-10-25",
+      "topic": "Mobile security",
+      "title": "Android Intrusion Logging (Android 16 Advanced Protection)",
+      "what": "tamper-resistant, E2E-encrypted, off-device forensic log of process starts, DNS, network connections, ADB, keyguard and app install events — built with Amnesty Security Lab, stored in the user's Google account for 12 months where on-device spyware can't delete it; MVT can now check it via AndroidQF; consultant takeaway: enable it pre-incident on high-risk client/executive devices, because it only records going forward, and treat it as the mobile equivalent of EDR telemetry for spyware triage"
+    },
+    {
+      "date": "2026-10-24",
+      "topic": "Network security & pivoting",
+      "title": "IPv6 as the forgotten attack surface",
+      "what": "link-local pivoting, mitm6-style NDP/SLAAC rogue-advertisement MITM, DHCPv6 spoofing, and DNS64/NAT64 exfil channels — most orgs leave IPv6 on while EDR/NDR/DLP rules stay IPv4-only; assessment checklist: check IPv6 is actually on (ip -6 / ipconfig), pivot via fe80 link-local without touching IPv4, test for rogue RA + DHCPv6 guard, verify DNS/NAT64 egress filtering covers AAAA answers; defender takeaway: either disable IPv6 where unneeded or replicate every IPv4 control in IPv6"
+    },
+    {
+      "date": "2026-10-23",
+      "topic": "Hardware & firmware security",
+      "title": "DDRop",
+      "what": "active DDR5 interposer attacks breaking confidential computing (Intel TDX / Scalable SGX / AMD SEV-SNP) — researchers (KU Leuven, ETH Zurich, Durham, Google, Sept 2026) built a <$200 open-hardware interposer that silently drops DDR5 writes, so the CPU keeps decrypting stale memory as current; the design gap is freshness — these systems verify memory is encrypted correctly but never verify it's the latest value; demoed full TDX VM takeover incl. attestation forgery; vendors say physical access is outside their threat model — which undercuts the \"even the cloud provider can't read it\" pitch; consultant takeaway: confidential computing is encryption, not integrity — never sell it as a silver bullet, and attestation only proves what booted, not that memory wasn't replayed"
+    },
+    {
+      "date": "2026-10-22",
+      "topic": "DFIR",
+      "title": "Agent forensics",
+      "what": "investigating compromised AI agents & MCP servers — when the \"endpoint\" is a prompt, evidence lives in tool-call traces (MCP server logs, function-call transcripts), model invocation/audit logs (token usage spikes, unexpected tool grants), RAG/vector-DB query history (indirect prompt-injection payloads persist in documents), system-prompt and skill-manifest integrity (diff SKILL.md/postinstall scripts against known-good), and host artifacts around the agent runtime (shell history of the agent's working dir, OAuth token grants the agent obtained); traditional host forensics shows nothing because the malicious behavior is stateless text — the ai-dfir-toolkit (trending Oct 22) ships vendor-neutral Sigma/YARA/Suricata rules for exactly this; consultant takeaway: add \"agent runtime log retention\" (tool-call transcripts + prompts, not just outputs) to client logging requirements, and in an AI-feature incident pull the conversation/tool-call log BEFORE the container — it rolls faster than memory"
+    },
+    {
+      "date": "2026-10-21",
+      "topic": "Reverse engineering & malware analysis",
+      "title": "LLM-assisted patch diffing for N-day hunting",
+      "what": "when vendors ship silent fixes, the binary delta IS the vulnerability write-up — pair BinDiff/Ghidra version-tracking against vendor patches, feed the changed functions to an LLM to reconstruct the vuln class and attack path before PoCs go public; this turns the patch gap into a lead-time advantage (e.g., the FortiSIEM CVE-2026-106173 path traversal was root-causeable from the 7.5.0→7.5.1 delta in phQueryMaster's SendQueryResult handler); concrete takeaway: on every critical vendor patch, diff the update, ask the model \"what changed and what inputs reach it\" — if unauthenticated remote input hits the changed code, prioritize the patch as if an exploit is already public"
+    },
+    {
+      "date": "2026-10-20",
+      "topic": "Cloud security",
+      "title": "Workload identity federation as the new cloud attack surface",
+      "what": "as SSRF-to-IMDS gets harder (IMDSv2 hop-limit, GCP Metadata-Flavor header, Azure VM-scoped IMDS), orgs moved to OIDC workload identity federation (GitHub Actions / K8s service accounts trading OIDC tokens for cloud creds) — and attackers moved with them; the vuln is a loose trust condition (wildcard `sub` claims like `repo:org/*` letting an attacker's repo in the same org mint cloud credentials), the cloud equivalent of unconstrained delegation; assessment takeaway: audit federation trust conditions, not just IAM policies"
+    },
+    {
+      "date": "2026-10-19",
+      "topic": "Active Directory & identity",
+      "title": "Shadow credentials",
+      "what": "writing a rogue key into msDS-KeyCredentialLink (Elad Shamir/SpecterOps 2021, MITRE T1098) lets an attacker with GenericWrite/GenericAll (or WriteProperty on the attribute — commonly handed out via delegation sprawl, e.g. helpdesk groups over OUs) authenticate as the target account via Kerberos PKINIT (Key Trust/WHfB) and recover its NT hash with Rubeus/pyWhisker — no password reset, survives password changes; tooling: Whisker, pyWhisker, Certipy, DSInternals, ntlmrelayx auto-deploy on LDAP relay; detection: Event 5136 on msDS-KeyCredentialLink value-added + anomalous PKINIT 4768, hunt with DSInternals Get-ADKeyCredential (also catches malformed NGC blobs left by pre-Sept-2025 Impacket); consultant takeaway: in AD reviews treat GenericWrite on computer/user objects as a DA-equivalent path and audit msDS-KeyCredentialLink changes, not just password resets"
+    },
+    {
+      "date": "2026-10-18",
+      "topic": "Cryptography & post-quantum",
+      "title": "PQC signature-side migration",
+      "what": "Phase 1 (hybrid key exchange, X25519MLKEM768) is largely done — Cloudflare reports 50%+ of web traffic PQC-protected as of Apr 2026 — but Phase 2 (signatures: ML-DSA/Dilithium, FIPS 204) is the hard part because signatures are ~50x bigger (ML-DSA-65 ~3.3 KB vs ~64 bytes ECDSA P-256; SPHINCS+ up to 50 KB), breaking firmware-update slots, UEFI/DB variable sizes, IoT ROMs, and on-chain ledger formats; Google Quantum AI (Mar 2026) estimated ~500K physical qubits could break Bitcoin-style EC signatures in minutes — authentication has a harder clock than harvest-now-decrypt-later; the transition trap is dual/hybrid signature verification — any backward-compat path that still accepts the classical-only signature lets attackers strip the PQC half (signature downgrade); consultant takeaway: cryptographic inventory (NIST IR 8547, now a compliance deliverable) must cover the signing half — JWT/API token signing keys, code-signing certs, firmware-update verification paths — not just TLS key exchange; ask clients where their trust anchors live and whether verifiers will reject classical-only signatures after cutover"
+    },
+    {
+      "date": "2026-10-17",
+      "topic": "AI/ML security",
+      "title": "Agent-to-agent (A2A) trust as the new lateral-movement surface",
+      "what": "autonomous agents call each other's MCP/A2A tools with no principal-level auth — so one poisoned skill or one compromised agent inherits the whole agent mesh's cloud credentials. The Claude Code skill-install vector (postinstall/SKILL.md code runs pre-read) is the supply-chain entry point: a malicious skill doesn't need to attack the model, it just needs to be installed, and from there it rides the mesh's implicit trust into every connected system.",
+      "why": "every \"agent ecosystem\" a client deploys is a flat trust network wearing a trench coat — compromise one node and you inherit the graph. This is lateral movement without a single exploit.",
+      "takeaway": "in every AI-agent assessment, map the agent-to-agent call graph first — which agents can invoke which tools on which principals — and demand per-agent identity + scoped credentials; \"the mesh trusts itself\" is the 2026 version of \"the LAN is trusted.\""
+    },
+    {
+      "date": "2026-10-16",
+      "topic": "Bug bounty techniques",
+      "title": "Prompt injection as a first-class bounty vuln class (OWASP LLM01)",
+      "what": "direct and indirect injection plus agent tool-abuse chains against production AI features are paying real bounties — not theoretical, not infra-side MCP poisoning (that was Oct 1's topic), but the hunter's playbook against shipped AI products. The pattern that keeps paying: an LLM feature with tool access where attacker-controlled content (a pasted document, a fetched URL, a support-ticket body) reaches the model and the model can act on it — exfiltrating data, abusing connected tools, or escalating to the agent's privileges.",
+      "why": "every client shipping \"AI features\" now has an LLM01-shaped hole, and most bug-bounty scopes are quietly including their AI endpoints.",
+      "takeaway": "build a reusable prompt-injection test battery (direct override attempts, indirect injection via RAG/web-fetch, tool-abuse chains, system-prompt extraction probes) and run it against every AI feature in scope — it's the 2026 equivalent of running XSS probes on every input in 2016."
+    },
+    {
+      "date": "2026-10-15",
+      "topic": "Red team operations & C2",
+      "title": "Living off the CI/CD pipeline",
+      "what": "GitHub Actions workflows as attacker infrastructure (GhostAction-style)"
+    },
+    {
+      "date": "2026-10-14",
+      "topic": "Social engineering & physical security",
+      "title": "Autonomous AI pretexting agents",
+      "what": "AI agents that run the entire social-engineering kill chain with no human in the loop — OSINT scraping of the target's public footprint, hyper-personalized pretexts, real-time voice calls with cloned voices, adaptive multi-turn persuasion when the mark pushes back, and payload execution (mule transfer, credential drop, malware delivery). The 2024 Arup deepfake-CFO call (HK$200M) needed a human crew; the 2026 versions run the whole play autonomously and in parallel.",
+      "why": "the unit economics of targeted attacks flipped — mass spear-phishing with hand-crafted-quality pretexts is now cheap, so any control assuming \"attackers can't scale personalized social engineering\" (one-off awareness training, voice/video verification, a CFO's spoken instruction) is structurally wrong.",
+      "takeaway": "add \"AI-pretexting resilience\" to client advisories — out-of-band callback to a known number (never the one the caller supplies), a spoken code word for sensitive requests, dual-control on unusual payments; and in red-team/social-engineering proposals, an AI-vishing simulation is now a legitimate, cheap service line every client who still does \"the CFO called, wire it\" needs."
+    },
+    {
+      "date": "2026-10-13",
+      "topic": "Blue team & detection engineering",
+      "title": "eBPF runtime observability for detection",
+      "what": "kernel-level syscall/process/file/network tracing (Tetragon-style) that sees what userspace EDR misses and can't be blinded by hooking tricks — detection-as-code with process-level provenance, not just log regex"
+    },
+    {
+      "date": "2026-10-12",
+      "topic": "Web application security",
+      "title": "CSS sandbox-escape in webmail",
+      "what": "Gareth Heyes (PortSwigger), Black Hat USA 2026 — sanitized CSS in HTML emails escapes the mail container and overlays trusted webmail UI (Outlook, Gmail, Fastmail, Proton, Yahoo, AOL) to steal passwords/tokens (incl. AI-assistant integrations like Gmail+Claude leaking Slack tokens); no JavaScript needed; fix = sandboxed iframes + stricter CSS allow-lists"
+    },
+    {
+      "date": "2026-10-11",
+      "topic": "Mobile security",
+      "title": "MVPNalyzer — auditing VPN tunnels at scale",
+      "what": "MVPNalyzer, presented at NDSS 2026 (Feb) by U. Michigan, U. New Mexico, and IIT Delhi, is the first measurement framework that audits Android VPN apps at scale — VPNalyzer's mobile counterpart. DOI: 10.14722/ndss.2026.231573. Of 281 popular free Android VPN apps (2.4B+ installs): 29 leaked DNS and browser traffic outside the tunnel — defeating the VPN's entire purpose (24 leaked DNS queries, 6 didn't tunnel browser traffic at all, 4 tunneled it unencrypted); 20%+ transferred unencrypted content; 60%+ failed basic security hardening. DNS leaks may be misconfiguration; other leaks suggest the app may not even be a real VPN.",
+      "why": "A VPN app holds your entire traffic — it is maximally trusted software, and users can't see when the tunnel silently fails. The kill-switch/tunnel-failure tests are the scary part: traffic that falls back to cleartext on tunnel failure is invisible to users (VPNalyzer's desktop study found 18 of 80 providers leaked all traffic on tunnel failure; MVPNalyzer is the mobile counterpart).",
+      "takeaway": "You can replicate the core of the methodology for any client's VPN posture test with just an emulator + packet capture: (1) connect the VPN, (2) force tunnel failure (kill the VPN process / drop the tun interface), (3) send traffic and watch whether it falls back to cleartext or is blocked (kill-switch behavior); plus a DNS-whoami probe (`dnsleaktest`-style: the site sends queries in its own test domain — if you see your ISP's DNS servers instead of the VPN provider's, you have a leak). Also check the app for plaintext config fetching — MVPNalyzer found 5 apps sending their config file in the clear, letting a network attacker redirect the connection."
+    },
+    {
+      "date": "2026-10-10",
+      "topic": "Network security & pivoting",
+      "title": "MASQUE (RFC 9484)",
+      "what": "tunneling IP over HTTP/3 QUIC via proxy — the new pivoting channel that rides on UDP/443 and dodges TCP-only TLS inspection"
+    },
+    {
+      "date": "2026-10-08",
+      "topic": "DFIR",
+      "title": "Memory forensics for ephemeral cloud workloads",
+      "what": "containers/serverless leave no disk, so RAM is the only artifact — forensic collection must shift to runtime checkpoints (CRIU/container checkpoint, agent-based mem capture before teardown) + cloud-native sources (ENI flow logs, CloudTrail data-plane events); triage with Volatility plugins for container namespaces and process-hollowing in short-lived tasks- 2026-10-09 | Hardware & firmware security | Microcode as an attack surface: the 2025 AMD microcode-signing-key leak and why CPU-level trust assumptions are breaking — signed malicious microcode patches as persistence below the kernel/hypervisor"
+    },
+    {
+      "date": "2026-10-07",
+      "topic": "Cloud security",
+      "title": "Serverless persistence",
+      "what": "Lambda versions/layers + EventBridge cron + ephemeral Fargate tasks as backdoors — no host, no EDR, CloudTrail-only detection; assessment checklist: diff published Lambda versions vs $LATEST, audit layers, list EventBridge schedules, grep CloudTrail for UpdateFunctionCode/PublishVersion"
+    },
+    {
+      "date": "2026-10-06",
+      "topic": "Reverse engineering & malware analysis",
+      "title": "Prompt-driven droppers",
+      "what": "new malware carries no shellcode — at runtime it calls an LLM API with a prompt and executes the generated payload; hash-based detection and shellcode-keyed YARA rules see only a benign HTTP client; RE pivots to intercepting the prompt/response, detection pivots to behavioral/network IOCs (unexpected LLM API calls from binaries, token-size anomalies)"
+    },
+    {
+      "date": "2026-10-05",
+      "topic": "Red team operations & C2",
+      "title": "AdaptixC2",
+      "what": "open-source modular C2 where the beacon \"profile\" is the real weapon — profile.yaml defines HTTP/S, DNS/DoH, SMB-pipe, TCP listeners; RC4-encrypted beacon configs (Palo Alto released an extractor); BOFs for in-process C payloads; default error banner \"Server: AdaptixC2\" lets Censys fingerprint ~100+ live teamservers at scale"
+    },
+    {
+      "date": "2026-10-04",
+      "topic": "Active Directory & identity",
+      "title": "Golden dMSA",
+      "what": "offline derivation of gMSA/dMSA passwords from the KDS root key (Semperis, \"by design\" per MS — the forest-wide persistence vector that survives password resets); BadSuccessor (CVE-2025-53779) no-DA variant"
+    },
+    {
+      "date": "2026-10-03",
+      "topic": "Cryptography & post-quantum",
+      "title": "PQC migration reality check",
+      "what": "hybrid key exchange (X25519MLKEM768) is standardized and shipping by default (IETF RFC 10024, Java 27); quantum-vulnerable crypto deprecated after 2030, disallowed after 2035 (NIST IR 8547) — cryptographic inventory is now a compliance deliverable"
+    },
+    {
+      "date": "2026-10-02",
+      "topic": "Bug bounty techniques",
+      "title": "HTTP Terminator",
+      "what": "AI-autonomous discovery of novel HTTP desync (request smuggling) techniques — Kettle, Black Hat USA 2026"
+    },
+    {
+      "date": "2026-10-01",
+      "topic": "AI/ML security",
+      "title": "MCP tool poisoning",
+      "what": "indirect prompt injection via poisoned tool descriptions in agentic workflows"
+    }
+  ]
+}
