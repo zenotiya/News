@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-05",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Update NetScaler ADC and Gateway to 14.1-73.37 or 13.1-64.23 (or the fixed build for your train) immediately; before patching, review for webshells and reverse shells on internet-facing appliances.",
+          "details": "Citrix closed eight critical vulnerabilities in NetScaler ADC and Gateway. CVE-2026-88771 affects default configurations and CVE-2026-88772 hits DTLS-enabled VPN servers; both are being exploited as zero-days in the wild, including password-protected webshells for persistence. CISA has amplified the emergency, urging IoC review before patching.",
+          "image": "https://ccforrs.com/wp-content/uploads/2025/07/Citrix_NetScaler-Cropped-1024x576.jpg",
+          "severity": "Critical",
+          "summary": "Two critical NetScaler zero-days (CVE-2026-88771/88772, CVSS 9.5) allow remote code execution, sometimes without authentication, and are being actively exploited.",
+          "title": "Citrix NetScaler zero-days (CVE-2026-88771/88772) under active attack",
+          "url": "https://b2b-cyber-security.de/en/Critical-Citrix-gaps-are-being-actively-targeted./"
+        },
+        {
+          "action": "Patch Armatura One to 4.7.2 (4.6.1_USA for US builds) and review the Monta guidance on authenticated OCPP connections and rate limiting; restrict management interfaces to trusted networks.",
+          "details": "CISA's ICSA-26-274-01 flags Armatura One versions before 4.7.2 with an Apache ActiveMQ deserialization flaw (CVE-2023-46604, CVSS 9.8), a hard-coded crypto key, hard-coded database-superuser credentials, and credentials exposed in logs. ICSA-26-274-02 covers the Monta EV-charging platform: an unauthenticated WebSocket endpoint (CVE-2026-95102, CVSS 9.4) enabling station impersonation, unlimited login attempts, and predictable session identifiers.",
+          "image": "https://alittlebitofstone.com/wp-content/uploads/2024/06/EV-Charging-Car-Park.png",
+          "severity": "Critical",
+          "summary": "CISA's October 4 ICS advisory batch flags critical flaws in Armatura One physical-access control (CVSS 9.8) and the Monta EV-charging platform (CVSS 9.4).",
+          "title": "CISA warns on critical Armatura One and Monta EV-charging flaws",
+          "url": "https://securityboulevard.com/2026/10/daily-ot-security-news-october-04-2026/"
+        },
+        {
+          "action": "If you run FortiMail 7.4, 7.6 or 8.0, treat the appliance as exposed: apply Fortinet's interim workarounds, restrict the admin interface, and hunt for the published IoCs (suspicious files and IPs 79.141.169.187 and 45.129.0.192).",
+          "details": "Fortinet advisory FG-IR-26-175 covers the unauthenticated path-traversal flaw in FortiMail's IBE component (CVSS 9.8), added to CISA KEV on October 1. Fixed builds now exist only for the 7.2 branch (7.2 users are told to move to 7.4+); 7.4, 7.6 and 8.0 still await undated releases, past the October 4 federal remediation deadline.",
+          "image": "https://www.enbitcon.com/media/88/27/94/1597931534/FortiMail400F_FrontTop.png?ts=1611321295",
+          "severity": "Critical",
+          "summary": "Three of four FortiMail branches remain unpatched against the actively exploited CVE-2026-104286 as CISA's remediation deadline passes.",
+          "title": "FortiMail zero-day: patches still missing for three of four branches",
+          "url": "https://deafnews.it/en/news/cybersecurity/fortinet-critical-fortimail-zero-day-patches-missing-for-three-of-four-branches"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "Healthcare teams should treat any leak-site listing as a potential exposure event: check dark-web monitoring for patient data, prepare breach-notification steps, and do not trust the claimed data volumes.",
+          "details": "The Booba Project group reportedly listed MorseLife Health System on its victim list on October 4, with related reporting associating roughly 344 GB of allegedly stolen data. ThreatMon's verification status is 'unconfirmed threat actor claim' — a leak-site listing alone does not prove intrusion or exfiltration.",
+          "image": "https://truame.com/wp-content/uploads/2026/04/TriZetto-Data-Breach-Blog-Graphic-2-small-1024x683.png",
+          "severity": "High",
+          "summary": "Booba Project claimed MorseLife Health System on October 4, alleging ~344 GB of stolen data; the claim is unverified.",
+          "title": "Booba Project claims attack on MorseLife Health System",
+          "url": "https://undercodenews.com/booba-project-claims-ransomware-attack-on-morselife-health-system-raising-concerns-over-healthcare-data-security-video/"
+        },
+        {
+          "action": "Australian industrial firms should check backups and confirm the listing with the vendor; treat the claim as unverified until the company responds.",
+          "details": "The Qilin group published Chadwick Switchboards on its leak site on October 4. The claim is sourced from the group's dark-web blog via ransomware.live monitoring and is not independently confirmed.",
+          "image": "https://storage.ghost.io/c/c6/2f/c62fd27f-eb77-4add-bc6b-4ec865075df3/content/images/size/w720/2024/05/DALL-E-2024-05-23-16.52.56---A-digital-illustration-representing-ransomware.-The-image-shows-a-computer-screen-with-a-red-lock-icon-prominently-displayed--signifying-a-system-lock-1.webp",
+          "severity": "High",
+          "summary": "Qilin listed Chadwick Switchboards, an Australian manufacturer, on its leak site on October 4.",
+          "title": "Qilin claims Chadwick Switchboards in Australia",
+          "url": "https://www.hendryadrian.com/ransom-chadwick-switchboards-oct-2026/"
+        },
+        {
+          "action": "Municipal contractors should audit access logs and confirm whether any sensitive project data appears in dark-web monitoring.",
+          "details": "The thegentlemen group claimed Center State Engineering, a New Jersey civil engineering consultancy, on October 4, with reporting associating roughly 340 GB of data. The breach record dates the incident to October 3.",
+          "image": "https://darkdotweb.com/wp-content/uploads/2026/02/randsome-tech-DDW.webp",
+          "severity": "High",
+          "summary": "The thegentlemen ransomware group claimed US-based Center State Engineering on October 4, alleging ~340 GB of data.",
+          "title": "thegentlemen claims Center State Engineering (US)",
+          "url": "https://www.hookphish.com/blog/ransomware-group-thegentlemen-hits-center-state-engineering/"
+        },
+        {
+          "action": "Brazilian technology firms should review exposure on dark-web monitoring feeds and harden backup and recovery plans.",
+          "details": "The direwolf group listed Softruck, a Brazilian software company, on October 4. The claim is unverified and based on the group's leak-site publication.",
+          "image": "https://www.ormrd.com/wp-content/uploads/2026/01/Screenshot_1-9-768x468.jpg",
+          "severity": "High",
+          "summary": "direwolf claimed Brazil's Softruck on its leak site on October 4.",
+          "title": "direwolf claims Softruck (Brazil)",
+          "url": "https://www.hookphish.com/blog/ransomware-group-direwolf-hits-softruck/"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "Banks and financial institutions should reassess cyber-risk scenarios for payment and clearing infrastructure; no specific incident is named.",
+          "details": "The warning was reported in the October 4 India cyber-tech brief from the Centre for Police Technology in association with Algoritha Security.",
+          "image": "https://moneytimes.in/wp-content/uploads/2026/08/RBI.webp",
+          "severity": "Medium",
+          "summary": "The RBI Governor warned that the next financial crisis could begin with a cyberattack, putting systemic risk at the center of the October 4 cyber-crime roundup.",
+          "title": "RBI Governor: the next financial crisis could begin with a cyberattack",
+          "url": "https://the420.in/india-cyber-tech-brief-4-october-2026-cyber-risk-mule-accounts/"
+        },
+        {
+          "action": "Defenders who tracked ShinyHunters-linked extortions should watch for indictments and new disclosures as cooperation proceeds.",
+          "details": "Reported in the October 4 India cyber-tech brief from the Centre for Police Technology and Algoritha Security; cooperation details have not been independently verified.",
+          "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2024/05/Hacker-Arrest-web-760x570.jpg",
+          "severity": "Medium",
+          "summary": "A suspected ShinyHunters-linked hacker was reportedly detained in Jordan and is cooperating with the FBI.",
+          "title": "Suspected ShinyHunters hacker detained in Jordan, reportedly cooperating with FBI",
+          "url": "https://the420.in/india-cyber-tech-brief-4-october-2026-cyber-risk-mule-accounts/"
+        },
+        {
+          "action": "Indian businesses should tighten account-opening verification and monitor mule-account indicators ahead of the festive season.",
+          "details": "Also in the October 4 roundup: a doctor allegedly kept under 'digital arrest' for a month lost Rs 1.78 crore, Himachal Police began systematic verification of suspicious mule accounts, and a Mumbai case exposed an emerging 'three-way call merge' fraud technique.",
+          "image": "https://www.rasra.in/wp-content/uploads/2026/08/mumbai-police-busts-fake_large_20260818055641447_80f1228_24-576x288.webp",
+          "severity": "Medium",
+          "summary": "Bhubaneswar Police busted a sophisticated mule-account network allegedly linked to foreign operators.",
+          "title": "Bhubaneswar Police bust mule-account network linked to foreign operators",
+          "url": "https://the420.in/india-cyber-tech-brief-4-october-2026-cyber-risk-mule-accounts/"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Monday, October 5 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

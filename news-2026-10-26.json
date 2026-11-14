@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-26",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Update Node.js to 22.23.4, 24.22.1, 26.12.1 or later; for end-of-support Node.js 20 and earlier, check OS or LTS vendor updates.",
+          "details": "Theori's Oct 26 reproduction notes the flaw is in the runtime itself, not application code, with exposure paths including Express 5's body-parser, the global fetch() method, and HTTP clients such as axios, got and node-fetch. Affected lines are Node.js 22.x, 24.x and 26.x without the latest security patches.",
+          "image": "https://nodejs.org/static/images/logo.svg",
+          "severity": "High",
+          "summary": "Node2Shell (CVE-2026-111497) is an out-of-bounds write flaw in Node.js's Brotli decompression handling that an unauthenticated attacker can trigger with crafted Brotli data, risking crashes, memory disclosure and possible remote code execution.",
+          "title": "Node2Shell flaw in Node.js: patch to 22.23.4, 24.22.1 or 26.12.1",
+          "url": "https://biz.chosun.com/en/en-it/2026/10/26/FGUJ4UIHONFR3J6JNIYGKSTKTY/"
+        },
+        {
+          "action": "Patch PHP to the Oct 21 security release everywhere it serves web requests, including PHP-FPM, Apache mod_php, php-cgi, FrankenPHP and LiteSpeed; take unpatchable sites offline.",
+          "details": "Researchers at Wiz and Calif discovered the flaws in PHP versions released over the last decade; PHP published its security release on Oct 21. Authorities in several countries have temporarily taken some government websites offline as a precaution.",
+          "image": "https://thewiremagazine.com/wp-content/uploads/2022/09/How-to-Secure-Website-From-Hackers-in-PHP-–-6-Best-Ways-01-01-01-1024x547.jpg",
+          "severity": "Critical",
+          "summary": "Two critical PHP flaws, dubbed PHP2Shell, can let an unauthenticated attacker take complete control of vulnerable web servers and steal data, with the US NSA issuing a rare public warning to take sites offline if they cannot be updated immediately.",
+          "title": "PHP2Shell flaws (CVE-2026-109618, CVE-2026-109619) rated critical 9.2",
+          "url": "https://dailynews.lk/2026/10/26/breaking-news/1046788/ministry-issues-urgent-alert-over-critical-global-php-vulnerabilities/"
+        },
+        {
+          "action": "Prioritise the actively exploited Windows Shell flaw, then the publicly known and wormable CVEs, across Windows, Office, SharePoint, Exchange and Azure services.",
+          "details": "Two further flaws were publicly known: CVE-2026-108398 (.NET Framework) and CVE-2026-92707 (MessagePack-CSharp). TrendAI/ZDI classified 59 of the October CVEs as wormable, spanning DHCP servers, Network Policy Server, Windows Error Reporting and Remote Desktop Gateway.",
+          "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800",
+          "severity": "Critical",
+          "summary": "Microsoft's October 2026 Patch Tuesday fixed a record 1,415 vulnerabilities — its first four-figure month — including one actively exploited flaw, CVE-2026-96951 in Windows Shell, while Adobe closed 174 gaps including three CVSS 10.0 flaws.",
+          "title": "Microsoft's October Patch Tuesday sets record with 1,415 CVEs",
+          "url": "https://b2b-cyber-security.de/en/oktober-2026-erneuter-rekord-patchday-mit-1-415-microsoft-cves/"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "Treat any Qilin leak-site listing as a presumed data-theft incident: contain, hunt for exfiltration, and warn affected customers and partners early.",
+          "details": "Qilin, first observed in July 2022, is a Golang ransomware operation with more than 2,300 victims listed since October 2022, according to the threat-intelligence record for the Hossner-Textil listing.",
+          "image": "https://assets.techrepublic.com/uploads/2024/04/FeatuerImage-ransomware-threats-apac.jpg",
+          "severity": "High",
+          "summary": "Qilin listed German manufacturers Hossner-Textil GmbH and ETO, plus Ooredoo Myanmar, on its dark-web leak site on Oct 25, continuing its double-extortion pattern of encrypting data while threatening to publish stolen data.",
+          "title": "Qilin lists German manufacturers and Ooredoo Myanmar on Oct 25",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/hossner-textil-gmbh-qilin-2026"
+        },
+        {
+          "action": "If you share data with Keidel or similar distributors, watch for exposed customer/order data and rotate any credentials that may have been in the backup image.",
+          "details": "The claim, discovered Oct 25 at 06:54 UTC, is reported as a leak-site exposure rather than a confirmed company disclosure; the company has not been quoted confirming the incident in the source report.",
+          "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800",
+          "severity": "High",
+          "summary": "Ransomware group N0n claimed Cincinnati-based Keidel Supply Company on Oct 25, listing sales orders with customer names and item details, customer and order files with over 16,000 records, and a full backup image of its main application library as exposed and unpaid.",
+          "title": "N0n ransomware claims Keidel Supply Company, exposes 16,000+ records",
+          "url": "https://www.hookphish.com/blog/ransomware-group-n0n-hits-keidel-supply-company-incorporated/"
+        },
+        {
+          "action": "Treat personal-document exposure claims seriously for affected customers: monitor for identity-theft misuse and prepare notification if the claim is confirmed.",
+          "details": "The claim was discovered Oct 25 at 00:31 UTC; as with other leak-site claims, it is an attacker allegation, not a confirmed company disclosure, and the scope of any genuine exposure is unverified.",
+          "image": "https://assets.techrepublic.com/uploads/2024/04/FeatuerImage-ransomware-threats-apac.jpg",
+          "severity": "High",
+          "summary": "Anubis ransomware claimed US funeral-services provider Newcomer Cremations, Funerals and Receptions on Oct 25, listing customers' personal documents and the company's internal documents among the allegedly stolen data.",
+          "title": "Anubis ransomware claims Newcomer Cremations, Funerals and Receptions",
+          "url": "https://www.hookphish.com/blog/ransomware-group-anubis-hits-newcomer-cremations-funerals-and-receptions/"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "Indian operators on the CERT-In lists should verify their PHP installations and patch to the Oct 21 security release, or take unpatchable sites offline.",
+          "details": "The 303 comprise 89 central-government instances, 80 state/UT instances, 27 central PSUs, 24 state-owned companies and 83 critical-sector organisations. Krishnan stressed these are potentially vulnerable instances for verification, not confirmed vulnerable installations, and said CERT-In has observed active exploitation attempts and shared indicators of compromise.",
+          "image": "https://www.medianama.com/wp-content/uploads/2025/07/Gemini_Generated_Image_wtwh05wtwh05wtwh-444x230.png",
+          "severity": "Critical",
+          "summary": "India's CERT-In has flagged 303 government, state-owned and critical-sector websites as potentially vulnerable to the PHP2Shell flaws, MeitY secretary S Krishnan said on Oct 25, as part of about 60,000 Indian websites identified as potentially vulnerable.",
+          "title": "CERT-In flags 303 government and critical-sector websites over PHP2Shell",
+          "url": "https://www.newindianexpress.com/thesundaystandard/2026/Oct/25/meity-secretary-says-303-government-websites-are-vulnerable"
+        },
+        {
+          "action": "Industry bodies should evidence regular audits and certification updates; member organisations should close basic-hygiene gaps first.",
+          "details": "Officials said the Centre is reviewing the reported events and monitoring developments, and noted systems were often compromised when basic cyber hygiene was not followed. CERT-In has advised organisations to upgrade to the latest patched versions of affected software.",
+          "image": "https://www.medianama.com/wp-content/uploads/2025/07/Gemini_Generated_Image_wtwh05wtwh05wtwh-444x230.png",
+          "severity": "High",
+          "summary": "MeitY has written to industry bodies and associations directing them to tighten certification processes and carry out regular security audits, following recent breaches and vulnerabilities including the SBI data exposure, the PHP flaws and lapses linked to certificate issuer eMudhra.",
+          "title": "MeitY directs industry bodies to tighten certifications and security audits",
+          "url": "https://www.deccanherald.com/amp/story/technology/meity-directs-industry-bodies-to-strengthen-certifications-security-audits-4194160"
+        },
+        {
+          "action": "Banking and financial-sector teams should treat the new institute as a signal of rising regulatory focus on banking cyber resilience and keep incident-response readiness current.",
+          "details": "Modi said safeguarding financial infrastructure from cybercriminals and cyberterrorists had become increasingly important as India's economy and digital banking expand; the remarks come amid wider concern following the SBI data exposure disclosed Oct 21.",
+          "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800",
+          "severity": "Medium",
+          "summary": "Prime Minister Narendra Modi inaugurated the Reserve Bank of India's ₹169-crore data centre and Cybersecurity Training Institute in Bhubaneswar on Oct 25, warning that cyberattacks could weaken a country's economy and stressing protection for the banking system.",
+          "title": "PM Modi opens RBI's ₹169-crore data centre and cybersecurity training institute",
+          "url": "https://news.abplive.com/news/india/pm-modi-inaugurates-rs-169-crore-rbi-facility-hits-out-at-congress-era-phone-banking-1873108/amp"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Monday, October 26 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

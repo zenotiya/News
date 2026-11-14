@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-24",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Patch all internet-facing PHP immediately; deploy CISA's SIGMA rule to the SIEM and check for suspicious PHP worker activity.",
+          "details": "Cloudflare observed millions of exploit attempts within days of disclosure; Censys counts over 34.4M PHP services still running vulnerable versions. Patching to 8.5.12/8.4.27/8.3.36/8.2.35 remains the only safe fix.",
+          "image": "https://www.arpatech.com/wp-content/uploads/2017/02/php-blunders.png",
+          "severity": "Critical",
+          "summary": "CISA updated its Oct 21 alert on Oct 23 with a SIGMA detection rule and partner guidance for CVE-2026-109618 and CVE-2026-109619 (CVSS 9.2), while PHP separately warned users on Oct 23 to temporarily disable the session upload-progress feature until the next regular release.",
+          "title": "PHP2Shell: CISA adds SIGMA rule; PHP warns on upload-progress feature",
+          "url": "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching"
+        },
+        {
+          "action": "Upgrade and redeploy affected services; teams still on Node 20 should plan migration to 22 or 24.",
+          "details": "Exposed if application code or a library decompresses attacker-controlled Brotli data. Node.js 20 and older receive no fix.",
+          "image": "https://bstechnique.com/images/logos/nodejs.jpg",
+          "severity": "High",
+          "summary": "Node.js shipped security releases 22.23.4, 24.22.1 and 26.12.1 on Oct 21 fixing ten CVEs, including a Brotli decoder flaw (CVE-2026-111497) allowing remote code execution, credited to OpenAI Codex Security researchers.",
+          "title": "Node.js security release fixes Brotli RCE (CVE-2026-111497)",
+          "url": "https://digitalmatters.me/security/nodejs-october-2026-security-release/"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "Watch the countdown deadline; review exposure through third-party vendors hosting HR/learning data.",
+          "details": "Everest claims the data includes regional HR and learning exports, integration documentation and e-learning courses. PwC says the affected site holds no client data, sensitive personal data or financial information, and declined to comment on the veracity of the group's claims.",
+          "image": "https://www.vivementlundi.com/wp-content/uploads/2024/06/pwc-logo-768x768.png",
+          "severity": "High",
+          "summary": "PwC confirmed on Oct 23 a cybersecurity incident involving a third-party vendor hosting employee learning records, a day after extortion group Everest listed PwC on its site claiming 590GB of data with a five-day countdown.",
+          "title": "PwC confirms incident after Everest group claims 590GB stolen",
+          "url": "https://www.channelnewsasia.com/business/pwc-confirms-cybersecurity-incident-involving-employee-learning-records-6487381"
+        },
+        {
+          "action": "Monitor for data publication; treat as an unverified gang claim.",
+          "details": "Italian reporting notes the Oct 23 listing date is when the name was published; the actual intrusion may go back further.",
+          "image": "https://www.commvault.com/wp-content/uploads/2025/08/ransomware-img-3.jpg?width=960&format=auto",
+          "severity": "Medium",
+          "summary": "The Qilin ransomware group listed Coop, Italy's large retail cooperative, on its leak site on Oct 23, claiming around 250GB of data. The claim is unverified and the company has not confirmed.",
+          "title": "Qilin claims Coop Italy hack, ~250GB allegedly stolen (unverified)",
+          "url": "https://pasqualepillitteri.it/en/news/26576/qilin-claims-coop-italy-hack-250-gb"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "Reinforce mule-detection controls — insider assistance was central to this network.",
+          "details": "Accounts were opened with forged signatures and KYC documents taken from daily-wage labourers; proceeds were partly converted to USDT crypto via Trust Wallet. Police seized 63 Aadhaar cards, 60 PAN cards, phones and gold.",
+          "image": "https://cf-images.assettype.com/newindianexpress%2F2024-09-22%2Fonm83ex6%2Fimage-1.png?rect=0%2C89%2C941%2C529&w=640&auto=format%2Ccompress&fit=max",
+          "severity": "High",
+          "summary": "Delhi Police dismantled a network of 37 mule bank accounts that received ₹7.36 crore linked to 99 cyber-fraud complaints across India, arresting six people including two bank branch managers and four sales staff.",
+          "title": "Delhi Police busts ₹7.36 crore mule-account network; bank managers arrested",
+          "url": "https://www.tribuneindia.com/news/delhi/delhi-cops-bust-7-36-cr-cyber-fraud-network/"
+        },
+        {
+          "action": "Share with teams as user-awareness content; report suspicious calls to 1930.",
+          "details": "Public urged to disconnect, report on the National Cyber Crime portal or the 1930 helpline, and flag malicious SIMs on Sanchar Saathi.",
+          "image": "https://static.india.com/wp-content/uploads/2024/05/Scam-.png?impolicy=Medium_Widthonly&w=700",
+          "severity": "Medium",
+          "summary": "Authorities issued an urgent advisory on rising 'digital arrest' scam calls: fraudsters posing as CBI/TRAI officials use video calls, AI deepfakes and forged court documents to coerce victims into transferring money. No Indian legal framework permits digital arrests or online clearance payments.",
+          "title": "Urgent advisory on fake 'digital arrest' scams",
+          "url": "https://nationsbizz.com/urgent-govt-advisory-warning-issued-over-fake-digital-arrest-scams"
+        },
+        {
+          "action": "Treat any SBI-related loan/account data as potentially circulating; watch for targeted phishing and fraudulent loan applications using KYC documents.",
+          "details": "This follows an earlier claim flagged Oct 16 by OSINT account CyberPulse56 of a threat actor 'Siriusim' claiming ~375,000 CSV rows + 2,722 PDFs allegedly linked to SBI — authenticity unverified and a separate, unconfirmed claim.",
+          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
+          "severity": "Critical",
+          "summary": "State Bank of India reported on Oct 21 that a cyberattack led to 3,897 customer records containing personally identifiable information being disclosed on the dark web.",
+          "title": "SBI reports cyberattack; 3,897 customer records on dark web",
+          "url": "https://www.reuters.com/legal/litigation/state-bank-india-reports-cyberattack-involving-customer-records-2026-10-21/"
+        },
+        {
+          "details": "The claims remain unverified; SBI had not responded to queries and it is unclear whether the records are genuine or originated from SBI's systems. This is separate from the 3,897-record incident SBI itself reported.",
+          "image": "https://rocket-boys.co.jp/wp-content/uploads/2026/01/kobayashi-resin-sales-company-breach-8149-personal-records-world-leaks-claim-768x512.png",
+          "severity": "High",
+          "summary": "On Oct 20, Indian media reported that cybersecurity monitoring account CyberPulse56 flagged a hacker group named 'Siriusim' claiming ~3.75 lakh SBI-linked records in CSV format plus 2,722 PDFs (personal details, loan applications, account-opening forms). Unverified allegation.",
+          "title": "Hacker group 'Siriusim' claims 3.75 lakh SBI records (unverified)",
+          "url": "https://www.moneycontrol.com/news/business/sbi-data-breach-claim-hacker-group-alleges-access-to-3-75-lakh-records-2-722-documents-14056008.html/amp?utm_campaign=fullarticle&utm_medium=referral&utm_source=inshorts"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Saturday, October 24 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

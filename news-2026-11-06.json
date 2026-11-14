@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-06",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Upgrade to OpenSSH 10.6p2 (or patched Alpine packages); until then set PasswordAuthentication no in sshd_config and restart the service.",
+          "details": "Reported by Özgün Kültekin of Wakefield. Affects Alpine Linux, OpenWrt, Buildroot and Yocto; against an account with no password set, any password between 256 and 1,024 characters is accepted. CVSS 3.1 score 8.1. Public reproduction labs already exist.",
+          "image": "https://candid.technology/wp-content/uploads/2021/03/ssh-1.1.jpg",
+          "severity": "High",
+          "summary": "A password longer than 256 bytes can bypass authentication on OpenSSH servers built on musl libc without PAM, opening accounts that were supposed to reject passwords entirely. Fixed in OpenSSH 10.6p2, released November 5.",
+          "title": "SSHhole: OpenSSH password bypass on musl systems (CVE-2026-123158)",
+          "url": "https://securityboulevard.com/2026/11/sshhole-cve-2026-123158-and-how-ionix-is-helping-you-respond/"
+        },
+        {
+          "action": "Apply kernel updates as they land in your distribution; audit exposure of MPTCP listeners on port 443.",
+          "details": "Ubuntu's tracker, last updated November 5, lists generic kernel targets for Ubuntu 22.04, 24.04, 26.04 and 26.10 as 'Vulnerable, work in progress.' Canonical has fixes in the opt-in -proposed pocket for the first three releases.",
+          "image": "https://techcentral.co.za/wp-content/uploads/2018/06/tux-linux-2156-1120-768x399.jpg",
+          "severity": "Critical",
+          "summary": "A CVSS 9.8 use-after-free in Linux kernel IPv4 TCP connection handling allows remote code execution. Researcher Marcus Hutchins reports apparent internet-wide probing of MPTCP port 443 since November 2.",
+          "title": "Critical Linux kernel TCP flaw (CVE-2026-98432) under internet-wide scanning",
+          "url": "https://www.neoteo.com/en/ubuntus-cve-2026-98432-tracker-lists-four-generic-kernels-as-vulnerable"
+        },
+        {
+          "action": "Patch Cisco AsyncOS Software for Secure Email Gateway per Cisco's advisory.",
+          "details": "CVSS 3.1 score 9.8. A crafted email message containing malicious SQL statements triggers the flaw, leading to command execution on the underlying operating system.",
+          "image": "https://it-market.com/thumbnail/64/cc/8f/1696272538/d2b1b132bc5bdd4c2ca453d8c3316d70_1920x1920.jpg?ts=1696426666",
+          "severity": "Critical",
+          "summary": "An unauthenticated remote attacker can execute arbitrary commands with root privileges on Cisco Secure Email Gateway by sending a crafted email that exploits insufficient validation in the email parsing logic.",
+          "title": "Cisco Secure Email Gateway SQL injection allows root command execution (CVE-2026-76461)",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-inj-2bLVGmhX"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "Affected members should watch for identity theft and targeted phishing using the leaked personal and health data.",
+          "details": "Discovered November 5; the leak is marked 'NOT PAID — EXPOSED'. Employer group client records, including insurance broker channel contacts, were also exposed.",
+          "image": "https://rincondentistry.com/wp-content/uploads/2019/06/insurance.jpg",
+          "severity": "Critical",
+          "summary": "The N0n group published Delta Dental of Missouri's customer relationship database after the victim reportedly did not pay: 48,528 email addresses, 17,913 phone numbers, and member records with Social Security numbers, dates of birth, home addresses and dental treatment details.",
+          "title": "N0n ransomware leaks Delta Dental of Missouri member data",
+          "url": "https://qpulse.quasarcybertech.com/news/7880/n0n-ransomware-group-exposes-delta-dental-of-missouri-customer-and-member-data"
+        },
+        {
+          "action": "Customers should treat any unexpected message about their account as suspicious and contact the retailer only via a number they already have.",
+          "details": "Discovered November 5 and listed as 'NOT PAID — EXPOSED' on ransomware trackers. The claim has not been independently confirmed by the retailer.",
+          "image": "https://assets-global.website-files.com/62f2764b9576fd8a2837b94c/634d6d9d55ed6cbf9c5a165d_shopping%20experience.jpg",
+          "severity": "High",
+          "summary": "N0n published data from The Container Store: a corpus of 46,013 typed customer chat messages, search session analytics with revenue-per-query data, 9,305 named customer email addresses from the account portal, and a staff directory.",
+          "title": "N0n leaks The Container Store customer chat logs and emails",
+          "url": "https://qpulse.quasarcybertech.com/news/7881/n0n-ransomware-group-leaks-data-from-the-container-store"
+        },
+        {
+          "action": "Treat as an unverified claim; affected staff should rotate credentials and watch for credential-stuffing attempts.",
+          "details": "Listed November 5 via Ransomware.live. Exposure reports found 27 passwords and 22 cookies associated with the victim's domain. The claim itself is unverified.",
+          "image": "https://aibinternational.com/cdn/shop/files/Banner_CakesManufacturing.jpg?v=1725639896&width=1920",
+          "severity": "High",
+          "summary": "The Dark Project ransomware group claims to have exfiltrated over 100 GB of documents from Custom Bakehouse, a US baking-mix company, with infostealer activity linked to 18 compromised user accounts.",
+          "title": "Dark Project claims 100+ GB theft from Custom Bakehouse",
+          "url": "https://qpulse.quasarcybertech.com/news/7853/dark-project-ransomware-group-targets-custom-bakehouse-in-data-exfiltration-attack"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "Monitor for a data sample or a company statement before treating this as a confirmed breach.",
+          "details": "Reported by the ThreatMon Threat Intelligence Team. No independently verified information establishes a successful intrusion, data theft or operational disruption; the claim remains an unverified threat-actor allegation.",
+          "image": "https://wanjun.my/wp-content/uploads/2026/04/Wanjun-ProjectPortfolio-Glove-Manufacturing.png",
+          "severity": "Medium",
+          "summary": "MedusaLocker added Vinit Gloves Manufacturing — an Indian maker of industrial leather gloves and protective workwear — to its victim list on November 5. No data volume, samples or ransom details were disclosed.",
+          "title": "MedusaLocker lists Indian glove maker Vinit Gloves as victim (unverified)",
+          "url": "https://undercodenews.com/medusalocker-claims-two-new-victims-in-india-and-the-it-sector-video/"
+        },
+        {
+          "action": "SBI customers should watch for targeted phishing and fraudulent loan applications using KYC documents.",
+          "details": "SBI's guidance notes that bank employees never ask for passwords or PINs. Report financial cyber fraud by calling 1930 or visiting cybercrime.gov.in. The incident should not be described as confirmed exposure of customers' banking credentials.",
+          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
+          "severity": "Critical",
+          "summary": "Fresh reporting on the confirmed SBI incident says the 3,897 customer records found on the dark web included names, mobile numbers, email and residential addresses, dates of birth, gender, branch and CIF identifiers, and loan-related metadata.",
+          "title": "SBI breach fallout: what was exposed and how to protect your account",
+          "url": "https://www.freepressjournal.in/tech/sbi-data-breach-raises-cybersecurity-concerns-8-steps-to-protect-your-bank-account"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Friday, November 6 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

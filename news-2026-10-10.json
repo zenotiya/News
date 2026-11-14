@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-10",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Upgrade Data Center installs to the fixed releases immediately, outside the normal patch cycle; review access logs for traversal attempts since Oct 5.",
+          "details": "Disclosed Oct 5; every version before the fixed builds is affected, including unsupported ones. Technical analysis and file-read PoC scripts are now public, so attackers need only exact file paths to grab web-root config files — and Atlassian deployments follow predictable directory structures.",
+          "image": "https://cdn.prod.website-files.com/656da6fea306219773d04208/6953a9998d9c263ca1a59b63_Jira%20Software.svg",
+          "severity": "Critical",
+          "summary": "Atlassian patched CVE-2026-21589 (CVSS 9.3), a path-traversal flaw letting an unauthenticated remote attacker read specific files inside the web application root of Jira Software, Jira Service Management, Confluence, Bitbucket, Bamboo, Crowd, Crucible and Fisheye Data Center. Cloud is already fixed.",
+          "title": "Patch now: unauthenticated file read hits 8 Atlassian Data Center products",
+          "url": "https://www.rapid7.com/blog/post/etr-cve-2026-21589-critical-unauthenticated-arbitrary-file-access-in-atlassian-products/"
+        },
+        {
+          "action": "Apply the platform hotfixes now; verify no rogue admin accounts or proxy paths were created on exposed appliances.",
+          "details": "Three more flaws in the same advisory: post-auth OS command injection (7.8), an Appliance Management Console Zip Slip leading to RCE (7.2), and stored XSS. Fixed in 12.4.3-03670 and 12.5.0-03082. SonicWall reports no in-the-wild exploitation yet, but this product line had zero-days exploited for weeks in July.",
+          "image": "https://content.etilize.com/Brand-Logo/1021173174.jpg?noimage=404",
+          "severity": "Critical",
+          "summary": "SonicWall's advisory SNWLID-2026-0017 fixes CVE-2026-102255, a pre-authentication SSRF in the SMA1000 WorkPlace interface (6210, 7210, 8200v) letting an unauthenticated attacker proxy requests through the appliance into internal functions.",
+          "title": "SonicWall SMA1000 pre-auth SSRF rated CVSS 10.0 — hotfix today",
+          "url": "https://cybersecuritynews.com/sonicwall-patches-sma1000-flaws/"
+        },
+        {
+          "action": "Terminate all FortiGate admin and VPN sessions, reset every credential, upgrade FortiOS to complete PBKDF2 migration, enable phishing-resistant MFA, and restrict internet-facing management.",
+          "details": "Operators crack exfiltrated FortiOS hashes offline on rented GPU clusters and sell access to ransomware affiliates (INC/Lynx, Payload); at least 12 confirmed ransomware attacks trace back to FortiBleed. It can't be patched away — it rides on reused/leaked credentials and legacy SHA-256 password storage.",
+          "image": "https://www.intelligentciso.com/wp-content/uploads/sites/6/2020/03/FG_1800F_Side2_1000px-600x344.jpg",
+          "severity": "Critical",
+          "summary": "A joint FBI–US Secret Service advisory (Oct 6) warns the FortiBleed credential-harvesting campaign against internet-facing FortiGate firewalls is ongoing: 86,644 compromised devices across 194 countries, with attackers creating rogue admin accounts and locking legitimate admins out.",
+          "title": "FBI/Secret Service: FortiBleed still locking orgs out of 86K+ Fortinet devices",
+          "url": "https://thecyberexpress.com/fortibleed-campaign-hits-fortinet-devices/"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "If you run on shared cloud infrastructure, verify your off-platform backups are actually independent of the provider's control plane — this is the failure mode.",
+          "details": "JR East and JR Kyushu say up to 7.4 million email records may have leaked; Peach Aviation's itinerary-email system (~1.89M records) was disrupted. The attacker, entry vector and whether data was exfiltrated are undisclosed. Customers must restore from their own backups and rebuild in a separate environment.",
+          "image": "https://image.itmedia.co.jp/tt/news/2212/12/cover_news06.jpg",
+          "severity": "High",
+          "summary": "SoftBank's IDC Frontier confirmed on Oct 7 that ransomware hit East Japan Region 1 of its IDCF Cloud around 3:40 a.m., forcing isolation of the Shirakawa, Fukushima data center. 495 companies and local governments are affected; customer data in four zones is likely unrecoverable.",
+          "title": "Ransomware knocks out Japan's IDCF Cloud — 495 orgs down, data likely unrecoverable",
+          "url": "https://japancyberwatch.com/articles/idcf-cloud-unauthorized-access-outage-2026"
+        },
+        {
+          "details": "No ransomware group ever claimed the attack, and the company says it has no evidence the data was publicly disclosed or misused. Regulatory filings surfaced in California (500+ residents), Vermont and Massachusetts — a case study in how long 'we don't know yet' can legally stretch.",
+          "severity": "High",
+          "summary": "Japanese chip-test-equipment giant Advantest confirmed on Oct 6 that data was exfiltrated in the February 2026 ransomware incident: names, dates of birth, SSNs, passport and driver's license numbers, national IDs, plus medical and financial information.",
+          "title": "Advantest confirms data theft — eight months after the February ransomware hit",
+          "url": "https://labs.cosmicbytez.ca/news/2026-10-07-advantest-discloses-data-breach-months-after-ransomware-attack"
+        },
+        {
+          "details": "All three follow the double-extortion playbook: exfiltrate first, then threaten publication. Healthcare remains a premium target because patient-data sensitivity and downtime pressure raise payment odds.",
+          "image": "https://www.experten.de/content.4927326.images.qkzbq.Hacker-284296472-AS-Sergey-Nivens.jpg",
+          "severity": "Medium",
+          "summary": "New leak-site listings this week: Nightspire claims KC Pharmaceuticals (US healthcare, listed Oct 9), Silentransomgroup claims law firm O'Hagan Meyer (Oct 8), and Anubis claims Mynd Group with property-owner data exfiltration (Oct 9).",
+          "title": "Leak-site watch: Nightspire claims KC Pharmaceuticals; Silentransomgroup hits O'Hagan Meyer",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/kc-pharmaceuticals-inc-nightspire-2026"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "If you run Checkmarx or share sensitive client data with Big Four firms, inventory where your documents sit on their platforms and ask what controls cover them.",
+          "details": "EY notified regulators in California, Texas, Massachusetts and Vermont, and says broader enterprise systems were unaffected. Experts note this follows the 2023 MOVEit breach that hit 30,210 Bank of America clients — and flag AI tooling plus third-party software as the widening risk surface at the Big Four.",
+          "image": "https://eytaxworkflow.ey.com/images/background-login.jpg",
+          "severity": "High",
+          "summary": "EY told affected clients an unauthorized third party accessed an IT-team platform between March 28 and April 12, 2026 via a Checkmarx software vulnerability, downloading documents for several tax-services clients — reportedly linked to Goldman Sachs and Man Group.",
+          "title": "EY breach via Checkmarx flaw puts Big Four client-data controls in the spotlight",
+          "url": "https://ciso.economictimes.indiatimes.com/news/data-breaches/ey-data-breach-puts-spotlight-on-data-security-at-big-four-as-clients-demand-tighter-controls/134846327"
+        },
+        {
+          "details": "Manufacturing targets are prized because production downtime converts directly to financial loss. India ranks #8 worldwide for ransomware disclosures, with 485 victims in the tracking database.",
+          "image": "https://www.oswalvalves.com/lib/blogs/thumbs/1776638431_valve-manufacturing.jpg",
+          "severity": "Medium",
+          "summary": "The Eclipse ransomware group listed simplexengg.in on its leak site on Oct 8, 2026. The Indian manufacturing-sector firm is now in double-extortion territory: data exfiltrated before encryption, publication threatened.",
+          "title": "Eclipse ransomware lists Indian engineering firm simplexengg.in",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/simplexengg-in-eclipse-2026"
+        },
+        {
+          "details": "The Oct 9 roundup also flags a Hyderabad loan-app extortion probe and the Centre's new AI regulatory framework bringing deepfakes and agentic AI under scrutiny.",
+          "image": "https://sw24news.com/wp-content/uploads/2026/08/upi_alert_7A_99_1-860x484.jpg",
+          "severity": "Medium",
+          "summary": "Gujarat Cyber Police uncovered a ₹11-crore fraud trail across 79 mule accounts run by Dubai-based operators, and the CBI sought prosecution sanction against six IAS officers in a ₹504-crore banking fraud case. Separately, the PM called for a global mechanism against cyber fraud and deepfakes.",
+          "title": "Oct 9 India cyber roundup: ₹11-cr mule network busted; PM pushes global anti-fraud mechanism",
+          "url": "https://the420.in/india-cyber-tech-news-9-october-2026/"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Saturday, October 10 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

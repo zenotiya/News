@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-04",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Update WordPress core to 7.1.4 or the branch backport, and block HTTP access to /wp-content/upgrade/ until patched.",
+          "details": "Wordfence, the assigning CNA, scores the flaw CVSS 8.1 and says it affects WordPress Core 4.7 through 7.1.3; WordPress 7.1.4, released October 28, fixes it. CISA flagged the entry for forensic triage, meaning affected sites should be checked for signs of compromise, not just patched.",
+          "image": "https://bentenweb.com/blog/wp-content/uploads/2026/03/ead672b23ce5a01726d77b537bfa7d7e-768x429.jpg",
+          "severity": "High",
+          "summary": "CISA added CVE-2026-119977, a time-of-check time-of-use race condition in the WordPress core upgrade process, to its Known Exploited Vulnerabilities catalog on November 3 based on evidence of active exploitation. Federal agencies must remediate by November 6.",
+          "title": "CISA adds actively exploited WordPress flaw to KEV; patch by Nov 6",
+          "url": "https://carthageelectronics.com/november-3-2026-cve-threat-brief/"
+        },
+        {
+          "action": "Update every cPGuard server to 5.88.25 or later, then reset passwords and rotate database credentials, cloud secrets and SSH keys.",
+          "details": "The script collected /etc/shadow and /etc/passwd, root database configuration, root shell history and root SSH files. OpsShield detected the compromise within 12 hours; its advisory put the preliminary count of confirmed retrieved files at 32 customer servers, so the full scope was still being verified. Updating to 5.88.25 or later removes the backdoor and staged files but does not invalidate stolen secrets.",
+          "image": "https://www.transgridenergy.com/assets/data-center-racks-309.jpg",
+          "severity": "Critical",
+          "summary": "OpsShield said an attacker used compromised credentials on November 2 at 02:06 UTC to push a malicious script through the cPGuard update channel to versions 5.88.12 through 5.88.19, installing a backdoor and collecting password hashes and sensitive files. An OpsShield spokesperson told BleepingComputer 2,946 servers were affected.",
+          "title": "cPGuard update channel hijacked to push backdoor to nearly 3,000 servers",
+          "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-cpguard-autoupdate-to-deploy-backdoor-steal-data/"
+        },
+        {
+          "action": "Apply your distribution's fixed kernel and reboot; on Ubuntu, watch for the fix leaving -proposed, and consider the IPv4-options firewall mitigation in the meantime.",
+          "details": "No exploitation in the wild had been reported as of late October, and a demonstrated research exploit had not been published. Red Hat described a firewall mitigation dropping inbound TCP packets carrying IPv4 options, which the known attack relies on.",
+          "image": "https://tuxcare.com/wp-content/uploads/2024/01/debian-linux-security-updates.png",
+          "severity": "Critical",
+          "summary": "CVE-2026-98432, a use-after-free race condition in the Linux kernel's IPv4 TCP handshake code scored CVSS 9.8, affects kernels as far back as 4.4 and is reachable by a remote, unauthenticated attacker. Red Hat has shipped fixes; Canonical's fixed kernels were still sitting in Ubuntu's -proposed pocket on November 3, not delivered by a normal apt upgrade.",
+          "title": "Critical Linux kernel TCP flaw CVE-2026-98432: Red Hat fixed, Ubuntu fix still in testing",
+          "url": "https://pbxscience.com/ubuntu-fix-for-cve-2026-98432-is-built-but-not-yet-released/"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "Protect backup-server credentials, restrict unmanaged hosts, and segment Active Directory trusts between sites so one estate cannot pivot into another.",
+          "details": "The suspicion rests on command behaviour: repeated, slightly modified commands issued at roughly 40-to-100-second intervals. Bitdefender said it could not access the machine the attacker worked from, so it could not identify a model or rule out a person relaying commands, and it could not establish the initial access method. The attacker used a modified PowerShell tool to extract credentials from three Veeam backup servers and deployed Mimikatz and LSASS dumping tools.",
+          "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:good:444,e_sharpen:60/rockcms/2021-04/210409-ransomware-schools-2x1-cs-e05329.jpg",
+          "severity": "High",
+          "summary": "Bitdefender reported on November 3 that a 3AM ransomware affiliate encrypted around 37 of nearly 50 machines it reached at a UK school estate during an intrusion spanning September 10-19, after stealing backup credentials and creating rogue domain-admin accounts. Bitdefender suspects an AI-driven agentic loop drove some commands, but says it could not confirm model use.",
+          "title": "3AM ransomware hit UK school estate in suspected AI-assisted attack",
+          "url": "https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/"
+        },
+        {
+          "action": "Rotate AI API keys, manage them in a central secrets platform, enforce phishing-resistant MFA, and set API usage and spending limits with billing alerts.",
+          "details": "One actor made more than 500,000 LLM API calls in under eight hours through the Jet Night routing service, passing nearly $1 million in token costs to one victim. Researchers identified two operational clusters, including UNC6993, and saw attackers exploiting CVE-2026-40217 in LiteLLM to run arbitrary code.",
+          "image": "https://www.gstatic.com/bricks/image/Ez-iDBLhZQi_x6HbM6tSGZjkFe9K4Ycc9QyFOwejCZP6SaHMFDpvVDaqAEm03-rGoYkLsqX1sTop.jpeg",
+          "severity": "High",
+          "summary": "Google Threat Intelligence Group and Mandiant reported on November 2 that LLMjacking incidents in 2026 ran up fraudulent cloud charges exceeding $100,000 in a single day at some organisations, reaching $1 million cumulatively before access was revoked. Attackers steal API keys or find exposed LLM endpoints, then resell the access through 'LLM mixer' gateways.",
+          "title": "LLMjacking: stolen AI keys ran up $1 million in cloud charges, Google and Mandiant warn",
+          "url": "https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/"
+        },
+        {
+          "action": "If you share suppliers or credentials with a listed organisation, rotate shared credentials and watch for phishing using the claimed data.",
+          "details": "The exposure report cited in the listing pointed to 34 compromised users and 84 passwords associated with the domain, with 10 classified as critical. Treat leak-site listings as claims until the named organisation confirms an incident.",
+          "image": "https://securitybrief.co.nz/uploads/story/2026/04/29/compatible_dark-lock-ransomware-extortion-leak-site-laptop-screens.jpg",
+          "severity": "Medium",
+          "summary": "The Ransomware.live tracker reported that INC Ransom claimed roundglass.com as a victim on November 3, with the report citing infostealer-linked credential exposure. The claim is unverified: the report does not confirm what data was exfiltrated or the victim's current operational status.",
+          "title": "INC Ransom claims Roundglass among November 3 leak-site listings (unverified claim)",
+          "url": "https://qpulse.quasarcybertech.com/news/7757/incransom-ransomware-group-claims-attack-on-roundglass-com"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "Treat any SBI-related loan or account data as potentially circulating; watch for targeted phishing and fraudulent loan applications using KYC documents.",
+          "details": "The exposed records reportedly included names, mobile numbers, dates of birth, email and residential addresses, branch and CIF identifiers, lead IDs and loan/lead metadata. SBI received alerts about the possible exposure on October 16 from its threat-intelligence provider, the Defence Cyber Agency and CERT-In, and engaged an independent CERT-In-empanelled agency to investigate.",
+          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
+          "severity": "High",
+          "summary": "State Bank of India chairman C. S. Setty said on November 3 that the root-cause analysis of the suspected cyberattack that exposed 3,897 customer records on the dark web was still under way, alongside an API sweep and vulnerability assessments. SBI is stepping up AI-powered cybersecurity tools and working with the banking industry on a common sandbox to evaluate AI models.",
+          "title": "SBI still probing breach; chairman says root-cause analysis under way",
+          "url": "https://www.businesstoday.in/technology/news/story/sbis-cyber-wake-up-call-after-data-breach-fight-ai-with-ai-565464-2026-11-03"
+        },
+        {
+          "details": "The disclosure came in a regulatory filing on November 2. The company said an investigation was under way, with updates on potential recoveries to be communicated to stock exchanges, and that it had filed insurance claims.",
+          "severity": "High",
+          "summary": "Spandana Sphoorty Financial Ltd reported unauthorised transactions of approximately Rs 7.80 crore debited from one of its bank accounts on November 1, transferred through multiple transactions to 82 beneficiary accounts. The company stopped the affected services, informed the bank seeking reversal and freezing of beneficiary accounts, and filed a complaint on the National Cyber Crime Reporting Portal.",
+          "title": "Spandana Sphoorty reports Rs 7.80 crore cyber fraud across 82 accounts",
+          "url": "https://newsable.asianetnews.com/business/spandana-sphoorty-reports-rs-7-80-crore-fraud-through-cyber-attack-articleshow-09v5z5v"
+        },
+        {
+          "details": "SBI is investigating the cause and strengthening its cybersecurity measures while the shared mechanism is developed. Faster structured sharing between banks is intended to improve collective response to incidents affecting the sector.",
+          "image": "https://static.toiimg.com/photo/90947057.cms",
+          "severity": "Medium",
+          "summary": "The Indian Banks' Association is developing a mechanism for banks to share cyber-incident information and improve response coordination, following the breach that exposed 3,897 SBI customer records, according to a November 4 report.",
+          "title": "Indian Banks' Association building shared cyber-incident sharing mechanism after SBI breach",
+          "url": "https://www.thehindubusinessline.com/multimedia/audio/top-business-market-headlines-today-bl-morning-report-november-4-2026/article71662298.ece"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Wednesday, November 4 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

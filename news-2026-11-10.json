@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-10",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Upgrade OpenSSH to 10.6p2 on Alpine, OpenWrt, Buildroot and other musl-based hosts, and set passwords or disable password auth on any account that currently has none.",
+          "details": "As of November 9, 2026, 20 exploitation attempts were recorded from 13 unique IP addresses across Denmark, Iran, Japan, the Netherlands, Norway, Singapore, Sweden, Switzerland and the U.S. Fixed in OpenSSH 10.6p2.",
+          "image": "https://www.101howto.com/wp-content/uploads/2026/03/2026-03-28-07-06-00-linux-server-security-hardening.jpg",
+          "severity": "High",
+          "summary": "Attackers are attempting to exploit CVE-2026-123158 (CVSS 8.1), the OpenSSH flaw dubbed SSHole that lets anyone sign in to password-less accounts on musl-libc systems with PAM disabled, including Alpine Linux's default sshd setup.",
+          "title": "SSHole flaw now seeing exploitation attempts",
+          "url": "https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html"
+        },
+        {
+          "action": "Patch GS1900 switches immediately and audit them for unexpected config changes, new accounts and the JITTERLY/SIXZUT indicators.",
+          "details": "The out-of-bounds write flaw lets a LAN-based unauthenticated attacker execute OS commands via a crafted HTTP request. Activity is attributed to a Chinese-speaking actor tracked as Kapibala (aka Red Heron), which deployed the JITTERLY backdoor and the SIXZUT ring-3 rootkit. Zyxel has released a fix.",
+          "image": "https://strapi-bucket-prod-287678752366.s3.us-east-1.amazonaws.com/cisco_nexus_9000_hardware_support_technician_55f456d81b.webp",
+          "severity": "High",
+          "summary": "Threat actors exploited a zero-day in Zyxel GS1900 series switches, tracked as CVE-2026-107441 (CVSS 8.8), to compromise nearly 1,000 devices worldwide and steal configuration files and credentials.",
+          "title": "Zyxel zero-day exploited on ~1,000 network switches",
+          "url": "https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html"
+        },
+        {
+          "action": "Apply today's cumulative update and plan migration off 23H2 Enterprise/Education before the next Patch Tuesday; prioritise the Entra fix (CVE-2026-109469) in Azure environments.",
+          "details": "Microsoft's servicing documentation states the November 2026 update is the final one for 23H2 Enterprise and Education, and recommends moving eligible devices to Windows 11 25H2, which is supported until October 11, 2028. The early-November release also included a Critical Entra Device Registration elevation-of-privilege flaw, CVE-2026-109469 (CVSS 10.0).",
+          "image": "https://cdn.urbandigital.id/wp-content/uploads/2022/01/windows-11-update-on-laptop-cnet-july-2021-lifestyle-764x430.jpg",
+          "severity": "High",
+          "summary": "Microsoft ships its November security update today, November 10 — the last ever for Windows 11 version 23H2 Enterprise and Education. After today those editions receive no further monthly security fixes.",
+          "title": "Patch Tuesday: Windows 11 23H2 Enterprise reaches end of updates today",
+          "url": "https://myindustrynews.net/TenantSites/1bf91c5e-dbc9-4e91-a10c-d949ca1d094d/2026/11/1a6b9ae5-d078-4285-bd3e-756f93ae7596.html"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "Treat any Vanderbilt credentials as exposed; watch for phishing using university data and expect the gang to publish samples if its demands are not met.",
+          "details": "BYOD, which emerged in September, listed Vanderbilt on its leak site claiming full domain-controller takeover plus SSNs, names, emails, phone numbers and student and employee records. The claims are unverified and no sample files have been published; the university has confirmed a breach but not what data was taken. The same gang also listed the Texas Health and Human Services Commission on Monday.",
+          "image": "https://labs.k7computing.com/wp-content/uploads/2022/05/APT-Attacks-on-EDU2-1024x512.png",
+          "severity": "Critical",
+          "summary": "Vanderbilt University told students, faculty and staff on November 9 to shut down university devices and leave campus Wi-Fi while IT responds to an active cybersecurity incident, as the new ransomware gang BYOD claims to have taken over the network and stolen over a million Social Security numbers.",
+          "title": "Vanderbilt University goes offline as BYOD ransomware gang claims 1M+ SSNs",
+          "url": "https://databreach.com/news/77-vanderbilt-orders-campus-offline-as-ransomware-gang-says-it-took-over-the-network"
+        },
+        {
+          "details": "The incident was discovered at 03:59 UTC on November 9, the same day listed as the estimated attack date. Details of what data was taken have not been independently verified.",
+          "image": "https://informationage-production.s3.amazonaws.com/uploads/2022/10/AdobeStock_152684268-scaled.jpeg",
+          "severity": "High",
+          "summary": "The Anubis ransomware group claimed a data breach of Cuomo LLC on November 9, 2026, listed via the Ransomware.live tracker. The group has recently targeted several other organisations including Kahler Automation, Santiam Hospital & Clinics and Mynd.",
+          "title": "Anubis ransomware claims breach of law firm Cuomo LLC",
+          "url": "https://qpulse.quasarcybertech.com/news/8037/anubis-ransomware-group-claims-data-breach-of-cuomo-llc"
+        },
+        {
+          "action": "If you use mSecure, change your master password, rotate stored credentials starting with email and banking, and reset 2FA and passkeys.",
+          "details": "mSeven Software said it launched an investigation, took mitigation steps and engaged external experts, but has not answered what the activity involved, when it occurred, or whether customer data was accessed. In December 2025 Germany's BSI found the maker could, in theory, access the data users store in it.",
+          "image": "https://blog.grantmcgregor.co.uk/hubfs/password%20manager%202.png",
+          "severity": "High",
+          "summary": "Password manager mSecure has warned customers to change their passwords, reset two-factor authentication and potentially remove passkeys after detecting suspicious activity — but has not explained what happened or whether any secrets were exposed.",
+          "title": "Password manager mSecure urges customers to change passwords after suspicious activity",
+          "url": "https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "BFSI teams should audit payment APIs and disbursement flows, flag Re 1 test transfers, and tighten monitoring over weekends and holidays; report incidents to CERT-In within six hours.",
+          "details": "The November 4 advisory (CSIRT-Fin) says the actor uses publicly available AI offensive tools — ARTEX, PentAGI, Cairn and CyberStrikeAI — to exploit payment and disbursement APIs, test fund flows with a Re 1 transfer, then move money to mule accounts via IMPS and NEFT. Attacks are timed for holidays and weekends to delay detection. Separately, a backdoored ARTEX build was found serving 62 internet-exposed consoles to root access between November 2 and 4.",
+          "image": "https://klearstack.com/_next/image?url=%2Fassets%2Fimages%2Fsolution-template%2Ffraud-patterns%2Fpattern-duplicate-detection.png&w=640&q=75",
+          "severity": "Critical",
+          "summary": "CERT-In has disclosed that an AI-assisted threat actor it tracks as Crafty Falcon is targeting Indian banking, financial services and insurance organisations, re-attacking firms that remediated incompletely after its October warning.",
+          "title": "CERT-In flags AI-driven 'Crafty Falcon' attacks on Indian banks and fintechs",
+          "url": "https://thehackernews.com/2026/11/backdoored-docker-image-for-artex-ai.html"
+        },
+        {
+          "action": "SBI customers should watch for phishing and fraudulent loan applications using the exposed KYC details; the bank says account balances and funds are safe.",
+          "details": "The bank says containment is complete, affected customers have been contacted, and it has run API sweeps and vulnerability assessments. The leaked data reportedly included names, mobile numbers, email and residential addresses, dates of birth, gender, branch and CIF identifiers and loan/lead metadata. The Indian Banks' Association is working on faster incident information-sharing among banks.",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/State_Bank_of_India.svg/3840px-State_Bank_of_India.svg.png",
+          "severity": "High",
+          "summary": "State Bank of India is still evaluating the root cause of the recent breach that exposed personal data of 3,897 customers on the dark web, chairman C. S. Setty said at the bank's post-earnings press conference on November 3.",
+          "title": "SBI still evaluating root cause of data breach, chairman says",
+          "url": "https://www.financialexpress.com/business/banking-finance-sbi-still-evaluating-cause-of-recent-data-breach-setty-4376324/"
+        },
+        {
+          "details": "The claim was flagged by Dark Web Intelligence (@DailyDarkWeb). No sample records, screenshots or file listing have been provided to establish authenticity, and Parle Agro has not confirmed anything. Treat this as an unverified claim, not a confirmed breach.",
+          "severity": "Medium",
+          "summary": "A threat actor allegedly published about 30GB of data attributed to Parle Agro, the Indian beverage company behind Frooti, Appy Fizz and Bailley, on a dark web forum on November 2.",
+          "title": "Threat actor claims 30GB data leak from Parle Agro — unverified",
+          "url": "https://undercodenews.com/parle-agro-hit-by-30gb-dark-web-data-leak-claim-frooti-appy-fizz-and-bailley-brand-under-cybersecurity-scrutiny-video/"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Tuesday, November 10 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

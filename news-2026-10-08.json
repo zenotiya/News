@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-08",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Patch self-hosted Data Center deployments immediately or isolate them from the internet.",
+          "details": "Attackers need the exact filename/path, but a public PoC can escalate to Jira admin. Atlassian Cloud is already patched; self-hosted instances must patch or be taken off the internet.",
+          "severity": "Critical",
+          "summary": "CVE-2026-21589 (CVSS 9.3): unauthenticated arbitrary file access across 8 Atlassian Data Center products — Jira, Confluence, Bitbucket and more. Previdian saw exploit attempts from Japan and US IPs within 2 hours of watchTowr's disclosure; a Nuclei scan template is now public.",
+          "title": "Atlassian Data Center flaw exploited within hours of public PoC",
+          "url": "https://thehackernews.com/2026/10/atlassian-data-center-flaw-draws.html",
+          "image": "https://catworkx.one/hs-fs/hubfs/2560px-Atlassian-logo.svg.png?width=2560&height=318&name=2560px-Atlassian-logo.svg.png"
+        },
+        {
+          "action": "Apply the SMA1000 hotfix and restrict portal access from the internet.",
+          "details": "Hotfixes released Oct 6 (12.4.3-03670+, 12.5.0-03082+). No in-the-wild exploitation confirmed, but Shadowserver tracks 400+ internet-exposed appliances and SMA1000 flaws have been zero-dayed repeatedly this year.",
+          "severity": "Critical",
+          "summary": "CVE-2026-102255: unauthenticated server-side request forgery in the SMA1000 (6210, 7210, 8200v) WorkPlace portal lets a remote attacker issue requests as the appliance and reach internal functions.",
+          "title": "SonicWall patches CVSS 10.0 pre-auth SSRF in SMA1000",
+          "url": "https://thehackernews.com/2026/10/sonicwall-patches-cvss-100-pre.html",
+          "image": "https://www.ipcstore.com/media/catalog/product/1/0/100862370_7549101497.jpg"
+        },
+        {
+          "action": "Audit FortiGate admin accounts for unauthorized additions, rotate credentials, and review the joint FBI/USSS advisory.",
+          "details": "The campaign feeds INC/Lynx and Payload ransomware groups via initial access brokering; at least 12 confirmed ransomware attacks trace back to it.",
+          "severity": "High",
+          "summary": "The Russian-speaking FortiBleed operation has harvested credentials from 86,644+ Fortinet devices across 194 countries (credential stuffing + GPU hash cracking) and is now locking admins out of their own FortiGates by creating new accounts and deleting legitimate ones.",
+          "title": "FBI/USSS confirm FortiBleed credential-harvesting campaign still active",
+          "url": "https://www.theregister.com/security/2026/10/07/fortibleed-still-a-bleeding-nuisance-as-fbi-confirms-ongoing-attacks/5301585",
+          "image": "https://cotech.com.ar/assets/images/fortinet-1.webp"
+        },
+        {
+          "action": "Upgrade NetScaler to the fixed builds even if the September patches are installed.",
+          "details": "Distinct bug from the Sep 29 zero-days (CVE-2026-88771/88772) — appliances already patched then must upgrade again.",
+          "severity": "High",
+          "summary": "CVE-2026-88779 (CVSS 8.7 v4.0): unauthenticated memory-overflow DoS in the SAML handler of NetScaler ADC/Gateway 14.1 (before 14.1-73.41) and 13.1 (before 13.1-64.28). Norway's NSM suspects possible RCE despite Citrix's DoS classification; added to CISA KEV Oct 4.",
+          "title": "Citrix NetScaler SAML zero-day added to CISA KEV",
+          "url": "https://threatprotect.qualys.com/2026/10/05/cisa-warns-of-citrix-vulnerability-active-exploitation-in-attacks-cve-2026-88779/",
+          "image": "https://loni.ai/wp-content/uploads/2021/06/Citrix.svg"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "details": "ASOS has not named the platform or attributed the attack; the Snowflake claim is unverified. Reported via LSE filing Oct 7.",
+          "severity": "High",
+          "summary": "Hackers compromised a third-party customer-communication platform; rogue push notifications titled 'ASOS hacked' went to app users on Oct 6 claiming the 'Snowflake instance' was fully compromised, demanding contact via a Telegram channel. Basic user info (names, contact details) may have been accessed; payment-card info and passwords not believed impacted.",
+          "title": "ASOS confirms cyberattack after rogue 'hacked' push notifications",
+          "url": "https://www.securityweek.com/asos-confirms-cyberattack-data-breach/",
+          "image": "https://uploads-ssl.webflow.com/620f72a07808425a42ca75f2/64d63879ee91b562a6a0a0ce_Logo_ASOS.png"
+        },
+        {
+          "details": "Number of affected individuals not stated in public reporting. Notification dated Oct 6.",
+          "severity": "High",
+          "summary": "The Japanese semiconductor test-equipment maker confirms data was exfiltrated in the Feb 15 ransomware attack, after months of investigation. Exposed PII includes contact info, dates of birth, SSNs, national IDs, driver's licenses, passports, medical and financial information.",
+          "title": "Advantest confirms personal data stolen in February ransomware attack",
+          "url": "https://www.bleepingcomputer.com/news/security/advantest-confirms-personal-information-stolen-in-ransomware-attack/",
+          "image": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/942958784856.png"
+        },
+        {
+          "details": "SRG targets law firms via phone calls, emails and in-person visits; the FBI warned about the group in May 2026.",
+          "severity": "High",
+          "summary": "An unknown party published alleged troves of Silent Ransom Group data — chat logs, ransom demand totals, docs, dozens of crypto wallets. Chainalysis confirmed some leaked addresses sit downstream of millions in ransomware payments, including a $10M mid-2026 payment. Reuters could not independently verify the leak's authenticity.",
+          "title": "'Luna Moth Files' leak exposes Silent Ransom Group's ransom payments",
+          "url": "https://www.reuters.com/legal/government/leak-exposes-payments-made-hacking-group-that-has-extorted-millions-law-firms-2026-10-07/",
+          "image": "https://digitrendz.blog/wp-content/uploads/2025/12/ransomware-2-780x470.webp"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "details": "Kerala led with 35 arrests; mule commissions went up to 5%. Director Shikha Goel briefed the press Oct 7.",
+          "severity": "Medium",
+          "summary": "TGCSB announced Oct 7 a two-week operation across six states targeting mule-account networks behind online fraud: 101 arrested (19 agents, 81 mule account holders). Investigators traced 1,172 crime links across India involving roughly ₹17 crore, linked to 51 registered cases.",
+          "title": "Telangana Cyber Security Bureau arrests 101 in six-state mule-account crackdown",
+          "url": "https://thesouthfirst.com/telangana/telangana-cyber-security-bureau-arrests-101-in-six-state-operation-against-cyber-fraud/",
+          "image": "https://telugu.themangonews.com/wp-content/uploads/2025/02/scam-in-hyderabad-1068x601.jpg"
+        },
+        {
+          "details": "Caveat: police have NOT established that Adani Gas or UCO Bank systems were hacked — the data's source (breach vs insider vs purchased databases) is still under investigation. Five earlier arrests (Surat residents) are already jailed.",
+          "severity": "High",
+          "summary": "Faridabad Cyber Central Police arrested two more men — alleged ringleader Deepak Kumar Mandal (Giridih) and Anil Kumar Mandal (Deoghar) — in a case where a gang posed as Adani Gas staff, sent malicious APK 'gas bill' files and siphoned ₹5,12,334 from a victim. Police recovered data on ~20,000 Adani Gas consumers and ~1,000 UCO Bank customers; 116 people received the APKs.",
+          "title": "Data on ~20,000 Adani Gas customers found with interstate APK-fraud gang",
+          "url": "https://the420.in/faridabad-adani-gas-apk-fraud-deepak-mandal-arrest/",
+          "image": "https://www.armorfire.in/public/upload/oursuccess/521756464652.jpg"
+        },
+        {
+          "severity": "Medium",
+          "summary": "Surat City Cyber Crime Cell arrested Mumbai businessman Imran Khilchi on Oct 7 for allegedly lending his firm's current account to fraudsters for a ₹12,000 commission. The account was used in a fake e-commerce scheme where the complainant lost ₹5,88,909; investigators found ₹1.36 crore moved through it between April 2021 and Sept 2026.",
+          "title": "Surat cyber crime arrests Mumbai businessman over mule account",
+          "url": "https://www.nationpress.com/national/mumbai-man-held-in-surat-e-commerce-cyber-fraud",
+          "image": "https://www.deccanchronicle.com/h-upload/2025/03/07/1896870-cybercops.jpg"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Thursday, October 8 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

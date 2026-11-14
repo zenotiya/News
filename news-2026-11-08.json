@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-08",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Check devices are on the 2026-11-01 patch level (2026-11-05 covers all November flaws) and push OEM/carrier updates urgently; flag unpatched Android 14–17 devices in fleet inventories.",
+          "details": "The flaw is an out-of-bounds write in FrameDecoder.cpp. Google's November bulletin lists 216 vulnerabilities, 23 rated Critical, including CVE-2026-58882, which can crash emergency calls via a malformed WAP Push SMS. No active exploitation was reported as of the bulletin date.",
+          "image": "https://mjbtechtips.com/wp-content/uploads/2025/03/android-security-update-860x483.jpg",
+          "severity": "Critical",
+          "summary": "Google's November security bulletin patches CVE-2026-58868, a heap buffer overflow in Android 14–17 that lets a remote attacker run code with no user interaction. It is fixed in security patch level 2026-11-01 or later.",
+          "title": "Critical Android RCE (CVE-2026-58868) needs no user interaction",
+          "url": "https://thehackernews.com/2026/11/google-patches-critical-android-flaw.html"
+        },
+        {
+          "action": "Update SIMATIC IoT2050 Advanced gateways to V4.3.4-1 immediately; ensure Node-RED instances are never exposed to the internet without authentication.",
+          "details": "Siemens confirmed the flaw affects Industrial OS versions before V4.3.4-1 on the SIMATIC IoT2050 Advanced (6ES7647-0BA00-1YA2). The maximum CVSS 10.0 score reflects unauthenticated remote code execution on exposed hosts.",
+          "severity": "Critical",
+          "summary": "VulnCheck warned on Nov 2 that threat actors are actively exploiting CVE-2026-58115, a missing-authentication flaw in Node-RED on Siemens SIMATIC IoT2050 Advanced gateways, letting unauthenticated attackers run arbitrary system commands. Exploitation began Oct 30.",
+          "title": "Node-RED RCE (CVE-2026-58115, CVSS 10.0) exploited in the wild",
+          "url": "https://securityonline.info/node-red-rce-vulnerability-cve-2026-58115/"
+        },
+        {
+          "action": "Update Node.js to the patched 22.x/24.x/26.x releases and upgrade Brotli libraries in all dependent software; scan for bundled copies in containers and edge services.",
+          "details": "The flaw drew attention through Node.js, which bundles the Brotli decoder; Node.js shipped security updates for its 22.x, 24.x and 26.x lines on Oct 21. Vulnerable upstream Brotli versions are 1.0.3–before 1.0.10, 1.1.0–before 1.1.1, and 1.2.0–before 1.2.1.",
+          "severity": "Critical",
+          "summary": "A memory-corruption flaw in Google's Brotli decompression library (CVE-2026-111497) is being actively exploited, according to Malaysia's national cyber centre, and was added to CISA's KEV catalog on Oct 27. Crafted compressed data can crash processes, leak memory or lead to remote code execution.",
+          "title": "Brotli flaw (CVE-2026-111497) exploited — patch Node.js and dependents",
+          "url": "https://newsflayer.com/2026/11/04/cve-2026-111497-brotli-vulnerability/"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "Treat as an unverified claim for now; watch for Maersk confirmation and, if you ship with Maersk, review any shared credentials and monitor for credential-stuffing attempts.",
+          "details": "The leak-site post claims 16,093 driver records include plaintext passwords, plus 16,123 staff accounts (33 SUPER_ADMIN), 18,913 delivery recipient names and addresses, and 64,665 signed delivery receipts. The claim is unverified by Maersk.",
+          "image": "https://cdn.prod.website-files.com/6673f8e6b5e0188c03e013cc/687c8648873346a516b4ff17_container%20ship%20and%20shipping%20port%20software.jpg",
+          "severity": "High",
+          "summary": "Ransomware group WhiteArmor listed shipping giant Maersk on its leak site on Nov 7, claiming about 100GB of data from the OCF/LF Logistics platform, including 29,297 driver records, and setting a $5 million Bitcoin ransom with a Dec 7 publication deadline.",
+          "title": "WhiteArmor lists Maersk, claims ~100GB and demands $5M",
+          "url": "https://www.hookphish.com/blog/ransomware-group-whitearmor-hits-maersk/"
+        },
+        {
+          "action": "Brokerage and insurance clients should watch for phishing using policy details; firms should review third-party and broker data-sharing exposure.",
+          "details": "The leak exposes sensitive client documents and internal underwriting records, raising identity-theft, fraud and regulatory risks for affected clients. The attack vector was not disclosed.",
+          "image": "https://www.staplesagency.com/wp-content/uploads/2026/03/How-to-File-an-Insurance-Claim-A-Step-by-Step-Guide-980x551.jpg",
+          "severity": "High",
+          "summary": "Ransomware group N0n published stolen data from US insurance brokerage Higginbotham on Nov 7 — over 217,000 client policy and working documents dating from 2013 to 2026 — after the firm did not pay.",
+          "title": "N0n leaks 217,000+ documents from insurance broker Higginbotham",
+          "url": "https://qpulse.quasarcybertech.com/news/7984/n0n-ransomware-group-leaks-over-217-000-documents-from-insurance-brokerage-higginbotham"
+        },
+        {
+          "action": "Healthcare and pharma teams should treat infostealer credentials as a ransomware precursor — rotate exposed credentials and hunt for stealer infections.",
+          "details": "The compromise was flagged through infostealer activity detected by Hudson Rock. No encryption details or ransom demand were disclosed, and the claim remains an active threat-actor claim.",
+          "image": "https://cyberflux.pl/wp-content/uploads/2026/03/wpis-o-ransomware-480x320.webp",
+          "severity": "Medium",
+          "summary": "The Qilin ransomware group claimed an attack on Brazilian healthcare company Roxfarma on Nov 7. Infostealer telemetry linked to the incident shows 219 exposed passwords (28 critical) and 23 cookies.",
+          "title": "Qilin claims Brazilian pharma firm Roxfarma",
+          "url": "https://qpulse.quasarcybertech.com/news/8006/qilin-ransomware-group-claims-attack-on-roxfarma"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "BFSI teams should follow CERT-In advisories CIAD-2026-0046 and CIAD-2026-0049: set transfer limits, verify beneficiaries, flag fast transactions, separate test from live systems, and heighten monitoring on weekends and holidays.",
+          "details": "The campaign uses publicly available AI offensive-security tools (ARTEX, PentAGI, Cairn, CyberStrikeAI) to automate break-ins at machine speed, probing payment APIs, testing with Re 1 transfers, then moving funds via mule accounts over IMPS/NEFT. CERT-In calls the threat active and ongoing; at least two of the tools have been linked to China.",
+          "image": "https://www.infinixtechnology.com/_next/image?url=https%3A%2F%2Fuploads.infinixtechnology.com%2Fcybersecurity-ai-how-ai-is-changing-digital-security.png&w=750&q=75",
+          "severity": "High",
+          "summary": "CERT-In's Nov 4 advisory named the AI-assisted 'Crafty Falcon' campaign hitting Indian banks, NBFCs, fintechs and crypto exchanges — and researchers found the ARTEX tool it uses was shipped as a backdoored Docker image, with 62 consoles serving the trojanised build between Nov 2 and 4.",
+          "title": "Backdoored ARTEX build found behind CERT-In's 'Crafty Falcon' bank attacks",
+          "url": "https://thehackernews.com/2026/11/backdoored-docker-image-for-artex-ai.html"
+        },
+        {
+          "action": "Public institutions should review payment-approval controls, dual authorisation and transaction alerts on salary and institutional accounts.",
+          "details": "The funds were the institution's salary deposits. The incident was reported by UNI on Nov 4; investigation details and recovery status were not disclosed.",
+          "severity": "High",
+          "summary": "The bank account of Puducherry's Mahatma Gandhi Postgraduate Institute of Dental Sciences was hacked on Nov 4, and three months' salary for staff — about ₹8.5 crore — was siphoned off. Police cyber crime wing has registered a case.",
+          "title": "Puducherry dental college loses ₹8.5 crore in bank account hack",
+          "url": "https://www.uniindia.com/south-india/crime-pondy-dental-college-account-hacked/236065"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Sunday, November 8 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

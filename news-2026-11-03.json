@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-03",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Update Siemens SIMATIC IoT2050 Advanced to V4.3.4.1 now and do not expose Node-RED admin interfaces to the internet.",
+          "details": "Tracked as CVE-2026-58115 with a CVSS score of 10.0, the flaw allows unauthenticated access to programming nodes that can execute system commands. Affected versions are below V4.3.4.1.",
+          "image": "https://www.asteamtechno.com/wp-content/uploads/2022/06/automation.png",
+          "severity": "Critical",
+          "summary": "VulnCheck warned on November 2 that attackers are actively exploiting a missing-authentication flaw in Node-RED on Siemens SIMATIC IoT2050 Advanced, allowing unauthenticated remote code execution. Exploitation reportedly began on October 30, with malicious flows used to drop bot implants and webshells on operational technology networks.",
+          "title": "Node-RED flaw CVE-2026-58115 (CVSS 10.0) exploited in the wild",
+          "url": "https://securityonline.info/node-red-rce-vulnerability-cve-2026-58115/"
+        },
+        {
+          "action": "Upgrade Langflow to 1.13.0, verify automatic login is off, and check internet-exposed instances for abuse.",
+          "details": "IBM published the bulletin on October 28–29. Langflow 1.13.0 also turns automatic login off by default. No confirmed active exploitation of these two flaws had been established as of November 2, and neither was in CISA's KEV catalog at that point.",
+          "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1744547517603/39aeca3c-fc97-476c-9154-124510224b32.avif?w=800&h=420&auto=compress,format&format=webp",
+          "severity": "Critical",
+          "summary": "Two critical Langflow flaws rated 9.8, CVE-2026-93680 (authentication bypass) and CVE-2026-110186 (improper control of code generation), affect every release from 1.0.0 through 1.12.8 and can chain into unauthenticated remote code execution. The only fix is version 1.13.0.",
+          "title": "Critical Langflow flaws allow unauthenticated code execution — upgrade to 1.13.0",
+          "url": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html?m=1"
+        },
+        {
+          "action": "Patch to 25.1.1.3 or 22.8R2.6 (per branch) and complete the forensic triage CISA requires for CVE-2026-111357.",
+          "details": "Ivanti shipped fixes on October 29 in versions 25.1.1.3 and 22.8R2.6. Appliances patched on October 13 to 25.1.1.2 or 22.8R2.5 remain affected by the two newer flaws.",
+          "image": "https://vpncentral.com/wp-content/uploads/2026/02/Ivanti-Risks-Exploits-700x394.jpg",
+          "severity": "Critical",
+          "summary": "CISA added Ivanti Connect Secure flaws CVE-2026-111357 and CVE-2026-118527 to its Known Exploited Vulnerabilities catalog on October 30; the federal remediation deadline for CVE-2026-111357 was November 2 and requires forensic triage, not only a patch. The flaws chain with the earlier login bypass CVE-2026-104935.",
+          "title": "Ivanti Connect Secure KEV deadline passed — patch and run forensic triage",
+          "url": "https://hol.org/blog/cve-2026-111357-ivanti-connect-secure-root-escalation-cisa-kev"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "Update DSM to a fixed release, enable automatic updates, and block the management interface from the internet.",
+          "details": "Synology has not named the specific flaw exploited; its advisory links a November 2024 bulletin covering CVE-2024-10441, CVE-2024-50629 and CVE-2024-10445. Shadowserver counts cited in reporting put more than 380,000 Synology NAS devices exposed to the internet.",
+          "image": "https://bitlooptech.com/products/synology/synology-ds1525-plus.jpg",
+          "severity": "High",
+          "summary": "Synology warned customers to update immediately after a surge in C3RB3R ransomware attacks on devices running outdated DiskStation Manager, exploiting a vulnerability patched in December 2024. Victims report files renamed with a .L0CK3D extension and a ransom note named read-me3.txt.",
+          "title": "Synology warns C3RB3R ransomware is encrypting outdated NAS devices",
+          "url": "https://www.scworld.com/brief/synology-warns-of-c3rb3r-ransomware-targeting-outdated-nas-devices"
+        },
+        {
+          "action": "Treat the claim as unconfirmed; universities should force credential resets and audit access logs if they see matching indicators.",
+          "details": "Reporting links the claim to a campus security incident in early October that prompted password resets. BYOD drew attention in October for an attack on the University of New Mexico.",
+          "image": "https://lmnarchitects.com/wp-content/uploads/2023/03/Edward-J.-Minskoff-Pavilion-Michigan-State-University_315.jpg",
+          "severity": "High",
+          "summary": "The emerging BYOD ransomware group listed Michigan State University on its leak site on November 2, claiming personal data on 1.03 million current and former students plus passwords and broad system access. The claim is unverified and should be treated with caution.",
+          "title": "BYOD gang claims Michigan State data on 1.03 million students (unverified)",
+          "url": "https://www.itsecuritynews.info/michigan-state-cyber-incident-claimed-by-ransomware-gang-behind-recent-hospital-attack/"
+        },
+        {
+          "action": "On any suspected infection, revoke and rotate OAuth tokens, cloud keys and saved credentials, and hunt for volta_log.zip, volta_dox.zip and volta_debug.txt artefacts.",
+          "details": "The malware enriches its haul from Gmail receipts, food-delivery history and Discord sessions to corroborate identity and address, and falls back across models if one refuses. Talos first saw it on October 11.",
+          "image": "https://hackread.com/wp-content/uploads/2025/07/infostealers-as-a-service-identity-hacks-record-highs-1024x597.jpg",
+          "severity": "High",
+          "summary": "Cisco Talos analysed VOLTA-AUTODOXER, a self-deleting Windows infostealer that steals browser passwords, cookies, payment cards, tokens and keys, then sends a victim profile through OpenRouter to a language model to rank what the victim is worth. Stolen data is exfiltrated via Telegram.",
+          "title": "VOLTA infostealer sends stolen data to an AI model to rank victims",
+          "url": "https://securityaffairs.com/202281/malware/volta-the-infostealer-that-asks-an-ai-which-victims-are-worth-the-effort.html"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "Watch for follow-up disclosures on recovery and root cause; financial firms should review payment-approval controls for bulk beneficiary transfers.",
+          "details": "The company said it has cyber fraud insurance and is filing a claim with its insurer; the investigation is underway and further updates on recoveries are to follow.",
+          "image": "https://img.etimg.com/thumb/msid-111429614,width-525,height-393,imgsize-39166,resizemode-75/markets/stocks/news/comeback-trail-after-it-time-for-large-private-banks-to-make-a-comeback-6-top-private-banks-with-an-upside-potential-of-upto-40.jpg",
+          "severity": "High",
+          "summary": "Spandana Sphoorty Financial Ltd reported unauthorised transactions of about ₹7.80 crore from one of its bank accounts, identified on November 1, with funds transferred across 82 beneficiary accounts. The company stopped the affected services, sought reversals and freezing of beneficiary accounts, and filed a complaint on the National Cyber Crime Reporting Portal.",
+          "title": "Spandana Sphoorty reports ₹7.80 crore cyber fraud across 82 accounts",
+          "url": "https://newsable.asianetnews.com/business/spandana-sphoorty-reports-rs-7-80-crore-fraud-through-cyber-attack-articleshow-09v5z5v"
+        },
+        {
+          "details": "The analysis examined incidents involving ICMR, CoWIN, State Bank of India and AIIMS Delhi, among others, and pointed to common vulnerabilities across government departments, financial institutions and healthcare platforms.",
+          "image": "https://indiaverve.com/wp-content/uploads/2026/03/Delhi_India_Government.jpg",
+          "severity": "Medium",
+          "summary": "A government analysis of major Indian data-leak incidents flagged recurring failures including misconfigured servers, compromised credentials, insider involvement, weak access controls and inadequate monitoring of third-party systems, with private entities and researchers often detecting breaches first.",
+          "title": "Government analysis flags recurring lapses behind India's data leaks",
+          "url": "https://www.news18.com/india/indias-data-leak-problem-govt-analysis-flags-security-lapses-third-party-alerts-raise-concern-exclusive-ws-l-10408079.html"
+        },
+        {
+          "action": "Treat the claim as unverified; affected customers should watch for phishing using loan or KYC details.",
+          "details": "Salesforce said there was no sign its own platform had been compromised, according to reporting. The bank has not said whether the Salesforce platform is the source of the claimed data or how many customers may be affected.",
+          "severity": "High",
+          "summary": "AU Small Finance Bank said it is investigating a potential data leak involving a Salesforce-managed SaaS platform holding limited data on vehicle loan customers, after the ScarlettGroup claimed KYC, PAN, Aadhaar and loan records. The claims are unverified; the bank says its own systems remain unaffected and services are operating normally.",
+          "title": "AU Small Finance Bank probes alleged SaaS data leak after ScarlettGroup claim (unverified)",
+          "url": "https://theprint.in/tech/au-small-finance-bank-probes-potential-data-leak-from-saas-platform-after-hacker-group-claims-breach/3086172/"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Tuesday, November 3 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

@@ -1,0 +1,95 @@
+{
+  "date": "2026-11-13",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Patch Outlook first — the exploited zero-day needs only a crafted message in the Preview Pane — then Exchange, SharePoint and domain controllers.",
+          "details": "Also prioritize Exchange Server RCE CVE-2026-118207 (8.8), SharePoint elevation of privilege CVE-2026-120002 (9.9), Outlook RCE CVE-2026-110043 (8.8), Windows Search RCE CVE-2026-116928 (9.8) and Windows LDAP RCE CVE-2026-119958. Twenty of the fixes are Outlook RCEs.",
+          "severity": "Critical",
+          "summary": "Microsoft's November Patch Tuesday fixes 1,093 vulnerabilities, 63 rated Critical, including one actively exploited Outlook zero-day (CVE-2026-124194, CVSS 6.5) that leaks NTLMv2 hashes via a crafted email.",
+          "title": "Microsoft November Patch Tuesday: exploited Outlook zero-day steals NTLM hashes",
+          "url": "https://www.darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves"
+        },
+        {
+          "action": "Apply SAP Notes 3778530, 3778556, 3798345 and 3849308 immediately; treat internet-facing NetWeaver as exposed until patched.",
+          "details": "Patches released November 10, 2026 (SAP Notes 3778530, 3778556, 3798345, 3849308). No active exploitation confirmed as of Nov 12, but a proof-of-concept for the SAML2 bypass (CVE-2026-120017) has been posted publicly and Onapsis delivered a working ICM2SHELL exploit to SAP under coordinated disclosure.",
+          "severity": "Critical",
+          "summary": "SAP's November Patch Day shipped four maximum-severity NetWeaver flaws — ICM2SHELL (CVE-2026-76964, CVE-2026-89126), PROXYGATE (CVE-2026-89103) and a SAML2 authentication bypass (CVE-2026-120017) — all unauthenticated, all allowing OS command execution.",
+          "title": "Four CVSS 10.0 SAP NetWeaver flaws need no login — patch now",
+          "url": "https://datawater.com/sap-icm2shell-proxygate-cvss-10-november-2026/"
+        },
+        {
+          "action": "Update every DSM branch to its fixed build; no workaround exists, so patching is the only fix.",
+          "details": "Also fixed: an rsync authentication bypass (CVE-2026-85101, 8.6), three 8.8 flaws in SSOAuth, the Sharing API and the Auth API, an OTP bypass and a VPN API command injection. Fixed builds: DSM 7.4.1-90080-1, 7.3.2-86009-5, 7.2.2-72806-10 and 7.2.1-69057-13. Synology says no workarounds exist — patching is the only remediation. No exploitation confirmed as of Nov 13.",
+          "severity": "Critical",
+          "summary": "Synology's Nov 10 advisories (SA-26:19, SA-26:18) fix 27 DiskStation Manager vulnerabilities, led by CVE-2026-76954 — a pre-authentication SQL injection in the Auth API (CVSS 9.8) that lets unauthenticated attackers read or write arbitrary files.",
+          "title": "Synology DSM patches 27 flaws, including pre-auth SQL injection (CVSS 9.8)",
+          "url": "https://www.threataft.com/articles/synology-dsm-mass-disclosure-27-cves-november-2026"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "Treat as unverified leak-site claims for now; affected-sector peers should watch for extortion and phishing using the named organisations.",
+          "details": "Incransom runs a double-extortion model — data is exfiltrated before encryption. The specific data stolen from each victim has not been independently verified, and Tanner Clinic has not published a notice about the incident.",
+          "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,width=1200,onerror=redirect/uploads/asset/file/c0163b8d-a931-47e8-b1e7-8730090511ce/Ransomware_in_SA.jpg?t=1779099778",
+          "severity": "High",
+          "summary": "The Incransom ransomware group listed three victims on Nov 12: Computacenter subsidiaries Pivot Technology Solutions and Sigma Solutions (US technology), Tanner Clinic (Utah healthcare provider, attack estimated Oct 28, patient data threatened) and the HELP Foundation (Ohio disability-services provider, attack estimated Nov 9).",
+          "title": "Incransom lists Computacenter units, Tanner Clinic and HELP Foundation in one day",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/computacenter-pivot-technology-solutions-sigma-solutions-incransom-2026"
+        },
+        {
+          "action": "Treat as unverified leak-site claims; watch for follow-on extortion and phishing in the affected sectors.",
+          "details": "Thegentlemen is a prolific ransomware-as-a-service operation active since mid-2025, with over 1,000 victims listed. The specific data stolen from these three victims has not been independently verified.",
+          "severity": "High",
+          "summary": "The Thegentlemen ransomware group listed three victims on its leak site on Nov 12: Sielke (German paper and home-goods company), Clancy Systems International (Colorado parking-technology firm, attack estimated Nov 11) and United Pharmacy (Saudi Arabia, breach Nov 11).",
+          "title": "Thegentlemen lists Sielke, Clancy Systems and United Pharmacy on Nov 12",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/sielke-thegentlemen-2026"
+        },
+        {
+          "action": "Treat as an unverified claim; energy-sector peers should watch for related extortion activity.",
+          "details": "The claim has not been independently verified and Franc-Oil has not publicly commented. Leak-site listings are claims by the attackers, not confirmations.",
+          "severity": "High",
+          "summary": "The Vexy ransomware group listed Franc-Oil, a Nigerian energy company, on its leak site on Nov 12. The claim was discovered the same evening; no details of the data allegedly taken have been published.",
+          "title": "Vexy ransomware claims Franc-Oil (Nigeria) in Nov 12 leak-site listing",
+          "url": "https://www.hookphish.com/blog/ransomware-group-vexy-ransomware-hits-franc-oil/"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "Financial firms should isolate exposed staging environments, rotate potentially exposed secrets, lock down payment APIs and monitor cloud activity; report fraud via helpline 1930.",
+          "details": "The campaign uses publicly available AI offensive tools (ARTEX, PentAGI, Cairn, CyberStrikeAI) and has re-attacked victims after incomplete remediation, including on weekends and holidays. The Telangana Cyber Security Bureau convened NBFCs, fintechs and banks on Nov 12 to push API security, VAPTs and real-time fraud detection. CERT-In has not named the operators or a total loss figure.",
+          "severity": "Critical",
+          "summary": "CERT-In's advisory CIAD-2026-0058 (Nov 4) warns that the AI-assisted threat actor 'CRAFTY FALCON' is actively targeting Indian banks, NBFCs, fintechs and payment firms, exploiting weak APIs and exposed staging environments to move funds — often after a Re 1 test transfer.",
+          "title": "CERT-In warns 'CRAFTY FALCON' AI attacks are actively hitting Indian financial firms",
+          "url": "https://undercodenews.com/crafty-falcon-cert-in-warns-indian-financial-institutions-of-active-cyberattacks-exploiting-weak-apis-and-exposed-staging-environments-video/"
+        },
+        {
+          "action": "Treat as an unverified leak-site claim; Indian manufacturing peers should check exposure to Incransom tactics.",
+          "details": "Incransom typically follows a double-extortion model, exfiltrating data before encrypting systems. The specific data stolen from Nandan Terry Pvt has not been independently verified.",
+          "severity": "High",
+          "summary": "Nandan Terry Pvt, an India-based company, was listed as a victim by the Incransom ransomware group on Nov 12, 2026. India ranks 8th worldwide for ransomware disclosures in the tracking database, with 507 victims recorded.",
+          "title": "Incransom lists Indian firm Nandan Terry Pvt on Nov 12",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/nandan-terry-pvt-incransom-2026"
+        },
+        {
+          "action": "Yatra customers should watch for phishing using travel-booking details; treat the claim as unverified until the company confirms.",
+          "details": "The claim has not been independently verified and no details of the data allegedly taken have been published. Yatra is one of India's largest online travel agents.",
+          "severity": "High",
+          "summary": "The LockBit5 ransomware group listed yatra.com, the Gurugram-based Indian online travel company, on its leak site; the claim was discovered on Nov 8, with an estimated breach date of Nov 8, 2026.",
+          "title": "LockBit5 claims breach of Indian travel firm Yatra.com",
+          "url": "https://www.hookphish.com/blog/ransomware-group-lockbit5-hits-yatra-com/"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Friday, November 13 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

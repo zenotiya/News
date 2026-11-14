@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-30",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Upgrade to a fixed ASA/FTD release immediately. If patching is not immediate, Cisco advises disabling secondary authentication on the DefaultWEBVPNGroup or any user-configured tunnel group list as an interim mitigation.",
+          "details": "Unauthenticated attackers can send a crafted request to the SSL remote-access VPN service and force an unexpected device reload, when secondary authentication is configured on a tunnel group. Cisco's PSIRT became aware of active exploitation in October 2026; no indicators of compromise, targeted organisations, or threat actor have been disclosed. Shadowserver tracks more than 51,000 Cisco ASA SSL VPN devices exposed online, per BleepingComputer.",
+          "image": "https://securityonline.info/wp-content/uploads/2026/10/Email-Cisco-1-1024x575.webp",
+          "severity": "High",
+          "summary": "CISA issued Emergency Directive 25-03 after Cisco confirmed CVE-2026-76418 (CVSS 8.6) is being exploited to remotely crash ASA and FTD firewalls running SSL VPN. The flaw was added to CISA's KEV catalog on October 29, with a November 1 remediation deadline.",
+          "title": "Cisco ASA zero-day under CISA emergency directive; federal agencies ordered to secure firewalls within 24 hours",
+          "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/"
+        },
+        {
+          "action": "Upgrade self-managed GitLab to 19.2.8, 19.3.5 or 19.4.2 (or later) and confirm the patched Ruby is in use; perform forensic triage for exploitation attempts.",
+          "details": "GitLab fixed the flaw on October 12 in versions 19.2.8, 19.3.5 and 19.4.2. Alpine Linux disclosed on October 28 that a newly registered account sent crafted CI configurations to its GitLab server on October 20-21, crashing worker processes; Alpine found no proof the attacker got in but rebuilt the server and rotated secrets. For source or custom-image installs, upgrading GitLab alone may not close the hole — the fix also lives in the bundled Ruby (3.3.13 / 3.4.12 / 4.0.9 or later).",
+          "severity": "Critical",
+          "summary": "CISA added CVE-2026-97229 to its Known Exploited Vulnerabilities catalog on October 29, with a November 1 deadline. The integer-overflow flaw in GitLab CE/EE allows unauthenticated remote code execution via a crafted regular expression in a CI/CD configuration.",
+          "title": "GitLab CVSS 10.0 flaw added to CISA KEV after exploit attempts against Alpine Linux",
+          "url": "https://pbxscience.com/cisa-adds-gitlabs-cvss-10-0-flaw-to-its-exploited-vulnerabilities-list-and-updating-gitlab-alone-may-not-fix-it/"
+        },
+        {
+          "action": "Apply the latest Connect Secure patches for all supported releases now, review Volexity's indicators, and run Ivanti's Integrity Checker Tool regularly.",
+          "details": "Ivanti said a fix is available for all vulnerabilities in the chain for supported releases, and worked with Volexity on the investigation. No public proof-of-concept has been confirmed, according to the advisory reporting.",
+          "image": "https://cdnglobal.secnews.gr/wp-content/uploads/2025/01/09101206/ivanti-Connect-Secure-eupatheia-1024x683.jpg",
+          "severity": "High",
+          "summary": "Ivanti updated an urgent advisory on October 29 for a Connect Secure vulnerability chain actively exploited against a limited number of customers. Attackers chain an authentication bypass (CVE-2026-104935, CVSS 8.6) with a privilege-escalation flaw (CVE-2026-111357) and a predictable-filename issue (CVE-2026-118527).",
+          "title": "Ivanti Connect Secure flaw chain exploited in the wild, Ivanti updates urgent advisory",
+          "url": "https://securityonline.info/ivanti-connect-secure-vulnerability-exploited/"
+        },
+        {
+          "action": "Apply the latest WS_FTP Server service releases immediately, prioritising internet-facing servers.",
+          "details": "Six of the 15 flaws are rated Critical, three High and six Medium. No active exploitation or public proof-of-concept had been confirmed at disclosure. CVE-2026-84295 is fixed in WS_FTP Server 2024.0.6 and 2025.0.3.",
+          "severity": "Critical",
+          "summary": "Progress Software released updates on October 29 addressing 15 WS_FTP Server vulnerabilities. The most severe, CVE-2026-84295 (CVSS 10.0), is improper authentication that could let an unauthenticated remote attacker access sensitive information, including administrative credentials.",
+          "title": "Progress patches 15 WS_FTP Server flaws, including a CVSS 10.0 authentication bypass",
+          "url": "https://securityonline.info/ws-ftp-server-vulnerabilities-cve-2026-84295/"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "Treat claimed victims' credentials as potentially exposed: rotate credentials and invalidate sessions for affected accounts.",
+          "details": "The source does not confirm the extent of any ransomware deployment or Proterial's current operational status. A leak-site claim is not, by itself, proof of a successful breach.",
+          "image": "https://cdn.technadu.com/wp-content/uploads/2019/07/ransomware-1068x601.jpg",
+          "severity": "High",
+          "summary": "The Qilin ransomware group claimed an attack on Japanese manufacturer Proterial on October 29, tracked by Ransomware.live. Hudson Rock intelligence cited infostealer exposure of 51 passwords (15 critical) and 36 cookies, plus two compromised third-party employee credentials.",
+          "title": "Qilin claims attack on Japan's Proterial following infostealer activity (claim)",
+          "url": "https://qpulse.quasarcybertech.com/news/7488/qilin-ransomware-group-claims-attack-on-proterial-following-infostealer-activity"
+        },
+        {
+          "details": "Scarlettgroup is described as an emerging group. The available reporting does not establish unauthorised access, data theft, or encryption.",
+          "image": "https://cyberflux.pl/wp-content/uploads/2026/03/wpis-o-ransomware-480x320.webp",
+          "severity": "High",
+          "summary": "Scarlettgroup claimed Sunnybrook Health Sciences Centre, a Canadian teaching and research hospital, on October 29. Reporting linked to Hudson Rock cited 45 compromised employees, 7,237 passwords (270 critical) and 157 cookies, and advised treating the claim with caution until independently verified.",
+          "title": "Emerging Scarlettgroup claims Toronto's Sunnybrook Health Sciences Centre (claim)",
+          "url": "https://qpulse.quasarcybertech.com/news/7507/scarlettgroup-ransomware-gang-claims-sunnybrook-health-sciences-centre-as-victim"
+        },
+        {
+          "details": "Neither claim has been independently confirmed as a breach; the reports do not establish initial access, data obtained, or whether encryption occurred.",
+          "severity": "High",
+          "summary": "ThreatMon reporting on October 29 flagged two new US victim claims: SilentRansomGroup listing law firm Lowenstein Sandler LLP, and Anubis listing Santiam Hospital & Clinics. Tracking records date both listings to October 28.",
+          "title": "SilentRansomGroup lists US law firm; Anubis lists Oregon hospital (claims)",
+          "url": "https://undercodenews.com/silentransomgroup-claims-lowenstein-sandler-llp-as-victim-as-anubis-lists-santiam-hospital-clinics-video/"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "Monitor for any statement from the bank and watch for phishing impersonating the bank; do not treat the claim as confirmed.",
+          "details": "The claim is unverified: the bank has not independently confirmed a breach, and the reporting establishes no attack method, data accessed, or encryption. A leak-site listing is not equivalent to breach confirmation.",
+          "severity": "High",
+          "summary": "The Scarlett Group reportedly listed AU Small Finance Bank (au.bank.in) as a new victim on October 29, in a claim highlighted by the ThreatMon Threat Intelligence Team. The same reporting also named Sunnybrook Health Sciences Centre in Canada.",
+          "title": "Scarlett Group claims AU Small Finance Bank as victim (unverified claim)",
+          "url": "https://undercodenews.com/scarlett-group-claims-two-new-victims-in-india-and-canada-targeting-banking-and-healthcare-sectors-video/"
+        },
+        {
+          "action": "Warn users to install apps only from official stores, never sideload banking apps from links or calls, and review SMS-permission grants on Android devices.",
+          "details": "The operation, described in Group-IB's investigation published October 28, 2026, combined fake bank calls, phishing websites and malicious apps to collect banking credentials, card details and identity documents, and also used infected phones for cryptocurrency mining. Seven Android Trojan families were identified. Activity targeting India's financial sector dates back to July 2025 in the investigation.",
+          "severity": "High",
+          "summary": "Group-IB researchers identified a campaign the firm tracks as CyberDakait that compromised at least 17,960 Android devices and intercepted more than 7.6 million SMS messages, impersonating 11 Indian banking institutions and two government programmes.",
+          "title": "Android banking trojans hit 17,960 phones in India, intercepting 7.6 million SMS messages",
+          "url": "https://cybersecuritynews.com/hackers-infect-17960-android-phones/"
+        },
+        {
+          "action": "Customers contacted by SBI should stay vigilant against phishing and fraudulent loan applications; never share OTP, PIN or passwords.",
+          "details": "SBI said the records were identified during preliminary analysis of approximately 375,000 records found on the dark web, including names, mobile numbers, dates of birth, email and residential addresses, and loan-related details. The bank engaged an independent CERT-In-empanelled cybersecurity agency to investigate; the source and full extent remain under investigation. This is a fresh statement on the incident SBI reported on October 21.",
+          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
+          "severity": "High",
+          "summary": "State Bank of India said customer account balances and funds remain safe after 3,897 customer records containing personal information were found exposed on the dark web, and that it has individually informed all customers whose data was identified, by email and/or WhatsApp.",
+          "title": "SBI says customer funds safe after 3,897-record exposure; affected customers notified individually",
+          "url": "https://eveningstandard.in/sbi-says-customer-funds-safe-after-data-breach-exposes-3897-records/"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Friday, October 30 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

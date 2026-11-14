@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-11",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Apply the November SAP kernel, Web Dispatcher and Gateway notes immediately; prioritise internet-facing NetWeaver and Web Dispatcher systems.",
+          "details": "The ICM and Web Dispatcher flaws, dubbed ICM2SHELL by researchers, allow unauthenticated remote code execution. No in-the-wild exploitation has been reported and none of the four is in CISA's KEV catalog.",
+          "image": "https://def-viii.delphiforum.gr/hubfs/SAP_19_04_2023.png",
+          "severity": "Critical",
+          "summary": "SAP's November 2026 Security Patch Day, released Nov 10, fixes 35 new security notes including four maximum-severity (CVSS 10.0) flaws: memory corruption in NetWeaver ICM (CVE-2026-76964) and Web Dispatcher (CVE-2026-89126), broken access control in SAP Gateway (CVE-2026-89103), and missing authentication in the SAML2 Service Provider (CVE-2026-120017).",
+          "title": "SAP November Patch Day fixes four CVSS 10.0 flaws, including pre-auth RCE",
+          "url": "https://cybersecuritynews.com/sap-security-patch-day-november/"
+        },
+        {
+          "action": "Patch Outlook first despite its Moderate 6.5 rating, then identity and server infrastructure (AD, LDAP, SharePoint, Exchange).",
+          "details": "Exploitation requires the user to open a malicious file; the Preview Pane is not an attack vector. The release also includes Critical RCEs in SharePoint (CVE-2026-120002, CVSS 9.9), SQL Server and Windows Search. Windows 11 23H2 Enterprise/Education reached end of updates the same day.",
+          "image": "https://snsproglobal.com/wp-content/uploads/2026/01/ms.jpg",
+          "severity": "Critical",
+          "summary": "Microsoft's November 2026 Patch Tuesday fixes 1,093 vulnerabilities, 63 of them Critical. The one actively exploited flaw is CVE-2026-124194, an Outlook spoofing bug that can leak a user's NTLMv2 authentication hash; it affects Microsoft 365 Apps, Office LTSC 2021/2024 and Outlook 2016.",
+          "title": "Microsoft Patch Tuesday: 1,093 flaws fixed, one Outlook zero-day already exploited",
+          "url": "https://cybersecuritynews.com/microsoft-november-2026-patch-tuesday/"
+        },
+        {
+          "action": "Update ESG to 9.4.0.030 or later now and restrict the admin interface to trusted networks; check for unexplained configuration restores.",
+          "details": "Public proof-of-concept code has circulated since Nov 3. Barracuda says a small number of organizations are affected; patches BNSF-40425 (firmware 9.4.017+) and BNSF-40430 (older firmware) are available.",
+          "image": "https://www.digitalsima.gr/wp-content/uploads/2023/10/Email-Security-Gateway_pos.png",
+          "severity": "Critical",
+          "summary": "Barracuda confirmed on Nov 9 that attackers are exploiting a chain of two Email Security Gateway flaws — CVE-2026-116606 (authorization bypass, CVSS 9.3) and CVE-2026-111560 (command injection, CVSS 8.6) — to gain root access without logging in. Both were added to CISA's KEV catalog on Nov 10.",
+          "title": "Barracuda confirms active exploitation of ESG flaws chaining to unauthenticated root",
+          "url": "https://cybersecuritynews.com/barracuda-email-gateway-flaws/"
+        },
+        {
+          "action": "Upgrade OpenSSH to 10.6p2 (or apply the Alpine patched packages) on any musl-based host or container image; audit for password-less accounts.",
+          "details": "A password longer than 256 bytes can match a password-less account's stored asterisk. Exploitation attempts began within nine hours of disclosure on Nov 5; honeypot root access was reported. Fixed in OpenSSH 10.6p2; Alpine backported the fix to all branches from 3.16 to edge. glibc/PAM-based systems (Ubuntu, Debian, RHEL) are not affected.",
+          "severity": "High",
+          "summary": "CVE-2026-123158, nicknamed SSHole, is an OpenSSH password authentication bypass (CVSS 8.1) affecting Linux systems built on musl libc without PAM — notably Alpine Linux's default sshd and Alpine-based containers. CISA added it to the Known Exploited Vulnerabilities catalog this week, with a federal patch deadline of Nov 12.",
+          "title": "'SSHole' OpenSSH auth bypass added to CISA KEV with a Nov 12 federal deadline",
+          "url": "https://socradar.io/blog/sshole-openssh-password-bypass-alpine/"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "Treat as an unverified actor claim for now; watch for Vanderbilt's official disclosure and any leaked-data listings before acting on the 1M+ figure.",
+          "details": "Campus computers reportedly played an audio threat from the group. BYOD, a new operation that launched in 2026, also claimed an attack on Texas Health and Human Services the same day; last month it hit the University of New Mexico Health Sciences Center.",
+          "image": "https://cdn.vanderbilt.edu/vu-wpfsx/wp-content/uploads/sites/23/2021/09/20927751478_8f3dfbd90d_c.jpg",
+          "severity": "Critical",
+          "summary": "The BYOD ransomware group claims it encrypted Vanderbilt University's databases and stole over 1 million Social Security numbers plus names, emails, phone numbers and student and employee records. Vanderbilt confirmed an active cybersecurity incident on Nov 10 but has not confirmed the group's claims or the extent of data theft.",
+          "title": "BYOD ransomware claims Vanderbilt University attack, says it stole 1M+ SSNs",
+          "url": "https://www.theregister.com/cyber-crime/2026/11/10/ransomware-threat-blares-from-vanderbilt-university-computers-during-cyberattack/5308687"
+        },
+        {
+          "action": "Affected families should watch for identity-theft and phishing attempts using school records; districts should review Interlock's leak-site claims against their own incident data.",
+          "details": "The district serves 22,000–24,000 students across 25 elementary, 7 middle and 5 comprehensive high schools. Interlock cited the district's 'lax approach to security' and unwillingness to negotiate.",
+          "image": "https://cyberflux.pl/wp-content/uploads/2026/03/wpis-o-ransomware-480x320.webp",
+          "severity": "High",
+          "summary": "The Interlock ransomware group claimed Richmond Public Schools (rvaschools.net) on Nov 10, saying it is releasing confidential data including disciplinary, medical, speech therapy and mental health records, special-needs education records and personal data such as names, birth dates, addresses and Social Security numbers.",
+          "title": "Interlock ransomware claims Richmond Public Schools, posts student and staff data",
+          "url": "https://www.dexpose.io/interlock-breaches-richmond-public-schools/"
+        },
+        {
+          "action": "DomusVi clients should monitor bank accounts and watch for phishing using medical-record details; healthcare orgs should treat infostealer credentials as a live initial-access path.",
+          "details": "Threat-intel analysis links the initial access to infostealer activity, with 413 compromised user accounts and 18 third-party employee credentials identified, plus 1,238 exposed passwords associated with the victim's domain.",
+          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUabfxk05grX42qBYfSiLYwqAew7Bi03a2RtGybxJgaKX_D0M2ebrCG0ZQv1_8OqFZYR3B5KwrRgXlFxGEq85wnIg-XYiIPb9EciuVnwH-GoZANP5lJs2iLeKDs7ZzrEuXjI0-8mZMFhEY/s640/%25D8%25A3%25D8%25AF%25D8%25A7%25D9%2588%25D9%2586+%25D8%25AC%25D8%25AF%25D9%258A%25D8%25AF%25D8%25A9+%25D9%2585%25D9%2586+BitDefinder+%25D9%2584%25D9%2581%25D9%2583+%25D8%25AA%25D8%25B4%25D9%2581%25D9%258A%25D8%25B1+%25D8%25A7%25D9%2584%25D9%2581%25D8%25AF%25D9%258A%25D8%25A9+%25D8%25A7%25D9%2584%25D8%25AE%25D8%25B7%25D9%258A%25D8%25B1%25D8%25A9+Avaddon.jpg",
+          "severity": "High",
+          "summary": "The Black X ransomware group listed Spanish healthcare provider DomusVi on its leak site on Nov 10, claiming client and contact data including medical record numbers, names, phone numbers, email and physical addresses, and bank account numbers. The attack is estimated to have occurred Nov 9.",
+          "title": "Black X ransomware claims data theft from Spanish care provider DomusVi",
+          "url": "https://qpulse.quasarcybertech.com/news/8155/black-x-ransomware-group-claims-data-exfiltration-from-domusvi"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "Government fund-transfer portals should enforce multi-person approval and anomaly alerts on large transfers; panchayat unions should reconcile disbursements immediately.",
+          "details": "Preliminary probe found the diverted funds went to unauthorised accounts. Email logs showed suspicious access attempts originating from Bangladesh, the United States and Greece. No arrests had been reported at the time of writing.",
+          "image": "https://media.assettype.com/andhimazhai%2F2026-05-28%2Fhubvpogf%2Fassembly.avif?w=1200&auto=format%2Ccompress&fit=max",
+          "severity": "Critical",
+          "summary": "Cybercriminals siphoned ₹22.1 crore from the Tamil Nadu rural development department after breaching its online portal used to transfer funds to rural local bodies. Chennai Central Crime Branch has registered a case; ₹14 crore was transferred from Mandapam Panchayat Union in Ramanathapuram district.",
+          "title": "Cybercriminals siphon ₹22.1 crore from Tamil Nadu rural development department",
+          "url": "https://timesofindia.indiatimes.com/city/chennai/cyber-criminals-syphon-off-22crore-from-tn-rural-development-dept/articleshow/135718425.cms"
+        },
+        {
+          "action": "Yatra customers should watch for phishing using travel-booking details; treat the LockBit5 claim as unverified until Yatra or investigators confirm a link.",
+          "details": "This is a ransomware-group claim, not independent proof of compromise or customer-data exposure, and the available evidence does not establish that the LockBit5 listing and Yatra's disclosed incident are the same event.",
+          "image": "https://res.cloudinary.com/dhaae7rgr/image/upload/v1774885024/yatra_blogs/rcyz3ygr1wzcovg1ttgk.png",
+          "severity": "High",
+          "summary": "Leak-site monitoring associated yatra.com with the LockBit5 ransomware group on Nov 8. Separately, Yatra Online Limited filed a stock-exchange intimation dated Nov 2 confirming a cybersecurity incident, CERT-In notification and an ongoing assessment, stating no material impact to core operations at the time.",
+          "title": "Yatra.com listed by LockBit5; company had already disclosed a cyber incident",
+          "url": "https://www.linkedin.com/pulse/yatracom-listed-lockbit5-claim-evidence-customer-risk-8lbse"
+        },
+        {
+          "action": "Manufacturing firms should assume double extortion and check for infostealer exposure and exposed remote-access services.",
+          "details": "Orova, first seen in July 2026, has listed 66 victims and typically follows a double-extortion model — exfiltrating data before encrypting. The specific data stolen from Herminio has not been independently verified.",
+          "image": "https://blog-aludecor.s3.ap-south-1.amazonaws.com/wp-content/uploads/2020/05/Make-in-India-bg-696x365.jpg",
+          "severity": "High",
+          "summary": "Herminio India Precision Technology, an Indian precision-components manufacturer serving automotive, refrigeration and air-conditioning segments, was listed by the Orova ransomware group on its leak site on Nov 10.",
+          "title": "Orova ransomware lists Indian manufacturer Herminio India Precision Technology",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/herminio-india-precision-technology-orova-2026"
+        },
+        {
+          "action": "BFSI security teams should verify last month's remediation is complete, staff monitoring over weekends and holidays, and hunt for repeat intrusions in previously hit environments.",
+          "details": "Intrusions are reportedly timed to coincide with holidays, weekends and other low-monitoring windows to delay detection and response.",
+          "image": "https://the420.in/wp-content/uploads/2026/01/cert-in.jpg",
+          "severity": "High",
+          "summary": "CERT-In has disclosed that an AI-assisted threat actor it tracks as 'Crafty Falcon' is targeting organizations in India's Banking, Financial Services and Insurance (BFSI) sectors, calling it a significant escalation. The actor is re-targeting entities hit last month after incomplete remediation.",
+          "title": "CERT-In flags AI-driven 'Crafty Falcon' attacks targeting Indian banks and insurers",
+          "url": "https://www.swapupdate.in/weekly-recap-sshole-exploited-apt-root-rce-robot-takeovers-15k-hacked-sites-and-more/"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Wednesday, November 11 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

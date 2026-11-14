@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-02",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Disable IBE support (config system encryption ibe -> set status disable) and block the management interface from the internet until the patched build for your branch is available.",
+          "details": "Affects FortiMail 8.0.0-8.0.1, 7.6.0-7.6.6, 7.4.0-7.4.8 and 7.2.0-7.2.9. Fixes land in 7.4.9, 7.6.7 and 8.0.2; 7.2 users must upgrade to the 7.4 branch or later. Fortinet published IOCs including attacker IPs 79.141.169.187 and 45.129.0.192 and backdoor-style files such as /data/lib/liblog.so. CISA added the flaw to the KEV catalog with a federal mitigation deadline of October 4.",
+          "image": "https://www.bleepstatic.com/content/hl-images/2022/10/14/Fortinet.jpg",
+          "severity": "Critical",
+          "summary": "Fortinet is warning that CVE-2026-104286 (FG-IR-26-175), a CVSS 9.8 path-traversal flaw in the FortiMail management interface, is being actively exploited to write arbitrary files and execute code on vulnerable devices.",
+          "title": "FortiMail zero-day under active attack — check your appliance now",
+          "url": "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/"
+        },
+        {
+          "action": "Upgrade Mooncake past 0.3.13.post1 and restrict the HTTP metadata server to trusted networks.",
+          "details": "Attackers can poison segment descriptors or re-create rpc_meta entries to redirect KV-cache transfers to attacker-controlled listeners, or exhaust server memory. Disclosed October 2; no KEV listing or public exploit code confirmed yet.",
+          "severity": "Critical",
+          "summary": "Mooncake through 0.3.13.post1 has a missing-authentication flaw (CVE-2026-103765, CVSS 9.4) in its HTTP metadata server /metadata handler, letting unauthenticated attackers read, overwrite and delete transfer-engine metadata.",
+          "title": "Mooncake KV-cache metadata hijack: unauthenticated access (CVSS 9.4)",
+          "url": "https://www.thehackerwire.com/vulnerability/CVE-2026-103765/"
+        },
+        {
+          "action": "Update n8n to 1.123.80+ (1.x) or 2.40.1+ (2.x) and review shared-workflow editor permissions.",
+          "details": "Also fixed: CVE-2026-103246 (CVSS 7.7) — missing credential-ownership validation during inline agent node-tool introspection lets attackers reference arbitrary credential IDs to decrypt and exfiltrate plaintext secrets to attacker-controlled hosts. Both flaws published October 1; no known exploitation.",
+          "image": "https://www.sdi.es/wp-content/uploads/2025/12/N8n-logo-new.svg-1.png",
+          "severity": "High",
+          "summary": "n8n before 1.123.80 has a credential-tampering flaw (CVE-2026-103247, CVSS 8.5) where duplicate node IDs bypass the workflow credential tamper guard, letting an attacker with editor access to shared workflows steal victim credentials and redirect secrets to attacker-controlled hosts.",
+          "title": "n8n credential tampering via duplicate node IDs (CVE-2026-103247)",
+          "url": "https://www.redpacketsecurity.com/cve-alert-cve-2026-103247-n8n-io-n8n/"
+        },
+        {
+          "action": "Upgrade Ghost to 6.57.1 or later.",
+          "details": "Published October 1 as GHSA-q55r-w7fh-rmh6; no known exploitation.",
+          "image": "https://cdn.freebiesupply.com/logos/thumbs/2x/ghost-4-logo.png",
+          "severity": "High",
+          "summary": "Ghost 6.20.0 through 6.57.1 has a session-handling flaw (CVE-2026-103283, CVSS 8.1) that lets an authenticated staff user log in as any other staff user with just the password, bypassing two-factor authentication.",
+          "title": "Ghost CMS staff auth bypass defeats 2FA (CVE-2026-103283)",
+          "url": "https://www.redpacketsecurity.com/cve-alert-cve-2026-103283-tryghost-ghost/"
+        },
+        {
+          "action": "Update jackson-dataformats-binary to the patched release per GHSA-3v8f-v6vx-fmrm.",
+          "details": "Both rated High (CVSS 7.5), disclosed October 1. No public exploit code confirmed; not in CISA KEV.",
+          "severity": "High",
+          "summary": "FasterXML jackson-dataformats-binary never enforces the maxNameLength limit on CBOR/Smile property names — a single unbounded property name exhausts parser memory, an unauthenticated DoS on any endpoint parsing untrusted binary documents (CVE-2026-68495 for CBOR, CVE-2026-68496 for Smile).",
+          "title": "Jackson CBOR/Smile parser memory-exhaustion DoS (CVE-2026-68495/68496)",
+          "url": "https://www.thehackerwire.com/vulnerability/CVE-2026-68495/"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "details": "The Gentlemen also claimed Hollard Insurance earlier in September; stolen data in that case traced back to a third party too (MIP Holdings' June 2026 incident).",
+          "severity": "Medium",
+          "summary": "The Gentlemen ransomware group listed Guardrisk, an insurer under South Africa's Momentum Group, on its dark-web leak site — but Guardrisk says its own systems are uncompromised and customer data exposure came from a cyber incident at third-party CoverCubed.",
+          "title": "The Gentlemen claims Guardrisk breach via third-party CoverCubed",
+          "url": "https://mybroadband.co.za/news/security/669576-momentum-group-company-responds-to-data-breach-claims.html"
+        },
+        {
+          "details": "Listed as a threat-actor claim — the victim has not publicly confirmed a breach.",
+          "image": "https://www.urtech.ca/wp-content/uploads/2020/11/ransomware-lock-laptop-768x512.jpg",
+          "severity": "Medium",
+          "summary": "Akira added building-materials supplier DPL Group to its leak site on October 1, threatening to publish 8 GB of corporate data including employee personal documents, financials and customer information.",
+          "title": "Akira claims DPL Group, threatens 8 GB data leak",
+          "url": "https://www.hookphish.com/blog/ransomware-group-akira-hits-dpl-group/"
+        },
+        {
+          "details": "All remain unconfirmed threat-actor claims at this stage; monitoring via ThreatMon dark-web tracking, observed October 1.",
+          "severity": "Medium",
+          "summary": "New October 1 leak-site listings: Chaos claims dental provider Park Dental, inCransom lists a metal recycling firm, and the Genesis operation lists Owens Distributors.",
+          "title": "Leak-site churn: Chaos, inCransom and Genesis post new victims",
+          "url": "https://undercodenews.com/two-new-ransomware-victims-reported-incransom-targets-metal-recycling-while-genesis-names-owens-distributors-video/"
+        },
+        {
+          "details": "Public reporting places the BrainCipher attack around September 23 and the lawsuit filing on September 26.",
+          "severity": "Medium",
+          "summary": "A borrower sued Gold Star Mortgage Financial Group on September 26, just three days after the BrainCipher ransomware group claimed the Ann Arbor lender's customer data was stolen — one of the fastest claim-to-lawsuit turnarounds of 2026.",
+          "title": "Gold Star Mortgage sued days after BrainCipher ransomware claim",
+          "url": "https://nationalcybersecurity.com/gold-star-mortgage-ransomware-lawsuit-3-day-timeline-2026-hacking-cybersecurity-infosec-comptia-pentest-ransomware/"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "details": "Per the October 1 weekly intelligence report; target technology was web applications, objective data leak and financial gain.",
+          "image": "https://englishpunjabkesari.imagibyte.sortdcdn.net/wp-content/uploads/2026/05/202605213796816.jpg",
+          "severity": "Medium",
+          "summary": "Krybit ransomware attacked an Indian construction company and published its data, per the October 1 weekly intelligence report.",
+          "title": "Krybit ransomware hits a construction company in India",
+          "url": "https://nationalcybersecurity.com/weekly-intelligence-report-1-oct-2026-hacking-cybersecurity-infosec-comptia-pentest-ransomware/"
+        },
+        {
+          "details": "Other items in the October 1 roundup: a Kanpur probe exposing a 611-account dispersal network after a Rs 48.20-lakh digital-arrest fraud, and Punjab Police battling 50+ AI-generated videos after the LPU unrest.",
+          "image": "https://ba-bharataawaz.blr1.digitaloceanspaces.com/uploads/photos/2026/07/ba_5eb62afec94d8e0bf21f09bc72ea2c53.png",
+          "severity": "Medium",
+          "summary": "The cabinet cleared a Rs 1,789.52-crore AI-powered traffic system for Delhi Police; Chandauli and Delhi police busted international cyberfraud call centres targeting elderly Japanese and American victims; and Telangana launched its 'Pause. Think. Verify' campaign for Cybersecurity Awareness Month.",
+          "title": "Delhi Police clears Rs 1,789.52-cr AI traffic system; call centres busted",
+          "url": "https://the420.in/india-cyber-tech-brief-1-october-2026-ai-policing-digital-arrest/"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Friday, October 2 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

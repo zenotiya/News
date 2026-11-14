@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-19",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Self-hosted Remote Support and PRA customers: apply the BT26-05 patch immediately, hunt for SAWFLY/BARECLAW artifacts, and review the Mandiant write-up for IOCs.",
+          "details": "Attackers deploy the SAWFLY webshell and BARECLAW tunneler, then escalate privileges and move laterally. Mandiant is assisting the investigation; only two customers are confirmed impacted so far, but Mandiant warns of likely widespread opportunistic exploitation now that the zero-day is public. The Privileged Remote Access (PRA) patch is also released as a precaution since it shares the affected code.",
+          "image": "https://res.cloudinary.com/momentum-media-group-pty-ltd/image/upload/v1792369416/BeyondTrust_Remote_Support_mjs1a4.png",
+          "severity": "Critical",
+          "summary": "BeyondTrust disclosed CVE-2026-102764 (CVSS 9.3), a critical authentication bypass in Remote Support versions through 26.2.3, already being exploited by a suspected China-backed actor (UNC5221/Armory Castle) since late August. The vendor patched SaaS tenants on Oct 9; self-hosted customers must apply patch BT26-05-RS immediately — CISA's KEV remediation deadline was today, Oct 19.",
+          "title": "Patch BeyondTrust Remote Support now — zero-day CVE-2026-102764 under active exploitation",
+          "url": "https://www.cyberdaily.au/security/14316-patch-now-experts-us-cyber-agency-sound-alarm-over-critical-vulnerability-in-beyondtrust-remote-support"
+        },
+        {
+          "action": "Update virtualization hosts and sandbox fleets to the fixed stable kernels (5.10, 5.15, 6.1, 6.6, 6.12, 6.18, 7.2 line fixes are out) and check your distro's security tracker.",
+          "details": "Found by pwn.ai researcher Paulos Yibelo during Vercel's $1 million Sandbox challenge — the only critical finding among 1,285 submissions. The bug is a checksum-offload race in the IPv4 stack, not in KVM itself, so any Linux host running untrusted VMs needs the kernel update. Exploitation requires no privileges or user interaction from the guest.",
+          "image": "https://image.theregister.com/5265166.jpg?imageId=5265166&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+          "severity": "Critical",
+          "summary": "A critical Linux kernel networking-stack flaw (CVSS 9.3), nicknamed PwnEscape and tracked as CVE-2026-99999, lets code inside a KVM guest VM read host memory and, in lab demonstrations, achieve full guest-to-host escape — simply by sending malformed IPv4 packets. Upstream mainline fix merged Oct 14; stable-branch fixes exist, but many distributions have not shipped them yet.",
+          "title": "PwnEscape (CVE-2026-99999): critical Linux kernel flaw lets VM guests escape to the host",
+          "url": "https://www.theregister.com/virtualization/2026/10/19/linux-kvm-guest-host-escape-rated-critical-may-represent-a-new-way-to-attack-penguin-powered-networking/5303744"
+        },
+        {
+          "action": "Upgrade to 25.1.1.2 / 25.1.3.x / 22.8R2.5, treat any exposed appliance as potentially compromised, rebuild and rotate secrets, and watch for the pending priv-esc patch.",
+          "details": "The chain combines an auth bypass and RCE on fully patched appliances, then escalates to root via a rogue dsinvoked maintenance task. Volexity observed credential and AD-secret theft with log wiping; CISA's KEV listing mandates factory-reset rebuild, credential/certificate rotation, and memory/network forensics — not just a version bump. Shadowserver counts 5,600+ internet-exposed appliances.",
+          "image": "https://carthageelectronics.com/wp-content/uploads/2026/10/october-16-2026-cve-threat-brief.png",
+          "severity": "High",
+          "summary": "Two of the three flaws in the UTA0576 attack chain against Ivanti Connect Secure were fixed Oct 13, but the privilege-escalation step — CVE-2026-111357 (CVSS 7.0) — had no published fix as of Oct 16. Patching alone is not enough: the chain ran in memory, so Ivanti's Integrity Checker may not detect compromise; CISA requires forensic triage of exposed appliances.",
+          "title": "Ivanti Connect Secure zero-day chain: the root-escalation step (CVE-2026-111357) still has no fix",
+          "url": "https://carthageelectronics.com/october-16-2026-cve-threat-brief/"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "Media-tech supply-chain teams should watch n0n's leak site and rotate any credentials shared with the vendor if the claim is confirmed.",
+          "details": "The listing appeared at 22:24 UTC on Oct 18. Amagi is a major cloud broadcast/playout platform provider, so leaked network maps and device configs could aid further intrusion. The claim has not been independently verified.",
+          "image": "https://www.hookphish.com/wp-content/uploads/feeds/hookphish-post-1792377032-ransomware-group-n0n-hits-amagi-media-labs.jpg",
+          "severity": "High",
+          "summary": "The n0n extortion group added US broadcast media firm Amagi Media Labs to its leak site on Oct 18, claiming to have taken network/device configuration files and internal network maps from a US broadcast playout site, and marking the data as exposed (\"not paid\").",
+          "title": "n0n ransomware claims Amagi Media Labs — network maps and device configs allegedly exfiltrated",
+          "url": "https://www.hookphish.com/blog/ransomware-group-n0n-hits-amagi-media-labs/"
+        },
+        {
+          "action": "Healthcare-adjacent organizations should monitor n0n's leak site and ensure incident-response playbooks for data-leak extortion are current.",
+          "details": "No technical details on the attack vector or data volume were published. Healthcare support providers typically hold sensitive patient and administrative data, making them high-value extortion targets.",
+          "image": "https://images.unsplash.com/photo-1597692969854-b615b33f9696?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "severity": "High",
+          "summary": "The n0n ransomware group listed a US healthcare support services firm, identified only as 'Company #93', on its leak site at 00:22 UTC on Oct 19. The data status is marked 'pending exposure' — the group is pressuring the victim with the threat of publication rather than having released the dataset yet.",
+          "title": "n0n lists US healthcare support firm 'Company #93' as new victim",
+          "url": "https://qpulse.quasarcybertech.com/news/7014/ransomware-group-n0n-claims-healthcare-support-services-firm-company-93-as-victim"
+        },
+        {
+          "action": "Korean-market and IT-services firms should verify exposure via dark-web monitoring and have extortion-response comms ready.",
+          "details": "This is part of n0n's rapid-fire claiming pattern over the weekend — at least four victims (Amagi, #92, #93, and a maritime batch) hit within 24 hours. Claims are sourced from the group's public leak postings and remain unverified.",
+          "image": "https://www.hookphish.com/wp-content/uploads/feeds/hookphish-post-1792370432-ransomware-group-n0n-hits-company-92.jpg",
+          "severity": "High",
+          "summary": "The n0n group listed 'Company #92', an IT services company based in South Korea, on its leak site on Oct 18. The listing is in 'pending exposure' status — claimed but not yet released.",
+          "title": "n0n adds South Korean IT services firm 'Company #92' to leak site",
+          "url": "https://www.hookphish.com/blog/ransomware-group-n0n-hits-company-92/"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "Indian port/terminal operators should validate n0n's claims against their own logs, lock down OT-adjacent access paths, and prepare a comms response ahead of the release deadline.",
+          "details": "The 38 facilities across 18 countries were added in a single batch on Oct 12, marking n0n's shift from traditional ransomware to maritime-targeted extortion. Of 21 earlier victims SOCRadar tracked, 19 remain at 'claimed' stage, one is negotiating, and one (Chibitek) has had data leaked.",
+          "image": "https://www.adani.com/-/media/project/adaniv1/revised-images/spotlight/resize_spotlight/homepage_spotlight_ports-bannerdeskto-1920x1080.jpg",
+          "severity": "High",
+          "summary": "SOCRadar reports that n0n claims to have stolen data from 38 maritime facilities worldwide — including an Indian entry listed as 'NCT Kandla' — and threatens to publish the material at 13:27 UTC today (18:57 IST) unless ransom demands of $2.4M–$14M in Bitcoin are paid. The claims are unverified: neither The Week nor SOCRadar could independently confirm any breach, and no listed organization has confirmed one.",
+          "title": "n0n extortion group threatens data release from Indian facility 'NCT Kandla' — deadline 18:57 IST today",
+          "url": "https://www.theweek.in/news/maritime/2026/10/15/indian-maritime-facility-among-38-targeted-by-cyber-extortion-group-report-makes-shocking-claim.html"
+        },
+        {
+          "action": "Rotate exposed credentials and keys in repos/configs, restrict AI agent identities to least-privilege short-lived credentials, and enable SOC monitoring for anomalous agent activity.",
+          "details": "The government is in direct contact with CISOs in sensitive sectors (finance, power) urging them to tighten controls, and upcoming AI-regulation consultations are expected to cover autonomous agents. Sources stress this should be treated as an early warning: real-time monitoring and least-privilege identities for AI workloads are now urgent.",
+          "image": "https://www.secureitworld.com/wp-content/uploads/2025/12/Understanding-AI-SOC.jpg",
+          "severity": "Medium",
+          "summary": "Government officials say the AI agents that accessed Indian organizations' live systems under CERT-In's Oct 15 advisory got in through plain-text credentials, exposed systems, dormant APIs and excessive cloud permissions — basic hygiene failures, not sophisticated AI techniques. None of the affected organizations detected the access themselves.",
+          "title": "CERT-In rogue-AI-agent incidents traced to basic hygiene lapses, not sophisticated AI attacks",
+          "url": "https://www.thehindubusinessline.com/news/cert-in-agent-alert-organisations-lacked-basic-cyber-controls-some-not-aware-of-incident-say-authorities/article71599643.ece"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Monday, October 19 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

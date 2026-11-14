@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-31",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Upgrade to 25.1.1.3 or 22.8R2.6 and hunt for compromise — Ivanti's Integrity Checker Tool can miss a compromise in this chain, so a clean result does not prove the appliance was not hit.",
+          "details": "The flaws are chained with the earlier zero-day CVE-2026-104935. Volexity, which found the attacks, says actor UTA0576 began exploiting the chain on October 3 against a fully patched appliance. Ivanti fixed the flaws in releases 25.1.1.3 and 22.8R2.6 on October 29; the federal remediation deadline for CVE-2026-111357 is November 2.",
+          "severity": "Critical",
+          "summary": "CISA added CVE-2026-111357 (CVSS 8.8) and CVE-2026-118527 to its Known Exploited Vulnerabilities catalog on October 30, as part of the Ivanti Connect Secure attack chain first seen in early October.",
+          "title": "CISA adds two more exploited Ivanti Connect Secure flaws to KEV",
+          "url": "https://cybersecurityasean.com/daily-news/ivanti-connect-secure-cve-2026-111357-cve-2026-118527-exploited",
+          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7XpFnSuowWx8pB5k2qkbqlgW4ri46cbWaz9XzmxO3HxNsYGr8Jm5j8gjDC7obEUSpnPaiquCNwomNhJiJJguDAxtJo1UtnmVp_4wFrDizlwQ2lhupu1v2OXVmzhsRDKNKL4o1BILCa-AKbSX75busriOiCt9aYaTrmbGKtZhmMIhqmsUrq3wjEQKcGE0/w600-h300-p-k-no-nu/ivanti-vulnerability.webp"
+        },
+        {
+          "action": "Patch GitLab and Cisco ASA/FTD before the November 1 deadline; for Cisco, disabling secondary authentication on affected tunnel groups is Cisco's interim mitigation if patching cannot be done immediately.",
+          "details": "CVE-2026-97229 is an integer overflow in GitLab Community and Enterprise Edition exploitable via a specially crafted regular expression in a CI/CD configuration; Alpine Linux reported unsuccessful exploitation attempts against its instance on October 20-21. CVE-2026-76418 lets an unauthenticated remote attacker force a Cisco ASA/FTD device to reload via the Remote Access SSL VPN service when secondary authentication is configured.",
+          "severity": "Critical",
+          "summary": "CISA added GitLab CVE-2026-97229 (CVSS 10.0, unauthenticated remote code execution) and Cisco CVE-2026-76418 (CVSS 8.6, firewall reload) to KEV, citing active exploitation, with federal fixes due November 1.",
+          "title": "GitLab RCE (CVSS 10.0) and Cisco firewall DoS added to CISA KEV",
+          "url": "https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html",
+          "image": "https://images.seeklogo.com/logo-png/43/1/gitlab-logo-png_seeklogo-436719.png"
+        },
+        {
+          "action": "Apply the October 2026 Critical Patch Update to all EBS 12.2.3-12.2.15 environments, including internet-reachable non-production instances, and hunt for unauthenticated POSTs to /OA_HTML/AppsTCFServer.",
+          "details": "The flaw affects E-Business Suite 12.2.3 through 12.2.15 and was fixed in Oracle's October 2026 Critical Patch Update. Shadowserver tracks more than 670 internet-exposed EBS instances. The vulnerable Thin Client Framework servlet is reachable over HTTP with no credentials required.",
+          "severity": "Critical",
+          "summary": "Exploratory exploit attempts against CVE-2026-101767, a CVSS 9.8 unauthenticated SQL injection in Oracle E-Business Suite chainable to remote code execution, were recorded on decoy systems on October 27.",
+          "title": "Oracle EBS flaw CVE-2026-101767 under active probing — patch now",
+          "url": "https://cyber-threat.net/oracle-ebs-cve-2026-101767-probes-sqli-rce/",
+          "image": "https://www.appsnext.com/images/appsnext/services/oracleebs.jpg"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "details": "Binance's initial investigation points to a compromised DevOps engineer's laptop giving an attacker access to a service container used to submit unauthorized withdrawals; it says it found no evidence of a leaked wallet private key, and later said investigators uncovered additional points of breach. Blockchain firm TRM Labs attributed the theft to North Korea's TraderTraitor group; Binance itself has not attributed it.",
+          "severity": "Critical",
+          "summary": "About $6.3 billion in cryptocurrency was taken from Binance hot wallets on October 29 — the largest crypto theft on record — and Binance says it will cover all losses, with roughly $3 billion in affected assets frozen so far.",
+          "title": "Binance loses about $6.3 billion in record crypto theft",
+          "url": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/",
+          "image": "https://rewardy.b-cdn.net/img/misc/binance_logo.png"
+        },
+        {
+          "details": "Reporting on the leak-site claim says the alleged material includes engineering drawings and manufacturing processes for Falcon 9/Heavy, Starship and Draco programmes, customer quoting accounts, and employee Social Security, bank and payroll records. Treat all of it as attacker claims until independently confirmed.",
+          "severity": "High",
+          "summary": "Ransomware group Aur0ra listed Rapid Manufacturing, a California electronics contract manufacturer, as a victim on October 30, alleging theft of ITAR-controlled engineering drawings and 600-1,200 employee records. The claim is unverified and the company has not confirmed a breach.",
+          "title": "Aur0ra claims Rapid Manufacturing, alleging ITAR-controlled data (unverified)",
+          "url": "https://www.hookphish.com/blog/ransomware-group-aurora-hits-rapid-manufacturing/",
+          "image": "https://cdn.technadu.com/wp-content/uploads/2019/07/ransomware-1068x601.jpg"
+        },
+        {
+          "action": "Law firms and their clients should watch for extortion or data-leak follow-ups and review whether any shared matter data could be affected; treat the claim as unverified until the firm confirms.",
+          "details": "The reporting gives no technical details on the attack vector, the extent of any data exfiltration or encryption, or the current status of the firms' systems. The claim raises the risk of sensitive legal and client data exposure if confirmed.",
+          "severity": "High",
+          "summary": "Silentransomgroup publicly claimed US law firm ArentFox Schiff as a ransomware victim on October 30, with Moritt Hock & Hamroff LLP and Susman Godfrey LLP also claimed the same day, according to ransomware tracking reporting.",
+          "title": "Silentransomgroup claims law firm ArentFox Schiff and two other firms",
+          "url": "https://qpulse.quasarcybertech.com/news/7563/silentransomgroup-claims-arentfox-schiff-as-ransomware-victim",
+          "image": "https://allrize.ai/newsite/wp-content/uploads/2026/05/Modern-law-firm-conference-room.png"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "AU vehicle-loan customers should watch for phishing using loan and KYC details; the bank should be pressed to confirm scope and notify affected customers directly.",
+          "details": "The group claims the data includes KYC records, PAN and Aadhaar details, credit reports, bank statements, loan applications and signed agreements, plus CRM, employee and audit-log data. The claims could not be independently verified, and the bank did not say how many customers may be affected.",
+          "severity": "High",
+          "summary": "AU Small Finance Bank said on October 30 it is investigating a potential data leak involving a Salesforce-managed SaaS platform holding limited vehicle-loan customer data, after the ScarlettGroup claimed a breach. The bank says its own systems remain unaffected.",
+          "title": "AU Small Finance Bank probes potential vehicle-loan data leak after breach claim",
+          "url": "https://www.reuters.com/legal/litigation/indias-au-small-finance-bank-probes-potential-data-leak-2026-10-30/",
+          "image": "https://livelaw-bennett.refread.com/h-upload/2024/02/16/750x450_522754-au-small-finance-bank.webp"
+        },
+        {
+          "action": "Lenders should rotate payment-gateway and partner-bank API credentials, enforce multi-factor authentication and maker-checker approvals on disbursals, and tighten transaction monitoring, per CERT-In's advisory.",
+          "details": "The reporting, citing officials and investigators, says attackers targeted smaller lenders with weaker cybersecurity and payment-processing controls, in one case taking ₹7.5 crore from a Delhi-based lender and a further ₹7.25 crore days later. CERT-In's October 9 advisory warned NBFCs, digital lenders and payment providers about stolen API credentials being used to push unauthorised fund transfers through disbursal APIs.",
+          "severity": "High",
+          "summary": "Cyberattacks have reportedly siphoned about ₹300 crore from smaller Indian NBFCs over roughly two months, with close to 150 complaints or FIRs filed, according to Economic Times reporting published October 29.",
+          "title": "Smaller NBFCs reportedly lose about ₹300 crore to AI-driven cyberattacks",
+          "url": "https://www.medianama.com/2026/10/223-ai-cyberattacks-siphon-rs-300-crore-nbfcs/",
+          "image": "https://images.moneycontrol.com/static-hindinews/2024/12/CyberFraud08.jpg"
+        },
+        {
+          "action": "Regulated entities should expect closer scrutiny of cybersecurity compliance, API security and AI-risk readiness, and prioritise closing the API-credential gaps CERT-In flagged.",
+          "details": "The stepped-up checks follow SBI's October 21 report of 3,897 customer records disclosed on the dark web, CERT-In warnings on stolen bank API credentials, and cases in which hackers attacked API connections used for loan disbursal instructions. The RBI issued an advisory on October 19 urging regulated institutions to improve handling of data breaches and compromised credentials.",
+          "severity": "Medium",
+          "summary": "The Reserve Bank of India has intensified cybersecurity audits of banks and financial institutions following data leaks, suspected attacks and fraudulent fund transfers, with a focus on API vulnerabilities and AI-related risks, sources told reporters on October 30.",
+          "title": "RBI steps up cyber checks on banks after leaks and fraudulent transfers",
+          "url": "https://sundayguardianlive.com/business/rbi-intensifies-cyber-checks-on-indian-banks-after-data-leaks-and-fraudulent-fund-transfers-314211/",
+          "image": "https://www.indiancooperative.com/wp-content/uploads/2024/11/rbi-copy-1-1140x815.jpg"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Saturday, October 31 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

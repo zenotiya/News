@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-27",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Apply the fixes in WSO2 advisory WSO2-2026-5328, verify tokens with unsupported algorithms are rejected, and rotate consumer keys, secrets, and backend credentials for registered applications.",
+          "details": "watchTowr saw forged-JWT exploitation attempts against honeypots since at least September 13. Note: CISA's short name calls this a \"path traversal\" issue, but the NVD entry and WSO2's own advisory describe the actual mechanism as a JWT signature-verification bypass (CWE-347) — validate your deployment against the vendor advisory.",
+          "image": "https://www.shifttech.net/assets/blue-server-room-DXdwOdYO.jpg",
+          "severity": "Critical",
+          "summary": "CISA added CVE-2026-5430 to its Known Exploited Vulnerabilities catalog on September 24 with a federal remediation deadline of September 27 — today. It hits WSO2 API Control Plane, API Manager, Traffic Manager, and Universal Gateway, and active exploitation is underway.",
+          "title": "CISA: patch WSO2 API gateways today — CVE-2026-5430 is actively exploited",
+          "url": "http://thehackernews.com/2026/09/wso2-and-adobe-commerce-flaws-exploited.html"
+        },
+        {
+          "action": "Patch per Adobe's APSB26-92 advisory and review logs for unusual customer-account access or session switches.",
+          "details": "The flaw (CWE-863) lets an attacker switch a customer session to another customer account, exposing the victim's account and private customer data. Adobe has not yet updated its advisory to reflect the exploitation.",
+          "image": "http://webiators.com/wp-content/uploads/2026/05/Home-Img-800X623.png",
+          "severity": "High",
+          "summary": "CISA added CVE-2026-71362 (CVSS 9.1) to its Known Exploited Vulnerabilities catalog on September 24, with the same September 27 deadline. It is an incorrect-authorization flaw in Adobe Commerce and Magento Open Source that enables unauthenticated customer-account takeover.",
+          "title": "Adobe Commerce session-hijack flaw CVE-2026-71362 lands on CISA KEV",
+          "url": "http://thehackernews.com/2026/09/wso2-and-adobe-commerce-flaws-exploited.html"
+        },
+        {
+          "action": "Update to 2026.8.1; audit cron job-run history for unexpected or disabled-job executions, and review group-DM agent invocations for disallowed participants.",
+          "details": "CVE-2026-100567 (8.2): DNS-rebinding SSRF against remote CDP endpoints. CVE-2026-100568 (8.3): agent callers can read and execute ownerless operator cron jobs, exposing stored secrets. CVE-2026-100570 (7.8): workspace .env can set CLOUDSDK_PYTHON_ARGS and execute code as the host user during Gmail setup. CVE-2026-100575 (8.8): Slack allowlist bypass in multi-person DMs.",
+          "image": "https://www.cybersecurity-insiders.com/wp-content/uploads/AI-agents-3.png",
+          "severity": "High",
+          "summary": "OpenClaw (the npm agent gateway) shipped version 2026.8.1 on September 26 fixing a batch of high-severity flaws — including DNS-rebinding SSRF, cron-job secret theft, and a Slack allowlist bypass. Exposed agent deployments running operator jobs are most at risk.",
+          "title": "OpenClaw agent gateway fixes a batch of high-severity flaws (8.2–8.8)",
+          "url": "https://www.redpacketsecurity.com/cve-alert-cve-2026-100567-openclaw-openclaw/"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "details": "ThreatMon recorded the listing at about 17:02 UTC on September 26. Cipher.Systems describes itself as a provider of enterprise IT, cloud, and cybersecurity services — a compromise there could expose customer credentials, infrastructure details, and support data, though none of that is confirmed.",
+          "image": "https://itfix.org.uk/wp-content/uploads/2024/12/Ransomware_Resilience_How_Backup_Can_Protect_You_From_Attacks.webp",
+          "severity": "High",
+          "summary": "Ransomware operation m3rx listed Cipher.Systems, a US-based IT and cybersecurity services company, on its leak site on September 26. The claim is unverified — no evidence of encryption or data theft has been publicly confirmed.",
+          "title": "m3rx claims cybersecurity provider Cipher.Systems — no breach confirmed yet",
+          "url": "https://undercodenews.com/m3rx-claims-cipher-systems-in-alleged-ransomware-attack-no-breach-confirmation-yet-video/"
+        },
+        {
+          "details": "FTAPI Software (US, technology) and Guardrisk (South Africa, financial services) appeared on the group's leak site on September 26. The group runs a double-extortion model: exfiltrate data, then encrypt.",
+          "image": "https://hraicp.org/wp-content/uploads/2024/09/4-4-1024x683.png",
+          "severity": "High",
+          "summary": "Ransomware group Thegentlemen disclosed two new claimed victims on September 26: FTAPI Software in the US and Guardrisk, a financial-services company in South Africa. Leak-site appearances reflect claims, not confirmed compromises.",
+          "title": "Thegentlemen lists FTAPI Software and Guardrisk as new claimed victims",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/ftapi-software-thegentlemen-2026"
+        },
+        {
+          "details": "The listing was observed on September 26 with the claimed attack date around September 24. Because litigation-support firms handle depositions, medical records, and trial evidence, the claim warrants attention even though it is unverified.",
+          "image": "https://ecommercenews.com.au/uploads/story/2025/08/27/preview_realistic-masked-hacker-computer-dark-room-digital-locks-encrypted-files-ai-ransomware.webp",
+          "severity": "Medium",
+          "summary": "Ransomware group Storm allegedly listed Magna Legal Services, a US nationwide litigation-support provider, on its leak site. No public evidence confirms an intrusion, encryption, or data theft.",
+          "title": "Storm claims US litigation-support firm Magna Legal Services",
+          "url": "https://undercodenews.com/storm-claims-magna-legal-services-in-alleged-ransomware-attack-us-litigation-support-firm-named-on-leak-site-video/"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "details": "The Railway Board directed all units to strengthen endpoint protection (including EDR) and user awareness. Staff are advised not to open files with extensions such as .vbs, .vbe, .exe, .bat, .cmd, .js, or .ps1 unless independently verified — consistent with a CERT-In warning about VBScript files distributed over WhatsApp through compromised accounts.",
+          "image": "https://images.news18.com/assam/uploads/2024/08/1724594053_Indian-Railways-11-2024-08-856a37bd5f41c65f4ea1eb454ad25957.jpg?impolicy=website&width=827&height=620",
+          "severity": "High",
+          "summary": "Indian Railways has issued a cybersecurity advisory to all zonal railways after a script-based malware incident in Central Railway: an \"E-statement.vbs\" file delivered via a WhatsApp group was downloaded through WhatsApp Web and executed by a user. The advisory warns messaging apps can be used to deliver malware onto railway networks.",
+          "title": "Indian Railways issues cybersecurity advisory after WhatsApp-delivered malware incident",
+          "url": "https://www.etvbharat.com/en/bharat/railways-issues-cyber-security-alert-to-its-staff-after-malware-attack-enn26092604541"
+        },
+        {
+          "details": "Investigators allege callers used VoIP to impersonate US FTC, Attorney's Office, and CISA officials, telling victims their identities were linked to serious online offences and persuading them to buy gold and hand it to couriers in the US. CBI searches in Ahmedabad recovered devices with potential digital evidence.",
+          "image": "https://tnsi.com/wp-content/uploads/2025/06/Call-Center-Fraud-blog-hero.jpg",
+          "severity": "Medium",
+          "summary": "The CBI has arrested an alleged operator of illegal call centres running from Ahmedabad since 2024, accusing them of defrauding US victims of more than $7.21 million through government-impersonation scams. The case remains under investigation.",
+          "title": "CBI arrests alleged operator of Ahmedabad call centres behind $7.21M US fraud",
+          "url": "https://the420.in/india-cyber-tech-brief-call-centre-fraud-mule-network-crypto-heist/"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Sunday, September 27 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-22",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Patch the PHP runtime itself (WordPress/plugin updates will NOT fix this). Interim: limit request sizes at the web server and set session.upload_progress.enabled=0; CERT-EU advises isolating internet-facing apps that cannot be patched immediately.",
+          "details": "Discovered via AI-assisted research by Wiz (with Calif.io, OpenAI and Quarkslab). Details leaked before the coordinated release, and Cloudflare observed live attack traffic mutating payloads around WAF rules. FBI Cyber Division, NSA, CERT-EU, UK NCSC and multiple European ministries issued advisories; government and gaming portals (incl. Pokemon/Cygames) went offline preemptively.",
+          "image": "https://data.windowsforum.com/attachments/88/88627-ac131c6c2a3b7c43d28523bc920cab36.jpg?hash=XXjR4gt23f",
+          "severity": "Critical",
+          "summary": "Two unauthenticated remote-code-execution flaws in PHP core (CVE-2026-109618, CVE-2026-109619), dubbed PHP2Shell, carry CVSS 4.0 9.2. Emergency patches released Oct 21: PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35; all web-serving setups (FPM, mod_php, php-cgi, FrankenPHP, LiteSpeed) are at risk.",
+          "title": "'PHP2Shell': critical PHP RCE (CVE-2026-109618/109619) — patch runtime now",
+          "url": "https://www.webpronews.com/php2shell-php-remote-code-execution-vulnerabilities-patch/"
+        },
+        {
+          "action": "Self-managed GitLab admins: upgrade to a fixed release immediately and run GitLab's two published detection rules ('Onigmo native worker crash', 'Org mode render error burst') against application logs.",
+          "details": "Fixed branches: 19.5.1, 19.4.3, 19.3.6, 19.2.9, 19.1.9, 19.0.10 and 18.11.13. GitLab.com is already updated; Dedicated customers on the specified internal releases need no action.",
+          "image": "https://rootstackcms.b-cdn.net/sites/default/files/inline-images/gitlab_0.png",
+          "severity": "Critical",
+          "summary": "GitLab patched a CVSS 10.0 unauthenticated remote-code-execution flaw (CVE-2026-110264) on Oct 21 — an integer overflow in the Onigmo regex engine affecting CE/EE releases dating back to GitLab 7.0 (2014), putting source code and CI/CD infrastructure at risk.",
+          "title": "GitLab patches CVSS 10.0 RCE (CVE-2026-110264)",
+          "url": "https://www.abijita.com/gitlab-critical-cve-2026-110264/"
+        },
+        {
+          "action": "Apply Cisco release 15SU5; customers on release 14 must migrate to a fixed release. Prioritize internet-exposed Cisco assets in your ASM sweep.",
+          "details": "Vulns found in Cisco's internal testing (including frontier AI models). PSIRT says none are known to be exploited and no workarounds exist; the 22.8-style short KEV-style deadlines don't apply here.",
+          "image": "https://galileosg.com/wp-content/uploads/2025/08/cisco-flaw-z5Nc9S.jpg",
+          "severity": "High",
+          "summary": "Cisco published three October hardening advisories covering 20 CVEs in voice/collaboration products, Expressway and Snort 3 — including two Unified CM CVEs scored 9.8 (CVE-2026-76473 injection, CVE-2026-76474 improper authentication) and a Snort 3 CVE at 9.0.",
+          "title": "Cisco hardens 20 CVEs incl. two 9.8s in Unified CM",
+          "url": "https://thecircuitry.to/article/ciscos-october-hardening-releases-cover-20-cves-including-critical-bugs-in-unifi-mvitsqh7"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "details": "Tracker-tracked discovery 13:52 UTC Oct 21. Estimated attack date Oct 21. Tracker lists Hypertherm Group at ~$650.7M yearly revenue; passwords to the GoFile archives were expected within 24 hours of posting.",
+          "image": "https://www.redhotcyber.com/wp-content/uploads/2025/03/image-144.jpg",
+          "severity": "High",
+          "summary": "Ransomware group Helix listed industrial manufacturer Hypertherm Group on its leak site Oct 21, claiming data exfiltration and posting GoFile links to the allegedly stolen data.",
+          "title": "Helix ransomware claims Hypertherm Group",
+          "url": "https://qpulse.quasarcybertech.com/news/7131/helix-ransomware-group-claims-data-exfiltration-from-hypertherm-group"
+        },
+        {
+          "details": "Lindauer Dornier manufactures textile machinery, composites equipment, plastics film lines and paper-machine components. No entry vector or encryption details disclosed; company systems' status unconfirmed.",
+          "image": "https://www.redhotcyber.com/wp-content/uploads/2025/03/image-144.jpg",
+          "severity": "High",
+          "summary": "Everest ransomware group publicly claimed German mechanical-engineering firm Lindauer Dornier on Oct 21, per Ransomware.live tracking (claim discovered 13:28 UTC).",
+          "title": "Everest ransomware claims Lindauer Dornier (Germany)",
+          "url": "https://qpulse.quasarcybertech.com/news/7132/everest-ransomware-group-claims-attack-on-lindauer-dornier"
+        },
+        {
+          "details": "Houston-based business law firm serving energy and corporate clients. SilentRansomGroup is an extortion-style group known for exfiltration without deploying encryptors.",
+          "image": "https://www.redhotcyber.com/wp-content/uploads/2025/03/image-144.jpg",
+          "severity": "High",
+          "summary": "SilentRansomGroup claimed Porter Hedges LLP, a Houston law firm, on Oct 21 — a high-risk target for sensitive client data exfiltration even absent encryption.",
+          "title": "SilentRansomGroup claims Houston law firm Porter Hedges",
+          "url": "https://www.hookphish.com/blog/ransomware-group-silentransomgroup-hits-porter-hedges-llp/"
+        },
+        {
+          "details": "Claim discovered Oct 21. Report describes a corporate identity directory: 999 personnel accounts with names and corporate email addresses, client secondment staffing structure, and third-party vendor accounts.",
+          "image": "https://www.redhotcyber.com/wp-content/uploads/2025/03/image-144.jpg",
+          "severity": "High",
+          "summary": "N0n ransomware claimed Hanjin Information Systems & Telecommunication (South Korea) on Oct 21, advertising exposed personnel directories — prime material for downstream social-engineering.",
+          "title": "N0n ransomware claims Hanjin Information Systems (SK)",
+          "url": "https://www.hookphish.com/blog/ransomware-group-n0n-hits-hanjin-information-systems-and-telecommunication-co-ltd/"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "If you hold an SBI account, treat unexpected calls/messages referencing loan or KYC details as phishing until proven otherwise.",
+          "details": "First alerted Oct 16 by its threat-intelligence vendor, the Defence Cyber Agency and CERT-In. Shares slipped 0.88% to ₹963.90 on the news; the bank says core operations are unaffected.",
+          "image": "https://imgc.ap7am.com/bimg/cr-202605226a10718139a2c.jpg",
+          "severity": "Critical",
+          "summary": "SBI told stock exchanges on Oct 21 that preliminary analysis of ~375,000 dark-web records identified 3,897 customer records with PII (names, mobile numbers, DOB, emails, addresses, CIF/lead IDs, loan metadata). An independent CERT-In-empanelled agency is now investigating.",
+          "title": "SBI confirms cyberattack: 3,897 customer records on dark web",
+          "url": "https://cfo.economictimes.indiatimes.com/news/governance-risk-compliance/sbi-investigates-dark-web-leak-of-3-8-lakh-records/135105410"
+        },
+        {
+          "action": "Treat any SBI-related loan/account data as potentially circulating; watch for targeted phishing and fraudulent loan applications using KYC documents.",
+          "details": "This follows an earlier claim flagged Oct 16 by OSINT account CyberPulse56 of a threat actor 'Siriusim' claiming ~375,000 CSV rows + 2,722 PDFs allegedly linked to SBI — authenticity unverified and a separate, unconfirmed claim.",
+          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
+          "severity": "Critical",
+          "summary": "State Bank of India reported on Oct 21 that a cyberattack led to 3,897 customer records containing personally identifiable information being disclosed on the dark web.",
+          "title": "SBI reports cyberattack; 3,897 customer records on dark web",
+          "url": "https://www.reuters.com/legal/litigation/state-bank-india-reports-cyberattack-involving-customer-records-2026-10-21/"
+        },
+        {
+          "details": "The claims remain unverified; SBI had not responded to queries and it is unclear whether the records are genuine or originated from SBI's systems. This is separate from the 3,897-record incident SBI itself reported.",
+          "image": "https://rocket-boys.co.jp/wp-content/uploads/2026/01/kobayashi-resin-sales-company-breach-8149-personal-records-world-leaks-claim-768x512.png",
+          "severity": "High",
+          "summary": "On Oct 20, Indian media reported that cybersecurity monitoring account CyberPulse56 flagged a hacker group named 'Siriusim' claiming ~3.75 lakh SBI-linked records in CSV format plus 2,722 PDFs (personal details, loan applications, account-opening forms). Unverified allegation.",
+          "title": "Hacker group 'Siriusim' claims 3.75 lakh SBI records (unverified)",
+          "url": "https://www.moneycontrol.com/news/business/sbi-data-breach-claim-hacker-group-alleges-access-to-3-75-lakh-records-2-722-documents-14056008.html/amp?utm_campaign=fullarticle&utm_medium=referral&utm_source=inshorts"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "title": "Morning Cybersecurity Digest"
+}

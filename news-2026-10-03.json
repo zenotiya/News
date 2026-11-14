@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-03",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Apply Fortinet's workaround immediately: disable IBE support via CLI, or block/restrict internet access to the management interface until the fixed builds ship.",
+          "details": "Disclosed Oct 1, 2026 in Fortinet advisory FG-IR-26-175. Fixed builds (8.0.2, 7.6.7, 7.4.9) are listed as 'upcoming' and had not shipped as of Oct 2; 7.2 users must move to 7.4 or above. Found internally by Fortinet's Product Security team. Censys counts ~2,800 exposed FortiMail hosts.",
+          "image": "https://cotech.com.ar/assets/images/fortinet-1.webp",
+          "severity": "Critical",
+          "summary": "Fortinet disclosed CVE-2026-104286, a CVSS 9.8 unauthenticated path-traversal flaw in FortiMail that lets attackers write arbitrary files via crafted HTTP/HTTPS requests. CISA added it to the KEV catalog the same day, with a federal remediation deadline of Oct 4.",
+          "title": "FortiMail zero-day under active exploitation — no patch yet",
+          "url": "https://www.helpnetsecurity.com/2026/10/02/fortinet-fortimail-vulnerability-cve-2026-104286/"
+        },
+        {
+          "action": "Upgrade to the fixed release for your train (20.9.10.1, 20.12.8.2, 20.15.6.1, 20.18.4.1, 26.1.2.1 or 26.2.1); restrict Manager API access to trusted networks and hunt logs for j_security_check exploitation signs.",
+          "details": "Cisco PSIRT became aware of exploitation in September 2026 during a customer support case. All Catalyst SD-WAN Manager deployments are affected regardless of configuration. Cisco released IoCs for hunting.",
+          "image": "https://test.betis.cz/wp-content/uploads/2023/03/Cisco_logo_blue_2016.svg_.jpg",
+          "severity": "Critical",
+          "summary": "Cisco patched CVE-2026-76504, a CVSS 9.8 authentication bypass in Catalyst SD-WAN Manager caused by mishandled URI encoding, giving unauthenticated attackers admin-level API access. CISA added it to KEV with a 3-day federal patch deadline; there is no workaround.",
+          "title": "Cisco patches exploited SD-WAN Manager zero-day (CVE-2026-76504)",
+          "url": "https://www.securityweek.com/cisco-patches-exploited-catalyst-sd-wan-zero-day-vulnerability/"
+        },
+        {
+          "action": "Patch Container Storage Modules to 1.17.0 or later and audit clusters for tokens signed by the leaked karavi-authorization sample JWT secret, rotating any that copied it.",
+          "details": "Dell's advisory lists 13 Dell-specific CVEs plus fixes for third-party Go libraries (x/crypto, x/net, golang-jwt, protobuf). Dell concedes its version table may be incomplete — verify 1.18.0 closures rather than assuming them.",
+          "image": "https://gomagcdn.ro/domains2/pmstore.ro/files/brand/original/Dell-Logo-700x3947526.png",
+          "severity": "Critical",
+          "summary": "Dell patched max-severity CSM flaws: CVE-2026-67269 (9.9) lets a low-privileged user compromise every Kubernetes node via the CSM Operator reconciler, CVE-2026-67273 (9.6) leaks cluster Secrets, and CVE-2026-54472 (9.8) ships hard-coded credentials for forging admin tokens.",
+          "title": "Dell patches max-severity Container Storage Modules flaws",
+          "url": "https://sqmagazine.co.uk/dell-patches-cvss-10-flaws-container-storage-modules/"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "details": "The Pentagon says it has no indication of misuse so far. The intrusion follows a recent FBI breach attributed to ShinyHunters — the latest in a string of federal worker data thefts.",
+          "image": "https://assets.techrepublic.com/uploads/2022/06/000-0072_Pentagon_VLR_Online-810x488.jpg",
+          "severity": "High",
+          "summary": "The Pentagon's Defense Manpower Data Center (DMDC) is notifying ~3 million people — 2.8M living and 294K deceased — that attackers stole personnel records through a file-sharing vulnerability between Oct 2025 and Jul 2026. Stolen data includes unencrypted SSNs, names, dates of birth and military service details. 12 months of free credit monitoring is offered.",
+          "title": "Pentagon DMDC breach exposed ~3M personnel records",
+          "url": "https://www.bleepingcomputer.com/news/security/hackers-breach-pentagon-human-resources-management-system-steal-data-of-nearly-3-million-people/"
+        },
+        {
+          "details": "The operation was coordinated from Hamburg with Europol and Eurojust; searches ran across Spain, Greece, Romania and the UK. A fourth suspect, a developer, has been identified but not arrested. An associate held in Britain faces US charges.",
+          "image": "https://cybercrime.media/wp-content/uploads/2026/04/photo_2026-04-17_23-54-54-1.jpg",
+          "severity": "High",
+          "summary": "International law enforcement dismantled the KillSec ransomware operation on Oct 1 in Operation KillSwitch: five servers and the leak site seized, 110TB of stolen data secured, and three arrests — including the group's suspected 16-year-old administrator detained in Spain. KillSec is linked to ~1,000 suspected attacks.",
+          "title": "Operation KillSwitch dismantles KillSec ransomware — teen alleged admin arrested",
+          "url": "https://www.computerweekly.com/news/366651338/Teen-hacker-arrested-amid-KillSec-cyber-gang-takedown"
+        },
+        {
+          "details": "The incident was first disclosed in June 2026. iRhythm says it has no evidence the data has been or will be used for identity theft, and it hired external forensics specialists for the investigation.",
+          "image": "https://cdn.sanity.io/images/0vv8moc6/ajmc/dd28726683a5d546f2d2e65fdf9cac5a2a2cf004-1200x804.jpg?fit=crop&auto=format",
+          "severity": "Medium",
+          "summary": "iRhythm Holdings finished its forensic investigation of the June intrusion and began notifying affected individuals on Oct 2. Attackers accessed and downloaded data from third-party-hosted business applications between Jun 3–8, including patient names, contact info, account and device serial numbers, insurance numbers and dates of birth.",
+          "title": "iRhythm begins notifying individuals after forensic probe of June intrusion",
+          "url": "https://www.manilatimes.net/2026/10/03/tmt-newswire/globenewswire/irhythm-provides-update-on-cybersecurity-incident-previously-disclosed-in-june-2026/2438265"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "details": "Apple acknowledged the flaw 'may have been exploited in an extremely sophisticated attack against specific targeted individuals' on iOS versions before iOS 27. CERT-In's high-severity advisory was issued Oct 1.",
+          "image": "https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/09/apple-logo-icon-iphone-sign-vector-21679773-e1567625129332.jpg?auto=format&q=60&fit=max&w=930",
+          "severity": "High",
+          "summary": "CERT-In issued a high-severity advisory warning Indian Apple users that CVE-2026-86950 — a flaw allowing arbitrary code execution via a maliciously crafted file — is being actively exploited in targeted attacks. Users on older iOS, iPadOS and macOS versions are urged to update immediately.",
+          "title": "CERT-In warns of actively exploited Apple flaw (CVE-2026-86950)",
+          "url": "https://www.timesnownews.com/technology-science/govt-warns-apple-users-in-india-of-sophisticated-attacks-update-your-iphone-ipad-and-mac-immediately-article-156261889"
+        },
+        {
+          "details": "The complaint was filed Friday Oct 2. No arrests have been reported yet; investigators are tracing the 58 recipient accounts.",
+          "image": "https://nexacurrent.com/api/media/file/article-d86a43cff94b4e53.jpg",
+          "severity": "High",
+          "summary": "A Noida-based fintech company reported to police that its server was hacked and ₹2.42 crore siphoned off through 497 unauthorized transactions across 58 different accounts via the firm's API portal.",
+          "title": "Noida fintech firm loses ₹2.42 crore in server hack",
+          "url": "https://www.latestly.com/india/news/noida-latest-news-today-on-october-2nd-2026-elevated-road-caves-fintech-hack-resident-protests-7629488.html"
+        },
+        {
+          "details": "Krybit is an active group with 160+ claimed victims this year; it also claimed an attack on French MSP Euroditel/Resotelecom the same week.",
+          "image": "https://erkyam.com/wp-content/uploads/2026/03/steel-material-metal-factory.webp",
+          "severity": "Medium",
+          "summary": "The Krybit ransomware group claimed responsibility on Oct 2 for an attack on Raajratna Metal Industries Limited, an Indian metal manufacturing company. The claim surfaced via leak-site trackers; there is no independent verification yet of encryption, data theft or operational downtime.",
+          "title": "Krybit ransomware claims attack on India's Raajratna Metal Industries",
+          "url": "https://undercodenews.com/krybit-ransomware-group-claims-attack-on-indias-raajratna-metal-industries-raising-concerns-over-potential-operational-disruption-video/"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Saturday, October 3 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

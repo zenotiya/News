@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-14",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Update to the latest Ivanti release immediately; if compromise is suspected, back up the appliance config, factory-reset or rebuild the virtual instance, upgrade to the fixed version, then restore. Run network and memory forensics — the Integrity Checker Tool may not catch this one.",
+          "details": "Affects Connect Secure 25.1.1.1 and prior, 25.1.2.2 and prior, and 22.8R2.4 and prior. Because threat actor commands execute in memory, Ivanti's Integrity Checker Tool may miss evidence of exploitation. Version 22.8 reaches end of life on January 31, 2027.",
+          "image": "https://hub.ivanti.com/servlet/rtaImage?eid=ka1UL000000cTfJ&feoid=00N1B00000B8iqE&refid=0EMUL000004ne8U",
+          "severity": "Critical",
+          "summary": "CISA added CVE-2026-104935 to its Known Exploited Vulnerabilities catalog on Oct 13 — a zero-day authentication bypass in Ivanti Connect Secure that lets remote, unauthenticated attackers execute arbitrary commands. Active exploitation for credential theft and data exfiltration is confirmed.",
+          "title": "Ivanti Connect Secure zero-day under active exploitation",
+          "url": "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure"
+        },
+        {
+          "action": "Apply the October 2026 SAP security notes now. No confirmed exploitation yet — a rare head start.",
+          "details": "CVE-2026-89107 and CVE-2026-89110 both score 9.9 (NetWeaver Visual Composer and S/4HANA), with CVE-2026-89108 at 9.1 and CVE-2026-89113 at 8.8. Also patched: CVE-2026-58249 (CVSS 7.5), an unauthenticated flaw that crashes NetWeaver and Web Dispatcher processes.",
+          "image": "https://usiscc.org/wp-content/uploads/2020/03/SAP_Logo.jpg",
+          "severity": "Critical",
+          "summary": "SAP's October 13 security Patch Day fixes 20 CVEs, four of them critical. CVE-2026-89111 (CVSS 10.0) is an unauthenticated SSRF in the SAP Cloud SDK for Python that lets an attacker redirect OAuth2 token requests and exfiltrate client credentials from multi-tenant BTP applications.",
+          "title": "SAP October Patch Day: four critical CVEs led by a 10.0",
+          "url": "https://securityonline.info/sap-security-patch-day-october-2026/"
+        },
+        {
+          "action": "Restrict the AhsayCBS management interface to trusted IP ranges or a VPN immediately — do not wait for a patch. Hunt for JSP webshells, a 'MicrosoftEdgeUpdateSvc' service, and the WinRing0x64.sys driver; restore compromised hosts from known-good backups.",
+          "details": "Huntress confirmed version 10.3.4, listed by the vendor as the fix, is still vulnerable. Attackers drop JSP webshells plus an XMRig Monero miner disguised as edge.exe, persisting via a fake MicrosoftEdgeUpdateSvc service that pauses when Task Manager opens. In one case the attackers also loaded the vulnerable WinRing0x64.sys driver to grab more hardware resources.",
+          "image": "https://www.cyber-gear.ai/wp-content/uploads/2026/08/ChatGPT-Image-20-Agu-2026-16_59_28-1100x564.png",
+          "severity": "Critical",
+          "summary": "Huntress confirms active exploitation of CVE-2026-105133 (authentication bypass) and CVE-2026-105134 (remote code execution) in the AhsayCBS backup management console, chained for unauthenticated SYSTEM-level code execution. At least five organizations were hit from Oct 7, and the vendor's stated fix does not close the flaws.",
+          "title": "AhsayCBS zero-days exploited to plant webshells and miners",
+          "url": "https://www.bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto/"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "details": "Claim is operator-side only for now — no victim statement or confirmed data leak reported yet.",
+          "image": "https://d9x705hv73pny.cloudfront.net/Pictures/1024x536/2/4/3/113243_ransomwarehackcyber_211109.jpg",
+          "severity": "High",
+          "summary": "The Play ransomware group listed The Innovation Group (US) as a victim on Oct 13, per the Ransomware.live tracker. An associated exposure report flagged 120 passwords (6 critical) tied to the victim's environment.",
+          "title": "Play ransomware claims The Innovation Group",
+          "url": "https://www.hookphish.com/blog/ransomware-group-play-hits-the-innovation-group/"
+        },
+        {
+          "details": "Threat-intel reports tied to the claim note infostealer activity (the Cavalier stealer family) and 125 exposed passwords — 5 of them critical — in the victim's environment.",
+          "image": "https://www.kz-today.com/neofiles/serve-image/6853dc72e3f66b4703819207/961x616/c1",
+          "severity": "High",
+          "summary": "Ransomware group Dark Project claimed an Oct 12 attack on Franklin Miller Inc., a manufacturer of wastewater grinders and shredders, saying it exfiltrated over 250GB of confidential data — technical drawings, project documentation, banking records, and employee personal data.",
+          "title": "Dark Project claims 250GB theft from Franklin Miller Inc.",
+          "url": "https://qpulse.quasarcybertech.com/news/6707/dark-project-ransomware-group-claims-attack-on-franklin-miller-inc-resulting-in-250gb-data-theft"
+        },
+        {
+          "details": "Listed on Play's leak tracker the same day as The Innovation Group claim. Claim remains unverified operator-side data.",
+          "image": "https://www.novipro.com/hs-fs/hubfs/Imported_Blog_Media/Security%20concept%20Lock%20on%20digital%20screen%2c%20illustration-800x450-2.jpg?width=800&height=450&name=Security%20concept%20Lock%20on%20digital%20screen%2c%20illustration-800x450-2.jpg",
+          "severity": "Medium",
+          "summary": "Play ransomware also listed Germany's DFK Group (professional services) as a victim on Oct 13, making it at least two Play claims in a single day.",
+          "title": "Play ransomware also claims Germany's DFK Group",
+          "url": "https://www.hookphish.com/blog/ransomware-group-play-hits-dfk-group/"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "details": "The company says it detected the breach weeks earlier, contained it, and operations across its businesses were unaffected; no financial losses were disclosed. The authenticity of the leaked files has not been independently verified.",
+          "image": "https://images.bhaskarassets.com/thumb/730x382/web2images/521/2026/06/13/tata_1781357414.jpeg",
+          "severity": "High",
+          "summary": "Tata Electronics confirmed a cybersecurity incident after extortion group World Leaks claimed to have stolen confidential files and released samples online — reported to include specifications linked to Apple suppliers and manufacturing documents tied to Tesla.",
+          "title": "Tata Electronics confirms breach after extortion group's leak claim",
+          "url": "https://www.business-standard.com/amp/technology/tech-news/from-supermarkets-to-airports-cyberattacks-that-disrupted-real-world-ops-126101300811_1.html"
+        },
+        {
+          "details": "Operator-side claim only so far; no victim statement or confirmed data publication.",
+          "image": "https://static.collegedekho.com/media/img/users/Great_Lakes_Institute_of_Management.jpg",
+          "severity": "Medium",
+          "summary": "Ransomware group incransom listed Great Lakes Institute of Management — the Chennai/Gurgaon business school ranked among India's top 10 — as a victim on Oct 13.",
+          "title": "incransom claims Great Lakes Institute of Management",
+          "url": "https://www.hookphish.com/blog/ransomware-group-incransom-hits-great-lakes/"
+        },
+        {
+          "details": "The IoT vendor's platforms range from MAVID MIC-to-cloud devices to LS9 voice-assistant and music-streaming platforms. Claim is operator-side and unverified.",
+          "image": "https://www.dogtownmedia.com/wp-content/uploads/shutterstock_759387487.jpg",
+          "severity": "Medium",
+          "summary": "Ransomware group Orova claimed Libre Wireless Technologies (India), maker of MAVID and LS9 IoT platforms, on Oct 12 — the second India-based ransomware claim of the week.",
+          "title": "Orova hits Indian IoT maker Libre Wireless",
+          "url": "https://www.hookphish.com/blog/ransomware-group-orova-hits-libre-wireless-technologies/"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Wednesday, October 14 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

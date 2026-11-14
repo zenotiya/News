@@ -1,0 +1,81 @@
+{
+  "date": "2026-09-25",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Update every WordPress install to 7.1.2 (or the matching backport for your branch) immediately and confirm the running version — do not assume auto-updates applied.",
+          "details": "Affected: every release from 4.7.0 through 7.1.1; fixed in 7.1.2 with backports to 13 older branches down to 4.7. Remote code execution requires a theme with a top-level directory starting with \"page-\" and a readable local PHP file such as pearcmd.php, but probing is indiscriminate.",
+          "image": "https://www.bnzsolutions.it/wp-content/uploads/2026/04/Sito-WordPress-Hackerato-830x453.jpg?x72474",
+          "severity": "Critical",
+          "summary": "Attackers started exploiting CVE-2026-87902, an unauthenticated path-traversal flaw in WordPress Core's page-template resolution, within hours of the Sept 22 patch. Patchstack saw the first probe at 11:49 UTC that day; activity has since escalated 10x, with attackers including pearcmd.php and writing PHP web shells to disk.",
+          "title": "Attackers exploit critical WordPress flaw CVE-2026-87902 within hours of patch",
+          "url": "http://thehackernews.com/2026/09/attackers-exploit-wordpress-cve-2026.html"
+        },
+        {
+          "action": "Upgrade self-hosted Dokploy instances to 0.29.13 or later; audit org-member activity for unexpected shell command execution.",
+          "details": "The patch.readRepoDirectories tRPC procedure passes the user-controlled repoPath into child_process.exec as root in the Dokploy container. Standard deployments mount /var/run/docker.sock, so container-root execution can escalate to full Docker host compromise.",
+          "image": "https://www.heroxhost.com/assets/images/pages/dokploy-images/dokploy-section-img.webp",
+          "severity": "Critical",
+          "summary": "CVE-2026-93425 (CVSS 9.9) is an OS command-injection flaw in Dokploy disclosed Sept 24: an authenticated org member with service:read permission can inject shell metacharacters into repoPath and execute arbitrary commands as root. A public proof-of-concept is already circulating.",
+          "title": "Dokploy CVE-2026-93425: critical command injection with public PoC",
+          "url": "https://www.thehackerwire.com/vulnerability/CVE-2026-93425/"
+        },
+        {
+          "action": "Update to sudo 1.9.17-16.p2.2.hum1, and append a trailing 'Z' to all time-restricted sudoers rules as the recommended mitigation.",
+          "details": "The flaw only affects systems using optional notbefore/notafter time-based sudoers rules. No active exploitation or public PoC is confirmed; PAM authentication remains intact, so attackers cannot exceed what their original rule grants.",
+          "image": "https://m.unixlinux.online/article/uploadfiles/202204/2022042718105715.png",
+          "severity": "High",
+          "summary": "CVE-2026-96512 (CVSS 7.8) lets local users bypass sudo's time-based authorization by manipulating the tz environment variable, defeating notbefore/notafter restrictions in sudoers rules.",
+          "title": "Sudo timezone flaw CVE-2026-96512 bypasses time-based sudoers restrictions",
+          "url": "https://securityonline.info/sudo-security-vulnerability-cve-2026-96512/"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "details": "The $351.6M figure comes from CEO Gracy Chen; Arkham's Emmett Gallic flagged initial hot-wallet movements (~$178M) earlier, with more moving afterward. The breach was contained to hot/warm wallet layers; cold wallets remain secure and a $464M+ user protection fund backs user balances.",
+          "image": "https://weff.io/v2/images/bitget_blue.png",
+          "severity": "Critical",
+          "summary": "Crypto exchange Bitget confirmed Sept 24 that unauthorized transfers drained about $351.6M from hot and warm wallets; withdrawals are suspended pending a security review. CEO Gracy Chen says preliminary IP/VPN clues point to North Korean actors, and some stolen funds have reportedly been recovered.",
+          "title": "Bitget loses ~$352M in hot-wallet breach; suspects North Korea",
+          "url": "https://www.coindesk.com/markets/2026/09/24/crypto-exchange-bitget-loses-usd352-million-in-hack-claims-user-funds-are-safe"
+        },
+        {
+          "details": "FBIJobs.gov displayed a \"seized by ShinyHunters\" banner before returning 503 errors; the bureau has not confirmed whether the intrusion hit its own systems or a third-party provider supporting the portal.",
+          "image": "https://www.grassley.senate.gov/imo/media/image/fbi_wl.jpg",
+          "severity": "High",
+          "summary": "The FBI is actively investigating ShinyHunters' claim of stealing 2–3 terabytes of data from its online jobs system, including a sample spreadsheet with thousands of current/former employees' PII and details of sensitive intelligence assignments. The breach point is still undetermined.",
+          "title": "FBI probes ShinyHunters' claim of massive jobs-portal data theft",
+          "url": "https://www.japantimes.co.jp/news/2026/09/24/world/crime-legal/hacked-fbi-data-intelligence/"
+        },
+        {
+          "details": "As with all leak-site listings, these are unconfirmed allegations — disclosure on a leak site does not prove the scale or success of the underlying intrusion.",
+          "image": "https://www.globalts.com/images/easyblog_shared/April_2023/04-07-23/ransomware_152258527_400.jpg",
+          "severity": "Medium",
+          "summary": "New Sept 24 dark-web leak-site disclosures include Qilin naming All Tech Machine & Engineering (US manufacturing), Akira naming Wallatec, Rhysida naming NEAD Pro, Spirals naming Armada Credit Bureau (Uganda financial services), and Krybit naming jonesthegrocer.com.",
+          "title": "Fresh ransomware leak-site claims: Qilin, Akira, Rhysida and others name new victims",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/all-tech-machine-engineering-qilin-2026"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "details": "FLATROOF and ROOFDECK were previously seen in the March–April 2026 attack on KelpDAO's LayerZero bridge. The campaign uses fake GitHub coding-project repos and job-interview lures aimed at DevOps, crypto, and fintech staff.",
+          "image": "https://www.genians.com/wp-content/uploads/2025/07/North-Korean-APTs-in-the-Evolving-Landscape-2048x1075.jpg",
+          "severity": "High",
+          "summary": "SentinelOne attributed the compromise of an India-based IT services firm to North Korea's Jade Sleet (aka TraderTraitor/UNC4899), which deployed the Apple macOS backdoors FLATROOF and ROOFDECK. Reported Sept 21; the group typically targets crypto-adjacent firms through developer-focused social engineering.",
+          "title": "North Korea's Jade Sleet linked to breach of Indian IT provider",
+          "url": "http://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Friday, September 25 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

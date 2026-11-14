@@ -1,0 +1,70 @@
+{
+  "date": "2026-09-21",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Patch Secure Email Gateway AsyncOS immediately (first fixed: 15.5.5-0141, 16.0.4-3021, 16.5.0-780; Cisco recommends 16.5.0-780). Hunt for signs of prior compromise — patching does not undo historic access.",
+          "details": "The vulnerability affects Cisco Secure Email Gateway (physical and virtual appliances, all configurations). Cisco says its PSIRT became aware of active exploitation in September 2026; Cisco Secure Email Cloud devices have been upgraded and affected customers contacted directly. Cisco Secure Email and Web Manager and Secure Web Appliance are not affected.",
+          "severity": "Critical",
+          "summary": "A critical SQL injection flaw in Cisco Secure Email Gateway gives attackers root access and is already being exploited in the wild.",
+          "title": "Cisco Secure Email Gateway zero-day exploited in the wild"
+        },
+        {
+          "action": "Install the September Pixel update on any Pixel 10-series device and treat modem firmware updates as priority for at-risk users.",
+          "details": "The September 2026 Pixel Update Bulletin states there are indications of 'limited, targeted exploitation' of a permission-bypass logic error in the cellular modem, enabling remote (proximal/adjacent) privilege escalation with no user interaction.",
+          "severity": "Critical",
+          "summary": "Google confirmed a silent zero-click baseband flaw (CVE-2026-58704) that let attackers in radio range compromise Pixel phones, with limited targeted exploitation observed.",
+          "title": "Pixel modem zero-click flaw under limited targeted exploitation"
+        },
+        {
+          "action": "Block device-code authentication for users who don't need it, harden help-desk verification for passkey/MFA resets, and train staff to ignore unsolicited 'update your passkey' calls — even to personal phones.",
+          "details": "Microsoft observed unusual sign-ins followed by attacker-added auth methods, high-volume Microsoft Graph activity, SharePoint/OneDrive downloads, and email collection via REST APIs — consistent with automated collection from compromised identities. Attackers impersonate the IT help desk via calls, SMS, or Teams messages from already-compromised accounts.",
+          "severity": "High",
+          "summary": "Microsoft is tracking active cloud intrusions since May 2026 that use fake passkey/MFA/SSO update requests as a pretext for adversary-in-the-middle and device-code phishing to hijack Microsoft 365 identities.",
+          "title": "Microsoft warns passkey-themed social engineering is driving cloud account takeovers"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "Gyazo users: change your Gyazo password now, and any other site where it was reused; revoke X integration tokens if connected.",
+          "details": "Attackers exploited a vulnerability in Gyazo's image-upload server on September 11, ran arbitrary commands, and reached the backend database. Helpfeel blocked the access routes on September 12, remediated the flaw, reported to Japan's Personal Information Protection Commission, and temporarily disabled viewing of some affected images. Exposed image IDs can rebuild share links — even for images set to private — and the dump included OCR text, EXIF location data, and hashed passphrases.",
+          "severity": "High",
+          "summary": "Helpfeel confirmed attackers stole approximately 23.62 million Gyazo user records (names, emails, password hashes, session IDs, X/Google tokens) plus metadata for ~490 million images.",
+          "title": "Gyazo breach exposes 23.6M user records and 490M image records"
+        },
+        {
+          "action": "TELUS customers should review account changes and billing statements from the last 16 months and treat any unexpected 'switch provider' calls as social engineering.",
+          "details": "Notification letters began arriving in the second week of September 2026. This is a separate incident from the March 2026 ShinyHunters extortion claim against TELUS Digital's BPO operations — this one is a prolonged account-takeover campaign against live consumer telecom accounts.",
+          "severity": "High",
+          "summary": "TELUS is notifying customers that attackers used compromised credentials to access consumer telecom accounts for roughly 16 months (Feb 2025–Jun 2026), exposing personal and billing data and using stolen account details to call customers and push them to competing providers.",
+          "title": "TELUS discloses 16-month telecom account takeover"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "Check your phone's Android version (Settings > System > software update) and install the September security patch as soon as it is offered by your device maker.",
+          "details": "The advisory (CIVN-2026-0454, September 14) warns of arbitrary code execution, privilege escalation, denial of service, and sensitive-information disclosure. Google's September 2026 Android bulletin includes a critical no-interaction remote-code-execution flaw (CVE-2026-28604) in the System component.",
+          "severity": "Critical",
+          "summary": "CERT-In issued a 'critical' warning for multiple vulnerabilities in Android 14, 15, 16, 16-qpr2 and 17 that could allow remote hacking, privilege escalation and data theft.",
+          "title": "CERT-In critical warning for Android flaws (CIVN-2026-0454)"
+        },
+        {
+          "details": "The claim was reported via undercodenews on September 20, citing a leak-site listing; the alleged compromise is not independently verified and the company has not publicly confirmed an incident.",
+          "severity": "Medium",
+          "summary": "Ransomware group Orova listed Siddhi Green Excellence Pvt. Ltd., an Indian energy and utilities firm, on its leak site — a claim, not a confirmed incident.",
+          "title": "Orova ransomware claim targets Indian energy firm (unverified)"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Monday, September 21 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}
