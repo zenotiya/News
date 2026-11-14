@@ -1,0 +1,35 @@
+{
+  "date": "2026-09-23",
+  "items": [
+    {
+      "image": "https://images.macrumors.com/t/tm8s1k70sh1K-DeWP5Dt9zVOxTU=/400x0/article-new/2025/12/openai-logo-teal.jpg?lossy",
+      "name": "GPT-6 Sol & Luna (OpenAI)",
+      "summary": "OpenAI expanded its GPT-6 lineup on Sep 22 with two cheaper models: Sol ($2/$10 per million tokens) for coding and professional work, and Luna ($0.10/$0.50) for high-volume tasks. Both halve their GPT-5.6 counterparts' prices while inheriting GPT-6 Astra's reasoning, coding, and computer-use improvements.",
+      "url": "https://www.reuters.com/technology/openai-expands-gpt-6-lineup-with-cheaper-sol-luna-models-2026-09-22/"
+    },
+    {
+      "image": "https://www.makronomo.de/images/integrations/anthropic.png",
+      "name": "Claude Opus 5.5 (Anthropic)",
+      "summary": "Anthropic released Opus 5.5 on Sep 22, calling it the strongest-performing model it has tested, topping the Artificial Analysis Intelligence Index at 58. It runs ~40% cheaper than Opus 5, with $4/$20 per million tokens and much cheaper cache reads, and ships with 'preserved thinking' anti-distillation defenses.",
+      "url": "https://www.theregister.com/ai-and-ml/2026/09/23/frontier-ai-keeps-racing-despite-calls-to-slow-down/5298448"
+    },
+    {
+      "image": "https://gagadget.pl/media/post_big/xAI-logo-gg.png",
+      "name": "Grok 4.7 (xAI)",
+      "summary": "xAI launched Grok 4.7 on Sep 21, a larger base model trained with a longer RL run on multi-hour tasks and native understanding of the Grok Bot harness. It hits 46.3% on CursorBench 4.0 and tops xAI's own HackerBench safety test, priced unchanged from Grok 4.6 at $2/$6 per million tokens.",
+      "url": "https://x.ai/news/grok-4-7"
+    },
+    {
+      "image": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen-Image/image2.1/banner_en.png",
+      "name": "Qwen Image 2.1 (Alibaba)",
+      "summary": "Alibaba open-sourced Qwen Image 2.1 on Sep 21, a 7B text-to-image model unifying generation and editing with native transparency support. Its compact size delivers quality compared to GPT-Image-2, though it ships under a restrictive non-commercial research license rather than Apache 2.0.",
+      "url": "https://qwen.ai/blog?id=qwen-image-2.1"
+    },
+    {
+      "image": "https://www.testim.io/wp-content/uploads/2021/12/Rectangle-Copy-41@2x.png",
+      "name": "Koa (Salesforce)",
+      "summary": "Salesforce unveiled Koa at Dreamforce 2026 (Sep 15), its first-ever reasoning model, built on Nvidia's open-weight Nemotron family and post-trained for sales, marketing, and customer support. It anchors Salesforce's push to keep enterprise customers inside its ecosystem as AI agents reshape software.",
+      "url": "https://indianexpress.com/article/technology/artificial-intelligence/salesforce-ai-model-everything-announced-dreamforce-2026-10880785/"
+    }
+  ]
+}

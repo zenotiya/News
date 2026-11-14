@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-12",
+  "items": [
+    {
+      "image": "https://lh3.googleusercontent.com/VPOhADdGu1T7kK_gWBiGzyVawQbKCjpL3-B0L0wxpYCyr8cHxviYmo9Hghy4f1laeIo2YKwuz8E07TR9HWWk2b0EONi0uvju-8TDLHX6YWHG4dXe3w=w1200-h630-n-nu-rw",
+      "name": "Google DeepMind AlphaGenome 2",
+      "summary": "Google DeepMind's next-generation DNA model predicts how genetic variants change gene activity in specific human cell types and states, rather than tissue averages. Trained on more than 107 million cell profiles, it identifies nearly twice as many causal variants as the original AlphaGenome, and is available now for non-commercial research via the AlphaGenome API.",
+      "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/"
+    },
+    {
+      "image": "https://d3phaj0sisr2ct.cloudfront.net/site/images/sanity/2026/11/frame-8-bddb7fbc-4647-44e5-bf65-1fbb7e559b24-af3f1b60-26e7-4a91-afda-ee27b0a4674b.webp",
+      "name": "Runway Praxis-1",
+      "summary": "Runway released the weights and fine-tuning code for Praxis-1, its 27-billion-parameter world-action model for robotics, under Apache 2.0. The model predicts video and robot actions together and tops NVIDIA's RoboLab-120 benchmark at 46.2% success, and runs on everything from H100 GPUs to Jetson Thor.",
+      "url": "https://runway.com/news/company-news/praxis-1-is-now-available"
+    },
+    {
+      "image": "https://img.alicdn.com/tfs/TB1xpNqnmslXu8jSZFuXXXg7FXa-1200-630.png_.webp",
+      "name": "Alibaba Qwen4-Max-Preview",
+      "summary": "Alibaba opened a time-limited preview of Qwen4-Max, the next-generation flagship of the Qwen family, with multimodal understanding, deep reasoning and tool calling in a 1M-token context. It is available only through the Token Plan subscription until November 25, 2026, after which the preview model is retired.",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview"
+    },
+    {
+      "image": "https://assets.claude.com/21b3240f9264f8e4c8ab1390e2702cf1401b2367.jpg",
+      "name": "Anthropic Claude Fable 5.2 and Mythos 5.2",
+      "summary": "Anthropic launched Claude Fable 5.2 and Mythos 5.2, two configurations of the same underlying model for the hardest technical work in coding, science and cybersecurity. They generate outputs up to 30% faster than the 5.1 versions at a lower price ($8/$40 per million tokens); Fable is generally available while Mythos is limited to vetted organizations.",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+    },
+    {
+      "image": "https://thinkingmachines.ai/news/inkling-2-small/images/cover-social.png",
+      "name": "Thinking Machines Lab Inkling 2 Small",
+      "summary": "Thinking Machines Lab introduced Inkling 2 Small, its second-generation mixture-of-experts model with 594B total and 17B active parameters, scoring 31 on the Artificial Analysis Intelligence Index. It is available now on the Tinker platform with closed weights, with full weights planned under Apache 2.0 next week after safety testing.",
+      "url": "https://thinkingmachines.ai/news/inkling-2-small/"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-29",
+  "items": [
+    {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_carbon_102726_header.width-200.format-webp.webp",
+      "name": "Google Gemini 4 Carbon",
+      "summary": "Google DeepMind's Gemini 4 Carbon, announced October 28, is its strongest frontier model yet, built for long-horizon engineering and cybersecurity defence: it ranks #1 on the Artificial Analysis Intelligence Index (59) and leads SEC-bench Pro (88.2%), ExploitGym (54.8%) and CWE-bench (71.0%). It is rolling out first to a subset of cyber defenders through the Fairwind Program, at $2/$10 per million input/output tokens introductory pricing.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+    },
+    {
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/68127936de624fb6f57d9989/vGIg17AxweCAnacvnPOet.png",
+      "name": "NVIDIA Nemotron 3.5 Transcribe",
+      "summary": "NVIDIA's Nemotron 3.5 Transcribe, released October 28, is an open-weight speech model that combines transcription in 40 languages, translation in 31 languages, speaker attribution for up to eight speakers, and audio question-answering in a single checkpoint. It ships alongside Granary v2, an open data-curation pipeline covering 463,062 hours of speech across 48 languages.",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
+    },
+    {
+      "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
+      "name": "Google DeepMind Genie 4",
+      "summary": "Google DeepMind's Genie 4, announced October 27, is a world model that generates interactive, photorealistic simulated environments in real time, with native audio — music, ambient sound and character dialogue — generated alongside the scene. Users steer it with keyboard controls and natural-language prompts; it is rolling out first as a research preview for trusted testers, then to Google AI Ultra subscribers in Project Genie.",
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+    },
+    {
+      "image": "https://images.siliconangle.com/blogs.dir/1/files/2026/10/Screenshot-from-2026-10-27-07-32-52.png",
+      "name": "OpenAI GPT-6.1 Terra",
+      "summary": "OpenAI's fast everyday-work model, launched October 26, combines visual reasoning with precise computer use and clearer writing at 50% lower standard API prices than GPT-5.6 Terra and GPT-6.1 Sol. It is available in ChatGPT Work and Codex and via the API as gpt-6.1-terra, and OpenAI says it finishes tasks over 3x faster than GPT-6 Astra and GPT-6.1 Sol.",
+      "url": "https://openai.com/index/introducing-gpt-6-1-terra/"
+    }
+  ]
+}

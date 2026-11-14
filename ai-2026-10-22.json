@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-22",
+  "items": [
+    {
+      "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+      "name": "Claude Duet",
+      "summary": "Anthropic's new standalone proactive AI agent, built on Opus 5.5, that monitors connected apps, sends a morning brief, and completes tasks in its own cloud VM — its answer to Meta's Muse and OpenAI's Dots. Available as a waitlisted research preview for US Pro/Max subscribers on iOS, Android and claude.ai.",
+      "url": "https://www.reuters.com/technology/anthropic-unveils-claude-duet-ai-agent-app-2026-10-21/"
+    },
+    {
+      "image": "https://framerusercontent.com/images/uPJ2g2tfhMjyq8tvyzpakcfg.png",
+      "name": "Flint (Recursive)",
+      "summary": "The first released model from Richard Socher's Recursive lab, a step toward 'recursively self-improving superintelligence' built with its AI-driven Eureka Machine research loop. A local-first model that hits ~150 tokens/sec on personal hardware like Apple silicon Macs and the RTX Spark laptop.",
+      "url": "https://fourweekmba.com/ai-650m-backed-recursive-says-ai-helped-build-its-first-model/"
+    },
+    {
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/653fb52cbfd890805461d691/M_JJyIOBOWVzHXdy7CVVG.png",
+      "name": "Granite Speech 5.0",
+      "summary": "IBM's refreshed open-weight speech AI family (Apache 2.0): a new 2B model for high-accuracy transcription and translation, an updated ultra-fast 470M TurboCTC for on-device use, and updated weights for multi-speaker recordings with speaker attribution — all with native Transformers support.",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5"
+    },
+    {
+      "image": "https://www.nuix.com/themes/custom/bootstrap5/assets/images/nuix-2026-logo.png",
+      "name": "Nuix Neo AI Agent",
+      "summary": "An agentic AI layer for Nuix Neo's investigative analytics platform that answers plain-language questions, links every answer to its source, and records its full reasoning steps with a built-in audit trail — designed to be defensible in court for legal, regulatory and law-enforcement matters.",
+      "url": "https://www.nuix.com/news/nuix-launches-agentic-ai-nuix-neo-audit-trail-built"
+    },
+    {
+      "image": "https://mmx.prnewswire.com/media/MS1834754/Logo-Text-Padding-Transparent-C1-Logo.jpg?id=OA3027129&p=facebook",
+      "name": "FLUX 3 Max",
+      "summary": "fal Research and Black Forest Labs' post-trained video model that renders a 10-second clip in ~12 seconds — about 22x faster than Seedance 2.5 at the same quality tier — launched at $0.0425/sec (75% off through November 7) exclusively through fal's API.",
+      "url": "https://www.prnewswire.com/news-releases/fal-launches-flux-3-max-delivering-1-tier-image-to-video-quality-at-industry-leading-speeds-302913033.html"
+    }
+  ]
+}

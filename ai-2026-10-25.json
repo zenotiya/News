@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-25",
+  "items": [
+    {
+      "image": "https://news.cgtn.com/news/2026-10-24/Kimi-K3-1-Pro-an-open-weight-model-within-3-points-of-the-frontier-1Rvpycrxw2s/img/cea712c504614cd29fffc4e4d2e65758/cea712c504614cd29fffc4e4d2e65758.jpeg",
+      "name": "Kimi K3.1 Pro",
+      "summary": "Moonshot AI's Oct 23 release is a heavily post-trained Kimi K3 (2.8T parameters, 1M context) that scores 55 on Artificial Analysis' Intelligence Index — fourth overall and within 3 points of the frontier. Full open weights are promised by Nov 4, which would make it the highest-scoring open-weight model ever.",
+      "url": "https://news.cgtn.com/news/2026-10-24/Kimi-K3-1-Pro-an-open-weight-model-within-3-points-of-the-frontier-1Rvpycrxw2s/p.html"
+    },
+    {
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/7aad17172474a7876af59da08b2b538535468c12-2048x1365.jpg?auto=format&fit=crop&crop=focalpoint&w=1200&h=675&q=75",
+      "name": "Block Dessa",
+      "summary": "Block (Jack Dorsey) unveiled Dessa on Oct 24, a full-duplex voice AI trained only on human speech — no text stage — that listens while speaking, laughs mid-sentence and runs locally on an M4 Max MacBook Pro. It is a research preview for AI safety researchers first, and its humanlike quality is already raising scam-call concerns.",
+      "url": "https://www.coindesk.com/tech/2026/10/24/block-s-new-voice-ai-sounds-eerily-human-sparking-awe-and-scam-fears"
+    },
+    {
+      "image": "https://news-ai.co/wp-content/uploads/2026/10/recursive-flint-local-coding-1024x576.png",
+      "name": "Recursive Flint",
+      "summary": "Recursive's Oct 21 open-weight coding model (39.8B parameters, ~2.5B active per token, Apache 2.0) is built to run locally on high-memory Apple Silicon Macs with a dedicated inference engine. It targets code investigation, bug fixes and test writing without depending on a remote inference service.",
+      "url": "https://news-ai.co/recursive-flint-local-ai-coding-model/"
+    },
+    {
+      "image": "https://www.unite.ai/wp-content/uploads/2026/10/inception-releases-mercury-3-flagship-diffusion-llm.jpg",
+      "name": "Inception Mercury 3",
+      "summary": "Inception's Oct 19 flagship diffusion LLM claims to beat GPT-6 Luna and Claude Haiku 5.5 on benchmarks while generating over 1,000 tokens per second, with a 1M-token context window. It is Inception's case that text diffusion scales to frontier quality, at launch pricing of $0.10/$0.35 per million input/output tokens.",
+      "url": "https://www.unite.ai/inception-releases-mercury-3-its-flagship-diffusion-llm/"
+    },
+    {
+      "image": "https://hitem3dstatic.zaohaowu.net/FE/blog/1280_X1280_39_a372cf5732.PNG",
+      "name": "Hi3D V1.0 (open source)",
+      "summary": "Hi3D open-sourced its production-validated AI 3D model on Oct 23, with weights and code public and free generation on its site. Trained on 2M curated 3D assets with up to 1536³ sparse-grid reconstruction, it targets 3D printing, product design and VR/AR workflows.",
+      "url": "https://www.wcia.com/business/press-releases/cision/20261023CN79574/hi3d-v1-0-goes-open-source-the-first-production-validated-open-source-ai-3d-model/"
+    }
+  ]
+}

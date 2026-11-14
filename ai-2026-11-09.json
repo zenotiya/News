@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-09",
+  "items": [
+    {
+      "image": "https://madrobot.blog/images/openai-gpt-6-cyber-launch-art.jpg",
+      "name": "OpenAI GPT-6 Cyber",
+      "summary": "OpenAI's cyber-specialised variant of GPT-6 Astra, launched 5 November for vetted Daybreak Red defenders. It scores 48.5% on ExploitGym, is rated Critical for cybersecurity under OpenAI's Preparedness Framework, and was used to find 81 previously unknown high-severity Firefox flaws and build 948 working Linux kernel exploits in research.",
+      "url": "https://openai.com/index/introducing-gpt-6-cyber/"
+    },
+    {
+      "image": "https://www.unite.ai/wp-content/uploads/2026/11/thinking-machines-lab-launches-inkling-2-small-with-open-weights-pending.jpg",
+      "name": "Thinking Machines Lab Inkling 2 Small",
+      "summary": "Mira Murati's lab launched its second-generation model on 5 November: a 594B-parameter sparse MoE with 17B active per token, built for long-horizon autonomous work. It scores 31 on the Artificial Analysis Intelligence Index and runs on Tinker today, with full weights promised under Apache 2.0 next week after safety testing.",
+      "url": "https://venturebeat.com/technology/thinking-machines-launches-inkling-2-small-with-near-frontier-performance-on-enterprise-benchmarks"
+    },
+    {
+      "image": "https://storage.googleapis.com/gweb-cloudblog-publish/images/gemini-omni.max-2500x2500.jpg",
+      "name": "Google Gemini Omni 1.2 Flash",
+      "summary": "Google's video generation and editing model went generally available on 5 November across the Gemini API, Vertex AI and Gemini for business. It creates and edits 15-second clips with native audio in multi-turn conversations, at $0.07 per second for 720p — 30% cheaper than Omni 1.1.",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-omni-1-2-flash-generally-available"
+    },
+    {
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/moonshotai/Kimi-K3.1-Pro.png",
+      "name": "Moonshot AI Kimi K3.1 Pro",
+      "summary": "Moonshot published the open weights of its 2.8T-parameter MoE on Hugging Face on 4 November — the largest open-weight model ever released, with 104B active parameters per token and a 1M-token context. It scores 65.7% on Terminal-Bench 4.0, near Claude Opus 5.5, though its custom licence gates large commercial API resellers.",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+    },
+    {
+      "image": "https://us1.discourse-cdn.com/openai1/optimized/4X/c/5/a/c5a276fdf28c2daa48c85c31963ddb99902aaa8a_2_1024x576.jpeg",
+      "name": "OpenAI ChatGPT Images 2.6",
+      "summary": "Launched 4 November across ChatGPT, Codex and the API, Images 2.6 adds animated GIF creation and reusable reference images, with generation about 50% faster. Developers get two new API models, GPT-Image-2.6 Flare for speed and Sunburst for detail, with GIF and SVG output.",
+      "url": "https://community.openai.com/t/images-upgraded-introducing-chatgpt-images-2-6/1412901?ref=notatechguy.com"
+    }
+  ]
+}

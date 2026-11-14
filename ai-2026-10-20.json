@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-20",
+  "items": [
+    {
+      "image": "https://www.unite.ai/wp-content/uploads/2026/10/inception-releases-mercury-3-flagship-diffusion-llm.jpg",
+      "name": "Inception Mercury 3",
+      "summary": "Inception's flagship diffusion LLM claims to outperform GPT-6 Luna and Claude Haiku 5.5 on benchmarks while generating 1,068 tokens per second — evidence that text-diffusion architectures can scale to frontier quality with a 1M-token context window.",
+      "url": "https://www.unite.ai/inception-releases-mercury-3-its-flagship-diffusion-llm/"
+    },
+    {
+      "image": "https://www.deepseek.com/images/deepseek-social.jpg",
+      "name": "DeepSeek V4.1-Flash-1017",
+      "summary": "DeepSeek's updated checkpoint sharpens V4.1-Flash for agentic coding and tool use via reinforcement learning with self-feedback, with MIT-licensed open weights on Hugging Face and a 1M-token context window.",
+      "url": "https://www.webpronews.com/deepseek-releases-v4-1-flash-1017-with-higher-agent-and-coding-benchmark-scores/"
+    },
+    {
+      "image": "https://www.unite.ai/wp-content/uploads/2026/10/cloudflare-releases-clairic-first-system-one-extraction-model.jpg",
+      "name": "Cloudflare Clairic",
+      "summary": "Cloudflare's first \"System One\" extraction model, in preview on Workers AI, pulls typed values out of unstructured inputs instead of generating text — billed input-only at $0.10 per million tokens, with an open-weights release planned later.",
+      "url": "https://www.unite.ai/cloudflare-releases-clairic-its-first-system-one-extraction-model/"
+    },
+    {
+      "image": "https://tech-insider.org/wp-content/uploads/2026/10/minimax-space-bunny-stealth-model-reveal-2026-gen.webp",
+      "name": "MiniMax M3.1 Flash",
+      "summary": "MiniMax's low-cost agent model runs at $0.15/$0.60 per million input/output tokens with a 1M-token context, claiming ~70% lower agent-task cost and ~3x faster inference than M3 — open weights promised for October 23.",
+      "url": "https://tech-insider.org/minimax-space-bunny-stealth-model-reveal-2026/"
+    },
+    {
+      "image": "https://groundtruth.day/og.png",
+      "name": "Reflection Beam (open weights)",
+      "summary": "Reflection released Beam's weights, adding a 23B-active-parameter agent system to the open-weights stack — though the smallest official NVFP4 package is 294 GB and needs ~353 GB of GPU memory, making it a datacenter-class deployment.",
+      "url": "https://groundtruth.day/news/reflection-beam-weights-arrive-with-datacenter-memory-needs.html"
+    }
+  ]
+}

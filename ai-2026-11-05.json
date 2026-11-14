@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-05",
+  "items": [
+    {
+      "name": "Tencent Hy4",
+      "summary": "Tencent launched the full Hy4 model on November 4, a 770-billion-parameter mixture-of-experts model that adds native visual understanding and computer-use abilities to the Hunyuan line for the first time. It can read images and operate software via command-line and graphical interfaces, and is live through Tencent Cloud TokenHub, OpenRouter and Tencent's own apps, with open weights promised soon.",
+      "url": "https://emergent.sh/news/tencent-hy4-launch-770b-vision-model-computer",
+      "image": "https://cdn.prod.website-files.com/6a0f028de6df6a6fd88c3f89/6aeaee272b971e96e675cfb9_6aeaee256732c3bfba398525_tencent-hy4-launch-770b-vision-model-computer-use.avif"
+    },
+    {
+      "name": "MiniMax M3",
+      "summary": "MiniMax unveiled M3 on November 3, billed as the first open-weight model to combine frontier coding and agentic capabilities, a 1-million-token context window and native multimodality. Built on its MiniMax Sparse Attention architecture, it is aimed at coding assistants and autonomous multi-step workflows, with full open-sourcing on Hugging Face and GitHub to follow.",
+      "url": "https://aichina.news/news/minimax-unveils-m3-an-open-weight-model-combining-1m-context-native-7u2chs/",
+      "image": "https://aichina.news/images/7u2chsu9vftizlx_original.webp"
+    },
+    {
+      "name": "Sarvam Prism",
+      "summary": "Sarvam AI released Prism on November 3, an open-weight decision model built on its Sarvam 105B base that evaluates predefined options in a single forward pass instead of generating token by token. It answers in a reported 44 milliseconds on one NVIDIA B200 GPU with a 71.8 average across three benchmarks, and its Apache 2.0 weights let enterprises run it on their own infrastructure.",
+      "url": "https://www.sarvam.ai/blogs/sarvam-prism",
+      "image": "https://assets.sarvam.ai/tr:w-1600,q-90,f-auto,dpr-auto/images/03117ysv/production/9de24f0346149d6c43848c8d4bb5b2611badf37a-1535x1025.png?rect=0,30,1535,768"
+    },
+    {
+      "name": "Deep Principle Hydrogen-1.0",
+      "summary": "Deep Principle launched Hydrogen-1.0 on November 2, a 753-billion-parameter open-weight scientific foundation model for chemistry, materials science and life sciences, post-trained from Z.ai's GLM-5.3 on lab records and discovery trajectories. Its MIT-licensed weights, 1-million-token context and reported edge over GPT-6 Astra on FrontierScience-Research make it a notable specialist challenger to general frontier models.",
+      "url": "https://emergent.sh/news/deep-principle-hydrogen-1-0-753b-open-weight",
+      "image": "https://cdn.prod.website-files.com/6a0f028de6df6a6fd88c3f89/6aea360eff3f1758d7a77262_6aea360bd840cf1595200837_deep-principle-hydrogen-1-0-753b-open-weight-science-model.avif"
+    },
+    {
+      "name": "Google Gemini 4 Carbon",
+      "summary": "Google DeepMind announced Gemini 4 Carbon on October 28 as its strongest model to date, built for cybersecurity and long-horizon agentic engineering, ranking first on the Artificial Analysis Intelligence Index v5.0 with a score of 59. Initial access is limited to a subset of vetted cybersecurity defenders through Google's Fairwind Program, with wider developer and consumer availability still undated.",
+      "url": "https://pulse2.com/google-introduces-gemini-4-carbon-with-advanced-cybersecurity-and-long-horizon-agentic-capabilities/",
+      "image": "https://cdn.pulse2.com/cdn/2026/06/Google-Gemini-Logo.jpeg"
+    }
+  ]
+}

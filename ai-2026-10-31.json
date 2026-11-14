@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-31",
+  "items": [
+    {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_carbon_102726_social_share.width-1300.png",
+      "name": "Gemini 4 Carbon",
+      "summary": "Google announced Gemini 4 Carbon on October 28 as its strongest model, with state-of-the-art cybersecurity and long-horizon capabilities, ranking first on the Artificial Analysis Intelligence Index v5.0 at 59. Rollout starts with a subset of cyber defenders through the Fairwind Program, with no date yet for developers, businesses or consumers.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+    },
+    {
+      "image": "https://cdn.openai.com/mdx-assets/71f084db-a08b-48c5-b96e-5fbdc21a1a00/terra-art-card-16x9.0394724b.png",
+      "name": "GPT-6.1 Terra",
+      "summary": "OpenAI released GPT-6.1 Terra on October 26, a fast, efficient model combining detailed visual reasoning and precise computer use with clearer writing. Standard API prices are 50% lower than GPT-5.6 Terra and GPT-6.1 Sol at $1 per million input tokens and $5 per million output tokens, available to Plus, Pro, Enterprise and Edu users in ChatGPT Work and Codex and via the API.",
+      "url": "https://openai.com/index/introducing-gpt-6-1-terra/"
+    },
+    {
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/68127936de624fb6f57d9989/3vFxCEUXz_xJVrTBr4hNr.jpeg",
+      "name": "NVIDIA Nemotron 3.5 Transcribe",
+      "summary": "NVIDIA released Nemotron 3.5 Transcribe on October 28, an open-weight speech model that transcribes 40 languages, translates 31 of them to or from English, and attributes up to eight speakers in 13 languages in recordings up to an hour long. It shipped alongside Granary v2, an open speech dataset and curation pipeline covering 463,062 hours across 48 languages.",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
+    },
+    {
+      "image": "https://aipolix.com/uploads/2026/10/69730026-902f-42db-b0bb-3ac0ad88cde8_social.jpg",
+      "name": "Kimi K3.1 Pro",
+      "summary": "Moonshot AI launched Kimi K3.1 Pro on October 23, a heavily post-trained version of Kimi K3 described as its most capable 3-trillion-parameter-class open-weight model, with a 1-million-token context window and live access via Kimi.ai, its apps and API. Full open weights are promised by November 4, 2026, with cyber-related training data deliberately removed for the open release.",
+      "url": "https://aipolix.com/en-us/news/moonshot-kimi-k3-1-pro-cyber-data-removal-open-weights"
+    },
+    {
+      "image": "https://eleven-public-cdn.elevenlabs.io/payloadcms/vemqqy7citb-OG%20Image%20SFX.webp",
+      "name": "ElevenLabs SFX v3",
+      "summary": "ElevenLabs released SFX v3 on October 29, a text-to-sound-effects model that follows multi-sound prompts more reliably, with more natural sound, better prompt following and improved music and vocals than SFX v2. It is available in ElevenCreative (Flows, Sound Effects, Studio and Music Editor) and via ElevenAPI as eleven_text_to_sound_v3.",
+      "url": "https://elevenlabs.io/sound-effects"
+    }
+  ]
+}

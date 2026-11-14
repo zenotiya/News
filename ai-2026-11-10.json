@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-10",
+  "items": [
+    {
+      "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/b2dab182c77b4ccfd36423470106915b20f676ae-1200x630.jpg",
+      "name": "Anthropic Claude Fable 5.2",
+      "summary": "Anthropic's most capable model for technical work, launched 9 November. It tops the Artificial Analysis Intelligence Index at 64.6, generates outputs up to 30% faster than Fable 5.1, and costs 20% less at $8/$40 per million tokens; the same underlying model ships as Mythos 5.2 for vetted cybersecurity and life-science users.",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+    },
+    {
+      "image": "https://madrobot.blog/images/meta-muse-ember-launch-art.jpg",
+      "name": "Meta Muse Ember",
+      "summary": "Meta's smallest and most efficient model, launched 9 November for the high-volume work AI agents repeat all day: tool calls, coding subtasks, routing and extraction. At $0.10/$0.50 per million tokens with a 1M-token context, it matches Claude Haiku 5.5 on the Artificial Analysis Intelligence Index at about a third of the cost per task.",
+      "url": "https://research.meta.ai/blog/muse-ember"
+    },
+    {
+      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/11/corl-corp-blog-promo-pack-1920x1080-1-1680x945.png",
+      "name": "NVIDIA GR00T 2",
+      "summary": "NVIDIA's open world-action model for robots, unveiled 9 November at CoRL. Trained partly on 100,000 hours of first-person human video, it completed 40 of 50 unseen manipulation tasks with no task-specific demonstrations; Isaac Lab 3.0 shipped alongside it.",
+      "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/"
+    },
+    {
+      "image": "https://explainx.ai/images/blog-library/computer-use-cursor-hand.webp",
+      "name": "Tencent Hy4",
+      "summary": "Tencent's 770B-parameter mixture-of-experts flagship, launched 4 November — the first Hy model with vision input and computer use, with a 1M-token context window. It is available via Tencent Cloud TokenHub and OpenRouter, with open weights promised but not yet released.",
+      "url": "https://hy.tencent.com/research/hy4"
+    },
+    {
+      "image": "https://cognition.com/images/swe-2-flash/cover.jpg",
+      "name": "Cognition SWE-2 Flash",
+      "summary": "Cognition's fast coding model, launched 4 November and post-trained from Thinking Machines' Inkling-Small (276B total, 12B active parameters). It runs about 3x faster than SWE-2 at a fifth of the price and is free in Devin Desktop and CLI through 30 November, though its weights are withheld over cyber-misuse risk.",
+      "url": "https://cognition.com/blog/swe-2-flash"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-26",
+  "items": [
+    {
+      "image": "https://the-decoder.com/wp-content/uploads/2026/10/nvidia-flora-hero-robot-hands.jpg",
+      "name": "Nvidia Flora",
+      "summary": "Nvidia's GEAR lab open-sourced Flora, a trio of models that turn raw robot and human manipulation video into training labels — segmenting actions, captioning them, and scoring outcomes. Nvidia says the suite already labels 200,000 hours of video a day for its GR00T humanoid models at a claimed 125x lower cost than GPT-6 Astra.",
+      "url": "https://the-decoder.com/nvidia-open-sources-flora-to-make-robot-video-labeling-125x-cheaper-than-gpt-6-astra/"
+    },
+    {
+      "image": "https://static.aws-news.com/article-banners/01a169b6-9619-0b29-4be0-9d03e3aa8c8e.png",
+      "name": "AWS Infinity",
+      "summary": "AWS and UC Berkeley released Infinity, an open-source agent runtime under Apache 2.0 that suspends agents during tool calls instead of holding a process open. The design lets huge numbers of mostly-idle agents share little memory — AWS claims 75,000 concurrent agents fit in 8 GB — and run on serverless platforms even when a tool call takes days.",
+      "url": "https://aws.amazon.com/blogs/opensource/introducing-infinity-a-runtime-for-extreme-agent-concurrency/"
+    },
+    {
+      "image": "https://www.siliconreport.com/article-image/carbon-x-integrates-dna-and-natural-language-in-14b-model",
+      "name": "Hugging Face Carbon-X",
+      "summary": "Hugging Face released Carbon-X, an open 14.8-billion-parameter model that reads raw DNA sequences inside a chat message and answers in English — predicting mutation effects, classifying sequences, and explaining its reasoning. Released under Apache 2.0, it runs locally on a single 80 GB GPU, so labs can keep sensitive genomic data off cloud APIs.",
+      "url": "https://www.siliconreport.com/carbon-x-integrates-dna-and-natural-language-in-14b-model"
+    },
+    {
+      "image": "https://images.macrumors.com/t/5v3SEszlh4H0v29GfpQnHJvImds=/3840x/article-new/2026/10/claude-duet.jpg",
+      "name": "Anthropic Claude Duet",
+      "summary": "Anthropic launched Claude Duet, a proactive AI agent built on Claude Opus 5.5 that monitors connected apps, sends a morning brief, and works tasks in the cloud while the user is away. Now in a waitlisted research preview for US Pro and Max subscribers, it requires approval before sensitive actions like payments or deletions.",
+      "url": "https://www.macrumors.com/2026/10/21/anthropic-claude-duet/"
+    },
+    {
+      "image": "https://ainewsround.com/storage/mcp/2026/10/Y4OdMFvKzQ46paoC3jgiYS5V3icdrnhM.webp",
+      "name": "DeepSeek V4.1-Flash-1017",
+      "summary": "DeepSeek shipped V4.1-Flash-1017, a new checkpoint of its low-cost long-context model with MIT-licensed open weights and improved scores across every official benchmark, including 77.0 on DeepSWE v1.1. The release also opens DeepSeek's Search and Fetch APIs to all developers at $0.75 per 1,000 calls.",
+      "url": "https://ainewsround.com/blog/deepseek-v41-flash-1017-adds-paid-search-api-and-tops-its-own-agent-benchmarks"
+    }
+  ]
+}

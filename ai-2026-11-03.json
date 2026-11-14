@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-03",
+  "items": [
+    {
+      "image": "https://www.deepprinciple.com/blog-assets/hydrogen-1.0/v20261102a/assets/training-infra/publication/rl-publication.gif",
+      "name": "Hydrogen-1.0",
+      "summary": "Deep Principle released Hydrogen-1.0 on November 2, a 753-billion-parameter open-weight model for chemistry, materials science and life sciences, built by post-training Z.ai's GLM-5.3 on domain data, laboratory records and discovery trajectories. Its MIT-licensed weights are on Hugging Face, and the company reports 38.3% on FrontierScience-Research against 33.3% for GPT-6-Astra, though full training data and recipes were not released.",
+      "url": "https://blog.deepprinciple.com/introducing-hydrogen-1.0/"
+    },
+    {
+      "image": "https://images.ctfassets.net/kftzwdyauwt9/2fkAIT3PbTRytKTBx9cx8o/229bc28cb338565fe735d8935abc801f/OpenAI_Wordmark_Gif.gif?w=3840&q=90&fm=webp",
+      "name": "GPT-6 Rosalind Research",
+      "summary": "OpenAI released GPT-6 Rosalind Research on October 30, a frontier reasoning model for biology, drug discovery and translational medicine built on GPT-6 Astra's weights with no additional training. It is available only through a trusted-access programme for approved research organisations, with fewer refusals on dual-use biology queries but refusals retained for biological weaponisation.",
+      "url": "https://help.openai.com/en/articles/20001193-gpt-rosalind-for-life-sciences-research"
+    },
+    {
+      "image": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/ml4/ml4.png",
+      "name": "Mistral Large 4 open weights",
+      "summary": "Mistral released the weights of Mistral Large 4 (Le Chonk) on October 29, an improved build after three more weeks of reinforcement learning following its October 6 preview. The roughly 1-trillion-parameter multimodal model leads open-weight coding benchmarks and scores 51% on the Artificial Analysis Cyber Index for defensive security work, and can be downloaded and self-hosted under the Mistral Ecosystem Open-Weight License.",
+      "url": "https://mistral.ai/news/mistral-large-4-oss/"
+    },
+    {
+      "image": "https://assets.techrepublic.com/uploads/2026/10/gemini-4-carbon-wordpress-optimized-1.jpg?w=1024",
+      "name": "Gemini 4 Carbon",
+      "summary": "Google DeepMind announced Gemini 4 Carbon on October 28, its strongest model yet, built for cybersecurity defence and long-horizon engineering work. It ranks first on the Artificial Analysis Intelligence Index v5.0 at 59 and leads SEC-bench Pro (88.2%), ExploitGym (54.8%) and CWE-bench (71.0%), but rolls out first only to a subset of cyber defenders through the Fairwind Program.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+    },
+    {
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/644249b08443bce4c9890a0f/iZQBqXVZfrcUNCklF4eAs.png",
+      "name": "Liquid AI LFM3",
+      "summary": "Liquid AI released LFM3 on October 27, a family of six open-weight 2B-class models for text, vision, audio, omni and decision tasks, all branched from a single 1.7B-parameter backbone trained on 22 trillion tokens. The text model fits in about 1 GB at 4-bit precision with a 256K-token context window, targeting on-device agents that can be fine-tuned on a single GPU.",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm3"
+    }
+  ]
+}

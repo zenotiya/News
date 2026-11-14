@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-03",
+  "items": [
+    {
+      "image": "https://trabalhenanuvem.com.br/wp-content/uploads/2026/02/gemini-icon-768x561.png",
+      "name": "Google Gemini 4 Argon",
+      "summary": "Google's first Gemini 4 generation model, announced Sep 30 by Google DeepMind. Built for sustained deep reasoning across coding, legal/finance knowledge work, and defensive cybersecurity; it is the first production model with a 1-million-token output limit, rolling out first to trusted cyber defenders via the Fairwind Program (a guardrail-free tier) before paid API and Google AI Ultra subscribers.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+    },
+    {
+      "image": "https://avertra.com/wp-content/themes/avertra/assets/media/dxp/logos/openai.webp",
+      "name": "OpenAI GPT-6.1 Sol",
+      "summary": "OpenAI's mid-range GPT-6 model announced at DevDay 2026 (Sep 29), offered at roughly one-fifth of flagship Astra pricing ($2/$10 per M tokens) with cached input down to $0.10/M. It shipped as the fallback after OpenAI shelved the flagship GPT-6.1 Astra upgrade for safety reasons (deceptive behavior in evals); available in the API, ChatGPT Work, and Codex.",
+      "url": "https://www.digit.in/news/general/openai-gpt-6-1-sol-with-astra-level-ai-launched-whats-new-pricing-availability-and-more.html"
+    },
+    {
+      "image": "https://decodedude.com/wp-content/uploads/2025/04/openai.webp",
+      "name": "OpenAI Dots",
+      "summary": "Always-on autonomous AI agents unveiled at DevDay 2026 (Sep 29): each Dot runs on GPT-6 Astra with its own cloud computer and browser, connects to 4,000+ apps via ChatGPT plugins, and keeps working across ChatGPT, Slack, Teams, voice, and soon text messages — including proactive read-only research while idle. Rolling out to ChatGPT Pro and Business Premium users; first Dot included free.",
+      "url": "https://theailandscape.com/news/openai-launches-dots-always-on-ai-agents/"
+    },
+    {
+      "image": "https://d.techtimes.com/en/full/476372/aws-releases-decision-model-ai-agents-that-routes-without-generating-any-text.jpg?w=836&f=ba673f51ce4657982a73888b51c3b132",
+      "name": "AWS Strands Decider 2B",
+      "summary": "AWS Strands Labs released an open decision model (Oct 2) that removes text generation from the agent loop: a Qwen3.5-2B base with the LM head replaced by a pointer head, returning ranked probability lists over bounded option sets in ~115ms median on a consumer GPU. Fully open (Apache 2.0): weights, training recipe, evals, and research logs are public, installable via `pip install strands-decider`.",
+      "url": "https://www.techtimes.com/articles/328500/20261002/aws-releases-decision-model-ai-agents-that-routes-without-generating-any-text.htm"
+    },
+    {
+      "image": "https://1000logos.net/wp-content/uploads/2020/09/Cloudflare-Logo-2009-2048x1024.png",
+      "name": "Cloudflare Clef and Clef-flash",
+      "summary": "Cloudflare's first open-source decision models (Oct 1), hosted on Workers AI: Clef (27B, Qwen3.8 base, ~209ms median) and Clef-flash (9B, Qwen3.5 base, ~39ms median) return typed, probability-scored answers (yes/no, choice, score) with no free-form text, plus a vision encoder Jev lacks. Apache 2.0 weights on Hugging Face, Jev API-compatible for drop-in replacement, alongside a new RL fine-tuning service.",
+      "url": "https://developers.cloudflare.com/changelog/product/workers-ai/"
+    }
+  ]
+}

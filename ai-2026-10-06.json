@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-06",
+  "items": [
+    {
+      "image": "https://techcrunch.com/wp-content/uploads/2026/10/Reflection-AI-Beam.png?resize=1200,669",
+      "name": "Reflection AI Beam",
+      "summary": "Reflection AI unveiled Beam on October 5 — a 501B-parameter (23B active) text-only MoE open-weight model trained on 23.8T tokens with a 1M-token context. Reflection claims GLM-5.2-level reasoning at 3–4x less inference compute, positioning it as the first credible Western open-weight rival to DeepSeek/Qwen; weights land later this month under Apache 2.0.",
+      "url": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/"
+    },
+    {
+      "image": "https://blog.cloudflare.com/_image?href=https%3A%2F%2Fblog.cloudflare.com%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3W09VBACVT4420YA2SDXZE8.01M3W09YK4NRJQNV2S8HMMCQF0.png&w=1920&h=790&f=webp",
+      "name": "Cloudflare Clef & Clef-flash",
+      "summary": "Cloudflare's Workers AI team shipped its first in-house trained models on October 1: two open-weight (Apache 2.0) decision models that return typed probabilities instead of text. Clef (27B, on Qwen3.8-27B) and Clef-flash (9B) are Jev-API compatible, take image/video input, and post median latencies of 209ms/39ms for agent decision loops, alongside a new RL fine-tuning service.",
+      "url": "https://blog.cloudflare.com/clef-decision-models"
+    },
+    {
+      "image": "https://www.techbox.sk/wp-content/uploads/2026/03/google-gemini-logo.jpg",
+      "name": "Google Gemini 4 Argon",
+      "summary": "Google DeepMind announced Gemini 4 Argon on September 30, its new frontier model for long-horizon coding, enterprise knowledge work, and defensive cybersecurity, with an industry-leading 1M-token output limit and top scores on DeepSWE v1.1 (77.9%) and AutomationBench (51.3%). Rollout is phased — trusted cyber defenders via the Fairwind Program first, then paid API and AI Ultra customers at $2/$10 per M tokens.",
+      "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/"
+    },
+    {
+      "image": "https://1000marcas.net/wp-content/uploads/2024/07/OpenAI-Logo.png",
+      "name": "OpenAI GPT-6.1 Sol",
+      "summary": "Announced at DevDay on September 29, GPT-6.1 Sol upgrades GPT-6 Sol to near-Astra capability on agentic coding, computer use, and professional work at one-fifth of Astra's token prices ($2 input / $10 output / $0.10 cached input per M). It replaces the paused GPT-6.1 Astra as OpenAI's workhorse tier, live via API and in ChatGPT Work and Codex.",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+    },
+    {
+      "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/eaa6046f4ae8c88e368c3c530c4c1312f7ff6f2e-1200x630.jpg",
+      "name": "Anthropic Claude Sonnet 5.5",
+      "summary": "Released September 28, Sonnet 5.5 is the second model in the Claude 5.5 family: 30%+ faster output than Sonnet 5, up to 30% lower cost per task at unchanged pricing ($2/$10 per M tokens), and 70.6% on Terminal-Bench 4.0 — ahead of Opus 5.5's 66.4%. It's the first Sonnet with Opus-grade cyber safeguards and distillation defenses, running at effort levels Low→Max.",
+      "url": "https://www.anthropic.com/claude-sonnet-5-5"
+    }
+  ]
+}

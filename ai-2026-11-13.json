@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-13",
+  "items": [
+    {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg",
+      "name": "Google Gemini 4 Hydrogen",
+      "summary": "Google's fast execution model for agentic workflows, launched November 12 across AI Studio, the Gemini API, the Gemini app and Search. It scores 51 on the Artificial Analysis Intelligence Index at its default thinking level and costs $1.50/$7.50 per million input/output tokens across a 1M-token context window.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+    },
+    {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini__decisions__blog-header_2784x1566.width-1300.png",
+      "name": "Google Gemini Decision 1",
+      "summary": "A new decision model behind the Gemini Decisions API, announced November 11. Instead of generating text, it scores up to 1,000 yes/no, choice or rubric questions over multimodal input in a single pass, at 150-250 ms end-to-end latency and $0.10 per million input tokens.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+    },
+    {
+      "image": "https://research.meta.ai/articles/muse-glint/hero/blog-header-light-v1.webp",
+      "name": "Meta Muse Ember",
+      "summary": "Meta's smallest and most efficient Muse model, released November 9 for the repetitive work agents do all day: tool calls, coding subtasks, routing, extraction and long-document parsing. It costs $0.10 per million input tokens and $0.50 per million output tokens, with a 1M-token context window.",
+      "url": "https://research.meta.ai/blog/muse-ember"
+    },
+    {
+      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/11/corl-corp-blog-promo-pack-1920x1080-1-1680x945.png",
+      "name": "NVIDIA GR00T 2",
+      "summary": "An open frontier world-action robot model built on NVIDIA Cosmos, unveiled November 9 at CoRL. It learns dexterous manipulation skills by watching human video, completing 40 of 50 evaluated tasks at least once with no task-specific demonstrations; weights and code are promised for December.",
+      "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/"
+    },
+    {
+      "image": "https://ashutoshai.com/ai-compass/og/2026-11-05/inclusionai-ling-3-2-flash.jpg",
+      "name": "Ant Group Ling-3.2-flash",
+      "summary": "Ant Ling's first natively multimodal model, launched November 5: a 560B-parameter MoE (25B active per token) accepting text, image and video over a 1M-token context window, aimed at visual understanding, long-horizon agents, 3D and medical tasks. The API is free for its first two weeks.",
+      "url": "https://technode.com/2026/11/06/ant-launches-ling-3-2-flash-multimodal-model-with-million-token-context/"
+    }
+  ]
+}

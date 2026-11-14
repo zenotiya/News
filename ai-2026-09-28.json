@@ -1,0 +1,35 @@
+{
+  "date": "2026-09-28",
+  "items": [
+    {
+      "image": "https://www.silicon.co.uk/wp-content/uploads/2026/08/The-logo-of-Shanghai-based-AI-company-MiniMax-Group-600x450.jpg",
+      "name": "MiniMax M3.1-Flash-Preview",
+      "summary": "MiniMax has launched M3.1-Flash-Preview, a new-generation ultra-fast text model now live on MiniMax Code. Positioned for everyday development scenarios — quick bug fixes and complete feature implementation — with an emphasis on response speed and stability.",
+      "url": "https://panews.io/articles/01a0e5bd-8e7b-706b-a888-a0a6643bc50e"
+    },
+    {
+      "image": "https://images.highwise.com/stories/47181.jpg",
+      "name": "Arm AI Portal",
+      "summary": "Arm launched a dedicated AI model portal for its 22 million developers, offering a library of pre-optimized models for language, voice, and video tasks with MCP-based agent access. Early benchmarks show Qwen3-TTS running over 4x faster on the Vivo X300 smartphone and YOLO26n gaining 40%+ on Raspberry Pi 5.",
+      "url": "https://wisevoter.com/world/2026/09/28/arm-launches-ai-model-portal"
+    },
+    {
+      "image": "https://cdn.unwire.hk/wp-content/uploads/2026/04/prismml_logo-694x363.jpg",
+      "name": "PrismML Bonsai 2 27B",
+      "summary": "PrismML launched Bonsai 2 27B, a second-generation ultra-compact multimodal model that compresses a Qwen3.8 27B-class model from ~56GB to 5.9GB using ternary weight compression while retaining around 98.2% of its capabilities. Weights are available today under Apache 2.0, running locally on PCs and high-end mobile devices.",
+      "url": "https://siliconangle.com/2026/09/18/prismml-launches-bonsai-2-27b-a-high-intelligence-ai-model-so-small-it-fits-on-consumer-hardware/"
+    },
+    {
+      "image": "https://avertra.com/wp-content/themes/avertra/assets/media/dxp/logos/openai.webp",
+      "name": "OpenAI GPT-6 Cyber (reported)",
+      "summary": "Fortune reports OpenAI is days away from previewing GPT-6 Cyber, a cybersecurity-focused model expected at DevDay on September 29 — which would be the company's fourth security-oriented model this year. OpenAI has not publicly confirmed the model; per the report, a limited group already has alpha access through the Daybreak Red program.",
+      "url": "https://tech-insider.org/openai-gpt-6-cyber-4th-security-model-2026/"
+    },
+    {
+      "image": "https://images.cloudclusters.io/15d2a73045354b97bfb79620f44e39ad/qwen-logo.png",
+      "name": "Qwen-Image-2.1",
+      "summary": "Alibaba's Qwen team open-sourced Qwen-Image-2.1, a 7B unified text-to-image generation and editing model with native transparent (RGBA) output and support for up to 10 reference images in a single edit. Unlike earlier Qwen-Image releases, it ships under a research-oriented license rather than Apache 2.0, limiting commercial use.",
+      "url": "https://tech-insider.org/self-host-qwen-image-2-1-locally-setup-2026/"
+    }
+  ]
+}

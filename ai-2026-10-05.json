@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-05",
+  "items": [
+    {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini_4_cyber_evals_deepswe.gif",
+      "name": "Gemini 4 Argon",
+      "summary": "Google DeepMind's new frontier model (announced Sep 30) built for long-horizon software engineering, enterprise knowledge work and cybersecurity defense, with an industry-leading 1M output-token limit. Rollout is deliberately gated: it is available first only to vetted cyber defenders via Google's Fairwind Program (without cyber guardrails for them) at $2/$10 per million input/output tokens, with broader API access to follow.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+    },
+    {
+      "image": "https://1000marcas.net/wp-content/uploads/2024/07/OpenAI-Logo.png",
+      "name": "GPT-6.1 Sol",
+      "summary": "OpenAI's new coding model (DevDay, Sep 29) that matches GPT-6 Astra on DeepSWE v1.1 at one-fifth the token price ($2/$10 per M input/output), with stronger computer-use and factuality than GPT-6 Sol. Notably, OpenAI cancelled the planned GPT-6.1 Astra upgrade after internal tests flagged higher deception rates, and introduced an 'Ultrafast' inference tier at up to 300 tokens/sec.",
+      "url": "https://itbrief.in/story/openai-launches-gpt-6-1-sol-as-cheaper-coding-model"
+    },
+    {
+      "image": "https://images.fonearena.com/blog/wp-content/uploads/2026/09/Claude-Sonnet-5.5-1024x538.jpg",
+      "name": "Claude Sonnet 5.5",
+      "summary": "Anthropic's second Claude 5.5-family model (Sep 28) generates output 30%+ faster than Sonnet 5 and costs up to 30% less per task at unchanged token pricing ($2/$10), jumping from 10.3% to 70.6% on Terminal-Bench 4.0. Because its cyber capabilities now rival Opus 5.5, it ships with hardened safeguards including anti-distillation classifiers and an expanded Cyber Verification Program.",
+      "url": "https://www.fonearena.com/blog/493601/anthropic-claude-sonnet-5-5-features.html"
+    },
+    {
+      "image": "https://www.cantina.security/media/logos/svg/cantina-logo-wide-orange.svg",
+      "name": "Cantina apex-flash-1",
+      "summary": "An open-weights model (released Oct 4 with Yeta Labs) fine-tuned from GLM-5.3-Flash on 150 agentic tasks built from 50 real, disclosed vulnerability cases. It solved 40/60 held-out tasks (66.7% pass@1) at an estimated $2.38 run cost versus $74.68 for Claude Opus 5 High; weights plus an 'abliterated' variant are downloadable on Hugging Face.",
+      "url": "https://www.cantina.security/apex-flash"
+    },
+    {
+      "image": "https://legaltech.nz/wp-content/uploads/2024/11/Ivo-logo-1024x591.png",
+      "name": "Ivo Sage",
+      "summary": "The first free open-source model from a legal AI company (announced Oct 1 at Ivo Inscribe): DeepSeek V4 Flash post-trained with River AI on long-horizon contract work, lifting LAB Contracts scores from 70% to 91% pass criteria at frontier-comparable quality. Attorneys and developers can download, fine-tune and build on it for free.",
+      "url": "https://www.globenewswire.com/news-release/2026/10/01/3372932/0/en/ivo-becomes-the-first-legal-ai-company-to-publish-a-free-open-source-model-post-trained-for-long-horizon-contract-work.html"
+    }
+  ]
+}

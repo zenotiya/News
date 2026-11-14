@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-01",
+  "items": [
+    {
+      "image": "https://www.theapplepost.com/wp-content/uploads/2026/10/iOS27.3.China_-960x640.jpeg",
+      "name": "Apple Intelligence in China with Alibaba's Qwen",
+      "summary": "Apple confirmed on October 31 that Apple Intelligence will reach mainland China, with testing from November 4 in the latest iOS developer beta and a public launch with iOS 27.3 in December. Alibaba's Qwen model will power selected experiences — Siri, Writing Tools and Visual Intelligence — in place of ChatGPT, while the rebuilt Siri AI is not included in this first release.",
+      "url": "https://www.theapplepost.com/2026/10/31/73757/apple-intelligence-finally-coming-to-china-in-december-with-ios-27-3/"
+    },
+    {
+      "image": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/ml4/ml4.png",
+      "name": "Mistral Large 4 open weights",
+      "summary": "Mistral released the weights of Mistral Large 4 (Le Chonk) on October 29, an improved build after three more weeks of reinforcement learning following its October 6 preview. The roughly 1-trillion-parameter multimodal model is downloadable from Hugging Face under the Mistral Ecosystem Open-Weight License, with Mistral pitching its coding and defensive-cybersecurity performance for self-hosted use.",
+      "url": "https://mistral.ai/news/mistral-large-4-oss/"
+    },
+    {
+      "image": "https://cdn.prod.website-files.com/6852072fc832bba3986f4ae1/6ae186cbf82b53e75b520040_prisma-v3-industries-playbook_2%201.png",
+      "name": "Gnani Prisma v3.0",
+      "summary": "Bengaluru-based Gnani AI launched Prisma v3.0 on October 28, a speech-to-text model trained on Indian telephone audio that covers nine Indian languages plus Indian English in one model and handles mid-sentence code-switching. In Gnani's own Vistaar evaluation it recorded a 16.93 macro word error rate, against 19.98 for ElevenLabs Scribe v2, and it is available now via Gnani's developer API.",
+      "url": "https://www.gnani.ai/resources/blogs/prisma-v3-0-speech-recognition"
+    },
+    {
+      "image": "https://cdn.openai.com/mdx-assets/71f084db-a08b-48c5-b96e-5fbdc21a1a00/terra-art-card-16x9.0394724b.png",
+      "name": "GPT-6.1 Terra",
+      "summary": "OpenAI released GPT-6.1 Terra on October 26, a fast, efficient model combining detailed visual reasoning and precise computer use with clearer writing. Standard API prices are 50% lower than GPT-5.6 Terra and GPT-6.1 Sol at $1 per million input tokens and $5 per million output tokens, available to Plus, Pro, Enterprise and Edu users in ChatGPT Work and Codex and via the API.",
+      "url": "https://openai.com/index/introducing-gpt-6-1-terra/"
+    },
+    {
+      "image": "https://d2908q01vomqb2.cloudfront.net/ca3512f4dfa95a03169c5a670a4c91a19b3077b4/2026/10/21/Fig1infinity.png",
+      "name": "AWS Infinity agent runtime",
+      "summary": "AWS and UC Berkeley released Infinity on October 23, an open-source agent runtime under Apache 2.0 that suspends an agent when it calls a tool and resumes it from its saved conversation state when the result arrives. In AWS's simulated benchmark about 75,000 idle agents fit in 8 GB of memory at roughly 100 KB each, and suspended agents need no running compute, so the runtime can also deploy on serverless platforms.",
+      "url": "https://aws.amazon.com/blogs/opensource/introducing-infinity-a-runtime-for-extreme-agent-concurrency/"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-18",
+  "items": [
+    {
+      "image": "https://cassette.sphdigital.com.sg/image/straitstimes/1d39b2f9769af01d0c5ddf35935cbfccec7b0cecbc49615c82d91111388c7892?w=1200",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "summary": "DeepSeek's updated Flash-class model launched Oct 17, scoring 77% on DeepSWE 1.1 — topping Opus 5.0 and GPT-class rivals on coding and agentic benchmarks while cutting per-task costs with shorter, harness-optimized outputs.",
+      "url": "https://www.straitstimes.com/world/deepseek-pushes-out-updated-ai-model-it-says-is-faster-leaner"
+    },
+    {
+      "image": "https://www.unite.ai/wp-content/uploads/2026/10/reflection-releases-beams-open-weights-under-apache-2-0-license.jpg",
+      "name": "Reflection AI Beam (open weights)",
+      "summary": "NVIDIA-backed Reflection AI released the weights of Beam 1.0 on Hugging Face under Apache 2.0 on Oct 16 — a 501B-parameter MoE (23B active) built for coding and agentic workflows, the startup's first open model challenging Chinese open-weight labs.",
+      "url": "https://www.unite.ai/reflection-releases-beams-open-weights-under-apache-2-0-license/"
+    },
+    {
+      "image": "https://runtimewire.com/og/nvidia-nemotron-35-super-vl-open-multimodal-agents.16x9.jpg?v=og2-lnxw4j",
+      "name": "NVIDIA Nemotron 3.5 Super VL",
+      "summary": "NVIDIA's new 120B-parameter open multimodal model for always-on enterprise agents shipped Oct 15 with open weights, datasets and training recipes, alongside two smaller Bolt edge models — claiming up to 5x the agentic throughput of peers in its class.",
+      "url": "https://runtimewire.com/article/nvidia-nemotron-35-super-vl-open-multimodal-agents"
+    },
+    {
+      "image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpvymsk7obl6gw7064k7e.png",
+      "name": "Google Gemini 4 Argon",
+      "summary": "Google's first Gemini 4 frontier model rolled out globally Oct 13 to AI Pro/Ultra subscribers and API customers — a 1M-context reasoning model for deep-work tasks in coding, finance, legal and cybersecurity, with introductory pricing through Nov 30.",
+      "url": "https://dev.to/techpulse01239/google-launches-gemini-4-argon-its-new-frontier-model-for-deep-work-4plb"
+    },
+    {
+      "image": "https://www.volanea.com/og-image.jpg",
+      "name": "Mistral Large 4 ('Le Chonk')",
+      "summary": "Mistral's 1.05-trillion-parameter MoE — Europe's largest model — launched in public API preview Oct 6 with 52B active parameters, native multimodal input and 1M-token context; open weights are promised by the end of October.",
+      "url": "https://www.datacamp.com/blog/mistral-4-large-le-chonk"
+    }
+  ]
+}

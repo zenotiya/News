@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-09",
+  "items": [
+    {
+      "image": "https://image.blockchain.news:443/features/D11B7CFCA58E34BD7D45FE96B9319DC677103B086D2B5DC6241654AB7083E58E.jpg",
+      "name": "OpenAI GPT-6 with Intelligent UI",
+      "summary": "OpenAI began the global rollout of GPT-6 in ChatGPT on Oct 7, adding an Intelligent UI that renders interactive elements — charts, forms, calculators, games — inside responses instead of plain text. Paid tiers get GPT-6 Sol while Free and Go users get GPT-6 Luna, with free-tier access starting Oct 8.",
+      "url": "https://www.gadgets360.com/ai/news/openai-gpt-6-with-intelligent-ui-global-roll-out-availability-features-12157773"
+    },
+    {
+      "image": "https://th-i.thgim.com/public/incoming/o5z12z/article71558629.ece/alternates/LANDSCAPE_1200/2026-10-03T050005Z_873277736_RC2UNLAN9HVH_RTRMADP_3_GLOBAL-ECONOMY-AI.JPG",
+      "name": "Anthropic Claude Haiku 5.5",
+      "summary": "Anthropic released Claude Haiku 5.5 on Oct 7, closing out the Claude 5.5 family with a 1M-token context window and aggressive pricing at $0.10/$0.50 per million tokens — a tenth of Haiku 4.5 and exactly matching OpenAI's GPT-6 Luna. It posts major agent-benchmark gains, including 72.4% on OSWorld 2.1.",
+      "url": "https://www.thehindu.com/sci-tech/technology/anthropic-introduces-claude-haiku-55-in-competition-to-cheaper-open-source-models/article71558643.ece"
+    },
+    {
+      "image": "https://www.unite.ai/wp-content/uploads/2026/10/illumina-launches-spliceai2-model-splice-variant-interpretation.jpg",
+      "name": "Illumina SpliceAI2",
+      "summary": "Illumina launched SpliceAI2 on Oct 8, a genomic AI model from its BioInsight AI Lab that predicts how genetic variants alter RNA splicing, trained on 100x more data than its 2019 predecessor. It identified 17% more disease-relevant variants than other splicing models and joins PromoterAI and PrimateAI-3D in its genomic model suite.",
+      "url": "https://www.unite.ai/illumina-launches-spliceai2-model-for-splice-variant-interpretation/"
+    }
+  ]
+}

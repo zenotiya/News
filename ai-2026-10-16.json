@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-16",
+  "items": [
+    {
+      "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/10/meta-muse-spark-mac.jpg",
+      "name": "Meta Muse Spark Open",
+      "summary": "Meta released the open weights of Muse Spark Open, an 816B-total / 42B-active MoE model with a 1M-token context — built for coding and agentic work and billed by Meta as the most capable US open-weight model to date. It was co-optimized with Apple MLX to run on two M5 Ultra Mac Studios, a surprise Meta-Apple collaboration.",
+      "url": "https://9to5mac.com/2026/10/15/meta-launches-new-muse-spark-open-model-optimized-to-run-on-mac-studio/"
+    },
+    {
+      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/10/LAST-post-training-delivers-leading-accuracy--960x540.png",
+      "name": "NVIDIA Nemotron 3.5 Super VL",
+      "summary": "NVIDIA shipped an open-weight 120B-parameter MoE model (~12B active) for multimodal, always-on enterprise agents, alongside two smaller Bolt edge models. It ships under NVIDIA's OpenMDW license permitting commercial use, with weights on Hugging Face.",
+      "url": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/"
+    },
+    {
+      "image": "https://starthere.co/wp-content/uploads/2025/08/liquid-ai_cover-1.png",
+      "name": "Liquid AI LFM2.5-24B-A2B",
+      "summary": "Liquid AI released the final model of its LFM2.5 family: an open-weight 24B-total / 2.45B-active reasoning MoE for on-device agents with a 131K-token context, decoding 184 tokens/sec on an Apple M5 Max. Checkpoints ship in FP8, GGUF, ONNX and MLX formats.",
+      "url": "https://www.unite.ai/liquid-ai-releases-open-weight-lfm2-5-24b-a2b-for-on-device-agents/"
+    },
+    {
+      "image": "https://www.cedr.com/hs-fs/hubfs/Client%20Logos/Meta.png",
+      "name": "Meta Muse Wonder + Muse Wonder Full",
+      "summary": "Meta Superintelligence Labs released its first frontier-class models: Muse Wonder (via the Meta Model API) and the stronger Muse Wonder Full (Muse Code plans). Meta pitches them as agent models with Active Memory and Active Focus, with independent benchmark scores of 52 and 56.",
+      "url": "https://foundermag.co/launches/meta-muse-wonder/"
+    },
+    {
+      "image": "https://www.greenlightconsulting.com/app/uploads/2026/07/Anthropic-Claude-Logo.png",
+      "name": "Anthropic Claude Haiku 5.5",
+      "summary": "Anthropic launched Claude Haiku 5.5, its cheapest, fastest and most capable small model: $0.10/$0.50 per M tokens, 1M-token context, an adjustable effort setting, and the first Haiku with built-in cybersecurity-misuse safeguards. The same announcement halved Sonnet 5.5 cache-read prices.",
+      "url": "https://www.reuters.com/business/anthropic-launches-third-claude-55-model-expanding-ai-lineup-before-planned-ipo-2026-10-07/"
+    }
+  ]
+}

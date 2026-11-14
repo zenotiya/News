@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-14",
+  "items": [
+    {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ArgonDemos_social.width-1300.png",
+      "name": "Gemini 4 Argon",
+      "summary": "Google's new flagship frontier model, now globally available via the Gemini API, AI Studio, and AI Mode in Search. Built for \"deep work\" — complex multi-step tasks across coding, finance, law, cybersecurity, and science — it launches at an introductory $2/$10 per million input/output tokens, doubling after Nov 30.",
+      "url": "https://blog.google/intl/en-mena/product-updates/explore-get-answers/gemini-4-argon-built-to-solve-your-hardest-problems/"
+    },
+    {
+      "image": "https://aypchzzf9pftwuto.public.blob.vercel-storage.com/image%20(3)-oOdUn61bDRSykk4H951SoDOHzqoOe1.png",
+      "name": "LFM2.5-24B-A2B",
+      "summary": "Liquid AI's largest and final LFM2.5 open-weight reasoning model: 24B parameters with only 2B active per token, built for fast private on-device agents. Beats Qwen3.6-35B-A3B on agentic benchmarks like AutomationBench and ships with day-one llama.cpp/MLX/vLLM/SGLang support.",
+      "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b"
+    },
+    {
+      "image": "https://about.fb.com/wp-content/uploads/2021/10/meta-social-16x9-1.jpg?w=1200",
+      "name": "Muse Wonder & Muse Wonder Full",
+      "summary": "Meta's first frontier-class models from its rebuilt Superintelligence Labs, targeting personal and professional agent tasks with \"Active Memory\" (context carried across conversations) and \"Active Focus\" (goal persistence on hard tasks). Muse Wonder is live via the Meta Model API (~$4/$20 per M tokens); Muse Wonder Full is restricted to Muse Code subscribers.",
+      "url": "https://www.dawn.com/news/2036792/meta-says-its-new-ai-models-on-par-with-openai-anthropic"
+    },
+    {
+      "image": "https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp",
+      "name": "Mistral Large 4",
+      "summary": "Europe's largest open-weight model: 1.05T total parameters (52B active), natively multimodal with a 1M-token context, trained from scratch on 3,800 NVIDIA Grace Blackwell GPUs in Mistral's own European datacenters. Launched as a public API preview with downloadable weights promised by end of October.",
+      "url": "https://mistral.ai/news/mistral-large-4/"
+    }
+  ]
+}

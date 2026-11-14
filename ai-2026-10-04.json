@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-04",
+  "items": [
+    {
+      "image": "https://mpost.io/wp-content/uploads/IMG_9792-2-1024x548.jpg",
+      "name": "DeepSeek Harness Desktop v0.2",
+      "summary": "DeepSeek shipped v0.2 of its open-source Harness agent runtime as ready-to-run desktop installers for macOS (Apple silicon) and 64-bit Windows, adding in-app plugin installation/management, scheduled automation tasks, and an experimental mode where the agent writes plugins from conversation. The MIT-licensed repo sits near 242k GitHub stars, marking open-source agentic tooling crossing from developer tool to consumer product.",
+      "url": "https://mpost.io/deepseek-releases-harness-v0-2-preview-for-macos-and-windows-with-in-app-plugin-creation/"
+    },
+    {
+      "image": "https://cdn.prod.website-files.com/65f4b30742f9be11e8959d5c/696ef34a6829192b4c87450e_OG%20Image%20-%20main.jpg",
+      "name": "Ivo Sage",
+      "summary": "Ivo released Sage, the first free open-source model from a legal AI company, built by post-training DeepSeek V4 Flash on long-horizon contract work with public and synthetic data from real attorneys. After RL it jumped from 70% to 91% on the LAB Contracts benchmark, matching much larger frontier models at a fraction of the cost.",
+      "url": "https://www.globenewswire.com/news-release/2026/10/01/3372932/0/en/ivo-becomes-the-first-legal-ai-company-to-publish-a-free-open-source-model-post-trained-for-long-horizon-contract-work.html"
+    },
+    {
+      "image": "https://www.cantina.security/_astro/og-cost-vs-pass.DISQlhwj.png",
+      "name": "Cantina Apex Flash-1",
+      "summary": "Cantina Security released apex-flash-1, open-weights model post-trained from GLM-5.3-Flash with GRPO on 150 tasks generated from 50 of the company's real vulnerability cases, plus an 'abliterated' low-refusal variant for researchers. It solves 40/60 held-out security tasks at $2.38 total vs $74.68 for Claude Opus 5 High — a bet that defenders need locally runnable, cheap security-worker models.",
+      "url": "https://www.cantina.security/apex-flash"
+    },
+    {
+      "image": "https://www.talus.bio/og/og-default.818683dd4713a5f266c4522f97a2e0e0a8150cbcee2e0ad6a0a05174cea57e83.png",
+      "name": "Talus Bio Ptarmigan-1",
+      "summary": "Talus Bio released Ptarmigan-1 via a public portal, the first AI model to predict small-molecule binding sites across the whole human proteome without 3D structures — opening the ~40% of proteins, including disordered and historically undruggable targets, that structure-based methods can't touch. It outperformed structure-based methods on a STAT6 inhibitor series and screens 3.4B compounds in a day.",
+      "url": "https://www.businesswire.com/news/home/20261001312326/en/Talus-Bio-Launches-Ptarmigan-1-the-First-Structure-Free-AI-Model-for-Proteome-Wide-Drug-Discovery"
+    },
+    {
+      "image": "https://localmodelwatch.tsuchitsuchi.com/wp-content/uploads/2026/10/202610020309_hf_model-elyza-ELYZA-Thinking-1-0-llm-jp-4-32b-a3b-en.png",
+      "name": "ELYZA-Thinking-1.0 (32B/33B)",
+      "summary": "Japan's ELYZA released two open Apache-2.0 reasoning models based on NII's domestic llm-jp-4 series — a 33B dense and a 32B-A3B MoE — trained for complex instruction following, math, coding and Japanese-specific knowledge retrieval, alongside its new RSI research group for recursive self-improvement. In one customer-service experiment, a self-improving agent raised task completion from 34.3% to 52.9% while cutting inference cost 67%.",
+      "url": "https://huggingface.co/elyza/ELYZA-Thinking-1.0-llm-jp-4-33b"
+    }
+  ]
+}

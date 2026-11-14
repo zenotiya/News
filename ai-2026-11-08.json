@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-08",
+  "items": [
+    {
+      "image": "https://thinkingmachines.ai/news/inkling-2-small/images/cover-social.png",
+      "name": "Inkling 2 Small",
+      "summary": "Thinking Machines Lab's second-generation model is a 594B-parameter mixture-of-experts model with 17B active per token, scoring 31 on the Artificial Analysis Intelligence Index. It runs on the company's Tinker platform for now, with full weights promised under Apache 2.0 next week once external safety testing finishes.",
+      "url": "https://thinkingmachines.ai/news/inkling-2-small/"
+    },
+    {
+      "image": "https://explainx.ai/images/blog-library/computer-use-cursor-hand.webp",
+      "name": "Tencent Hunyuan Hy4",
+      "summary": "Tencent's 770B-parameter flagship adds vision and computer use — via CLI and GUI — for the first time in the Hunyuan line, with a 1M-token context window. It is live via Tencent Cloud TokenHub, OpenRouter and Tencent's own apps, with open weights promised soon.",
+      "url": "https://hy.tencent.com/research/hy4"
+    },
+    {
+      "image": "https://explainx.ai/images/blog-library/open-weights-release.webp",
+      "name": "Kimi K3.1 Pro on Amazon Bedrock",
+      "summary": "Moonshot AI's 3T-class open-weight agentic model, with a 1M-token context window, is now available on Amazon Bedrock as Kimi K3.1 Pro (Highspeed), bringing its coding and document-processing strengths to AWS customers with Bedrock's security and governance controls.",
+      "url": "https://www.gettechfeed.com/article/aws-aws-amazon-com-about-aws-whats-new-2026-11-moonshot-ai-kimi-k3-1-pro-on-amazon-bedrock"
+    },
+    {
+      "image": "https://static.wixstatic.com/media/c5719c_9573d1250a1c4081b6038487ec9c039a~mv2.jpg/v1/fill/w_1536,h_864,al_c,q_85/c5719c_9573d1250a1c4081b6038487ec9c039a~mv2.jpg",
+      "name": "Mistral Studio Managed Agents",
+      "summary": "Mistral Studio now offers managed agents with skills, code sandboxes, subagents and hooks, plus a workflow builder and hosted apps, mostly in public preview. The same agent definition can run on Mistral Cloud, in a VPC, or on-premises, built around the open-weight Mistral Large 4 model.",
+      "url": "https://www.datastudios.org/post/mistral-studio-managed-agents-workflows-apps-public-preview"
+    },
+    {
+      "image": "https://images.highwise.com/media/tech_artificial-intelligence.jpg",
+      "name": "Qoduck (Qoder)",
+      "summary": "Alibaba's Qoder coding tool added a stealth model called Qoduck to its picker, free for individual users within a daily allowance. Alibaba has not disclosed the model's identity, and its cloud CTO has signalled the Qwen4 model could arrive within the week.",
+      "url": "https://wisevoter.com/world/2026/11/08/qoder-adds-free-qoduck-model"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-06",
+  "items": [
+    {
+      "image": "https://cybersecuritynews.com/wp-content/uploads/2026/11/GPT-6-Cyber.webp",
+      "name": "OpenAI GPT-6 Cyber",
+      "summary": "OpenAI launched GPT-6 Cyber on November 5, a security-focused variant of GPT-6 Astra for authorized vulnerability research. It scores 48.5% on ExploitGym (up from 32.1% for GPT-5.6 Cyber) and is rated 'Critical' under OpenAI's Preparedness Framework; access starts with vetted Daybreak Red customers.",
+      "url": "https://www.reuters.com/technology/openai-launches-gpt-6-cyber-with-critical-cybersecurity-rating-2026-11-05/"
+    },
+    {
+      "image": "https://www.unite.ai/wp-content/uploads/2026/11/thinking-machines-lab-launches-inkling-2-small-with-open-weights-pending.jpg",
+      "name": "Thinking Machines Lab Inkling 2 Small",
+      "summary": "Thinking Machines Lab introduced Inkling 2 Small on November 5, a 594-billion-parameter sparse mixture-of-experts model (17B active) aimed at long-horizon autonomous work, coding and vision. It is available now through Tinker, with full open weights under Apache 2.0 promised in the week after launch, pending external safety testing.",
+      "url": "https://www.unite.ai/thinking-machines-lab-launches-inkling-2-small-with-open-weights-pending/"
+    },
+    {
+      "image": "https://www.unite.ai/wp-content/uploads/2026/11/baidu-releases-ernie-5-5-flash-base-for-further-training.jpg",
+      "name": "Baidu ERNIE 5.5 Flash Base",
+      "summary": "Baidu released ERNIE-5.5-Flash-Base on November 5, a downloadable 280-billion-parameter mixture-of-experts checkpoint (14B activated per token) that stops at pre-training. It is a fixed research baseline for domain adaptation and training-method comparisons, with a post-trained Flash model to follow.",
+      "url": "https://www.unite.ai/baidu-releases-ernie-5-5-flash-base-for-further-training/"
+    },
+    {
+      "image": "https://pfn-web-static-contents-kuroco.s3.ap-northeast-1.amazonaws.com/files/a/public/news/PLaMo_3_Translate_benchmarks_en.png",
+      "name": "Preferred Networks PLaMo 3 Translate",
+      "summary": "Preferred Networks released PLaMo 3 Translate as open weights on November 5, a translation-specialized LLM family in 0.8B, 2B, 8B and 31B sizes built for on-device and edge use. The models are free for individuals and enterprises with annual revenue of 1 billion yen or less under the PLaMo Community License.",
+      "url": "https://www.preferred.jp/en/news/pr20261105"
+    },
+    {
+      "image": "https://www.digitalapplied.com/blog/ripple-65b-preview-open-weight-model/article-image",
+      "name": "Ricursive Ripple-65B Preview",
+      "summary": "Chip-design lab Ricursive released Ripple-65B Preview on November 4, a 65-billion-parameter dense open-weight model under Apache 2.0 with a 1M-token context window, pretrained on 12 trillion tokens. The vendor claims US open-weight best on Terminal-Bench 2.1, with hosted inference via Together AI, GMI Cloud and OpenRouter.",
+      "url": "https://www.digitalapplied.com/blog/ripple-65b-preview-open-weight-model"
+    }
+  ]
+}

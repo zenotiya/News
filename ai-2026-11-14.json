@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-14",
+  "items": [
+    {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini__decisions__blog-header_2784x1566.width-1300.png",
+      "name": "Gemini Decision 1",
+      "summary": "Google's new decision model scores up to 1,000 closed-set questions (yes/no, multiple-choice, rubric scoring) in a single forward pass instead of generating text, returning probabilities in 150-250 ms at $0.10 per million input tokens. Built for the judgement calls inside agents: tool selection, model routing, policy checks and context grading.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "plain": "Google's new Gemini Decision 1 is a faster model for AI agent judgement calls — worth a look if clients are adopting agents."
+    },
+    {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon_key_art_16-9_lockup.width-1300.jpg",
+      "name": "Gemini 4 Carbon",
+      "summary": "Google's strongest model is now generally available to paid developers, enterprises and Google AI Ultra subscribers, pitched as frontier-class for cybersecurity and long-horizon agentic work. The launch also previewed /swarm in Antigravity, letting multiple Carbon agents collaborate on one task.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+    },
+    {
+      "image": "https://assets.claude.com/21b3240f9264f8e4c8ab1390e2702cf1401b2367.jpg",
+      "name": "Claude Fable 5.2",
+      "summary": "Anthropic's most capable model to date, released alongside the vetted-only Mythos 5.2 twin, with faster outputs and a price cut to $8 per million input tokens. It now tops the Artificial Analysis Intelligence Index and leads on agentic coding benchmarks.",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+    },
+    {
+      "image": "https://research.meta.ai/articles/muse-glint/hero/blog-header-light-v1.webp",
+      "name": "Meta Muse Ember",
+      "summary": "Meta's smallest and most efficient Muse model, built for the repetitive work inside agents: tool calls, coding subtasks, routing, extraction and long-document parsing. At $0.10 per million input tokens it matches Claude Haiku 5.5's intelligence score at about a third of the cost per task.",
+      "url": "https://research.meta.ai/blog/muse-ember"
+    },
+    {
+      "image": "https://ashutoshai.com/ai-compass/og/2026-11-05/inclusionai-ling-3-2-flash.jpg",
+      "name": "Ant Ling-3.2-flash",
+      "summary": "Ant Group's inclusionAI launched a 560-billion-parameter multimodal mixture-of-experts model (25B active per token) with a 1-million-token context window, natively handling interleaved text, images and video. Free API access for two weeks, with OpenAI- and Anthropic-compatible endpoints.",
+      "url": "https://ashutoshai.com/ai-compass/2026/11/05/inclusionai-ling-3-2-flash/"
+    }
+  ]
+}

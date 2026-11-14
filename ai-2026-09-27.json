@@ -1,0 +1,35 @@
+{
+  "date": "2026-09-27",
+  "items": [
+    {
+      "image": "https://atoms-cos.metadl.com/cms_medias/gpt_6_sol_luna_cover_56e3a28504.jpg",
+      "name": "OpenAI GPT-6 Sol & Luna",
+      "summary": "OpenAI launched two cheaper GPT-6 models on Sept 22 — Sol ($2/$10 per million tokens) for coding and agentic work, and Luna ($0.10/$0.50) for high-volume routine tasks — cutting API prices about 50% versus GPT-5.6. They sit below flagship GPT-6 Astra and shipped the same day in the API, ChatGPT Work, and Codex.",
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna"
+    },
+    {
+      "image": "https://i.tribune.com.pk/media/images/anthropic-r1790105225-0/anthropic-r1790105225-0-640x480.webp",
+      "name": "Anthropic Claude Opus 5.5",
+      "summary": "Anthropic's new flagship launched Sept 22 at $4/$20 per million tokens — 20% cheaper and 30%+ faster than Opus 5, with performance comparable to the pricier Fable 5.1 plus new containment safeguards that cut boundary-escape attempts ~85%. Sonnet 5.5 and Haiku 5.5 are promised in the coming weeks.",
+      "url": "https://www.channelnewsasia.com/business/anthropic-unveils-claude-opus-55-6402976"
+    },
+    {
+      "image": "https://tokenstead.ai/og/guides/xing4-0-29b-ascend-open-agent-model.png",
+      "name": "China Telecom AI Xing4.0-29B-A4B",
+      "summary": "China Telecom AI's open-weight (Apache 2.0) agentic MoE — 29B total params, 4B active per token — runs on a single consumer GPU and was trained end-to-end on Huawei Ascend 910C NPUs with zero Nvidia hardware in the loop. It plans multi-step tasks, calls tools, and is available now on Hugging Face and GitHub.",
+      "url": "https://www.globenewswire.com/news-release/2026/09/22/3365958/0/en/china-telecom-ai-officially-releases-xing4-0-29b-agentic-large-model-for-single-gpu-deployment.html"
+    },
+    {
+      "image": "https://mixed-news.com/en/wp-content/uploads/2026/09/Xiaomi_MiMo.png",
+      "name": "Xiaomi MiMo-V2.6",
+      "summary": "Xiaomi open-sourced MiMo-V2.6 Pro (1.02T params, 42B active) and Flash under MIT license on Sept 21–22, with Pro topping the Artificial Analysis Intelligence Index for open-weights models at 46 — level with Grok 4.7. Xiaomi also published the full RL training stack, 7,000+ task environments, and the live-streamed training run's costs (~$2.62M for Pro).",
+      "url": "https://mixed-news.com/en/xiaomi-mimo-v2-6-pro-top-open-model-2-62m-rl-run/"
+    },
+    {
+      "image": "https://www.marktechpost.com/wp-content/uploads/2026/09/blog111-14.png",
+      "name": "xAI Grok 4.7",
+      "summary": "xAI's Sept 21 update ships a larger base model (~2.1T params) with a longer RL run aimed at multi-hour agentic tasks, at the same $2/$6 price and speed as Grok 4.6 — live in the Grok app, Cursor, Grok Build, and the API. Vendor benchmarks show Terminal-Bench 4.0 nearly doubling to 38.0%, though independent testers flag higher token burn.",
+      "url": "https://www.marktechpost.com/2026/09/21/spacexai-releases-grok-4-7/"
+    }
+  ]
+}

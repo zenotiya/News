@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-04",
+  "items": [
+    {
+      "image": "https://static.pib.gov.in/WriteReadData/userfiles/image/2026/nov/image001_20261103220404_c8db8d.jpg",
+      "name": "EKA-1",
+      "summary": "The IndiaAI Mission released EKA-1 on November 3, a 26.3-billion-parameter foundation model from Soket Labs trained on about 7.5 trillion tokens. It covers all 22 scheduled Indian languages plus English and is aimed at banking, financial services and cybersecurity work, including math, code, reasoning and agentic tasks.",
+      "url": "https://economictimes.indiatimes.com/ai/ai-insights/soket-labs-zenteiq-launch-indigenous-foundation-models-under-indiaai-mission/articleshow/135502992.cms"
+    },
+    {
+      "image": "https://static.pib.gov.in/WriteReadData/userfiles/image/2026/nov/image002_20261103220419_424123.jpg",
+      "name": "Dhīr 2B & Dhīr 5B",
+      "summary": "ZenteiQ's Dhīr 2B and Dhīr 5B were released alongside EKA-1 on November 3 as open-source multilingual assistants for English and 10 Indian languages. Their lightweight design targets secure on-premise and offline use, including on-device deployment, for defence, government, industrial and education settings with low connectivity.",
+      "url": "https://www.moneycontrol.com/artificial-intelligence/meity-releases-2-more-foundational-models-under-indiaai-mission-article-14068073.html/amp"
+    },
+    {
+      "image": "https://flower.ai/static/images/previews/1200x628/2026-11-03-introducing-endeavor-1.1.jpg",
+      "name": "Flower Labs Endeavor 1.1",
+      "summary": "Flower Labs released Endeavor 1.1 on November 3, a frontier model update adding image inputs and EU-based GPU inference, with private-cloud or on-premise deployment and inspectable reasoning traces. The company reports GPQA rising from 92.0 to 94.4 and HumanEval from 98.2 to 99.9 over version 1.0, though its headline composite equally weights only four benchmarks.",
+      "url": "https://flower.ai/blog/2026-11-03-introducing-endeavor-1.1"
+    },
+    {
+      "image": "https://www.eesel.ai/_next/image?url=https%3A%2F%2Fwmeojibgfvjvinftolho.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fblog-research%2Flongcat%2Fimages%2Flc25-changelog-20261102.png&w=1680&q=75",
+      "name": "Meituan LongCat-2.5",
+      "summary": "Meituan made LongCat-2.5 generally available on November 2, a 1.6-trillion-parameter multimodal model for long-horizon coding agents that accepts text, images and video with a 1-million-token context window. It is API-only for now, with open weights still listed as coming soon, at $0.30 per million input tokens and $1.20 per million output tokens.",
+      "url": "https://www.eesel.ai/blog/longcat-2-5"
+    },
+    {
+      "image": "https://www.i-scoop.eu/wp-content/uploads/2026/11/glm-legal-timeline.webp",
+      "name": "Z.ai GLM-5.3 FlashX Legal",
+      "summary": "Z.ai's legal variant GLM-5.3-FlashX-Legal surfaced on OpenRouter and Vercel's AI Gateway on November 2, bringing its GLM-Legal agent to API access at $0.37 per million input tokens and $1.25 per million output tokens. Built on the open GLM-5.3-Flash base, it reads contracts and case files and returns Word edits as tracked changes, but the legal weights themselves are closed and direct API access remains by application.",
+      "url": "https://www.i-scoop.eu/glm-5-3-flashx-legal/"
+    }
+  ]
+}

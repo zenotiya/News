@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-07",
+  "items": [
+    {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-omni-1.2_FZLql41.width-1300.png",
+      "name": "Google Gemini Omni 1.2 Flash",
+      "summary": "Google's fast video generation and editing model is now generally available, with native clips up to 15 seconds (up from 10), multi-turn conversational editing, and a 30% price cut to $0.07 per second for 720p. It rolls out across the Gemini API, Google Cloud, and Gemini for business.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+    },
+    {
+      "image": "https://www.unite.ai/wp-content/uploads/2026/11/salesforce-introduces-koa-decisions-with-image-and-audio-support.jpg",
+      "name": "Salesforce Koa Decisions",
+      "summary": "Salesforce's new decision model, built on Google's open-weight Gemma, reads a request plus user-defined categories and returns a choice, yes/no, or score in a single step — in milliseconds, without invoking a full LLM. It succeeds HyperClassifier in Agentforce routing and will expand into Flows, Apex, and developer APIs.",
+      "url": "https://www.salesforce.com/news/stories/koa-decisions-salesforce-decision-models/"
+    },
+    {
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/kakaocorp/kanana-2-v-decide-3b-2611.png",
+      "name": "Kakao Kanana-2-v-decide",
+      "summary": "Kakao open-sourced a 3.67B-parameter multimodal decision model that answers with probabilities, choices, or scores instead of generated text, so agents can classify requests and pick tools directly. It averages under 0.04 seconds per decision on a single Nvidia H200 — about 43x faster than GPT-6 Luna in Kakao's own comparison — under a license permitting commercial use.",
+      "url": "https://huggingface.co/kakaocorp/kanana-2-v-decide-3b-2611"
+    },
+    {
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/677c471f8b4c4e271e57eaa5/rtmGVvFdD6JqkjBc26vsp.png",
+      "name": "NVIDIA Cosmos 3 Nano",
+      "summary": "NVIDIA released four open-weight Cosmos 3 Nano checkpoints (16B trainable parameters each) for interactive world simulation: multi-view driving video with LiDAR, streaming simulation, simulator-to-photorealistic video, and bimanual robot prediction. All ship under the OpenMDW 1.1 license permitting commercial use.",
+      "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation"
+    },
+    {
+      "image": "https://flower.ai/static/images/previews/1200x628/2026-11-03-introducing-endeavor-1.1.jpg",
+      "name": "Flower Labs Endeavor 1.1",
+      "summary": "Flower Labs' third model of 2026 adds EU-region inference — all processing on GPUs physically inside the EU — plus native image understanding, scoring 94.4 on GPQA and 99.9 on HumanEval. It targets regulated European enterprises that need frontier capability with guaranteed data residency.",
+      "url": "https://flower.ai/blog/2026-11-03-introducing-endeavor-1.1"
+    }
+  ]
+}

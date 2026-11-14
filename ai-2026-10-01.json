@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-01",
+  "items": [
+    {
+      "image": "https://cdn.prod.website-files.com/659bb17701c673ca707a2ee4/6a5dcb5e734f0e053ecb84f1_Google-Gemini-Logo-p-3200.png",
+      "name": "Gemini 4 Argon",
+      "summary": "Google's new flagship AI model tops coding and automation benchmarks (77.9% on DeepSWE, first on AutomationBench) with an industry-leading 1M-token output limit, but Google is withholding it from public release — restricting access to a vetted group of cybersecurity experts while the US government gets early access.",
+      "url": "https://www.thehindu.com/sci-tech/technology/google-restricts-access-to-new-ai-model-over-safety-concerns/article71530282.ece"
+    },
+    {
+      "image": "https://1000marcas.net/wp-content/uploads/2024/07/OpenAI-Logo.png",
+      "name": "OpenAI UltraFast",
+      "summary": "New premium inference tier announced at DevDay that pushes token generation to 300 per second — 8x faster in Codex, 6x in the API — at 6x the standard price. Available now for GPT-6 Astra, with GPT-6.1 Sol support coming soon.",
+      "url": "https://www.thehindu.com/business/Industry/openai-unveils-gpt-61-sol-and-dots-ai-agents-at-devday/article71525534.ece"
+    },
+    {
+      "image": "https://www.pienomial.com/assets/seal.png",
+      "name": "Pienomial AT0M",
+      "summary": "New Delhi-based Pienomial launched AT0M, an enterprise-owned 'System One' decision model that never generates free text — it picks from developer-defined options, trains and runs entirely on-premises hardware, and beat TypeSafe's Jev on the typed-decisions benchmark (78.9% vs 74%).",
+      "url": "https://businessnewsforprofit.com/business/pienomial-launches-at0m-ai-model-that-businesses-can-own-and-run-on-their-hardware/"
+    },
+    {
+      "image": "https://1000marcas.net/wp-content/uploads/2024/07/OpenAI-Logo.png",
+      "name": "Codex Security Cloud",
+      "summary": "OpenAI's new DevDay product scans GitHub repositories for vulnerabilities, investigates findings, removes duplicates and prepares fixes — and can run on a schedule. It pairs with Codex Cloud, which keeps coding tasks running remotely while your laptop is closed.",
+      "url": "https://community.openai.com/t/devday-2026-announcements-and-developer-resources/1402006"
+    },
+    {
+      "image": "https://1000marcas.net/wp-content/uploads/2024/07/OpenAI-Logo.png",
+      "name": "OpenAI Agents API (public beta)",
+      "summary": "OpenAI put its Agents API into public beta at DevDay with hosted execution, memory, tools and multi-agent support — including computer-use agents that operate software through its UI, plus a Decisions API in limited preview built on GPT-6 Luna.",
+      "url": "https://community.openai.com/t/devday-2026-announcements-and-developer-resources/1402006"
+    }
+  ]
+}
