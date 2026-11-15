@@ -2,40 +2,40 @@
   "date": "2026-11-15",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 9.9,
+  "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-109803",
-      "cvss": 9.9,
-      "summary": "SAP NetWeaver Knowledge Management (XML Forms) does not sufficiently restrict the selection of XSL transformations, letting an authenticated user trigger an unauthorized transformation that can lead to arbitrary code execution in the application context.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109803",
-      "plain": "An authenticated user can run code via crafted document transformations. Patch to the fixed release now.",
-      "product": "SAP NetWeaver Knowledge Management (XML Forms)",
-      "versions": "KMC-CM 7.50"
+      "id": "CVE-2026-129353",
+      "cvss": 10.0,
+      "summary": "A stack-based buffer overflow in the DIR-600L's authentication.cgi lets a remote, unauthenticated attacker run arbitrary code by manipulating the id and password parameters; the exploit is now public. Affects firmware 2.17 / 2.17b02 — disconnect or replace affected routers, as no vendor fix is listed.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129353",
+      "plain": "D-Link DIR-600L routers let a remote attacker run code on the device without logging in; disconnect or replace affected routers.",
+      "product": "D-Link DIR-600L",
+      "versions": "2.17 · 2.17b02"
     },
     {
-      "id": "CVE-2026-109795",
-      "cvss": 9.9,
-      "summary": "SAP NetWeaver misses authorization checks and input validation in remote-enabled functionality, allowing a low-privileged attacker to inject and execute arbitrary code through a remote interface, with high impact on confidentiality, integrity and availability.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109795",
-      "plain": "A low-privileged attacker can inject and run code remotely. Update to the fixed release now.",
-      "product": "SAP S4CRM",
-      "versions": "S4CRM 204–206 · S4CEXT 107–109 · BBPCRM 713–714"
+      "id": "CVE-2026-129351",
+      "cvss": 10.0,
+      "summary": "An out-of-bounds write in the TEW-657BRM's mini_httpd setup.cgi can be triggered remotely without authentication, and the exploit has been disclosed publicly. TRENDnet says the router has been end-of-life for over 15 years, so no patch is expected — replace the device.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129351",
+      "plain": "TRENDnet TEW-657BRM routers let a remote attacker crash or take over the device; the model is long out of support, so replace it.",
+      "product": "TRENDnet TEW-657BRM",
+      "versions": "1.00.1"
     },
     {
-      "id": "CVE-2026-126261",
+      "id": "CVE-2026-126170",
       "cvss": 9.8,
-      "summary": "An improper authorization flaw in Fortinet FortiManager lets an unauthenticated attacker who can reach the FGFM port execute code or commands via crafted FGFM packets, before the registration password is verified. Fortinet filed the 9.8 base score with NVD.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126261",
-      "plain": "An unauthenticated attacker who can reach the FGFM port can run code. Patch to the fixed release now.",
-      "product": "Fortinet FortiManager",
-      "versions": "8.0.0 · 7.6.0–7.6.7 · 7.4.0–7.4.5 · 7.2.0–7.2.8"
+      "summary": "Improper output encoding in the JSON-RPC API of FortiManager and FortiAnalyzer lets an unauthenticated attacker execute unauthorized code via a specially crafted HTTP request. Fortinet's November patch batch fixes it — upgrade FortiManager and FortiAnalyzer 8.0.x and 7.6.x.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126170",
+      "plain": "FortiManager and FortiAnalyzer let an attacker without a login run commands on the system; apply Fortinet's November patches now.",
+      "product": "FortiManager / FortiAnalyzer",
+      "versions": "8.0.0–8.0.2 · 7.6.0–7.6.7"
     }
   ],
   "model": {
-    "name": "Gemini Decision 1",
-    "summary": "Google's new decision model scores up to 1,000 closed-set questions (yes/no, multiple-choice, rubric scoring) in a single forward pass instead of generating text, returning probabilities in 150-250 ms at $0.10 per million input tokens. Built for the judgement calls inside agents: tool selection, model routing, policy checks and context grading.",
-    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
-    "plain": "Google's new Gemini Decision 1 is a faster model for AI agent judgement calls — worth a look if clients are adopting agents."
+    "name": "Qwen4-Max Preview",
+    "summary": "Alibaba's Qwen team opened a two-week preview of Qwen4-Max, the first model of its next-generation Qwen4 family, on November 11 — a flagship multimodal model for coding, office work and complex agent tasks, available through the Token Plan subscription and Alibaba's own apps. The preview runs until November 25, when the model is retired, and no benchmarks or weights have been published yet.",
+    "url": "https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview",
+    "plain": "Alibaba's next flagship model is available to test for two weeks — useful for clients weighing Chinese frontier models for coding and agent work."
   }
 }

@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-15",
+  "items": [
+    {
+      "image": "https://img.alicdn.com/tfs/TB1xpNqnmslXu8jSZFuXXXg7FXa-1200-630.png_.webp",
+      "name": "Qwen4-Max Preview",
+      "plain": "Alibaba's next flagship model is available to test for two weeks — useful for clients weighing Chinese frontier models for coding and agent work.",
+      "summary": "Alibaba's Qwen team opened a two-week preview of Qwen4-Max, the first model of its next-generation Qwen4 family, on November 11 — a flagship multimodal model for coding, office work and complex agent tasks, available through the Token Plan subscription and Alibaba's own apps. The preview runs until November 25, when the model is retired, and no benchmarks or weights have been published yet.",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview"
+    },
+    {
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/MiniMaxAI/MiniMax-H3-Image.png",
+      "name": "MiniMax H3-Image",
+      "plain": "MiniMax's new image model makes print-quality 4K images in seconds — worth knowing for clients producing marketing visuals, with licensing limits to check first.",
+      "summary": "MiniMax released H3-Image on November 10, an open-weight image model that generates and edits native 4K (16-megapixel) images in about 10 seconds, handling text-to-image and edits from up to 16 reference images in a single checkpoint. Weights are on Hugging Face under a community licence that excludes the US, EU, UK and South Korea and requires permission above $1M revenue or for hosted services.",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
+    },
+    {
+      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/11/corl-corp-blog-promo-pack-1920x1080-1-1680x945.png",
+      "name": "NVIDIA GR00T 2",
+      "plain": "NVIDIA's new robot model learns physical tasks from watching people — relevant for clients in manufacturing and logistics exploring humanoid automation.",
+      "summary": "NVIDIA unveiled GR00T 2 at the Conference on Robot Learning on November 9, an open world-action model built on Cosmos that learns dexterous manipulation by watching human video — trained on 100,000 hours of first-person human footage. NVIDIA reports it completed 40 of 50 tasks with no demonstrations and 95% average success with five, with Foxconn, Siemens and Nexuni already testing it.",
+      "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/?ncid=so-link-353370-vt48"
+    },
+    {
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/moonshotai/Kimi-K3.1-Pro.png",
+      "name": "Kimi K3.1 Pro",
+      "plain": "Moonshot's flagship model is now freely downloadable for self-hosting — a strong open option for clients wanting long-document AI without a US vendor.",
+      "summary": "Moonshot AI published the full open weights of Kimi K3.1 Pro on Hugging Face on November 4, a 2.8-trillion-parameter mixture-of-experts model with native vision and a 1-million-token context window, aimed at long-running coding and document work. It is also live on Amazon Bedrock and Moonshot's own API, under a custom licence that requires a separate deal for large hosted services.",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+    },
+    {
+      "image": "https://flower.ai/static/images/previews/1200x628/2026-11-03-introducing-endeavor-1.1.jpg",
+      "name": "Flower Labs Endeavor 1.1",
+      "plain": "Flower's new frontier model runs inside the EU for clients with data-residency rules — a credible sovereign option for regulated European work.",
+      "summary": "Flower Labs launched Endeavor 1.1 on November 3, its third model of the year, adding native image input and EU-based inference alongside its global service — a direct answer to European clients who need frontier capability without cross-border data transfer. Access is by request, with managed, private-cloud or on-premises deployment.",
+      "url": "https://flower.ai/blog/2026-11-03-introducing-endeavor-1.1"
+    }
+  ]
+}
