@@ -1,34 +1,34 @@
 {
-  "date": "2026-11-14",
+  "date": "2026-11-15",
   "sections": [
     {
       "items": [
         {
-          "action": "Upgrade UnrealIRCd to 6.2.7.1 or apply the hot-patch; install the November Check Point Jumbo Hotfix (R82.20 Take 14, R82.10 Take 52, R82 Take 132 or R81.20 Take 174).",
-          "details": "UnrealIRCd developers called CVE-2026-114713 their most critical security problem in 15 years; exploitation had already been observed online before the KEV listing. The Check Point flaw is a local privilege escalation to root in the DynamicCLI process, exploited since late October.",
-          "image": "https://cyberdefensa.mx/wp-content/uploads/2026/07/cisa-joomla-900x425.jpg",
+          "action": "If your team uses Cursor, check for Claude Code extension versions 2.1.312/2.1.313 installed around October 29, update to 2.1.314 and follow Cursor's removal steps — uninstalling alone may not clear the SSH backdoor — and rotate any credentials shared with Cursor or AI coding tools.",
+          "details": "The tampered builds ran malicious code on load, collected system information and tried to install a persistent SSH backdoor. Cursor says fewer than 0.05% of users had coding-agent traces exposed and fewer than 0.01% had API credentials compromised; the last attacker activity was November 1 and inference traffic has moved off Fireworks. Anthropic's own systems and the Open VSX marketplace were not compromised.",
+          "image": "https://substackcdn.com/image/fetch/$s_!mjQ3!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51908c58-6aa3-4b39-8381-936d73ee98f6_2400x1352.png",
           "severity": "Critical",
-          "summary": "CISA added two actively exploited flaws to its Known Exploited Vulnerabilities catalog on Nov 13: Check Point Gaia privilege escalation CVE-2026-123039 (CVSS 7.8) and UnrealIRCd server command injection CVE-2026-114713 (CVSS 8.6). Federal agencies must remediate by Monday, Nov 16.",
-          "title": "CISA adds Check Point and UnrealIRCd flaws to KEV — patch by Nov 16",
-          "url": "https://carthageelectronics.com/november-13-2026-cve-threat-brief/"
+          "summary": "Cursor confirmed a breach that began with an access key exposed at AI infrastructure partner Fireworks AI, letting attackers steal customer data and publish trojanized copies of Anthropic's Claude Code extension (versions 2.1.312 and 2.1.313) to its marketplace on October 29. Up to 5,000 users may have received the malicious builds during the ~11 hours they were live.",
+          "title": "Cursor breach put a backdoored Claude Code extension on its marketplace",
+          "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/"
         },
         {
-          "action": "Apply the Nov 12 NetScaler ADC/Gateway and NetScaler Console updates.",
-          "details": "The flaws are memory-corruption issues; none is reported exploited yet. CVE-2026-120868 affects every NetScaler ADC/Gateway deployment.",
-          "image": "https://ccforrs.com/wp-content/uploads/2025/07/Citrix_NetScaler-Cropped-1024x576.jpg",
+          "action": "MSPs should confirm the five extensions are disabled, patch CVE-2026-84869, and hunt for rogue ScreenConnect clients and SCKit persistence using Microsoft's Defender XDR hunting queries.",
+          "details": "SCKit establishes persistence via scheduled tasks and registry Run entries and includes RelayTrap, a component that delivers a payload to a technician's workstation when they connect to an infected endpoint. ConnectWise disabled five third-party extensions (Labtech Plus, RMM Plus, RMM+, and two password-link variants) as a precaution; the initial-access route is still under investigation, and the fix for CVE-2026-84869 blocks the endpoint-to-technician spread.",
+          "image": "https://static.beebom.com/wp-content/uploads/2021/07/ConnectWise-screenconnect.png?w=640",
           "severity": "Critical",
-          "summary": "Citrix fixed 28 vulnerabilities in NetScaler ADC and Gateway on Nov 12, including nine rated critical — among them NetScaler Console CVE-2026-120869 (CVSS 9.4).",
-          "title": "Citrix patches 28 NetScaler flaws, nine critical",
-          "url": "https://cvetodo.com/threat-report/nz"
+          "summary": "Since November 11, attackers have abused cloud-hosted ConnectWise ScreenConnect panels belonging to managed service providers to push rogue remote-access clients and a worm, SCKit, onto managed endpoints — Huntress counted 286+ endpoints across 47 organisations in the first days.",
+          "title": "SCKit worm spreads through hijacked ScreenConnect panels at MSPs",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/11/13/sckit-abuses-screenconnect-deploy-remote-access-target-technician-sessions/"
         },
         {
-          "action": "Upgrade Apache HTTP Server, or disable HTTP/2 until patched.",
-          "details": "The flaw is a race condition leading to heap corruption; there is no workaround except disabling HTTP/2.",
-          "image": "https://blog.hostseo.com/wp-content/uploads/2019/07/Apache-http-server.png",
+          "action": "Retire any TEW-657BRM still in service. If it cannot be removed immediately, take it off any internet-facing path and segment it away from trusted networks.",
+          "details": "The flaw is in sprintf handling in /setup.cgi. The device has been end-of-life for over 15 years; TRENDnet says it cannot confirm the vulnerability but will issue a customer notice, and no fix is listed in the CVE record.",
+          "image": "https://content.etilize.com/RearMaximum/1064431731.jpg",
           "severity": "Critical",
-          "summary": "A critical flaw in Apache HTTP Server 2.4.55–2.4.70 with HTTP/2 enabled (CVE-2026-119618) allows remote code execution via heap corruption.",
-          "title": "Critical Apache HTTP/2 RCE — patch or disable HTTP/2",
-          "url": "https://www.shadesextensions.co.uk/daily-summary/2026-11-13"
+          "summary": "CVE-2026-129351 is a critical remote out-of-bounds write (CVSS 10.0) in the mini_httpd setup.cgi of the TRENDnet TEW-657BRM router (firmware 1.00.1), published November 14, with a public exploit.",
+          "title": "Critical CVSS 10.0 flaw in EOL TRENDnet router — retire it, don't patch it",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129351"
         }
       ],
       "title": "Act on Today"
@@ -36,28 +36,28 @@
     {
       "items": [
         {
-          "details": "The claim was tracked by Ransomware.live, discovered at 21:51 UTC on Nov 13. The compromised data is said to include internal records, financial documents, broker information, customer purchase details, invoices, passwords and 86GB of Outlook archives. Unverified claim.",
-          "image": "https://www.ithome.com.tw:443/sites/default/files/images/RedAlert-tor-payment-site.jpg",
+          "details": "Anyone emailed by the city's system between July 1 and October 31, 2026 is affected; only email addresses were exposed — no message contents, My Number details or application data. Arara's November 2 breach exposed roughly 77 million addresses across nearly 400 customers, including Sega, and attackers used the haul for phishing impersonating banks and card companies. The city warned its 2.8 million residents not to open links or attachments in suspicious emails claiming to come from the city.",
+          "image": "https://japanbloggen.johancarle.se/wp-content/uploads/2016/11/osaka-2.jpg",
           "severity": "High",
-          "summary": "The Panzer ransomware group claimed on Nov 13 to have compromised RE/MAX Germany and exfiltrated 610GB of data, including passwords and Outlook archives.",
-          "title": "Panzer claims RE/MAX Germany; says 610GB exfiltrated",
-          "url": "https://qpulse.quasarcybertech.com/news/8437/panzer-ransomware-group-claims-data-exfiltration-from-re-max-germany"
+          "summary": "The City of Osaka confirmed on November 13 that 1,078,713 email addresses linked to its online administrative services were exposed after attackers breached Arara, the email-delivery service used by its platform provider TKC Corporation.",
+          "title": "City of Osaka warns 1.08 million email addresses leaked via vendor breach",
+          "url": "https://www.alojapan.com/1565649/city-of-osaka-warns-of-data-breach-impacting-1-million-as-japan-reels-from-dozens-of-cyber-incidents/"
         },
         {
-          "details": "The listing appeared on Akira's leak site on Nov 13. The group says it will upload 37GB of corporate data, including employee personal information (passports, medical information, driving licences, dates of birth), contracts, customer data and financials. Unverified claim.",
-          "image": "https://www.itsec.ru/hs-fs/hubfs/ISR/0gvjbzzqe443t9v97nx8qny1h51dt3id.png?width=720&name=0gvjbzzqe443t9v97nx8qny1h51dt3id.png",
+          "details": "Exposed data may include full names, foreign identification numbers, dates of birth, mobile numbers, email addresses and residential addresses; about 43,000 records were for passes no longer valid. No health, medical or personal financial information was compromised. The breach was discovered October 31 and disclosed November 9; the Ministry of Manpower is notifying affected workers via its FWMOMCare app.",
+          "image": "https://platform.dkv.global/files/companies/fullerton-health.png",
           "severity": "High",
-          "summary": "Akira listed Silicon Valley mechanical contractor Paragon Mechanical on its leak site on Nov 13, claiming 37GB of corporate data including employee PII.",
-          "title": "Akira lists Paragon Mechanical, claims 37GB of data",
-          "url": "https://www.hookphish.com/blog/ransomware-group-akira-hits-paragon-mechanical/"
+          "summary": "About 140,000 work pass holder records were compromised in the breach of a standalone server supporting Fullerton Health's Migrant Worker Primary Care Plan programme in Singapore, the provider confirmed on November 14.",
+          "title": "Fullerton Health breach exposed records of ~140,000 migrant workers",
+          "url": "https://www.channelnewsasia.com/singapore/fullerton-health-cybersecurity-data-incident-work-pass-holder-records-6551586"
         },
         {
-          "details": "The listing appeared on Akira's leak site on Nov 13. The group says it will upload 404GB of corporate data, including employee personal information (passports, driving licences and other HR files), contracts, customer data, financials and NDAs. Unverified claim.",
-          "image": "https://www.itsec.ru/hs-fs/hubfs/ISR/0gvjbzzqe443t9v97nx8qny1h51dt3id.png?width=720&name=0gvjbzzqe443t9v97nx8qny1h51dt3id.png",
-          "severity": "High",
-          "summary": "Akira also listed US globe manufacturer Replogle Globes on Nov 13, claiming 404GB of corporate data including employee PII and customer records.",
-          "title": "Akira lists Replogle Globes, claims 404GB of data",
-          "url": "https://www.hookphish.com/blog/ransomware-group-akira-hits-replogle-globes/"
+          "details": "The post claims 121,198 shopper chat sessions, 168,201 shopper messages and 353,850 AI search-cache passages, plus an employee directory with 176 names and email addresses. It does not claim systems were encrypted and states no ransom amount.",
+          "image": "https://www.descartes.com/sites/default/files/media/images/2025-07/VF%20Corp%20Logo.png",
+          "severity": "Medium",
+          "summary": "Ransomware group N0N listed apparel group VF Corporation on its leak site on November 14, claiming exposure of shopper chat and message data across 11 brand storefronts. The claim is unverified.",
+          "title": "Ransomware group N0N lists VF Corporation (unverified claim)",
+          "url": "https://www.redpacketsecurity.com/n0n-ransomware-victim-vf-corporation/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -65,27 +65,34 @@
     {
       "items": [
         {
-          "action": "Treat any SBI-related loan or account data as potentially circulating; watch for targeted phishing and fraudulent loan applications using KYC documents.",
-          "details": "The FIR was registered at the CBD-Belapur police station on Nov 12 on a complaint from SBI official Bhavesh Nikam. The data is believed to contain customers' PII such as phone numbers and residential addresses, plus loan-application and account-opening paperwork. Police say the bank removed the stolen data from the dark web and that it was not misused; the case is booked under BNS sections and the IT Act.",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/State_Bank_of_India.svg/3840px-State_Bank_of_India.svg.png",
-          "severity": "Critical",
-          "summary": "SBI has filed a police complaint after hackers operating as 'Siriusim' allegedly accessed its Global IT Centre in Navi Mumbai between Oct 10–15 and stole about 3.75 lakh customer records, later spotted on the dark web.",
-          "title": "SBI files FIR as 3.75 lakh records surface on dark web",
-          "url": "https://www.pratidintime.com/national/sbi-data-breach-customer-records-dark-web-12808057"
+          "details": "Attackers appended a '.vgb' extension to files; a ransom note containing an email address was found on the server, though no monetary demand was made. Services have been restored from backups and forensic teams are checking whether sensitive data was exfiltrated. A case has been registered under IT Act sections 43 and 66 following a complaint by the Industries Department.",
+          "image": "https://sarkariyojana.com/wp-content/uploads/2025/02/telangana-meeseva-portal.jpg",
+          "severity": "High",
+          "summary": "The Telangana Cyber Security Bureau is investigating a suspected ransomware attack on the TG-iPASS industrial clearances portal, allegedly by hackers operating from Turkey, which encrypted its database on October 22.",
+          "title": "Telangana cyber bureau probes ransomware attack on TG-iPASS portal",
+          "url": "https://telanganatoday.com/telangana-cyber-bureau-probes-ransomware-attack-on-tg-ipass-website"
         },
         {
-          "action": "NBFCs and fintechs should lock down payout and disbursement APIs, isolate test/staging environments, rotate shared credentials and monitor for small test transfers.",
-          "details": "Three Telangana-based lenders reported 304 fraudulent transactions between Oct 19 and Nov 6; Hyderabad-based VIVIFI detected 183 fraudulent transactions worth ₹3.34 crore within 88 minutes on Oct 19. Similar attacks were reported in Karnataka, Maharashtra, Delhi, Chandigarh, Tamil Nadu and Puducherry. CERT-In's Nov 4 advisory (CIAD-2026-0058) flagged the AI-assisted 'Crafty Falcon' campaign exploiting exposed test systems, shared credentials and payment APIs.",
-          "image": "https://thecsrjournal.in/wp-content/uploads/2026/03/RBI-696x392.jpg",
+          "action": "Unocoin customers should watch for targeted phishing using the potentially exposed details and rotate passwords; Unocoin will never ask for passwords, OTPs, private keys or recovery phrases.",
+          "details": "Compromised backup signing keys under Unocoin's custody — generated about eight years ago and printed on paper — were used to authorise unauthorised transfers; BitGo's own signing key was not involved. Potentially exposed data includes registered email addresses, residential addresses, encrypted passwords, KYC-related information and account balances; Unocoin says it found no evidence KYC documents were accessed, and will absorb the loss from its own resources.",
+          "image": "https://cdn-images-1.medium.com/max/800/1*v5ZMxwFdknepUpfe9KDf_w.jpeg",
           "severity": "High",
-          "summary": "AI-assisted cyberattacks on India's smaller NBFCs have siphoned off nearly ₹300 crore in two months, with hackers turning payout APIs into theft routes — starting with ₹1 test transfers before draining accounts.",
-          "title": "NBFC payout-API raids cost nearly ₹300 crore in two months",
-          "url": "https://timesofindia.indiatimes.com/city/hyderabad/inside-the-international-cyber-raids-on-indias-nbfcs-hackers-turn-nbfc-payout-apis-into-theft-routes/articleshow/135814055.cms"
+          "summary": "Indian crypto exchange Unocoin confirmed on November 14 that attackers stole approximately $200,000 in cryptocurrency from three compromised hot wallets and that customer data may have been exposed — reversing earlier assurances that no funds were lost.",
+          "title": "Unocoin admits ~$200,000 crypto loss and possible customer data exposure",
+          "url": "https://blog.unocoin.com/security-incident-update/"
+        },
+        {
+          "details": "The DPDP Act treats qualifying loss of access as a breach, and Rule 7 sets no minimum-size threshold: affected individuals and the Data Protection Board must be notified without delay, with a detailed report within 72 hours. Penalties reach ₹250 crore for safeguard failures and ₹200 crore for notification failures. Consent Manager registration opened November 13, 2026; the main enterprise obligations begin May 13, 2027.",
+          "image": "https://accuknox.com/wp-content/uploads/DPDP-Act-compliance-768x480.webp",
+          "severity": "Medium",
+          "summary": "K7 CyberSecurity warns that under India's DPDP framework, a ransomware attack that only makes personal data inaccessible — with nothing stolen — can still count as a reportable personal data breach.",
+          "title": "Ransomware that only locks data may still trigger DPDP breach reporting",
+          "url": "https://www.freepressjournal.in/business/indias-dpdp-rules-put-ransomware-attacks-under-the-scanner-k7-cybersecurity-flags-hidden-compliance-risks-for-businesses"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Saturday, November 14 — Here's what's worth your attention today.",
+  "subtitle": "Sunday, November 15 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }

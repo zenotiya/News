@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-14",
-  "count": 44,
+  "updated": "2026-11-15",
+  "count": 45,
   "items": [
+    {
+      "date": "2026-11-15",
+      "topic": "Network security & pivoting",
+      "title": "Hyperglass",
+      "what": "unauthenticated RCE in the looking-glass front end ISPs and hosting providers expose to the internet — a single unescaped format call plus a wildcard validator lets an unauthenticated query reach the shell underneath (Netmiko → router CLI). Researcher sweep (oss-security, 10 Nov 2026; issue #383 open since July, 3-line fix): 388 live hyperglass instances found via PeeringDB/Shodan, 36 hosts with command execution across 20 ASNs, 11 root or root-equivalent — including a Proxmox node with 42 guests + Ceph admin + backups, and a core route reflector with 27 iBGP peers / 2.04M routes. Impact is routing-plane control: inject/withdraw/blackhole routes, reset BGP sessions, poison route-reflector state that propagates over iBGP — the same primitive as the Aug 2026 Softaculous BGP hijack, but with the keys to the router instead of a forged announcement.",
+      "takeaway": "in any ISP/hosting/cloud assessment, enumerate the client's looking-glass and network-utility front ends (hyperglass, LG, bgp.tools-style portals) as internet-facing RCE surface — they sit outside the usual web-app scope, run as service accounts with router access, and are rarely patched; check for unauthenticated query endpoints and whether the backend user can write routing state, not just read it"
+    },
     {
       "date": "2026-11-14",
       "topic": "DFIR",
