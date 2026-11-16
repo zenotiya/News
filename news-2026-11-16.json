@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-16",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Patch Outlook first despite its Moderate rating — the fix ships via Office updates, not the Windows cumulative update, so Windows patching alone does not close it. Then prioritize the Windows Search and LDAP RCEs.",
+          "details": "CISA added CVE-2026-124194 to its Known Exploited Vulnerabilities catalog on November 10, with a federal remediation deadline of November 24. The release also includes zero-click critical RCEs in Windows Search (CVE-2026-116928) and Windows LDAP (CVE-2026-119958), both CVSS 9.8, plus 30 flaws ZDI flags as potentially wormable. Adobe patched 110 CVEs in the same cycle, including a CVSS 10.0 in Adobe Connect.",
+          "image": "https://snsproglobal.com/wp-content/uploads/2026/01/ms.jpg",
+          "severity": "Critical",
+          "summary": "Microsoft's November 2026 Patch Tuesday fixes 1,094 vulnerabilities, 63 of them Critical. The one confirmed actively exploited flaw is Outlook spoofing bug CVE-2026-124194 (CVSS 6.5): opening a crafted message file makes Outlook connect to an attacker-controlled location without the usual external-content warning, leaking the user's NTLMv2 hash.",
+          "title": "Microsoft's November Patch Tuesday fixes 1,094 flaws, including an exploited Outlook zero-day",
+          "url": "https://stepphase.com/tech-news/patch-tuesday-november-2026/"
+        },
+        {
+          "action": "Upgrade Vigor2960 devices to firmware 1.5.1.7 immediately and check logs for suspicious requests to /cgi-bin/mainfunction.cgi.",
+          "details": "The exploit has been publicly disclosed. Upgrading to version 1.5.1.7 addresses the issue. The vulnerability is not currently listed in CISA's Known Exploited Vulnerabilities catalog.",
+          "image": "https://m.media-amazon.com/images/I/61MmVz4IwKL.jpg",
+          "severity": "Critical",
+          "summary": "A command injection vulnerability in DrayTek Vigor2960 routers up to version 1.5.1.6, tracked as CVE-2026-129449 and scored CVSS 9.9, was publicly disclosed on November 15. The flaw in the mainfunction.cgi handler lets a remote attacker inject commands via the swmconfigupload argument.",
+          "title": "DrayTek Vigor2960 command injection (CVE-2026-129449, CVSS 9.9) disclosed",
+          "url": "https://www.thehackerwire.com/vulnerability/CVE-2026-129449/"
+        },
+        {
+          "action": "Apply the Check Point advisory fix (SK1000362) and audit local socket permissions on Gaia-based appliances.",
+          "details": "Any local process can connect to the daemon's socket and gain root-level access. Vendor advisory SK1000362 carries the mitigation; affected products include Check Point Firewall, Security Gateway, and Multi-Domain Security Management Server.",
+          "image": "https://www.checkpoint.com/wp-content/uploads/ddos-protector-tab-image.png",
+          "severity": "High",
+          "summary": "CISA added CVE-2026-123039 to its Known Exploited Vulnerabilities catalog on November 13. The local privilege-escalation flaw affects Check Point firewalls and security gateways: the Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket without authenticating connecting processes.",
+          "title": "Check Point Gaia flaw (CVE-2026-123039) added to CISA's exploited-vulnerabilities catalog",
+          "url": "https://alanvo.net/journal/cve-2026-123039-aws-azure-gcp-remediation"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "Alo Yoga customers should watch for targeted phishing using their order details; retailers should treat N0n's leak-site listings as an active extortion wave.",
+          "details": "The group first listed the victim anonymously as 'Company #147' on November 7, the estimated attack date. N0n has also recently listed Starbucks, Timberland, Gap Inc., and Samsung Electronics as victims.",
+          "image": "https://media.betanews.com/uploads/2025/02/Ransomware-dark-web-640x360.jpg",
+          "severity": "High",
+          "summary": "The ransomware group N0n published data belonging to retailer Alo Yoga on November 14. The leak includes 209,051 distinct customer email addresses captured from order and returns links, along with associated order numbers. The data is marked '[NOT PAID — EXPOSED]' on the group's leak site.",
+          "title": "Ransomware group N0n exposes Alo Yoga customer data — 209,051 emails leaked",
+          "url": "https://qpulse.quasarcybertech.com/news/8455/ransomware-group-n0n-exposes-data-from-alo-yoga"
+        },
+        {
+          "action": "Starbucks customers should be alert for phishing and fraud using purchase-history details; the exposure shows N0n is systematically leaking retail consumer data.",
+          "details": "The victim was initially listed anonymously as 'Company #147' on November 7, the estimated attack date. The data is marked '[NOT PAID — EXPOSED]', indicating the group proceeded to leak after no payment.",
+          "image": "https://www.cheapism.com/wp-content/uploads/2025/05/Starbucks_mQ1xIG6.original-1626x1084.png",
+          "severity": "High",
+          "summary": "On November 14, the ransomware group N0n published Starbucks Group as a victim on its leak site. The exposed data reportedly includes customer records containing device information, purchase history, and location data.",
+          "title": "N0n ransomware group exposes Starbucks consumer data",
+          "url": "https://qpulse.quasarcybertech.com/news/8452/starbucks-group-consumer-data-exposed-by-n0n-ransomware-group"
+        },
+        {
+          "action": "Treat PixelLeaks as an active multi-victim extortion campaign — the group listed at least five victims on November 15 alone; monitor its leak site for the publication deadline.",
+          "details": "The threatened material includes personnel records for 725 employees with national identity numbers, names, dates of birth, phone numbers and addresses, plus over 200,000 attendance records and 100,000 WeChat check-in records.",
+          "image": "https://techwey.com/wp-content/uploads/2025/10/techwey-2025-10-30T164009.746-768x512.png",
+          "severity": "High",
+          "summary": "On November 15, the ransomware group PixelLeaks claimed a cyberattack against Jiangsu Hengsheng Information Technology (hensun.com) in China, threatening to publish a copy of the company's workforce management system unless demands are met.",
+          "title": "PixelLeaks threatens to leak workforce data of 725 employees at Jiangsu Hengsheng",
+          "url": "https://www.dexpose.io/pixelleaks-targets-jiangsu-hengsheng-information-technology/"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "Treat any SBI-related loan or account data as potentially circulating; watch for targeted phishing and fraudulent loan applications using KYC documents.",
+          "details": "The FIR names unidentified individuals linked to hacker group 'Siriusim'. The stolen data included 32 CSV files, JSON files, and 2,721 PDFs containing personal details, loan applications, account-opening forms, contact numbers and residential addresses. SBI says its core banking operations remain unaffected and it is cooperating with law enforcement.",
+          "image": "https://staticprintenglish.theprint.in/wp-content/uploads/2021/06/SBI-scaled.jpg",
+          "severity": "Critical",
+          "summary": "State Bank of India has filed a police complaint after hackers stole over 375,000 customer records and 4,280 customer records' worth of data between October 10 and 15 at the bank's Global IT Centre in CBD-Belapur, Navi Mumbai. SBI lodged the complaint on November 12 and an FIR has been registered.",
+          "title": "SBI files police complaint over 3.75 lakh customer records stolen in October breach",
+          "url": "https://www.newsbytesapp.com/news/science/sbi-hit-by-data-breach-hackers-steal-375-000-bank-records/story"
+        },
+        {
+          "action": "Indian healthcare and biopharma firms should check exposure to PixelLeaks' extortion wave and monitor for the November 19 publication deadline.",
+          "details": "The claim was indexed by the Ransomware.live tracker and remains unverified — no technical details on initial access have been disclosed, and the leak post contains no screenshots. This is one of at least five PixelLeaks victim listings on November 15.",
+          "image": "https://blog.rbuchd.in/wp-content/uploads/2026/06/Pharma-Lab-1024x683.jpg",
+          "severity": "High",
+          "summary": "On November 15, the newly emerged ransomware group PixelLeaks listed PlasmaGen Biosciences Pvt Ltd (plasmagen.co.in), an Indian plasma protein therapeutics company, as a victim. The group claims business records including personnel, financial, client, and intellectual property material, with a publication deadline of November 19, 2026.",
+          "title": "PixelLeaks claims PlasmaGen Biosciences, threatens to publish pharma records by Nov 19",
+          "url": "https://qpulse.quasarcybertech.com/news/8497/pixelleaks-ransomware-group-claims-compromise-of-plasmagen-biosciences-pvt-ltd"
+        },
+        {
+          "action": "Treat as an unverified claim for now; watch for confirmation from Godrej & Boyce or further leak-site evidence before assessing impact.",
+          "details": "The listing is an unverified threat-actor claim: no confirmed intrusion, exfiltration, or stolen data has been independently established, and the company has not disclosed the incident. PixelLeaks also listed US-based Orion Communications Inc on November 15.",
+          "image": "https://ravivardelhi.com/wp-content/uploads/2025/11/godrej-2-780x446.jpg",
+          "severity": "High",
+          "summary": "Threat intelligence posts published November 15–16 report that the ransomware and data-extortion group PixelLeaks listed India's Godrej & Boyce Mfg Co Ltd as an alleged victim, referencing its Vikhroli campus systems in Mumbai.",
+          "title": "PixelLeaks lists Godrej & Boyce as alleged ransomware victim (unverified)",
+          "url": "https://undercodenews.com/pixelleaks-claims-two-new-victims-in-india-and-the-united-states-including-godrej-boyce-and-orion-communications-video/"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Monday, November 16 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}
