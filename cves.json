@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-15",
+  "date": "2026-11-16",
   "items": [
     {
       "cvss": 10.0,
-      "id": "CVE-2026-129353",
-      "plain": "D-Link DIR-600L routers let a remote attacker run code on the device without logging in; disconnect or replace affected routers.",
-      "product": "D-Link DIR-600L",
+      "id": "CVE-2026-118383",
+      "plain": "MongoDB Server lets anyone on the network crash database servers during a failover, and possibly run code; upgrade every replica set member now.",
+      "product": "MongoDB Server",
       "severity": "Critical",
-      "summary": "A stack-based buffer overflow in the DIR-600L's authentication.cgi lets a remote, unauthenticated attacker run arbitrary code by manipulating the id and password parameters; the exploit is now public. Affects firmware 2.17 / 2.17b02 — disconnect or replace affected routers, as no vendor fix is listed.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129353",
-      "versions": "2.17 · 2.17b02"
+      "summary": "A use-after-free in MongoDB Server's replication code can be triggered by unauthenticated requests when a newly elected replica set primary completes catch-up, crashing the server or possibly running code in the server process. Fixed releases are out for all supported branches — upgrade every replica set member to 9.0.7, 8.3.16, 8.0.37, 7.0.48, 6.0.30, 5.0.35 or 4.4.32.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118383",
+      "versions": "4.4.0–4.4.31 · 5.0.0–5.0.34 · 6.0.0–6.0.29 · 7.0.0–7.0.47 · 8.0.0–8.0.36 · 8.3.0–8.3.15 · 9.0.0–9.0.6"
     },
     {
-      "cvss": 10.0,
-      "id": "CVE-2026-129351",
-      "plain": "TRENDnet TEW-657BRM routers let a remote attacker crash or take over the device; the model is long out of support, so replace it.",
-      "product": "TRENDnet TEW-657BRM",
-      "severity": "Critical",
-      "summary": "An out-of-bounds write in the TEW-657BRM's mini_httpd setup.cgi can be triggered remotely without authentication, and the exploit has been disclosed publicly. TRENDnet says the router has been end-of-life for over 15 years, so no patch is expected — replace the device.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129351",
-      "versions": "1.00.1"
-    },
-    {
-      "cvss": 9.8,
-      "id": "CVE-2026-126170",
-      "plain": "FortiManager and FortiAnalyzer let an attacker without a login run commands on the system; apply Fortinet's November patches now.",
-      "product": "FortiManager / FortiAnalyzer",
-      "severity": "Critical",
-      "summary": "Improper output encoding in the JSON-RPC API of FortiManager and FortiAnalyzer lets an unauthenticated attacker execute unauthorized code via a specially crafted HTTP request. Fortinet's November patch batch fixes it — upgrade FortiManager and FortiAnalyzer 8.0.x and 7.6.x.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126170",
-      "versions": "8.0.0–8.0.2 · 7.6.0–7.6.7"
-    },
-    {
-      "cvss": 9.8,
-      "id": "CVE-2026-123710",
-      "plain": "Red Hat Quay lets an attacker without a login forge access to private container images; upgrade Quay to a fixed release.",
+      "cvss": 9.9,
+      "id": "CVE-2026-110697",
+      "plain": "Red Hat Quay lets an attacker who creates a specially named account read other customers' private container login tokens; upgrade Quay now.",
       "product": "Red Hat Quay",
       "severity": "Critical",
-      "summary": "An unauthenticated attacker can obtain an anonymous registry token, present it to Quay's service-key rotation endpoint, and install their own signing key with no expiry — then read and write any private repository and replace tags. Red Hat has released fixed Quay versions for all affected branches.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123710",
-      "versions": "3.9.0–3.9.27 · 3.10.0–3.10.27 · 3.12.0–3.12.23 · 3.14.0–3.14.9 · 3.15.0–3.15.8 · 3.16.0–3.16.6 · 3.17.0–3.17.6 · 3.18.0–3.18.2"
+      "summary": "Quay builds a database search pattern from user-controlled namespace names without escaping wildcard characters, so an attacker who creates a namespace containing an underscore can match and retrieve other tenants' robot accounts and their decrypted authentication tokens. Red Hat has released fixed Quay versions — upgrade to a patched release.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110697",
+      "versions": "3.9 · 3.10 · 3.12 · 3.14–3.18"
     },
     {
-      "cvss": 9.0,
-      "id": "CVE-2026-114146",
-      "plain": "ASP.NET Core lets a logged-in attacker send messages as another user inside SignalR apps; update .NET to the patched release.",
-      "product": "ASP.NET Core",
+      "cvss": 9.6,
+      "id": "CVE-2026-126872",
+      "plain": "Google Chrome lets a malicious web page break out of the browser's safety sandbox and run code on your computer; update Chrome now.",
+      "product": "Google Chrome",
       "severity": "Critical",
-      "summary": "SignalR connections in ASP.NET Core are not consistently bound to the identity negotiated at connection setup, so an authorized attacker can inject messages that execute Hub invocations as the victim. Microsoft's November .NET update fixes it — upgrade to 8.0.34, 9.0.23, 10.0.15 or 11.0.0.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114146",
-      "versions": "8.0.0–8.0.33 · 9.0.0–9.0.22 · 10.0.0–10.0.14 · 11.0.0-rc.3"
+      "summary": "Incorrect authorization in Chrome's FileSystem lets a remote attacker who tricks a user into visiting a crafted page run code outside the browser sandbox. Google fixed it in Chrome 157.0.8103.78 — update Chrome now.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126872",
+      "versions": "before 157.0.8103.78"
+    },
+    {
+      "cvss": 9.6,
+      "id": "CVE-2026-126254",
+      "plain": "FortiOS lets a connected network peer send crafted routing data that corrupts routers across the network; apply Fortinet's November patches now.",
+      "product": "FortiOS",
+      "severity": "Critical",
+      "summary": "A numeric truncation error in FortiOS BGP lets a configured iBGP neighbor send malformed attributes that propagate to all connected routers, tampering with routing data. Fortinet's November advisory lists fixed releases — upgrade FortiOS 7.2, 7.4, 7.6 and 8.0.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126254",
+      "versions": "8.0.0–8.0.1 · 7.6.0–7.6.7 · 7.4.0–7.4.12 · 7.2.0–7.2.13"
+    },
+    {
+      "cvss": 9.3,
+      "id": "CVE-2026-126253",
+      "plain": "FortiOS lets an attacker without a login inject false routing messages into the network; apply Fortinet's November patches now.",
+      "product": "FortiOS",
+      "severity": "Critical",
+      "summary": "An authentication bypass in the FortiOS OSPF daemon lets an unauthenticated attacker broadcast crafted link-state advertisements, injecting false routing information. Fortinet's November advisory lists fixed releases — upgrade FortiOS 7.2, 7.4, 7.6 and 8.0.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126253",
+      "versions": "8.0.0–8.0.1 · 7.6.0–7.6.7 · 7.4.0–7.4.12 · 7.2.0–7.2.13"
     }
   ]
 }
