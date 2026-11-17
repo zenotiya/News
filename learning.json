@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-16",
-  "count": 46,
+  "updated": "2026-11-17",
+  "count": 47,
   "items": [
+    {
+      "date": "2026-11-17",
+      "topic": "Bug bounty techniques",
+      "title": "Subdomain takeover in the cloud era",
+      "what": "dangling CNAMEs pointing at deprovisioned cloud resources are still paying bounties in 2026 because orgs spin cloud assets up and down faster than DNS hygiene follows — the claimable services are the ones that let anyone register a custom domain and verify by DNS (S3 website endpoints, Azure Front Door/App Service, GitHub Pages, Heroku, Shopify, Vercel/Netlify, Fastly); the newer variant is cloud-IP takeover — a dangling A record to a deallocated cloud IP that an attacker re-allocates (\"cloud squatting\"), no CNAME needed; detection is a pipeline, not a one-off: continuous subdomain enumeration (crt.sh, Chaos, amass) → resolve CNAME/A → fingerprint the response (service 404 pages, NXDOMAIN, \"no such app\" strings) → attempt a claim in a lab account to prove it; Nuclei's takeover templates + DNSReaper automate the fingerprint step;",
+      "takeaway": "in every recon engagement run the takeover fingerprint across the full subdomain set and treat every dangling record as a finding even when the service can't be claimed today — claim policies change, and a CNAME that is unclaimable this month can be claimable after a provider-side policy change; the cheap win is a weekly scheduled job doing exactly this against client domains"
+    },
     {
       "date": "2026-11-16",
       "topic": "AI/ML security",

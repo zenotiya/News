@@ -1,34 +1,32 @@
 {
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "sections": [
     {
       "items": [
         {
-          "action": "Patch Outlook first despite its Moderate rating — the fix ships via Office updates, not the Windows cumulative update, so Windows patching alone does not close it. Then prioritize the Windows Search and LDAP RCEs.",
-          "details": "CISA added CVE-2026-124194 to its Known Exploited Vulnerabilities catalog on November 10, with a federal remediation deadline of November 24. The release also includes zero-click critical RCEs in Windows Search (CVE-2026-116928) and Windows LDAP (CVE-2026-119958), both CVSS 9.8, plus 30 flaws ZDI flags as potentially wormable. Adobe patched 110 CVEs in the same cycle, including a CVSS 10.0 in Adobe Connect.",
-          "image": "https://snsproglobal.com/wp-content/uploads/2026/01/ms.jpg",
+          "action": "Move to a fix pack newer than the last affected pack for your release (R2023x FP.CFA.2613, R2024x FP.CFA.2632, R2025x FP.CFA.2637, R2026x FP.CFA.2635); restrict network access to the Station Launcher App in the meantime.",
+          "details": "CVE-2026-93664 is deserialization of untrusted data (CWE-502) affecting 3DEXPERIENCE R2023x through R2026x. Two companion OS command injection flaws, CVE-2026-77033 and CVE-2026-19732, score 9.9 each but need a low-privileged account first. No exploitation or public proof-of-concept has been confirmed.",
+          "image": "https://securityonline.info/wp-content/uploads/2026/11/dassault-syst-mes-75370-1024x576.webp",
           "severity": "Critical",
-          "summary": "Microsoft's November 2026 Patch Tuesday fixes 1,094 vulnerabilities, 63 of them Critical. The one confirmed actively exploited flaw is Outlook spoofing bug CVE-2026-124194 (CVSS 6.5): opening a crafted message file makes Outlook connect to an attacker-controlled location without the usual external-content warning, leaking the user's NTLMv2 hash.",
-          "title": "Microsoft's November Patch Tuesday fixes 1,094 flaws, including an exploited Outlook zero-day",
-          "url": "https://stepphase.com/tech-news/patch-tuesday-november-2026/"
+          "summary": "Dassault Systèmes disclosed three critical flaws in the Station Launcher App of its 3DEXPERIENCE platform on November 16, the worst (CVE-2026-93664) an unauthenticated remote code execution bug scoring a maximum CVSS 10.0.",
+          "title": "Dassault 3DEXPERIENCE flaw scores a perfect CVSS 10.0 — unauthenticated RCE",
+          "url": "https://securityonline.info/3dexperience-vulnerability-cve-2026-93664/"
         },
         {
-          "action": "Upgrade Vigor2960 devices to firmware 1.5.1.7 immediately and check logs for suspicious requests to /cgi-bin/mainfunction.cgi.",
-          "details": "The exploit has been publicly disclosed. Upgrading to version 1.5.1.7 addresses the issue. The vulnerability is not currently listed in CISA's Known Exploited Vulnerabilities catalog.",
-          "image": "https://m.media-amazon.com/images/I/61MmVz4IwKL.jpg",
-          "severity": "Critical",
-          "summary": "A command injection vulnerability in DrayTek Vigor2960 routers up to version 1.5.1.6, tracked as CVE-2026-129449 and scored CVSS 9.9, was publicly disclosed on November 15. The flaw in the mainfunction.cgi handler lets a remote attacker inject commands via the swmconfigupload argument.",
-          "title": "DrayTek Vigor2960 command injection (CVE-2026-129449, CVSS 9.9) disclosed",
-          "url": "https://www.thehackerwire.com/vulnerability/CVE-2026-129449/"
-        },
-        {
-          "action": "Apply the Check Point advisory fix (SK1000362) and audit local socket permissions on Gaia-based appliances.",
-          "details": "Any local process can connect to the daemon's socket and gain root-level access. Vendor advisory SK1000362 carries the mitigation; affected products include Check Point Firewall, Security Gateway, and Multi-Domain Security Management Server.",
-          "image": "https://www.checkpoint.com/wp-content/uploads/ddos-protector-tab-image.png",
+          "action": "Watch for your distribution's kernel security update fixing CVE-2026-99288 and apply it as soon as it lands; monitor exposed Linux servers for unexpected crashes in the meantime.",
+          "details": "Red Hat assigned the flaw a CVSS score of 7.5. The vulnerability is in the kernel's TCP handling; details were published via The Register on November 16.",
           "severity": "High",
-          "summary": "CISA added CVE-2026-123039 to its Known Exploited Vulnerabilities catalog on November 13. The local privilege-escalation flaw affects Check Point firewalls and security gateways: the Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket without authenticating connecting processes.",
-          "title": "Check Point Gaia flaw (CVE-2026-123039) added to CISA's exploited-vulnerabilities catalog",
-          "url": "https://alanvo.net/journal/cve-2026-123039-aws-azure-gcp-remediation"
+          "summary": "A critical Linux kernel vulnerability dubbed NoisyTCP (CVE-2026-99288), discovered by researcher Hyunwoo Kim, allows remote attackers to crash servers without authentication and affects nearly all Linux distributions.",
+          "title": "NoisyTCP: critical Linux kernel flaw lets remote attackers crash servers unauthenticated",
+          "url": "https://www.scworld.com/brief/security-researcher-identifies-critical-noisytcp-vulnerability-in-linux-kernel"
+        },
+        {
+          "action": "If you run Batflat, take it offline or migrate — there will be no fix. At minimum, block or restrict access to the /contact endpoint and audit the host for compromise.",
+          "details": "Submitted data in the /contact endpoint is not sanitized, letting a remote attacker send a crafted POST request and run arbitrary PHP code with www-data privileges. CERT Polska published an advisory on November 16.",
+          "severity": "Critical",
+          "summary": "Batflat CMS versions 1.2.0 through 1.3.6 have an unauthenticated remote code execution flaw (CVE-2026-111559, CVSS 9.3) in the public /contact form, with public exploit code already on GitHub — and the project is no longer maintained, so no patch is expected.",
+          "title": "Batflat CMS remote code execution (CVE-2026-111559) — public exploit, no fix coming",
+          "url": "https://cert.pl/en/posts/2026/11/CVE-2026-111559/"
         }
       ],
       "title": "Act on Today"
@@ -36,31 +34,31 @@
     {
       "items": [
         {
-          "action": "Alo Yoga customers should watch for targeted phishing using their order details; retailers should treat N0n's leak-site listings as an active extortion wave.",
-          "details": "The group first listed the victim anonymously as 'Company #147' on November 7, the estimated attack date. N0n has also recently listed Starbucks, Timberland, Gap Inc., and Samsung Electronics as victims.",
+          "action": "Watch for targeted phishing and fraud using cardmember details; monitor for any official statement from Mastercard before treating the claim as confirmed.",
+          "details": "The group marked the incident 'NOT PAID — EXPOSED', indicating the data has been leaked. The claim is unverified and Mastercard has not been reported confirming a breach; treat the exposure as alleged until independently confirmed.",
           "image": "https://media.betanews.com/uploads/2025/02/Ransomware-dark-web-640x360.jpg",
-          "severity": "High",
-          "summary": "The ransomware group N0n published data belonging to retailer Alo Yoga on November 14. The leak includes 209,051 distinct customer email addresses captured from order and returns links, along with associated order numbers. The data is marked '[NOT PAID — EXPOSED]' on the group's leak site.",
-          "title": "Ransomware group N0n exposes Alo Yoga customer data — 209,051 emails leaked",
-          "url": "https://qpulse.quasarcybertech.com/news/8455/ransomware-group-n0n-exposes-data-from-alo-yoga"
+          "severity": "Critical",
+          "summary": "On November 16, the ransomware group N0n publicly claimed to have compromised Mastercard and leaked cardmember program records, including full names, emails and mobile numbers for individuals in Middle East and Africa programs, plus issuing-bank and BIN linkage.",
+          "title": "Ransomware group N0n claims data exfiltration from Mastercard",
+          "url": "https://qpulse.quasarcybertech.com/news/8538/ransomware-group-n0n-claims-data-exfiltration-from-mastercard-incorporated"
         },
         {
-          "action": "Starbucks customers should be alert for phishing and fraud using purchase-history details; the exposure shows N0n is systematically leaking retail consumer data.",
-          "details": "The victim was initially listed anonymously as 'Company #147' on November 7, the estimated attack date. The data is marked '[NOT PAID — EXPOSED]', indicating the group proceeded to leak after no payment.",
-          "image": "https://www.cheapism.com/wp-content/uploads/2025/05/Starbucks_mQ1xIG6.original-1626x1084.png",
+          "action": "MSU students and staff should watch for credential-reset guidance from the university and monitor for identity-theft alerts; treat the claim as unverified for now.",
+          "details": "The group publicly named the university's incident response chair, accusing him of ignoring their outreach. The claim is unverified — the tracker indexes operator-posted claims and does not host or verify the stolen data.",
+          "image": "https://studentlife.msu.edu/sites/default/files/2026-02/BeaumontSpring2024.GM-13-%28ZF-0688-65562-1-002%29.jpg",
           "severity": "High",
-          "summary": "On November 14, the ransomware group N0n published Starbucks Group as a victim on its leak site. The exposed data reportedly includes customer records containing device information, purchase history, and location data.",
-          "title": "N0n ransomware group exposes Starbucks consumer data",
-          "url": "https://qpulse.quasarcybertech.com/news/8452/starbucks-group-consumer-data-exposed-by-n0n-ransomware-group"
+          "summary": "The ransomware group Byod claims to have exfiltrated full personal information for 1.03 million current and former Michigan State University students plus staff data, a claim indexed by the Ransomware.live tracker on November 16.",
+          "title": "Byod ransomware group claims theft of 1.03 million records from Michigan State University",
+          "url": "https://qpulse.quasarcybertech.com/news/8495/byod-ransomware-group-claims-theft-of-1-03-million-records-from-michigan-state-university"
         },
         {
-          "action": "Treat PixelLeaks as an active multi-victim extortion campaign — the group listed at least five victims on November 15 alone; monitor its leak site for the publication deadline.",
-          "details": "The threatened material includes personnel records for 725 employees with national identity numbers, names, dates of birth, phone numbers and addresses, plus over 200,000 attendance records and 100,000 WeChat check-in records.",
-          "image": "https://techwey.com/wp-content/uploads/2025/10/techwey-2025-10-30T164009.746-768x512.png",
+          "action": "Debenhams customers should change their password, enable two-factor authentication where available, and treat any password-reset email with suspicion — attackers hold live recovery codes.",
+          "details": "The group first listed the victim anonymously as 'Company #189' on November 9, with an estimated attack date of November 9; the data is marked 'NOT PAID — EXPOSED'. The leak also includes shopper search sessions with typed queries and session identifiers.",
+          "image": "https://media.product.which.co.uk/prod/images/original/gm-3a08ba94-253d-49e5-aa5b-f92a86b63058-debenhams-administrationmain.jpeg",
           "severity": "High",
-          "summary": "On November 15, the ransomware group PixelLeaks claimed a cyberattack against Jiangsu Hengsheng Information Technology (hensun.com) in China, threatening to publish a copy of the company's workforce management system unless demands are met.",
-          "title": "PixelLeaks threatens to leak workforce data of 725 employees at Jiangsu Hengsheng",
-          "url": "https://www.dexpose.io/pixelleaks-targets-jiangsu-hengsheng-information-technology/"
+          "summary": "On November 16, ransomware group N0n published data stolen from UK retailer Debenhams, including 15,708 customer email addresses and 8,530 password-recovery codes captured from password-reset confirmation links.",
+          "title": "N0n leaks Debenhams customer data and password-recovery codes",
+          "url": "https://qpulse.quasarcybertech.com/news/8565/n0n-ransomware-group-leaks-customer-data-and-password-recovery-codes-from-debenhams"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -68,36 +66,36 @@
     {
       "items": [
         {
-          "action": "Treat any SBI-related loan or account data as potentially circulating; watch for targeted phishing and fraudulent loan applications using KYC documents.",
-          "details": "The FIR names unidentified individuals linked to hacker group 'Siriusim'. The stolen data included 32 CSV files, JSON files, and 2,721 PDFs containing personal details, loan applications, account-opening forms, contact numbers and residential addresses. SBI says its core banking operations remain unaffected and it is cooperating with law enforcement.",
-          "image": "https://staticprintenglish.theprint.in/wp-content/uploads/2021/06/SBI-scaled.jpg",
-          "severity": "Critical",
-          "summary": "State Bank of India has filed a police complaint after hackers stole over 375,000 customer records and 4,280 customer records' worth of data between October 10 and 15 at the bank's Global IT Centre in CBD-Belapur, Navi Mumbai. SBI lodged the complaint on November 12 and an FIR has been registered.",
-          "title": "SBI files police complaint over 3.75 lakh customer records stolen in October breach",
-          "url": "https://www.newsbytesapp.com/news/science/sbi-hit-by-data-breach-hackers-steal-375-000-bank-records/story"
+          "action": "NBFCs, especially smaller ones, should audit systems against the CERT-In and Delhi Police advisories, enforce per-transaction limits, and monitor for dummy reference identifiers and mule-account patterns.",
+          "details": "Delhi Police have arrested 20 people linked to mule accounts and seized ₹18 crore of the ₹65 crore before it left mule accounts as cash or crypto. CERT-In warned that fraudulent transactions carried dummy reference identifiers, exceeded per-transaction limits, and credited attacker-controlled mule accounts; its advisory noted agentic AI frameworks enable the attacks 'at machine speed'. Over 150 complaints have been filed by NBFCs across India in the same period.",
+          "image": "https://img.etimg.com/thumb/msid-110555506,width-1200,height-630,imgsize-2068388,overlay-economictimes/articleshow.jpg",
+          "severity": "High",
+          "summary": "NBFCs across India have lost more than ₹300 crore in a spate of cyberattacks, with 12 NBFCs in Delhi-NCR alone losing over ₹65 crore in the last three months; a government advisory rated the severity 'critical' and noted threat actors may have used AI to cover their tracks.",
+          "title": "NBFCs lose over ₹300 crore to cyberattacks; AI used to cover tracks",
+          "url": "https://www.financialexpress.com/india-news/nbfcs-lose-over-rs-300-cr-in-cyberattacks-ai-used-to-cover-tracks/4385665/"
         },
         {
-          "action": "Indian healthcare and biopharma firms should check exposure to PixelLeaks' extortion wave and monitor for the November 19 publication deadline.",
-          "details": "The claim was indexed by the Ransomware.live tracker and remains unverified — no technical details on initial access have been disclosed, and the leak post contains no screenshots. This is one of at least five PixelLeaks victim listings on November 15.",
-          "image": "https://blog.rbuchd.in/wp-content/uploads/2026/06/Pharma-Lab-1024x683.jpg",
+          "action": "Watch for the November 19 deadline and any confirmation from Connectwell; treat the claim as unverified until then.",
+          "details": "The group set a publication deadline of November 19, 2026 at 20:15 UTC unless the organization engages in negotiations. The claim is unverified.",
+          "image": "https://www.epcworld.in/wp-content/uploads/2025/05/1627019454rr%20kabel%20factory%20(1).jpg",
           "severity": "High",
-          "summary": "On November 15, the newly emerged ransomware group PixelLeaks listed PlasmaGen Biosciences Pvt Ltd (plasmagen.co.in), an Indian plasma protein therapeutics company, as a victim. The group claims business records including personnel, financial, client, and intellectual property material, with a publication deadline of November 19, 2026.",
-          "title": "PixelLeaks claims PlasmaGen Biosciences, threatens to publish pharma records by Nov 19",
-          "url": "https://qpulse.quasarcybertech.com/news/8497/pixelleaks-ransomware-group-claims-compromise-of-plasmagen-biosciences-pvt-ltd"
+          "summary": "On November 15, the ransomware group PixelLeaks publicly claimed a cyberattack against Connectwell Industries Pvt Ltd, an Indian electrical terminal-block manufacturer, threatening to release business records including intellectual property and operational material.",
+          "title": "PixelLeaks claims breach of Connectwell Industries, threatens to leak business records",
+          "url": "https://www.dexpose.io/pixelleaks-breaches-connectwell-industries-pvt-ltd/"
         },
         {
-          "action": "Treat as an unverified claim for now; watch for confirmation from Godrej & Boyce or further leak-site evidence before assessing impact.",
-          "details": "The listing is an unverified threat-actor claim: no confirmed intrusion, exfiltration, or stolen data has been independently established, and the company has not disclosed the incident. PixelLeaks also listed US-based Orion Communications Inc on November 15.",
-          "image": "https://ravivardelhi.com/wp-content/uploads/2025/11/godrej-2-780x446.jpg",
-          "severity": "High",
-          "summary": "Threat intelligence posts published November 15–16 report that the ransomware and data-extortion group PixelLeaks listed India's Godrej & Boyce Mfg Co Ltd as an alleged victim, referencing its Vikhroli campus systems in Mumbai.",
-          "title": "PixelLeaks lists Godrej & Boyce as alleged ransomware victim (unverified)",
-          "url": "https://undercodenews.com/pixelleaks-claims-two-new-victims-in-india-and-the-united-states-including-godrej-boyce-and-orion-communications-video/"
+          "action": "Traders should verify export buyers and certification providers through official channels before paying for certificates; report suspected call-centre fraud on the National Cyber Crime Reporting Portal (1930).",
+          "details": "Police recovered 34 mobile phones, eight laptops, 14 CPUs, 23 diaries, two cheque books and fake certificates. The racket surfaced from analysis of complaints on the National Cyber Crime Reporting Portal, which showed cheated money routed through mule bank accounts; an IndusInd Bank account linked to the firm was tied to a fraud complaint from Maharashtra.",
+          "image": "https://etvbharatimages.akamaized.net/etvbharat/prod-images/dl-nrd-01-fakecallcenter-dl10002_29042022063106_2904f_1651194066_426.jpg",
+          "severity": "Medium",
+          "summary": "Delhi Police on November 16 busted a fake call centre in Dwarka's Sector 7 operating as 'Web Solutions Export', arresting 20 people who allegedly duped manufacturers and traders across India with promises of international buyers and fake certifications.",
+          "title": "Fake call centre busted in Dwarka for defrauding traders nationwide",
+          "url": "https://newsable.asianetnews.com/amp/india/fake-call-centre-busted-in-dwarka-for-defrauding-traders-nationwide-articleshow-npcnb4f"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Monday, November 16 — Here's what's worth your attention today.",
+  "subtitle": "Tuesday, November 17 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }
