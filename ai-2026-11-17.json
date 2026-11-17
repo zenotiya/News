@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-17",
+  "items": [
+    {
+      "image": "https://img.alicdn.com/tfs/TB1xpNqnmslXu8jSZFuXXXg7FXa-1200-630.png_.webp",
+      "name": "Qwen4-Max",
+      "plain": "Alibaba's new flagship AI for long documents, coding and agent work, now available to businesses through its cloud API.",
+      "summary": "Alibaba's first Qwen4 model, Qwen4-Max, went generally available on November 16 after a two-week preview, bringing multimodal text, image and video understanding with a 1M-token context to its cloud API and apps.",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview"
+    },
+    {
+      "image": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/02/ML-22229-featured-image.png",
+      "name": "Kimi K3.1 Pro",
+      "plain": "A fast open-weight AI for long coding and document jobs, now runnable inside AWS with enterprise controls.",
+      "summary": "Moonshot AI's Kimi K3.1 Pro Highspeed is now available on Amazon Bedrock: a post-trained version of the open-weight Kimi K3 flagship, tuned for long-horizon agent work, coding and documents, with prompts kept inside the AWS data boundary.",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-1-pro-on-amazon-bedrock/"
+    },
+    {
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/MiniMaxAI/MiniMax-H3-Image.png",
+      "name": "MiniMax H3-Image",
+      "plain": "An image model that creates and edits print-quality visuals from text or reference photos, ready to run in-house or via API.",
+      "summary": "MiniMax released H3-Image on November 10, an open-weight image model that generates and edits native 4K images in about 10 seconds, handling text-to-image and edits from up to 16 reference images in a single checkpoint.",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
+    },
+    {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon_key_art_16-9_lockup.width-1300.jpg",
+      "name": "Gemini 4 Carbon",
+      "plain": "Google's most capable AI for long, complex work such as security analysis and software engineering, now open to paying customers.",
+      "summary": "Google made Gemini 4 Carbon generally available on November 10: its strongest Gemini 4 model, built for cybersecurity work and long-horizon agentic workflows, now open to developers, enterprises and AI Ultra subscribers.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+    },
+    {
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/inclusionAI.png",
+      "name": "Ling-3.2-flash",
+      "plain": "Ant's new AI that understands text, images and video together, useful for document and agent work, free to try for two weeks.",
+      "summary": "Ant Ling launched Ling-3.2-flash on November 5, its first native multimodal model, reading text, images and video for visual understanding, long-horizon agent work and medical analysis, free via API for its first two weeks.",
+      "url": "https://developer.ant-ling.com/en/docs/getting-started/changelog"
+    }
+  ]
+}

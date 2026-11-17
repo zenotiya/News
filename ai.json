@@ -1,40 +1,40 @@
 {
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "items": [
     {
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg",
-      "name": "Gemini 4 Hydrogen",
-      "plain": "A faster, cheaper everyday AI model from Google that handles coding and multi-step assistant tasks, now built into Search and the Gemini app for every user.",
-      "summary": "Google's fast new Gemini 4 model for everyday coding and agentic work, completing tasks about 2.5x faster than Gemini 3.8 Flash — now the default model in Search's AI Mode, the Gemini app and AI Studio.",
-      "url": "https://blog.google/intl/en-in/products/introducing-gemini-4-hydrogen/"
+      "image": "https://img.alicdn.com/tfs/TB1xpNqnmslXu8jSZFuXXXg7FXa-1200-630.png_.webp",
+      "name": "Qwen4-Max",
+      "plain": "Alibaba's new flagship AI for long documents, coding and agent work, now available to businesses through its cloud API.",
+      "summary": "Alibaba's first Qwen4 model, Qwen4-Max, went generally available on November 16 after a two-week preview, bringing multimodal text, image and video understanding with a 1M-token context to its cloud API and apps.",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview"
     },
     {
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini__decisions__blog-header_2784x1566.width-1300.png",
-      "name": "Gemini Decision 1",
-      "plain": "A Google AI that answers yes/no and multiple-choice questions with confidence scores, so apps can route work and check policies without waiting on a chat model.",
-      "summary": "Google's first decision model: instead of generating text, it scores up to 1,000 yes/no, choice or rubric questions over text, images, audio, video or PDFs in a single pass, returning probabilities and confidence scores.",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+      "image": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/02/ML-22229-featured-image.png",
+      "name": "Kimi K3.1 Pro",
+      "plain": "A fast open-weight AI for long coding and document jobs, now runnable inside AWS with enterprise controls.",
+      "summary": "Moonshot AI's Kimi K3.1 Pro Highspeed is now available on Amazon Bedrock: a post-trained version of the open-weight Kimi K3 flagship, tuned for long-horizon agent work, coding and documents, with prompts kept inside the AWS data boundary.",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-1-pro-on-amazon-bedrock/"
     },
     {
-      "image": "https://lh3.googleusercontent.com/VPOhADdGu1T7kK_gWBiGzyVawQbKCjpL3-B0L0wxpYCyr8cHxviYmo9Hghy4f1laeIo2YKwuz8E07TR9HWWk2b0EONi0uvju-8TDLHX6YWHG4dXe3w=w1200-h630-n-nu-rw",
-      "name": "AlphaGenome 2",
-      "plain": "A Google DeepMind model that helps scientists see how DNA changes act inside specific cell types, speeding up the search for what drives disease.",
-      "summary": "DeepMind's next-generation DNA model predicts how genetic variants affect specific human cell types, trained on over 100 million cell profiles, and is available now for non-commercial research via the AlphaGenome API.",
-      "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/"
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/MiniMaxAI/MiniMax-H3-Image.png",
+      "name": "MiniMax H3-Image",
+      "plain": "An image model that creates and edits print-quality visuals from text or reference photos, ready to run in-house or via API.",
+      "summary": "MiniMax released H3-Image on November 10, an open-weight image model that generates and edits native 4K images in about 10 seconds, handling text-to-image and edits from up to 16 reference images in a single checkpoint.",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
     },
     {
-      "image": "https://lh3.googleusercontent.com/F1CrVEYRb8lJOyyxGgcyow-Td1de-nkp7K8MZrhjrKPANJUc0EYB754Ninn-Yrppjdb54nolOWo6Rk8iDaRNuixWwLaEKc0K9ImGooxen9fj9IOh=w1200-h630-n-nu-rw",
-      "name": "Gemini Robotics 2.5",
-      "plain": "Google's newest robot-brain model that turns what a robot sees into skilled hand movements, already tested on real car-factory lines.",
-      "summary": "DeepMind's most capable vision-language-action model yet, evaluated across 200+ tasks from food service to pipetting, and proven on live Mercedes-Benz production lines where Apptronik's Apollo 2 humanoids hit 96% kitting success.",
-      "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon_key_art_16-9_lockup.width-1300.jpg",
+      "name": "Gemini 4 Carbon",
+      "plain": "Google's most capable AI for long, complex work such as security analysis and software engineering, now open to paying customers.",
+      "summary": "Google made Gemini 4 Carbon generally available on November 10: its strongest Gemini 4 model, built for cybersecurity work and long-horizon agentic workflows, now open to developers, enterprises and AI Ultra subscribers.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
     },
     {
-      "image": "https://assets.claude.com/21b3240f9264f8e4c8ab1390e2702cf1401b2367.jpg",
-      "name": "Claude Fable 5.2",
-      "plain": "Anthropic's strongest AI model for hard technical work, now faster and cheaper, with a locked-down twin for approved security research teams.",
-      "summary": "Anthropic's most capable model yet, generating output up to 30% faster than Fable 5.1 at a 20% lower price, with a restricted Mythos 5.2 twin for vetted cybersecurity and biology work.",
-      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/inclusionAI.png",
+      "name": "Ling-3.2-flash",
+      "plain": "Ant's new AI that understands text, images and video together, useful for document and agent work, free to try for two weeks.",
+      "summary": "Ant Ling launched Ling-3.2-flash on November 5, its first native multimodal model, reading text, images and video for visual understanding, long-horizon agent work and medical analysis, free via API for its first two weeks.",
+      "url": "https://developer.ant-ling.com/en/docs/getting-started/changelog"
     }
   ]
 }

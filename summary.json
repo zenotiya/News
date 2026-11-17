@@ -5,37 +5,37 @@
   "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-118383",
+      "id": "CVE-2026-93664",
       "cvss": 10.0,
-      "summary": "A use-after-free in MongoDB Server's replication code can be triggered by unauthenticated requests when a newly elected replica set primary completes catch-up, crashing the server or possibly running code in the server process. Fixed releases are out for all supported branches — upgrade every replica set member to 9.0.7, 8.3.16, 8.0.37, 7.0.48, 6.0.30, 5.0.35 or 4.4.32.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118383",
-      "plain": "MongoDB Server lets anyone on the network crash database servers during a failover, and possibly run code; upgrade every replica set member now.",
-      "product": "MongoDB Server",
-      "versions": "4.4.0–4.4.31 · 5.0.0–5.0.34 · 6.0.0–6.0.29 · 7.0.0–7.0.47 · 8.0.0–8.0.36 · 8.3.0–8.3.15 · 9.0.0–9.0.6"
+      "summary": "A deserialization flaw in the Station Launcher App of Dassault Systèmes' 3DEXPERIENCE platform lets an unauthenticated attacker run code on the server remotely. Dassault has released fix packs for every affected release — upgrade to a fix pack newer than the last affected one.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93664",
+      "plain": "Dassault's 3DEXPERIENCE platform lets anyone on the network run code on the server without logging in; install the latest fix pack now.",
+      "product": "3DEXPERIENCE platform",
+      "versions": "R2023x · R2024x · R2025x · R2026x"
     },
     {
-      "id": "CVE-2026-110697",
-      "cvss": 9.9,
-      "summary": "Quay builds a database search pattern from user-controlled namespace names without escaping wildcard characters, so an attacker who creates a namespace containing an underscore can match and retrieve other tenants' robot accounts and their decrypted authentication tokens. Red Hat has released fixed Quay versions — upgrade to a patched release.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110697",
-      "plain": "Red Hat Quay lets an attacker who creates a specially named account read other customers' private container login tokens; upgrade Quay now.",
-      "product": "Red Hat Quay",
-      "versions": "3.9 · 3.10 · 3.12 · 3.14–3.18"
+      "id": "CVE-2026-126170",
+      "cvss": 9.8,
+      "summary": "A flaw in how FortiManager and FortiAnalyzer handle specially crafted web requests lets an unauthenticated attacker run code or commands on the management appliance. Fortinet has released fixed versions — upgrade and restrict the management interface to trusted networks.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126170",
+      "plain": "Fortinet's FortiManager and FortiAnalyzer let anyone on the network run commands on the management server; upgrade and lock down access now.",
+      "product": "FortiManager / FortiAnalyzer",
+      "versions": "8.0.0–8.0.2 · 7.6.0–7.6.7"
     },
     {
-      "id": "CVE-2026-126872",
-      "cvss": 9.6,
-      "summary": "Incorrect authorization in Chrome's FileSystem lets a remote attacker who tricks a user into visiting a crafted page run code outside the browser sandbox. Google fixed it in Chrome 157.0.8103.78 — update Chrome now.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126872",
-      "plain": "Google Chrome lets a malicious web page break out of the browser's safety sandbox and run code on your computer; update Chrome now.",
-      "product": "Google Chrome",
-      "versions": "before 157.0.8103.78"
+      "id": "CVE-2026-126147",
+      "cvss": 9.8,
+      "summary": "A path traversal flaw in FortiMail lets an unauthenticated attacker reach files outside the intended directory and run code on the mail gateway. Fortinet has released fixed versions for all affected branches — upgrade now.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126147",
+      "plain": "Fortinet's FortiMail mail gateway lets anyone on the network run code on the server; upgrade to a fixed version now.",
+      "product": "FortiMail",
+      "versions": "8.0.0–8.0.1 · 7.6.0–7.6.6 · 7.4.0–7.4.8 · 7.2"
     }
   ],
   "model": {
-    "name": "Gemini 4 Hydrogen",
-    "summary": "Google's fast new Gemini 4 model for everyday coding and agentic work, completing tasks about 2.5x faster than Gemini 3.8 Flash — now the default model in Search's AI Mode, the Gemini app and AI Studio.",
-    "url": "https://blog.google/intl/en-in/products/introducing-gemini-4-hydrogen/",
-    "plain": "A faster, cheaper everyday AI model from Google that handles coding and multi-step assistant tasks, now built into Search and the Gemini app for every user."
+    "name": "Qwen4-Max",
+    "summary": "Alibaba's first Qwen4 model, Qwen4-Max, went generally available on November 16 after a two-week preview, bringing multimodal text, image and video understanding with a 1M-token context to its cloud API and apps.",
+    "url": "https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview",
+    "plain": "Alibaba's new flagship AI for long documents, coding and agent work, now available to businesses through its cloud API."
   }
 }

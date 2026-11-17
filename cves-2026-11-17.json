@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-17",
+  "items": [
+    {
+      "cvss": 10.0,
+      "id": "CVE-2026-93664",
+      "plain": "Dassault's 3DEXPERIENCE platform lets anyone on the network run code on the server without logging in; install the latest fix pack now.",
+      "product": "3DEXPERIENCE platform",
+      "severity": "Critical",
+      "summary": "A deserialization flaw in the Station Launcher App of Dassault Systèmes' 3DEXPERIENCE platform lets an unauthenticated attacker run code on the server remotely. Dassault has released fix packs for every affected release — upgrade to a fix pack newer than the last affected one.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93664",
+      "versions": "R2023x · R2024x · R2025x · R2026x"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-126170",
+      "plain": "Fortinet's FortiManager and FortiAnalyzer let anyone on the network run commands on the management server; upgrade and lock down access now.",
+      "product": "FortiManager / FortiAnalyzer",
+      "severity": "Critical",
+      "summary": "A flaw in how FortiManager and FortiAnalyzer handle specially crafted web requests lets an unauthenticated attacker run code or commands on the management appliance. Fortinet has released fixed versions — upgrade and restrict the management interface to trusted networks.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126170",
+      "versions": "8.0.0–8.0.2 · 7.6.0–7.6.7"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-126147",
+      "plain": "Fortinet's FortiMail mail gateway lets anyone on the network run code on the server; upgrade to a fixed version now.",
+      "product": "FortiMail",
+      "severity": "Critical",
+      "summary": "A path traversal flaw in FortiMail lets an unauthenticated attacker reach files outside the intended directory and run code on the mail gateway. Fortinet has released fixed versions for all affected branches — upgrade now.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126147",
+      "versions": "8.0.0–8.0.1 · 7.6.0–7.6.6 · 7.4.0–7.4.8 · 7.2"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-88771",
+      "plain": "Citrix NetScaler gateways let anyone on the internet run commands on the appliance, and attackers are already doing it; patch and check for break-ins now.",
+      "product": "Citrix NetScaler ADC / Citrix NetScaler Gateway",
+      "severity": "Critical",
+      "summary": "An input validation flaw in Citrix NetScaler ADC and Gateway lets an unauthenticated attacker run commands on the appliance without logging in. The flaw is confirmed exploited in the wild and listed in CISA's Known Exploited Vulnerabilities catalog — patch immediately and check appliances for compromise.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88771",
+      "versions": "before 13.1-64.23 · before 14.1-73.37"
+    },
+    {
+      "cvss": 9.0,
+      "id": "CVE-2026-114146",
+      "plain": "Microsoft's ASP.NET Core SignalR lets an attacker hijack a privileged user's live connection and act as them; upgrade to the fixed release now.",
+      "product": "ASP.NET Core SignalR",
+      "severity": "Critical",
+      "summary": "An authorization flaw in ASP.NET Core SignalR attaches each connection to whichever user made its first request, so an authenticated attacker who tricks a privileged user into opening a crafted link can run hub commands as that user. Microsoft fixed it in .NET 8.0.34, 9.0.23 and 10.0.15 — upgrade now; note .NET 8 and 9 reached end of support the same day.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114146",
+      "versions": "8.0.0–8.0.33 · 9.0.0–9.0.22 · 10.0.0–10.0.14"
+    }
+  ]
+}
