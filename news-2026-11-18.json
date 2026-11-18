@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-18",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Update all Java runtimes to the Nov 17 fixed builds (17.0.21.1+ / 21.0.13.1+ / 25.0.5.1+ / 27.0.1.1+), and apply -XX:UseAVX=2 as a stopgap on x86-64 hosts.",
+          "details": "Affects OpenJDK 17.0.6 and later on x86-64 processors with AVX-512 VBMI support (ARM64 unaffected). Scored 9.2 under CVSS 4.0 (8.1 under CVSS 3.1). Researchers demonstrated pre-auth RCE against default installs of Keycloak, Jira, Confluence, Artifactory, Jenkins and PingFederate. No confirmed in-the-wild exploitation as of Nov 17. Fixed in JDK 17.0.21.1 and later; where patching must wait, starting the JVM with -XX:UseAVX=2 disables the vulnerable path.",
+          "image": "https://0xh3xa.com/assets/img/thumbnails/java.png",
+          "severity": "Critical",
+          "summary": "Oracle released fixes on Nov 17 for an out-of-bounds write in OpenJDK's AVX-512 Base64 decoder that can allow unauthenticated remote code execution. CISA has issued an alert urging immediate patching.",
+          "title": "Java4Shell: critical OpenJDK RCE (CVE-2026-114938) — patch now",
+          "url": "https://www.wiz.io/blog/cve-2026-114938-rce-java4shell-openjdk"
+        },
+        {
+          "action": "Upgrade Apache to 2.4.71 immediately, or disable HTTP/2 (mod_http2) where the upgrade cannot land yet.",
+          "details": "A race condition in the assign_headers() function can lead to remote code execution. Affects Apache HTTP Server 2.4.55 through 2.4.70 with mod_http2 enabled. Fixed in 2.4.71, released Nov 11. CISA-ADP scores it 8.1 (High); Red Hat rates it 9.8 (Critical). Not yet on CISA's KEV catalog as of Nov 17.",
+          "image": "https://blog.hostseo.com/wp-content/uploads/2019/07/Apache-http-server.png",
+          "severity": "High",
+          "summary": "Singapore's CSA warned on Nov 17 that a heap-corruption flaw in Apache HTTP Server's mod_http2 module is reportedly being actively exploited, with a public proof-of-concept available. Only servers with HTTP/2 enabled are affected.",
+          "title": "Apache mod_http2 RCE (CVE-2026-119618) reportedly exploited — update to 2.4.71",
+          "url": "https://securityonline.info/cve-2026-119618-apache-rce-exploited/"
+        },
+        {
+          "action": "Upgrade to Puppet Enterprise 2023.8.13, 2025.12.1 or 2026.0.1 and restart Puppet Server; review whether any agent certificates were abused before patching.",
+          "details": "The bug is in Puppet's report-processing code: a crafted report with a malicious rich-data type executes arbitrary code as the Puppet Server service user. Scored 9.4 under CVSS 4.0. Perforce shipped fixes on Nov 3 in Puppet Enterprise 2023.8.13, 2025.12.1 and 2026.0.1; open-source Puppet has no fix. Federal agencies must remediate by Dec 1, 2026.",
+          "image": "https://www.puppet.com/sites/default/files/inline-images/image-pup-trial-hero2.jpg",
+          "severity": "Critical",
+          "summary": "CISA added a deserialization flaw in Puppet Enterprise to its Known Exploited Vulnerabilities catalog on Nov 17, confirming active exploitation. Any client holding a CA-signed agent certificate can run code on the Puppet Server.",
+          "title": "CISA adds Puppet Enterprise RCE (CVE-2026-115731) to KEV — patch by Dec 1",
+          "url": "https://corgea.com/research/cve-2026-115731-115732-puppet-openvox-report-deserialization-rce-kev-november-2026"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "Treat as an unverified claim until independently confirmed; monitor Akira's leak site and review any Optimil exposure in your supply chain.",
+          "details": "The claim was posted Nov 17 (discovered 13:40 UTC). The threatened data reportedly includes employee dates of birth, addresses, phone numbers, email addresses and Social Security numbers. The data has not yet been released.",
+          "image": "https://cdn.technadu.com/wp-content/uploads/2019/07/ransomware-1068x601.jpg",
+          "severity": "High",
+          "summary": "The Akira ransomware group claimed Optimil Machinery Group on Nov 17 and threatened to publish 43GB of stolen corporate data, including employee PII and financial records.",
+          "title": "Akira claims Optimil Machinery Group, threatens 43GB leak",
+          "url": "https://qpulse.quasarcybertech.com/news/8652/akira-ransomware-group-targets-optimil-machinery-group-in-data-exfiltration-incident"
+        },
+        {
+          "action": "Healthcare customers using West-Com systems should watch for vendor advisories and treat any West-Com contact as potentially spoofed.",
+          "details": "West-Com makes integrated nurse-call and clinical workflow systems for hospitals, behavioural health facilities and senior-living sites. The claimed haul references Mongo, FocusCare and B Braun systems. No attack vector has been disclosed.",
+          "image": "https://thedailytechfeed.com/wp-content/uploads/2026/06/877-768x768.png",
+          "severity": "High",
+          "summary": "The Endzone ransomware group claimed an attack on West-Com Group (Nurse Call Systems) on Nov 17, saying it exfiltrated over 15GB of data and encrypted parts of the network — while deliberately leaving hospital call systems running.",
+          "title": "Endzone claims West-Com Nurse Call Systems, 15GB exfiltrated",
+          "url": "https://qpulse.quasarcybertech.com/news/8644/endzone-ransomware-group-claims-attack-on-west-com-nurse-call-systems"
+        },
+        {
+          "action": "Treat as an unverified claim; watch for the data surfacing and for follow-on phishing using the stolen financial documents.",
+          "details": "The claimed data includes accounts payable and receivable records, financial documents, forecasts, leases, bank letters, certificates of insurance, W-9 forms and government filings. The claim is indexed via the Ransomware.live tracker; the underlying data has not been independently verified.",
+          "image": "https://cdn.prod.website-files.com/6109b259a7c8ef1ca2324f92/69670ad49b1e9f6e425308fb_Copilot%20-%20Data%20breach%20image-p-1080.png",
+          "severity": "High",
+          "summary": "The Chaos ransomware group claimed on Nov 17 to have exfiltrated 210GB of financial and operational data from radienzliving.com.",
+          "title": "Chaos claims 210GB theft from radienzliving.com",
+          "url": "https://qpulse.quasarcybertech.com/news/8598/chaos-ransomware-group-claims-exfiltration-of-210gb-of-financial-and-operational-data-from-radienzliving-com"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "Rotate any credentials shared with Indiabulls Housing Finance systems and watch for session-cookie reuse against corporate SaaS.",
+          "details": "The exposure report lists 1,045 passwords and 55 cookies as critical, with 151 compromised employees, 1,359 compromised users and 152 third-party employee credentials. The estimated attack date is Nov 15. No ransom demand has been confirmed.",
+          "image": "https://cdn.technadu.com/wp-content/uploads/2019/07/ransomware-1068x601.jpg",
+          "severity": "High",
+          "summary": "Ransomhouse claimed Indiabulls Housing Finance on Nov 16, with the compromise traced to infostealer activity exposing 14,883 passwords and 85 session cookies.",
+          "title": "Ransomhouse claims Indiabulls Housing Finance after infostealer infection",
+          "url": "https://qpulse.quasarcybertech.com/news/8587/ransomhouse-claims-indiabulls-housing-finance-as-victim-following-infostealer-infection"
+        },
+        {
+          "action": "Treat as an unverified claim; monitor for the threatened leak and for phishing using Connectwell business data.",
+          "details": "Connectwell is an Indian electrical terminal-block manufacturer. The group says it holds a verified set of records and has set a publication deadline of Nov 19, 20:15 UTC, unless the company negotiates.",
+          "image": "https://cdn.prod.website-files.com/6109b259a7c8ef1ca2324f92/69670ad49b1e9f6e425308fb_Copilot%20-%20Data%20breach%20image-p-1080.png",
+          "severity": "High",
+          "summary": "The PixelLeaks group claimed a cyberattack on Connectwell Industries Pvt Ltd on Nov 15, threatening to publish business records, intellectual property and operational material by Nov 19.",
+          "title": "PixelLeaks claims Connectwell Industries, sets Nov 19 leak deadline",
+          "url": "https://www.dexpose.io/pixelleaks-breaches-connectwell-industries-pvt-ltd/"
+        },
+        {
+          "action": "SBI customers should expect targeted phishing using their real details; verify any SBI contact through official channels and report fraud to report.phishing@sbi.co.in or 1930.",
+          "details": "The FIR, registered at CBD-Belapur police station, says the haul included about 3.75 lakh records across 32 CSV files plus 2,722 PDFs, with names, mobile numbers, dates of birth, addresses, branch and CIF IDs and loan-lead details. SBI's Oct 21 filing said 3,897 customer records with personal data were found on the dark web; the bank says the data has not been misused and the incident has no material impact on core operations. The main risk now is scammers posing as SBI using the known details.",
+          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
+          "severity": "High",
+          "summary": "SBI filed a police complaint on Nov 12 after data was taken from its Global IT Centre in Navi Mumbai between Oct 9 and 15. The bank said on Oct 23 it had individually informed every customer whose data was identified.",
+          "title": "SBI files FIR over dark-web records; affected customers were informed Oct 23",
+          "url": "https://ifynx.com/blog/sbi-data-breach-fir-global-it-centre-gulf-nris-kyc-checklist-gulf-egypt/"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Wednesday, November 18 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

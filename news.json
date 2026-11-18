@@ -1,32 +1,34 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "sections": [
     {
       "items": [
         {
-          "action": "Move to a fix pack newer than the last affected pack for your release (R2023x FP.CFA.2613, R2024x FP.CFA.2632, R2025x FP.CFA.2637, R2026x FP.CFA.2635); restrict network access to the Station Launcher App in the meantime.",
-          "details": "CVE-2026-93664 is deserialization of untrusted data (CWE-502) affecting 3DEXPERIENCE R2023x through R2026x. Two companion OS command injection flaws, CVE-2026-77033 and CVE-2026-19732, score 9.9 each but need a low-privileged account first. No exploitation or public proof-of-concept has been confirmed.",
-          "image": "https://securityonline.info/wp-content/uploads/2026/11/dassault-syst-mes-75370-1024x576.webp",
+          "action": "Update all Java runtimes to the Nov 17 fixed builds (17.0.21.1+ / 21.0.13.1+ / 25.0.5.1+ / 27.0.1.1+), and apply -XX:UseAVX=2 as a stopgap on x86-64 hosts.",
+          "details": "Affects OpenJDK 17.0.6 and later on x86-64 processors with AVX-512 VBMI support (ARM64 unaffected). Scored 9.2 under CVSS 4.0 (8.1 under CVSS 3.1). Researchers demonstrated pre-auth RCE against default installs of Keycloak, Jira, Confluence, Artifactory, Jenkins and PingFederate. No confirmed in-the-wild exploitation as of Nov 17. Fixed in JDK 17.0.21.1 and later; where patching must wait, starting the JVM with -XX:UseAVX=2 disables the vulnerable path.",
+          "image": "https://0xh3xa.com/assets/img/thumbnails/java.png",
           "severity": "Critical",
-          "summary": "Dassault Systèmes disclosed three critical flaws in the Station Launcher App of its 3DEXPERIENCE platform on November 16, the worst (CVE-2026-93664) an unauthenticated remote code execution bug scoring a maximum CVSS 10.0.",
-          "title": "Dassault 3DEXPERIENCE flaw scores a perfect CVSS 10.0 — unauthenticated RCE",
-          "url": "https://securityonline.info/3dexperience-vulnerability-cve-2026-93664/"
+          "summary": "Oracle released fixes on Nov 17 for an out-of-bounds write in OpenJDK's AVX-512 Base64 decoder that can allow unauthenticated remote code execution. CISA has issued an alert urging immediate patching.",
+          "title": "Java4Shell: critical OpenJDK RCE (CVE-2026-114938) — patch now",
+          "url": "https://www.wiz.io/blog/cve-2026-114938-rce-java4shell-openjdk"
         },
         {
-          "action": "Watch for your distribution's kernel security update fixing CVE-2026-99288 and apply it as soon as it lands; monitor exposed Linux servers for unexpected crashes in the meantime.",
-          "details": "Red Hat assigned the flaw a CVSS score of 7.5. The vulnerability is in the kernel's TCP handling; details were published via The Register on November 16.",
+          "action": "Upgrade Apache to 2.4.71 immediately, or disable HTTP/2 (mod_http2) where the upgrade cannot land yet.",
+          "details": "A race condition in the assign_headers() function can lead to remote code execution. Affects Apache HTTP Server 2.4.55 through 2.4.70 with mod_http2 enabled. Fixed in 2.4.71, released Nov 11. CISA-ADP scores it 8.1 (High); Red Hat rates it 9.8 (Critical). Not yet on CISA's KEV catalog as of Nov 17.",
+          "image": "https://blog.hostseo.com/wp-content/uploads/2019/07/Apache-http-server.png",
           "severity": "High",
-          "summary": "A critical Linux kernel vulnerability dubbed NoisyTCP (CVE-2026-99288), discovered by researcher Hyunwoo Kim, allows remote attackers to crash servers without authentication and affects nearly all Linux distributions.",
-          "title": "NoisyTCP: critical Linux kernel flaw lets remote attackers crash servers unauthenticated",
-          "url": "https://www.scworld.com/brief/security-researcher-identifies-critical-noisytcp-vulnerability-in-linux-kernel"
+          "summary": "Singapore's CSA warned on Nov 17 that a heap-corruption flaw in Apache HTTP Server's mod_http2 module is reportedly being actively exploited, with a public proof-of-concept available. Only servers with HTTP/2 enabled are affected.",
+          "title": "Apache mod_http2 RCE (CVE-2026-119618) reportedly exploited — update to 2.4.71",
+          "url": "https://securityonline.info/cve-2026-119618-apache-rce-exploited/"
         },
         {
-          "action": "If you run Batflat, take it offline or migrate — there will be no fix. At minimum, block or restrict access to the /contact endpoint and audit the host for compromise.",
-          "details": "Submitted data in the /contact endpoint is not sanitized, letting a remote attacker send a crafted POST request and run arbitrary PHP code with www-data privileges. CERT Polska published an advisory on November 16.",
+          "action": "Upgrade to Puppet Enterprise 2023.8.13, 2025.12.1 or 2026.0.1 and restart Puppet Server; review whether any agent certificates were abused before patching.",
+          "details": "The bug is in Puppet's report-processing code: a crafted report with a malicious rich-data type executes arbitrary code as the Puppet Server service user. Scored 9.4 under CVSS 4.0. Perforce shipped fixes on Nov 3 in Puppet Enterprise 2023.8.13, 2025.12.1 and 2026.0.1; open-source Puppet has no fix. Federal agencies must remediate by Dec 1, 2026.",
+          "image": "https://www.puppet.com/sites/default/files/inline-images/image-pup-trial-hero2.jpg",
           "severity": "Critical",
-          "summary": "Batflat CMS versions 1.2.0 through 1.3.6 have an unauthenticated remote code execution flaw (CVE-2026-111559, CVSS 9.3) in the public /contact form, with public exploit code already on GitHub — and the project is no longer maintained, so no patch is expected.",
-          "title": "Batflat CMS remote code execution (CVE-2026-111559) — public exploit, no fix coming",
-          "url": "https://cert.pl/en/posts/2026/11/CVE-2026-111559/"
+          "summary": "CISA added a deserialization flaw in Puppet Enterprise to its Known Exploited Vulnerabilities catalog on Nov 17, confirming active exploitation. Any client holding a CA-signed agent certificate can run code on the Puppet Server.",
+          "title": "CISA adds Puppet Enterprise RCE (CVE-2026-115731) to KEV — patch by Dec 1",
+          "url": "https://corgea.com/research/cve-2026-115731-115732-puppet-openvox-report-deserialization-rce-kev-november-2026"
         }
       ],
       "title": "Act on Today"
@@ -34,31 +36,31 @@
     {
       "items": [
         {
-          "action": "Watch for targeted phishing and fraud using cardmember details; monitor for any official statement from Mastercard before treating the claim as confirmed.",
-          "details": "The group marked the incident 'NOT PAID — EXPOSED', indicating the data has been leaked. The claim is unverified and Mastercard has not been reported confirming a breach; treat the exposure as alleged until independently confirmed.",
-          "image": "https://media.betanews.com/uploads/2025/02/Ransomware-dark-web-640x360.jpg",
-          "severity": "Critical",
-          "summary": "On November 16, the ransomware group N0n publicly claimed to have compromised Mastercard and leaked cardmember program records, including full names, emails and mobile numbers for individuals in Middle East and Africa programs, plus issuing-bank and BIN linkage.",
-          "title": "Ransomware group N0n claims data exfiltration from Mastercard",
-          "url": "https://qpulse.quasarcybertech.com/news/8538/ransomware-group-n0n-claims-data-exfiltration-from-mastercard-incorporated"
+          "action": "Treat as an unverified claim until independently confirmed; monitor Akira's leak site and review any Optimil exposure in your supply chain.",
+          "details": "The claim was posted Nov 17 (discovered 13:40 UTC). The threatened data reportedly includes employee dates of birth, addresses, phone numbers, email addresses and Social Security numbers. The data has not yet been released.",
+          "image": "https://cdn.technadu.com/wp-content/uploads/2019/07/ransomware-1068x601.jpg",
+          "severity": "High",
+          "summary": "The Akira ransomware group claimed Optimil Machinery Group on Nov 17 and threatened to publish 43GB of stolen corporate data, including employee PII and financial records.",
+          "title": "Akira claims Optimil Machinery Group, threatens 43GB leak",
+          "url": "https://qpulse.quasarcybertech.com/news/8652/akira-ransomware-group-targets-optimil-machinery-group-in-data-exfiltration-incident"
         },
         {
-          "action": "MSU students and staff should watch for credential-reset guidance from the university and monitor for identity-theft alerts; treat the claim as unverified for now.",
-          "details": "The group publicly named the university's incident response chair, accusing him of ignoring their outreach. The claim is unverified — the tracker indexes operator-posted claims and does not host or verify the stolen data.",
-          "image": "https://studentlife.msu.edu/sites/default/files/2026-02/BeaumontSpring2024.GM-13-%28ZF-0688-65562-1-002%29.jpg",
+          "action": "Healthcare customers using West-Com systems should watch for vendor advisories and treat any West-Com contact as potentially spoofed.",
+          "details": "West-Com makes integrated nurse-call and clinical workflow systems for hospitals, behavioural health facilities and senior-living sites. The claimed haul references Mongo, FocusCare and B Braun systems. No attack vector has been disclosed.",
+          "image": "https://thedailytechfeed.com/wp-content/uploads/2026/06/877-768x768.png",
           "severity": "High",
-          "summary": "The ransomware group Byod claims to have exfiltrated full personal information for 1.03 million current and former Michigan State University students plus staff data, a claim indexed by the Ransomware.live tracker on November 16.",
-          "title": "Byod ransomware group claims theft of 1.03 million records from Michigan State University",
-          "url": "https://qpulse.quasarcybertech.com/news/8495/byod-ransomware-group-claims-theft-of-1-03-million-records-from-michigan-state-university"
+          "summary": "The Endzone ransomware group claimed an attack on West-Com Group (Nurse Call Systems) on Nov 17, saying it exfiltrated over 15GB of data and encrypted parts of the network — while deliberately leaving hospital call systems running.",
+          "title": "Endzone claims West-Com Nurse Call Systems, 15GB exfiltrated",
+          "url": "https://qpulse.quasarcybertech.com/news/8644/endzone-ransomware-group-claims-attack-on-west-com-nurse-call-systems"
         },
         {
-          "action": "Debenhams customers should change their password, enable two-factor authentication where available, and treat any password-reset email with suspicion — attackers hold live recovery codes.",
-          "details": "The group first listed the victim anonymously as 'Company #189' on November 9, with an estimated attack date of November 9; the data is marked 'NOT PAID — EXPOSED'. The leak also includes shopper search sessions with typed queries and session identifiers.",
-          "image": "https://media.product.which.co.uk/prod/images/original/gm-3a08ba94-253d-49e5-aa5b-f92a86b63058-debenhams-administrationmain.jpeg",
+          "action": "Treat as an unverified claim; watch for the data surfacing and for follow-on phishing using the stolen financial documents.",
+          "details": "The claimed data includes accounts payable and receivable records, financial documents, forecasts, leases, bank letters, certificates of insurance, W-9 forms and government filings. The claim is indexed via the Ransomware.live tracker; the underlying data has not been independently verified.",
+          "image": "https://cdn.prod.website-files.com/6109b259a7c8ef1ca2324f92/69670ad49b1e9f6e425308fb_Copilot%20-%20Data%20breach%20image-p-1080.png",
           "severity": "High",
-          "summary": "On November 16, ransomware group N0n published data stolen from UK retailer Debenhams, including 15,708 customer email addresses and 8,530 password-recovery codes captured from password-reset confirmation links.",
-          "title": "N0n leaks Debenhams customer data and password-recovery codes",
-          "url": "https://qpulse.quasarcybertech.com/news/8565/n0n-ransomware-group-leaks-customer-data-and-password-recovery-codes-from-debenhams"
+          "summary": "The Chaos ransomware group claimed on Nov 17 to have exfiltrated 210GB of financial and operational data from radienzliving.com.",
+          "title": "Chaos claims 210GB theft from radienzliving.com",
+          "url": "https://qpulse.quasarcybertech.com/news/8598/chaos-ransomware-group-claims-exfiltration-of-210gb-of-financial-and-operational-data-from-radienzliving-com"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -66,36 +68,36 @@
     {
       "items": [
         {
-          "action": "NBFCs, especially smaller ones, should audit systems against the CERT-In and Delhi Police advisories, enforce per-transaction limits, and monitor for dummy reference identifiers and mule-account patterns.",
-          "details": "Delhi Police have arrested 20 people linked to mule accounts and seized ₹18 crore of the ₹65 crore before it left mule accounts as cash or crypto. CERT-In warned that fraudulent transactions carried dummy reference identifiers, exceeded per-transaction limits, and credited attacker-controlled mule accounts; its advisory noted agentic AI frameworks enable the attacks 'at machine speed'. Over 150 complaints have been filed by NBFCs across India in the same period.",
-          "image": "https://img.etimg.com/thumb/msid-110555506,width-1200,height-630,imgsize-2068388,overlay-economictimes/articleshow.jpg",
+          "action": "Rotate any credentials shared with Indiabulls Housing Finance systems and watch for session-cookie reuse against corporate SaaS.",
+          "details": "The exposure report lists 1,045 passwords and 55 cookies as critical, with 151 compromised employees, 1,359 compromised users and 152 third-party employee credentials. The estimated attack date is Nov 15. No ransom demand has been confirmed.",
+          "image": "https://cdn.technadu.com/wp-content/uploads/2019/07/ransomware-1068x601.jpg",
           "severity": "High",
-          "summary": "NBFCs across India have lost more than ₹300 crore in a spate of cyberattacks, with 12 NBFCs in Delhi-NCR alone losing over ₹65 crore in the last three months; a government advisory rated the severity 'critical' and noted threat actors may have used AI to cover their tracks.",
-          "title": "NBFCs lose over ₹300 crore to cyberattacks; AI used to cover tracks",
-          "url": "https://www.financialexpress.com/india-news/nbfcs-lose-over-rs-300-cr-in-cyberattacks-ai-used-to-cover-tracks/4385665/"
+          "summary": "Ransomhouse claimed Indiabulls Housing Finance on Nov 16, with the compromise traced to infostealer activity exposing 14,883 passwords and 85 session cookies.",
+          "title": "Ransomhouse claims Indiabulls Housing Finance after infostealer infection",
+          "url": "https://qpulse.quasarcybertech.com/news/8587/ransomhouse-claims-indiabulls-housing-finance-as-victim-following-infostealer-infection"
         },
         {
-          "action": "Watch for the November 19 deadline and any confirmation from Connectwell; treat the claim as unverified until then.",
-          "details": "The group set a publication deadline of November 19, 2026 at 20:15 UTC unless the organization engages in negotiations. The claim is unverified.",
-          "image": "https://www.epcworld.in/wp-content/uploads/2025/05/1627019454rr%20kabel%20factory%20(1).jpg",
+          "action": "Treat as an unverified claim; monitor for the threatened leak and for phishing using Connectwell business data.",
+          "details": "Connectwell is an Indian electrical terminal-block manufacturer. The group says it holds a verified set of records and has set a publication deadline of Nov 19, 20:15 UTC, unless the company negotiates.",
+          "image": "https://cdn.prod.website-files.com/6109b259a7c8ef1ca2324f92/69670ad49b1e9f6e425308fb_Copilot%20-%20Data%20breach%20image-p-1080.png",
           "severity": "High",
-          "summary": "On November 15, the ransomware group PixelLeaks publicly claimed a cyberattack against Connectwell Industries Pvt Ltd, an Indian electrical terminal-block manufacturer, threatening to release business records including intellectual property and operational material.",
-          "title": "PixelLeaks claims breach of Connectwell Industries, threatens to leak business records",
+          "summary": "The PixelLeaks group claimed a cyberattack on Connectwell Industries Pvt Ltd on Nov 15, threatening to publish business records, intellectual property and operational material by Nov 19.",
+          "title": "PixelLeaks claims Connectwell Industries, sets Nov 19 leak deadline",
           "url": "https://www.dexpose.io/pixelleaks-breaches-connectwell-industries-pvt-ltd/"
         },
         {
-          "action": "Traders should verify export buyers and certification providers through official channels before paying for certificates; report suspected call-centre fraud on the National Cyber Crime Reporting Portal (1930).",
-          "details": "Police recovered 34 mobile phones, eight laptops, 14 CPUs, 23 diaries, two cheque books and fake certificates. The racket surfaced from analysis of complaints on the National Cyber Crime Reporting Portal, which showed cheated money routed through mule bank accounts; an IndusInd Bank account linked to the firm was tied to a fraud complaint from Maharashtra.",
-          "image": "https://etvbharatimages.akamaized.net/etvbharat/prod-images/dl-nrd-01-fakecallcenter-dl10002_29042022063106_2904f_1651194066_426.jpg",
-          "severity": "Medium",
-          "summary": "Delhi Police on November 16 busted a fake call centre in Dwarka's Sector 7 operating as 'Web Solutions Export', arresting 20 people who allegedly duped manufacturers and traders across India with promises of international buyers and fake certifications.",
-          "title": "Fake call centre busted in Dwarka for defrauding traders nationwide",
-          "url": "https://newsable.asianetnews.com/amp/india/fake-call-centre-busted-in-dwarka-for-defrauding-traders-nationwide-articleshow-npcnb4f"
+          "action": "SBI customers should expect targeted phishing using their real details; verify any SBI contact through official channels and report fraud to report.phishing@sbi.co.in or 1930.",
+          "details": "The FIR, registered at CBD-Belapur police station, says the haul included about 3.75 lakh records across 32 CSV files plus 2,722 PDFs, with names, mobile numbers, dates of birth, addresses, branch and CIF IDs and loan-lead details. SBI's Oct 21 filing said 3,897 customer records with personal data were found on the dark web; the bank says the data has not been misused and the incident has no material impact on core operations. The main risk now is scammers posing as SBI using the known details.",
+          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
+          "severity": "High",
+          "summary": "SBI filed a police complaint on Nov 12 after data was taken from its Global IT Centre in Navi Mumbai between Oct 9 and 15. The bank said on Oct 23 it had individually informed every customer whose data was identified.",
+          "title": "SBI files FIR over dark-web records; affected customers were informed Oct 23",
+          "url": "https://ifynx.com/blog/sbi-data-breach-fir-global-it-centre-gulf-nris-kyc-checklist-gulf-egypt/"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Tuesday, November 17 — Here's what's worth your attention today.",
+  "subtitle": "Wednesday, November 18 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }

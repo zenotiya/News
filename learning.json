@@ -1,7 +1,13 @@
 {
-  "updated": "2026-11-17",
-  "count": 47,
+  "updated": "2026-11-18",
+  "count": 48,
   "items": [
+    {
+      "date": "2026-11-18",
+      "topic": "Red team operations & C2",
+      "title": "Living off trusted SaaS",
+      "what": "C2 over Slack/Teams/Discord — beacons hide in collaboration traffic clients already allowlist; detection pivots to OAuth app grants, anomalous bot tokens and message-pattern analytics, not network signatures"
+    },
     {
       "date": "2026-11-17",
       "topic": "Bug bounty techniques",
