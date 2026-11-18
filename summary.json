@@ -5,37 +5,37 @@
   "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-93664",
+      "id": "CVE-2026-91500",
       "cvss": 10.0,
-      "summary": "A deserialization flaw in the Station Launcher App of Dassault Systèmes' 3DEXPERIENCE platform lets an unauthenticated attacker run code on the server remotely. Dassault has released fix packs for every affected release — upgrade to a fix pack newer than the last affected one.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93664",
-      "plain": "Dassault's 3DEXPERIENCE platform lets anyone on the network run code on the server without logging in; install the latest fix pack now.",
-      "product": "3DEXPERIENCE platform",
-      "versions": "R2023x · R2024x · R2025x · R2026x"
+      "summary": "An easily exploited flaw in Oracle Access Manager's authentication engine lets an unauthenticated attacker over the network take over the system and reach all data it can access, with scope to affect other products. Oracle's November patch fixes both affected releases - apply it now.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91500",
+      "plain": "Oracle Access Manager lets anyone on the network take over the login system without signing in; apply Oracle's patch now.",
+      "product": "Oracle Access Manager",
+      "versions": "12.2.1.4.0 · 14.1.2.1.0"
     },
     {
-      "id": "CVE-2026-126170",
+      "id": "CVE-2026-130840",
       "cvss": 9.8,
-      "summary": "A flaw in how FortiManager and FortiAnalyzer handle specially crafted web requests lets an unauthenticated attacker run code or commands on the management appliance. Fortinet has released fixed versions — upgrade and restrict the management interface to trusted networks.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126170",
-      "plain": "Fortinet's FortiManager and FortiAnalyzer let anyone on the network run commands on the management server; upgrade and lock down access now.",
-      "product": "FortiManager / FortiAnalyzer",
-      "versions": "8.0.0–8.0.2 · 7.6.0–7.6.7"
+      "summary": "BISHENG before 3.0.0 uses a hard-coded default secret to sign its login tokens, so an unauthenticated attacker can forge a token naming themselves an administrator and walk in. Upgrade to 3.0.0 or later, which removes the flaw.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130840",
+      "plain": "BISHENG lets anyone on the network sign in as an administrator without a password; upgrade to version 3.0.0 now.",
+      "product": "BISHENG",
+      "versions": "before 3.0.0"
     },
     {
-      "id": "CVE-2026-126147",
+      "id": "CVE-2026-131852",
       "cvss": 9.8,
-      "summary": "A path traversal flaw in FortiMail lets an unauthenticated attacker reach files outside the intended directory and run code on the mail gateway. Fortinet has released fixed versions for all affected branches — upgrade now.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126147",
-      "plain": "Fortinet's FortiMail mail gateway lets anyone on the network run code on the server; upgrade to a fixed version now.",
-      "product": "FortiMail",
-      "versions": "8.0.0–8.0.1 · 7.6.0–7.6.6 · 7.4.0–7.4.8 · 7.2"
+      "summary": "A format-string flaw in OwnTracks Recorder before 1.0.5 lets an unauthenticated attacker run code on the server by publishing a location with a crafted tracker ID. Upgrade to 1.0.5 now.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131852",
+      "plain": "OwnTracks Recorder lets anyone on the network run code on the tracking server; upgrade to version 1.0.5 now.",
+      "product": "OwnTracks Recorder",
+      "versions": "before 1.0.5"
     }
   ],
   "model": {
-    "name": "Qwen4-Max",
-    "summary": "Alibaba's first Qwen4 model, Qwen4-Max, went generally available on November 16 after a two-week preview, bringing multimodal text, image and video understanding with a 1M-token context to its cloud API and apps.",
-    "url": "https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview",
-    "plain": "Alibaba's new flagship AI for long documents, coding and agent work, now available to businesses through its cloud API."
+    "name": "GPT-6.2 Astra",
+    "summary": "OpenAI released GPT-6.2 Astra and Sol on November 17, its new flagship model for demanding reasoning, coding and professional work, now available in ChatGPT Work, Codex and the API at lower prices than its predecessor.",
+    "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+    "plain": "OpenAI's new flagship AI for hard coding, research and document work, now available to businesses through ChatGPT Work, Codex and the API."
   }
 }

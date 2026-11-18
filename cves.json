@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "items": [
     {
       "cvss": 10.0,
-      "id": "CVE-2026-93664",
-      "plain": "Dassault's 3DEXPERIENCE platform lets anyone on the network run code on the server without logging in; install the latest fix pack now.",
-      "product": "3DEXPERIENCE platform",
+      "id": "CVE-2026-91500",
+      "plain": "Oracle Access Manager lets anyone on the network take over the login system without signing in; apply Oracle's patch now.",
+      "product": "Oracle Access Manager",
       "severity": "Critical",
-      "summary": "A deserialization flaw in the Station Launcher App of Dassault Systèmes' 3DEXPERIENCE platform lets an unauthenticated attacker run code on the server remotely. Dassault has released fix packs for every affected release — upgrade to a fix pack newer than the last affected one.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93664",
-      "versions": "R2023x · R2024x · R2025x · R2026x"
+      "summary": "An easily exploited flaw in Oracle Access Manager's authentication engine lets an unauthenticated attacker over the network take over the system and reach all data it can access, with scope to affect other products. Oracle's November patch fixes both affected releases - apply it now.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91500",
+      "versions": "12.2.1.4.0 · 14.1.2.1.0"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-126170",
-      "plain": "Fortinet's FortiManager and FortiAnalyzer let anyone on the network run commands on the management server; upgrade and lock down access now.",
-      "product": "FortiManager / FortiAnalyzer",
+      "id": "CVE-2026-130840",
+      "plain": "BISHENG lets anyone on the network sign in as an administrator without a password; upgrade to version 3.0.0 now.",
+      "product": "BISHENG",
       "severity": "Critical",
-      "summary": "A flaw in how FortiManager and FortiAnalyzer handle specially crafted web requests lets an unauthenticated attacker run code or commands on the management appliance. Fortinet has released fixed versions — upgrade and restrict the management interface to trusted networks.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126170",
-      "versions": "8.0.0–8.0.2 · 7.6.0–7.6.7"
+      "summary": "BISHENG before 3.0.0 uses a hard-coded default secret to sign its login tokens, so an unauthenticated attacker can forge a token naming themselves an administrator and walk in. Upgrade to 3.0.0 or later, which removes the flaw.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130840",
+      "versions": "before 3.0.0"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-126147",
-      "plain": "Fortinet's FortiMail mail gateway lets anyone on the network run code on the server; upgrade to a fixed version now.",
-      "product": "FortiMail",
+      "id": "CVE-2026-131852",
+      "plain": "OwnTracks Recorder lets anyone on the network run code on the tracking server; upgrade to version 1.0.5 now.",
+      "product": "OwnTracks Recorder",
       "severity": "Critical",
-      "summary": "A path traversal flaw in FortiMail lets an unauthenticated attacker reach files outside the intended directory and run code on the mail gateway. Fortinet has released fixed versions for all affected branches — upgrade now.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126147",
-      "versions": "8.0.0–8.0.1 · 7.6.0–7.6.6 · 7.4.0–7.4.8 · 7.2"
+      "summary": "A format-string flaw in OwnTracks Recorder before 1.0.5 lets an unauthenticated attacker run code on the server by publishing a location with a crafted tracker ID. Upgrade to 1.0.5 now.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131852",
+      "versions": "before 1.0.5"
     },
     {
-      "cvss": 9.8,
-      "id": "CVE-2026-88771",
-      "plain": "Citrix NetScaler gateways let anyone on the internet run commands on the appliance, and attackers are already doing it; patch and check for break-ins now.",
-      "product": "Citrix NetScaler ADC / Citrix NetScaler Gateway",
+      "cvss": 9.4,
+      "id": "CVE-2026-91469",
+      "plain": "Oracle WebLogic Server lets anyone on the network take over the application server without logging in; apply Oracle's patch now.",
+      "product": "Oracle WebLogic Server",
       "severity": "Critical",
-      "summary": "An input validation flaw in Citrix NetScaler ADC and Gateway lets an unauthenticated attacker run commands on the appliance without logging in. The flaw is confirmed exploited in the wild and listed in CISA's Known Exploited Vulnerabilities catalog — patch immediately and check appliances for compromise.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88771",
-      "versions": "before 13.1-64.23 · before 14.1-73.37"
+      "summary": "An easily exploited flaw in Oracle WebLogic Server lets an unauthenticated attacker over HTTP compromise the application server, alter its data and crash it repeatedly. Oracle's November patch covers all four affected branches - apply it now.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91469",
+      "versions": "12.2.1.4.0 · 14.1.1.0.0 · 14.1.2.0.0 · 15.1.1.0.0"
     },
     {
-      "cvss": 9.0,
-      "id": "CVE-2026-114146",
-      "plain": "Microsoft's ASP.NET Core SignalR lets an attacker hijack a privileged user's live connection and act as them; upgrade to the fixed release now.",
-      "product": "ASP.NET Core SignalR",
+      "cvss": 9.2,
+      "id": "CVE-2026-114938",
+      "plain": "Oracle Java lets an attacker on the network crash or take over Java servers on certain Intel chips; update Java now.",
+      "product": "Oracle Java SE",
       "severity": "Critical",
-      "summary": "An authorization flaw in ASP.NET Core SignalR attaches each connection to whichever user made its first request, so an authenticated attacker who tricks a privileged user into opening a crafted link can run hub commands as that user. Microsoft fixed it in .NET 8.0.34, 9.0.23 and 10.0.15 — upgrade now; note .NET 8 and 9 reached end of support the same day.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114146",
-      "versions": "8.0.0–8.0.33 · 9.0.0–9.0.22 · 10.0.0–10.0.14"
+      "summary": "A memory flaw in OpenJDK's Base64 decoder on x86 chips with AVX-512 can corrupt the Java runtime's memory, and researchers demonstrated remote code execution against popular Java apps. Researchers rate it 9.2 under CVSS 4.0 (Oracle scores it 8.1 under CVSS 3.1); patched JDK builds are out - upgrade now.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114938",
+      "versions": "8u511b33-perf · 17.0.21.0.3 · 21.0.13.0.3 · 25.0.5.0.3 · 27.0.1.0.3"
     }
   ]
 }

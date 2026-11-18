@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-18",
+  "items": [
+    {
+      "cvss": 10.0,
+      "id": "CVE-2026-91500",
+      "plain": "Oracle Access Manager lets anyone on the network take over the login system without signing in; apply Oracle's patch now.",
+      "product": "Oracle Access Manager",
+      "severity": "Critical",
+      "summary": "An easily exploited flaw in Oracle Access Manager's authentication engine lets an unauthenticated attacker over the network take over the system and reach all data it can access, with scope to affect other products. Oracle's November patch fixes both affected releases - apply it now.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91500",
+      "versions": "12.2.1.4.0 · 14.1.2.1.0"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-130840",
+      "plain": "BISHENG lets anyone on the network sign in as an administrator without a password; upgrade to version 3.0.0 now.",
+      "product": "BISHENG",
+      "severity": "Critical",
+      "summary": "BISHENG before 3.0.0 uses a hard-coded default secret to sign its login tokens, so an unauthenticated attacker can forge a token naming themselves an administrator and walk in. Upgrade to 3.0.0 or later, which removes the flaw.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130840",
+      "versions": "before 3.0.0"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-131852",
+      "plain": "OwnTracks Recorder lets anyone on the network run code on the tracking server; upgrade to version 1.0.5 now.",
+      "product": "OwnTracks Recorder",
+      "severity": "Critical",
+      "summary": "A format-string flaw in OwnTracks Recorder before 1.0.5 lets an unauthenticated attacker run code on the server by publishing a location with a crafted tracker ID. Upgrade to 1.0.5 now.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131852",
+      "versions": "before 1.0.5"
+    },
+    {
+      "cvss": 9.4,
+      "id": "CVE-2026-91469",
+      "plain": "Oracle WebLogic Server lets anyone on the network take over the application server without logging in; apply Oracle's patch now.",
+      "product": "Oracle WebLogic Server",
+      "severity": "Critical",
+      "summary": "An easily exploited flaw in Oracle WebLogic Server lets an unauthenticated attacker over HTTP compromise the application server, alter its data and crash it repeatedly. Oracle's November patch covers all four affected branches - apply it now.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91469",
+      "versions": "12.2.1.4.0 · 14.1.1.0.0 · 14.1.2.0.0 · 15.1.1.0.0"
+    },
+    {
+      "cvss": 9.2,
+      "id": "CVE-2026-114938",
+      "plain": "Oracle Java lets an attacker on the network crash or take over Java servers on certain Intel chips; update Java now.",
+      "product": "Oracle Java SE",
+      "severity": "Critical",
+      "summary": "A memory flaw in OpenJDK's Base64 decoder on x86 chips with AVX-512 can corrupt the Java runtime's memory, and researchers demonstrated remote code execution against popular Java apps. Researchers rate it 9.2 under CVSS 4.0 (Oracle scores it 8.1 under CVSS 3.1); patched JDK builds are out - upgrade now.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114938",
+      "versions": "8u511b33-perf · 17.0.21.0.3 · 21.0.13.0.3 · 25.0.5.0.3 · 27.0.1.0.3"
+    }
+  ]
+}

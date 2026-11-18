@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-18",
+  "items": [
+    {
+      "image": "https://winbuzzer.com/wp-content/uploads/2026/11/GPT-6.2-Astra-and-Sol.webp",
+      "name": "GPT-6.2 Astra",
+      "plain": "OpenAI's new flagship AI for hard coding, research and document work, now available to businesses through ChatGPT Work, Codex and the API.",
+      "summary": "OpenAI released GPT-6.2 Astra and Sol on November 17, its new flagship model for demanding reasoning, coding and professional work, now available in ChatGPT Work, Codex and the API at lower prices than its predecessor.",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+    },
+    {
+      "image": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/images/bS00NTczNjA5LURLSEF4Yw?revision=12",
+      "name": "Microsoft MAI Code 2 and Cyber 2 Flash",
+      "plain": "Microsoft's own cheaper AI models for everyday coding and security work, now built into GitHub Copilot and its security tools.",
+      "summary": "Microsoft unveiled seven in-house MAI models at Ignite on November 17, led by coding models Code 2 and Code 2 Flash now in GitHub Copilot, plus Cyber 2 Flash for security teams, pitched on near-frontier work at a fraction of the cost.",
+      "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/from-model-choice-to-your-durable-advantage-build-ai-that-keeps-improving/4573609"
+    },
+    {
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2611.21003/gradient.png",
+      "name": "K2-Horizon",
+      "plain": "A fully open family of AI models a business can download, inspect and run itself, from small helpers to a large coding model.",
+      "summary": "IFM published K2-Horizon on November 15-17, a fleet of six open-weight models from 0.9B to a 375B mixture-of-experts, shipping training data, checkpoints and code alongside the weights.",
+      "url": "https://ifm.ai/k2"
+    },
+    {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg",
+      "name": "Gemini 4 Hydrogen",
+      "plain": "Google's fast AI for everyday coding and assistant work, now built into Search, the Gemini app and its developer tools.",
+      "summary": "Google introduced Gemini 4 Hydrogen on November 12, the fast everyday model in the Gemini 4 family for coding and agentic work, rolling out across Search, the Gemini app, AI Studio and the API.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+    },
+    {
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/internlm/Sage-S2.1-Flash.png",
+      "name": "Sage S2.1 Flash",
+      "plain": "A free, open scientific AI that helps research teams analyse lab data and run experiments, ready to download and self-host.",
+      "summary": "Shanghai AI Lab posted Sage S2.1 Flash on November 15, a 320B-parameter open-weight scientific model under the MIT license that reads molecules, proteins and lab data for research agent work.",
+      "url": "https://huggingface.co/internlm/Sage-S2.1-Flash"
+    }
+  ]
+}

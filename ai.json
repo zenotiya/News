@@ -1,40 +1,40 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "items": [
     {
-      "image": "https://img.alicdn.com/tfs/TB1xpNqnmslXu8jSZFuXXXg7FXa-1200-630.png_.webp",
-      "name": "Qwen4-Max",
-      "plain": "Alibaba's new flagship AI for long documents, coding and agent work, now available to businesses through its cloud API.",
-      "summary": "Alibaba's first Qwen4 model, Qwen4-Max, went generally available on November 16 after a two-week preview, bringing multimodal text, image and video understanding with a 1M-token context to its cloud API and apps.",
-      "url": "https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview"
+      "image": "https://winbuzzer.com/wp-content/uploads/2026/11/GPT-6.2-Astra-and-Sol.webp",
+      "name": "GPT-6.2 Astra",
+      "plain": "OpenAI's new flagship AI for hard coding, research and document work, now available to businesses through ChatGPT Work, Codex and the API.",
+      "summary": "OpenAI released GPT-6.2 Astra and Sol on November 17, its new flagship model for demanding reasoning, coding and professional work, now available in ChatGPT Work, Codex and the API at lower prices than its predecessor.",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
     },
     {
-      "image": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/02/ML-22229-featured-image.png",
-      "name": "Kimi K3.1 Pro",
-      "plain": "A fast open-weight AI for long coding and document jobs, now runnable inside AWS with enterprise controls.",
-      "summary": "Moonshot AI's Kimi K3.1 Pro Highspeed is now available on Amazon Bedrock: a post-trained version of the open-weight Kimi K3 flagship, tuned for long-horizon agent work, coding and documents, with prompts kept inside the AWS data boundary.",
-      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-1-pro-on-amazon-bedrock/"
+      "image": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/images/bS00NTczNjA5LURLSEF4Yw?revision=12",
+      "name": "Microsoft MAI Code 2 and Cyber 2 Flash",
+      "plain": "Microsoft's own cheaper AI models for everyday coding and security work, now built into GitHub Copilot and its security tools.",
+      "summary": "Microsoft unveiled seven in-house MAI models at Ignite on November 17, led by coding models Code 2 and Code 2 Flash now in GitHub Copilot, plus Cyber 2 Flash for security teams, pitched on near-frontier work at a fraction of the cost.",
+      "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/from-model-choice-to-your-durable-advantage-build-ai-that-keeps-improving/4573609"
     },
     {
-      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/MiniMaxAI/MiniMax-H3-Image.png",
-      "name": "MiniMax H3-Image",
-      "plain": "An image model that creates and edits print-quality visuals from text or reference photos, ready to run in-house or via API.",
-      "summary": "MiniMax released H3-Image on November 10, an open-weight image model that generates and edits native 4K images in about 10 seconds, handling text-to-image and edits from up to 16 reference images in a single checkpoint.",
-      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2611.21003/gradient.png",
+      "name": "K2-Horizon",
+      "plain": "A fully open family of AI models a business can download, inspect and run itself, from small helpers to a large coding model.",
+      "summary": "IFM published K2-Horizon on November 15-17, a fleet of six open-weight models from 0.9B to a 375B mixture-of-experts, shipping training data, checkpoints and code alongside the weights.",
+      "url": "https://ifm.ai/k2"
     },
     {
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon_key_art_16-9_lockup.width-1300.jpg",
-      "name": "Gemini 4 Carbon",
-      "plain": "Google's most capable AI for long, complex work such as security analysis and software engineering, now open to paying customers.",
-      "summary": "Google made Gemini 4 Carbon generally available on November 10: its strongest Gemini 4 model, built for cybersecurity work and long-horizon agentic workflows, now open to developers, enterprises and AI Ultra subscribers.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg",
+      "name": "Gemini 4 Hydrogen",
+      "plain": "Google's fast AI for everyday coding and assistant work, now built into Search, the Gemini app and its developer tools.",
+      "summary": "Google introduced Gemini 4 Hydrogen on November 12, the fast everyday model in the Gemini 4 family for coding and agentic work, rolling out across Search, the Gemini app, AI Studio and the API.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
     },
     {
-      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/inclusionAI.png",
-      "name": "Ling-3.2-flash",
-      "plain": "Ant's new AI that understands text, images and video together, useful for document and agent work, free to try for two weeks.",
-      "summary": "Ant Ling launched Ling-3.2-flash on November 5, its first native multimodal model, reading text, images and video for visual understanding, long-horizon agent work and medical analysis, free via API for its first two weeks.",
-      "url": "https://developer.ant-ling.com/en/docs/getting-started/changelog"
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/internlm/Sage-S2.1-Flash.png",
+      "name": "Sage S2.1 Flash",
+      "plain": "A free, open scientific AI that helps research teams analyse lab data and run experiments, ready to download and self-host.",
+      "summary": "Shanghai AI Lab posted Sage S2.1 Flash on November 15, a 320B-parameter open-weight scientific model under the MIT license that reads molecules, proteins and lab data for research agent work.",
+      "url": "https://huggingface.co/internlm/Sage-S2.1-Flash"
     }
   ]
 }
