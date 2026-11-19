@@ -1,40 +1,40 @@
 {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "items": [
     {
-      "image": "https://winbuzzer.com/wp-content/uploads/2026/11/GPT-6.2-Astra-and-Sol.webp",
-      "name": "GPT-6.2 Astra",
-      "plain": "OpenAI's new flagship AI for hard coding, research and document work, now available to businesses through ChatGPT Work, Codex and the API.",
-      "summary": "OpenAI released GPT-6.2 Astra and Sol on November 17, its new flagship model for demanding reasoning, coding and professional work, now available in ChatGPT Work, Codex and the API at lower prices than its predecessor.",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png",
+      "name": "Gemini 4 Neon",
+      "plain": "A faster frontier AI model for coding, analysis and research work that businesses can put straight into everyday workflows.",
+      "summary": "Google's fourth Gemini 4 model, pitched as frontier-level intelligence for complex software engineering, knowledge work and science at faster, lower-cost speeds than its largest models. Rolling out now to AI Pro and Ultra subscribers and through the Gemini API and AI Studio.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+    },
+    {
+      "image": "https://us1.discourse-cdn.com/openai1/optimized/4X/e/b/0/eb010b111f193137520f06dc148808ec00e3ef5e_2_1024x576.jpeg",
+      "name": "GPT-6.2 Sol",
+      "plain": "An everyday AI model for routine business tasks that lets teams get more work done on the same plan.",
+      "summary": "OpenAI's go-to model for everyday work, updated alongside GPT-6.2 Astra; it handles routine multi-step tasks so users complete more on the same paid plan. Available in ChatGPT Work, Codex and the API.",
       "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
     },
     {
-      "image": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/images/bS00NTczNjA5LURLSEF4Yw?revision=12",
-      "name": "Microsoft MAI Code 2 and Cyber 2 Flash",
-      "plain": "Microsoft's own cheaper AI models for everyday coding and security work, now built into GitHub Copilot and its security tools.",
-      "summary": "Microsoft unveiled seven in-house MAI models at Ignite on November 17, led by coding models Code 2 and Code 2 Flash now in GitHub Copilot, plus Cyber 2 Flash for security teams, pitched on near-frontier work at a fraction of the cost.",
-      "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/from-model-choice-to-your-durable-advantage-build-ai-that-keeps-improving/4573609"
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/microsoft/Aion-1.0-Instruct-2.3B.png",
+      "name": "Microsoft Aion 1.0 Instruct",
+      "plain": "A small open model that will power built-in AI on Windows PCs, so businesses can test on-device AI helpers before they ship.",
+      "summary": "Microsoft published Aion 1.0 Instruct, a 2.3-billion-parameter open-weight model under the MIT license; an optimized version becomes the Windows operating system's built-in small language model by the end of January 2027.",
+      "url": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B"
     },
     {
-      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2611.21003/gradient.png",
-      "name": "K2-Horizon",
-      "plain": "A fully open family of AI models a business can download, inspect and run itself, from small helpers to a large coding model.",
-      "summary": "IFM published K2-Horizon on November 15-17, a fleet of six open-weight models from 0.9B to a 375B mixture-of-experts, shipping training data, checkpoints and code alongside the weights.",
-      "url": "https://ifm.ai/k2"
+      "image": "https://microsoft.ai/wp-content/uploads/2026/11/All-Up-Blog.jpg",
+      "name": "MAI Image 2.7",
+      "plain": "An image model for creating and editing marketing and product visuals quickly, at a fraction of the cost of rival image models.",
+      "summary": "Microsoft's new image generation and editing model, launched at Ignite, which Microsoft says tops the Artificial Analysis image-editing leaderboard. Available in public preview through Microsoft Foundry, with a cheaper Flash variant for high-volume work.",
+      "url": "https://microsoft.ai/news/microsoft-ignite-2026-mai-keynote/"
     },
     {
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg",
-      "name": "Gemini 4 Hydrogen",
-      "plain": "Google's fast AI for everyday coding and assistant work, now built into Search, the Gemini app and its developer tools.",
-      "summary": "Google introduced Gemini 4 Hydrogen on November 12, the fast everyday model in the Gemini 4 family for coding and agentic work, rolling out across Search, the Gemini app, AI Studio and the API.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
-    },
-    {
-      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/internlm/Sage-S2.1-Flash.png",
-      "name": "Sage S2.1 Flash",
-      "plain": "A free, open scientific AI that helps research teams analyse lab data and run experiments, ready to download and self-host.",
-      "summary": "Shanghai AI Lab posted Sage S2.1 Flash on November 15, a 320B-parameter open-weight scientific model under the MIT license that reads molecules, proteins and lab data for research agent work.",
-      "url": "https://huggingface.co/internlm/Sage-S2.1-Flash"
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/frame_zjQlth4.width-1300.png",
+      "name": "Stitch Loop",
+      "plain": "An always-on AI agent that watches a live product, spots problems and drafts fixes for human approval, so small teams keep improving software after launch.",
+      "summary": "A Google Labs experiment: a long-running product agent that connects to a codebase and live metrics, finds what needs fixing and opens GitHub pull requests for human review. A global waitlist is open, with priority for Google AI Ultra subscribers.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/"
     }
   ]
 }

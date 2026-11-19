@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "items": [
     {
-      "cvss": 10.0,
-      "id": "CVE-2026-91500",
-      "plain": "Oracle Access Manager lets anyone on the network take over the login system without signing in; apply Oracle's patch now.",
-      "product": "Oracle Access Manager",
+      "cvss": 9.8,
+      "id": "CVE-2026-126170",
+      "plain": "FortiManager and FortiAnalyzer let an attacker on the network run code on the device without logging in; patch or apply Fortinet's workaround now.",
+      "product": "FortiManager / FortiAnalyzer",
       "severity": "Critical",
-      "summary": "An easily exploited flaw in Oracle Access Manager's authentication engine lets an unauthenticated attacker over the network take over the system and reach all data it can access, with scope to affect other products. Oracle's November patch fixes both affected releases - apply it now.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91500",
-      "versions": "12.2.1.4.0 · 14.1.2.1.0"
+      "summary": "An output-encoding flaw in the JSON RPC API of FortiManager and FortiAnalyzer lets an unauthenticated attacker execute unauthorized code or commands via a specially crafted HTTP request when the JSON API is enabled. Fortinet's November advisories cover the 7.6 and 8.0 lines — patch now, or apply workarounds where a fix is still upcoming.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126170",
+      "versions": "8.0.0–8.0.2 · 7.6.0–7.6.7"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-130840",
-      "plain": "BISHENG lets anyone on the network sign in as an administrator without a password; upgrade to version 3.0.0 now.",
-      "product": "BISHENG",
+      "id": "CVE-2026-126262",
+      "plain": "FortiManager and FortiAnalyzer let an attacker on the network run commands on the device without logging in; upgrade to a fixed version now.",
+      "product": "FortiManager / FortiAnalyzer",
       "severity": "Critical",
-      "summary": "BISHENG before 3.0.0 uses a hard-coded default secret to sign its login tokens, so an unauthenticated attacker can forge a token naming themselves an administrator and walk in. Upgrade to 3.0.0 or later, which removes the flaw.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130840",
-      "versions": "before 3.0.0"
-    },
-    {
-      "cvss": 9.8,
-      "id": "CVE-2026-131852",
-      "plain": "OwnTracks Recorder lets anyone on the network run code on the tracking server; upgrade to version 1.0.5 now.",
-      "product": "OwnTracks Recorder",
-      "severity": "Critical",
-      "summary": "A format-string flaw in OwnTracks Recorder before 1.0.5 lets an unauthenticated attacker run code on the server by publishing a location with a crafted tracker ID. Upgrade to 1.0.5 now.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131852",
-      "versions": "before 1.0.5"
+      "summary": "A SQL injection flaw in FortiManager and FortiAnalyzer lets an unauthenticated attacker who can reach the OFTP port run code or commands on the system via crafted OFTP packets. Fortinet's November advisories cover affected 7.2 through 8.0 releases — upgrade to a fixed version.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126262",
+      "versions": "FortiAnalyzer 8.0.0–8.0.1 · 7.6.0–7.6.7 · 7.4.0–7.4.11 · 7.2.0–7.2.12; FortiManager 8.0.0 · 7.6.0–7.6.7 · 7.4.0–7.4.11 · 7.2.0–7.2.12"
     },
     {
       "cvss": 9.4,
-      "id": "CVE-2026-91469",
-      "plain": "Oracle WebLogic Server lets anyone on the network take over the application server without logging in; apply Oracle's patch now.",
-      "product": "Oracle WebLogic Server",
+      "id": "CVE-2026-115731",
+      "plain": "Puppet lets an attacker with a signed agent certificate run code on the central server; upgrade Puppet now, and check certificate signing.",
+      "product": "Puppet Enterprise / Puppet",
       "severity": "Critical",
-      "summary": "An easily exploited flaw in Oracle WebLogic Server lets an unauthenticated attacker over HTTP compromise the application server, alter its data and crash it repeatedly. Oracle's November patch covers all four affected branches - apply it now.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91469",
-      "versions": "12.2.1.4.0 · 14.1.1.0.0 · 14.1.2.0.0 · 15.1.1.0.0"
+      "summary": "A deserialization flaw in Puppet's report-processing code lets a client holding any CA-signed agent certificate run arbitrary code on the Puppet Server as its service user. CISA added it to the Known Exploited Vulnerabilities catalog on 18 November citing active exploitation — upgrade Puppet Core to 8.22.2 or 9.1.3, or Puppet Enterprise to a fixed release.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115731",
+      "versions": "Puppet Core 8.0.0–8.22.1 · 9.0.0–9.1.2; Puppet Enterprise 2023.8.0–2023.8.12 · 2025.0.0–2025.12.0 · 2026.0.0"
     },
     {
-      "cvss": 9.2,
-      "id": "CVE-2026-114938",
-      "plain": "Oracle Java lets an attacker on the network crash or take over Java servers on certain Intel chips; update Java now.",
-      "product": "Oracle Java SE",
+      "cvss": 9.0,
+      "id": "CVE-2026-115732",
+      "plain": "Puppet Enterprise lets an attacker with a crafted certificate impersonate other servers; upgrade Puppet Enterprise now.",
+      "product": "Puppet Enterprise",
       "severity": "Critical",
-      "summary": "A memory flaw in OpenJDK's Base64 decoder on x86 chips with AVX-512 can corrupt the Java runtime's memory, and researchers demonstrated remote code execution against popular Java apps. Researchers rate it 9.2 under CVSS 4.0 (Oracle scores it 8.1 under CVSS 3.1); patched JDK builds are out - upgrade now.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114938",
-      "versions": "8u511b33-perf · 17.0.21.0.3 · 21.0.13.0.3 · 25.0.5.0.3 · 27.0.1.0.3"
+      "summary": "A certificate-name matching flaw in Puppet Server's authorization lets a client whose certificate name extends or shortens an authorized hostname be authorized as that host, enabling impersonation of other nodes and, in Puppet Enterprise, access to certificate-authority administration. Upgrade to a fixed Puppet Enterprise release.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115732",
+      "versions": "2023.8.0–2023.8.12 · 2025.0.0–2025.12.0 · 2026.0.0"
+    },
+    {
+      "cvss": 9.0,
+      "id": "CVE-2026-128049",
+      "plain": "OpenMage lets an attacker trick a logged-in shop admin into approving a malicious request; upgrade OpenMage now.",
+      "product": "OpenMage Magento LTS",
+      "severity": "Critical",
+      "summary": "A cross-site request forgery flaw in OpenMage Magento LTS's OAuth confirm actions lets an attacker holding OAuth consumer credentials trick a logged-in administrator or customer into authorizing the attacker's request. Upgrade to 20.18.2 or 21.0.0-beta3.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128049",
+      "versions": "before 20.18.2 · 21.0.0-beta1–beta2"
     }
   ]
 }
