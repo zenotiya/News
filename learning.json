@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-18",
-  "count": 48,
+  "updated": "2026-11-19",
+  "count": 49,
   "items": [
+    {
+      "date": "2026-11-19",
+      "topic": "Cryptography & post-quantum",
+      "title": "PQC implementation side channels (KyberSlash)",
+      "what": "the ML-KEM math is sound, but real implementations leaked keys through a secret-dependent division by the modulus q=3329 in decapsulation — division timing varies with operands, so repeated decapsulations let an attacker recover the secret key (KyberSlash2: minutes on Cortex-M4, hours on Cortex-A7; Bernstein et al., disclosed Dec 2023, patched in reference code + major libs). FIPS 203 §3.3 says conformance \"does not guarantee that the result will be secure\" and never mentions timing/power — the standard proves the algorithm, not the code. Lattice schemes are unusually hard to make constant-time (rejection sampling, FO-transform comparison, floating-point sampling in FN-DSA); masking (splitting secrets into random shares) is the leading defence, plus fault detection for glitch attacks.",
+      "takeaway": "in PQC-migration assessments, \"we use ML-KEM\" is not an answer — ask for the library + version, constant-time evidence (Valgrind-based secret-taint testing as the KyberSlash authors did), and whether decapsulation runs in a context where an attacker can time many operations against one key; the Nov 3 inventory must cover implementation provenance, not just algorithm names"
+    },
     {
       "date": "2026-11-18",
       "topic": "Red team operations & C2",

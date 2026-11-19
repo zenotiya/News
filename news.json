@@ -1,34 +1,33 @@
 {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "sections": [
     {
       "items": [
         {
-          "action": "Update all Java runtimes to the Nov 17 fixed builds (17.0.21.1+ / 21.0.13.1+ / 25.0.5.1+ / 27.0.1.1+), and apply -XX:UseAVX=2 as a stopgap on x86-64 hosts.",
-          "details": "Affects OpenJDK 17.0.6 and later on x86-64 processors with AVX-512 VBMI support (ARM64 unaffected). Scored 9.2 under CVSS 4.0 (8.1 under CVSS 3.1). Researchers demonstrated pre-auth RCE against default installs of Keycloak, Jira, Confluence, Artifactory, Jenkins and PingFederate. No confirmed in-the-wild exploitation as of Nov 17. Fixed in JDK 17.0.21.1 and later; where patching must wait, starting the JVM with -XX:UseAVX=2 disables the vulnerable path.",
-          "image": "https://0xh3xa.com/assets/img/thumbnails/java.png",
+          "action": "Upgrade NGINX to 1.30.7 or 1.31.9. If you cannot patch now, disable HTTP/2 (http2 off) as a stopgap.",
+          "details": "CVE-2026-123633 is a use-after-free on HTTP/2 connections. Fixed in NGINX Open Source 1.30.7 (stable) and 1.31.9 (mainline). Community ingress-nginx is archived and has no fix, and exploitation of CVE-2026-123007 needs roughly 128 GB on a single connection, so attacks are loud but real. Wiz confirmed RCE with an ASLR bypass on official 1.31.7/1.31.8 builds.",
           "severity": "Critical",
-          "summary": "Oracle released fixes on Nov 17 for an out-of-bounds write in OpenJDK's AVX-512 Base64 decoder that can allow unauthenticated remote code execution. CISA has issued an alert urging immediate patching.",
-          "title": "Java4Shell: critical OpenJDK RCE (CVE-2026-114938) — patch now",
-          "url": "https://www.wiz.io/blog/cve-2026-114938-rce-java4shell-openjdk"
+          "summary": "F5 shipped fixes on Nov 18 for two critical HTTP/2 flaws in NGINX, both scored CVSS 9.2 (v4.0). CVE-2026-123007 is an integer underflow in flow-control accounting, present since NGINX 1.9.5 (2015), and Rapid7 has published a proof of concept for unauthenticated RCE.",
+          "title": "NGINX HTTP/2 flaws allow unauthenticated RCE (CVE-2026-123007, CVE-2026-123633)",
+          "url": "https://www.rapid7.com/blog/post/ve-cve-2026-123007-critical-nginx-http-2-integer-underflow-leads-to-rce-fixed/"
         },
         {
-          "action": "Upgrade Apache to 2.4.71 immediately, or disable HTTP/2 (mod_http2) where the upgrade cannot land yet.",
-          "details": "A race condition in the assign_headers() function can lead to remote code execution. Affects Apache HTTP Server 2.4.55 through 2.4.70 with mod_http2 enabled. Fixed in 2.4.71, released Nov 11. CISA-ADP scores it 8.1 (High); Red Hat rates it 9.8 (Critical). Not yet on CISA's KEV catalog as of Nov 17.",
-          "image": "https://blog.hostseo.com/wp-content/uploads/2019/07/Apache-http-server.png",
+          "action": "Upgrade to Apache Roller 6.1.6 or later. Disabling XML-RPC in the admin console alone does not stop attacks, since older builds deserialize the payload before reading that setting.",
+          "details": "The XML-RPC endpoint deserializes vendor extension types before authenticating the requester. Apache has not disclosed who is behind the attacks or how many servers are compromised. The same bug was previously tracked as CVE-2026-82384 for Roller 6.1.5.",
+          "image": "https://rollerweblogger.org/roller/mediaresource/23986d06-37aa-48c1-8301-90419520953b",
+          "severity": "Critical",
+          "summary": "Apache warns that CVE-2026-129448, an unauthenticated deserialization flaw in Roller 4.0.0 through 6.1.4, is being actively exploited to gain remote code execution. CVSS 9.8.",
+          "title": "Apache Roller RCE actively exploited — upgrade to 6.1.6",
+          "url": "https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/"
+        },
+        {
+          "action": "Audit Google Workspace super-admin activity, Customer Takeout exports and deleted Alert Center alerts; treat stolen staff directories as targeting material for follow-on impersonation.",
+          "details": "In the first intrusion the group used a compromised Super Admin account to download the organisation's entire cloud drive, export full employee lists and run a domain-wide Google Workspace Customer Takeout export, then deleted security alerts. The second intrusion was linked through a phishing redirect referencing the first victim.",
+          "image": "https://telegrafi.com/media-library/2021-12-googlehack-jpg.jpg?id=57934512&width=1200&height=800&coordinates=0%2C0%2C0%2C0",
           "severity": "High",
-          "summary": "Singapore's CSA warned on Nov 17 that a heap-corruption flaw in Apache HTTP Server's mod_http2 module is reportedly being actively exploited, with a public proof-of-concept available. Only servers with HTTP/2 enabled are affected.",
-          "title": "Apache mod_http2 RCE (CVE-2026-119618) reportedly exploited — update to 2.4.71",
-          "url": "https://securityonline.info/cve-2026-119618-apache-rce-exploited/"
-        },
-        {
-          "action": "Upgrade to Puppet Enterprise 2023.8.13, 2025.12.1 or 2026.0.1 and restart Puppet Server; review whether any agent certificates were abused before patching.",
-          "details": "The bug is in Puppet's report-processing code: a crafted report with a malicious rich-data type executes arbitrary code as the Puppet Server service user. Scored 9.4 under CVSS 4.0. Perforce shipped fixes on Nov 3 in Puppet Enterprise 2023.8.13, 2025.12.1 and 2026.0.1; open-source Puppet has no fix. Federal agencies must remediate by Dec 1, 2026.",
-          "image": "https://www.puppet.com/sites/default/files/inline-images/image-pup-trial-hero2.jpg",
-          "severity": "Critical",
-          "summary": "CISA added a deserialization flaw in Puppet Enterprise to its Known Exploited Vulnerabilities catalog on Nov 17, confirming active exploitation. Any client holding a CA-signed agent certificate can run code on the Puppet Server.",
-          "title": "CISA adds Puppet Enterprise RCE (CVE-2026-115731) to KEV — patch by Dec 1",
-          "url": "https://corgea.com/research/cve-2026-115731-115732-puppet-openvox-report-deserialization-rce-kev-november-2026"
+          "summary": "Google Threat Intelligence and Mandiant's Nov 17 case study shows FSB-linked group Cold Relic (aka Star Blizzard/Callisto) stealing a US organisation's Google Workspace data in late 2025, then impersonating its staff to breach a second US organisation in 2026. Fresh phishing was observed as recently as November 2026.",
+          "title": "Russia's Cold Relic turns one cloud breach into the next",
+          "url": "https://cybersecuritynews.com/russian-hackers-3/"
         }
       ],
       "title": "Act on Today"
@@ -36,31 +35,28 @@
     {
       "items": [
         {
-          "action": "Treat as an unverified claim until independently confirmed; monitor Akira's leak site and review any Optimil exposure in your supply chain.",
-          "details": "The claim was posted Nov 17 (discovered 13:40 UTC). The threatened data reportedly includes employee dates of birth, addresses, phone numbers, email addresses and Social Security numbers. The data has not yet been released.",
-          "image": "https://cdn.technadu.com/wp-content/uploads/2019/07/ransomware-1068x601.jpg",
+          "details": "The listing was flagged by ransomware monitoring services including Ransomware.live. The Gentlemen emerged in July 2025 and has claimed more than 1,100 organisations; Microsoft published an investigation into its ransomware in May 2026. It remains unknown whether the group accessed Nvidia directly, via a third party, or made an unsubstantiated claim.",
+          "image": "https://byteiota.com/wp-content/uploads/2025/11/nvidia-cuda-monopoly-featured-image-400x300.png",
           "severity": "High",
-          "summary": "The Akira ransomware group claimed Optimil Machinery Group on Nov 17 and threatened to publish 43GB of stolen corporate data, including employee PII and financial records.",
-          "title": "Akira claims Optimil Machinery Group, threatens 43GB leak",
-          "url": "https://qpulse.quasarcybertech.com/news/8652/akira-ransomware-group-targets-optimil-machinery-group-in-data-exfiltration-incident"
+          "summary": "The ransomware group The Gentlemen added Nvidia to its dark-web extortion site on Nov 18 with a countdown to publish allegedly stolen data in under 10 days. The group provided no evidence and Nvidia has not confirmed any compromise.",
+          "title": "Ransomware group claims Nvidia breach, threatens leak in 10 days (unverified)",
+          "url": "https://www.timesnownews.com/world/us/us-news/hacking-group-the-gentlemen-nvidia-breach-threatens-to-leak-data-article-156533952"
         },
         {
-          "action": "Healthcare customers using West-Com systems should watch for vendor advisories and treat any West-Com contact as potentially spoofed.",
-          "details": "West-Com makes integrated nurse-call and clinical workflow systems for hospitals, behavioural health facilities and senior-living sites. The claimed haul references Mongo, FocusCare and B Braun systems. No attack vector has been disclosed.",
-          "image": "https://thedailytechfeed.com/wp-content/uploads/2026/06/877-768x768.png",
+          "details": "The attack was recorded on Nov 18 at 15:10 UTC. No technical entry point has been disclosed, and the group says it intends to publish the data soon.",
+          "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,width=1200,onerror=redirect/uploads/asset/file/c0163b8d-a931-47e8-b1e7-8730090511ce/Ransomware_in_SA.jpg?t=1779099778",
           "severity": "High",
-          "summary": "The Endzone ransomware group claimed an attack on West-Com Group (Nurse Call Systems) on Nov 17, saying it exfiltrated over 15GB of data and encrypted parts of the network — while deliberately leaving hospital call systems running.",
-          "title": "Endzone claims West-Com Nurse Call Systems, 15GB exfiltrated",
-          "url": "https://qpulse.quasarcybertech.com/news/8644/endzone-ransomware-group-claims-attack-on-west-com-nurse-call-systems"
+          "summary": "The Akira ransomware group listed Spanish acoustic engineering company Audiotec Group on Nov 18, claiming to have exfiltrated 520GB of corporate data including employee passports, driving licences, home addresses and financial records.",
+          "title": "Akira claims 520GB theft from Spain's Audiotec Group",
+          "url": "https://qpulse.quasarcybertech.com/news/8709/akira-ransomware-group-claims-exfiltration-of-520gb-of-data-from-audiotec-group"
         },
         {
-          "action": "Treat as an unverified claim; watch for the data surfacing and for follow-on phishing using the stolen financial documents.",
-          "details": "The claimed data includes accounts payable and receivable records, financial documents, forecasts, leases, bank letters, certificates of insurance, W-9 forms and government filings. The claim is indexed via the Ransomware.live tracker; the underlying data has not been independently verified.",
-          "image": "https://cdn.prod.website-files.com/6109b259a7c8ef1ca2324f92/69670ad49b1e9f6e425308fb_Copilot%20-%20Data%20breach%20image-p-1080.png",
+          "details": "The claim was recorded on Nov 18. The group says it has the company's full management mail archives and the identity documents of underage workers from a Manitoba youth jobs programme.",
+          "image": "https://cdnglobal.secnews.gr/wp-content/uploads/2024/02/16164814/rhysida-ransomware-%CE%B8%CF%8D%CE%BC%CE%B1%CF%84%CE%B1-1-1024x559.jpg",
           "severity": "High",
-          "summary": "The Chaos ransomware group claimed on Nov 17 to have exfiltrated 210GB of financial and operational data from radienzliving.com.",
-          "title": "Chaos claims 210GB theft from radienzliving.com",
-          "url": "https://qpulse.quasarcybertech.com/news/8598/chaos-ransomware-group-claims-exfiltration-of-210gb-of-financial-and-operational-data-from-radienzliving-com"
+          "summary": "Rhysida claims to have taken 1.5TB — 1.37 million files — from SteelTech Inc, a Canadian outdoor wood-furnace manufacturer, including complete Sage accounting books, the domain-controller database with every employee's password hash, and plain-text SINs and bank details of 183 employees.",
+          "title": "Rhysida claims 1.5TB theft from SteelTech (HeatMaster SS)",
+          "url": "https://www.hookphish.com/blog/ransomware-group-rhysida-hits-steeltech-inc/"
         }
       ],
       "title": "Breaches & Ransomware"
@@ -68,36 +64,34 @@
     {
       "items": [
         {
-          "action": "Rotate any credentials shared with Indiabulls Housing Finance systems and watch for session-cookie reuse against corporate SaaS.",
-          "details": "The exposure report lists 1,045 passwords and 55 cookies as critical, with 151 compromised employees, 1,359 compromised users and 152 third-party employee credentials. The estimated attack date is Nov 15. No ransom demand has been confirmed.",
-          "image": "https://cdn.technadu.com/wp-content/uploads/2019/07/ransomware-1068x601.jpg",
+          "details": "PayU Payments Private Limited lodged its complaint on Nov 9. The arrested men allegedly rented out their bank accounts to the hackers for a 2% cut, according to police.",
+          "image": "https://corporate.payu.com/wp-content/uploads/2022/02/payment-gateway-header.webp",
           "severity": "High",
-          "summary": "Ransomhouse claimed Indiabulls Housing Finance on Nov 16, with the compromise traced to infostealer activity exposing 14,883 passwords and 85 session cookies.",
-          "title": "Ransomhouse claims Indiabulls Housing Finance after infostealer infection",
-          "url": "https://qpulse.quasarcybertech.com/news/8587/ransomhouse-claims-indiabulls-housing-finance-as-victim-following-infostealer-infection"
+          "summary": "Gurugram cyber police say criminals gained unauthorised access to PayU's cloud servers, registered new beneficiary accounts and siphoned off around ₹25.67 crore. Two men from Ludhiana were arrested on Nov 15 for allegedly supplying the mule bank accounts.",
+          "title": "PayU cloud servers breached; ₹25.67 crore siphoned, two held",
+          "url": "https://timesofindia.indiatimes.com/city/gurgaon/rs-25-crore-gone-from-payus-servers-gurgaon-police-arrest-2-men-who-rented-out-their-bank-accounts-to-hackers-for-2-cut/articleshow/135968653.cms"
         },
         {
-          "action": "Treat as an unverified claim; monitor for the threatened leak and for phishing using Connectwell business data.",
-          "details": "Connectwell is an Indian electrical terminal-block manufacturer. The group says it holds a verified set of records and has set a publication deadline of Nov 19, 20:15 UTC, unless the company negotiates.",
-          "image": "https://cdn.prod.website-files.com/6109b259a7c8ef1ca2324f92/69670ad49b1e9f6e425308fb_Copilot%20-%20Data%20breach%20image-p-1080.png",
+          "action": "Hospitals running e-Sushrut should contact C-DAC for the patched version and review who can reach the hospital dashboard externally.",
+          "details": "The advisory was issued on Nov 17 and rates the overall severity as high. CERT-In advised organisations using e-Sushrut to contact C-DAC to upgrade to the latest version. No exploitation in a specific hospital has been reported.",
+          "image": "https://the420.in/wp-content/uploads/2026/01/cert-in.jpg",
           "severity": "High",
-          "summary": "The PixelLeaks group claimed a cyberattack on Connectwell Industries Pvt Ltd on Nov 15, threatening to publish business records, intellectual property and operational material by Nov 19.",
-          "title": "PixelLeaks claims Connectwell Industries, sets Nov 19 leak deadline",
-          "url": "https://www.dexpose.io/pixelleaks-breaches-connectwell-industries-pvt-ltd/"
+          "summary": "CERT-In has flagged four vulnerabilities in e-Sushrut, the Hospital Management Information System built by C-DAC, warning that remote attackers could gain unauthorised access to hospital dashboards, operational statistics and sensitive patient information.",
+          "title": "CERT-In warns of high-severity flaws in C-DAC's e-Sushrut hospital software",
+          "url": "https://www.deccanherald.com/amp/story/india/cert-in-warns-of-high-severity-flaws-in-c-dacs-e-sushrut-hospital-software-4223100"
         },
         {
-          "action": "SBI customers should expect targeted phishing using their real details; verify any SBI contact through official channels and report fraud to report.phishing@sbi.co.in or 1930.",
-          "details": "The FIR, registered at CBD-Belapur police station, says the haul included about 3.75 lakh records across 32 CSV files plus 2,722 PDFs, with names, mobile numbers, dates of birth, addresses, branch and CIF IDs and loan-lead details. SBI's Oct 21 filing said 3,897 customer records with personal data were found on the dark web; the bank says the data has not been misused and the incident has no material impact on core operations. The main risk now is scammers posing as SBI using the known details.",
-          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
-          "severity": "High",
-          "summary": "SBI filed a police complaint on Nov 12 after data was taken from its Global IT Centre in Navi Mumbai between Oct 9 and 15. The bank said on Oct 23 it had individually informed every customer whose data was identified.",
-          "title": "SBI files FIR over dark-web records; affected customers were informed Oct 23",
-          "url": "https://ifynx.com/blog/sbi-data-breach-fir-global-it-centre-gulf-nris-kyc-checklist-gulf-egypt/"
+          "details": "The listing was tracked by Ransomware.live. The claim is unverified and the retailer has not publicly commented.",
+          "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,width=1200,onerror=redirect/uploads/asset/file/c0163b8d-a931-47e8-b1e7-8730090511ce/Ransomware_in_SA.jpg?t=1779099778",
+          "severity": "Medium",
+          "summary": "The LockBit5 ransomware group published Indian retailer Umrao Cashmere (umraocashmere.com) as a victim on its leak site on Nov 18. No technical details or data extent have been disclosed beyond the listing.",
+          "title": "LockBit5 lists India's Umrao Cashmere on its leak site",
+          "url": "https://qpulse.quasarcybertech.com/news/8733/lockbit5-ransomware-group-targets-umrao-cashmere"
         }
       ],
       "title": "India"
     }
   ],
-  "subtitle": "Wednesday, November 18 — Here's what's worth your attention today.",
+  "subtitle": "Thursday, November 19 — Here's what's worth your attention today.",
   "title": "Morning Cybersecurity Digest"
 }

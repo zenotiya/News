@@ -1,0 +1,97 @@
+{
+  "date": "2026-11-19",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Upgrade NGINX to 1.30.7 or 1.31.9. If you cannot patch now, disable HTTP/2 (http2 off) as a stopgap.",
+          "details": "CVE-2026-123633 is a use-after-free on HTTP/2 connections. Fixed in NGINX Open Source 1.30.7 (stable) and 1.31.9 (mainline). Community ingress-nginx is archived and has no fix, and exploitation of CVE-2026-123007 needs roughly 128 GB on a single connection, so attacks are loud but real. Wiz confirmed RCE with an ASLR bypass on official 1.31.7/1.31.8 builds.",
+          "severity": "Critical",
+          "summary": "F5 shipped fixes on Nov 18 for two critical HTTP/2 flaws in NGINX, both scored CVSS 9.2 (v4.0). CVE-2026-123007 is an integer underflow in flow-control accounting, present since NGINX 1.9.5 (2015), and Rapid7 has published a proof of concept for unauthenticated RCE.",
+          "title": "NGINX HTTP/2 flaws allow unauthenticated RCE (CVE-2026-123007, CVE-2026-123633)",
+          "url": "https://www.rapid7.com/blog/post/ve-cve-2026-123007-critical-nginx-http-2-integer-underflow-leads-to-rce-fixed/"
+        },
+        {
+          "action": "Upgrade to Apache Roller 6.1.6 or later. Disabling XML-RPC in the admin console alone does not stop attacks, since older builds deserialize the payload before reading that setting.",
+          "details": "The XML-RPC endpoint deserializes vendor extension types before authenticating the requester. Apache has not disclosed who is behind the attacks or how many servers are compromised. The same bug was previously tracked as CVE-2026-82384 for Roller 6.1.5.",
+          "image": "https://rollerweblogger.org/roller/mediaresource/23986d06-37aa-48c1-8301-90419520953b",
+          "severity": "Critical",
+          "summary": "Apache warns that CVE-2026-129448, an unauthenticated deserialization flaw in Roller 4.0.0 through 6.1.4, is being actively exploited to gain remote code execution. CVSS 9.8.",
+          "title": "Apache Roller RCE actively exploited — upgrade to 6.1.6",
+          "url": "https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/"
+        },
+        {
+          "action": "Audit Google Workspace super-admin activity, Customer Takeout exports and deleted Alert Center alerts; treat stolen staff directories as targeting material for follow-on impersonation.",
+          "details": "In the first intrusion the group used a compromised Super Admin account to download the organisation's entire cloud drive, export full employee lists and run a domain-wide Google Workspace Customer Takeout export, then deleted security alerts. The second intrusion was linked through a phishing redirect referencing the first victim.",
+          "image": "https://telegrafi.com/media-library/2021-12-googlehack-jpg.jpg?id=57934512&width=1200&height=800&coordinates=0%2C0%2C0%2C0",
+          "severity": "High",
+          "summary": "Google Threat Intelligence and Mandiant's Nov 17 case study shows FSB-linked group Cold Relic (aka Star Blizzard/Callisto) stealing a US organisation's Google Workspace data in late 2025, then impersonating its staff to breach a second US organisation in 2026. Fresh phishing was observed as recently as November 2026.",
+          "title": "Russia's Cold Relic turns one cloud breach into the next",
+          "url": "https://cybersecuritynews.com/russian-hackers-3/"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "details": "The listing was flagged by ransomware monitoring services including Ransomware.live. The Gentlemen emerged in July 2025 and has claimed more than 1,100 organisations; Microsoft published an investigation into its ransomware in May 2026. It remains unknown whether the group accessed Nvidia directly, via a third party, or made an unsubstantiated claim.",
+          "image": "https://byteiota.com/wp-content/uploads/2025/11/nvidia-cuda-monopoly-featured-image-400x300.png",
+          "severity": "High",
+          "summary": "The ransomware group The Gentlemen added Nvidia to its dark-web extortion site on Nov 18 with a countdown to publish allegedly stolen data in under 10 days. The group provided no evidence and Nvidia has not confirmed any compromise.",
+          "title": "Ransomware group claims Nvidia breach, threatens leak in 10 days (unverified)",
+          "url": "https://www.timesnownews.com/world/us/us-news/hacking-group-the-gentlemen-nvidia-breach-threatens-to-leak-data-article-156533952"
+        },
+        {
+          "details": "The attack was recorded on Nov 18 at 15:10 UTC. No technical entry point has been disclosed, and the group says it intends to publish the data soon.",
+          "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,width=1200,onerror=redirect/uploads/asset/file/c0163b8d-a931-47e8-b1e7-8730090511ce/Ransomware_in_SA.jpg?t=1779099778",
+          "severity": "High",
+          "summary": "The Akira ransomware group listed Spanish acoustic engineering company Audiotec Group on Nov 18, claiming to have exfiltrated 520GB of corporate data including employee passports, driving licences, home addresses and financial records.",
+          "title": "Akira claims 520GB theft from Spain's Audiotec Group",
+          "url": "https://qpulse.quasarcybertech.com/news/8709/akira-ransomware-group-claims-exfiltration-of-520gb-of-data-from-audiotec-group"
+        },
+        {
+          "details": "The claim was recorded on Nov 18. The group says it has the company's full management mail archives and the identity documents of underage workers from a Manitoba youth jobs programme.",
+          "image": "https://cdnglobal.secnews.gr/wp-content/uploads/2024/02/16164814/rhysida-ransomware-%CE%B8%CF%8D%CE%BC%CE%B1%CF%84%CE%B1-1-1024x559.jpg",
+          "severity": "High",
+          "summary": "Rhysida claims to have taken 1.5TB — 1.37 million files — from SteelTech Inc, a Canadian outdoor wood-furnace manufacturer, including complete Sage accounting books, the domain-controller database with every employee's password hash, and plain-text SINs and bank details of 183 employees.",
+          "title": "Rhysida claims 1.5TB theft from SteelTech (HeatMaster SS)",
+          "url": "https://www.hookphish.com/blog/ransomware-group-rhysida-hits-steeltech-inc/"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "details": "PayU Payments Private Limited lodged its complaint on Nov 9. The arrested men allegedly rented out their bank accounts to the hackers for a 2% cut, according to police.",
+          "image": "https://corporate.payu.com/wp-content/uploads/2022/02/payment-gateway-header.webp",
+          "severity": "High",
+          "summary": "Gurugram cyber police say criminals gained unauthorised access to PayU's cloud servers, registered new beneficiary accounts and siphoned off around ₹25.67 crore. Two men from Ludhiana were arrested on Nov 15 for allegedly supplying the mule bank accounts.",
+          "title": "PayU cloud servers breached; ₹25.67 crore siphoned, two held",
+          "url": "https://timesofindia.indiatimes.com/city/gurgaon/rs-25-crore-gone-from-payus-servers-gurgaon-police-arrest-2-men-who-rented-out-their-bank-accounts-to-hackers-for-2-cut/articleshow/135968653.cms"
+        },
+        {
+          "action": "Hospitals running e-Sushrut should contact C-DAC for the patched version and review who can reach the hospital dashboard externally.",
+          "details": "The advisory was issued on Nov 17 and rates the overall severity as high. CERT-In advised organisations using e-Sushrut to contact C-DAC to upgrade to the latest version. No exploitation in a specific hospital has been reported.",
+          "image": "https://the420.in/wp-content/uploads/2026/01/cert-in.jpg",
+          "severity": "High",
+          "summary": "CERT-In has flagged four vulnerabilities in e-Sushrut, the Hospital Management Information System built by C-DAC, warning that remote attackers could gain unauthorised access to hospital dashboards, operational statistics and sensitive patient information.",
+          "title": "CERT-In warns of high-severity flaws in C-DAC's e-Sushrut hospital software",
+          "url": "https://www.deccanherald.com/amp/story/india/cert-in-warns-of-high-severity-flaws-in-c-dacs-e-sushrut-hospital-software-4223100"
+        },
+        {
+          "details": "The listing was tracked by Ransomware.live. The claim is unverified and the retailer has not publicly commented.",
+          "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,width=1200,onerror=redirect/uploads/asset/file/c0163b8d-a931-47e8-b1e7-8730090511ce/Ransomware_in_SA.jpg?t=1779099778",
+          "severity": "Medium",
+          "summary": "The LockBit5 ransomware group published Indian retailer Umrao Cashmere (umraocashmere.com) as a victim on its leak site on Nov 18. No technical details or data extent have been disclosed beyond the listing.",
+          "title": "LockBit5 lists India's Umrao Cashmere on its leak site",
+          "url": "https://qpulse.quasarcybertech.com/news/8733/lockbit5-ransomware-group-targets-umrao-cashmere"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Thursday, November 19 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}
