@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-20",
+  "items": [
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-123890",
+      "plain": "VMware vCenter Server lets an unauthenticated network attacker take full administrator control; patch vCenter to the fixed release immediately.",
+      "product": "VMware vCenter Server",
+      "severity": "Critical",
+      "summary": "An authentication bypass in the VMware Directory Service lets an attacker with network access to vCenter gain administrator access without any credentials. Broadcom disclosed it on 19 November 2026 after Google's Mandiant found it exploited as a zero-day since early September; patches are available and no workaround exists.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123890",
+      "versions": "7.0 · 8.0 · 9.0 · 9.1"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-90436",
+      "plain": "Apache Axis 1.x lets a remote attacker with no login run code on the server; migrate off the end-of-life software now.",
+      "product": "Apache Axis 1.x",
+      "severity": "Critical",
+      "summary": "Deserializing a crafted SOAP fault lets an unauthenticated remote attacker load and instantiate arbitrary classes on the server, leading to remote code execution. Axis 1.x is end-of-life with no fix release planned, and CISA added the flaw to its Known Exploited Vulnerabilities catalog on 18 November 2026 after exploitation was detected against Confluence and N-central.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90436",
+      "versions": "≤ 1.4"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-114516",
+      "plain": "Etherpad lets anyone on the internet read any file the server can see; upgrade to Etherpad 3.3.3 immediately.",
+      "product": "Etherpad",
+      "severity": "Critical",
+      "summary": "A path-traversal flaw in Etherpad's pre-authentication static-asset handler lets a remote attacker with no credentials read any file available to the Etherpad process. Leaked configuration or environment secrets can then expose administrator credentials and lead to full server compromise; fixed in Etherpad 3.3.3.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114516",
+      "versions": "1.8.14–3.3.2"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-126170",
+      "plain": "FortiManager and FortiAnalyzer let an unauthenticated attacker run commands on the device; apply Fortinet's patch now.",
+      "product": "FortiManager / FortiAnalyzer",
+      "severity": "Critical",
+      "summary": "An output-encoding flaw in the JSON RPC API of FortiManager and FortiAnalyzer lets an unauthenticated attacker execute unauthorized code or commands via a specially crafted HTTP request. It is the most severe of eight critical Fortinet advisories published on 10 November 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126170",
+      "versions": "8.0.0–8.0.2 · 7.6.0–7.6.7"
+    },
+    {
+      "cvss": 9.0,
+      "id": "CVE-2026-132807",
+      "plain": "Ubiquiti UniFi Access lets a network attacker read sensitive data and change door-access devices; update to 4.3.24 now.",
+      "product": "Ubiquiti UniFi Access Application",
+      "severity": "Critical",
+      "summary": "An improper certificate validation flaw in the UniFi Access Application lets an attacker with network access obtain sensitive information from and make unauthorized changes to an adopted UniFi Access device. Published 19 November 2026; fixed in version 4.3.24.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132807",
+      "versions": "before 4.3.24"
+    }
+  ]
+}

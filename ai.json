@@ -1,40 +1,40 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "items": [
     {
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png",
       "name": "Gemini 4 Neon",
-      "plain": "A faster frontier AI model for coding, analysis and research work that businesses can put straight into everyday workflows.",
-      "summary": "Google's fourth Gemini 4 model, pitched as frontier-level intelligence for complex software engineering, knowledge work and science at faster, lower-cost speeds than its largest models. Rolling out now to AI Pro and Ultra subscribers and through the Gemini API and AI Studio.",
+      "plain": "Google's new mid-tier AI model handles demanding coding, analysis and research work quickly, giving teams frontier-level results for everyday professional tasks.",
+      "summary": "Google's new mid-tier Gemini 4 model brings frontier-level reasoning to complex coding, knowledge work and science tasks with fast end-to-end completion, sitting between the flagship Carbon and the everyday Hydrogen. It is rolling out now in the Gemini API, Google AI Studio, the Gemini app and Antigravity.",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
     },
     {
-      "image": "https://us1.discourse-cdn.com/openai1/optimized/4X/e/b/0/eb010b111f193137520f06dc148808ec00e3ef5e_2_1024x576.jpeg",
-      "name": "GPT-6.2 Sol",
-      "plain": "An everyday AI model for routine business tasks that lets teams get more work done on the same plan.",
-      "summary": "OpenAI's go-to model for everyday work, updated alongside GPT-6.2 Astra; it handles routine multi-step tasks so users complete more on the same paid plan. Available in ChatGPT Work, Codex and the API.",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Genie_4_Social_Share.max-1440x810.png",
+      "name": "Genie 4",
+      "plain": "Google's interactive world model lets developers build explorable simulated worlds with sound for games, training and design, straight from a text prompt or image.",
+      "summary": "Google DeepMind's interactive world model is now available to developers through the Gemini API and Google AI Studio, generating continuous 720p worlds at 24 frames per second with synchronized native audio from a text prompt or reference image. Developers can prototype interactive experiences, visualise spatial designs and train robotics and AI agents in worlds that respond to keyboard controls and live prompts.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/"
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+      "name": "GPT-6.2 Astra and Sol",
+      "plain": "OpenAI's latest models help teams produce professional documents, code and research faster and cheaper, with the flagship built for the hardest professional work.",
+      "summary": "OpenAI's new frontier model GPT-6.2 Astra targets the hardest professional work — documents, spreadsheets, code and scientific research — with better results at lower cost than its predecessor, alongside GPT-6.2 Sol, an efficient model for everyday work. Both are available now in ChatGPT and through the OpenAI API.",
       "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
     },
     {
-      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/microsoft/Aion-1.0-Instruct-2.3B.png",
-      "name": "Microsoft Aion 1.0 Instruct",
-      "plain": "A small open model that will power built-in AI on Windows PCs, so businesses can test on-device AI helpers before they ship.",
-      "summary": "Microsoft published Aion 1.0 Instruct, a 2.3-billion-parameter open-weight model under the MIT license; an optimized version becomes the Windows operating system's built-in small language model by the end of January 2027.",
-      "url": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B"
+      "image": "https://img.alicdn.com/imgextra/i1/O1CN015qhsInXrSKD1chua_!!6000000005161-2-tps-800-800.png",
+      "name": "Qwen4-Max",
+      "plain": "Alibaba's flagship AI model tackles complex professional and scientific work at lower cost, with built-in vision for documents, images and video.",
+      "summary": "Alibaba's new flagship Qwen model pairs a 2.4-trillion-parameter mixture-of-experts design with native vision and a one-million-token context window, and is available now through QwenCloud. Alibaba says it cuts the average cost per professional task by about 60% versus its predecessor while adding stronger safeguards against offensive cybersecurity uses.",
+      "url": "https://alibabacloud.com/blog/alibaba-unveils-qwen4-max-new-ai-teammate-for-work-creativity-and-discovery_603783"
     },
     {
-      "image": "https://microsoft.ai/wp-content/uploads/2026/11/All-Up-Blog.jpg",
-      "name": "MAI Image 2.7",
-      "plain": "An image model for creating and editing marketing and product visuals quickly, at a fraction of the cost of rival image models.",
-      "summary": "Microsoft's new image generation and editing model, launched at Ignite, which Microsoft says tops the Artificial Analysis image-editing leaderboard. Available in public preview through Microsoft Foundry, with a cheaper Flash variant for high-volume work.",
-      "url": "https://microsoft.ai/news/microsoft-ignite-2026-mai-keynote/"
-    },
-    {
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/frame_zjQlth4.width-1300.png",
-      "name": "Stitch Loop",
-      "plain": "An always-on AI agent that watches a live product, spots problems and drafts fixes for human approval, so small teams keep improving software after launch.",
-      "summary": "A Google Labs experiment: a long-running product agent that connects to a codebase and live metrics, finds what needs fixing and opens GitHub pull requests for human review. A global waitlist is open, with priority for Google AI Ultra subscribers.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/"
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M7R8FT40SDKKF94QYB97GJJT.01M7R8FTRTG1FSS3A675QSEWY2.png",
+      "name": "Clairic and Clairic-flash",
+      "plain": "Cloudflare's open models pull clean, structured data out of invoices, receipts and PDFs, so businesses can automate paperwork without sending documents to a third party.",
+      "summary": "Cloudflare's updated document-extraction models — the 27-billion-parameter Clairic and a new 9-billion-parameter Clairic-flash — are now open-weight under Apache 2.0, pulling typed fields, tables and line items from text, images and PDFs. Both run on Workers AI and can be self-hosted, answering in under a second.",
+      "url": "https://blog.cloudflare.com/open-clairic/"
     }
   ]
 }

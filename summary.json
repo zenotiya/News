@@ -5,37 +5,37 @@
   "worst_cvss": 9.8,
   "priorities": [
     {
-      "id": "CVE-2026-126170",
+      "id": "CVE-2026-123890",
       "cvss": 9.8,
-      "summary": "An output-encoding flaw in the JSON RPC API of FortiManager and FortiAnalyzer lets an unauthenticated attacker execute unauthorized code or commands via a specially crafted HTTP request when the JSON API is enabled. Fortinet's November advisories cover the 7.6 and 8.0 lines — patch now, or apply workarounds where a fix is still upcoming.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126170",
-      "plain": "FortiManager and FortiAnalyzer let an attacker on the network run code on the device without logging in; patch or apply Fortinet's workaround now.",
-      "product": "FortiManager / FortiAnalyzer",
-      "versions": "8.0.0–8.0.2 · 7.6.0–7.6.7"
+      "summary": "An authentication bypass in the VMware Directory Service lets an attacker with network access to vCenter gain administrator access without any credentials. Broadcom disclosed it on 19 November 2026 after Google's Mandiant found it exploited as a zero-day since early September; patches are available and no workaround exists.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123890",
+      "plain": "VMware vCenter Server lets an unauthenticated network attacker take full administrator control; patch vCenter to the fixed release immediately.",
+      "product": "VMware vCenter Server",
+      "versions": "7.0 · 8.0 · 9.0 · 9.1"
     },
     {
-      "id": "CVE-2026-126262",
+      "id": "CVE-2026-90436",
       "cvss": 9.8,
-      "summary": "A SQL injection flaw in FortiManager and FortiAnalyzer lets an unauthenticated attacker who can reach the OFTP port run code or commands on the system via crafted OFTP packets. Fortinet's November advisories cover affected 7.2 through 8.0 releases — upgrade to a fixed version.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126262",
-      "plain": "FortiManager and FortiAnalyzer let an attacker on the network run commands on the device without logging in; upgrade to a fixed version now.",
-      "product": "FortiManager / FortiAnalyzer",
-      "versions": "FortiAnalyzer 8.0.0–8.0.1 · 7.6.0–7.6.7 · 7.4.0–7.4.11 · 7.2.0–7.2.12; FortiManager 8.0.0 · 7.6.0–7.6.7 · 7.4.0–7.4.11 · 7.2.0–7.2.12"
+      "summary": "Deserializing a crafted SOAP fault lets an unauthenticated remote attacker load and instantiate arbitrary classes on the server, leading to remote code execution. Axis 1.x is end-of-life with no fix release planned, and CISA added the flaw to its Known Exploited Vulnerabilities catalog on 18 November 2026 after exploitation was detected against Confluence and N-central.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90436",
+      "plain": "Apache Axis 1.x lets a remote attacker with no login run code on the server; migrate off the end-of-life software now.",
+      "product": "Apache Axis 1.x",
+      "versions": "≤ 1.4"
     },
     {
-      "id": "CVE-2026-115731",
-      "cvss": 9.4,
-      "summary": "A deserialization flaw in Puppet's report-processing code lets a client holding any CA-signed agent certificate run arbitrary code on the Puppet Server as its service user. CISA added it to the Known Exploited Vulnerabilities catalog on 18 November citing active exploitation — upgrade Puppet Core to 8.22.2 or 9.1.3, or Puppet Enterprise to a fixed release.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115731",
-      "plain": "Puppet lets an attacker with a signed agent certificate run code on the central server; upgrade Puppet now, and check certificate signing.",
-      "product": "Puppet Enterprise / Puppet",
-      "versions": "Puppet Core 8.0.0–8.22.1 · 9.0.0–9.1.2; Puppet Enterprise 2023.8.0–2023.8.12 · 2025.0.0–2025.12.0 · 2026.0.0"
+      "id": "CVE-2026-114516",
+      "cvss": 9.8,
+      "summary": "A path-traversal flaw in Etherpad's pre-authentication static-asset handler lets a remote attacker with no credentials read any file available to the Etherpad process. Leaked configuration or environment secrets can then expose administrator credentials and lead to full server compromise; fixed in Etherpad 3.3.3.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114516",
+      "plain": "Etherpad lets anyone on the internet read any file the server can see; upgrade to Etherpad 3.3.3 immediately.",
+      "product": "Etherpad",
+      "versions": "1.8.14–3.3.2"
     }
   ],
   "model": {
     "name": "Gemini 4 Neon",
-    "summary": "Google's fourth Gemini 4 model, pitched as frontier-level intelligence for complex software engineering, knowledge work and science at faster, lower-cost speeds than its largest models. Rolling out now to AI Pro and Ultra subscribers and through the Gemini API and AI Studio.",
+    "summary": "Google's new mid-tier Gemini 4 model brings frontier-level reasoning to complex coding, knowledge work and science tasks with fast end-to-end completion, sitting between the flagship Carbon and the everyday Hydrogen. It is rolling out now in the Gemini API, Google AI Studio, the Gemini app and Antigravity.",
     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
-    "plain": "A faster frontier AI model for coding, analysis and research work that businesses can put straight into everyday workflows."
+    "plain": "Google's new mid-tier AI model handles demanding coding, analysis and research work quickly, giving teams frontier-level results for everyday professional tasks."
   }
 }

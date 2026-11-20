@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-20",
+  "items": [
+    {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png",
+      "name": "Gemini 4 Neon",
+      "plain": "Google's new mid-tier AI model handles demanding coding, analysis and research work quickly, giving teams frontier-level results for everyday professional tasks.",
+      "summary": "Google's new mid-tier Gemini 4 model brings frontier-level reasoning to complex coding, knowledge work and science tasks with fast end-to-end completion, sitting between the flagship Carbon and the everyday Hydrogen. It is rolling out now in the Gemini API, Google AI Studio, the Gemini app and Antigravity.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+    },
+    {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Genie_4_Social_Share.max-1440x810.png",
+      "name": "Genie 4",
+      "plain": "Google's interactive world model lets developers build explorable simulated worlds with sound for games, training and design, straight from a text prompt or image.",
+      "summary": "Google DeepMind's interactive world model is now available to developers through the Gemini API and Google AI Studio, generating continuous 720p worlds at 24 frames per second with synchronized native audio from a text prompt or reference image. Developers can prototype interactive experiences, visualise spatial designs and train robotics and AI agents in worlds that respond to keyboard controls and live prompts.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/"
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+      "name": "GPT-6.2 Astra and Sol",
+      "plain": "OpenAI's latest models help teams produce professional documents, code and research faster and cheaper, with the flagship built for the hardest professional work.",
+      "summary": "OpenAI's new frontier model GPT-6.2 Astra targets the hardest professional work — documents, spreadsheets, code and scientific research — with better results at lower cost than its predecessor, alongside GPT-6.2 Sol, an efficient model for everyday work. Both are available now in ChatGPT and through the OpenAI API.",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+    },
+    {
+      "image": "https://img.alicdn.com/imgextra/i1/O1CN015qhsInXrSKD1chua_!!6000000005161-2-tps-800-800.png",
+      "name": "Qwen4-Max",
+      "plain": "Alibaba's flagship AI model tackles complex professional and scientific work at lower cost, with built-in vision for documents, images and video.",
+      "summary": "Alibaba's new flagship Qwen model pairs a 2.4-trillion-parameter mixture-of-experts design with native vision and a one-million-token context window, and is available now through QwenCloud. Alibaba says it cuts the average cost per professional task by about 60% versus its predecessor while adding stronger safeguards against offensive cybersecurity uses.",
+      "url": "https://alibabacloud.com/blog/alibaba-unveils-qwen4-max-new-ai-teammate-for-work-creativity-and-discovery_603783"
+    },
+    {
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M7R8FT40SDKKF94QYB97GJJT.01M7R8FTRTG1FSS3A675QSEWY2.png",
+      "name": "Clairic and Clairic-flash",
+      "plain": "Cloudflare's open models pull clean, structured data out of invoices, receipts and PDFs, so businesses can automate paperwork without sending documents to a third party.",
+      "summary": "Cloudflare's updated document-extraction models — the 27-billion-parameter Clairic and a new 9-billion-parameter Clairic-flash — are now open-weight under Apache 2.0, pulling typed fields, tables and line items from text, images and PDFs. Both run on Workers AI and can be self-hosted, answering in under a second.",
+      "url": "https://blog.cloudflare.com/open-clairic/"
+    }
+  ]
+}
