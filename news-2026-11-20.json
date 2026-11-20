@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-20",
+  "title": "Morning Cybersecurity Digest",
+  "subtitle": "Friday, November 20 — Here's what's worth your attention today.",
+  "sections": [
+    {
+      "title": "Act on Today",
+      "items": [
+        {
+          "title": "CISA adds four actively exploited flaws to KEV — patch now",
+          "severity": "Critical",
+          "summary": "CISA on Nov 18 added four actively exploited flaws to its Known Exploited Vulnerabilities catalog: Apache Axis CVE-2026-90436 (CVSS 9.8), REDCap CVE-2026-90817 (9.8), LiteLLM CVE-2026-40217 (8.8) and Synology DSM CVE-2024-10441 (9.8).",
+          "details": "CVE-2026-90436 is an unsafe-reflection RCE in end-of-life Apache Axis 1.x, seen exploited against Atlassian Confluence Data Center and N-able N-central — the latter to deploy cryptominers. Rapid7 detected Confluence exploitation on Nov 13 and a Metasploit module landed Nov 17. CVE-2026-40217 is being abused in LLMjacking attacks to turn limited inference keys into admin credentials. Axis 1.x has no fix — remove or isolate it.",
+          "action": "Patch REDCap, LiteLLM and Synology DSM immediately; for Axis 1.x, upgrade or isolate affected Confluence and N-central instances and hunt for the published IOCs.",
+          "url": "http://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html",
+          "image": "https://softwarecurated.com/wp-content/uploads/2026/08/255818-544034-medium.webp"
+        },
+        {
+          "title": "Java4Shell: critical OpenJDK flaw prompts urgent patch calls",
+          "severity": "Critical",
+          "summary": "CVE-2026-114938 ('Java4Shell') is a memory-corruption flaw in OpenJDK's Base64 decoder that can allow remote code execution. CISA issued an alert on Nov 17 and CERT-In followed on Nov 18; Oracle shipped fixes in its Nov 17 security update.",
+          "details": "The flaw was disclosed by researchers at Calif on Nov 17. Scores vary by scorer (Oracle CVSS 3.1 8.1; Calif CVSS 4.0 9.2). No confirmed in-the-wild exploitation has been reported in the advisories so far.",
+          "action": "Apply Oracle's November 2026 Java updates (Java SE / GraalVM) and update downstream OpenJDK builds (Corretto, Zulu, Temurin) as vendors release them.",
+          "url": "https://www.business-standard.com/amp/technology/tech-news/java-security-flaw-explained-why-cisa-cert-in-urge-urgent-software-update-126111900718_1.html",
+          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpmKAL6c8wCyxeq8_aof6Fm_7TV-mgXGJpr28JVgfcOajcOfxcLtHgG6GSv_VetujPrtr-wLLVsMe40Tw1LbytMbmCj1H5C9HDeeUzH907Efj10puh3GD92US7_Xca4EqGDtwTVaZ_hak/w728-h546-p-k-no-nu/code-5067826_1920.jpg"
+        },
+        {
+          "title": "Puppet Enterprise RCE actively exploited — CISA sets Dec 1 deadline",
+          "severity": "Critical",
+          "summary": "CISA added CVE-2026-115731, a deserialization flaw in Perforce Puppet Enterprise, to its KEV catalog on Nov 17 on evidence of active exploitation. A crafted agent report can execute code on the Puppet Server; NVD scores it CVSS 9.9.",
+          "details": "Perforce disclosed the flaw on Nov 3 (CVSS 4.0 9.4). Affected: Puppet Enterprise 2023.8.0 up to 2023.8.12, 2025.0.0 up to 2025.11.x, and 2026.0.0. Federal agencies must remediate by Dec 1.",
+          "action": "Apply Perforce's fixed Puppet Enterprise build and audit managed nodes for config drift, new cron/systemd entries or credential changes — a compromised master controls every node it manages.",
+          "url": "https://cybersecuritynews.com/puppet-enterprise-flaw-actively-exploited/",
+          "image": "https://www.uk.cdw.com/media/uayhiuzw/server_automation.jpg?width=755&height=580&quality=75"
+        }
+      ]
+    },
+    {
+      "title": "Breaches & Ransomware",
+      "items": [
+        {
+          "title": "Ransomware group 'n0n' leaks data of 22,000+ Visa, Mastercard and JPMorgan customers",
+          "severity": "High",
+          "summary": "The ransomware group n0n has leaked customer data from Visa, Mastercard and JPMorgan Chase after breaching a third-party service provider in Asia-Pacific — over 22,000 customers affected, including 16,000 JPMorgan Reserve cardholders.",
+          "details": "The leaked data includes names, email addresses, phone numbers and account IDs; the companies say no card numbers or payment data were exposed and their core systems were not breached. JPMorgan said the data came from vendors holding marketing data. The group had named the three firms on Nov 16 with a 48-hour ransom deadline.",
+          "action": "Customers of the affected programs should watch for targeted phishing using the leaked contact details; banks should review third-party vendor access.",
+          "url": "https://www.pymnts.com/cybersecurity/2026/visa-mastercard-and-jpmorgan-customer-data-leaked-in-breach/?utm_content=390532112&utm_medium=social&utm_source=linkedin&hss_channel=lcp-1194361",
+          "image": "https://images.ctfassets.net/agqck2hr2zli/l1F9jLNIyuqAn2cHVtXYM/c2da8a41bc16d199605b0ddff0001d62/payment_gateway_02_-_1200_x_600.jpg"
+        },
+        {
+          "title": "Newcomer 'Soulgroup' claims ransomware hit on Community Health Services (unverified)",
+          "severity": "High",
+          "summary": "Ransomware tracker Ransomware.live reported on Nov 19 that a newly surfaced group calling itself 'Soulgroup' has listed Community Health Services, a US community healthcare provider, on its leak site. The claim is unverified.",
+          "details": "Soulgroup listed several other organisations the same day, including SHOPBOT TOOLS, Noble Inc., United Medical Doctors, METO Systems and Nephrology Associates. Ransomware.live indexes operators' public posts and does not verify the underlying stolen content.",
+          "action": "Treat as an unverified claim; healthcare providers should watch for patient-data extortion and check the group's leak site only via trusted monitoring feeds.",
+          "url": "https://qpulse.quasarcybertech.com/news/8820/soulgroup-claims-ransomware-attack-against-community-health-services",
+          "image": "https://www.nandequipment.com/assets/img/industry/hospital.webp"
+        },
+        {
+          "title": "Vortex claims Ochsner Health breach, says it holds 466 GB of M365 data (unverified)",
+          "severity": "High",
+          "summary": "Ransomware group Vortex added Louisiana health system Ochsner Health to its leak site on Nov 19, claiming a full Microsoft 365 capture of 24,977 files totalling 466.44 GB. Ochsner has not confirmed a breach.",
+          "details": "The claim is the group's own assertion, mirrored by ransomware monitoring sites; the details have not been independently verified and Ochsner has not said when — or whether — it detected unauthorised activity.",
+          "action": "Watch for an official Ochsner statement; patients should be alert for phishing using health or contact details if the claim is confirmed.",
+          "url": "https://classactionu.org/current-data-breaches/ochsner-health/",
+          "image": "https://images.squarespace-cdn.com/content/v1/657dce0042d0994fe83d5639/1712341973106-X1S6VOSY5CZBEZHAHIYC/Hospital_Market.png?format=2500w"
+        }
+      ]
+    },
+    {
+      "title": "India",
+      "items": [
+        {
+          "title": "CERT-In flags flaws in Google Chrome — update now",
+          "severity": "High",
+          "summary": "CERT-In has warned of multiple vulnerabilities in Google Chrome for desktop — including use-after-free, out-of-bounds write and buffer overflow flaws — that could allow remote code execution, security bypass and data theft via a crafted web page.",
+          "details": "Versions before 158.0.8127.36 (Linux) and 158.0.8127.36/.37 (Mac) are affected. CERT-In rates the advisory high severity and urges users to install the latest Chrome update.",
+          "action": "Update Chrome to 158.0.8127.36 or later (Help → About Google Chrome) on all desktops.",
+          "url": "https://www.business-standard.com/amp/technology/tech-news/cert-in-flags-vulnerabilities-in-google-chrome-warns-users-of-cyber-risks-126111900284_1.html",
+          "image": "https://lp.thinkwithgoogle.com/rs/172-GOP-811/images/chrome.png"
+        },
+        {
+          "title": "Bhopal police station hit by ransomware; MP-CERT recovers data without paying",
+          "severity": "Medium",
+          "summary": "A computer at Bhopal's Ayodhya Nagar police station was hit by ransomware introduced via a pen drive; MP-CERT decrypted and recovered the files without the attackers' help — its first successful decryption of its kind.",
+          "details": "The ransomware progressively encrypted system files. MP-CERT's investigation found it had only encrypted local data and had not transmitted anything to an external server — no evidence of data leakage or theft.",
+          "action": "Block unknown USB devices, keep offline backups, and keep systems patched — MP-CERT's advice after the incident.",
+          "url": "https://www.freepressjournal.in/amp/bhopal/bhopal-police-station-hit-by-ransomware-attack-mp-cert-recovers-encrypted-data-without-hackers-help",
+          "image": "https://nbtv.news/wp-content/uploads/2026/07/WhatsApp-Image-2026-07-06-at-09.14.22-1068x780.jpeg"
+        },
+        {
+          "title": "Indore Police arrest 122 mule account holders in ₹12 crore cyber-fraud crackdown",
+          "severity": "Medium",
+          "summary": "Indore Police have arrested around 122 alleged mule account holders in connection with 70 FIRs involving cyber-fraud transactions worth over ₹12 crore since January 2026, under 'Operation Matrix'.",
+          "details": "The accounts were allegedly used to route money cheated from victims in several states. Nearly 80% of those arrested are aged 20–30. Police warned against sharing bank accounts, passbooks, ATM cards or OTPs with strangers on WhatsApp or Telegram.",
+          "action": "Never lend your bank account or OTP to anyone — mule accounts are the cash-out layer for fraud, and holders face prosecution.",
+          "url": "https://www.freepressjournal.in/amp/indore/indore-police-arrest-122-mule-account-holders-in-12-crore-cyber-fraud-cases-nearly-80-aged-2030",
+          "image": "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2026/07/your-paragraph-text-2026-07-07t191418-1783431888.jpg"
+        }
+      ]
+    }
+  ]
+}

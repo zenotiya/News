@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-19",
-  "count": 49,
+  "updated": "2026-11-20",
+  "count": 50,
   "items": [
+    {
+      "date": "2026-11-20",
+      "topic": "Social engineering & physical security",
+      "title": "Badge cloning in 2026 — the card is not the weakest link",
+      "what": "125 kHz HID Prox/EM4100 badges broadcast a fixed ID with zero crypto (cloned in seconds, even through a pocket with a concealed long-range reader); MIFARE Classic's Crypto1 was broken in 2008 and keys fall in under a minute, plus a 2024 Quarkslab backdoor key in the FM11RF08S compatible chip; DESFire EV3 / iCLASS SE / Seos resist cloning via AES challenge-response with diversified keys — but the reader-to-controller link is usually Wiegand, a 1980s unencrypted, unauthenticated, unsupervised protocol, so an attacker who reaches the reader wiring can capture and replay credentials regardless of card technology; the fix is OSDP with Secure Channel (AES-encrypted, supervised) plus modern credentials;",
+      "takeaway": "in physical assessments test the credential AND the reader wiring, and flag Wiegand as a finding even where cards are modern"
+    },
     {
       "date": "2026-11-19",
       "topic": "Cryptography & post-quantum",
