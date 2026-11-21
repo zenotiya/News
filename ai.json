@@ -1,40 +1,40 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "items": [
     {
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png",
-      "name": "Gemini 4 Neon",
-      "plain": "Google's new mid-tier AI model handles demanding coding, analysis and research work quickly, giving teams frontier-level results for everyday professional tasks.",
-      "summary": "Google's new mid-tier Gemini 4 model brings frontier-level reasoning to complex coding, knowledge work and science tasks with fast end-to-end completion, sitting between the flagship Carbon and the everyday Hydrogen. It is rolling out now in the Gemini API, Google AI Studio, the Gemini app and Antigravity.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/thinkingmachines/Inkling-2-Mini.png",
+      "name": "Thinking Machines Inkling 2 Mini",
+      "plain": "A capable open AI model that runs on ordinary business laptops, so teams can experiment and build with it without paying for cloud compute.",
+      "summary": "Thinking Machines Lab released Inkling 2 Mini on 20 November 2026, an open-weights multimodal model whose middle layers loop at inference time, squeezing stronger reasoning out of only 3.4B active parameters — small enough to run on a laptop. It is a research release, not tuned for production use.",
+      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini"
     },
     {
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Genie_4_Social_Share.max-1440x810.png",
-      "name": "Genie 4",
-      "plain": "Google's interactive world model lets developers build explorable simulated worlds with sound for games, training and design, straight from a text prompt or image.",
-      "summary": "Google DeepMind's interactive world model is now available to developers through the Gemini API and Google AI Studio, generating continuous 720p worlds at 24 frames per second with synchronized native audio from a text prompt or reference image. Developers can prototype interactive experiences, visualise spatial designs and train robotics and AI agents in worlds that respond to keyboard controls and live prompts.",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/"
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/tencent/Hy4.png",
+      "name": "Tencent Hy4 open weights",
+      "plain": "One of the largest open AI models is now downloadable, giving teams that run their own infrastructure a top-tier model without depending on a vendor's cloud.",
+      "summary": "Tencent published the full weights of Hy4, its 770B-parameter flagship multimodal model, on 20 November 2026 — the instruct model plus an FP8 build and a pretrained base — on Hugging Face, ModelScope and GitCode, fulfilling the open-weight pledge from its 4 November launch.",
+      "url": "https://huggingface.co/tencent/Hy4"
     },
     {
-      "image": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
-      "name": "GPT-6.2 Astra and Sol",
-      "plain": "OpenAI's latest models help teams produce professional documents, code and research faster and cheaper, with the flagship built for the hardest professional work.",
-      "summary": "OpenAI's new frontier model GPT-6.2 Astra targets the hardest professional work — documents, spreadsheets, code and scientific research — with better results at lower cost than its predecessor, alongside GPT-6.2 Sol, an efficient model for everyday work. Both are available now in ChatGPT and through the OpenAI API.",
-      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/nvidia/Nemotron-Labs-Sigma-8B.png",
+      "name": "NVIDIA Nemotron-Labs-Sigma",
+      "plain": "A faster way to generate text from AI models, cutting response times and compute costs for teams that run their own models.",
+      "summary": "NVIDIA released Nemotron-Labs-Sigma on 20 November 2026, a family of 14 open checkpoints at 3B and 8B scale built on continuous diffusion instead of next-token prediction, which NVIDIA says decodes up to 4.2x faster than standard autoregressive models.",
+      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-8B"
     },
     {
-      "image": "https://img.alicdn.com/imgextra/i1/O1CN015qhsInXrSKD1chua_!!6000000005161-2-tps-800-800.png",
-      "name": "Qwen4-Max",
-      "plain": "Alibaba's flagship AI model tackles complex professional and scientific work at lower cost, with built-in vision for documents, images and video.",
-      "summary": "Alibaba's new flagship Qwen model pairs a 2.4-trillion-parameter mixture-of-experts design with native vision and a one-million-token context window, and is available now through QwenCloud. Alibaba says it cuts the average cost per professional task by about 60% versus its predecessor while adding stronger safeguards against offensive cybersecurity uses.",
-      "url": "https://alibabacloud.com/blog/alibaba-unveils-qwen4-max-new-ai-teammate-for-work-creativity-and-discovery_603783"
+      "image": "https://superpowerdaily.com/posts/snowflake-opens-public-preview-of-ai-model-for-classifying-and-scoring-data/opengraph-image",
+      "name": "Snowflake Decision",
+      "plain": "Lets business teams score and sort huge volumes of data, like support tickets, directly inside their data warehouse without moving data or building custom models.",
+      "summary": "Snowflake put its Decision model into public preview on 20 November 2026: a purpose-built model for high-throughput classification, scoring and decision-making on massive datasets, called directly from SQL through Cortex AI_COMPLETE without moving data out of the warehouse.",
+      "url": "https://www.snowflake.com/en/blog/snowflake-decision-cortex-ai-functions/"
     },
     {
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M7R8FT40SDKKF94QYB97GJJT.01M7R8FTRTG1FSS3A675QSEWY2.png",
-      "name": "Clairic and Clairic-flash",
-      "plain": "Cloudflare's open models pull clean, structured data out of invoices, receipts and PDFs, so businesses can automate paperwork without sending documents to a third party.",
-      "summary": "Cloudflare's updated document-extraction models — the 27-billion-parameter Clairic and a new 9-billion-parameter Clairic-flash — are now open-weight under Apache 2.0, pulling typed fields, tables and line items from text, images and PDFs. Both run on Workers AI and can be self-hosted, answering in under a second.",
-      "url": "https://blog.cloudflare.com/open-clairic/"
+      "image": "https://explainx.ai/images/blog-library/open-weights-release.webp",
+      "name": "K2-Horizon",
+      "plain": "A full family of open AI models published with their training data and methods, so teams can inspect, adapt and run them on their own terms.",
+      "summary": "IFM released K2-Horizon on 15–17 November 2026, a fleet of six open models from a 0.9B dense checkpoint to a 375B-A23B mixture-of-experts, published with training data, intermediate checkpoints and the pipelines behind them — a full technical report followed on arXiv (2611.21003).",
+      "url": "https://arxiv.org/abs/2611.21003"
     }
   ]
 }

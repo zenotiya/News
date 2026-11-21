@@ -1,55 +1,54 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "items": [
     {
-      "cvss": 9.8,
-      "id": "CVE-2026-123890",
-      "plain": "VMware vCenter Server lets an unauthenticated network attacker take full administrator control; patch vCenter to the fixed release immediately.",
-      "product": "VMware vCenter Server",
+      "cvss": 10.0,
+      "id": "CVE-2026-14914",
+      "plain": "Tegsoft Contact Center lets attackers upload a web shell and take over the server — update to the latest release.",
+      "product": "Tegsoft Contact Center",
       "severity": "Critical",
-      "summary": "An authentication bypass in the VMware Directory Service lets an attacker with network access to vCenter gain administrator access without any credentials. Broadcom disclosed it on 19 November 2026 after Google's Mandiant found it exploited as a zero-day since early September; patches are available and no workaround exists.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123890",
-      "versions": "7.0 · 8.0 · 9.0 · 9.1"
+      "summary": "Unrestricted upload of files with dangerous types in Tegsoft Contact Center allows an attacker to upload a web shell to the web server and take it over. The issue affects versions before latest-202611161510.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14914",
+      "versions": "before latest-202611161510"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-90436",
-      "plain": "Apache Axis 1.x lets a remote attacker with no login run code on the server; migrate off the end-of-life software now.",
-      "product": "Apache Axis 1.x",
+      "id": "CVE-2026-133968",
+      "plain": "MONAI Label lets attackers run code on the server and is already being exploited — upgrade past 0.8.5 now.",
+      "product": "MONAI Label",
       "severity": "Critical",
-      "summary": "Deserializing a crafted SOAP fault lets an unauthenticated remote attacker load and instantiate arbitrary classes on the server, leading to remote code execution. Axis 1.x is end-of-life with no fix release planned, and CISA added the flaw to its Known Exploited Vulnerabilities catalog on 18 November 2026 after exploitation was detected against Confluence and N-central.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90436",
-      "versions": "≤ 1.4"
+      "summary": "MONAI Label through 0.8.5 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint. It has been exploited in the wild since September 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133968",
+      "versions": "through 0.8.5"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-114516",
-      "plain": "Etherpad lets anyone on the internet read any file the server can see; upgrade to Etherpad 3.3.3 immediately.",
-      "product": "Etherpad",
+      "id": "CVE-2026-130674",
+      "plain": "Craft CMS lets a user who can edit content write files and take over the site — upgrade to 5.11.4.",
+      "product": "Craft CMS",
       "severity": "Critical",
-      "summary": "A path-traversal flaw in Etherpad's pre-authentication static-asset handler lets a remote attacker with no credentials read any file available to the Etherpad process. Leaked configuration or environment secrets can then expose administrator credentials and lead to full server compromise; fixed in Etherpad 3.3.3.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114516",
-      "versions": "1.8.14–3.3.2"
+      "summary": "Craft CMS from 5.0.0 before 5.11.4 contains an incomplete blocklist fix that allows attackers who can author entry type title formats to write arbitrary files using ZipArchive or XMLWriter classes, achieving remote code execution.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130674",
+      "versions": "5.0.0–5.11.3"
     },
     {
       "cvss": 9.8,
-      "id": "CVE-2026-126170",
-      "plain": "FortiManager and FortiAnalyzer let an unauthenticated attacker run commands on the device; apply Fortinet's patch now.",
-      "product": "FortiManager / FortiAnalyzer",
+      "id": "CVE-2026-129175",
+      "plain": "A US government slope-monitoring app let anyone run database commands and seize full control — apply the October fix.",
+      "product": "U.S. Department of the Interior Unstable Slope Management Program",
       "severity": "Critical",
-      "summary": "An output-encoding flaw in the JSON RPC API of FortiManager and FortiAnalyzer lets an unauthenticated attacker execute unauthorized code or commands via a specially crafted HTTP request. It is the most severe of eight critical Fortinet advisories published on 10 November 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126170",
-      "versions": "8.0.0–8.0.2 · 7.6.0–7.6.7"
+      "summary": "The U.S. Department of the Interior Unstable Slope Management Program allows an unauthenticated user to inject unauthorized SQL commands that allow the attacker to gain root access and complete control over the database. Fixed on or around 2026-10-19.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129175"
     },
     {
-      "cvss": 9.0,
-      "id": "CVE-2026-132807",
-      "plain": "Ubiquiti UniFi Access lets a network attacker read sensitive data and change door-access devices; update to 4.3.24 now.",
-      "product": "Ubiquiti UniFi Access Application",
+      "cvss": 9.3,
+      "id": "CVE-2026-133949",
+      "plain": "Python's installer trusts revoked security certificates, so attackers could impersonate trusted sites — upgrade pip to 26.2.2.",
+      "product": "pip",
       "severity": "Critical",
-      "summary": "An improper certificate validation flaw in the UniFi Access Application lets an attacker with network access obtain sensitive information from and make unauthorized changes to an adopted UniFi Access device. Published 19 November 2026; fixed in version 4.3.24.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132807",
-      "versions": "before 4.3.24"
+      "summary": "pip prior to v26.2.2 bundles a certifi containing the compromised eMudhra certificates; upgrading to a secure pip requires either a Python version that rejects the compromised intermediates or hash pinning with a known-secure pip version.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133949",
+      "versions": "prior to 26.2.2"
     }
   ]
 }

@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-21",
+  "items": [
+    {
+      "cvss": 10.0,
+      "id": "CVE-2026-14914",
+      "plain": "Tegsoft Contact Center lets attackers upload a web shell and take over the server — update to the latest release.",
+      "product": "Tegsoft Contact Center",
+      "severity": "Critical",
+      "summary": "Unrestricted upload of files with dangerous types in Tegsoft Contact Center allows an attacker to upload a web shell to the web server and take it over. The issue affects versions before latest-202611161510.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14914",
+      "versions": "before latest-202611161510"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-133968",
+      "plain": "MONAI Label lets attackers run code on the server and is already being exploited — upgrade past 0.8.5 now.",
+      "product": "MONAI Label",
+      "severity": "Critical",
+      "summary": "MONAI Label through 0.8.5 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint. It has been exploited in the wild since September 2026.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133968",
+      "versions": "through 0.8.5"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-130674",
+      "plain": "Craft CMS lets a user who can edit content write files and take over the site — upgrade to 5.11.4.",
+      "product": "Craft CMS",
+      "severity": "Critical",
+      "summary": "Craft CMS from 5.0.0 before 5.11.4 contains an incomplete blocklist fix that allows attackers who can author entry type title formats to write arbitrary files using ZipArchive or XMLWriter classes, achieving remote code execution.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130674",
+      "versions": "5.0.0–5.11.3"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-129175",
+      "plain": "A US government slope-monitoring app let anyone run database commands and seize full control — apply the October fix.",
+      "product": "U.S. Department of the Interior Unstable Slope Management Program",
+      "severity": "Critical",
+      "summary": "The U.S. Department of the Interior Unstable Slope Management Program allows an unauthenticated user to inject unauthorized SQL commands that allow the attacker to gain root access and complete control over the database. Fixed on or around 2026-10-19.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129175"
+    },
+    {
+      "cvss": 9.3,
+      "id": "CVE-2026-133949",
+      "plain": "Python's installer trusts revoked security certificates, so attackers could impersonate trusted sites — upgrade pip to 26.2.2.",
+      "product": "pip",
+      "severity": "Critical",
+      "summary": "pip prior to v26.2.2 bundles a certifi containing the compromised eMudhra certificates; upgrading to a secure pip requires either a Python version that rejects the compromised intermediates or hash pinning with a known-secure pip version.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133949",
+      "versions": "prior to 26.2.2"
+    }
+  ]
+}

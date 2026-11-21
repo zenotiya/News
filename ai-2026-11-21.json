@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-21",
+  "items": [
+    {
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/thinkingmachines/Inkling-2-Mini.png",
+      "name": "Thinking Machines Inkling 2 Mini",
+      "plain": "A capable open AI model that runs on ordinary business laptops, so teams can experiment and build with it without paying for cloud compute.",
+      "summary": "Thinking Machines Lab released Inkling 2 Mini on 20 November 2026, an open-weights multimodal model whose middle layers loop at inference time, squeezing stronger reasoning out of only 3.4B active parameters — small enough to run on a laptop. It is a research release, not tuned for production use.",
+      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini"
+    },
+    {
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/tencent/Hy4.png",
+      "name": "Tencent Hy4 open weights",
+      "plain": "One of the largest open AI models is now downloadable, giving teams that run their own infrastructure a top-tier model without depending on a vendor's cloud.",
+      "summary": "Tencent published the full weights of Hy4, its 770B-parameter flagship multimodal model, on 20 November 2026 — the instruct model plus an FP8 build and a pretrained base — on Hugging Face, ModelScope and GitCode, fulfilling the open-weight pledge from its 4 November launch.",
+      "url": "https://huggingface.co/tencent/Hy4"
+    },
+    {
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/nvidia/Nemotron-Labs-Sigma-8B.png",
+      "name": "NVIDIA Nemotron-Labs-Sigma",
+      "plain": "A faster way to generate text from AI models, cutting response times and compute costs for teams that run their own models.",
+      "summary": "NVIDIA released Nemotron-Labs-Sigma on 20 November 2026, a family of 14 open checkpoints at 3B and 8B scale built on continuous diffusion instead of next-token prediction, which NVIDIA says decodes up to 4.2x faster than standard autoregressive models.",
+      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-8B"
+    },
+    {
+      "image": "https://superpowerdaily.com/posts/snowflake-opens-public-preview-of-ai-model-for-classifying-and-scoring-data/opengraph-image",
+      "name": "Snowflake Decision",
+      "plain": "Lets business teams score and sort huge volumes of data, like support tickets, directly inside their data warehouse without moving data or building custom models.",
+      "summary": "Snowflake put its Decision model into public preview on 20 November 2026: a purpose-built model for high-throughput classification, scoring and decision-making on massive datasets, called directly from SQL through Cortex AI_COMPLETE without moving data out of the warehouse.",
+      "url": "https://www.snowflake.com/en/blog/snowflake-decision-cortex-ai-functions/"
+    },
+    {
+      "image": "https://explainx.ai/images/blog-library/open-weights-release.webp",
+      "name": "K2-Horizon",
+      "plain": "A full family of open AI models published with their training data and methods, so teams can inspect, adapt and run them on their own terms.",
+      "summary": "IFM released K2-Horizon on 15–17 November 2026, a fleet of six open models from a 0.9B dense checkpoint to a 375B-A23B mixture-of-experts, published with training data, intermediate checkpoints and the pipelines behind them — a full technical report followed on arXiv (2611.21003).",
+      "url": "https://arxiv.org/abs/2611.21003"
+    }
+  ]
+}
