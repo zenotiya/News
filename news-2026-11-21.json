@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-21",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Upgrade Expressway to X15.5.20, Roller to 6.1.6, vCenter to 8.0 U3m / 9.0.2.0200 / 9.1.1.0200, and apply SAP Note 3660969; hunt for signs of prior compromise, not just patch.",
+          "details": "CVE-2026-76466 is a hard-coded-credentials flaw letting an unauthenticated attacker run commands as root on clustered Expressway devices. CVE-2026-129448 is unauthenticated code execution via Apache Roller's XML-RPC endpoint — Apache's own record says it is being actively exploited. CVE-2026-123890 is a vCenter authentication bypass used as a zero-day since September. CVE-2025-42884 is a JNDI injection in SAP NetWeaver Enterprise Portal 7.50.",
+          "image": "https://dritestudio.co.th/img/article/images/2026/10/1792656870951-c4fc6bba.webp",
+          "severity": "Critical",
+          "summary": "CISA on Nov 20 added four actively exploited flaws to its Known Exploited Vulnerabilities catalog: Cisco Expressway CVE-2026-76466 (9.8), Apache Roller CVE-2026-129448 (9.8), VMware vCenter CVE-2026-123890 (9.8) and SAP NetWeaver CVE-2025-42884 (6.5). Federal agencies must remediate by Nov 23.",
+          "title": "CISA adds four exploited flaws to KEV — patch by Nov 23",
+          "url": "https://www.cisa.gov/news-events/alerts/2026/11/20/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "action": "Update DSM to the fixed builds now; if you cannot update yet, disable the OAuth Service package as a workaround and monitor NAS devices for unusual file-system activity.",
+          "details": "CVE-2026-120382 lets an unauthenticated remote attacker read or write arbitrary files and trigger denial of service through mishandled command arguments in the OAuth API. CVE-2026-123007 can corrupt memory when NGINX handles HTTP/2 traffic, letting an attacker read or change files or take the device offline. Fixes are in DSM 7.4.1-90080 Update 2 and DSM 7.3.2-86009 Update 6; some branches are still marked fix-ongoing.",
+          "image": "https://exceed.myexceed.com/wp-content/uploads/2021/10/Synology-NAS-DS.jpg",
+          "severity": "Critical",
+          "summary": "Synology disclosed two critical flaws on Nov 19 and shipped fixes on Nov 20: CVE-2026-120382 (CVSS 9.8) in the DSM OAuth API and CVE-2026-123007, part of the NGINX2Root group affecting NGINX's HTTP/2 handling.",
+          "title": "Synology patches two critical NAS flaws — one is NGINX2Root",
+          "url": "https://www.howtogeek.com/synology-urges-users-to-patch-critical-bugs-in-its-nas-software-now/"
+        },
+        {
+          "action": "Plan EOS upgrades for affected switches and routers; treat unexpected reboots on exposed devices as a possible indicator and check crash logs.",
+          "details": "The vulnerability is a null-pointer dereference (CWE-476) in the kernel's IPv4 code, colloquially known as 'NoisyTCP'. Affected EOS versions include 4.37.0F and 4.36.3.2M and earlier in the 4.36.X train. Arista says it is not aware of malicious exploitation in customer networks, and no hotfix is available — the fix is an EOS upgrade.",
+          "image": "https://www.cisco.com/content/dam/cisco-cdc/site/us/en/images/networking/og-image-data-center-switching-nexus-1200x630.jpg",
+          "severity": "High",
+          "summary": "Arista published Security Advisory 0229 on Nov 20 for CVE-2026-99288 (CVSS 7.5), a flaw in the Linux kernel's IPv4 handling that an unauthenticated attacker can trigger with traffic to a reachable TCP port, causing a kernel panic and device reboot.",
+          "title": "Arista warns of 'NoisyTCP' kernel-panic flaw in EOS",
+          "url": "https://www.arista.com/en/support/advisories-notices/security-advisory/25220-security-advisory-0229"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "action": "Affected customers should watch for targeted phishing using the leaked contact details; banks should review what marketing and loyalty vendors hold and how they access it.",
+          "details": "The leaked data includes names, email addresses, phone numbers and partial home addresses; the companies say no card numbers or payment data were exposed and core systems were not breached. Visa customers in Asia-Pacific and Mastercard customers in North America, West Asia and Africa were among those affected. JPMorgan said the incident is unrelated to a service disruption earlier in the week, which it blamed on a software bug.",
+          "image": "https://www.estimatu.com/wp-content/uploads/2024/12/CreditCard-payment-2048x1365.jpg",
+          "severity": "High",
+          "summary": "All three companies confirmed on Nov 19 that attackers hit third-party service providers holding their marketing data, after ransomware group n0n leaked customer records. A Reuters review found more than 16,000 JPMorgan customer email addresses — mostly invitation-only Reserve cardholders — plus 124 bank employee addresses.",
+          "title": "JPMorgan, Visa and Mastercard confirm n0n vendor breach",
+          "url": "https://www.business-standard.com/world-news/visa-mastercard-jpmorgan-customer-data-leak-ransomware-attack-us-outage-126112000197_1.html"
+        },
+        {
+          "action": "Treat as an unverified claim until Boeing or a regulator confirms; monitor for a company statement and for any data samples appearing on the leak site.",
+          "details": "Incransom is a prolific ransomware-as-a-service operation active since July 2023, with over 1,000 victims listed in tracking databases. The listing date reflects when the victim appeared on the leak site, which may differ from the date of initial compromise.",
+          "image": "https://images.rove.me/w_1920,q_85/gz9gtjljstfezvq8x253/seattle-boeing-factory.jpg",
+          "severity": "High",
+          "summary": "Ransomware group Incransom listed Boeing on its leak site on Nov 20, according to leak-site tracking. Boeing has not confirmed a breach and no stolen data has been independently verified.",
+          "title": "Boeing listed by Incransom ransomware group (unverified)",
+          "url": "https://cyberthreatintelligence.net/ransomware-victim/boeing-incransom-2026"
+        },
+        {
+          "action": "Healthcare providers should watch for patient-data extortion and phishing using provider or test-order details if the claim is confirmed.",
+          "details": "The listing was initially anonymous and later attributed to n0n, the same group behind the JPMorgan, Visa and Mastercard vendor leaks this week. The claimed files include named healthcare providers and NPI numbers, ordering physicians and test-order status. Guardant Health has not publicly confirmed a breach.",
+          "image": "https://pictures.fasthealth.com/content/229208.jpg",
+          "severity": "High",
+          "summary": "Ransomware.live reported on Nov 20 that n0n has listed US precision-oncology company Guardant Health, claiming 25,678 registered account records, 69,145 specimen test-order records and 68,047 sales call records. The claim is unverified.",
+          "title": "n0n claims Guardant Health data — 25,000+ patient-related records (unverified)",
+          "url": "https://www.ransomware.live/id/R3VhcmRhbnQgSGVhbHRoLCBJbmMuQE4wbg"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "Students and parents with a Careers360 account should check HIBP, change any reused password, enable 2FA, and be alert for phishing that cites exam ranks or caste details.",
+          "details": "HIBP lists the breach date as 14 November 2026, with 3,609,421 accounts, attributed to threat actor 888; about 48% of the addresses were already in HIBP's database. No passwords or credentials were reported in the exposed data. Careers360 has not been reported as confirming the breach.",
+          "image": "https://digitallearning.eletsonline.com/wp-content/uploads/2017/06/india-exams.jpg",
+          "severity": "High",
+          "summary": "Have I Been Pwned added the Careers360 breach on Nov 20: data allegedly taken from the Indian education platform appeared on a hacking forum, covering 3.6 million unique email addresses across about 22 million records, including names, phone numbers, gender, caste categories and entrance-exam results.",
+          "title": "Careers360 breach: 3.6M student emails in HIBP, incl. caste and exam results",
+          "url": "https://haveibeenpwned.com/Breach/Careers360"
+        },
+        {
+          "action": "Banks and their vendors should audit approval workflows and business-record changes, not just transaction monitoring — and treat AI-assisted fraud as a live threat model.",
+          "details": "The agency did not disclose how much money was improperly paid out or who was responsible. It also said it had identified AI-driven frameworks being used in cyberattacks across sectors. The warning follows a spate of attacks on banks and NBFCs in recent weeks, and CERT-In earlier this month named the group behind AI-driven attacks on financial firms, with at least two tools linked to China.",
+          "image": "https://mindianews.in/wp-content/uploads/2025/10/image-76-780x470.png",
+          "severity": "High",
+          "summary": "CERT-In said on Nov 20 it had reported unauthorised transactions at service providers for banking and financial services entities, and at technology providers supporting government-linked payments — with attackers altering business records or approval relationships and then using legitimate payment processes.",
+          "title": "CERT-In flags unauthorised transactions at banking service providers",
+          "url": "https://www.telegraphindia.com/india/cert-in-flags-unauthorised-transactions-at-banking-service-providers-warns-of-ai-driven-cyberattacks/cid/2190485"
+        },
+        {
+          "action": "Government recruitment portals should treat landing-page and authentication flaws as a priority — a teenager with an AI assistant reached personnel records; verify what data was actually exposed.",
+          "details": "Police's IFSO unit found the dark-web listing in September and detained the teenager in October. He allegedly accessed account passwords holding job applications, including details of personnel who had completed their two-year tenure. A case under the Information Technology Act has been registered; police have written to the MHA to verify whether the portal and the data are authentic.",
+          "image": "https://cf-img-a-in.tosshub.com/lingo/gnt/images/story/202504/68088d959cfed-indian-army-234952220-16x9.jpg?size=1200:675",
+          "severity": "Medium",
+          "summary": "Delhi Police detained a 14-year-old who allegedly used an AI bot to exploit gaps in the Ministry of Home Affairs' Agniveer recruitment portal, accessed data of more than 2,500 Agniveer personnel, and listed it for sale on the dark web for $500 in cryptocurrency.",
+          "title": "Delhi teen accused of hacking MHA Agniveer portal with AI",
+          "url": "https://indianexpress.com/article/cities/delhi/agniveer-portal-data-breach-ai-hacking-teen-detained-10972203/"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Saturday, November 21 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}

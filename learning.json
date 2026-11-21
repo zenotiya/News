@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-20",
-  "count": 50,
+  "updated": "2026-11-21",
+  "count": 51,
   "items": [
+    {
+      "date": "2026-11-21",
+      "topic": "Reverse engineering & malware analysis",
+      "title": "CoffeeLoader",
+      "what": "malware that decrypts its payload on the GPU — SecureList (Nov 2026): resurgent Retadup USB worm (shortcut-spoofing on removable drives, expired C2 domains re-registered) drops CoffeeLoader, which side-loads a trojanized 7z.dll and runs its shellcode decryption via OpenGL on the GPU, so the decrypted payload never touches CPU memory where AV/EDR memory scanners look; companion case SANSAR (Elastic, 12 Nov): Linux GPU-host cryptomining toolkit with a kernel rootkit + a patched NVML library that reports GPU utilization as 0% while mining runs — the GPU is now a blind spot on both Windows and Linux; detection pivots to the CPU-visible seams (rundll32 loading an unfamiliar DLL from temp dirs, USB shortcut anomalies, Ray-job-agent exposure) and to out-of-band GPU telemetry (power draw / PCIe counters, not driver-reported utilization);",
+      "takeaway": "add GPU-telemetry checks to cryptomining hunts and treat \"GPU compute present, GPU utilization 0%\" as a signal, not a clean bill"
+    },
     {
       "date": "2026-11-20",
       "topic": "Social engineering & physical security",
