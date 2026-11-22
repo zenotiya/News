@@ -1,40 +1,40 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "items": [
     {
-      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/thinkingmachines/Inkling-2-Mini.png",
-      "name": "Thinking Machines Inkling 2 Mini",
-      "plain": "A capable open AI model that runs on ordinary business laptops, so teams can experiment and build with it without paying for cloud compute.",
-      "summary": "Thinking Machines Lab released Inkling 2 Mini on 20 November 2026, an open-weights multimodal model whose middle layers loop at inference time, squeezing stronger reasoning out of only 3.4B active parameters — small enough to run on a laptop. It is a research release, not tuned for production use.",
-      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini"
+      "image": "https://9to5google.com/wp-content/uploads/sites/4/2026/11/gemini-4-neon-cover.webp?resize=1200,628",
+      "name": "Gemini 4 Neon",
+      "plain": "A faster top-tier AI assistant for demanding coding and analysis work, now available in Google's paid AI plans.",
+      "summary": "Google launched Gemini 4 Neon on 18 November, a new Gemini 4 model that sits between Hydrogen and Carbon, offering frontier-level reasoning for complex coding, analytical and enterprise work at Flash-like speeds. It is rolling out in the Gemini app for AI Pro and Ultra subscribers and is generally available on the paid Gemini API.",
+      "url": "https://9to5google.com/2026/11/18/gemini-4-neon-announcement/"
     },
     {
-      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/tencent/Hy4.png",
-      "name": "Tencent Hy4 open weights",
-      "plain": "One of the largest open AI models is now downloadable, giving teams that run their own infrastructure a top-tier model without depending on a vendor's cloud.",
-      "summary": "Tencent published the full weights of Hy4, its 770B-parameter flagship multimodal model, on 20 November 2026 — the instruct model plus an FP8 build and a pretrained base — on Hugging Face, ModelScope and GitCode, fulfilling the open-weight pledge from its 4 November launch.",
-      "url": "https://huggingface.co/tencent/Hy4"
+      "image": "https://us1.discourse-cdn.com/openai1/original/4X/e/b/0/eb010b111f193137520f06dc148808ec00e3ef5e.jpeg",
+      "name": "GPT-6.2 Astra",
+      "plain": "OpenAI's most capable model for demanding professional and scientific work, now cheaper for businesses to run.",
+      "summary": "OpenAI released GPT-6.2 Astra on 17 November, its new frontier model for the hardest professional and scientific work, with stronger document, spreadsheet and coding output and API prices cut 20% versus GPT-6 Astra. OpenAI rates it at Critical cyber capability under its Preparedness Framework and shipped it with tighter safeguards for higher-risk security assistance.",
+      "url": "https://9to5google.com/2026/11/17/openai-releases-gpt-6-2-astra-and-sol-for-complex-projects-a-week-after-claude-5-2/"
     },
     {
-      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/nvidia/Nemotron-Labs-Sigma-8B.png",
-      "name": "NVIDIA Nemotron-Labs-Sigma",
-      "plain": "A faster way to generate text from AI models, cutting response times and compute costs for teams that run their own models.",
-      "summary": "NVIDIA released Nemotron-Labs-Sigma on 20 November 2026, a family of 14 open checkpoints at 3B and 8B scale built on continuous diffusion instead of next-token prediction, which NVIDIA says decodes up to 4.2x faster than standard autoregressive models.",
-      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Sigma-8B"
+      "image": "https://us1.discourse-cdn.com/openai1/original/4X/e/b/0/eb010b111f193137520f06dc148808ec00e3ef5e.jpeg",
+      "name": "GPT-6.2 Sol",
+      "plain": "A fast, affordable everyday AI for drafting, coding and multi-step tasks, built for routine business use.",
+      "summary": "OpenAI also released GPT-6.2 Sol on 17 November, an efficient everyday model for multistep agentic workflows, coding and writing that nearly matches Astra on real-code tasks at about a fifth of the cost. It is available in ChatGPT Work and Codex for Plus, Pro, Enterprise and Edu users, and in the API.",
+      "url": "https://9to5google.com/2026/11/17/openai-releases-gpt-6-2-astra-and-sol-for-complex-projects-a-week-after-claude-5-2/"
     },
     {
-      "image": "https://superpowerdaily.com/posts/snowflake-opens-public-preview-of-ai-model-for-classifying-and-scoring-data/opengraph-image",
-      "name": "Snowflake Decision",
-      "plain": "Lets business teams score and sort huge volumes of data, like support tickets, directly inside their data warehouse without moving data or building custom models.",
-      "summary": "Snowflake put its Decision model into public preview on 20 November 2026: a purpose-built model for high-throughput classification, scoring and decision-making on massive datasets, called directly from SQL through Cortex AI_COMPLETE without moving data out of the warehouse.",
-      "url": "https://www.snowflake.com/en/blog/snowflake-decision-cortex-ai-functions/"
+      "image": "https://www.computerworld.com/wp-content/uploads/2026/11/4249020-0-96866400-1794831928-qwen.jpg?quality=50&strip=all&w=1024",
+      "name": "Qwen4-Max",
+      "plain": "Alibaba's most capable AI for coding, research and long-running agent work, available as a low-cost cloud service.",
+      "summary": "Alibaba launched Qwen4-Max on 16 November, its flagship multimodal model with native vision and a one-million-token context window, available API-only through QwenCloud. Alibaba claims it cuts average task cost by about 60% versus its predecessor while adding stronger safeguards against offensive cybersecurity use.",
+      "url": "https://www.computerworld.com/article/4249020/alibaba-touts-62-lower-task-costs-with-qwen4-max-adds-cyber-safeguards-3.html"
     },
     {
-      "image": "https://explainx.ai/images/blog-library/open-weights-release.webp",
-      "name": "K2-Horizon",
-      "plain": "A full family of open AI models published with their training data and methods, so teams can inspect, adapt and run them on their own terms.",
-      "summary": "IFM released K2-Horizon on 15–17 November 2026, a fleet of six open models from a 0.9B dense checkpoint to a 375B-A23B mixture-of-experts, published with training data, intermediate checkpoints and the pipelines behind them — a full technical report followed on arXiv (2611.21003).",
-      "url": "https://arxiv.org/abs/2611.21003"
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/ido7qwlr5kaw/b/casrai-news-images/o/tencent-hy4-flash-lower-cost-ai-model-launch-2026-8f54.jpg",
+      "name": "Tencent Hy4 Flash",
+      "plain": "A budget-friendly AI model for coding and professional work, aimed at teams that need capable AI at low cost.",
+      "summary": "Tencent launched Hy4 Flash on 16 November, a lower-cost version of its Hy4 model aimed at coding, professional work and scientific research, with image understanding, structured output and function calling. It is listed in Tencent Cloud's API guide with a one-million-token context window.",
+      "url": "https://casrai.org/news/tencent-hy4-flash-lower-cost-ai-model-launch-2026"
     }
   ]
 }

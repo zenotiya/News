@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-22",
+  "items": [
+    {
+      "cvss": 10.0,
+      "id": "CVE-2026-133993",
+      "plain": "D-Link DIR-600L routers let remote attackers crash or take over the device — replace or retire affected routers.",
+      "product": "D-Link DIR-600L",
+      "severity": "Critical",
+      "summary": "A remote stack-based buffer overflow in the GENA subscription handler of D-Link DIR-600L firmware 2.17b02 lets a remote attacker crash or take over the router, and a public exploit has been released.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133993",
+      "versions": "2.17b02"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-123890",
+      "plain": "VMware vCenter lets attackers in without logging in — patch now, and check for compromise.",
+      "product": "VMware vCenter Server",
+      "severity": "Critical",
+      "summary": "An authentication bypass in the VMware Directory Service (vmdird) of VMware vCenter Server lets anyone with network access gain unauthorized access to vCenter. The flaw was exploited as a zero-day by the Armory Castle group since September 2026, and CISA added it to the Known Exploited Vulnerabilities catalog on 20 November with a 23 November due date.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123890",
+      "versions": "9.1.x < 9.1.1.0200 · 9.0.x < 9.0.2.0200 · 8.0 < 8.0 U3m · 5.x < 5.2.5"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-125294",
+      "plain": "Nexter Blocks Pro lets anyone sign up as a site administrator — update the plugin immediately.",
+      "product": "Nexter Blocks Pro",
+      "severity": "Critical",
+      "summary": "Unauthenticated privilege escalation in the WordPress plugin Nexter Blocks Pro up to and including 5.0.10: a crafted registration request grants the new account the full Administrator role, giving complete control over the site.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125294",
+      "versions": "≤ 5.0.10"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-120539",
+      "plain": "Restrictions for BuddyPress lets strangers run code on your WordPress site — update to version 1.5.5.",
+      "product": "Restrictions for BuddyPress",
+      "severity": "Critical",
+      "summary": "Unauthenticated remote code execution in the WordPress plugin Restrictions for BuddyPress up to and including 1.5.4: the plugin evaluates attacker-controlled request data, so a single crafted request can run arbitrary code on the server. Fixed in 1.5.5.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120539",
+      "versions": "≤ 1.5.4"
+    },
+    {
+      "cvss": 9.1,
+      "id": "CVE-2026-133250",
+      "plain": "Fastify's middie lets attackers slip past login checks on protected pages — upgrade to 9.3.8.",
+      "product": "@fastify/middie",
+      "severity": "Critical",
+      "summary": "An authentication bypass in @fastify/middie, the middleware engine for the Fastify web framework, up to and including 9.3.7: a path-matching mismatch lets an unauthenticated client reach handlers that authentication, authorization or rate-limiting middleware was meant to protect. Fixed in 9.3.8.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133250",
+      "versions": "< 9.3.8"
+    }
+  ]
+}

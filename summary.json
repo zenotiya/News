@@ -5,37 +5,37 @@
   "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-14914",
+      "id": "CVE-2026-133993",
       "cvss": 10.0,
-      "summary": "Unrestricted upload of files with dangerous types in Tegsoft Contact Center allows an attacker to upload a web shell to the web server and take it over. The issue affects versions before latest-202611161510.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14914",
-      "plain": "Tegsoft Contact Center lets attackers upload a web shell and take over the server — update to the latest release.",
-      "product": "Tegsoft Contact Center",
-      "versions": "before latest-202611161510"
+      "summary": "A remote stack-based buffer overflow in the GENA subscription handler of D-Link DIR-600L firmware 2.17b02 lets a remote attacker crash or take over the router, and a public exploit has been released.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133993",
+      "plain": "D-Link DIR-600L routers let remote attackers crash or take over the device — replace or retire affected routers.",
+      "product": "D-Link DIR-600L",
+      "versions": "2.17b02"
     },
     {
-      "id": "CVE-2026-133968",
+      "id": "CVE-2026-123890",
       "cvss": 9.8,
-      "summary": "MONAI Label through 0.8.5 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint. It has been exploited in the wild since September 2026.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133968",
-      "plain": "MONAI Label lets attackers run code on the server and is already being exploited — upgrade past 0.8.5 now.",
-      "product": "MONAI Label",
-      "versions": "through 0.8.5"
+      "summary": "An authentication bypass in the VMware Directory Service (vmdird) of VMware vCenter Server lets anyone with network access gain unauthorized access to vCenter. The flaw was exploited as a zero-day by the Armory Castle group since September 2026, and CISA added it to the Known Exploited Vulnerabilities catalog on 20 November with a 23 November due date.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123890",
+      "plain": "VMware vCenter lets attackers in without logging in — patch now, and check for compromise.",
+      "product": "VMware vCenter Server",
+      "versions": "9.1.x < 9.1.1.0200 · 9.0.x < 9.0.2.0200 · 8.0 < 8.0 U3m · 5.x < 5.2.5"
     },
     {
-      "id": "CVE-2026-130674",
+      "id": "CVE-2026-125294",
       "cvss": 9.8,
-      "summary": "Craft CMS from 5.0.0 before 5.11.4 contains an incomplete blocklist fix that allows attackers who can author entry type title formats to write arbitrary files using ZipArchive or XMLWriter classes, achieving remote code execution.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130674",
-      "plain": "Craft CMS lets a user who can edit content write files and take over the site — upgrade to 5.11.4.",
-      "product": "Craft CMS",
-      "versions": "5.0.0–5.11.3"
+      "summary": "Unauthenticated privilege escalation in the WordPress plugin Nexter Blocks Pro up to and including 5.0.10: a crafted registration request grants the new account the full Administrator role, giving complete control over the site.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125294",
+      "plain": "Nexter Blocks Pro lets anyone sign up as a site administrator — update the plugin immediately.",
+      "product": "Nexter Blocks Pro",
+      "versions": "≤ 5.0.10"
     }
   ],
   "model": {
-    "name": "Thinking Machines Inkling 2 Mini",
-    "summary": "Thinking Machines Lab released Inkling 2 Mini on 20 November 2026, an open-weights multimodal model whose middle layers loop at inference time, squeezing stronger reasoning out of only 3.4B active parameters — small enough to run on a laptop. It is a research release, not tuned for production use.",
-    "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
-    "plain": "A capable open AI model that runs on ordinary business laptops, so teams can experiment and build with it without paying for cloud compute."
+    "name": "Gemini 4 Neon",
+    "summary": "Google launched Gemini 4 Neon on 18 November, a new Gemini 4 model that sits between Hydrogen and Carbon, offering frontier-level reasoning for complex coding, analytical and enterprise work at Flash-like speeds. It is rolling out in the Gemini app for AI Pro and Ultra subscribers and is generally available on the paid Gemini API.",
+    "url": "https://9to5google.com/2026/11/18/gemini-4-neon-announcement/",
+    "plain": "A faster top-tier AI assistant for demanding coding and analysis work, now available in Google's paid AI plans."
   }
 }
