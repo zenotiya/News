@@ -1,7 +1,13 @@
 {
-  "updated": "2026-11-21",
-  "count": 51,
+  "updated": "2026-11-22",
+  "count": 52,
   "items": [
+    {
+      "date": "2026-11-22",
+      "topic": "Hardware & firmware security",
+      "title": "\"Hello Again\"",
+      "what": "TPM lockout rollback via RPMC flaws — TU Berlin (arXiv 2611.18126, ACM CCS '26) showed fTPM anti-hammering counters can be rewound by rolling back SPI-flash state: Winbond RPMC flash leaks its HMAC key under a ~1s voltage glitch (forge any counter), AMD's NV controller never verifies counter increments (interposer can fake success), and AMD systems without RPMC accept a plain old flash image; result: 4-digit Windows Hello PIN worst-case falls from ~69 days to ~40 hours, 6-digit BitLocker startup PIN from ~19 years to ~20-26 days (CVE-2026-43613, AMD-SB-7079, firmware fixes Nov 2026–Feb 2027); physical access + hardware work required, not remote — but it reframes short PINs on stolen laptops as a real risk, and the fix is longer/alphanumeric PINs + firmware updates"
+    },
     {
       "date": "2026-11-21",
       "topic": "Reverse engineering & malware analysis",

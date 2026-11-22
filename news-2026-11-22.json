@@ -1,0 +1,97 @@
+{
+  "date": "2026-11-22",
+  "sections": [
+    {
+      "items": [
+        {
+          "action": "Check your GL.iNet devices for the 'crond -i /tmp/.log' indicator now, install the stable security firmware as soon as it lands today, and factory-reset any device showing the indicator.",
+          "details": "The attack path has been blocked and the cloud vulnerability fixed, but infected devices stay infected until cleaned. Check for the running process 'crond -i /tmp/.log'. KVM security beta firmware is available now; stable security firmware for routers and KVM devices is scheduled for Nov 22.",
+          "image": "https://linkgear.net/wp-content/uploads/2023/12/axt1800.jpg",
+          "severity": "Critical",
+          "summary": "GL.iNet disclosed on Nov 20 that attackers exploited a vulnerability in its GoodCloud cloud remote-management service to access and install malicious software on some GL.iNet routers and KVM devices.",
+          "title": "GL.iNet cloud flaw exploited to plant malware on routers and KVMs",
+          "url": "https://forum.gl-inet.com/t/2026-11-20-gl-inet-security-notice-goodcloud-kvm-routers/73056"
+        },
+        {
+          "action": "Patch Apache HTTP Server on HTTP/2-enabled hosts immediately and hunt for signs of exploitation.",
+          "details": "Tracked as CVE-2026-119618. Any internet-facing Apache server with HTTP/2 enabled is in scope.",
+          "severity": "Critical",
+          "summary": "A concurrency flaw in Apache HTTP Server's mod_http2 can let an unauthenticated attacker execute code when HTTP/2 is enabled; Singapore's Cyber Security Agency reports active exploitation and a public proof of concept exists.",
+          "title": "Apache mod_http2 RCE CVE-2026-119618 under active exploitation",
+          "url": "https://zinbiel.net/daily-security-vulnerability-brief-2026-11-21/"
+        },
+        {
+          "action": "Upgrade NGINX on internet-facing HTTP/2 deployments to the fixed releases.",
+          "details": "CERT-EU reported no known in-the-wild exploitation at the time of its advisory, but the public proof of concept raises the urgency for internet-facing deployments.",
+          "image": "https://forumweb.hosting/blog/wp-content/uploads/2025/02/configuring-nginx-as-a-reverse-proxy-for-multiple-websites-on-one-server-696x694.png",
+          "severity": "High",
+          "summary": "NGINX's Nov 18 releases fix multiple memory-corruption flaws, including CVE-2026-123007 and CVE-2026-123633, affecting deployments with relevant HTTP/2 configurations; Rapid7 demonstrated unauthenticated remote code execution for CVE-2026-123007.",
+          "title": "NGINX HTTP/2 RCE flaws fixed — public PoC for CVE-2026-123007",
+          "url": "https://zinbiel.net/daily-security-vulnerability-brief-2026-11-21/"
+        },
+        {
+          "action": "Remove agent-framework 1.26.1/1.26.2 from every environment, audit for exfiltrated secrets, and rotate GitHub Actions and cloud tokens.",
+          "details": "The malicious releases are confirmed. Check lockfiles and CI environments for the pinned versions and treat any exposed secrets as compromised.",
+          "severity": "High",
+          "summary": "PyPI package agent-framework versions 1.26.1 and 1.26.2 contain a startup hook that steals environment variables, credential files and cloud tokens; version 1.26.2 also targets GitHub Actions tokens.",
+          "title": "Malicious PyPI package 'agent-framework' steals CI and cloud credentials",
+          "url": "https://zinbiel.net/daily-security-vulnerability-brief-2026-11-21/"
+        }
+      ],
+      "title": "Act on Today"
+    },
+    {
+      "items": [
+        {
+          "details": "Tracked via Ransomware.live; no technical details on the entry point were disclosed. The group's recent listings also include PanLink, Fort Smith EMS, Marketech International, AARP and NVIDIA.",
+          "image": "https://dailydarkweb.net/wp-content/uploads/2025/10/spidernewsitecropped.webp",
+          "severity": "High",
+          "summary": "On Nov 21 the ransomware group 'Thegentlemen' listed a casino group on its leak site, claiming 7TB of data exfiltrated in an incident estimated to have occurred Nov 18. Claim unverified.",
+          "title": "Thegentlemen ransomware claims 7TB stolen from casino group",
+          "url": "https://qpulse.quasarcybertech.com/news/8921/thegentlemen-ransomware-group-claims-7tb-data-exfiltration-from-casino-group"
+        },
+        {
+          "details": "Medusalocker typically runs double extortion — exfiltrate, then encrypt. The exposed emails raise follow-on phishing and business email compromise risk for the firm's contacts.",
+          "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,width=1200,onerror=redirect/uploads/asset/file/c0163b8d-a931-47e8-b1e7-8730090511ce/Ransomware_in_SA.jpg?t=1779099778",
+          "severity": "Medium",
+          "summary": "Medusalocker listed technology firm F5A on its leak site on Nov 21, claiming the extraction of 90 emails from the f5a.mf domain. Claim unverified.",
+          "title": "Medusalocker claims attack on F5A; 90 emails extracted",
+          "url": "https://qpulse.quasarcybertech.com/news/8931/medusalocker-ransomware-group-claims-attack-on-f5a"
+        },
+        {
+          "details": "The claim was discovered Nov 21 at 18:29 UTC; no data volume was disclosed in the listing.",
+          "severity": "Medium",
+          "summary": "SafePay listed qrc-solutions.com, a financial support and debt-collection services firm, as a ransomware victim on Nov 21. Claim unverified.",
+          "title": "SafePay claims ransomware attack on qrc-solutions.com",
+          "url": "https://www.hookphish.com/blog/ransomware-group-safepay-hits-qrc-solutions-com/"
+        }
+      ],
+      "title": "Breaches & Ransomware"
+    },
+    {
+      "items": [
+        {
+          "action": "Payment teams should re-check payout-API controls against the Oct 9 CERT-In/CSIRT-Fin advisory on payment and disbursement API attacks.",
+          "details": "PayU complained on Nov 9; its security team spotted unusual API activity around 11:30 pm on Nov 5, after its cloud provider flagged suspicious access. About Rs 1.5 crore has been frozen; how the attackers got in is still under investigation. The incident follows CERT-In and CSIRT-Fin's Oct 9 advisory warning financial institutions about attacks targeting payment and disbursement APIs.",
+          "image": "https://img-cdn.thepublive.com/filters:format(webp)/viestories/media/post_attachments/wp-content/uploads/2024/04/PayU-Leading-Payment-Gateway-in-India.jpg",
+          "severity": "High",
+          "summary": "Gurugram Cyber Police arrested two men after attackers allegedly accessed three of PayU's cloud servers, manipulated its payout API and made 265 unauthorised transactions worth Rs 25.67 crore to 156 bank accounts.",
+          "title": "PayU loses Rs 25.67 crore in alleged cloud-server breach; two arrested",
+          "url": "https://www.medianama.com/2026/11/223-payu-cloud-server-breach/"
+        },
+        {
+          "action": "Treat any SBI-related loan or account data as potentially circulating; watch for targeted phishing using KYC details.",
+          "details": "The complaint alleges unidentified persons acting as 'Siriusim' accessed the server between Oct 10 and 15, taking 32 CSV files plus JSON files and 2,721 PDFs (loan applications, account-opening forms, contact details). SBI says the data was removed from the dark web, was not misused, and affected customers were individually informed on Oct 23.",
+          "image": "https://economictimes.indiatimes.com/thumb/height-450,width-800,msid-71499124,imgsize-505295/sbgtt.jpg",
+          "severity": "High",
+          "summary": "Police in CBD-Belapur registered an FIR on Nov 12 over the alleged theft of about 3.75 lakh bank records from SBI's Global IT Centre, about a month after the alleged breach; SBI says its preliminary review found 3,897 customer records with personal information among the dark-web set.",
+          "title": "SBI data-theft FIR registered over alleged 3.75 lakh records",
+          "url": "https://inc42.com/buzz/sbi-flags-exposure-of-3897-customer-records-on-dark-web/"
+        }
+      ],
+      "title": "India"
+    }
+  ],
+  "subtitle": "Sunday, November 22 — Here's what's worth your attention today.",
+  "title": "Morning Cybersecurity Digest"
+}
