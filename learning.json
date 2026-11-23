@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-22",
-  "count": 52,
+  "updated": "2026-11-23",
+  "count": 53,
   "items": [
+    {
+      "date": "2026-11-23",
+      "topic": "Web application security / Identity",
+      "title": "IdP token confusion — audience/issuer validation failures in OIDC/SAML integrations",
+      "what": "a plugin/app that checks a token is *validly signed by Microsoft/Google* but not that it was issued *for its own app/tenant* (aud/iss/tenant allow-list) accepts a token from an attacker-controlled tenant as any user incl. admin — exactly WPO365 Login CVE-2026-132814 (multi-tenant + empty allowed-tenant list) and its SAML signature-wrapping sibling CVE-2026-129446;",
+      "takeaway": "in every SSO assessment, mint a token in your own tenant/app and replay it against the client app — if it logs you in, validation is signature-only, not audience-bound"
+    },
     {
       "date": "2026-11-22",
       "topic": "Hardware & firmware security",
