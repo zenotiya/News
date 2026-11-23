@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "items": [
     {
-      "cvss": 10.0,
-      "id": "CVE-2026-133993",
-      "plain": "D-Link DIR-600L routers let remote attackers crash or take over the device — replace or retire affected routers.",
-      "product": "D-Link DIR-600L",
-      "severity": "Critical",
-      "summary": "A remote stack-based buffer overflow in the GENA subscription handler of D-Link DIR-600L firmware 2.17b02 lets a remote attacker crash or take over the router, and a public exploit has been released.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133993",
-      "versions": "2.17b02"
-    },
-    {
+      "id": "CVE-2026-129448",
+      "summary": "Deserialization of untrusted data in Apache Roller versions 4.0.0 through 6.1.4 allows an unauthenticated remote attacker to execute arbitrary code via the XML-RPC endpoint. The issue is being actively exploited; upgrade to Apache Roller 6.1.6 or later.",
       "cvss": 9.8,
-      "id": "CVE-2026-123890",
-      "plain": "VMware vCenter lets attackers in without logging in — patch now, and check for compromise.",
-      "product": "VMware vCenter Server",
       "severity": "Critical",
-      "summary": "An authentication bypass in the VMware Directory Service (vmdird) of VMware vCenter Server lets anyone with network access gain unauthorized access to vCenter. The flaw was exploited as a zero-day by the Armory Castle group since September 2026, and CISA added it to the Known Exploited Vulnerabilities catalog on 20 November with a 23 November due date.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123890",
-      "versions": "9.1.x < 9.1.1.0200 · 9.0.x < 9.0.2.0200 · 8.0 < 8.0 U3m · 5.x < 5.2.5"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129448",
+      "plain": "Apache Roller lets anyone send a crafted request and run code on the blog server — upgrade to version 6.1.6 or later now.",
+      "product": "Apache Roller",
+      "versions": "4.0.0–6.1.4"
     },
     {
+      "id": "CVE-2026-90436",
+      "summary": "Deserialization of an inbound SOAP fault in end-of-life Apache Axis 1.x allows unauthenticated remote class instantiation and remote code execution, and has been exploited against products bundling Axis such as Confluence Data Center. CISA added it to the KEV catalog on November 18; no fixed 1.x release will be published, so migrate to a maintained SOAP engine.",
       "cvss": 9.8,
-      "id": "CVE-2026-125294",
-      "plain": "Nexter Blocks Pro lets anyone sign up as a site administrator — update the plugin immediately.",
-      "product": "Nexter Blocks Pro",
       "severity": "Critical",
-      "summary": "Unauthenticated privilege escalation in the WordPress plugin Nexter Blocks Pro up to and including 5.0.10: a crafted registration request grants the new account the full Administrator role, giving complete control over the site.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125294",
-      "versions": "≤ 5.0.10"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90436",
+      "plain": "Apache Axis lets attackers run code on servers without logging in and is already being exploited — remove or replace this old software now.",
+      "product": "Apache Axis",
+      "versions": "≤ 1.4"
     },
     {
+      "id": "CVE-2026-90817",
+      "summary": "An unauthenticated remote code execution vulnerability in REDCap's survey passthrough routing and Data Import processing lets an attacker who knows a valid public survey hash execute arbitrary code on the server. CISA added it to the KEV catalog on November 18 after active exploitation; upgrade to 16.0.49, 17.3.10 or 17.4.4.",
       "cvss": 9.8,
-      "id": "CVE-2026-120539",
-      "plain": "Restrictions for BuddyPress lets strangers run code on your WordPress site — update to version 1.5.5.",
-      "product": "Restrictions for BuddyPress",
       "severity": "Critical",
-      "summary": "Unauthenticated remote code execution in the WordPress plugin Restrictions for BuddyPress up to and including 1.5.4: the plugin evaluates attacker-controlled request data, so a single crafted request can run arbitrary code on the server. Fixed in 1.5.5.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120539",
-      "versions": "≤ 1.5.4"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90817",
+      "plain": "REDCap lets anyone with a public survey link run code on the research server — upgrade to a fixed release today.",
+      "product": "Vanderbilt University Research Electronic Data Capture (REDCap)",
+      "versions": "13.3.0–16.0.48 · 16.1.0–17.3.9 · 17.4.0–17.4.3"
     },
     {
-      "cvss": 9.1,
-      "id": "CVE-2026-133250",
-      "plain": "Fastify's middie lets attackers slip past login checks on protected pages — upgrade to 9.3.8.",
-      "product": "@fastify/middie",
+      "id": "CVE-2026-126261",
+      "summary": "An improper authorization vulnerability in FortiManager's FGFM service may allow an unauthenticated attacker who can reach the FGFM port to execute code or commands via crafted FGFM packets, before the registration password is verified. Fortinet published fixes on November 10 in advisory FG-IR-26-275; NVD records a CVSS base score of 9.8.",
+      "cvss": 9.8,
       "severity": "Critical",
-      "summary": "An authentication bypass in @fastify/middie, the middleware engine for the Fastify web framework, up to and including 9.3.7: a path-matching mismatch lets an unauthenticated client reach handlers that authentication, authorization or rate-limiting middleware was meant to protect. Fixed in 9.3.8.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133250",
-      "versions": "< 9.3.8"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126261",
+      "plain": "FortiManager lets anyone who can reach its device-management port run commands without a password — upgrade to a fixed release now.",
+      "product": "Fortinet FortiManager",
+      "versions": "8.0.0 · 7.6.0–7.6.7 · 7.4.0–7.4.5 · 7.2.0–7.2.8"
+    },
+    {
+      "id": "CVE-2026-115731",
+      "summary": "Deserialization of untrusted data in Puppet's report-processing code, as used by Puppet Server, allows a client holding any CA-signed agent certificate to execute arbitrary code on the Puppet Server. CISA added it to the KEV catalog on November 17; Perforce fixed it on November 3 in Puppet Enterprise 2026.0.1, 2025.12.1 and 2023.8.13.",
+      "cvss": 9.4,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115731",
+      "plain": "Puppet Enterprise lets a managed device take over the central management server — upgrade to a fixed release before December 1.",
+      "product": "Perforce Puppet Enterprise",
+      "versions": "2023.8.0–2023.8.12 · 2025.0.0–2025.12.0 · 2026.0.0"
     }
   ]
 }

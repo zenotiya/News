@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-23",
+  "items": [
+    {
+      "name": "Xing4.1-Preview",
+      "summary": "China Telecom's Xingchen AGI Lab released the open weights of Xing4.1-Preview on November 23, a 285B-parameter mixture-of-experts model for agentic coding and long-horizon work, trained entirely on Huawei Ascend chips and published under Apache 2.0.",
+      "url": "https://chainaiwire.com/china-telecom-xing4-1-preview-285b-open-weights/",
+      "image": "https://atvnewsonline.com/wp-content/uploads/2024/05/b3ee1638c0167c341705067737-1024x577.jpg",
+      "plain": "A large open AI model for coding and multi-step office work that a business can download, inspect and run on its own infrastructure."
+    },
+    {
+      "name": "Sarvam-105B-1711",
+      "summary": "Sarvam AI released Sarvam-105B-1711 on November 22, a new open-weight checkpoint of its 105B model built for high-volume customer support, voice agents and agentic tasks, with much stronger instruction following, tool calling and Indian-language performance than its February release.",
+      "url": "https://www.sarvam.ai/blogs/sarvam-105b-1711",
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/sarvamai/sarvam-105b-1711.png",
+      "plain": "An Indian-built open AI for customer support and voice agents that handles Indian languages well and can run on a company's own premises."
+    },
+    {
+      "name": "Inkling 2 Mini",
+      "summary": "Thinking Machines Lab released Inkling 2 Mini on November 20, a 26.4B-parameter open-weights looped mixture-of-experts model small enough to run on a laptop, leading comparable open models on agentic coding benchmarks.",
+      "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+      "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,format=auto,onerror=redirect/uploads/asset/file/96784002-10bc-46f0-b70e-50b0ffd75e55/extra-box-inkling.jpg?t=1784325673",
+      "plain": "A capable open AI that runs on a laptop, so teams can use AI coding and research help offline and keep their data on their own machines."
+    },
+    {
+      "name": "GPT-Live-1.1",
+      "summary": "OpenAI made GPT-Live-1.1 available in its API on November 19-20, a full-duplex voice model that listens while it speaks, with more natural multilingual accents, better transcription and a new standby mode that cuts idle voice-session costs.",
+      "url": "https://www.marktechpost.com/2026/11/21/openai-gpt-live-1-1-api-standby-mode/",
+      "image": "https://alarabmedia.com/wp-content/uploads/2026/07/ChatGPT-Voice-GPT-Live-1024x653.jpg",
+      "plain": "OpenAI's voice AI for phone and app assistants that hold natural spoken conversations, now cheaper to keep connected for customer calls."
+    },
+    {
+      "name": "NVIDIA Alpamayo 2 Edge",
+      "summary": "NVIDIA's Alpamayo 2 Edge is a 2B-parameter open reasoning vision-language-action model for autonomous driving that plans trajectories and explains them in real time on DRIVE AGX Thor in-vehicle hardware, with weights published on Hugging Face.",
+      "url": "https://huggingface.co/nvidia/Alpamayo2-Edge",
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/nvidia/Alpamayo2-Edge.png",
+      "plain": "A small open AI that lets vehicles plan their driving and explain their decisions, built to run inside the car rather than in a data centre."
+    }
+  ]
+}

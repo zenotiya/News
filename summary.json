@@ -2,40 +2,40 @@
   "date": "2026-11-23",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 10.0,
+  "worst_cvss": 9.8,
   "priorities": [
     {
-      "id": "CVE-2026-133993",
-      "cvss": 10.0,
-      "summary": "A remote stack-based buffer overflow in the GENA subscription handler of D-Link DIR-600L firmware 2.17b02 lets a remote attacker crash or take over the router, and a public exploit has been released.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133993",
-      "plain": "D-Link DIR-600L routers let remote attackers crash or take over the device — replace or retire affected routers.",
-      "product": "D-Link DIR-600L",
-      "versions": "2.17b02"
+      "id": "CVE-2026-129448",
+      "cvss": 9.8,
+      "summary": "Deserialization of untrusted data in Apache Roller versions 4.0.0 through 6.1.4 allows an unauthenticated remote attacker to execute arbitrary code via the XML-RPC endpoint. The issue is being actively exploited; upgrade to Apache Roller 6.1.6 or later.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129448",
+      "plain": "Apache Roller lets anyone send a crafted request and run code on the blog server — upgrade to version 6.1.6 or later now.",
+      "product": "Apache Roller",
+      "versions": "4.0.0–6.1.4"
     },
     {
-      "id": "CVE-2026-123890",
+      "id": "CVE-2026-90436",
       "cvss": 9.8,
-      "summary": "An authentication bypass in the VMware Directory Service (vmdird) of VMware vCenter Server lets anyone with network access gain unauthorized access to vCenter. The flaw was exploited as a zero-day by the Armory Castle group since September 2026, and CISA added it to the Known Exploited Vulnerabilities catalog on 20 November with a 23 November due date.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123890",
-      "plain": "VMware vCenter lets attackers in without logging in — patch now, and check for compromise.",
-      "product": "VMware vCenter Server",
-      "versions": "9.1.x < 9.1.1.0200 · 9.0.x < 9.0.2.0200 · 8.0 < 8.0 U3m · 5.x < 5.2.5"
+      "summary": "Deserialization of an inbound SOAP fault in end-of-life Apache Axis 1.x allows unauthenticated remote class instantiation and remote code execution, and has been exploited against products bundling Axis such as Confluence Data Center. CISA added it to the KEV catalog on November 18; no fixed 1.x release will be published, so migrate to a maintained SOAP engine.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90436",
+      "plain": "Apache Axis lets attackers run code on servers without logging in and is already being exploited — remove or replace this old software now.",
+      "product": "Apache Axis",
+      "versions": "≤ 1.4"
     },
     {
-      "id": "CVE-2026-125294",
+      "id": "CVE-2026-90817",
       "cvss": 9.8,
-      "summary": "Unauthenticated privilege escalation in the WordPress plugin Nexter Blocks Pro up to and including 5.0.10: a crafted registration request grants the new account the full Administrator role, giving complete control over the site.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125294",
-      "plain": "Nexter Blocks Pro lets anyone sign up as a site administrator — update the plugin immediately.",
-      "product": "Nexter Blocks Pro",
-      "versions": "≤ 5.0.10"
+      "summary": "An unauthenticated remote code execution vulnerability in REDCap's survey passthrough routing and Data Import processing lets an attacker who knows a valid public survey hash execute arbitrary code on the server. CISA added it to the KEV catalog on November 18 after active exploitation; upgrade to 16.0.49, 17.3.10 or 17.4.4.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90817",
+      "plain": "REDCap lets anyone with a public survey link run code on the research server — upgrade to a fixed release today.",
+      "product": "Vanderbilt University Research Electronic Data Capture (REDCap)",
+      "versions": "13.3.0–16.0.48 · 16.1.0–17.3.9 · 17.4.0–17.4.3"
     }
   ],
   "model": {
-    "name": "Gemini 4 Neon",
-    "summary": "Google launched Gemini 4 Neon on 18 November, a new Gemini 4 model that sits between Hydrogen and Carbon, offering frontier-level reasoning for complex coding, analytical and enterprise work at Flash-like speeds. It is rolling out in the Gemini app for AI Pro and Ultra subscribers and is generally available on the paid Gemini API.",
-    "url": "https://9to5google.com/2026/11/18/gemini-4-neon-announcement/",
-    "plain": "A faster top-tier AI assistant for demanding coding and analysis work, now available in Google's paid AI plans."
+    "name": "Xing4.1-Preview",
+    "summary": "China Telecom's Xingchen AGI Lab released the open weights of Xing4.1-Preview on November 23, a 285B-parameter mixture-of-experts model for agentic coding and long-horizon work, trained entirely on Huawei Ascend chips and published under Apache 2.0.",
+    "url": "https://chainaiwire.com/china-telecom-xing4-1-preview-285b-open-weights/",
+    "plain": "A large open AI model for coding and multi-step office work that a business can download, inspect and run on its own infrastructure."
   }
 }
