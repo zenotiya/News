@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-23",
-  "count": 53,
+  "updated": "2026-11-24",
+  "count": 54,
   "items": [
+    {
+      "date": "2026-11-24",
+      "topic": "Cloud security",
+      "title": "The retired-API backdoor",
+      "what": "legacy direct management APIs that bypass modern identity and logging — Azure APIM Classic's deprecated direct Management API authenticated with a per-instance SharedAccessSignature tenant key (not Entra ID) and, per researcher Anders Kristiansen cited 23 Nov, its calls are not recorded in Azure Activity Log; Microsoft retired it in March 2025 but instances where it stayed enabled kept a SAS-authenticated, unlogged admin path beside the Entra-logged one, the pattern behind the Nov 2026 APIM secret theft (MZK9-GH0);",
+      "takeaway": "in every cloud assessment inventory the *retired* APIs, SAS/shared-key auth paths and endpoints excluded from the main audit log — if a legacy endpoint can read secrets and leaves no Activity Log entry, it is a Critical even if the modern path is clean; rotate at the issuer, not just in the gateway"
+    },
     {
       "date": "2026-11-23",
       "topic": "Web application security / Identity",

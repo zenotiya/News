@@ -1,0 +1,102 @@
+{
+  "date": "2026-11-24",
+  "title": "Morning Cybersecurity Digest",
+  "subtitle": "Tuesday, November 24 — KEV patch deadlines hit, plus fresh breach claims in healthcare and finance.",
+  "sections": [
+    {
+      "title": "Act on Today",
+      "items": [
+        {
+          "title": "Cisco Expressway RCE CVE-2026-76466 exploited, KEV deadline was Nov 23",
+          "severity": "Critical",
+          "summary": "CVE-2026-76466 (CVSS 9.8) in clustered Cisco Expressway-C/E allows an unauthenticated attacker with persistent cookies to execute commands as root via hard-coded credentials. CISA added it to KEV on Nov 20 with a Nov 23 federal deadline; F6 reports in-the-wild exploitation and Censys sees ~14,900 exposed hosts.",
+          "details": "Affects X15.5.3 and earlier in cluster mode; no workaround. Fixed in X15.5.20 or later; X14 and earlier must migrate. IOC: nodeup 'wombat@127.0.0.1' in erlang.log.",
+          "action": "Upgrade Expressway to X15.5.20+ immediately, check erlang.log for the wombat IOC, and restrict TCP 4371-4372 to trusted cluster nodes if patching is delayed.",
+          "url": "https://www.theregister.com/security/2026/11/23/critical-cisco-remote-code-execution-bug-under-attack/5311722",
+          "image": "https://www.cisco.com/c/dam/en/us/td/i/400001-500000/430001-440000/433001-434000/433244.jpg"
+        },
+        {
+          "title": "VMware vCenter auth bypass CVE-2026-123890 linked to espionage",
+          "severity": "Critical",
+          "summary": "CVE-2026-123890 (CVSS 9.8) is an authentication bypass in VMware vCenter allowing unauthenticated network attackers to gain unauthorised access. CISA added it to KEV on Nov 20 with a Nov 23 deadline; exploitation is linked to suspected China-nexus group Armory Castle (formerly UNC5221).",
+          "details": "The Hacker News reports Armory Castle chained the vCenter flaw with BeyondTrust Remote Support CVE-2026-102764 (9.3) to deploy custom backdoors for persistent access and data theft. Also added to KEV the same day: Apache Roller CVE-2026-129448 (9.8) and SAP NetWeaver CVE-2025-42884 (6.5).",
+          "action": "Patch vCenter, Apache Roller and SAP NetWeaver per the Nov 23 KEV deadline and hunt for backdoors where vCenter was internet- or network-exposed.",
+          "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html?m=1",
+          "image": "https://www.aaronrombaut.com/wp-content/uploads/2026/04/image-16.png"
+        },
+        {
+          "title": "ASP.NET AntiCsrf flaw CVE-2026-131914 under attack, no patch",
+          "severity": "Critical",
+          "summary": "Attackers are exploiting CVE-2026-131914 (CVSS 4.0 9.3) in the abandoned Idunno.AntiCsrf library for older ASP.NET WebForms apps, allowing unauthenticated remote code execution via insecure deserialization. Mandiant confirmed active exploitation on Nov 18; no official patch is available.",
+          "details": "NVD lists releases through 0.9.1 Beta as affected. The flaw uses .NET ObjectStateFormatter on untrusted token data before verification (CWE-502). The library's last official build dates to December 2008; the flaw is in the library, not ASP.NET WebForms itself.",
+          "action": "Search Web.config for Idunno.AntiCsrf / AntiCsrfModule and bin folders for Idunno.AntiCsrf.dll; remove or replace the library — there is no patch to apply.",
+          "url": "https://cybersecuritynews.com/asp-net-anticsrf-flaw-under-attack/",
+          "image": "https://www.refbax.com/wp-content/uploads/2024/06/6-security-best-practices-for-ASP.NET-Core.jpg.webp"
+        }
+      ]
+    },
+    {
+      "title": "Breaches & Ransomware",
+      "items": [
+        {
+          "title": "Falcon claims 104.76 GB from Fisher & Paykel Healthcare",
+          "severity": "High",
+          "summary": "The Falcon ransomware group claimed Fisher & Paykel Healthcare on Nov 23, alleging exfiltration of 104.76 GB including medical-device technical and regulatory documents, Salesforce CRM extracts, and employee PII with photographs. The claim is unconfirmed by the company.",
+          "details": "Ransomware.live discovered the listing on 2026-11-23. The group claims F&P 950, 850 and NIV system documentation, commercial pricing, and hospital master records, and threatened re-attacks. Listings reflect attacker claims and have not been verified by Ransomware.live.",
+          "action": "Treat as an unverified claim; organisations using F&P devices should watch for an official disclosure before acting on the leaked-data scope.",
+          "url": "https://ransomware.live/id/RmlzaGVyICYgUGF5a2VsIEhlYWx0aGNhcmVARmFsY29u",
+          "image": "https://www.firstnationgroup.com/wp-content/uploads/2020/08/fisher-paykel.jpg"
+        },
+        {
+          "title": "Samsung Securities breach affects 8,241 clients",
+          "severity": "High",
+          "summary": "Samsung Securities confirmed on Nov 23 that attackers accessed its Voice of Customer online enquiry system and obtained personal data of 8,241 clients across 13 categories, via files customers had attached to enquiries. Signs of intrusion were detected Nov 21.",
+          "details": "The incident was reported to South Korea's Financial Supervisory Service and Korea Internet & Security Agency (KISA), according to Yonhap reporting.",
+          "action": "Affected clients should monitor accounts and be alert to phishing using enquiry-related personal data.",
+          "url": "https://en.lb.ua/news/2026/11/23/51154_hackers_steal_personal_data_more.html",
+          "image": "https://cdn.news2day.co.kr/data2/content/image/2018/05/15/.cache/512/20180515233646.png"
+        },
+        {
+          "title": "Cleverbridge confirms payment card data breach",
+          "severity": "High",
+          "summary": "Global e-commerce platform Cleverbridge confirmed unauthorised activity detected Nov 4 led to copying of stored payment card data, including card numbers, expiry dates and CVV/CVC codes. Notifications began Nov 20; the total number affected has not been disclosed.",
+          "details": "Cleverbridge says no names, contact or billing details were accessed, no systems were encrypted, and the incident was not ransomware. Investigations are ongoing.",
+          "action": "Impacted customers should monitor card statements closely and consider card replacement as advised by their issuer.",
+          "url": "https://cybersecurity-see.com/cleverbridge-confirms-breach-of-customers-payment-card-data/"
+        }
+      ]
+    },
+    {
+      "title": "India",
+      "items": [
+        {
+          "title": "Suzlon Energy discloses cybersecurity incident",
+          "severity": "Medium",
+          "summary": "Suzlon Energy disclosed a cybersecurity incident on Nov 23, saying it activated incident response, informed CERT-In, and detected no impact on business-critical applications at this stage. Its shares fell nearly 3% on the disclosure.",
+          "details": "The company urged stakeholders to refrain from speculation while the matter is being assessed. No further scope, vector or data impact was disclosed in the filing reported by Free Press Journal.",
+          "action": "Watch for Suzlon's follow-up exchange filing for scope before drawing conclusions about operational or data impact.",
+          "url": "https://www.freepressjournal.in/tech/suzlon-energy-reports-cybersecurity-incident-says-critical-systems-unaffected-shares-fall-nearly-3-as-persistent-systems-flags-data-breach",
+          "image": "https://www.suzlon.com/images/Home/our-0fferings/on-shore-wind-thumb-555x370.jpg"
+        },
+        {
+          "title": "Persistent Systems flags breach at US immigration law firm",
+          "severity": "Medium",
+          "summary": "Persistent Systems told stock exchanges on Nov 23 that a US-based law firm it engages for immigration services may have suffered a breach, with employee immigration records and supporting documents purportedly exfiltrated from the law firm's systems.",
+          "details": "Persistent clarified its own technology infrastructure was not compromised and business operations continued normally.",
+          "action": "Affected employees should watch for identity-related misuse of immigration documents; vendors handling sensitive HR data warrant renewed security review.",
+          "url": "https://www.freepressjournal.in/tech/suzlon-energy-reports-cybersecurity-incident-says-critical-systems-unaffected-shares-fall-nearly-3-as-persistent-systems-flags-data-breach",
+          "image": "https://finovate.com/wp-content/uploads/2019/10/Persistentsys.png"
+        },
+        {
+          "title": "Teen held over alleged sale of 4,000 Agniveer records",
+          "severity": "High",
+          "summary": "Delhi Police's Special Cell apprehended a 14-year-old from Ballabhgarh, Haryana, for allegedly hacking a test website for former Agniveers and attempting to sell data linked to around 4,000 Agniveer personnel on the dark web for USD 500, PTI reported Nov 21.",
+          "details": "Investigators say AI tools were allegedly used to access the information; the IFSO unit recovered data from the juvenile's devices and is verifying authenticity against official records. The exact breach method is still being examined.",
+          "action": "Organisations running test or staging sites with real personnel data should purge production data from test environments and monitor dark-web marketplaces.",
+          "url": "https://www.deccanherald.com/amp/story/india/delhi/14-year-old-hacker-held-for-trying-to-sell-private-data-of-4000-agniveers-on-dark-web-delhi-police-4226541",
+          "image": "https://vajiramias.sgp1.cdn.digitaloceanspaces.com/wp/current-affairs/2025/03/agniveer.jpg?v=2"
+        }
+      ]
+    }
+  ]
+}
