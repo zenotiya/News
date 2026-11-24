@@ -2,40 +2,40 @@
   "date": "2026-11-24",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 9.8,
+  "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-129448",
-      "cvss": 9.8,
-      "summary": "Deserialization of untrusted data in Apache Roller versions 4.0.0 through 6.1.4 allows an unauthenticated remote attacker to execute arbitrary code via the XML-RPC endpoint. The issue is being actively exploited; upgrade to Apache Roller 6.1.6 or later.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129448",
-      "plain": "Apache Roller lets anyone send a crafted request and run code on the blog server — upgrade to version 6.1.6 or later now.",
-      "product": "Apache Roller",
-      "versions": "4.0.0–6.1.4"
+      "id": "CVE-2026-130169",
+      "cvss": 10.0,
+      "summary": "AutoGPT Platform versions 0.6.26 through 0.7.4 ship a publicly known, hardcoded default JWT verification key, so anyone who knows the secret can forge valid tokens for any user or for the admin role and bypass authentication without user interaction. This issue is fixed in version 0.8.0.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130169",
+      "plain": "AutoGPT lets anyone forge a login for any account, including admins — upgrade to version 0.8.0 now.",
+      "product": "AutoGPT Platform",
+      "versions": "0.6.26–0.7.4"
     },
     {
-      "id": "CVE-2026-90436",
-      "cvss": 9.8,
-      "summary": "Deserialization of an inbound SOAP fault in end-of-life Apache Axis 1.x allows unauthenticated remote class instantiation and remote code execution, and has been exploited against products bundling Axis such as Confluence Data Center. CISA added it to the KEV catalog on November 18; no fixed 1.x release will be published, so migrate to a maintained SOAP engine.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90436",
-      "plain": "Apache Axis lets attackers run code on servers without logging in and is already being exploited — remove or replace this old software now.",
-      "product": "Apache Axis",
-      "versions": "≤ 1.4"
+      "id": "CVE-2026-70193",
+      "cvss": 9.9,
+      "summary": "Improper limitation of a pathname to a restricted directory ('path traversal') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network. Microsoft lists SharePoint Server Subscription Edition builds from 16.0.0 before 16.0.20326.20190 as affected, alongside SharePoint Online.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70193",
+      "plain": "Microsoft SharePoint lets a logged-in attacker run code on the server — apply the Microsoft security update now.",
+      "product": "Microsoft SharePoint Online / Microsoft SharePoint Server Subscription Edition",
+      "versions": "16.0.0 – <16.0.20326.20190"
     },
     {
-      "id": "CVE-2026-90817",
+      "id": "CVE-2026-76466",
       "cvss": 9.8,
-      "summary": "An unauthenticated remote code execution vulnerability in REDCap's survey passthrough routing and Data Import processing lets an attacker who knows a valid public survey hash execute arbitrary code on the server. CISA added it to the KEV catalog on November 18 after active exploitation; upgrade to 16.0.49, 17.3.10 or 17.4.4.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90817",
-      "plain": "REDCap lets anyone with a public survey link run code on the research server — upgrade to a fixed release today.",
-      "product": "Vanderbilt University Research Electronic Data Capture (REDCap)",
-      "versions": "13.3.0–16.0.48 · 16.1.0–17.3.9 · 17.4.0–17.4.3"
+      "summary": "A vulnerability in the database service of Cisco Expressway Series, due to persistent cookies and insufficient validation of client certificates when TLS Verify Mode is enabled for clustering, allows an unauthenticated remote attacker to execute arbitrary operating system commands as root. CISA added it to the KEV catalog on November 20 after reported exploitation; Cisco fixes it in X15.5.20.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76466",
+      "plain": "Cisco Expressway lets attackers run commands as the top administrator without logging in and is being exploited — upgrade now.",
+      "product": "Cisco Expressway Series",
+      "versions": "≤ X15.5.3"
     }
   ],
   "model": {
-    "name": "Xing4.1-Preview",
-    "summary": "China Telecom's Xingchen AGI Lab released the open weights of Xing4.1-Preview on November 23, a 285B-parameter mixture-of-experts model for agentic coding and long-horizon work, trained entirely on Huawei Ascend chips and published under Apache 2.0.",
-    "url": "https://chainaiwire.com/china-telecom-xing4-1-preview-285b-open-weights/",
-    "plain": "A large open AI model for coding and multi-step office work that a business can download, inspect and run on its own infrastructure."
+    "name": "Gemini 4 Neon",
+    "summary": "Google introduced Gemini 4 Neon on November 18, bringing frontier-level intelligence with fast end-to-end task completion across complex software engineering, knowledge work and science workflows. It is rolling out in the Gemini API, Gemini for business and paid Gemini app plans.",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+    "plain": "A fast Google AI for coding, analysis and business work that gives teams high-end help without waiting on the slowest top-tier models."
   }
 }

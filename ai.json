@@ -1,40 +1,40 @@
 {
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "items": [
     {
-      "name": "Xing4.1-Preview",
-      "summary": "China Telecom's Xingchen AGI Lab released the open weights of Xing4.1-Preview on November 23, a 285B-parameter mixture-of-experts model for agentic coding and long-horizon work, trained entirely on Huawei Ascend chips and published under Apache 2.0.",
-      "url": "https://chainaiwire.com/china-telecom-xing4-1-preview-285b-open-weights/",
-      "image": "https://atvnewsonline.com/wp-content/uploads/2024/05/b3ee1638c0167c341705067737-1024x577.jpg",
-      "plain": "A large open AI model for coding and multi-step office work that a business can download, inspect and run on its own infrastructure."
+      "name": "Gemini 4 Neon",
+      "summary": "Google introduced Gemini 4 Neon on November 18, bringing frontier-level intelligence with fast end-to-end task completion across complex software engineering, knowledge work and science workflows. It is rolling out in the Gemini API, Gemini for business and paid Gemini app plans.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png",
+      "plain": "A fast Google AI for coding, analysis and business work that gives teams high-end help without waiting on the slowest top-tier models."
     },
     {
-      "name": "Sarvam-105B-1711",
-      "summary": "Sarvam AI released Sarvam-105B-1711 on November 22, a new open-weight checkpoint of its 105B model built for high-volume customer support, voice agents and agentic tasks, with much stronger instruction following, tool calling and Indian-language performance than its February release.",
-      "url": "https://www.sarvam.ai/blogs/sarvam-105b-1711",
-      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/sarvamai/sarvam-105b-1711.png",
-      "plain": "An Indian-built open AI for customer support and voice agents that handles Indian languages well and can run on a company's own premises."
+      "name": "GPT-6.2 Astra and Sol",
+      "summary": "OpenAI released GPT-6.2 Astra and GPT-6.2 Sol on November 17, with Astra as its new frontier model for hard, long-running projects and Sol as the suggested everyday default. Both are available in the OpenAI API, ChatGPT and Codex.",
+      "url": "https://llm-stats.com/blog/research/gpt-6-2-astra-sol-launch",
+      "image": "https://llm-stats.com/blog/gpt-6-2-astra-sol-launch/banner.webp",
+      "plain": "OpenAI's newest work AI pair — a top model for hard projects and a cheaper everyday model — for professional and development work."
     },
     {
-      "name": "Inkling 2 Mini",
-      "summary": "Thinking Machines Lab released Inkling 2 Mini on November 20, a 26.4B-parameter open-weights looped mixture-of-experts model small enough to run on a laptop, leading comparable open models on agentic coding benchmarks.",
-      "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
-      "image": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,format=auto,onerror=redirect/uploads/asset/file/96784002-10bc-46f0-b70e-50b0ffd75e55/extra-box-inkling.jpg?t=1784325673",
-      "plain": "A capable open AI that runs on a laptop, so teams can use AI coding and research help offline and keep their data on their own machines."
+      "name": "Qwen4-Max",
+      "summary": "Alibaba released Qwen4-Max on November 16, a near-frontier flagship model for long-horizon and professional-domain agent work with text, image and video input. It is available through QwenCloud, QwenWork, QwenStudio and OpenRouter; there are no open weights for this model.",
+      "url": "https://llm-stats.com/blog/research/qwen4-max-launch",
+      "image": "https://llm-stats.com/blog/qwen4-max-launch/banner.webp",
+      "plain": "Alibaba's flagship AI for multi-step agent and professional work, giving businesses a strong non-US option for automated workflows."
     },
     {
-      "name": "GPT-Live-1.1",
-      "summary": "OpenAI made GPT-Live-1.1 available in its API on November 19-20, a full-duplex voice model that listens while it speaks, with more natural multilingual accents, better transcription and a new standby mode that cuts idle voice-session costs.",
-      "url": "https://www.marktechpost.com/2026/11/21/openai-gpt-live-1-1-api-standby-mode/",
-      "image": "https://alarabmedia.com/wp-content/uploads/2026/07/ChatGPT-Voice-GPT-Live-1024x653.jpg",
-      "plain": "OpenAI's voice AI for phone and app assistants that hold natural spoken conversations, now cheaper to keep connected for customer calls."
+      "name": "Tencent Hy4",
+      "summary": "Tencent published the full Hy4 open weights on November 20, its 770B-parameter multimodal flagship with vision and computer use, alongside FP8 and pre-trained base variants on Hugging Face, ModelScope and GitCode. The weights are released under the Tencent Hy License v1.0, with extra terms for very large API providers.",
+      "url": "https://www.deai.org/news/tencent-hy4-full-open-weights-system-card",
+      "image": "https://www.deai.org/images/tencent-hy4-full-open-weights-system-card.webp",
+      "plain": "A very large open AI that businesses can download and run themselves for chat, vision and computer-use tasks instead of only renting it."
     },
     {
-      "name": "NVIDIA Alpamayo 2 Edge",
-      "summary": "NVIDIA's Alpamayo 2 Edge is a 2B-parameter open reasoning vision-language-action model for autonomous driving that plans trajectories and explains them in real time on DRIVE AGX Thor in-vehicle hardware, with weights published on Hugging Face.",
-      "url": "https://huggingface.co/nvidia/Alpamayo2-Edge",
-      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/nvidia/Alpamayo2-Edge.png",
-      "plain": "A small open AI that lets vehicles plan their driving and explain their decisions, built to run inside the car rather than in a data centre."
+      "name": "MAI Code 2",
+      "summary": "Microsoft launched MAI Code 2 and MAI Code 2 Flash at Ignite on November 17, a family of agentic coding models for deep debugging, multi-file changes and repository-wide reasoning. Both models are available in GitHub Copilot, with Flash aimed at high-volume routine fixes and edits.",
+      "url": "https://www.infoworld.com/article/4250152/microsoft-launches-mai-code-2-models-to-challenge-openai-and-anthropic-in-ai-coding.html",
+      "image": "https://www.infoworld.com/wp-content/uploads/2026/10/4234290-0-29582200-1791890953-shutterstock_2662877349.jpg?quality=50&strip=all&w=1024",
+      "plain": "Microsoft's coding AI inside GitHub Copilot that helps development teams debug, change and ship software faster at lower cost."
     }
   ]
 }

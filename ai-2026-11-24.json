@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-24",
+  "items": [
+    {
+      "name": "Gemini 4 Neon",
+      "summary": "Google introduced Gemini 4 Neon on November 18, bringing frontier-level intelligence with fast end-to-end task completion across complex software engineering, knowledge work and science workflows. It is rolling out in the Gemini API, Gemini for business and paid Gemini app plans.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png",
+      "plain": "A fast Google AI for coding, analysis and business work that gives teams high-end help without waiting on the slowest top-tier models."
+    },
+    {
+      "name": "GPT-6.2 Astra and Sol",
+      "summary": "OpenAI released GPT-6.2 Astra and GPT-6.2 Sol on November 17, with Astra as its new frontier model for hard, long-running projects and Sol as the suggested everyday default. Both are available in the OpenAI API, ChatGPT and Codex.",
+      "url": "https://llm-stats.com/blog/research/gpt-6-2-astra-sol-launch",
+      "image": "https://llm-stats.com/blog/gpt-6-2-astra-sol-launch/banner.webp",
+      "plain": "OpenAI's newest work AI pair — a top model for hard projects and a cheaper everyday model — for professional and development work."
+    },
+    {
+      "name": "Qwen4-Max",
+      "summary": "Alibaba released Qwen4-Max on November 16, a near-frontier flagship model for long-horizon and professional-domain agent work with text, image and video input. It is available through QwenCloud, QwenWork, QwenStudio and OpenRouter; there are no open weights for this model.",
+      "url": "https://llm-stats.com/blog/research/qwen4-max-launch",
+      "image": "https://llm-stats.com/blog/qwen4-max-launch/banner.webp",
+      "plain": "Alibaba's flagship AI for multi-step agent and professional work, giving businesses a strong non-US option for automated workflows."
+    },
+    {
+      "name": "Tencent Hy4",
+      "summary": "Tencent published the full Hy4 open weights on November 20, its 770B-parameter multimodal flagship with vision and computer use, alongside FP8 and pre-trained base variants on Hugging Face, ModelScope and GitCode. The weights are released under the Tencent Hy License v1.0, with extra terms for very large API providers.",
+      "url": "https://www.deai.org/news/tencent-hy4-full-open-weights-system-card",
+      "image": "https://www.deai.org/images/tencent-hy4-full-open-weights-system-card.webp",
+      "plain": "A very large open AI that businesses can download and run themselves for chat, vision and computer-use tasks instead of only renting it."
+    },
+    {
+      "name": "MAI Code 2",
+      "summary": "Microsoft launched MAI Code 2 and MAI Code 2 Flash at Ignite on November 17, a family of agentic coding models for deep debugging, multi-file changes and repository-wide reasoning. Both models are available in GitHub Copilot, with Flash aimed at high-volume routine fixes and edits.",
+      "url": "https://www.infoworld.com/article/4250152/microsoft-launches-mai-code-2-models-to-challenge-openai-and-anthropic-in-ai-coding.html",
+      "image": "https://www.infoworld.com/wp-content/uploads/2026/10/4234290-0-29582200-1791890953-shutterstock_2662877349.jpg?quality=50&strip=all&w=1024",
+      "plain": "Microsoft's coding AI inside GitHub Copilot that helps development teams debug, change and ship software faster at lower cost."
+    }
+  ]
+}
