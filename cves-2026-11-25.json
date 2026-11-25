@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-25",
+  "items": [
+    {
+      "id": "CVE-2026-123903",
+      "summary": "VMware vCenter contains an authentication bypass vulnerability in the VMware Directory Service (vmdir). A malicious actor with network access to vCenter may exploit this issue to bypass authentication and gain unauthorized access to the system; Broadcom fixes it in vCenter 9.1.2, 9.0.2.0300 and 8.0 U3m under VMSA-2026-0011.",
+      "cvss": 9.8,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123903",
+      "plain": "VMware vCenter lets an attacker skip the login and take over the management system - patch to the fixed release now.",
+      "product": "VMware vCenter",
+      "versions": "9.1.x · 9.0.x · 8.0 · 7.0"
+    },
+    {
+      "id": "CVE-2026-123910",
+      "summary": "VMware ESX contains a heap out-of-bounds write vulnerability in the I/O filter service. A malicious actor with network access to ESX may execute code on the host; Broadcom addresses it in VMSA-2026-0011, with a workaround for ESX 8.0 in KB463535.",
+      "cvss": 9.8,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123910",
+      "plain": "VMware ESX lets an attacker over the network run their own code on the host server - apply the Broadcom patch now.",
+      "product": "VMware ESX",
+      "versions": "9.1.x · 9.0.x · 8.0 · 7.0"
+    },
+    {
+      "id": "CVE-2026-123911",
+      "summary": "VMware ESX contains a use-after-free vulnerability in the I/O filter service. A malicious actor with network access to ESX may execute code on the host; Broadcom addresses it in VMSA-2026-0011, with a workaround for ESX 8.0 in KB463535.",
+      "cvss": 9.8,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123911",
+      "plain": "VMware ESX lets an attacker over the network run their own code on the host server - apply the Broadcom patch now.",
+      "product": "VMware ESX",
+      "versions": "9.1.x · 9.0.x · 8.0 · 7.0"
+    },
+    {
+      "id": "CVE-2026-133968",
+      "summary": "MONAI Label before 0.8.6 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026. CISA added it to the KEV catalog on November 23, and version 0.8.6 is the fixed release.",
+      "cvss": 9.8,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133968",
+      "plain": "MONAI Label lets an attacker without a login take control of the medical imaging server and is being exploited - upgrade now.",
+      "product": "MONAI Label",
+      "versions": "≤ 0.8.5"
+    },
+    {
+      "id": "CVE-2026-123912",
+      "summary": "VMware ESX, Workstation and Fusion contain an out-of-bounds write vulnerability in the XHCI USB controller. A malicious actor with local administrative privileges on a virtual machine may execute code as the VM's VMX process on the host, and on Workstation and Fusion this may lead to code execution on the machine where they are installed.",
+      "cvss": 9.3,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123912",
+      "plain": "VMware virtual machines can let someone with admin inside a guest take over the host computer - apply the Broadcom patch now.",
+      "product": "VMware ESX / VMware Workstation / VMware Fusion",
+      "versions": "9.1.x · 9.0.x · 8.0 · 7.0 · 25H2"
+    }
+  ]
+}

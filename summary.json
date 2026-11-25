@@ -2,40 +2,40 @@
   "date": "2026-11-25",
   "news_count": 9,
   "cve_count": 5,
-  "worst_cvss": 10.0,
+  "worst_cvss": 9.8,
   "priorities": [
     {
-      "id": "CVE-2026-130169",
-      "cvss": 10.0,
-      "summary": "AutoGPT Platform versions 0.6.26 through 0.7.4 ship a publicly known, hardcoded default JWT verification key, so anyone who knows the secret can forge valid tokens for any user or for the admin role and bypass authentication without user interaction. This issue is fixed in version 0.8.0.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130169",
-      "plain": "AutoGPT lets anyone forge a login for any account, including admins — upgrade to version 0.8.0 now.",
-      "product": "AutoGPT Platform",
-      "versions": "0.6.26–0.7.4"
-    },
-    {
-      "id": "CVE-2026-70193",
-      "cvss": 9.9,
-      "summary": "Improper limitation of a pathname to a restricted directory ('path traversal') in Microsoft Office SharePoint allows an authorized attacker to execute code over a network. Microsoft lists SharePoint Server Subscription Edition builds from 16.0.0 before 16.0.20326.20190 as affected, alongside SharePoint Online.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70193",
-      "plain": "Microsoft SharePoint lets a logged-in attacker run code on the server — apply the Microsoft security update now.",
-      "product": "Microsoft SharePoint Online / Microsoft SharePoint Server Subscription Edition",
-      "versions": "16.0.0 – <16.0.20326.20190"
-    },
-    {
-      "id": "CVE-2026-76466",
+      "id": "CVE-2026-123903",
       "cvss": 9.8,
-      "summary": "A vulnerability in the database service of Cisco Expressway Series, due to persistent cookies and insufficient validation of client certificates when TLS Verify Mode is enabled for clustering, allows an unauthenticated remote attacker to execute arbitrary operating system commands as root. CISA added it to the KEV catalog on November 20 after reported exploitation; Cisco fixes it in X15.5.20.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76466",
-      "plain": "Cisco Expressway lets attackers run commands as the top administrator without logging in and is being exploited — upgrade now.",
-      "product": "Cisco Expressway Series",
-      "versions": "≤ X15.5.3"
+      "summary": "VMware vCenter contains an authentication bypass vulnerability in the VMware Directory Service (vmdir). A malicious actor with network access to vCenter may exploit this issue to bypass authentication and gain unauthorized access to the system; Broadcom fixes it in vCenter 9.1.2, 9.0.2.0300 and 8.0 U3m under VMSA-2026-0011.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123903",
+      "plain": "VMware vCenter lets an attacker skip the login and take over the management system - patch to the fixed release now.",
+      "product": "VMware vCenter",
+      "versions": "9.1.x · 9.0.x · 8.0 · 7.0"
+    },
+    {
+      "id": "CVE-2026-123910",
+      "cvss": 9.8,
+      "summary": "VMware ESX contains a heap out-of-bounds write vulnerability in the I/O filter service. A malicious actor with network access to ESX may execute code on the host; Broadcom addresses it in VMSA-2026-0011, with a workaround for ESX 8.0 in KB463535.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123910",
+      "plain": "VMware ESX lets an attacker over the network run their own code on the host server - apply the Broadcom patch now.",
+      "product": "VMware ESX",
+      "versions": "9.1.x · 9.0.x · 8.0 · 7.0"
+    },
+    {
+      "id": "CVE-2026-123911",
+      "cvss": 9.8,
+      "summary": "VMware ESX contains a use-after-free vulnerability in the I/O filter service. A malicious actor with network access to ESX may execute code on the host; Broadcom addresses it in VMSA-2026-0011, with a workaround for ESX 8.0 in KB463535.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123911",
+      "plain": "VMware ESX lets an attacker over the network run their own code on the host server - apply the Broadcom patch now.",
+      "product": "VMware ESX",
+      "versions": "9.1.x · 9.0.x · 8.0 · 7.0"
     }
   ],
   "model": {
-    "name": "Gemini 4 Neon",
-    "summary": "Google introduced Gemini 4 Neon on November 18, bringing frontier-level intelligence with fast end-to-end task completion across complex software engineering, knowledge work and science workflows. It is rolling out in the Gemini API, Gemini for business and paid Gemini app plans.",
-    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
-    "plain": "A fast Google AI for coding, analysis and business work that gives teams high-end help without waiting on the slowest top-tier models."
+    "name": "GLM-5.4",
+    "summary": "Z.ai released GLM-5.4 on November 23, its first flagship built on a Loop Transformer that runs its base model's layers twice for deeper reasoning, adding vision for visual coding. It is live for GLM Coding Plan users in ZCode and Z.ai Chat, with the API and open weights planned for later.",
+    "url": "https://blog.toolsnetwork.ai/releases/zai-glm-5-4/",
+    "plain": "Z.ai's newest coding AI for building software and visual projects, giving development teams another strong option for everyday engineering work."
   }
 }

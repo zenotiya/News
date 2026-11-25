@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-25",
+  "items": [
+    {
+      "name": "GLM-5.4",
+      "summary": "Z.ai released GLM-5.4 on November 23, its first flagship built on a Loop Transformer that runs its base model's layers twice for deeper reasoning, adding vision for visual coding. It is live for GLM Coding Plan users in ZCode and Z.ai Chat, with the API and open weights planned for later.",
+      "url": "https://blog.toolsnetwork.ai/releases/zai-glm-5-4/",
+      "image": "https://z-ai-bj.oss-cn-beijing.aliyuncs.com/prompts-rich-media-resources/5.4-blog/20261123-173242.jpeg?w=1280&h=720&fit=fill",
+      "plain": "Z.ai's newest coding AI for building software and visual projects, giving development teams another strong option for everyday engineering work."
+    },
+    {
+      "name": "Ling-3.2-air",
+      "summary": "Ant Group's inclusionAI published Ling-3.2-air on Hugging Face on November 23, an open-weight multimodal model under the MIT licence with much stronger workflow automation and professional document reasoning than its predecessor. Day-0 serving support is available in SGLang and vLLM.",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.2-air",
+      "image": "https://mdn.alipayobjects.com/huamei_qa8qxu/afts/img/A*4QxcQrBlTiAAAAAAQXAAAAgAemJ7AQ/original",
+      "plain": "An open AI from Ant Group that businesses can run themselves to automate office workflows and work through long professional documents."
+    },
+    {
+      "name": "ERNIE 5.5 Flash Preview",
+      "summary": "Baidu published the ERNIE 5.5 Flash Preview weights on Hugging Face and ModelScope on November 24 under Apache 2.0, in FP4, FP8 and BF16 versions. Baidu describes it as an intermediate post-training checkpoint aimed at coding, agentic tasks and office work, with the final release still to come.",
+      "url": "https://timesof.ai/2026/11/baidu-ernie-5-5-flash-base-280b-moe",
+      "image": "https://primaldata.s3.us-east-005.backblazeb2.com/cache/0/b1/b7/0b1b7f78d5530dd94809ced5bb8b56e773b8942ef158163e5624ff4a90bcfd74.jpg",
+      "plain": "Baidu's open AI for coding and office work that companies can download and run on their own systems while the finished version is completed."
+    },
+    {
+      "name": "Sarvam-105B-1711",
+      "summary": "Sarvam AI released Sarvam-105B-1711 on November 22, a new open-weight checkpoint of its 105B model built for high-volume customer support, voice agents and agentic tasks. It improves instruction following, tool calling and Indian languages, and a compressed version runs on a single workstation GPU.",
+      "url": "https://www.sarvam.ai/blogs/sarvam-105b-1711",
+      "image": "https://scalewithai.in/wp-content/uploads/2026/04/2.png",
+      "plain": "Sarvam's updated Indian AI for customer support and voice agents in Indian languages that businesses can also run on their own premises."
+    },
+    {
+      "name": "Inkling 2 Mini",
+      "summary": "Thinking Machines Lab released Inkling 2 Mini on November 20, an open-weight looped transformer under Apache 2.0 that is small enough to run on a laptop. Its weights are on Hugging Face, with inference and fine-tuning also offered through the company's Tinker platform.",
+      "url": "https://casrai.org/news/thinking-machines-inkling-2-mini-open-looped-model-laptop-2026",
+      "image": "https://objectstorage.us-ashburn-1.oraclecloud.com/n/ido7qwlr5kaw/b/casrai-news-images/o/thinking-machines-inkling-2-mini-open-looped-model-laptop-2026-0b5e.jpg",
+      "plain": "A capable open AI small enough to run on a laptop, letting teams keep their work and data on their own machines."
+    }
+  ]
+}
