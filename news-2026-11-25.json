@@ -1,0 +1,102 @@
+{
+  "date": "2026-11-25",
+  "title": "Morning Cybersecurity Digest",
+  "subtitle": "Wednesday, November 25 - VMware 9.8s, two new KEV entries, and an India research-network ransomware claim.",
+  "sections": [
+    {
+      "title": "Act on Today",
+      "items": [
+        {
+          "title": "Broadcom fixes 23 VMware flaws in VMSA-2026-0011, three at 9.8",
+          "severity": "Critical",
+          "summary": "Broadcom released VMSA-2026-0011 on November 24 fixing 23 vulnerabilities across vCenter, ESX, Workstation, Fusion, Tools and Avi Load Balancer. CVE-2026-123903 is a 9.8 vCenter authentication bypass, while CVE-2026-123910 and CVE-2026-123911 are 9.8 flaws in the ESX I/O filter service that could let a network attacker run code on the host.",
+          "details": "Four CVEs reach critical severity on at least one product. Fixed versions include vCenter 9.1.2, vCenter 9.0.2.0300 and 8.0 U3m; some ESX 9.0 issues remain patch pending with no workaround listed.",
+          "action": "Patch vCenter and ESX first, inventory guest tools, vSAN witnesses and Avi Load Balancer separately, and track the pending ESX items on the risk register.",
+          "url": "https://securityonline.info/vmware-update-vmsa-2026-0011/",
+          "image": "https://securityonline.info/wp-content/uploads/2026/10/VMware-1.webp"
+        },
+        {
+          "title": "CISA adds MONAI Label and N-able MailAssure flaws to KEV, due Nov 26",
+          "severity": "Critical",
+          "summary": "CISA added CVE-2026-133968 (CVSS 9.8, MONAI Label path traversal allowing unauthenticated arbitrary file write and possible RCE) and CVE-2026-134624 (CVSS 9.3, N-able MailAssure SSRF in the LDAP sync check) to KEV on November 23, citing active exploitation. Federal agencies must remediate by November 26.",
+          "details": "The MONAI flaw was reportedly found and exploited by AI agents working for a suspected China-nexus actor, writing a reverse shell in about 11 minutes. MONAI Label is fixed in 0.8.6; MailAssure is fixed in build 20261121.1943 and N-able says its hosted service was restored on November 21.",
+          "action": "Upgrade MONAI Label to 0.8.6 everywhere, including lab and research servers, and confirm MailAssure is on build 20261121.1943 or later.",
+          "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
+          "image": "https://securityaffairs.com/wp-content/uploads/2020/07/CISA.jpeg"
+        },
+        {
+          "title": "Cisco Expressway RCE CVE-2026-76466 exploited for root access",
+          "severity": "Critical",
+          "summary": "Attackers are exploiting CVE-2026-76466 (CVSS 9.8), a Cisco Expressway flaw tied to hard-coded credentials, persistent cookies and weak client-certificate validation in clustering, to get unauthenticated root command execution. CISA added it to KEV on November 20 with a November 23 federal deadline.",
+          "details": "In the first public case attackers moved from two internet-facing Expressway nodes into the internal network, and exploit code has appeared publicly. Release X15.5.20 fixes it and Cisco offers no workaround; X14 has no fix in that train.",
+          "action": "Upgrade clustered Expressway devices on X15.5.3 or earlier to X15.5.20, plan migration off X14, and hunt for signs of lateral movement from Expressway nodes.",
+          "url": "https://socradar.io/blog/cisco-expressway-rce-cve-2026-76466-exploited/"
+        }
+      ]
+    },
+    {
+      "title": "Breaches & Ransomware",
+      "items": [
+        {
+          "title": "Falcon claims CSG Systems International breach, 1.3 TB claimed",
+          "severity": "High",
+          "summary": "The Falcon ransomware group claimed CSG Systems International on November 24, alleging a 1.3 TB extraction including an Entra ID directory export, Salesforce data, customer commercial documents and strategic materials. The claim is from the group's leak reporting and has not been independently verified in the source.",
+          "details": "HookPhish recorded discovery on 2026-11-24. Treat the claimed data types as the group's allegation, not a confirmed scope.",
+          "action": "If CSG is a vendor, ask for its incident statement and watch for phishing using any confirmed exposed contact or identity data.",
+          "url": "https://www.hookphish.com/blog/ransomware-group-falcon-hits-csg-systems-international/",
+          "image": "https://www.hookphish.com/wp-content/uploads/feeds/hookphish-post-1795570215-ransomware-group-falcon-hits-csg-systems-international.jpg"
+        },
+        {
+          "title": "INC Ransom claims WHI Holdings / Works Human Intelligence",
+          "severity": "High",
+          "summary": "INC Ransom claimed WHI Holdings / Works Human Intelligence on November 24. WHI is described in the report as one of Japan's largest developers of enterprise HR software for large businesses.",
+          "details": "HookPhish recorded the claim on 2026-11-24. No independently verified data scope was given in the source.",
+          "action": "HR-software customers should seek a vendor statement and be alert to targeted phishing of HR and payroll staff.",
+          "url": "https://www.hookphish.com/blog/ransomware-group-incransom-hits-whi-holdings-works-human-intelligence/",
+          "image": "https://www.hookphish.com/wp-content/uploads/feeds/hookphish-post-1795555254-ransomware-group-incransom-hits-whi-holdings-works-human-intelligence.jpg"
+        },
+        {
+          "title": "Play ransomware claims UltraBac Software",
+          "severity": "High",
+          "summary": "The Play ransomware group claimed US-based UltraBac Software (ultrabac.net) on November 24, in a leak-site listing reported by HookPhish. No verified data scope was provided in the source.",
+          "details": "Discovery was recorded on 2026-11-24T19:48 UTC. This is a threat-actor claim, not a confirmed breach disclosure by UltraBac.",
+          "action": "UltraBac customers should await a vendor statement and review backup and recovery exposure, given the vendor's backup-software role.",
+          "url": "https://www.hookphish.com/blog/ransomware-group-play-hits-ultrabac-software/",
+          "image": "https://www.hookphish.com/wp-content/uploads/feeds/hookphish-post-1795564850-ransomware-group-play-hits-ultrabac-software.jpg"
+        }
+      ]
+    },
+    {
+      "title": "India",
+      "items": [
+        {
+          "title": "Pixelleaks claims attack on India's National Knowledge Network, Delhi",
+          "severity": "High",
+          "summary": "Ransomware group Pixelleaks claimed on November 24 an attack on NKN Delhi PoP (National Knowledge Network / NIC / MeitY, nkn.gov.in), threatening to publish financial and operational business records. The group says representative records were examined and verified as genuine; that claim has not been independently confirmed.",
+          "details": "NKN is India's national research and education network infrastructure. No official NKN or NIC statement was cited in the report.",
+          "action": "Treat this as an unverified actor claim, monitor for an official statement, and watch for any published records referencing NKN operations.",
+          "url": "https://malware.news/t/pixelleaks-targets-india-s-national-knowledge-network/127624",
+          "image": "https://malware.news/uploads/default/original/3X/8/0/80d2bf25cc801aa713055c8c5cc6db0c4360bbaa.png"
+        },
+        {
+          "title": "Navi Mumbai: Rs 1.56 crore diverted from 215 bank customers in 523 transactions",
+          "severity": "High",
+          "summary": "Navi Mumbai Cyber Police registered a case after criminals allegedly exploited a technical vulnerability in a digital-payments bank's mobile payment system, diverting Rs 1,56,91,000 from 215 customers through 523 transactions between November 10 and 15. The bank refunded all 215 customers on November 17.",
+          "details": "The fraud was flagged on November 14, routed through 322 accounts inside the bank before moving to other banks, and was reported to RBI, CERT-In and the Home Ministry. The bank was not named in the report.",
+          "action": "Payment-app teams should review internal-transfer anomaly controls; customers should check statements for the November 10-15 window.",
+          "url": "https://www.freepressjournal.in/amp/mumbai/navi-mumbai-cyber-fraud-156-crore-diverted-from-215-bank-customers-through-523-transactions-money-refunded",
+          "image": "https://media.assettype.com/freepressjournal/2026-01-29/e79hidy5/Cyber-Crime-5.jpg?rect=0%2C0%2C3900%2C2048&w=1200&auto=format%2Ccompress&ogImage=true"
+        },
+        {
+          "title": "MoEngage breach exposes WazirX and ZebPay user data; funds said safe",
+          "severity": "High",
+          "summary": "MoEngage said attackers reached a limited part of its cloud infrastructure through a compromised third-party vendor account, affecting fewer than 1% of customer accounts. WazirX and ZebPay disclosed on November 23 that some users' email, contact, device and engagement data was exposed; both said wallets, trading systems and funds were unaffected.",
+          "details": "MoEngage said it contained the incident in late October, brought in independent experts and notified affected customers directly. No passwords, private keys or trading records were reported exposed for WazirX users.",
+          "action": "WazirX and ZebPay users should expect targeted phishing using exposed contact and device data, and never share OTPs, passwords or seed phrases.",
+          "url": "https://inc42.com/buzz/now-moengage-suffers-cybersecurity-attack-due-to-compromised-third-party-vendor/",
+          "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/11/Cyberattack-social.png"
+        }
+      ]
+    }
+  ]
+}

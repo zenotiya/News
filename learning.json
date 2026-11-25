@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-24",
-  "count": 54,
+  "updated": "2026-11-25",
+  "count": 55,
   "items": [
+    {
+      "date": "2026-11-25",
+      "topic": "Mobile security",
+      "title": "eSIM provisioning as a silent number-takeover surface",
+      "what": "consumer eSIM moves SIM identity from a physical chip to a remote SIM provisioning flow (SM-DP+ server, activation code/QR, EID-bound profile download); a compromised or weakly authenticated RSP flow, carrier account, or activation QR lets an attacker download the victim number profile to their own eUICC and receive OTPs without ever touching the handset - the SIM-swap attack with no store visit and no physical card; GSMA SGP.32 extends the same model to IoT headless devices;",
+      "takeaway": "in mobile/telecom assessments audit the provisioning chain (carrier account recovery, QR/activation-code entropy and expiry, EID binding, port-out/eSIM-transfer alerts), not just the handset, and advise clients to put eSIM transfers behind the same step-up auth as a password reset"
+    },
     {
       "date": "2026-11-24",
       "topic": "Cloud security",

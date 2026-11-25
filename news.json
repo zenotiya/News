@@ -1,37 +1,36 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "title": "Morning Cybersecurity Digest",
-  "subtitle": "Tuesday, November 24 — KEV patch deadlines hit, plus fresh breach claims in healthcare and finance.",
+  "subtitle": "Wednesday, November 25 - VMware 9.8s, two new KEV entries, and an India research-network ransomware claim.",
   "sections": [
     {
       "title": "Act on Today",
       "items": [
         {
-          "title": "Cisco Expressway RCE CVE-2026-76466 exploited, KEV deadline was Nov 23",
+          "title": "Broadcom fixes 23 VMware flaws in VMSA-2026-0011, three at 9.8",
           "severity": "Critical",
-          "summary": "CVE-2026-76466 (CVSS 9.8) in clustered Cisco Expressway-C/E allows an unauthenticated attacker with persistent cookies to execute commands as root via hard-coded credentials. CISA added it to KEV on Nov 20 with a Nov 23 federal deadline; F6 reports in-the-wild exploitation and Censys sees ~14,900 exposed hosts.",
-          "details": "Affects X15.5.3 and earlier in cluster mode; no workaround. Fixed in X15.5.20 or later; X14 and earlier must migrate. IOC: nodeup 'wombat@127.0.0.1' in erlang.log.",
-          "action": "Upgrade Expressway to X15.5.20+ immediately, check erlang.log for the wombat IOC, and restrict TCP 4371-4372 to trusted cluster nodes if patching is delayed.",
-          "url": "https://www.theregister.com/security/2026/11/23/critical-cisco-remote-code-execution-bug-under-attack/5311722",
-          "image": "https://www.cisco.com/c/dam/en/us/td/i/400001-500000/430001-440000/433001-434000/433244.jpg"
+          "summary": "Broadcom released VMSA-2026-0011 on November 24 fixing 23 vulnerabilities across vCenter, ESX, Workstation, Fusion, Tools and Avi Load Balancer. CVE-2026-123903 is a 9.8 vCenter authentication bypass, while CVE-2026-123910 and CVE-2026-123911 are 9.8 flaws in the ESX I/O filter service that could let a network attacker run code on the host.",
+          "details": "Four CVEs reach critical severity on at least one product. Fixed versions include vCenter 9.1.2, vCenter 9.0.2.0300 and 8.0 U3m; some ESX 9.0 issues remain patch pending with no workaround listed.",
+          "action": "Patch vCenter and ESX first, inventory guest tools, vSAN witnesses and Avi Load Balancer separately, and track the pending ESX items on the risk register.",
+          "url": "https://securityonline.info/vmware-update-vmsa-2026-0011/",
+          "image": "https://securityonline.info/wp-content/uploads/2026/10/VMware-1.webp"
         },
         {
-          "title": "VMware vCenter auth bypass CVE-2026-123890 linked to espionage",
+          "title": "CISA adds MONAI Label and N-able MailAssure flaws to KEV, due Nov 26",
           "severity": "Critical",
-          "summary": "CVE-2026-123890 (CVSS 9.8) is an authentication bypass in VMware vCenter allowing unauthenticated network attackers to gain unauthorised access. CISA added it to KEV on Nov 20 with a Nov 23 deadline; exploitation is linked to suspected China-nexus group Armory Castle (formerly UNC5221).",
-          "details": "The Hacker News reports Armory Castle chained the vCenter flaw with BeyondTrust Remote Support CVE-2026-102764 (9.3) to deploy custom backdoors for persistent access and data theft. Also added to KEV the same day: Apache Roller CVE-2026-129448 (9.8) and SAP NetWeaver CVE-2025-42884 (6.5).",
-          "action": "Patch vCenter, Apache Roller and SAP NetWeaver per the Nov 23 KEV deadline and hunt for backdoors where vCenter was internet- or network-exposed.",
-          "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html?m=1",
-          "image": "https://www.aaronrombaut.com/wp-content/uploads/2026/04/image-16.png"
+          "summary": "CISA added CVE-2026-133968 (CVSS 9.8, MONAI Label path traversal allowing unauthenticated arbitrary file write and possible RCE) and CVE-2026-134624 (CVSS 9.3, N-able MailAssure SSRF in the LDAP sync check) to KEV on November 23, citing active exploitation. Federal agencies must remediate by November 26.",
+          "details": "The MONAI flaw was reportedly found and exploited by AI agents working for a suspected China-nexus actor, writing a reverse shell in about 11 minutes. MONAI Label is fixed in 0.8.6; MailAssure is fixed in build 20261121.1943 and N-able says its hosted service was restored on November 21.",
+          "action": "Upgrade MONAI Label to 0.8.6 everywhere, including lab and research servers, and confirm MailAssure is on build 20261121.1943 or later.",
+          "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
+          "image": "https://securityaffairs.com/wp-content/uploads/2020/07/CISA.jpeg"
         },
         {
-          "title": "ASP.NET AntiCsrf flaw CVE-2026-131914 under attack, no patch",
+          "title": "Cisco Expressway RCE CVE-2026-76466 exploited for root access",
           "severity": "Critical",
-          "summary": "Attackers are exploiting CVE-2026-131914 (CVSS 4.0 9.3) in the abandoned Idunno.AntiCsrf library for older ASP.NET WebForms apps, allowing unauthenticated remote code execution via insecure deserialization. Mandiant confirmed active exploitation on Nov 18; no official patch is available.",
-          "details": "NVD lists releases through 0.9.1 Beta as affected. The flaw uses .NET ObjectStateFormatter on untrusted token data before verification (CWE-502). The library's last official build dates to December 2008; the flaw is in the library, not ASP.NET WebForms itself.",
-          "action": "Search Web.config for Idunno.AntiCsrf / AntiCsrfModule and bin folders for Idunno.AntiCsrf.dll; remove or replace the library — there is no patch to apply.",
-          "url": "https://cybersecuritynews.com/asp-net-anticsrf-flaw-under-attack/",
-          "image": "https://www.refbax.com/wp-content/uploads/2024/06/6-security-best-practices-for-ASP.NET-Core.jpg.webp"
+          "summary": "Attackers are exploiting CVE-2026-76466 (CVSS 9.8), a Cisco Expressway flaw tied to hard-coded credentials, persistent cookies and weak client-certificate validation in clustering, to get unauthenticated root command execution. CISA added it to KEV on November 20 with a November 23 federal deadline.",
+          "details": "In the first public case attackers moved from two internet-facing Expressway nodes into the internal network, and exploit code has appeared publicly. Release X15.5.20 fixes it and Cisco offers no workaround; X14 has no fix in that train.",
+          "action": "Upgrade clustered Expressway devices on X15.5.3 or earlier to X15.5.20, plan migration off X14, and hunt for signs of lateral movement from Expressway nodes.",
+          "url": "https://socradar.io/blog/cisco-expressway-rce-cve-2026-76466-exploited/"
         }
       ]
     },
@@ -39,30 +38,31 @@
       "title": "Breaches & Ransomware",
       "items": [
         {
-          "title": "Falcon claims 104.76 GB from Fisher & Paykel Healthcare",
+          "title": "Falcon claims CSG Systems International breach, 1.3 TB claimed",
           "severity": "High",
-          "summary": "The Falcon ransomware group claimed Fisher & Paykel Healthcare on Nov 23, alleging exfiltration of 104.76 GB including medical-device technical and regulatory documents, Salesforce CRM extracts, and employee PII with photographs. The claim is unconfirmed by the company.",
-          "details": "Ransomware.live discovered the listing on 2026-11-23. The group claims F&P 950, 850 and NIV system documentation, commercial pricing, and hospital master records, and threatened re-attacks. Listings reflect attacker claims and have not been verified by Ransomware.live.",
-          "action": "Treat as an unverified claim; organisations using F&P devices should watch for an official disclosure before acting on the leaked-data scope.",
-          "url": "https://ransomware.live/id/RmlzaGVyICYgUGF5a2VsIEhlYWx0aGNhcmVARmFsY29u",
-          "image": "https://www.firstnationgroup.com/wp-content/uploads/2020/08/fisher-paykel.jpg"
+          "summary": "The Falcon ransomware group claimed CSG Systems International on November 24, alleging a 1.3 TB extraction including an Entra ID directory export, Salesforce data, customer commercial documents and strategic materials. The claim is from the group's leak reporting and has not been independently verified in the source.",
+          "details": "HookPhish recorded discovery on 2026-11-24. Treat the claimed data types as the group's allegation, not a confirmed scope.",
+          "action": "If CSG is a vendor, ask for its incident statement and watch for phishing using any confirmed exposed contact or identity data.",
+          "url": "https://www.hookphish.com/blog/ransomware-group-falcon-hits-csg-systems-international/",
+          "image": "https://www.hookphish.com/wp-content/uploads/feeds/hookphish-post-1795570215-ransomware-group-falcon-hits-csg-systems-international.jpg"
         },
         {
-          "title": "Samsung Securities breach affects 8,241 clients",
+          "title": "INC Ransom claims WHI Holdings / Works Human Intelligence",
           "severity": "High",
-          "summary": "Samsung Securities confirmed on Nov 23 that attackers accessed its Voice of Customer online enquiry system and obtained personal data of 8,241 clients across 13 categories, via files customers had attached to enquiries. Signs of intrusion were detected Nov 21.",
-          "details": "The incident was reported to South Korea's Financial Supervisory Service and Korea Internet & Security Agency (KISA), according to Yonhap reporting.",
-          "action": "Affected clients should monitor accounts and be alert to phishing using enquiry-related personal data.",
-          "url": "https://en.lb.ua/news/2026/11/23/51154_hackers_steal_personal_data_more.html",
-          "image": "https://cdn.news2day.co.kr/data2/content/image/2018/05/15/.cache/512/20180515233646.png"
+          "summary": "INC Ransom claimed WHI Holdings / Works Human Intelligence on November 24. WHI is described in the report as one of Japan's largest developers of enterprise HR software for large businesses.",
+          "details": "HookPhish recorded the claim on 2026-11-24. No independently verified data scope was given in the source.",
+          "action": "HR-software customers should seek a vendor statement and be alert to targeted phishing of HR and payroll staff.",
+          "url": "https://www.hookphish.com/blog/ransomware-group-incransom-hits-whi-holdings-works-human-intelligence/",
+          "image": "https://www.hookphish.com/wp-content/uploads/feeds/hookphish-post-1795555254-ransomware-group-incransom-hits-whi-holdings-works-human-intelligence.jpg"
         },
         {
-          "title": "Cleverbridge confirms payment card data breach",
+          "title": "Play ransomware claims UltraBac Software",
           "severity": "High",
-          "summary": "Global e-commerce platform Cleverbridge confirmed unauthorised activity detected Nov 4 led to copying of stored payment card data, including card numbers, expiry dates and CVV/CVC codes. Notifications began Nov 20; the total number affected has not been disclosed.",
-          "details": "Cleverbridge says no names, contact or billing details were accessed, no systems were encrypted, and the incident was not ransomware. Investigations are ongoing.",
-          "action": "Impacted customers should monitor card statements closely and consider card replacement as advised by their issuer.",
-          "url": "https://cybersecurity-see.com/cleverbridge-confirms-breach-of-customers-payment-card-data/"
+          "summary": "The Play ransomware group claimed US-based UltraBac Software (ultrabac.net) on November 24, in a leak-site listing reported by HookPhish. No verified data scope was provided in the source.",
+          "details": "Discovery was recorded on 2026-11-24T19:48 UTC. This is a threat-actor claim, not a confirmed breach disclosure by UltraBac.",
+          "action": "UltraBac customers should await a vendor statement and review backup and recovery exposure, given the vendor's backup-software role.",
+          "url": "https://www.hookphish.com/blog/ransomware-group-play-hits-ultrabac-software/",
+          "image": "https://www.hookphish.com/wp-content/uploads/feeds/hookphish-post-1795564850-ransomware-group-play-hits-ultrabac-software.jpg"
         }
       ]
     },
@@ -70,31 +70,31 @@
       "title": "India",
       "items": [
         {
-          "title": "Suzlon Energy discloses cybersecurity incident",
-          "severity": "Medium",
-          "summary": "Suzlon Energy disclosed a cybersecurity incident on Nov 23, saying it activated incident response, informed CERT-In, and detected no impact on business-critical applications at this stage. Its shares fell nearly 3% on the disclosure.",
-          "details": "The company urged stakeholders to refrain from speculation while the matter is being assessed. No further scope, vector or data impact was disclosed in the filing reported by Free Press Journal.",
-          "action": "Watch for Suzlon's follow-up exchange filing for scope before drawing conclusions about operational or data impact.",
-          "url": "https://www.freepressjournal.in/tech/suzlon-energy-reports-cybersecurity-incident-says-critical-systems-unaffected-shares-fall-nearly-3-as-persistent-systems-flags-data-breach",
-          "image": "https://www.suzlon.com/images/Home/our-0fferings/on-shore-wind-thumb-555x370.jpg"
-        },
-        {
-          "title": "Persistent Systems flags breach at US immigration law firm",
-          "severity": "Medium",
-          "summary": "Persistent Systems told stock exchanges on Nov 23 that a US-based law firm it engages for immigration services may have suffered a breach, with employee immigration records and supporting documents purportedly exfiltrated from the law firm's systems.",
-          "details": "Persistent clarified its own technology infrastructure was not compromised and business operations continued normally.",
-          "action": "Affected employees should watch for identity-related misuse of immigration documents; vendors handling sensitive HR data warrant renewed security review.",
-          "url": "https://www.freepressjournal.in/tech/suzlon-energy-reports-cybersecurity-incident-says-critical-systems-unaffected-shares-fall-nearly-3-as-persistent-systems-flags-data-breach",
-          "image": "https://finovate.com/wp-content/uploads/2019/10/Persistentsys.png"
-        },
-        {
-          "title": "Teen held over alleged sale of 4,000 Agniveer records",
+          "title": "Pixelleaks claims attack on India's National Knowledge Network, Delhi",
           "severity": "High",
-          "summary": "Delhi Police's Special Cell apprehended a 14-year-old from Ballabhgarh, Haryana, for allegedly hacking a test website for former Agniveers and attempting to sell data linked to around 4,000 Agniveer personnel on the dark web for USD 500, PTI reported Nov 21.",
-          "details": "Investigators say AI tools were allegedly used to access the information; the IFSO unit recovered data from the juvenile's devices and is verifying authenticity against official records. The exact breach method is still being examined.",
-          "action": "Organisations running test or staging sites with real personnel data should purge production data from test environments and monitor dark-web marketplaces.",
-          "url": "https://www.deccanherald.com/amp/story/india/delhi/14-year-old-hacker-held-for-trying-to-sell-private-data-of-4000-agniveers-on-dark-web-delhi-police-4226541",
-          "image": "https://vajiramias.sgp1.cdn.digitaloceanspaces.com/wp/current-affairs/2025/03/agniveer.jpg?v=2"
+          "summary": "Ransomware group Pixelleaks claimed on November 24 an attack on NKN Delhi PoP (National Knowledge Network / NIC / MeitY, nkn.gov.in), threatening to publish financial and operational business records. The group says representative records were examined and verified as genuine; that claim has not been independently confirmed.",
+          "details": "NKN is India's national research and education network infrastructure. No official NKN or NIC statement was cited in the report.",
+          "action": "Treat this as an unverified actor claim, monitor for an official statement, and watch for any published records referencing NKN operations.",
+          "url": "https://malware.news/t/pixelleaks-targets-india-s-national-knowledge-network/127624",
+          "image": "https://malware.news/uploads/default/original/3X/8/0/80d2bf25cc801aa713055c8c5cc6db0c4360bbaa.png"
+        },
+        {
+          "title": "Navi Mumbai: Rs 1.56 crore diverted from 215 bank customers in 523 transactions",
+          "severity": "High",
+          "summary": "Navi Mumbai Cyber Police registered a case after criminals allegedly exploited a technical vulnerability in a digital-payments bank's mobile payment system, diverting Rs 1,56,91,000 from 215 customers through 523 transactions between November 10 and 15. The bank refunded all 215 customers on November 17.",
+          "details": "The fraud was flagged on November 14, routed through 322 accounts inside the bank before moving to other banks, and was reported to RBI, CERT-In and the Home Ministry. The bank was not named in the report.",
+          "action": "Payment-app teams should review internal-transfer anomaly controls; customers should check statements for the November 10-15 window.",
+          "url": "https://www.freepressjournal.in/amp/mumbai/navi-mumbai-cyber-fraud-156-crore-diverted-from-215-bank-customers-through-523-transactions-money-refunded",
+          "image": "https://media.assettype.com/freepressjournal/2026-01-29/e79hidy5/Cyber-Crime-5.jpg?rect=0%2C0%2C3900%2C2048&w=1200&auto=format%2Ccompress&ogImage=true"
+        },
+        {
+          "title": "MoEngage breach exposes WazirX and ZebPay user data; funds said safe",
+          "severity": "High",
+          "summary": "MoEngage said attackers reached a limited part of its cloud infrastructure through a compromised third-party vendor account, affecting fewer than 1% of customer accounts. WazirX and ZebPay disclosed on November 23 that some users' email, contact, device and engagement data was exposed; both said wallets, trading systems and funds were unaffected.",
+          "details": "MoEngage said it contained the incident in late October, brought in independent experts and notified affected customers directly. No passwords, private keys or trading records were reported exposed for WazirX users.",
+          "action": "WazirX and ZebPay users should expect targeted phishing using exposed contact and device data, and never share OTPs, passwords or seed phrases.",
+          "url": "https://inc42.com/buzz/now-moengage-suffers-cybersecurity-attack-due-to-compromised-third-party-vendor/",
+          "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/11/Cyberattack-social.png"
         }
       ]
     }
