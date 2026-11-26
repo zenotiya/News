@@ -1,102 +1,106 @@
 {
-  "date": "2026-11-25",
-  "title": "Morning Cybersecurity Digest",
-  "subtitle": "Wednesday, November 25 - VMware 9.8s, two new KEV entries, and an India research-network ransomware claim.",
+  "date": "2026-11-26",
   "sections": [
     {
-      "title": "Act on Today",
       "items": [
         {
-          "title": "Broadcom fixes 23 VMware flaws in VMSA-2026-0011, three at 9.8",
+          "action": "Patch MiCollab to 10.3 (10.3.0.18) plus KB000129195, Xen Orchestra to 5.213.1 or 5.211.2, and Juniper Session Smart to a fixed release before November 28, and check logs on exposed hosts.",
+          "details": "Five of the 10 are MiCollab AWV flaws. Xen Orchestra CVE-2026-133469 (9.8) accepts an empty JSON object as a login cookie and gives admin access; Juniper CVE-2026-103406 (9.8) allows unauthenticated root command execution. CISA lists ransomware use as unknown for all 10.",
+          "image": "https://securityonline.info/wp-content/uploads/2026/11/cisa-kev-catalog-10-exploited-flaws-mitel-micollab-xen-orchestra-1024x576.webp",
           "severity": "Critical",
-          "summary": "Broadcom released VMSA-2026-0011 on November 24 fixing 23 vulnerabilities across vCenter, ESX, Workstation, Fusion, Tools and Avi Load Balancer. CVE-2026-123903 is a 9.8 vCenter authentication bypass, while CVE-2026-123910 and CVE-2026-123911 are 9.8 flaws in the ESX I/O filter service that could let a network attacker run code on the host.",
-          "details": "Four CVEs reach critical severity on at least one product. Fixed versions include vCenter 9.1.2, vCenter 9.0.2.0300 and 8.0 U3m; some ESX 9.0 issues remain patch pending with no workaround listed.",
-          "action": "Patch vCenter and ESX first, inventory guest tools, vSAN witnesses and Avi Load Balancer separately, and track the pending ESX items on the risk register.",
-          "url": "https://securityonline.info/vmware-update-vmsa-2026-0011/",
-          "image": "https://securityonline.info/wp-content/uploads/2026/10/VMware-1.webp"
+          "summary": "CISA added 10 actively exploited flaws to KEV on November 25, covering Mitel MiCollab, Vates Xen Orchestra, HPE Juniper Session Smart and Danfoss AK-SM 800A controllers. The worst is CVE-2026-133323 (CVSS 10.0), an unauthenticated blind OS command injection in MiCollab's AWV component; federal agencies must patch by November 28.",
+          "title": "CISA adds 10 exploited flaws to KEV, Mitel MiCollab RCE at CVSS 10.0",
+          "url": "https://securityonline.info/cisa-kev-catalog-micollab-juniper-danfoss/"
         },
         {
-          "title": "CISA adds MONAI Label and N-able MailAssure flaws to KEV, due Nov 26",
+          "action": "Update vCenter to the fixed build for your branch now - note 9.x systems patched last week for CVE-2026-123890 still need this second update.",
+          "details": "This is a separate flaw from CVE-2026-123890, the vmdir bypass exploited as a zero-day and patched November 19. Fixed versions are vCenter 9.1.2, 9.0.2.0300 and 8.0 U3m; Broadcom lists no workaround. The same advisory fixes 23 CVEs in total, including two 9.8 ESX I/O filter flaws.",
+          "image": "https://securityonline.info/wp-content/uploads/2026/10/VMware-1.webp",
           "severity": "Critical",
-          "summary": "CISA added CVE-2026-133968 (CVSS 9.8, MONAI Label path traversal allowing unauthenticated arbitrary file write and possible RCE) and CVE-2026-134624 (CVSS 9.3, N-able MailAssure SSRF in the LDAP sync check) to KEV on November 23, citing active exploitation. Federal agencies must remediate by November 26.",
-          "details": "The MONAI flaw was reportedly found and exploited by AI agents working for a suspected China-nexus actor, writing a reverse shell in about 11 minutes. MONAI Label is fixed in 0.8.6; MailAssure is fixed in build 20261121.1943 and N-able says its hosted service was restored on November 21.",
-          "action": "Upgrade MONAI Label to 0.8.6 everywhere, including lab and research servers, and confirm MailAssure is on build 20261121.1943 or later.",
-          "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
-          "image": "https://securityaffairs.com/wp-content/uploads/2020/07/CISA.jpeg"
+          "summary": "Broadcom's VMSA-2026-0011 (November 24) fixes CVE-2026-123903, a 9.8 authentication bypass in vCenter's VMware Directory Service reachable over LDAP. Rapid7 says a public proof of concept has been validated and urges urgent patching outside normal cycles, as attackers are already targeting vmdir flaws.",
+          "title": "VMware vCenter auth bypass CVE-2026-123903 at 9.8, public PoC validated",
+          "url": "https://www.rapid7.com/blog/post/etr-cve-2026-123903-critical-vmware-directory-service-authentication-bypass-affects-vcenter/"
         },
         {
-          "title": "Cisco Expressway RCE CVE-2026-76466 exploited for root access",
+          "action": "Upgrade to 11.4.14, 11.3.23 or 10.6.23, run update.php, and block /core/install.php permanently; hunt logs for installer POSTs since November 18.",
+          "details": "The original flaw, CVE-2026-132165, was added to CISA KEV on November 24 with a federal deadline of November 27 and was exploited on live sites from November 19. New fixed releases are Drupal 11.4.14, 11.3.23 and 10.6.23, and update.php must be run after upgrading.",
           "severity": "Critical",
-          "summary": "Attackers are exploiting CVE-2026-76466 (CVSS 9.8), a Cisco Expressway flaw tied to hard-coded credentials, persistent cookies and weak client-certificate validation in clustering, to get unauthenticated root command execution. CISA added it to KEV on November 20 with a November 23 federal deadline.",
-          "details": "In the first public case attackers moved from two internet-facing Expressway nodes into the internal network, and exploit code has appeared publicly. Release X15.5.20 fixes it and Cisco offers no workaround; X14 has no fix in that train.",
-          "action": "Upgrade clustered Expressway devices on X15.5.3 or earlier to X15.5.20, plan migration off X14, and hunt for signs of lateral movement from Expressway nodes.",
-          "url": "https://socradar.io/blog/cisco-expressway-rce-cve-2026-76466-exploited/"
+          "summary": "Drupal published SA-CORE-2026-019 on November 25 for CVE-2026-136716, confirming the November 18 fixes for the installer takeover flaw did not protect all sites in unusual or incomplete install states. Drupal rates it highly critical, lowered access complexity to basic, and reports exploitation in the wild.",
+          "title": "Drupal follow-up CVE-2026-136716: first installer fix did not protect all sites",
+          "url": "https://labs.beazley.security/advisories/BSL-A1253"
+        },
+        {
+          "action": "Apply the Fragnesia fixed build for your PAN-OS branch and remove the management interface from the internet - restrict it to trusted internal IPs or a VPN.",
+          "details": "Bulletin PAN-SA-2026-0015 lists fixed builds across PAN-OS 10.2, 11.1, 11.2, 12.1 and 12.2. Palo Alto says customers already on a PHP2Shell-fixed build are protected, and all observed exploitation targeted devices with management interfaces exposed to the internet.",
+          "severity": "High",
+          "summary": "Palo Alto Networks released PAN-OS fixes on November 25 for Fragnesia (CVE-2026-46300), a Linux kernel privilege escalation flaw exploited to gain root on firewalls. The only known path chains it with the PHP2Shell flaws through an internet-exposed management interface.",
+          "title": "Palo Alto patches Fragnesia flaw used to root PAN-OS firewalls",
+          "url": "https://www.securityweek.com/palo-alto-networks-patches-fragnesia-flaw-used-to-root-firewalls/"
         }
-      ]
+      ],
+      "title": "Act on Today"
     },
     {
-      "title": "Breaches & Ransomware",
       "items": [
         {
-          "title": "Falcon claims CSG Systems International breach, 1.3 TB claimed",
+          "action": "Watch for phishing using real names and sign-in emails - go to 1Password directly rather than clicking emailed recovery or invitation links, and never share Secret Keys or verification codes.",
+          "details": "Stolen data includes names, email addresses, account and user IDs, creation and last sign-in times, public keys, SRP parameters and invitation, provisioning and account recovery tokens. The attacker also reached the CI/CD environment; exposed infrastructure credentials have been rotated or revoked and no account takeovers have been found.",
           "severity": "High",
-          "summary": "The Falcon ransomware group claimed CSG Systems International on November 24, alleging a 1.3 TB extraction including an Entra ID directory export, Salesforce data, customer commercial documents and strategic materials. The claim is from the group's leak reporting and has not been independently verified in the source.",
-          "details": "HookPhish recorded discovery on 2026-11-24. Treat the claimed data types as the group's allegation, not a confirmed scope.",
-          "action": "If CSG is a vendor, ask for its incident statement and watch for phishing using any confirmed exposed contact or identity data.",
-          "url": "https://www.hookphish.com/blog/ransomware-group-falcon-hits-csg-systems-international/",
-          "image": "https://www.hookphish.com/wp-content/uploads/feeds/hookphish-post-1795570215-ransomware-group-falcon-hits-csg-systems-international.jpg"
+          "summary": "1Password disclosed on November 25 that an attacker compromised an employee's corporate GitHub account, accessed private source code and pushed malicious code to backend services that downloaded customer account records for a subset of users. Customer vaults and the keys protecting them were not accessed.",
+          "title": "1Password discloses breach via compromised employee GitHub account",
+          "url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/"
         },
         {
-          "title": "INC Ransom claims WHI Holdings / Works Human Intelligence",
-          "severity": "High",
-          "summary": "INC Ransom claimed WHI Holdings / Works Human Intelligence on November 24. WHI is described in the report as one of Japan's largest developers of enterprise HR software for large businesses.",
-          "details": "HookPhish recorded the claim on 2026-11-24. No independently verified data scope was given in the source.",
-          "action": "HR-software customers should seek a vendor statement and be alert to targeted phishing of HR and payroll staff.",
-          "url": "https://www.hookphish.com/blog/ransomware-group-incransom-hits-whi-holdings-works-human-intelligence/",
-          "image": "https://www.hookphish.com/wp-content/uploads/feeds/hookphish-post-1795555254-ransomware-group-incransom-hits-whi-holdings-works-human-intelligence.jpg"
+          "action": "Apply the CVE-2026-16232 fix, restrict management access, and hunt for Run Script tasks with no matching SmartConsole login, a certificate named pivot.p12, or unloaded policies.",
+          "details": "Post-compromise, the actor used a script for CVE-2026-16232, a SmartConsole authentication bypass, to launch over 100 management tasks - stealing firewall databases and internal CA files, minting a certificate and unloading security policies. Check Point says the flaw was disclosed in July with patches already available and is not new.",
+          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzxhgIKTt8K5ep8a4qHW9dDpkSYcBC5D1CWgkvvh9Ee5DRlNRSg-2UcZZVNoXrHXVTeIcdzj47FFcSz6gAssLknSDf6f0JDyQCoH51D4GYLSju_wh4smA6-2yE3Z7I30SPeuY8LOKA__Y9xPiU66t1aPsHTzuRnX0QUq2iadcKXFfv7ZhAhcXti_BDnrmu/s1600/code.jpg",
+          "severity": "Critical",
+          "summary": "GreyNoise reports an actor it tracks as GT13 compromised Check Point Security Management servers at 22 organisations, using a compromised Rejetto HFS server as a relay to collect data from 24 management servers. Confirmed activity ran from October 17 to November 2 and GreyNoise assesses AI-driven tooling was used, with low confidence on that point.",
+          "title": "GT13 compromises 24 Check Point management servers at 22 organisations",
+          "url": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html"
         },
         {
-          "title": "Play ransomware claims UltraBac Software",
+          "action": "Urbtix users should treat unexpected calls or messages claiming to be from Urbtix, organisers or banks as likely phishing and verify through official channels.",
+          "details": "The contractor reported the intrusion on November 24 and took immediate containment measures. Urbtix does not store identity document data and credit card information is masked. The department has reported the incident to police, the Security Bureau, the Digital Policy Office and the privacy commissioner, and affected users are being notified.",
           "severity": "High",
-          "summary": "The Play ransomware group claimed US-based UltraBac Software (ultrabac.net) on November 24, in a leak-site listing reported by HookPhish. No verified data scope was provided in the source.",
-          "details": "Discovery was recorded on 2026-11-24T19:48 UTC. This is a threat-actor claim, not a confirmed breach disclosure by UltraBac.",
-          "action": "UltraBac customers should await a vendor statement and review backup and recovery exposure, given the vendor's backup-software role.",
-          "url": "https://www.hookphish.com/blog/ransomware-group-play-hits-ultrabac-software/",
-          "image": "https://www.hookphish.com/wp-content/uploads/feeds/hookphish-post-1795564850-ransomware-group-play-hits-ultrabac-software.jpg"
+          "summary": "Hong Kong's Leisure and Cultural Services Department said on November 25 that hackers illegally accessed the Urbtix ticketing system, with preliminary findings suggesting personal data of about 1.3 million users is involved - usernames or names, telephone numbers and email addresses.",
+          "title": "Urbtix Hong Kong breach affects about 1.3 million users",
+          "url": "https://www.news.gov.hk/eng/2026/11/20261125/20261125_194241_650.html"
         }
-      ]
+      ],
+      "title": "Breaches & Ransomware"
     },
     {
-      "title": "India",
       "items": [
         {
-          "title": "Pixelleaks claims attack on India's National Knowledge Network, Delhi",
+          "action": "Treat as an unverified actor claim; education-sector teams should note the pattern of Pixelleaks targeting Indian institutions and check perimeter exposure.",
+          "details": "This is one of three Indian Pixelleaks listings on November 24, alongside NKN Delhi PoP and Copperstone Clothing. Leak-site listings are the group's own assertions, not confirmed breaches.",
+          "image": "https://www.dexpose.io/wp-content/uploads/2026/11/IMG_52711-768x576.jpg",
           "severity": "High",
-          "summary": "Ransomware group Pixelleaks claimed on November 24 an attack on NKN Delhi PoP (National Knowledge Network / NIC / MeitY, nkn.gov.in), threatening to publish financial and operational business records. The group says representative records were examined and verified as genuine; that claim has not been independently confirmed.",
-          "details": "NKN is India's national research and education network infrastructure. No official NKN or NIC statement was cited in the report.",
-          "action": "Treat this as an unverified actor claim, monitor for an official statement, and watch for any published records referencing NKN operations.",
-          "url": "https://malware.news/t/pixelleaks-targets-india-s-national-knowledge-network/127624",
-          "image": "https://malware.news/uploads/default/original/3X/8/0/80d2bf25cc801aa713055c8c5cc6db0c4360bbaa.png"
+          "summary": "Ransomware group Pixelleaks listed IIM Raipur perimeter (Indian Institute of Management, iimraipur.ac.in) on its leak site on November 24, claiming a verified set of business records including personnel and operational material scheduled for publication. The claim has not been independently verified and no IIM Raipur statement was cited.",
+          "title": "Pixelleaks claims IIM Raipur perimeter attack (unverified)",
+          "url": "https://www.dexpose.io/pixelleaks-targets-indian-institute-of-management-raipur/"
         },
         {
-          "title": "Navi Mumbai: Rs 1.56 crore diverted from 215 bank customers in 523 transactions",
+          "action": "Treat as an unverified actor claim and monitor for any published material referencing Copperstone operations ahead of the November 28 deadline.",
+          "details": "The leak post indicates a data disclosure threat; it does not claim systems were encrypted, and no screenshots or downloadable files were indicated in the report.",
           "severity": "High",
-          "summary": "Navi Mumbai Cyber Police registered a case after criminals allegedly exploited a technical vulnerability in a digital-payments bank's mobile payment system, diverting Rs 1,56,91,000 from 215 customers through 523 transactions between November 10 and 15. The bank refunded all 215 customers on November 17.",
-          "details": "The fraud was flagged on November 14, routed through 322 accounts inside the bank before moving to other banks, and was reported to RBI, CERT-In and the Home Ministry. The bank was not named in the report.",
-          "action": "Payment-app teams should review internal-transfer anomaly controls; customers should check statements for the November 10-15 window.",
-          "url": "https://www.freepressjournal.in/amp/mumbai/navi-mumbai-cyber-fraud-156-crore-diverted-from-215-bank-customers-through-523-transactions-money-refunded",
-          "image": "https://media.assettype.com/freepressjournal/2026-01-29/e79hidy5/Cyber-Crime-5.jpg?rect=0%2C0%2C3900%2C2048&w=1200&auto=format%2Ccompress&ogImage=true"
+          "summary": "Pixelleaks published a post on November 24 naming Copperstone Clothing Company, an Indian garment manufacturer and exporter, claiming business, financial, client and operational records reportedly linked to its SQL Server ERP environment, with a publication deadline of November 28 at 21:33 UTC. No ransom amount was stated and the claim is unverified.",
+          "title": "Pixelleaks claims Copperstone Clothing, publication deadline November 28 (unverified)",
+          "url": "https://www.redpacketsecurity.com/pixelleaks-ransomware-victim-copperstone-clothing-company-indian-garment-manufacturer-exporter-sql-server-erp-estate/"
         },
         {
-          "title": "MoEngage breach exposes WazirX and ZebPay user data; funds said safe",
+          "action": "Fintech teams should follow the police advisory in the report: caller authentication on payout APIs, effective IP allow-listing, no exposed production API docs, transaction limits and rate limiting.",
+          "details": "Police say he gained unauthorised access to the company's electronic ledger and bank-linked payment gateway without valid credentials, and set up VPN nodes at his home for overseas associates. A laptop, router, Raspberry Pi, memory card and phone were seized; links to digital arrest fraud are also being probed. Reported November 25.",
           "severity": "High",
-          "summary": "MoEngage said attackers reached a limited part of its cloud infrastructure through a compromised third-party vendor account, affecting fewer than 1% of customer accounts. WazirX and ZebPay disclosed on November 23 that some users' email, contact, device and engagement data was exposed; both said wallets, trading systems and funds were unaffected.",
-          "details": "MoEngage said it contained the incident in late October, brought in independent experts and notified affected customers directly. No passwords, private keys or trading records were reported exposed for WazirX users.",
-          "action": "WazirX and ZebPay users should expect targeted phishing using exposed contact and device data, and never share OTPs, passwords or seed phrases.",
-          "url": "https://inc42.com/buzz/now-moengage-suffers-cybersecurity-attack-due-to-compromised-third-party-vendor/",
-          "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/11/Cyberattack-social.png"
+          "summary": "Navi Mumbai Cyber Police arrested a Chennai-based engineer on November 18 for alleged involvement in a syndicate that siphoned Rs 1.98 crore from a fintech company by hacking its server from Hong Kong and manipulating its payment gateway. Police have frozen more than Rs 1 crore and say he was paid in cryptocurrency.",
+          "title": "Navi Mumbai: Chennai engineer arrested in Rs 1.98 crore fintech hacking case",
+          "url": "https://www.freepressjournal.in/amp/mumbai/navi-mumbai-cyber-fraud-chennai-engineer-arrested-in-198-crore-fintech-hacking-case-hong-kong-link-unearthed"
         }
-      ]
+      ],
+      "title": "India"
     }
-  ]
+  ],
+  "subtitle": "Thursday, November 26 - CISA adds 10 exploited flaws, 1Password discloses a breach, and Pixelleaks claims two more Indian victims.",
+  "title": "Morning Cybersecurity Digest"
 }

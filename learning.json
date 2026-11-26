@@ -1,7 +1,13 @@
 {
-  "updated": "2026-11-25",
-  "count": 55,
+  "updated": "2026-11-26",
+  "count": 56,
   "items": [
+    {
+      "date": "2026-11-26",
+      "topic": "Network security & detection engineering",
+      "title": "Encrypted Client Hello (ECH) + DNS-over-QUIC",
+      "what": "TLS 1.3 ECH encrypts the real SNI inside an outer ClientHello and DoQ/DoH hides the DNS lookup, so SNI-based egress filtering, DLP and NDR lose their cheapest signal at once; detection has to move to IP reputation, JA3/JA4 fingerprints, flow timing/size and endpoint telemetry, and assessments must check whether a client browser is silently bypassing split-DNS and internal resolvers via ECHConfig fetched over HTTPS DNS records"
+    },
     {
       "date": "2026-11-25",
       "topic": "Mobile security",
