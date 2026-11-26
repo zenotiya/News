@@ -2,40 +2,40 @@
   "date": "2026-11-26",
   "news_count": 10,
   "cve_count": 5,
-  "worst_cvss": 9.8,
+  "worst_cvss": 10.0,
   "priorities": [
     {
-      "id": "CVE-2026-123903",
-      "cvss": 9.8,
-      "summary": "VMware vCenter contains an authentication bypass vulnerability in the VMware Directory Service (vmdir). A malicious actor with network access to vCenter may exploit this issue to bypass authentication and gain unauthorized access to the system; Broadcom fixes it in vCenter 9.1.2, 9.0.2.0300 and 8.0 U3m under VMSA-2026-0011.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123903",
-      "plain": "VMware vCenter lets an attacker skip the login and take over the management system - patch to the fixed release now.",
-      "product": "VMware vCenter",
-      "versions": "9.1.x · 9.0.x · 8.0 · 7.0"
+      "id": "CVE-2026-133323",
+      "cvss": 10.0,
+      "summary": "A vulnerability in the Audio, Web, and Video Conferencing (AWV) component of Mitel MiCollab through 10.3 (10.3.0.18) could allow an unauthenticated attacker to conduct a blind OS command injection attack and execute arbitrary commands. CISA added it to the KEV catalog on November 25 as exploited, with federal remediation due November 28; the fix is the KB000129195 patch on 10.3.0.18 or a later release.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133323",
+      "plain": "Mitel MiCollab lets an attacker with no login run commands and take over the conferencing server, and it is being exploited - patch now.",
+      "product": "Mitel MiCollab",
+      "versions": "≤ 10.3 (10.3.0.18)"
     },
     {
-      "id": "CVE-2026-123910",
+      "id": "CVE-2026-133469",
       "cvss": 9.8,
-      "summary": "VMware ESX contains a heap out-of-bounds write vulnerability in the I/O filter service. A malicious actor with network access to ESX may execute code on the host; Broadcom addresses it in VMSA-2026-0011, with a workaround for ESX 8.0 in KB463535.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123910",
-      "plain": "VMware ESX lets an attacker over the network run their own code on the host server - apply the Broadcom patch now.",
-      "product": "VMware ESX",
-      "versions": "9.1.x · 9.0.x · 8.0 · 7.0"
+      "summary": "Vates Xen Orchestra contains an improper validation vulnerability that allows an unauthenticated attacker to bypass authentication by sending an empty JSON object as a login cookie and perform administrative actions. CISA added it to the KEV catalog on November 25 as exploited; Vates fixes it in Xen Orchestra 6.9.2 and 6.10.1 (xo-server 5.211.2 and 5.213.1).",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133469",
+      "plain": "Vates Xen Orchestra lets an attacker with no login act as an administrator over the virtual machines it manages - update now.",
+      "product": "Vates Xen Orchestra",
+      "versions": "< 6.9.2 · < 6.10.1"
     },
     {
-      "id": "CVE-2026-123911",
+      "id": "CVE-2026-103406",
       "cvss": 9.8,
-      "summary": "VMware ESX contains a use-after-free vulnerability in the I/O filter service. A malicious actor with network access to ESX may execute code on the host; Broadcom addresses it in VMSA-2026-0011, with a workaround for ESX 8.0 in KB463535.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123911",
-      "plain": "VMware ESX lets an attacker over the network run their own code on the host server - apply the Broadcom patch now.",
-      "product": "VMware ESX",
-      "versions": "9.1.x · 9.0.x · 8.0 · 7.0"
+      "summary": "HPE Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability in the AutomatedProvisioner component: a remote attacker using a specially crafted salt minion ID can execute arbitrary commands as root without authentication. Juniper confirmed exploitation on November 24 and CISA added it to KEV on November 25; fixed releases are 7.0.5, 7.1.7 and 7.2.3 under JSA112183.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103406",
+      "plain": "HPE Juniper Session Smart lets an attacker with no login take full control of the network router, and it is being exploited - upgrade now.",
+      "product": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router",
+      "versions": "< 7.0.5 · < 7.1.7 · < 7.2.3"
     }
   ],
   "model": {
-    "name": "GLM-5.4",
-    "summary": "Z.ai released GLM-5.4 on November 23, its first flagship built on a Loop Transformer that runs its base model's layers twice for deeper reasoning, adding vision for visual coding. It is live for GLM Coding Plan users in ZCode and Z.ai Chat, with the API and open weights planned for later.",
-    "url": "https://blog.toolsnetwork.ai/releases/zai-glm-5-4/",
-    "plain": "Z.ai's newest coding AI for building software and visual projects, giving development teams another strong option for everyday engineering work."
+    "name": "Mellum2.1 Instruct",
+    "summary": "JetBrains released Mellum2.1 Instruct on November 25, the non-reasoning sibling of Mellum2.1 Thinking, built for coding sub-agents, tool loops and chat. It is open-weight under Apache 2.0 on Hugging Face, with GGUF builds and an MTP head for faster local generation.",
+    "url": "https://blog.jetbrains.com/ai/2026/11/mellum2-1-instruct-is-out-bringing-faster-answers-for-coding-agents/",
+    "plain": "JetBrains' open coding AI gives development teams a fast, self-hosted helper for everyday coding tasks inside their own tools."
   }
 }

@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-26",
+  "items": [
+    {
+      "name": "Mellum2.1 Instruct",
+      "summary": "JetBrains released Mellum2.1 Instruct on November 25, the non-reasoning sibling of Mellum2.1 Thinking, built for coding sub-agents, tool loops and chat. It is open-weight under Apache 2.0 on Hugging Face, with GGUF builds and an MTP head for faster local generation.",
+      "url": "https://blog.jetbrains.com/ai/2026/11/mellum2-1-instruct-is-out-bringing-faster-answers-for-coding-agents/",
+      "image": "https://huggingface.co/JetBrains/Mellum2-12B-A2.5B-Thinking/resolve/main/mellum_evals_grid_1700.jpg",
+      "plain": "JetBrains' open coding AI gives development teams a fast, self-hosted helper for everyday coding tasks inside their own tools."
+    },
+    {
+      "name": "Ternary Bonsai 2.5 27B",
+      "summary": "PrismML announced Ternary Bonsai 2.5 27B on November 24, an open-weight upgrade based on Qwen3.8 27B with much stronger agentic coding and multi-turn tool use in a compact 5.9 GB footprint. It is free to download under Apache 2.0 and runs on personal devices.",
+      "url": "https://www.morningstar.com/news/pr-newswire/20261124sf05981/prismml-launches-ternary-bonsai-25-27b-for-agentic-coding-and-private-knowledge-work",
+      "image": "https://superpowerdaily.com/api/story-images/d3a3f05e-feed-4fa5-bf87-8b0d88852a0d?dpl=c2ad5c32e517abe11e43f4bb4b6753b86fc280e7",
+      "plain": "A capable AI that runs on a laptop or phone, so businesses can use coding and knowledge assistants without sending private work to the cloud."
+    },
+    {
+      "name": "SWE-2.1",
+      "summary": "Cognition released SWE-2.1 on November 24, a major upgrade over SWE-2 trained with pure reinforcement learning on Kimi K3, with large gains on long-horizon coding and cybersecurity tasks. It ships in Devin Desktop, Cloud and CLI, alongside a Cyber variant for Devin Security and an Ultrafast variant served by Cerebras.",
+      "url": "https://cognition.com/blog/swe-2-1",
+      "image": "https://cms.boardmix.com/images/articles/cognition-lab-devin-performance.png",
+      "plain": "Cognition's newest Devin model takes on longer software and security jobs on its own, helping engineering teams clear bigger tasks with less supervision."
+    },
+    {
+      "name": "SenseNova U1.6",
+      "summary": "SenseTime released and open-sourced SenseNova U1.6 on November 24, an 8B unified image model that adds native self-correction: it checks generated images against the prompt and revises text errors. Weights are on Hugging Face under Apache 2.0, with ComfyUI support.",
+      "url": "https://ai.info/news/sensetime-sensenova-u1-6-image-text-self-correction",
+      "image": "https://ai.info/.netlify/images?url=%2Fmedia%2Fai-generated-images%2Fauto%2F0e4c6b03-2d58-44f4-852a-268c154799f7.jpg&w=1600&q=75",
+      "plain": "SenseTime's open image AI proofreads its own pictures and fixes mistakes, making generated marketing and infographic content more reliable for businesses."
+    },
+    {
+      "name": "MAGI-2",
+      "summary": "Sand.ai announced MAGI-2 on November 24, its full-scale flagship video generation model that creates up to 30 seconds of 1080p video with synchronized audio in one pass. It is live through Higgsfield and Sand.ai's own API, with open weights promised later.",
+      "url": "https://higgsfield.ai/blog/best-ways-to-access-magi-2",
+      "image": "https://cdn.magi1.ai/image/magi-1-Features-2.png",
+      "plain": "Sand.ai's video AI turns prompts and references into finished clips with sound, giving creative teams a faster way to produce video content."
+    }
+  ]
+}
