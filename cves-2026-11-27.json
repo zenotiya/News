@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-27",
+  "items": [
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-123910",
+      "plain": "Attackers who can reach a VMware ESX host could take control of it without logging in - install the fixed ESX build now.",
+      "product": "VMware ESX",
+      "severity": "Critical",
+      "summary": "VMware ESX contains a heap out-of-bounds write vulnerability in the I/O filter service. Broadcom rated it Critical with a maximum CVSSv3 score of 9.8, and a network attacker can execute code on the host.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123910",
+      "versions": "9.1.x · 9.0.x · 8.0"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-123911",
+      "plain": "Attackers who can reach a VMware ESX host could take control of it without logging in - install the fixed ESX build now.",
+      "product": "VMware ESX",
+      "severity": "Critical",
+      "summary": "VMware ESX contains a use-after-free vulnerability in the I/O filter service. Broadcom rated it Critical with a maximum CVSSv3 score of 9.8, and a network attacker can execute code on the host.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123911",
+      "versions": "9.1.x · 9.0.x · 8.0"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-136411",
+      "plain": "Attackers could read or replace files on systems running the BusyBox file service without logging in - update BusyBox and check if tftpd is on.",
+      "product": "BusyBox",
+      "severity": "Critical",
+      "summary": "BusyBox tftpd has an absolute path traversal vulnerability affecting versions through 1.38.0, rated CVSS 9.8 by NVD. An unauthenticated remote attacker can read or overwrite files on affected hosts.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136411",
+      "versions": "through 1.38.0"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-137567",
+      "plain": "Attackers could corrupt or take over an exposed llama.cpp server without logging in - upgrade to the fixed build.",
+      "product": "llama.cpp",
+      "severity": "Critical",
+      "summary": "llama.cpp contains an out-of-bounds write vulnerability in the ggml RPC server, rated CVSS 9.8. Unauthenticated attackers can write to arbitrary heap addresses via zero-element destination tensors; a fix is available.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137567",
+      "versions": "b11450 before b12658"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-134481",
+      "plain": "Attackers could take over WordPress sites using the Ultimate Member plugin without logging in - update the plugin to 2.14.2 or later.",
+      "product": "Ultimate Member",
+      "severity": "Critical",
+      "summary": "The WordPress Ultimate Member plugin has a deserialization of untrusted data vulnerability allowing object injection, rated CVSS 9.8. The issue affects Ultimate Member through 2.14.1; updating to at least 2.14.2 is the stated fix.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134481",
+      "versions": "through 2.14.1"
+    }
+  ]
+}

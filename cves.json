@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "items": [
     {
-      "id": "CVE-2026-133323",
-      "summary": "A vulnerability in the Audio, Web, and Video Conferencing (AWV) component of Mitel MiCollab through 10.3 (10.3.0.18) could allow an unauthenticated attacker to conduct a blind OS command injection attack and execute arbitrary commands. CISA added it to the KEV catalog on November 25 as exploited, with federal remediation due November 28; the fix is the KB000129195 patch on 10.3.0.18 or a later release.",
-      "cvss": 10.0,
-      "severity": "Critical",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133323",
-      "plain": "Mitel MiCollab lets an attacker with no login run commands and take over the conferencing server, and it is being exploited - patch now.",
-      "product": "Mitel MiCollab",
-      "versions": "≤ 10.3 (10.3.0.18)"
-    },
-    {
-      "id": "CVE-2026-133469",
-      "summary": "Vates Xen Orchestra contains an improper validation vulnerability that allows an unauthenticated attacker to bypass authentication by sending an empty JSON object as a login cookie and perform administrative actions. CISA added it to the KEV catalog on November 25 as exploited; Vates fixes it in Xen Orchestra 6.9.2 and 6.10.1 (xo-server 5.211.2 and 5.213.1).",
       "cvss": 9.8,
+      "id": "CVE-2026-123910",
+      "plain": "Attackers who can reach a VMware ESX host could take control of it without logging in - install the fixed ESX build now.",
+      "product": "VMware ESX",
       "severity": "Critical",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133469",
-      "plain": "Vates Xen Orchestra lets an attacker with no login act as an administrator over the virtual machines it manages - update now.",
-      "product": "Vates Xen Orchestra",
-      "versions": "< 6.9.2 · < 6.10.1"
+      "summary": "VMware ESX contains a heap out-of-bounds write vulnerability in the I/O filter service. Broadcom rated it Critical with a maximum CVSSv3 score of 9.8, and a network attacker can execute code on the host.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123910",
+      "versions": "9.1.x · 9.0.x · 8.0"
     },
     {
-      "id": "CVE-2026-103406",
-      "summary": "HPE Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability in the AutomatedProvisioner component: a remote attacker using a specially crafted salt minion ID can execute arbitrary commands as root without authentication. Juniper confirmed exploitation on November 24 and CISA added it to KEV on November 25; fixed releases are 7.0.5, 7.1.7 and 7.2.3 under JSA112183.",
       "cvss": 9.8,
+      "id": "CVE-2026-123911",
+      "plain": "Attackers who can reach a VMware ESX host could take control of it without logging in - install the fixed ESX build now.",
+      "product": "VMware ESX",
       "severity": "Critical",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103406",
-      "plain": "HPE Juniper Session Smart lets an attacker with no login take full control of the network router, and it is being exploited - upgrade now.",
-      "product": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router",
-      "versions": "< 7.0.5 · < 7.1.7 · < 7.2.3"
+      "summary": "VMware ESX contains a use-after-free vulnerability in the I/O filter service. Broadcom rated it Critical with a maximum CVSSv3 score of 9.8, and a network attacker can execute code on the host.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123911",
+      "versions": "9.1.x · 9.0.x · 8.0"
     },
     {
+      "cvss": 9.8,
       "id": "CVE-2026-136411",
-      "summary": "BusyBox through 1.38.0 contains an absolute path traversal vulnerability in tftpd that allows unauthenticated remote attackers to access files outside any intended directory when the service is started without a DIR argument. Attackers can read sensitive files such as /etc/shadow or overwrite files, typically as root; no fixed release was listed in the CVE record at publication on November 24.",
-      "cvss": 9.8,
-      "severity": "Critical",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136411",
-      "plain": "BusyBox lets an attacker with no login read or overwrite files on embedded devices that use it - restrict the service and watch for a fix.",
+      "plain": "Attackers could read or replace files on systems running the BusyBox file service without logging in - update BusyBox and check if tftpd is on.",
       "product": "BusyBox",
-      "versions": "≤ 1.38.0"
+      "severity": "Critical",
+      "summary": "BusyBox tftpd has an absolute path traversal vulnerability affecting versions through 1.38.0, rated CVSS 9.8 by NVD. An unauthenticated remote attacker can read or overwrite files on affected hosts.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136411",
+      "versions": "through 1.38.0"
     },
     {
-      "id": "CVE-2026-97180",
-      "summary": "ASSA ABLOY Seawing SC-1000 WebConfig is vulnerable to OS command injection via the server parameter in an HTTP request, due to a lack of input sanitization. A privileged attacker can inject shell metacharacters and execute arbitrary commands as the root user on the controller operating system; the issue was fixed in version 1.5.14 and published on November 25.",
-      "cvss": 9.4,
+      "cvss": 9.8,
+      "id": "CVE-2026-137567",
+      "plain": "Attackers could corrupt or take over an exposed llama.cpp server without logging in - upgrade to the fixed build.",
+      "product": "llama.cpp",
       "severity": "Critical",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97180",
-      "plain": "ASSA ABLOY Seawing access controllers let a logged-in attacker take full control of the door controller - update to the fixed release now.",
-      "product": "ASSA ABLOY Seawing SC-1000 WebConfig",
-      "versions": "< 1.5.14"
+      "summary": "llama.cpp contains an out-of-bounds write vulnerability in the ggml RPC server, rated CVSS 9.8. Unauthenticated attackers can write to arbitrary heap addresses via zero-element destination tensors; a fix is available.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137567",
+      "versions": "b11450 before b12658"
+    },
+    {
+      "cvss": 9.8,
+      "id": "CVE-2026-134481",
+      "plain": "Attackers could take over WordPress sites using the Ultimate Member plugin without logging in - update the plugin to 2.14.2 or later.",
+      "product": "Ultimate Member",
+      "severity": "Critical",
+      "summary": "The WordPress Ultimate Member plugin has a deserialization of untrusted data vulnerability allowing object injection, rated CVSS 9.8. The issue affects Ultimate Member through 2.14.1; updating to at least 2.14.2 is the stated fix.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134481",
+      "versions": "through 2.14.1"
     }
   ]
 }

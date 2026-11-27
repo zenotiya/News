@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-27",
+  "items": [
+    {
+      "image": "https://img.digitimes.com/newsshow/20251118pd210_files/1_b.jpg",
+      "name": "Qwen-Audio-3.1",
+      "plain": "Voice AI that can listen and speak in many more languages, helping clients serve customers in their own language without building separate systems.",
+      "summary": "Alibaba's Qwen team expanded its hosted Qwen-Audio-3.1 voice models on November 26, with speech recognition now covering 59 languages, text-to-speech 65 languages and realtime conversation 53 languages. The update broadens multilingual voice support for production ASR, TTS and realtime endpoints.",
+      "url": "https://af.net/realtime/alibaba-expands-qwen-audio-3-1-to-59-languages-as-dialect-count-drops-to-8/"
+    },
+    {
+      "image": "https://miro.medium.com/v2/resize:fit:1200/1*1fHJgQY9a1k9PeeYmTQGMw.png",
+      "name": "Mellum 2.1 Instruct",
+      "plain": "A fast, open coding assistant for small fixes and routine developer tasks that clients can run on their own infrastructure.",
+      "summary": "JetBrains released Mellum 2.1 Instruct on November 26, an open-weight coding model under Apache 2.0 that gives direct answers without chain-of-thought. It is built for coding sub-agents, tool loops and chat, generating about half as many tokens as its Thinking sibling.",
+      "url": "https://blog.jetbrains.com/ai/2026/11/mellum2-1-instruct-is-out-bringing-faster-answers-for-coding-agents/"
+    },
+    {
+      "image": "https://avatars.githubusercontent.com/u/131753868?v=4",
+      "name": "Raon-1 mini",
+      "plain": "An open model for conversation and agent work that clients can download, adapt and run themselves instead of relying only on a hosted service.",
+      "summary": "KRAFTON AI released the full version of Raon-1 mini, an open-weight model trained from scratch and released under Apache 2.0 on Hugging Face. It is designed for Korean conversation and agentic tasks, with selectable reasoning effort levels.",
+      "url": "https://huggingface.co/KRAFTON/Raon-1-mini"
+    },
+    {
+      "image": "https://cdn.kursors.lv/2026/10/kolibri.png",
+      "name": "Kolibri 1.1",
+      "plain": "A German and English business assistant that clients in Europe can self-host, keeping sensitive work inside their own environment.",
+      "summary": "Aleph Alpha released Kolibri 1.1, an open-weight reasoning model specialised for German and English under Apache 2.0. It succeeds Kolibri 1.0 with a focus on efficient inference, multi-step reasoning, retrieval and agentic tool calling.",
+      "url": "https://aleph-alpha.com/en/kolibri/"
+    },
+    {
+      "image": "https://scalewithai.in/wp-content/uploads/2026/04/2.png",
+      "name": "Sarvam-105B-1711",
+      "plain": "An open model for high-volume support and voice agents in Indian languages that clients can run on their own premises for privacy.",
+      "summary": "Sarvam AI released Sarvam-105B-1711 on November 22, a new open-weight checkpoint built for high-volume customer support, voice agents and agentic tasks. Sarvam says it improves instruction following, tool calling and Indian-language handling over its February release.",
+      "url": "https://www.sarvam.ai/blogs/sarvam-105b-1711"
+    }
+  ]
+}
