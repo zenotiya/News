@@ -1,7 +1,13 @@
 {
-  "updated": "2026-11-26",
-  "count": 56,
+  "updated": "2026-11-27",
+  "count": 57,
   "items": [
+    {
+      "date": "2026-11-27",
+      "topic": "Blue team & detection engineering",
+      "title": "Sanctioned-tool exfiltration detection",
+      "what": "AzCopy, rclone, WinRAR and other approved binaries are the exfil channel in modern extortion intrusions (2.5 TB via AzCopy in the 26 Nov case), so detection baselines the tool, not the binary - alert on first-seen use, unusual destination storage accounts, volume/velocity vs per-host baseline, and staging patterns (archive creation followed by bulk upload), rather than blocking the tool outright"
+    },
     {
       "date": "2026-11-26",
       "topic": "Network security & detection engineering",

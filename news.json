@@ -1,106 +1,103 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
+  "title": "Morning Cybersecurity Digest",
+  "subtitle": "Friday, November 27 - Here's what's worth your attention today.",
   "sections": [
     {
+      "title": "Act on Today",
       "items": [
         {
-          "action": "Patch MiCollab to 10.3 (10.3.0.18) plus KB000129195, Xen Orchestra to 5.213.1 or 5.211.2, and Juniper Session Smart to a fixed release before November 28, and check logs on exposed hosts.",
-          "details": "Five of the 10 are MiCollab AWV flaws. Xen Orchestra CVE-2026-133469 (9.8) accepts an empty JSON object as a login cookie and gives admin access; Juniper CVE-2026-103406 (9.8) allows unauthenticated root command execution. CISA lists ransomware use as unknown for all 10.",
-          "image": "https://securityonline.info/wp-content/uploads/2026/11/cisa-kev-catalog-10-exploited-flaws-mitel-micollab-xen-orchestra-1024x576.webp",
+          "title": "Drupal warns of new critical flaw exploited in the wild (CVE-2026-136716)",
           "severity": "Critical",
-          "summary": "CISA added 10 actively exploited flaws to KEV on November 25, covering Mitel MiCollab, Vates Xen Orchestra, HPE Juniper Session Smart and Danfoss AK-SM 800A controllers. The worst is CVE-2026-133323 (CVSS 10.0), an unauthenticated blind OS command injection in MiCollab's AWV component; federal agencies must patch by November 28.",
-          "title": "CISA adds 10 exploited flaws to KEV, Mitel MiCollab RCE at CVSS 10.0",
-          "url": "https://securityonline.info/cisa-kev-catalog-micollab-juniper-danfoss/"
+          "summary": "Drupal has warned of a new highly critical flaw in Drupal Core, CVE-2026-136716, that attackers are actively exploiting to take over vulnerable websites where the installer remains remotely accessible.",
+          "details": "The flaw relates to improper handling of unusual or incomplete installation states and follows the November 18 Fail2Install fix (CVE-2026-132165, SA-CORE-2026-017). Drupal confirmed exploitation in the wild and urged admins to check logs for unauthorised access and unexpected changes involving the main administrative account (user 1).",
+          "action": "Update to Drupal 11.4.14, 11.3.23 or 10.6.23, run update.php, remove or block remote access to install.php, and review logs from November 19 onward for compromise.",
+          "url": "https://securityaffairs.com/204085/security/drupal-warns-of-new-critical-flaw-exploited-in-the-wild.html",
+          "image": "https://portal.vyprsec.ai/v1/images/27cb7857-7138-48fa-8ee7-25086a9cd033_hero.jpg"
         },
         {
-          "action": "Update vCenter to the fixed build for your branch now - note 9.x systems patched last week for CVE-2026-123890 still need this second update.",
-          "details": "This is a separate flaw from CVE-2026-123890, the vmdir bypass exploited as a zero-day and patched November 19. Fixed versions are vCenter 9.1.2, 9.0.2.0300 and 8.0 U3m; Broadcom lists no workaround. The same advisory fixes 23 CVEs in total, including two 9.8 ESX I/O filter flaws.",
-          "image": "https://securityonline.info/wp-content/uploads/2026/10/VMware-1.webp",
+          "title": "SolarWinds Serv-U 2026.4 fixes nine critical flaws, two giving Linux root",
           "severity": "Critical",
-          "summary": "Broadcom's VMSA-2026-0011 (November 24) fixes CVE-2026-123903, a 9.8 authentication bypass in vCenter's VMware Directory Service reachable over LDAP. Rapid7 says a public proof of concept has been validated and urges urgent patching outside normal cycles, as attackers are already targeting vmdir flaws.",
-          "title": "VMware vCenter auth bypass CVE-2026-123903 at 9.8, public PoC validated",
-          "url": "https://www.rapid7.com/blog/post/etr-cve-2026-123903-critical-vmware-directory-service-authentication-bypass-affects-vcenter/"
+          "summary": "SolarWinds released Serv-U 2026.4 on November 24 fixing 18 vulnerabilities, including nine critical flaws; CVE-2026-123172 and CVE-2026-123168 could grant attackers root access on Linux servers.",
+          "details": "Other critical flaws include CVE-2026-82322 (9.1, IDOR letting a domain group admin become a Serv-U server admin) and CVE-2026-82320 / CVE-2026-82321 (type confusion and privilege escalation). SolarWinds credited the Intigriti Bug Bounty Program for the critical reports and reported no active exploitation of the new flaws.",
+          "action": "Upgrade internet-facing Serv-U servers, starting with Linux, to 2026.4 and review admin accounts and file-access logs.",
+          "url": "https://cybersecuritynews.com/critical-solarwinds-serv-u-flaws/",
+          "image": "https://cdn.comparitech.com/wp-content/uploads/2021/05/Serv-u-Dashboard.jpg.webp"
         },
         {
-          "action": "Upgrade to 11.4.14, 11.3.23 or 10.6.23, run update.php, and block /core/install.php permanently; hunt logs for installer POSTs since November 18.",
-          "details": "The original flaw, CVE-2026-132165, was added to CISA KEV on November 24 with a federal deadline of November 27 and was exploited on live sites from November 19. New fixed releases are Drupal 11.4.14, 11.3.23 and 10.6.23, and update.php must be run after upgrading.",
+          "title": "VMware vCenter auth bypass CVE-2026-123890 (CVSS 9.8) now has public PoC",
           "severity": "Critical",
-          "summary": "Drupal published SA-CORE-2026-019 on November 25 for CVE-2026-136716, confirming the November 18 fixes for the installer takeover flaw did not protect all sites in unusual or incomplete install states. Drupal rates it highly critical, lowered access complexity to basic, and reports exploitation in the wild.",
-          "title": "Drupal follow-up CVE-2026-136716: first installer fix did not protect all sites",
-          "url": "https://labs.beazley.security/advisories/BSL-A1253"
-        },
-        {
-          "action": "Apply the Fragnesia fixed build for your PAN-OS branch and remove the management interface from the internet - restrict it to trusted internal IPs or a VPN.",
-          "details": "Bulletin PAN-SA-2026-0015 lists fixed builds across PAN-OS 10.2, 11.1, 11.2, 12.1 and 12.2. Palo Alto says customers already on a PHP2Shell-fixed build are protected, and all observed exploitation targeted devices with management interfaces exposed to the internet.",
-          "severity": "High",
-          "summary": "Palo Alto Networks released PAN-OS fixes on November 25 for Fragnesia (CVE-2026-46300), a Linux kernel privilege escalation flaw exploited to gain root on firewalls. The only known path chains it with the PHP2Shell flaws through an internet-exposed management interface.",
-          "title": "Palo Alto patches Fragnesia flaw used to root PAN-OS firewalls",
-          "url": "https://www.securityweek.com/palo-alto-networks-patches-fragnesia-flaw-used-to-root-firewalls/"
+          "summary": "Rapid7 published a technical breakdown and Metasploit module for the actively exploited VMware vCenter authentication bypass CVE-2026-123890 (CVSS 9.8), and public proof-of-concept code is now live.",
+          "details": "Broadcom shipped fixes in advisory VMSA-2026-0009 on November 19 after Mandiant warned of live attacks. Mandiant and Google Threat Intelligence tie exploitation to the China-nexus group ARMORY CASTLE, said to have used the flaw as a zero-day from early September 2026. CISA added it to the KEV catalog on November 20, with a November 23 federal patch deadline.",
+          "action": "Patch vCenter to 9.1.1.0200, 9.0.2.0200, 8.0 U3m or 5.2.5 and hunt for rogue administrator accounts created before patching.",
+          "url": "https://securityonline.info/cve-2026-123890-vmware-vcenter-authentication-bypass/",
+          "image": "https://www.vm-guru.com/content_images/vmware-horizon-air-hybrid-mode-1.png"
         }
-      ],
-      "title": "Act on Today"
+      ]
     },
     {
+      "title": "Breaches & Ransomware",
       "items": [
         {
-          "action": "Watch for phishing using real names and sign-in emails - go to 1Password directly rather than clicking emailed recovery or invitation links, and never share Secret Keys or verification codes.",
-          "details": "Stolen data includes names, email addresses, account and user IDs, creation and last sign-in times, public keys, SRP parameters and invitation, provisioning and account recovery tokens. The attacker also reached the CI/CD environment; exposed infrastructure credentials have been rotated or revoked and no account takeovers have been found.",
+          "title": "1Password discloses breach via employee GitHub account; vaults unaffected",
           "severity": "High",
-          "summary": "1Password disclosed on November 25 that an attacker compromised an employee's corporate GitHub account, accessed private source code and pushed malicious code to backend services that downloaded customer account records for a subset of users. Customer vaults and the keys protecting them were not accessed.",
-          "title": "1Password discloses breach via compromised employee GitHub account",
-          "url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/"
+          "summary": "1Password disclosed on November 25 that an attacker accessed an employee's corporate GitHub account, introduced malicious code into server-side components and obtained some customer account data; passwords, vault contents and vault encryption keys were not affected.",
+          "details": "Reported exposed data includes names and sign-in emails, account identifiers and timestamps, public keys and SRP parameters, and some invitation, provisioning and recovery tokens, plus private source code and CI/CD access. 1Password began investigating suspicious GitHub access on November 19. The number of affected customers has not been disclosed.",
+          "action": "For 1Password business accounts, review admin activity, rotate provisioning and recovery tokens where advised by 1Password, and enforce phishing-resistant MFA on linked GitHub accounts.",
+          "url": "https://Hackenproof.com/blog/1password-data-breach-2026",
+          "image": "https://images.ctfassets.net/2h488pz7kgfv/3HcxTwjpQSGcFz5RcrrInx/13799d33d9a28bb32be772678aea0a62/enterprise-security-watchtower-1096-product-ui-1248x832.webp"
         },
         {
-          "action": "Apply the CVE-2026-16232 fix, restrict management access, and hunt for Run Script tasks with no matching SmartConsole login, a certificate named pivot.p12, or unloaded policies.",
-          "details": "Post-compromise, the actor used a script for CVE-2026-16232, a SmartConsole authentication bypass, to launch over 100 management tasks - stealing firewall databases and internal CA files, minting a certificate and unloading security policies. Check Point says the flaw was disclosed in July with patches already available and is not new.",
-          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzxhgIKTt8K5ep8a4qHW9dDpkSYcBC5D1CWgkvvh9Ee5DRlNRSg-2UcZZVNoXrHXVTeIcdzj47FFcSz6gAssLknSDf6f0JDyQCoH51D4GYLSju_wh4smA6-2yE3Z7I30SPeuY8LOKA__Y9xPiU66t1aPsHTzuRnX0QUq2iadcKXFfv7ZhAhcXti_BDnrmu/s1600/code.jpg",
-          "severity": "Critical",
-          "summary": "GreyNoise reports an actor it tracks as GT13 compromised Check Point Security Management servers at 22 organisations, using a compromised Rejetto HFS server as a relay to collect data from 24 management servers. Confirmed activity ran from October 17 to November 2 and GreyNoise assesses AI-driven tooling was used, with low confidence on that point.",
-          "title": "GT13 compromises 24 Check Point management servers at 22 organisations",
-          "url": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html"
+          "title": "Standard Chartered's Zodia Custody breached; client and employee contacts exposed",
+          "severity": "High",
+          "summary": "Standard Chartered's crypto custody unit Zodia Custody confirmed a breach on November 26 that exposed business contact names and email addresses for a small number of clients and employees; no private keys were exposed and Zodia found no unauthorised transactions.",
+          "details": "CEO Richard Clark told Reuters Zodia detected probing of its platform on Monday November 23 and temporarily shut down its business-to-business API. By November 24 it had determined an unauthorised party accessed publicly available details about client organisations alongside the contact data.",
+          "action": "Zodia clients should treat inbound contact as higher phishing risk, verify any custody instruction change out of band, and confirm API reconnection steps directly with Zodia.",
+          "url": "https://cybersecuritynews.com/zodia-custody-data-breach/",
+          "image": "https://blockchainnewsgroup.com/wp-content/uploads/2026/04/crypto-custody-solution-8-720x400.png"
         },
         {
-          "action": "Urbtix users should treat unexpected calls or messages claiming to be from Urbtix, organisers or banks as likely phishing and verify through official channels.",
-          "details": "The contractor reported the intrusion on November 24 and took immediate containment measures. Urbtix does not store identity document data and credit card information is masked. The department has reported the incident to police, the Security Bureau, the Digital Policy Office and the privacy commissioner, and affected users are being notified.",
+          "title": "Inception ransomware claims Restaurant Brands International data (unverified claim)",
           "severity": "High",
-          "summary": "Hong Kong's Leisure and Cultural Services Department said on November 25 that hackers illegally accessed the Urbtix ticketing system, with preliminary findings suggesting personal data of about 1.3 million users is involved - usernames or names, telephone numbers and email addresses.",
-          "title": "Urbtix Hong Kong breach affects about 1.3 million users",
-          "url": "https://www.news.gov.hk/eng/2026/11/20261125/20261125_194241_650.html"
+          "summary": "The Inception ransomware group claimed on November 26 to have data from Restaurant Brands International, including a claimed 126,038 unique Burger King US customers said to be extracted from the BK Guest Support Tool; the claim has not been independently verified and RBI had not confirmed it in the reporting.",
+          "details": "The leak-site claim also alleges 216,156 ServiceNow incident folders from RBI Guest Care, employee OneDrive data and corporate Slack exports, with a stated deadline of November 27. Treat figures as attacker claims only, sourced from the group's listing as tracked on November 26.",
+          "action": "No action for customers beyond phishing awareness; organisations using similar guest-care and ServiceNow setups should review GraphQL API access and attachment handling.",
+          "url": "https://www.hookphish.com/blog/ransomware-group-inception-hits-restaurant-brands-international-inc/",
+          "image": "https://sspdev.botbase.co.uk/media/tt5pxdy2/burger-king-1.jpg?cc=0.3644966092689222,0,0.07300339073107771,0&format=webp&quality=80&v=1dca5aafe8b2ef0"
         }
-      ],
-      "title": "Breaches & Ransomware"
+      ]
     },
     {
+      "title": "India",
       "items": [
         {
-          "action": "Treat as an unverified actor claim; education-sector teams should note the pattern of Pixelleaks targeting Indian institutions and check perimeter exposure.",
-          "details": "This is one of three Indian Pixelleaks listings on November 24, alongside NKN Delhi PoP and Copperstone Clothing. Leak-site listings are the group's own assertions, not confirmed breaches.",
-          "image": "https://www.dexpose.io/wp-content/uploads/2026/11/IMG_52711-768x576.jpg",
-          "severity": "High",
-          "summary": "Ransomware group Pixelleaks listed IIM Raipur perimeter (Indian Institute of Management, iimraipur.ac.in) on its leak site on November 24, claiming a verified set of business records including personnel and operational material scheduled for publication. The claim has not been independently verified and no IIM Raipur statement was cited.",
-          "title": "Pixelleaks claims IIM Raipur perimeter attack (unverified)",
-          "url": "https://www.dexpose.io/pixelleaks-targets-indian-institute-of-management-raipur/"
+          "title": "CERT-In flags critical flaws in Asus Armoury Crate and Control Center (CIVN-2026-0575)",
+          "severity": "Critical",
+          "summary": "CERT-In issued a critical advisory on November 26 for Asus Armoury Crate and Control Center software, warning flaws could let a remote attacker bypass authentication, forge authentication tokens and gain elevated privileges.",
+          "details": "Affected: Control Center Express before v1.7.29, Control Center Datacenter 4.0.0.2 and earlier, Control Center Enterprise 3.1.0.8 and earlier, and Armoury Crate up to and including v6.7.2. CERT-In attributes the flaws to hard-coded cryptographic keys, incorrect and missing authorisation checks and an untrusted search path, tracked as CVE-2026-114202, CVE-2026-114204, CVE-2026-114205, CVE-2026-126574 and CVE-2026-112115.",
+          "action": "Install Asus's published security updates for Armoury Crate and Control Center across managed fleets and verify versions afterwards.",
+          "url": "https://www.moneycontrol.com/technology/cert-in-flags-critical-vulnerabilities-in-asus-armoury-crate-and-control-center-software-article-14089701.html",
+          "image": "https://dlcdnwebimgs.asus.com/files/media/2B3C2C23-ECAF-4C33-9716-013F950D9F70/v3/images/large/09_laptop.png"
         },
         {
-          "action": "Treat as an unverified actor claim and monitor for any published material referencing Copperstone operations ahead of the November 28 deadline.",
-          "details": "The leak post indicates a data disclosure threat; it does not claim systems were encrypted, and no screenshots or downloadable files were indicated in the report.",
+          "title": "CERT-In issues high-severity warning for WhatsApp on Android, iOS, Mac and Windows",
           "severity": "High",
-          "summary": "Pixelleaks published a post on November 24 naming Copperstone Clothing Company, an Indian garment manufacturer and exporter, claiming business, financial, client and operational records reportedly linked to its SQL Server ERP environment, with a publication deadline of November 28 at 21:33 UTC. No ransom amount was stated and the claim is unverified.",
-          "title": "Pixelleaks claims Copperstone Clothing, publication deadline November 28 (unverified)",
-          "url": "https://www.redpacketsecurity.com/pixelleaks-ransomware-victim-copperstone-clothing-company-indian-garment-manufacturer-exporter-sql-server-erp-estate/"
+          "summary": "CERT-In issued a high-severity advisory on November 26 flagging multiple flaws in WhatsApp and WhatsApp Business that could let attackers access sensitive information, run malicious code and bypass security restrictions.",
+          "details": "Affected versions include WhatsApp for Android before 2.26.35.74 and 2.26.17.4, iOS before 2.26.24.72 and 2.26.15.72, Mac Desktop before 2.26.23.72 and Windows before 2.3000.1032164386.258709. CERT-In cited attachment spoofing, SQL injection, improper certificate chain validation and incomplete validation of AI-rich responses and external ad-reply URLs. The alert follows a recent MHA advisory on WhatsApp Web risks.",
+          "action": "Update WhatsApp and WhatsApp Business to the latest releases on all platforms and push the update through MDM where managed.",
+          "url": "https://www.timesnownews.com/technology-science/govt-issues-fresh-warning-to-millions-of-whatsapp-users-just-days-after-mha-advisory-who-are-at-risk-article-156570902",
+          "image": "https://opendr.space/wp-content/uploads/2025/05/whatsapp-security-666x450.jpg"
         },
         {
-          "action": "Fintech teams should follow the police advisory in the report: caller authentication on payout APIs, effective IP allow-listing, no exposed production API docs, transaction limits and rate limiting.",
-          "details": "Police say he gained unauthorised access to the company's electronic ledger and bank-linked payment gateway without valid credentials, and set up VPN nodes at his home for overseas associates. A laptop, router, Raspberry Pi, memory card and phone were seized; links to digital arrest fraud are also being probed. Reported November 25.",
+          "title": "Pixelleaks claims India's National Knowledge Network, Delhi PoP (unverified claim)",
           "severity": "High",
-          "summary": "Navi Mumbai Cyber Police arrested a Chennai-based engineer on November 18 for alleged involvement in a syndicate that siphoned Rs 1.98 crore from a fintech company by hacking its server from Hong Kong and manipulating its payment gateway. Police have frozen more than Rs 1 crore and say he was paid in cryptocurrency.",
-          "title": "Navi Mumbai: Chennai engineer arrested in Rs 1.98 crore fintech hacking case",
-          "url": "https://www.freepressjournal.in/amp/mumbai/navi-mumbai-cyber-fraud-chennai-engineer-arrested-in-198-crore-fintech-hacking-case-hong-kong-link-unearthed"
+          "summary": "The Pixelleaks ransomware group claimed on November 24 to have attacked NKN Delhi PoP (National Knowledge Network / NIC / MeitY), threatening to publish sensitive business records; the claim is from the group's leak site and has not been confirmed by NKN or NIC.",
+          "details": "The group's statement describes the material as financial and operational business records from India's national research-network infrastructure and says representative records were examined by the group. No confirmation or scope statement from the affected organisation appeared in the reporting.",
+          "action": "Treat as an unverified claim for monitoring; research and education networks connected via NKN should watch for related phishing and confirm any incident news only from NIC or MeitY statements.",
+          "url": "https://malware.news/t/pixelleaks-targets-india-s-national-knowledge-network/127624",
+          "image": "https://btw.media/_next/image.webp?url=https%3A%2F%2Fs3.larus.net%2Fbtw-media-production%2Farticles%2Fcmswq1a6u004nbw6byx84y2wu%2Ffeatured-0b32672c-5007-4d5e-8270-febf9b842504.png&w=1920&q=75"
         }
-      ],
-      "title": "India"
+      ]
     }
-  ],
-  "subtitle": "Thursday, November 26 - CISA adds 10 exploited flaws, 1Password discloses a breach, and Pixelleaks claims two more Indian victims.",
-  "title": "Morning Cybersecurity Digest"
+  ]
 }
