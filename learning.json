@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-27",
-  "count": 57,
+  "updated": "2026-11-28",
+  "count": 58,
   "items": [
+    {
+      "date": "2026-11-28",
+      "topic": "Active Directory & identity",
+      "title": "BloodHound OpenGraph",
+      "what": "SpecterOps' graph model opened beyond AD/Azure - custom ingestors turn GitHub, Okta, Kubernetes and SaaS role data into the same nodes/edges as BloodHound, so an attack path can run repo admin -> CI secret -> cloud role -> domain user in one queryable graph; the win is modelling the join points between identity silos that per-tool reviews miss, the risk is stale ingested data presenting a path that no longer exists;",
+      "takeaway": "on identity reviews, build one small custom graph for the client's highest-value join (IdP to cloud to code) and verify each edge live before reporting it as a path"
+    },
     {
       "date": "2026-11-27",
       "topic": "Blue team & detection engineering",

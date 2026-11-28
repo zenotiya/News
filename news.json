@@ -1,37 +1,46 @@
 {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "title": "Morning Cybersecurity Digest",
-  "subtitle": "Friday, November 27 - Here's what's worth your attention today.",
+  "subtitle": "Saturday, November 28 - Here's what's worth your attention today.",
   "sections": [
     {
       "title": "Act on Today",
       "items": [
         {
-          "title": "Drupal warns of new critical flaw exploited in the wild (CVE-2026-136716)",
+          "title": "CISA adds GeoServer and Drupal flaws to KEV, due Nov 30",
           "severity": "Critical",
-          "summary": "Drupal has warned of a new highly critical flaw in Drupal Core, CVE-2026-136716, that attackers are actively exploiting to take over vulnerable websites where the installer remains remotely accessible.",
-          "details": "The flaw relates to improper handling of unusual or incomplete installation states and follows the November 18 Fail2Install fix (CVE-2026-132165, SA-CORE-2026-017). Drupal confirmed exploitation in the wild and urged admins to check logs for unauthorised access and unexpected changes involving the main administrative account (user 1).",
-          "action": "Update to Drupal 11.4.14, 11.3.23 or 10.6.23, run update.php, remove or block remote access to install.php, and review logs from November 19 onward for compromise.",
-          "url": "https://securityaffairs.com/204085/security/drupal-warns-of-new-critical-flaw-exploited-in-the-wild.html",
-          "image": "https://portal.vyprsec.ai/v1/images/27cb7857-7138-48fa-8ee7-25086a9cd033_hero.jpg"
+          "summary": "CISA added three exploited flaws to the KEV catalog on Nov 27: GeoServer XML injection CVE-2026-120705, GeoServer incorrect authorization CVE-2026-129243, and Drupal Core CVE-2026-136716, all due Nov 30 for federal agencies.",
+          "details": "The two GeoServer flaws are steps in a chain that can lead to unauthenticated remote code execution. Fixed GeoServer releases are 2.27.7, 2.28.6 and 3.0.2. The Drupal flaw involves improper check for unusual conditions in the installer.",
+          "action": "Upgrade GeoServer to 2.27.7, 2.28.6 or 3.0.2 and patch Drupal; check internet exposure and follow CISA forensic triage where required.",
+          "url": "https://www.cisa.gov/news-events/alerts/2026/11/27/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+          "image": "https://lifeboat.com/blog.images/unpatched-geoserver-zeroday-targeted-in-active-exploitation-attempts-can-lead-to-rce.jpg"
         },
         {
-          "title": "SolarWinds Serv-U 2026.4 fixes nine critical flaws, two giving Linux root",
+          "title": "Unpatched Cacti zero-day with public PoC gives RCE",
           "severity": "Critical",
-          "summary": "SolarWinds released Serv-U 2026.4 on November 24 fixing 18 vulnerabilities, including nine critical flaws; CVE-2026-123172 and CVE-2026-123168 could grant attackers root access on Linux servers.",
-          "details": "Other critical flaws include CVE-2026-82322 (9.1, IDOR letting a domain group admin become a Serv-U server admin) and CVE-2026-82320 / CVE-2026-82321 (type confusion and privilege escalation). SolarWinds credited the Intigriti Bug Bounty Program for the critical reports and reported no active exploitation of the new flaws.",
-          "action": "Upgrade internet-facing Serv-U servers, starting with Linux, to 2026.4 and review admin accounts and file-access logs.",
-          "url": "https://cybersecuritynews.com/critical-solarwinds-serv-u-flaws/",
-          "image": "https://cdn.comparitech.com/wp-content/uploads/2021/05/Serv-u-Dashboard.jpg.webp"
+          "summary": "A zero-day in Cacti Core 1.2.31, dubbed 4HTTP2SHELL, lets an unauthenticated attacker execute commands in four HTTP requests when the guest account is enabled. A public proof of concept is available and no patch or CVE has been assigned yet.",
+          "details": "The chain abuses weak validation of a guest graph setting, turning it into stored SQL injection that modifies the poller configuration. BleepingComputer and The Hacker News reported the disclosure on Nov 27.",
+          "action": "Disable the Cacti guest account, restrict access to the web interface, and check poller and settings tables for tampering until a patch ships.",
+          "url": "https://www.bleepingcomputer.com/news/security/unpatched-cacti-zero-day-with-public-poc-gives-remote-code-execution/",
+          "image": "https://www.server-world.info/en/CentOS_Stream_8/cacti/img/37.png"
         },
         {
-          "title": "VMware vCenter auth bypass CVE-2026-123890 (CVSS 9.8) now has public PoC",
+          "title": "Linux NFS2ROOT flaw CVE-2026-99362 allows remote root",
           "severity": "Critical",
-          "summary": "Rapid7 published a technical breakdown and Metasploit module for the actively exploited VMware vCenter authentication bypass CVE-2026-123890 (CVSS 9.8), and public proof-of-concept code is now live.",
-          "details": "Broadcom shipped fixes in advisory VMSA-2026-0009 on November 19 after Mandiant warned of live attacks. Mandiant and Google Threat Intelligence tie exploitation to the China-nexus group ARMORY CASTLE, said to have used the flaw as a zero-day from early September 2026. CISA added it to the KEV catalog on November 20, with a November 23 federal patch deadline.",
-          "action": "Patch vCenter to 9.1.1.0200, 9.0.2.0200, 8.0 U3m or 5.2.5 and hunt for rogue administrator accounts created before patching.",
-          "url": "https://securityonline.info/cve-2026-123890-vmware-vcenter-authentication-bypass/",
-          "image": "https://www.vm-guru.com/content_images/vmware-horizon-air-hybrid-mode-1.png"
+          "summary": "A critical Linux kernel NFS server flaw tracked as CVE-2026-99362, scored 9.8, could let an attacker who can reach TCP port 2049 take full root control without a password when NFSv4.1 or NFSv4.2 is enabled.",
+          "details": "The affected code dates back to Linux 3.16. Fixed kernel versions listed include 5.10.275, 5.15.226, 6.1.193, 6.6.163, 6.12.117 and others; distribution kernels need the vendor advisory check.",
+          "action": "Apply the vendor kernel update for CVE-2026-99362, reboot, and restrict port 2049 to trusted hosts.",
+          "url": "https://cybersecuritynews.com/nfs2root-linux-vulnerability/",
+          "image": "https://cdn.freehost.com.ua/linux_nfs_client.png"
+        },
+        {
+          "title": "Mitel MiCollab KEV deadline is today, Nov 28",
+          "severity": "Critical",
+          "summary": "CISA added five Mitel MiCollab flaws on Nov 25, led by CVE-2026-133323, an unauthenticated OS command injection scored 10.0, with most entries due Nov 28. The flaws affect the Audio, Web and Video Conferencing component in MiCollab 10.3 and earlier.",
+          "details": "Other entries include CVE-2026-133303 XML injection and file upload, weak authentication and failure-to-fail-secure issues. Mitel's fix is in 10.3.0.18 via KB000129195.",
+          "action": "Patch MiCollab to 10.3.0.18 or later today; if you cannot patch, cut external access to the conferencing component.",
+          "url": "https://cybersecuritynews.com/cisa-adds-10-flaws-to-kev/",
+          "image": "https://s3-eu-central-1.amazonaws.com/euc-cdn.freshdesk.com/data/helpdesk/attachments/production/77209128245/original/YEraJlbunF1J6GIVb9NHia3H3mrfH3UYaw.jpeg?1742225974"
         }
       ]
     },
@@ -39,31 +48,40 @@
       "title": "Breaches & Ransomware",
       "items": [
         {
-          "title": "1Password discloses breach via employee GitHub account; vaults unaffected",
+          "title": "SAP confirms security incident after suspicious GitHub activity",
           "severity": "High",
-          "summary": "1Password disclosed on November 25 that an attacker accessed an employee's corporate GitHub account, introduced malicious code into server-side components and obtained some customer account data; passwords, vault contents and vault encryption keys were not affected.",
-          "details": "Reported exposed data includes names and sign-in emails, account identifiers and timestamps, public keys and SRP parameters, and some invitation, provisioning and recovery tokens, plus private source code and CI/CD access. 1Password began investigating suspicious GitHub access on November 19. The number of affected customers has not been disclosed.",
-          "action": "For 1Password business accounts, review admin activity, rotate provisioning and recovery tokens where advised by 1Password, and enforce phishing-resistant MFA on linked GitHub accounts.",
-          "url": "https://Hackenproof.com/blog/1password-data-breach-2026",
-          "image": "https://images.ctfassets.net/2h488pz7kgfv/3HcxTwjpQSGcFz5RcrrInx/13799d33d9a28bb32be772678aea0a62/enterprise-security-watchtower-1096-product-ui-1248x832.webp"
+          "summary": "SAP confirmed to BleepingComputer on Nov 27 that it detected suspicious activity and took urgent steps to protect customers, saying it has found no evidence of unauthorized access to customer business data so far.",
+          "details": "Der Spiegel reported, citing an internal memo and insider sources, that attackers breached SAP's GitHub environment, stole employee authentication tokens and copied and modified source code, in an incident tracked internally as Project Granite. SAP did not confirm those specifics.",
+          "action": "SAP customers should watch for official SAP guidance on GitHub-sourced code and updates, and review their own GitHub token hygiene.",
+          "url": "https://www.bleepingcomputer.com/news/security/sap-confirms-security-incident-after-suspicious-github-activity/",
+          "image": "https://cdn.v6.asug.com/image/eyJidWNrZXQiOiJhc3VndjYuYXNzZXRzLXByZCIsImtleSI6ImxlZ2FjeS1pbnNpZ2h0cy9TQVBfTG9jYXRpb25zX1dhbGxkb3JmXzIwMTJfMDA2LTEtMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE2MDAsImZpdCI6ImNvdmVyIn0sIndpdGhNZXRhZGF0YSI6dHJ1ZSwidG9Gb3JtYXQiOiJqcGVnIiwianBlZyI6eyJxdWFsaXR5Ijo4MCwicHJvZ3Jlc3NpdmUiOmZhbHNlLCJvcHRpbWlzZUNvZGluZyI6dHJ1ZSwidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlfX19"
         },
         {
-          "title": "Standard Chartered's Zodia Custody breached; client and employee contacts exposed",
+          "title": "Boston Scientific breach exposes personal and medical info",
           "severity": "High",
-          "summary": "Standard Chartered's crypto custody unit Zodia Custody confirmed a breach on November 26 that exposed business contact names and email addresses for a small number of clients and employees; no private keys were exposed and Zodia found no unauthorised transactions.",
-          "details": "CEO Richard Clark told Reuters Zodia detected probing of its platform on Monday November 23 and temporarily shut down its business-to-business API. By November 24 it had determined an unauthorised party accessed publicly available details about client organisations alongside the contact data.",
-          "action": "Zodia clients should treat inbound contact as higher phishing risk, verify any custody instruction change out of band, and confirm API reconnection steps directly with Zodia.",
-          "url": "https://cybersecuritynews.com/zodia-custody-data-breach/",
-          "image": "https://blockchainnewsgroup.com/wp-content/uploads/2026/04/crypto-custody-solution-8-720x400.png"
+          "summary": "Boston Scientific is sending breach notices after attackers used voice phishing to access cloud-based business applications and download data between May 7 and May 12, 2026, BleepingComputer reported Nov 27.",
+          "details": "The Texas Attorney General portal listing cited in coverage includes names, addresses, Social Security numbers, government ID numbers, medical and health insurance information and dates of birth. The company said patient medical records, remote monitoring systems and connected devices were not exposed, and operations were not disrupted.",
+          "action": "Affected individuals should use free credit reports and consider fraud alerts or credit freezes; the notice does not offer free credit monitoring.",
+          "url": "https://www.bleepingcomputer.com/news/security/new-boston-scientific-data-breach-exposes-personal-medical-info/",
+          "image": "https://talema.com/wp-content/uploads/blog/medical-device/medical-devices-hospital-720x480.jpg"
         },
         {
-          "title": "Inception ransomware claims Restaurant Brands International data (unverified claim)",
+          "title": "pCloud confirms pCloud Pass password manager hack",
           "severity": "High",
-          "summary": "The Inception ransomware group claimed on November 26 to have data from Restaurant Brands International, including a claimed 126,038 unique Burger King US customers said to be extracted from the BK Guest Support Tool; the claim has not been independently verified and RBI had not confirmed it in the reporting.",
-          "details": "The leak-site claim also alleges 216,156 ServiceNow incident folders from RBI Guest Care, employee OneDrive data and corporate Slack exports, with a stated deadline of November 27. Treat figures as attacker claims only, sourced from the group's listing as tracked on November 26.",
-          "action": "No action for customers beyond phishing awareness; organisations using similar guest-care and ServiceNow setups should review GraphQL API access and attachment handling.",
-          "url": "https://www.hookphish.com/blog/ransomware-group-inception-hits-restaurant-brands-international-inc/",
-          "image": "https://sspdev.botbase.co.uk/media/tt5pxdy2/burger-king-1.jpg?cc=0.3644966092689222,0,0.07300339073107771,0&format=webp&quality=80&v=1dca5aafe8b2ef0"
+          "summary": "pCloud confirmed a cyberattack on its pCloud Pass password manager after users reported unknown device login alerts even with 2FA enabled. The company says a small number of user email addresses were exposed and login attempts were made.",
+          "details": "pCloud says the attack was contained, was isolated to pCloud Pass, and that passwords and notes were not compromised because vault data is encrypted on devices. It has not disclosed whether encrypted vaults were accessed or stolen.",
+          "action": "pCloud Pass users should watch for phishing - pCloud says it will never ask for master passwords or recovery words - and review account device lists.",
+          "url": "https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/",
+          "image": "https://www.apfellike.com/wp-content/uploads/2023/06/2023-images-for-partners-pPass-1600x900-v4.png"
+        },
+        {
+          "title": "INC Ransom claims Brit Insurance in UK ransomware incident",
+          "severity": "High",
+          "summary": "The INC Ransom group claimed Brit Ltd / Brit Insurance on Nov 27 and threatened to leak data unless negotiations succeed, according to DeXpose's leak-site tracking. This is an attacker claim, not a confirmed disclosure by Brit.",
+          "details": "DeXpose lists the target domain as britinsurance.com and the country as the UK. No confirmation from Brit Insurance was reported in the source.",
+          "action": "Treat as an unverified claim; partners and brokers should monitor for an official Brit statement before acting on leaked-data assertions.",
+          "url": "https://www.dexpose.io/incransom-attacks-brit-insurance-in-uk-ransomware-incident/",
+          "image": "https://lmforums.com/Areas/InfoCentre/Content/images/Participants(Re)Insurers/Brit-logo(600x200trans).png"
         }
       ]
     },
@@ -71,31 +89,49 @@
       "title": "India",
       "items": [
         {
-          "title": "CERT-In flags critical flaws in Asus Armoury Crate and Control Center (CIVN-2026-0575)",
+          "title": "CERT-In flags high-severity WhatsApp flaws, update now",
+          "severity": "High",
+          "summary": "CERT-In advisory CIVN-2026-0576, published Nov 26, warns of multiple high-severity vulnerabilities in WhatsApp and WhatsApp Business for Android and iOS and WhatsApp for Mac that could allow remote code execution, data access and security bypass.",
+          "details": "WhatsApp's November 2026 update lists CVE-2026-102769 (SQL injection), CVE-2026-44908 (improper certificate chain validation) and CVE-2026-23871 (incomplete validation of advertisement-reply URLs). Affected Android versions are prior to 2.26.35.74, with other platform thresholds listed in the advisory.",
+          "action": "Update WhatsApp and WhatsApp Business to the latest versions on Android, iOS and Mac.",
+          "url": "https://www.moneycontrol.com/technology/cert-in-flags-high-severity-whatsapp-security-flaws-advises-users-to-update-apps-to-latest-versions-article-14090413.html",
+          "image": "https://www.webmarketing-com.com/wp-content/uploads/2023/09/whatsapp-v.jpg"
+        },
+        {
+          "title": "Delhi Police rescue 164 foreign nationals from cyber fraud racket",
+          "severity": "High",
+          "summary": "Delhi Police said they rescued 92 Indonesians and 72 Malaysians who were confined and forced to run fake investment scams from a call centre in Noida, Reuters reported Nov 27.",
+          "details": "Police recovered more than 350 mobile phones, nearly 170 computers, 26 laptops and 174 passports. One Malaysian national was arrested and his role is under investigation.",
+          "action": "Hiring and visa channels should be checked for job offers that route workers into forced scam operations; report suspected centres to Delhi Police.",
+          "url": "https://www.reuters.com/world/asia-pacific/indian-police-rescue-dozens-indonesians-malaysians-cyber-fraud-racket-2026-11-27/",
+          "image": "https://livevns.news/static/c1e/client/111914/migrated_original/96a9ee35406e6f1e322a7a8a71d17a5e.jpg"
+        },
+        {
+          "title": "Haryana probes Rs 109 crore panchayat fraud at PNB",
           "severity": "Critical",
-          "summary": "CERT-In issued a critical advisory on November 26 for Asus Armoury Crate and Control Center software, warning flaws could let a remote attacker bypass authentication, forge authentication tokens and gain elevated privileges.",
-          "details": "Affected: Control Center Express before v1.7.29, Control Center Datacenter 4.0.0.2 and earlier, Control Center Enterprise 3.1.0.8 and earlier, and Armoury Crate up to and including v6.7.2. CERT-In attributes the flaws to hard-coded cryptographic keys, incorrect and missing authorisation checks and an untrusted search path, tracked as CVE-2026-114202, CVE-2026-114204, CVE-2026-114205, CVE-2026-126574 and CVE-2026-112115.",
-          "action": "Install Asus's published security updates for Armoury Crate and Control Center across managed fleets and verify versions afterwards.",
-          "url": "https://www.moneycontrol.com/technology/cert-in-flags-critical-vulnerabilities-in-asus-armoury-crate-and-control-center-software-article-14089701.html",
-          "image": "https://dlcdnwebimgs.asus.com/files/media/2B3C2C23-ECAF-4C33-9716-013F950D9F70/v3/images/large/09_laptop.png"
+          "summary": "Haryana Police are investigating about Rs 109 crore siphoned from panchayati raj institution accounts at Punjab National Bank, with a suspected international group called Crafty Falcon under the lens, ThePrint reported.",
+          "details": "The funds were State Finance Commission grant money for 6,230 panchayati raj bodies. Eight people have been arrested from Haryana, Bihar and Rajasthan, and a Special Investigation Team has formed four teams. PNB has denied a lapse in its banking system, according to officials cited by ThePrint.",
+          "action": "Government payment chains using the FDMS portal should be audited for payment files that reached the bank without authorised digital signatures.",
+          "url": "https://theprint.in/india/china-linked-gang-under-lens-in-rs-109-cr-cyber-fraud-at-pnb-where-haryana-parked-funds-after-idfc-scam/3109856/",
+          "image": "https://udaipurtimes.com/static/c1e/client/74416/migrated/a646bffdf6fcbf80b183cf3e015f91e0.jpg"
         },
         {
-          "title": "CERT-In issues high-severity warning for WhatsApp on Android, iOS, Mac and Windows",
-          "severity": "High",
-          "summary": "CERT-In issued a high-severity advisory on November 26 flagging multiple flaws in WhatsApp and WhatsApp Business that could let attackers access sensitive information, run malicious code and bypass security restrictions.",
-          "details": "Affected versions include WhatsApp for Android before 2.26.35.74 and 2.26.17.4, iOS before 2.26.24.72 and 2.26.15.72, Mac Desktop before 2.26.23.72 and Windows before 2.3000.1032164386.258709. CERT-In cited attachment spoofing, SQL injection, improper certificate chain validation and incomplete validation of AI-rich responses and external ad-reply URLs. The alert follows a recent MHA advisory on WhatsApp Web risks.",
-          "action": "Update WhatsApp and WhatsApp Business to the latest releases on all platforms and push the update through MDM where managed.",
-          "url": "https://www.timesnownews.com/technology-science/govt-issues-fresh-warning-to-millions-of-whatsapp-users-just-days-after-mha-advisory-who-are-at-risk-article-156570902",
-          "image": "https://opendr.space/wp-content/uploads/2025/05/whatsapp-security-666x450.jpg"
+          "title": "Telangana Ground Water portal redirected users to adult site",
+          "severity": "Medium",
+          "summary": "The Telangana State Ground Water department portal gwrms.telangana.gov.in was compromised in a suspected cyberattack, redirecting users to an adult content platform, The New Indian Express reported Nov 27.",
+          "details": "The department director told the paper malware was suspected to have been injected into the website, and its search listing displayed references to the adult platform.",
+          "action": "Take the portal offline or clean the injection, check search-index poisoning, and audit the CMS and hosting accounts for persistence.",
+          "url": "https://www.newindianexpress.com/states/telangana/2026/Nov/27/telangana-ground-water-portal-redirects-users-to-adult-site",
+          "image": "https://images.tv9telugu.com/wp-content/uploads/2023/04/secretariat-3.jpg"
         },
         {
-          "title": "Pixelleaks claims India's National Knowledge Network, Delhi PoP (unverified claim)",
+          "title": "Delhi Police bust Cambodia-linked mule account syndicate, Rs 2 crore frozen",
           "severity": "High",
-          "summary": "The Pixelleaks ransomware group claimed on November 24 to have attacked NKN Delhi PoP (National Knowledge Network / NIC / MeitY), threatening to publish sensitive business records; the claim is from the group's leak site and has not been confirmed by NKN or NIC.",
-          "details": "The group's statement describes the material as financial and operational business records from India's national research-network infrastructure and says representative records were examined by the group. No confirmation or scope statement from the affected organisation appeared in the reporting.",
-          "action": "Treat as an unverified claim for monitoring; research and education networks connected via NKN should watch for related phishing and confirm any incident news only from NIC or MeitY statements.",
-          "url": "https://malware.news/t/pixelleaks-targets-india-s-national-knowledge-network/127624",
-          "image": "https://btw.media/_next/image.webp?url=https%3A%2F%2Fs3.larus.net%2Fbtw-media-production%2Farticles%2Fcmswq1a6u004nbw6byx84y2wu%2Ffeatured-0b32672c-5007-4d5e-8270-febf9b842504.png&w=1920&q=75"
+          "summary": "Delhi Police's IFSO unit arrested five people accused of supplying mule bank accounts to a Cambodia-based cybercrime syndicate and, with HDFC Bank, put about Rs 2 crore in suspicious transactions on hold.",
+          "details": "Police said the group operated an HDFC Bank account in the name of M/s MR Traders from Dwarka, used an SMS-forwarding app to pass OTPs abroad, and was linked to two cases in Andhra Pradesh and seven Telegram channels trading mule accounts.",
+          "action": "Banks should screen trader accounts with OTP-forwarding and Telegram-traded mule patterns; victims should report through the national cybercrime portal promptly so funds can be held.",
+          "url": "https://www.lokmattimes.com/national/delhi-police-busts-international-cybercrime-syndicate-linked-to-cambodia-rs-2-crore-transactions-frozen-a001-w02/",
+          "image": "https://livevns.news/static/c1e/client/111914/migrated_original/96a9ee35406e6f1e322a7a8a71d17a5e.jpg"
         }
       ]
     }

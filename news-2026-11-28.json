@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-28",
+  "title": "Morning Cybersecurity Digest",
+  "subtitle": "Saturday, November 28 - Here's what's worth your attention today.",
+  "sections": [
+    {
+      "title": "Act on Today",
+      "items": [
+        {
+          "title": "CISA adds GeoServer and Drupal flaws to KEV, due Nov 30",
+          "severity": "Critical",
+          "summary": "CISA added three exploited flaws to the KEV catalog on Nov 27: GeoServer XML injection CVE-2026-120705, GeoServer incorrect authorization CVE-2026-129243, and Drupal Core CVE-2026-136716, all due Nov 30 for federal agencies.",
+          "details": "The two GeoServer flaws are steps in a chain that can lead to unauthenticated remote code execution. Fixed GeoServer releases are 2.27.7, 2.28.6 and 3.0.2. The Drupal flaw involves improper check for unusual conditions in the installer.",
+          "action": "Upgrade GeoServer to 2.27.7, 2.28.6 or 3.0.2 and patch Drupal; check internet exposure and follow CISA forensic triage where required.",
+          "url": "https://www.cisa.gov/news-events/alerts/2026/11/27/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+          "image": "https://lifeboat.com/blog.images/unpatched-geoserver-zeroday-targeted-in-active-exploitation-attempts-can-lead-to-rce.jpg"
+        },
+        {
+          "title": "Unpatched Cacti zero-day with public PoC gives RCE",
+          "severity": "Critical",
+          "summary": "A zero-day in Cacti Core 1.2.31, dubbed 4HTTP2SHELL, lets an unauthenticated attacker execute commands in four HTTP requests when the guest account is enabled. A public proof of concept is available and no patch or CVE has been assigned yet.",
+          "details": "The chain abuses weak validation of a guest graph setting, turning it into stored SQL injection that modifies the poller configuration. BleepingComputer and The Hacker News reported the disclosure on Nov 27.",
+          "action": "Disable the Cacti guest account, restrict access to the web interface, and check poller and settings tables for tampering until a patch ships.",
+          "url": "https://www.bleepingcomputer.com/news/security/unpatched-cacti-zero-day-with-public-poc-gives-remote-code-execution/",
+          "image": "https://www.server-world.info/en/CentOS_Stream_8/cacti/img/37.png"
+        },
+        {
+          "title": "Linux NFS2ROOT flaw CVE-2026-99362 allows remote root",
+          "severity": "Critical",
+          "summary": "A critical Linux kernel NFS server flaw tracked as CVE-2026-99362, scored 9.8, could let an attacker who can reach TCP port 2049 take full root control without a password when NFSv4.1 or NFSv4.2 is enabled.",
+          "details": "The affected code dates back to Linux 3.16. Fixed kernel versions listed include 5.10.275, 5.15.226, 6.1.193, 6.6.163, 6.12.117 and others; distribution kernels need the vendor advisory check.",
+          "action": "Apply the vendor kernel update for CVE-2026-99362, reboot, and restrict port 2049 to trusted hosts.",
+          "url": "https://cybersecuritynews.com/nfs2root-linux-vulnerability/",
+          "image": "https://cdn.freehost.com.ua/linux_nfs_client.png"
+        },
+        {
+          "title": "Mitel MiCollab KEV deadline is today, Nov 28",
+          "severity": "Critical",
+          "summary": "CISA added five Mitel MiCollab flaws on Nov 25, led by CVE-2026-133323, an unauthenticated OS command injection scored 10.0, with most entries due Nov 28. The flaws affect the Audio, Web and Video Conferencing component in MiCollab 10.3 and earlier.",
+          "details": "Other entries include CVE-2026-133303 XML injection and file upload, weak authentication and failure-to-fail-secure issues. Mitel's fix is in 10.3.0.18 via KB000129195.",
+          "action": "Patch MiCollab to 10.3.0.18 or later today; if you cannot patch, cut external access to the conferencing component.",
+          "url": "https://cybersecuritynews.com/cisa-adds-10-flaws-to-kev/",
+          "image": "https://s3-eu-central-1.amazonaws.com/euc-cdn.freshdesk.com/data/helpdesk/attachments/production/77209128245/original/YEraJlbunF1J6GIVb9NHia3H3mrfH3UYaw.jpeg?1742225974"
+        }
+      ]
+    },
+    {
+      "title": "Breaches & Ransomware",
+      "items": [
+        {
+          "title": "SAP confirms security incident after suspicious GitHub activity",
+          "severity": "High",
+          "summary": "SAP confirmed to BleepingComputer on Nov 27 that it detected suspicious activity and took urgent steps to protect customers, saying it has found no evidence of unauthorized access to customer business data so far.",
+          "details": "Der Spiegel reported, citing an internal memo and insider sources, that attackers breached SAP's GitHub environment, stole employee authentication tokens and copied and modified source code, in an incident tracked internally as Project Granite. SAP did not confirm those specifics.",
+          "action": "SAP customers should watch for official SAP guidance on GitHub-sourced code and updates, and review their own GitHub token hygiene.",
+          "url": "https://www.bleepingcomputer.com/news/security/sap-confirms-security-incident-after-suspicious-github-activity/",
+          "image": "https://cdn.v6.asug.com/image/eyJidWNrZXQiOiJhc3VndjYuYXNzZXRzLXByZCIsImtleSI6ImxlZ2FjeS1pbnNpZ2h0cy9TQVBfTG9jYXRpb25zX1dhbGxkb3JmXzIwMTJfMDA2LTEtMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE2MDAsImZpdCI6ImNvdmVyIn0sIndpdGhNZXRhZGF0YSI6dHJ1ZSwidG9Gb3JtYXQiOiJqcGVnIiwianBlZyI6eyJxdWFsaXR5Ijo4MCwicHJvZ3Jlc3NpdmUiOmZhbHNlLCJvcHRpbWlzZUNvZGluZyI6dHJ1ZSwidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlfX19"
+        },
+        {
+          "title": "Boston Scientific breach exposes personal and medical info",
+          "severity": "High",
+          "summary": "Boston Scientific is sending breach notices after attackers used voice phishing to access cloud-based business applications and download data between May 7 and May 12, 2026, BleepingComputer reported Nov 27.",
+          "details": "The Texas Attorney General portal listing cited in coverage includes names, addresses, Social Security numbers, government ID numbers, medical and health insurance information and dates of birth. The company said patient medical records, remote monitoring systems and connected devices were not exposed, and operations were not disrupted.",
+          "action": "Affected individuals should use free credit reports and consider fraud alerts or credit freezes; the notice does not offer free credit monitoring.",
+          "url": "https://www.bleepingcomputer.com/news/security/new-boston-scientific-data-breach-exposes-personal-medical-info/",
+          "image": "https://talema.com/wp-content/uploads/blog/medical-device/medical-devices-hospital-720x480.jpg"
+        },
+        {
+          "title": "pCloud confirms pCloud Pass password manager hack",
+          "severity": "High",
+          "summary": "pCloud confirmed a cyberattack on its pCloud Pass password manager after users reported unknown device login alerts even with 2FA enabled. The company says a small number of user email addresses were exposed and login attempts were made.",
+          "details": "pCloud says the attack was contained, was isolated to pCloud Pass, and that passwords and notes were not compromised because vault data is encrypted on devices. It has not disclosed whether encrypted vaults were accessed or stolen.",
+          "action": "pCloud Pass users should watch for phishing - pCloud says it will never ask for master passwords or recovery words - and review account device lists.",
+          "url": "https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/",
+          "image": "https://www.apfellike.com/wp-content/uploads/2023/06/2023-images-for-partners-pPass-1600x900-v4.png"
+        },
+        {
+          "title": "INC Ransom claims Brit Insurance in UK ransomware incident",
+          "severity": "High",
+          "summary": "The INC Ransom group claimed Brit Ltd / Brit Insurance on Nov 27 and threatened to leak data unless negotiations succeed, according to DeXpose's leak-site tracking. This is an attacker claim, not a confirmed disclosure by Brit.",
+          "details": "DeXpose lists the target domain as britinsurance.com and the country as the UK. No confirmation from Brit Insurance was reported in the source.",
+          "action": "Treat as an unverified claim; partners and brokers should monitor for an official Brit statement before acting on leaked-data assertions.",
+          "url": "https://www.dexpose.io/incransom-attacks-brit-insurance-in-uk-ransomware-incident/",
+          "image": "https://lmforums.com/Areas/InfoCentre/Content/images/Participants(Re)Insurers/Brit-logo(600x200trans).png"
+        }
+      ]
+    },
+    {
+      "title": "India",
+      "items": [
+        {
+          "title": "CERT-In flags high-severity WhatsApp flaws, update now",
+          "severity": "High",
+          "summary": "CERT-In advisory CIVN-2026-0576, published Nov 26, warns of multiple high-severity vulnerabilities in WhatsApp and WhatsApp Business for Android and iOS and WhatsApp for Mac that could allow remote code execution, data access and security bypass.",
+          "details": "WhatsApp's November 2026 update lists CVE-2026-102769 (SQL injection), CVE-2026-44908 (improper certificate chain validation) and CVE-2026-23871 (incomplete validation of advertisement-reply URLs). Affected Android versions are prior to 2.26.35.74, with other platform thresholds listed in the advisory.",
+          "action": "Update WhatsApp and WhatsApp Business to the latest versions on Android, iOS and Mac.",
+          "url": "https://www.moneycontrol.com/technology/cert-in-flags-high-severity-whatsapp-security-flaws-advises-users-to-update-apps-to-latest-versions-article-14090413.html",
+          "image": "https://www.webmarketing-com.com/wp-content/uploads/2023/09/whatsapp-v.jpg"
+        },
+        {
+          "title": "Delhi Police rescue 164 foreign nationals from cyber fraud racket",
+          "severity": "High",
+          "summary": "Delhi Police said they rescued 92 Indonesians and 72 Malaysians who were confined and forced to run fake investment scams from a call centre in Noida, Reuters reported Nov 27.",
+          "details": "Police recovered more than 350 mobile phones, nearly 170 computers, 26 laptops and 174 passports. One Malaysian national was arrested and his role is under investigation.",
+          "action": "Hiring and visa channels should be checked for job offers that route workers into forced scam operations; report suspected centres to Delhi Police.",
+          "url": "https://www.reuters.com/world/asia-pacific/indian-police-rescue-dozens-indonesians-malaysians-cyber-fraud-racket-2026-11-27/",
+          "image": "https://livevns.news/static/c1e/client/111914/migrated_original/96a9ee35406e6f1e322a7a8a71d17a5e.jpg"
+        },
+        {
+          "title": "Haryana probes Rs 109 crore panchayat fraud at PNB",
+          "severity": "Critical",
+          "summary": "Haryana Police are investigating about Rs 109 crore siphoned from panchayati raj institution accounts at Punjab National Bank, with a suspected international group called Crafty Falcon under the lens, ThePrint reported.",
+          "details": "The funds were State Finance Commission grant money for 6,230 panchayati raj bodies. Eight people have been arrested from Haryana, Bihar and Rajasthan, and a Special Investigation Team has formed four teams. PNB has denied a lapse in its banking system, according to officials cited by ThePrint.",
+          "action": "Government payment chains using the FDMS portal should be audited for payment files that reached the bank without authorised digital signatures.",
+          "url": "https://theprint.in/india/china-linked-gang-under-lens-in-rs-109-cr-cyber-fraud-at-pnb-where-haryana-parked-funds-after-idfc-scam/3109856/",
+          "image": "https://udaipurtimes.com/static/c1e/client/74416/migrated/a646bffdf6fcbf80b183cf3e015f91e0.jpg"
+        },
+        {
+          "title": "Telangana Ground Water portal redirected users to adult site",
+          "severity": "Medium",
+          "summary": "The Telangana State Ground Water department portal gwrms.telangana.gov.in was compromised in a suspected cyberattack, redirecting users to an adult content platform, The New Indian Express reported Nov 27.",
+          "details": "The department director told the paper malware was suspected to have been injected into the website, and its search listing displayed references to the adult platform.",
+          "action": "Take the portal offline or clean the injection, check search-index poisoning, and audit the CMS and hosting accounts for persistence.",
+          "url": "https://www.newindianexpress.com/states/telangana/2026/Nov/27/telangana-ground-water-portal-redirects-users-to-adult-site",
+          "image": "https://images.tv9telugu.com/wp-content/uploads/2023/04/secretariat-3.jpg"
+        },
+        {
+          "title": "Delhi Police bust Cambodia-linked mule account syndicate, Rs 2 crore frozen",
+          "severity": "High",
+          "summary": "Delhi Police's IFSO unit arrested five people accused of supplying mule bank accounts to a Cambodia-based cybercrime syndicate and, with HDFC Bank, put about Rs 2 crore in suspicious transactions on hold.",
+          "details": "Police said the group operated an HDFC Bank account in the name of M/s MR Traders from Dwarka, used an SMS-forwarding app to pass OTPs abroad, and was linked to two cases in Andhra Pradesh and seven Telegram channels trading mule accounts.",
+          "action": "Banks should screen trader accounts with OTP-forwarding and Telegram-traded mule patterns; victims should report through the national cybercrime portal promptly so funds can be held.",
+          "url": "https://www.lokmattimes.com/national/delhi-police-busts-international-cybercrime-syndicate-linked-to-cambodia-rs-2-crore-transactions-frozen-a001-w02/",
+          "image": "https://livevns.news/static/c1e/client/111914/migrated_original/96a9ee35406e6f1e322a7a8a71d17a5e.jpg"
+        }
+      ]
+    }
+  ]
+}
