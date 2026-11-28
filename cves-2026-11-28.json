@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-28",
+  "items": [
+    {
+      "id": "CVE-2026-134963",
+      "summary": "WPMasterToolKit for WordPress contains a code injection vulnerability (CWE-94) affecting versions through 2.26.1, rated Critical by Patchstack. A logged-in user with low privileges can inject and execute code on affected sites.",
+      "cvss": 9.9,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134963",
+      "plain": "Attackers with a low-level account on a WordPress site using WPMasterToolKit could run their own code on it - update the plugin now.",
+      "product": "WPMasterToolKit",
+      "versions": "through 2.26.1"
+    },
+    {
+      "id": "CVE-2026-123903",
+      "summary": "VMware vCenter Server contains an authentication bypass vulnerability in the VMware Directory Service (vmdir), rated Critical with a maximum CVSSv3 score of 9.8 by Broadcom in advisory VMSA-2026-0011. Fixes are available in vCenter 9.1.2, 9.0.2.0300 and 8.0 U3m.",
+      "cvss": 9.8,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123903",
+      "plain": "Attackers who can reach a vCenter server could get in without a valid login - patch vCenter to the fixed release now.",
+      "product": "VMware vCenter Server / VMware Cloud Foundation / VMware Telco Cloud Platform / VMware Telco Cloud Infrastructure",
+      "versions": "9.1.x · 9.0.x · 8.0"
+    },
+    {
+      "id": "CVE-2026-137964",
+      "summary": "ToolJet before 3.21.96-LTS contains a command injection vulnerability in its GitHub Actions release workflow, which places the pull request title directly into a shell run block. Once a crafted pull request is merged, the injected commands run with a cross-repository GITHUB_TOKEN, enabling unauthorized merges into enterprise repositories.",
+      "cvss": 9.8,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137964",
+      "plain": "Attackers could slip commands into a ToolJet release through a crafted pull request title and push code into linked repositories - upgrade ToolJet now.",
+      "product": "ToolJet",
+      "versions": "before 3.21.96-LTS"
+    },
+    {
+      "id": "CVE-2026-135933",
+      "summary": "WebinarIgnition for WordPress contains an incorrect privilege assignment vulnerability affecting versions through 4.28.1, rated CVSS 9.8 by Patchstack. Unauthenticated attackers can escalate their privileges on affected sites.",
+      "cvss": 9.8,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135933",
+      "plain": "Attackers could gain administrator-level access to WordPress sites using WebinarIgnition without logging in - update the plugin now.",
+      "product": "WebinarIgnition",
+      "versions": "through 4.28.1"
+    },
+    {
+      "id": "CVE-2026-106125",
+      "summary": "The Sneeit Framework plugin for WordPress is vulnerable to remote code execution in versions up to and including 8.7 via the 'callback' parameter of the sneeit_compact_menu_mega_content AJAX action, rated CVSS 9.8 in the GitHub Security Advisory. No fixed release was confirmed on the record at publication.",
+      "cvss": 9.8,
+      "severity": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106125",
+      "plain": "Attackers could run their own code on WordPress sites using the Sneeit Framework plugin without logging in - update or remove the plugin now.",
+      "product": "Sneeit Framework",
+      "versions": "through 8.7"
+    }
+  ]
+}

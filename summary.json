@@ -2,40 +2,40 @@
   "date": "2026-11-28",
   "news_count": 13,
   "cve_count": 5,
-  "worst_cvss": 9.8,
+  "worst_cvss": 9.9,
   "priorities": [
     {
-      "id": "CVE-2026-123910",
+      "id": "CVE-2026-134963",
+      "cvss": 9.9,
+      "summary": "WPMasterToolKit for WordPress contains a code injection vulnerability (CWE-94) affecting versions through 2.26.1, rated Critical by Patchstack. A logged-in user with low privileges can inject and execute code on affected sites.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134963",
+      "plain": "Attackers with a low-level account on a WordPress site using WPMasterToolKit could run their own code on it - update the plugin now.",
+      "product": "WPMasterToolKit",
+      "versions": "through 2.26.1"
+    },
+    {
+      "id": "CVE-2026-123903",
       "cvss": 9.8,
-      "summary": "VMware ESX contains a heap out-of-bounds write vulnerability in the I/O filter service. Broadcom rated it Critical with a maximum CVSSv3 score of 9.8, and a network attacker can execute code on the host.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123910",
-      "plain": "Attackers who can reach a VMware ESX host could take control of it without logging in - install the fixed ESX build now.",
-      "product": "VMware ESX",
+      "summary": "VMware vCenter Server contains an authentication bypass vulnerability in the VMware Directory Service (vmdir), rated Critical with a maximum CVSSv3 score of 9.8 by Broadcom in advisory VMSA-2026-0011. Fixes are available in vCenter 9.1.2, 9.0.2.0300 and 8.0 U3m.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123903",
+      "plain": "Attackers who can reach a vCenter server could get in without a valid login - patch vCenter to the fixed release now.",
+      "product": "VMware vCenter Server / VMware Cloud Foundation / VMware Telco Cloud Platform / VMware Telco Cloud Infrastructure",
       "versions": "9.1.x · 9.0.x · 8.0"
     },
     {
-      "id": "CVE-2026-123911",
+      "id": "CVE-2026-137964",
       "cvss": 9.8,
-      "summary": "VMware ESX contains a use-after-free vulnerability in the I/O filter service. Broadcom rated it Critical with a maximum CVSSv3 score of 9.8, and a network attacker can execute code on the host.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123911",
-      "plain": "Attackers who can reach a VMware ESX host could take control of it without logging in - install the fixed ESX build now.",
-      "product": "VMware ESX",
-      "versions": "9.1.x · 9.0.x · 8.0"
-    },
-    {
-      "id": "CVE-2026-136411",
-      "cvss": 9.8,
-      "summary": "BusyBox tftpd has an absolute path traversal vulnerability affecting versions through 1.38.0, rated CVSS 9.8 by NVD. An unauthenticated remote attacker can read or overwrite files on affected hosts.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136411",
-      "plain": "Attackers could read or replace files on systems running the BusyBox file service without logging in - update BusyBox and check if tftpd is on.",
-      "product": "BusyBox",
-      "versions": "through 1.38.0"
+      "summary": "ToolJet before 3.21.96-LTS contains a command injection vulnerability in its GitHub Actions release workflow, which places the pull request title directly into a shell run block. Once a crafted pull request is merged, the injected commands run with a cross-repository GITHUB_TOKEN, enabling unauthorized merges into enterprise repositories.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137964",
+      "plain": "Attackers could slip commands into a ToolJet release through a crafted pull request title and push code into linked repositories - upgrade ToolJet now.",
+      "product": "ToolJet",
+      "versions": "before 3.21.96-LTS"
     }
   ],
   "model": {
-    "name": "Qwen-Audio-3.1",
-    "summary": "Alibaba's Qwen team expanded its hosted Qwen-Audio-3.1 voice models on November 26, with speech recognition now covering 59 languages, text-to-speech 65 languages and realtime conversation 53 languages. The update broadens multilingual voice support for production ASR, TTS and realtime endpoints.",
-    "url": "https://af.net/realtime/alibaba-expands-qwen-audio-3-1-to-59-languages-as-dialect-count-drops-to-8/",
-    "plain": "Voice AI that can listen and speak in many more languages, helping clients serve customers in their own language without building separate systems."
+    "name": "ERNIE 5.5 Flash Preview",
+    "summary": "Baidu released ERNIE 5.5 Flash Preview as open weights under Apache 2.0, a sparse mixture-of-experts model built for fast long-document and agentic work. It gives teams a frontier-class model they can download, modify and self-host instead of renting only through an API.",
+    "url": "https://af.net/realtime/baidu-unveils-280b-open-weight-ernie-5-5-flash-preview-moe-model/",
+    "plain": "An open model clients can download and run themselves for document work and AI agents, cutting reliance on paid hosted services."
   }
 }

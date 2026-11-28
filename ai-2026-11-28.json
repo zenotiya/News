@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-28",
+  "items": [
+    {
+      "name": "ERNIE 5.5 Flash Preview",
+      "summary": "Baidu released ERNIE 5.5 Flash Preview as open weights under Apache 2.0, a sparse mixture-of-experts model built for fast long-document and agentic work. It gives teams a frontier-class model they can download, modify and self-host instead of renting only through an API.",
+      "url": "https://af.net/realtime/baidu-unveils-280b-open-weight-ernie-5-5-flash-preview-moe-model/",
+      "image": "https://i.mscdn.ai/o/X7LmAgytByAzydLZ/a/vr8USgDvSGLCh23R/_published/generated-images/e66d3511-87ee-4031-891e-03cdba95fa49.jpg",
+      "plain": "An open model clients can download and run themselves for document work and AI agents, cutting reliance on paid hosted services."
+    },
+    {
+      "name": "GigaChat 4",
+      "summary": "Sber's ai-sage team published GigaChat 4 on Hugging Face, a large open-weight model that combines instant and reasoning modes in a single checkpoint, with the flagship weights under the MIT licence. It is aimed at coding and agent workloads and ships alongside a smaller 37B sibling.",
+      "url": "https://af.net/realtime/sber-releases-open-weight-708b-gigachat-4-under-mit-license/",
+      "image": "https://explainx.ai/images/blog-library/mixture-of-experts-routing.webp",
+      "plain": "A very large open model for coding and agent work that clients can inspect, adapt and host on their own terms."
+    },
+    {
+      "name": "Sage-Med-Preview",
+      "summary": "Shanghai AI Laboratory released Sage-Med-Preview on November 27, an open-weight medical vision-language model covering clinical question answering, radiology report drafting and image grounding across more than 40 imaging types. It is a research preview with no stated licence yet, and clinical use still requires professional review.",
+      "url": "https://af.net/realtime/shanghai-ai-lab-unveils-sage-med-preview-with-3b-active-parameters/",
+      "image": "https://explainx.ai/images/blog-library/diagnosis-scan-lens.webp",
+      "plain": "A medical imaging assistant hospitals can test on their own systems to help draft reports and answer clinical questions, keeping patient data in-house."
+    },
+    {
+      "name": "DFly2",
+      "summary": "Tencent's Hunyuan AI Infra team open-sourced DFly2 on November 27, a small speculative-decoding drafter model that reuses the main model's memory instead of keeping its own. It is built to make large sparse models answer faster on the same hardware, with ready support for vLLM and SGLang.",
+      "url": "https://af.net/realtime/tencent-open-sources-dfly2-raising-sparse-model-speed-by-up-to-81/",
+      "image": "https://cdn.prod.website-files.com/6a0f028de6df6a6fd88c3f89/6b091958dbecca3abaf901a9_6b091956025604b9f21b8ffb_tencent-dfly2-boosts-deepseek-v4-1-flash-speed-81.avif",
+      "plain": "A free add-on that makes clients' existing AI models respond faster on the same hardware, lowering the cost of running busy AI services."
+    },
+    {
+      "name": "Chariot-1",
+      "summary": "India's Ministry of Electronics and Information Technology unveiled Chariot-1 on November 26, a foundation model suite built in India under the IndiaAI Mission with a language model and a text-to-speech system. Its open-source IndicShift tokenizer unifies 1,012 characters across 12 Indian scripts to cut the cost of working in Indian languages.",
+      "url": "https://af.net/realtime/india-launches-chariot-1-ai-models-unifying-12-scripts/",
+      "image": "https://af.net/wp-content/uploads/aifod-ph/ph-4.jpg",
+      "plain": "An India-built model suite for services in Indian languages, helping clients reach customers in their own language at lower running cost."
+    }
+  ]
+}
